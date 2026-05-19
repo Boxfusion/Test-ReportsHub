@@ -63,12 +63,22 @@
   .timeline-run a { color: var(--ink); text-decoration: none; font-weight: 500; }
   .timeline-run a:hover { color: #2563eb; }
   footer { color: var(--muted); font-size: .8rem; margin-top: 2rem; }
+  .actions { display: flex; gap: .75rem; flex-wrap: wrap; margin: .5rem 0 1.5rem; }
+  .btn { display: inline-block; padding: .55rem 1rem; border-radius: 8px; text-decoration: none; font-size: .9rem; font-weight: 500; border: 1px solid var(--border); background: var(--card); color: var(--ink); transition: border-color .15s, background .15s; }
+  .btn:hover { border-color: #2563eb; }
+  .btn-primary { background: #2563eb; color: #fff; border-color: #2563eb; }
+  .btn-primary:hover { background: #1d4ed8; border-color: #1d4ed8; }
+  .btn .meta { display: block; font-size: .7rem; font-weight: 400; opacity: .8; margin-top: .15rem; }
 </style>
 </head>
 <body>
   <div class="crumbs"><a href="../../index.html">← All projects</a></div>
   <h1>Dep Admin Portal</h1>
   <div class="subtitle"><a href="https://linux-dep-adminportal-test.azurewebsites.net/" target="_blank" rel="noreferrer">https://linux-dep-adminportal-test.azurewebsites.net/</a> · env: QA</div>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="allure-report/index.html" target="_blank" rel="noopener">Open Allure visualisation →<span class="meta">interactive run-by-run breakdown</span></a>
+  </div>
 
   <div class="cards">
     <div class="card"><div class="label">Test Flows</div><div class="num">5</div></div>
@@ -123,7 +133,7 @@
           <td>20.3s</td>
           <td>2</td>
           <td><span class="sparkline"><span class="spark spark-fail" title="2026-05-18 — FAILED (44.0s)"></span><span class="spark spark-fail" title="2026-05-19 — FAILED (20.3s)"></span></span></td>
-          <td class="links"><a href="test-reports/2026-05-19/create-service-request-v2.md">latest report</a></td>
+          <td class="links"><a href="test-plans/service-requests/create-service-request-v2.md" title="Open plan">plan</a> · <a href="test-reports/2026-05-19/create-service-request-v2.md">latest report</a></td>
         </tr>
         <tr>
           <td class="plan-cell">
@@ -135,7 +145,7 @@
           <td>~37 min (incl. exploration of alternative UI)</td>
           <td>1</td>
           <td><span class="sparkline"><span class="spark spark-neutral" title="2026-05-14 — [PASS] (~37 min (incl. exploration of alternative UI))"></span></span></td>
-          <td class="links"><a href="test-reports/2026-05-14/create-call-log-entry.md">latest report</a></td>
+          <td class="links"><a href="test-plans/cases/create-call-log-entry.md" title="Open plan">plan</a> · <a href="test-reports/2026-05-14/create-call-log-entry.md">latest report</a></td>
         </tr>
         <tr>
           <td class="plan-cell">
@@ -147,7 +157,7 @@
           <td>120s</td>
           <td>1</td>
           <td><span class="sparkline"><span class="spark spark-neutral" title="2026-04-30 — [PASS] (120s)"></span></span></td>
-          <td class="links"><a href="test-reports/2026-04-30/create-case.md">latest report</a></td>
+          <td class="links"><a href="test-plans/cases/create-case.md" title="Open plan">plan</a> · <a href="test-reports/2026-04-30/create-case.md">latest report</a></td>
         </tr>
         <tr>
           <td class="plan-cell">
@@ -159,7 +169,7 @@
           <td>—</td>
           <td>0</td>
           <td><span class="spark-empty">no runs yet</span></td>
-          <td class="links"><span class="muted">no report</span></td>
+          <td class="links"><a href="test-plans/calls/create-call-log.md" title="Open plan">plan</a> · <span class="muted">no report</span></td>
         </tr>
         <tr>
           <td class="plan-cell">
@@ -171,7 +181,7 @@
           <td>—</td>
           <td>0</td>
           <td><span class="spark-empty">no runs yet</span></td>
-          <td class="links"><span class="muted">no report</span></td>
+          <td class="links"><a href="test-plans/service-requests/create-service-request.md" title="Open plan">plan</a> · <span class="muted">no report</span></td>
         </tr></tbody>
     </table>
   </div>
@@ -215,6 +225,6 @@
       </li></ul>
       </section>
 
-  <footer>Generated 2026-05-19 06:20 UTC · project <code>dep</code> · <code>node scripts/build-project-dashboard.js --project=dep</code></footer>
+  <footer>Generated 2026-05-19 06:48 UTC · project <code>dep</code> · <code>node scripts/build-project-dashboard.js --project=dep</code></footer>
 </body>
 </html>

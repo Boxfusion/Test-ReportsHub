@@ -229,7 +229,7 @@ function reportLinkHref(r, projectRoot) {
   return path.relative(projectRoot, r.file).replace(/\\/g, '/');
 }
 
-function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projectRoot }) {
+function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projectRoot, hasAllure }) {
   const totalPlans = plans.length;
   const totalRuns = reports.length;
   const recentRuns = reports.filter((r) => {
@@ -281,8 +281,9 @@ function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projec
       const lastDate = last ? last.date : '—';
       const dur = last ? last.duration : '—';
       const bugLinks = bugsForPlan(planRel, bugs).map((b) => `<a href="test-reports/${b.fileRel}" title="${b.name}">bug</a>`).join(' · ');
+      const planLink = `<a href="${planRel}" title="Open plan">plan</a>`;
       const reportLink = last ? `<a href="${reportLinkHref(last, projectRoot)}">latest report</a>` : '<span class="muted">no report</span>';
-      const links = [reportLink, bugLinks].filter(Boolean).join(' · ');
+      const links = [planLink, reportLink, bugLinks].filter(Boolean).join(' · ');
       return `
         <tr>
           <td class="plan-cell">
@@ -387,12 +388,24 @@ function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projec
   .timeline-run a { color: var(--ink); text-decoration: none; font-weight: 500; }
   .timeline-run a:hover { color: #2563eb; }
   footer { color: var(--muted); font-size: .8rem; margin-top: 2rem; }
+  .actions { display: flex; gap: .75rem; flex-wrap: wrap; margin: .5rem 0 1.5rem; }
+  .btn { display: inline-block; padding: .55rem 1rem; border-radius: 8px; text-decoration: none; font-size: .9rem; font-weight: 500; border: 1px solid var(--border); background: var(--card); color: var(--ink); transition: border-color .15s, background .15s; }
+  .btn:hover { border-color: #2563eb; }
+  .btn-primary { background: #2563eb; color: #fff; border-color: #2563eb; }
+  .btn-primary:hover { background: #1d4ed8; border-color: #1d4ed8; }
+  .btn .meta { display: block; font-size: .7rem; font-weight: 400; opacity: .8; margin-top: .15rem; }
 </style>
 </head>
 <body>
   <div class="crumbs"><a href="../../index.html">← All projects</a></div>
   <h1>${displayName}</h1>
   <div class="subtitle">${envLine || '&nbsp;'}</div>
+
+  <div class="actions">
+    ${hasAllure
+      ? `<a class="btn btn-primary" href="allure-report/index.html" target="_blank" rel="noopener">Open Allure visualisation →<span class="meta">interactive run-by-run breakdown</span></a>`
+      : `<span class="btn" style="opacity:.55;cursor:not-allowed;">Allure report not yet generated<span class="meta">run a test to produce it</span></span>`}
+  </div>
 
   <div class="cards">
     <div class="card"><div class="label">Test Flows</div><div class="num">${totalPlans}</div></div>
@@ -476,8 +489,9 @@ function build(projectName) {
   const bugs = collectBugs(bugsRoot, reportsRoot);
   const byPlan = buildIndex(plans, reports);
   const heatmap = buildHeatmap(reports);
+  const hasAllure = fs.existsSync(path.join(projectRoot, 'allure-report', 'index.html'));
 
-  const out = html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projectRoot });
+  const out = html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projectRoot, hasAllure });
   fs.mkdirSync(projectRoot, { recursive: true });
   fs.writeFileSync(outFile, out);
 
