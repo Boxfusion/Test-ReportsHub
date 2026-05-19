@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Test Reports Hub</title>
+<style>
+  :root {
+    --bg: #f6f8fa; --card: #ffffff; --ink: #0f172a; --muted: #64748b; --border: #e2e8f0;
+    --pass: #15803d; --pass-bg: #dcfce7; --fail: #b91c1c; --fail-bg: #fee2e2;
+    --partial: #b45309; --partial-bg: #fef3c7; --neutral: #475569; --neutral-bg: #f1f5f9;
+    --accent: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 2rem; background: var(--bg); color: var(--ink); line-height: 1.45; }
+  h1 { margin: 0 0 .25rem 0; font-size: 2rem; }
+  .subtitle { color: var(--muted); margin-bottom: 1.5rem; }
+  .summary { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; color: var(--muted); font-size: .9rem; }
+  .summary strong { color: var(--ink); font-size: 1.1rem; margin-right: .25rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; }
+  .project-card { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; text-decoration: none; color: var(--ink); transition: border-color .15s, transform .15s; }
+  .project-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .project-card header { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem; }
+  .project-card h2 { margin: 0 0 .25rem 0; font-size: 1.15rem; display: flex; align-items: center; gap: .5rem; }
+  .project-card .env { font-size: .65rem; font-weight: 600; letter-spacing: .05em; padding: .1rem .45rem; background: var(--neutral-bg); color: var(--muted); border-radius: 4px; text-transform: uppercase; }
+  .app-url { font-size: .75rem; color: var(--muted); text-decoration: none; word-break: break-all; }
+  .project-card:hover .app-url { color: var(--accent); }
+  dl.stats { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem 1rem; margin: 1rem 0 .75rem; }
+  dl.stats > div { display: flex; flex-direction: column; }
+  dl.stats dt { font-size: .65rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: .15rem; }
+  dl.stats dd { margin: 0; font-size: .95rem; font-weight: 500; }
+  .pill { display: inline-block; padding: .1rem .5rem; border-radius: 999px; font-size: .7rem; font-weight: 600; letter-spacing: .03em; }
+  .pill-pass { color: var(--pass); background: var(--pass-bg); }
+  .pill-fail { color: var(--fail); background: var(--fail-bg); }
+  .pill-partial { color: var(--partial); background: var(--partial-bg); }
+  .pill-neutral { color: var(--neutral); background: var(--neutral-bg); }
+  .muted { color: var(--muted); font-size: .8rem; }
+  .cta { color: var(--accent); font-size: .85rem; font-weight: 500; }
+  .empty { background: var(--card); border: 1px dashed var(--border); border-radius: 12px; padding: 2rem; text-align: center; color: var(--muted); }
+  footer { color: var(--muted); font-size: .8rem; margin-top: 2.5rem; }
+</style>
+</head>
+<body>
+  <h1>Test Reports Hub</h1>
+  <div class="subtitle">Centralised test report dashboards across Boxfusion projects.</div>
+
+  <div class="summary">
+    <span><strong>1</strong> project</span>
+    <span><strong>5</strong> test flows</span>
+    <span><strong>4</strong> total runs</span>
+    <span><strong>1</strong> currently failing</span>
+  </div>
+
+  <div class="grid">
+    <a class="project-card" href="projects/dep/index.html">
+      <header>
+        <h2>Dep Admin Portal <span class="env">QA</span></h2>
+        <a class="app-url" href="https://linux-dep-adminportal-test.azurewebsites.net/" target="_blank" rel="noreferrer">https://linux-dep-adminportal-test.azurewebsites.net/</a>
+      </header>
+      <dl class="stats">
+        <div><dt>Last run</dt><dd><span class="pill pill-fail">FAILED</span> <span class="muted">2026-05-19</span></dd></div>
+        <div><dt>Flows</dt><dd>5</dd></div>
+        <div><dt>Total runs</dt><dd>4</dd></div>
+        <div><dt>Last 7d pass rate</dt><dd>0% <span class="muted">(3 runs)</span></dd></div>
+        <div><dt>Failing</dt><dd>1 <span class="muted">flow</span></dd></div>
+      </dl>
+      <footer class="cta">Open dashboard →</footer>
+    </a></div>
+
+  <footer>Generated 2026-05-19 06:20 UTC · <code>node scripts/build-landing.js</code></footer>
+</body>
+</html>
