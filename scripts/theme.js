@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Test Reports Hub · Boxfusion</title>
-<style>
+/**
+ * Shared design system for the Test Reports Hub.
+ * Inlined into every generated HTML page so the site stays a pile of
+ * self-contained static files (no external CSS fetch at runtime).
+ */
 
+const SHARED_CSS = `
   :root {
     --bg: #f7f8fb;
     --surface: #ffffff;
@@ -218,174 +217,31 @@
     .panel-head { padding: .85rem 1rem; }
     .panel-body { padding: 1rem; }
   }
+`;
 
-
-  /* ───── Landing-specific ───── */
-  .toolbar {
-    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    margin-bottom: 1.25rem; flex-wrap: wrap;
-  }
-  .toolbar .chips { gap: .4rem; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
-  .project-card {
-    display: flex; flex-direction: column; gap: .25rem;
-    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 1.1rem 1.25rem 1rem; text-decoration: none; color: var(--ink);
-    box-shadow: var(--shadow-sm);
-    transition: border-color .15s, box-shadow .15s, transform .15s;
-    position: relative; overflow: hidden;
-  }
-  .project-card::before {
-    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--border-strong);
-  }
-  .project-card.card-accent-pass::before { background: var(--pass-line); }
-  .project-card.card-accent-fail::before { background: var(--fail-line); }
-  .project-card.card-accent-partial::before { background: var(--partial-line); }
-  .project-card.card-accent-neutral::before { background: var(--border-strong); }
-  .project-card:hover {
-    border-color: var(--border-strong); box-shadow: var(--shadow-md); transform: translateY(-1px);
-    text-decoration: none;
-  }
-  .project-card-head {
-    display: flex; flex-direction: column; gap: .25rem;
-    margin-bottom: .75rem;
-  }
-  .project-card-title { display: flex; align-items: center; gap: .55rem; flex-wrap: wrap; }
-  .project-card h2 { margin: 0; font-size: 1.05rem; font-weight: 600; letter-spacing: -.01em; }
-  .project-card .app-url {
-    font-size: .76rem; color: var(--muted);
-    overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%;
-  }
-  .project-card:hover .app-url { color: var(--accent); }
-  dl.stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: .65rem 1rem;
-    margin: 0 0 .85rem; padding: .75rem 0 0; border-top: 1px solid var(--border);
-  }
-  dl.stats > div { display: flex; flex-direction: column; min-width: 0; }
-  dl.stats dt { font-size: .62rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; margin-bottom: .2rem; }
-  dl.stats dd { margin: 0; font-size: .9rem; font-weight: 500; color: var(--ink); display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; }
-  .project-card-foot {
-    display: flex; align-items: center; justify-content: flex-end;
-    border-top: 1px solid var(--border); padding-top: .65rem; margin-top: auto;
-  }
-  .cta { color: var(--accent); font-size: .82rem; font-weight: 500; }
-
-  .no-results {
-    grid-column: 1 / -1;
-    text-align: center; color: var(--muted); padding: 2rem 1rem;
-    border: 1px dashed var(--border); border-radius: var(--radius); background: var(--surface);
-  }
-</style>
-</head>
-<body>
+function topbar({ nav = [] } = {}) {
+  const navHtml = nav.length === 0 ? '' : `<nav>${nav.map((n, i) => {
+    if (n.sep) return `<span class="sep"></span>`;
+    return `<a href="${n.href}">${n.label}</a>`;
+  }).join('')}</nav>`;
+  return `
   <header class="topbar">
     <div class="inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="${escapeAttr(getBrandHref())}">
         <span class="mark">TR</span>
         <span class="name">Test Reports Hub<span class="org">Boxfusion</span></span>
       </a>
-      <nav>
-        <span>1 project</span>
-      </nav>
+      ${navHtml}
     </div>
-  </header>
+  </header>`;
+}
 
-  <main class="container">
-    <div class="page-head">
-      <h1>Test Reports Hub</h1>
-      <p class="subtitle">Centralised test report dashboards across Boxfusion projects.</p>
-    </div>
+function getBrandHref() {
+  return '/';
+}
 
-    <section class="kpis" aria-label="Overview">
-      <div class="kpi"><span class="label">Projects</span><span class="num">1</span><span class="meta">tracked here</span></div>
-      <div class="kpi"><span class="label">Test flows</span><span class="num">5</span><span class="meta">across all projects</span></div>
-      <div class="kpi"><span class="label">Total runs</span><span class="num">4</span><span class="meta">3 in the last 7 days</span></div>
-      <div class="kpi kpi-warn"><span class="label">Currently failing</span><span class="num">1</span><span class="meta">flow with a failing last run</span></div>
-    </section>
+function escapeAttr(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
 
-    <div class="toolbar">
-      <div class="chips" role="tablist" aria-label="Filter projects by health">
-        <button type="button" class="chip active" data-filter="all">All<span class="count">1</span></button>
-        <button type="button" class="chip" data-filter="failing">Failing<span class="count">1</span></button>
-        <button type="button" class="chip" data-filter="partial">Partial<span class="count">0</span></button>
-        <button type="button" class="chip" data-filter="healthy">Healthy<span class="count">0</span></button>
-        <button type="button" class="chip" data-filter="unknown">Unknown<span class="count">0</span></button>
-      </div>
-      <label class="search" aria-label="Search projects">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3-3"></path></svg>
-        <input type="search" id="project-search" placeholder="Search projects…" autocomplete="off" />
-      </label>
-    </div>
-
-    <section class="grid" id="project-grid">
-    <a class="project-card card-accent-fail" href="projects/dep/index.html" data-name="dep admin portal" data-health="failing">
-      <div class="project-card-head">
-        <div class="project-card-title">
-          <h2>Dep Admin Portal</h2>
-          <span class="env-chip">QA</span>
-        </div>
-        <div class="app-url" title="https://linux-dep-adminportal-test.azurewebsites.net/">https://linux-dep-adminportal-test.azurewebsites.net/</div>
-      </div>
-      <dl class="stats">
-        <div><dt>Last run</dt><dd><span class="pill pill-fail">FAILED</span> <span class="muted">2026-05-19</span></dd></div>
-        <div><dt>Flows</dt><dd>5</dd></div>
-        <div><dt>Total runs</dt><dd>4</dd></div>
-        <div><dt>7d pass rate</dt><dd>0% <span class="muted">(3 runs)</span></dd></div>
-        <div><dt>Failing</dt><dd>1 <span class="muted">flow</span></dd></div>
-      </dl>
-      <div class="project-card-foot">
-        <span class="cta">Open dashboard →</span>
-      </div>
-    </a></section>
-    <div id="no-results" class="no-results" hidden>No projects match your search.</div>
-
-    <footer class="page-footer">
-      <span>Generated 2026-05-19 08:18 UTC</span>
-      <span><code>node scripts/build-landing.js</code></span>
-    </footer>
-  </main>
-
-  <script>
-    (function () {
-      var grid = document.getElementById('project-grid');
-      if (!grid) return;
-      var cards = Array.prototype.slice.call(grid.querySelectorAll('.project-card'));
-      var chips = Array.prototype.slice.call(document.querySelectorAll('.chip[data-filter]'));
-      var search = document.getElementById('project-search');
-      var noResults = document.getElementById('no-results');
-      var currentFilter = 'all';
-      var currentQuery = '';
-
-      function apply() {
-        var visible = 0;
-        cards.forEach(function (c) {
-          var health = c.getAttribute('data-health') || '';
-          var name = c.getAttribute('data-name') || '';
-          var matchFilter = currentFilter === 'all' || health === currentFilter;
-          var matchQuery = !currentQuery || name.indexOf(currentQuery) !== -1;
-          var show = matchFilter && matchQuery;
-          c.style.display = show ? '' : 'none';
-          if (show) visible++;
-        });
-        if (noResults) noResults.hidden = visible !== 0;
-      }
-
-      chips.forEach(function (chip) {
-        chip.addEventListener('click', function () {
-          chips.forEach(function (c) { c.classList.remove('active'); });
-          chip.classList.add('active');
-          currentFilter = chip.getAttribute('data-filter');
-          apply();
-        });
-      });
-
-      if (search) {
-        search.addEventListener('input', function () {
-          currentQuery = search.value.trim().toLowerCase();
-          apply();
-        });
-      }
-    })();
-  </script>
-</body>
-</html>
+module.exports = { SHARED_CSS, topbar };

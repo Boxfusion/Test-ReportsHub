@@ -3,82 +3,291 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Test Report Dashboard — Dep Admin Portal</title>
+<title>Dep Admin Portal · Test Reports Hub</title>
 <style>
+
   :root {
-    --bg: #f6f8fa; --card: #ffffff; --ink: #0f172a; --muted: #64748b; --border: #e2e8f0;
-    --pass: #15803d; --pass-bg: #dcfce7; --fail: #b91c1c; --fail-bg: #fee2e2;
-    --partial: #b45309; --partial-bg: #fef3c7; --neutral: #475569; --neutral-bg: #f1f5f9;
-    --updated: #1d4ed8; --updated-bg: #dbeafe; --new: #6d28d9; --new-bg: #ede9fe;
+    --bg: #f7f8fb;
+    --surface: #ffffff;
+    --surface-2: #f1f5f9;
+    --ink: #0b1220;
+    --ink-2: #334155;
+    --muted: #64748b;
+    --muted-2: #94a3b8;
+    --border: #e4e8ee;
+    --border-strong: #cbd5e1;
+
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-bg: #eff6ff;
+
+    --pass: #15803d; --pass-bg: #dcfce7; --pass-line: #16a34a;
+    --fail: #b91c1c; --fail-bg: #fee2e2; --fail-line: #dc2626;
+    --partial: #b45309; --partial-bg: #fef3c7; --partial-line: #d97706;
+    --neutral: #475569; --neutral-bg: #f1f5f9;
+
+    --updated: #1d4ed8; --updated-bg: #dbeafe;
+    --new: #6d28d9; --new-bg: #ede9fe;
+
+    --shadow-sm: 0 1px 2px rgba(15,23,42,.04);
+    --shadow-md: 0 4px 12px rgba(15,23,42,.06);
+    --shadow-lg: 0 12px 32px rgba(15,23,42,.10);
+
+    --radius: 10px;
+    --radius-lg: 14px;
   }
   * { box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 2rem; background: var(--bg); color: var(--ink); line-height: 1.45; }
-  .crumbs { color: var(--muted); font-size: .85rem; margin-bottom: .25rem; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: var(--accent); }
+  a:hover { text-decoration: underline; }
+
+  /* ───── Topbar ───── */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,.88);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar .inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: .85rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  }
+  .brand { display: flex; align-items: center; gap: .65rem; color: var(--ink); text-decoration: none; }
+  .brand:hover { text-decoration: none; }
+  .brand .mark {
+    width: 30px; height: 30px; border-radius: 8px;
+    background: linear-gradient(135deg, #2563eb, #6366f1);
+    color: #fff; display: grid; place-items: center;
+    font-weight: 700; font-size: .8rem; letter-spacing: -.02em;
+    box-shadow: var(--shadow-sm);
+  }
+  .brand .name { font-size: .92rem; font-weight: 600; line-height: 1.1; }
+  .brand .name .org { display: block; color: var(--muted); font-weight: 400; font-size: .7rem; letter-spacing: .04em; text-transform: uppercase; margin-top: 1px; }
+  .topbar nav { display: flex; align-items: center; gap: 1.25rem; font-size: .85rem; color: var(--muted); }
+  .topbar nav a { color: var(--muted); text-decoration: none; }
+  .topbar nav a:hover { color: var(--ink); text-decoration: none; }
+  .topbar nav .sep { width: 1px; height: 16px; background: var(--border); }
+
+  /* ───── Container ───── */
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .page-head { margin-bottom: 1.75rem; }
+
+  /* ───── Headings ───── */
+  h1 { margin: 0 0 .35rem; font-size: 1.8rem; font-weight: 700; letter-spacing: -.02em; }
+  h2 { margin: 2rem 0 1rem; font-size: 1.05rem; font-weight: 600; letter-spacing: -.005em; color: var(--ink); }
+  h3 { margin: 0; font-size: .95rem; font-weight: 600; }
+  .subtitle { color: var(--muted); font-size: .92rem; margin: 0; }
+  .subtitle a { color: var(--muted); }
+  .subtitle a:hover { color: var(--accent); }
+
+  /* ───── Breadcrumb ───── */
+  .crumbs { color: var(--muted); font-size: .8rem; margin-bottom: .5rem; }
   .crumbs a { color: var(--muted); text-decoration: none; }
-  .crumbs a:hover { color: #2563eb; text-decoration: underline; }
-  h1 { margin: 0 0 .25rem 0; font-size: 1.75rem; }
-  h2 { margin: 2rem 0 .75rem 0; font-size: 1.15rem; color: var(--ink); }
-  h3 { margin: 0; font-size: 1rem; }
-  .subtitle { color: var(--muted); margin-bottom: 1.5rem; font-size: .9rem; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
-  .card { background: var(--card); padding: 1rem 1.25rem; border-radius: 10px; border: 1px solid var(--border); }
-  .card .num { font-size: 1.8rem; font-weight: 600; margin: .25rem 0; }
-  .card .label { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
-  .panel { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; overflow: hidden; }
-  .heatmap { width: 100%; height: auto; max-height: 130px; }
-  .heatmap .month { font-size: 9px; fill: var(--muted); }
-  .heatmap .day { font-size: 9px; fill: var(--muted); }
-  .legend { display: flex; align-items: center; gap: .35rem; font-size: .75rem; color: var(--muted); margin-top: .5rem; justify-content: flex-end; }
-  .legend span.swatch { display: inline-block; width: 12px; height: 12px; border-radius: 2px; }
-  table { border-collapse: collapse; width: 100%; }
-  thead th { text-align: left; padding: .65rem .75rem; background: var(--neutral-bg); font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); border-bottom: 1px solid var(--border); }
-  tbody td { padding: .75rem .75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: .9rem; }
-  tbody tr:last-child td { border-bottom: none; }
-  .plan-cell .plan-name { font-weight: 500; color: var(--ink); margin-bottom: .25rem; }
-  .plan-badges { display: flex; gap: .35rem; flex-wrap: wrap; }
-  .pill { display: inline-block; padding: .15rem .55rem; border-radius: 999px; font-size: .75rem; font-weight: 600; letter-spacing: .03em; }
+  .crumbs a:hover { color: var(--accent); text-decoration: none; }
+
+  /* ───── KPI cards ───── */
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .9rem; margin-bottom: 1.75rem; }
+  .kpi {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 1.1rem 1.25rem; box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; gap: .25rem;
+    position: relative; overflow: hidden;
+  }
+  .kpi .label { color: var(--muted); font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; }
+  .kpi .num { font-size: 1.85rem; font-weight: 600; line-height: 1.05; color: var(--ink); letter-spacing: -.02em; }
+  .kpi .meta { color: var(--muted); font-size: .76rem; }
+  .kpi.kpi-warn .num { color: var(--fail); }
+  .kpi.kpi-good .num { color: var(--pass); }
+  .kpi::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); opacity: .85; }
+  .kpi.kpi-warn::before { background: var(--fail-line); }
+  .kpi.kpi-good::before { background: var(--pass-line); }
+  .kpi.kpi-muted::before { background: var(--border-strong); opacity: 1; }
+
+  /* ───── Panels ───── */
+  .panel {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    box-shadow: var(--shadow-sm); margin-bottom: 1.5rem; overflow: hidden;
+  }
+  .panel-head { padding: .9rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .panel-head h2 { margin: 0; }
+  .panel-head .actions { display: flex; align-items: center; gap: .5rem; }
+  .panel-body { padding: 1.25rem; }
+  .panel-body.no-pad { padding: 0; }
+
+  /* ───── Pills ───── */
+  .pill { display: inline-flex; align-items: center; gap: .4rem; padding: .15rem .55rem .15rem .5rem; border-radius: 999px; font-size: .7rem; font-weight: 600; letter-spacing: .02em; line-height: 1.4; white-space: nowrap; }
+  .pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .9; }
   .pill-pass { color: var(--pass); background: var(--pass-bg); }
   .pill-fail { color: var(--fail); background: var(--fail-bg); }
   .pill-partial { color: var(--partial); background: var(--partial-bg); }
   .pill-neutral { color: var(--neutral); background: var(--neutral-bg); }
-  .badge { display: inline-block; padding: .1rem .5rem; border-radius: 4px; font-size: .65rem; font-weight: 600; letter-spacing: .05em; }
+  .pill-neutral::before { display: none; }
+
+  /* ───── Badges ───── */
+  .badge { display: inline-block; padding: .15rem .5rem; border-radius: 4px; font-size: .62rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; line-height: 1.5; }
   .badge-updated { color: var(--updated); background: var(--updated-bg); }
   .badge-new { color: var(--new); background: var(--new-bg); }
   .badge-no-spec { color: var(--muted); background: var(--neutral-bg); }
+
+  /* ───── Env chip ───── */
+  .env-chip {
+    display: inline-block; padding: .15rem .55rem;
+    background: var(--accent-bg); color: var(--accent);
+    border-radius: 6px; font-size: .65rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  /* ───── Buttons ───── */
+  .btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .55rem .95rem; border-radius: 8px; text-decoration: none; font-size: .87rem; font-weight: 500;
+    border: 1px solid var(--border); background: var(--surface); color: var(--ink); cursor: pointer;
+    font-family: inherit; transition: border-color .15s, background .15s, color .15s;
+    line-height: 1.2;
+  }
+  .btn:hover { border-color: var(--border-strong); background: var(--surface-2); text-decoration: none; }
+  .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; }
+  .btn-sm { padding: .35rem .65rem; font-size: .78rem; }
+  .btn .meta { font-size: .7rem; font-weight: 400; opacity: .85; margin-left: .35rem; }
+  .btn[disabled], .btn.disabled { opacity: .55; cursor: not-allowed; }
+
+  /* ───── Filter chips (toggle group) ───── */
+  .chips { display: inline-flex; align-items: center; gap: .35rem; flex-wrap: wrap; }
+  .chip {
+    padding: .3rem .7rem; border-radius: 999px; font-size: .78rem; font-weight: 500;
+    border: 1px solid var(--border); background: var(--surface); color: var(--ink-2); cursor: pointer;
+    font-family: inherit; transition: all .15s ease;
+  }
+  .chip:hover { border-color: var(--border-strong); background: var(--surface-2); }
+  .chip.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .chip .count { opacity: .65; margin-left: .25rem; font-variant-numeric: tabular-nums; }
+
+  /* ───── Search ───── */
+  .search {
+    position: relative; flex: 1; max-width: 360px;
+  }
+  .search input {
+    width: 100%; padding: .55rem .85rem .55rem 2.1rem;
+    border: 1px solid var(--border); border-radius: 8px;
+    font-family: inherit; font-size: .87rem; color: var(--ink); background: var(--surface);
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .search input::placeholder { color: var(--muted-2); }
+  .search input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,.12); }
+  .search svg { position: absolute; left: .65rem; top: 50%; transform: translateY(-50%); color: var(--muted-2); pointer-events: none; }
+
+  /* ───── Muted utility ───── */
+  .muted { color: var(--muted); font-size: .85rem; }
+
+  /* ───── Empty state ───── */
+  .empty {
+    background: var(--surface); border: 1px dashed var(--border-strong); border-radius: var(--radius);
+    padding: 3rem 2rem; text-align: center; color: var(--muted);
+  }
+  .empty strong { color: var(--ink); display: block; font-size: 1rem; margin-bottom: .35rem; font-weight: 600; }
+  .empty code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--surface-2); padding: .1rem .4rem; border-radius: 4px; font-size: .8rem; color: var(--ink-2); }
+
+  /* ───── Footer ───── */
+  footer.page-footer {
+    color: var(--muted); font-size: .78rem; margin-top: 3rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  }
+  footer.page-footer code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--surface-2); padding: .12rem .4rem; border-radius: 4px; font-size: .72rem; color: var(--ink-2);
+  }
+
+  /* ───── Responsive ───── */
+  @media (max-width: 640px) {
+    .container { padding: 1.25rem 1rem 3rem; }
+    .topbar .inner { padding: .75rem 1rem; }
+    h1 { font-size: 1.5rem; }
+    .kpi .num { font-size: 1.55rem; }
+    .panel-head { padding: .85rem 1rem; }
+    .panel-body { padding: 1rem; }
+  }
+
+
+  /* ───── Dashboard-specific ───── */
+  .project-header {
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem;
+    flex-wrap: wrap; margin-bottom: 1.5rem;
+  }
+  .project-header .title-row { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
+  .project-header .title-row h1 { margin: 0; }
+  .project-header .subtitle { margin-top: .35rem; }
+
+  .heatmap { width: 100%; height: auto; max-height: 130px; display: block; }
+  .heatmap .month { font-size: 9px; fill: var(--muted); }
+  .heatmap .day { font-size: 9px; fill: var(--muted); }
+  .legend {
+    display: flex; align-items: center; gap: .35rem; font-size: .72rem; color: var(--muted);
+    margin-top: .75rem; flex-wrap: wrap; justify-content: flex-end;
+  }
+  .legend span.swatch { display: inline-block; width: 11px; height: 11px; border-radius: 2px; }
+  .legend .group { display: inline-flex; align-items: center; gap: .35rem; }
+  .legend .group + .group { margin-left: .75rem; }
+
+  table.flows { border-collapse: collapse; width: 100%; }
+  table.flows thead th {
+    text-align: left; padding: .65rem .85rem;
+    background: var(--surface-2); font-size: .7rem; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--muted); border-bottom: 1px solid var(--border); font-weight: 600;
+    position: sticky; top: 0;
+  }
+  table.flows tbody td { padding: .8rem .85rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: .87rem; }
+  table.flows tbody tr:last-child td { border-bottom: none; }
+  table.flows tbody tr:hover { background: var(--surface-2); }
+  table.flows td.nowrap { white-space: nowrap; }
+  table.flows td.num { font-variant-numeric: tabular-nums; }
+  .plan-cell .plan-name { font-weight: 500; color: var(--ink); margin-bottom: .3rem; }
+  .plan-badges { display: flex; gap: .35rem; flex-wrap: wrap; }
+
   .sparkline { display: inline-flex; gap: 2px; align-items: center; }
   .spark { width: 10px; height: 14px; border-radius: 2px; }
   .spark-pass { background: #4ade80; }
   .spark-fail { background: #f87171; }
   .spark-partial { background: #fbbf24; }
   .spark-neutral { background: #cbd5e1; }
-  .spark-empty { color: var(--muted); font-size: .75rem; font-style: italic; }
-  .muted { color: var(--muted); font-size: .85rem; }
-  .links a { color: #2563eb; text-decoration: none; }
+  .spark-empty { color: var(--muted); font-size: .8rem; }
+
+  .links a { color: var(--accent); text-decoration: none; }
   .links a:hover { text-decoration: underline; }
-  .timeline-day { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: .75rem; }
-  .timeline-day header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: .5rem; }
+
+  .timeline-day {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    box-shadow: var(--shadow-sm); padding: 1rem 1.25rem; margin-bottom: .75rem;
+  }
+  .timeline-day header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: .35rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border); }
   .timeline-day ul { list-style: none; margin: 0; padding: 0; }
-  .timeline-run { display: flex; align-items: center; gap: .75rem; padding: .4rem 0; border-top: 1px solid var(--border); }
-  .timeline-run:first-child { border-top: none; }
-  .timeline-run a { color: var(--ink); text-decoration: none; font-weight: 500; }
-  .timeline-run a:hover { color: #2563eb; }
-  footer { color: var(--muted); font-size: .8rem; margin-top: 2rem; }
-  .actions { display: flex; gap: .75rem; flex-wrap: wrap; margin: .5rem 0 1.5rem; align-items: center; }
-  .btn { display: inline-block; padding: .55rem 1rem; border-radius: 8px; text-decoration: none; font-size: .9rem; font-weight: 500; border: 1px solid var(--border); background: var(--card); color: var(--ink); transition: border-color .15s, background .15s; cursor: pointer; font-family: inherit; }
-  .btn:hover { border-color: #2563eb; }
-  .btn-primary { background: #2563eb; color: #fff; border-color: #2563eb; }
-  .btn-primary:hover { background: #1d4ed8; border-color: #1d4ed8; }
-  .btn .meta { display: block; font-size: .7rem; font-weight: 400; opacity: .8; margin-top: .15rem; }
+  .timeline-run { display: flex; align-items: center; gap: .65rem; padding: .5rem 0; }
+  .timeline-run + .timeline-run { border-top: 1px solid var(--border); }
+  .timeline-run .run-link { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .87rem; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .timeline-run .run-link:hover { color: var(--accent); }
+
+  /* Allure modal */
   .allure-modal { display: none; position: fixed; inset: 0; z-index: 1000; align-items: center; justify-content: center; padding: 2.5rem; background: rgba(15, 23, 42, .55); backdrop-filter: blur(2px); }
   .allure-modal.open { display: flex; }
-  .allure-modal .dialog { background: var(--card); border-radius: 12px; width: 100%; max-width: 1400px; height: 100%; max-height: calc(100vh - 5rem); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,.4); }
-  .allure-modal header { display: flex; align-items: center; justify-content: space-between; padding: .75rem 1.25rem; border-bottom: 1px solid var(--border); background: var(--neutral-bg); }
-  .allure-modal header .title { font-weight: 600; color: var(--ink); font-size: .95rem; }
-  .allure-modal header .right { display: flex; align-items: center; gap: .75rem; color: var(--muted); font-size: .8rem; }
-  .allure-modal header a.popout { color: var(--muted); text-decoration: none; }
-  .allure-modal header a.popout:hover { color: #2563eb; text-decoration: underline; }
-  .allure-modal header button.close { background: transparent; border: 1px solid var(--border); border-radius: 6px; padding: .3rem .7rem; font-size: .8rem; cursor: pointer; color: var(--muted); font-family: inherit; }
-  .allure-modal header button.close:hover { color: var(--ink); border-color: var(--muted); }
+  .allure-modal .dialog { background: var(--surface); border-radius: var(--radius-lg); width: 100%; max-width: 1400px; height: 100%; max-height: calc(100vh - 5rem); display: flex; flex-direction: column; overflow: hidden; box-shadow: var(--shadow-lg); }
+  .allure-modal .head { display: flex; align-items: center; justify-content: space-between; padding: .85rem 1.25rem; border-bottom: 1px solid var(--border); background: var(--surface-2); }
+  .allure-modal .head .title { font-weight: 600; color: var(--ink); font-size: .92rem; }
+  .allure-modal .head .right { display: flex; align-items: center; gap: .75rem; color: var(--muted); font-size: .8rem; }
+  .allure-modal .head a.popout { color: var(--muted); text-decoration: none; }
+  .allure-modal .head a.popout:hover { color: var(--accent); }
+  .allure-modal .head button.close { background: transparent; border: 1px solid var(--border); border-radius: 6px; padding: .35rem .75rem; font-size: .8rem; cursor: pointer; color: var(--ink-2); font-family: inherit; }
+  .allure-modal .head button.close:hover { color: var(--ink); border-color: var(--border-strong); background: var(--surface); }
   .allure-frame-wrap { position: relative; flex: 1; background: var(--bg); overflow: hidden; }
   .allure-frame-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
   .allure-frame-wrap .loader { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .85rem; pointer-events: none; }
@@ -87,41 +296,81 @@
 </style>
 </head>
 <body>
-  <div class="crumbs"><a href="../../index.html">← All projects</a></div>
-  <h1>Dep Admin Portal</h1>
-  <div class="subtitle"><a href="https://linux-dep-adminportal-test.azurewebsites.net/" target="_blank" rel="noreferrer">https://linux-dep-adminportal-test.azurewebsites.net/</a> · env: QA</div>
+  <header class="topbar">
+    <div class="inner">
+      <a class="brand" href="../../index.html">
+        <span class="mark">TR</span>
+        <span class="name">Test Reports Hub<span class="org">Boxfusion</span></span>
+      </a>
+      <nav>
+        <a href="../../index.html">← All projects</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="actions">
-    <button type="button" id="allure-toggle" class="btn btn-primary">Open Allure visualisation<span class="meta">interactive run-by-run breakdown · loads inline</span></button>
-  </div>
+  <main class="container">
+    <div class="crumbs"><a href="../../index.html">Projects</a> / <span>Dep Admin Portal</span></div>
 
-  
-  <div id="allure-panel" class="allure-modal" aria-hidden="true" role="dialog" aria-label="Allure visualisation">
-    <div class="dialog">
-      <header>
-        <span class="title">Allure visualisation</span>
-        <span class="right">
-          <a class="popout" href="allure-report/index.html" target="_blank" rel="noopener">open in new tab ↗</a>
-          <button type="button" class="close" id="allure-close">Close (Esc)</button>
-        </span>
-      </header>
-      <div class="allure-frame-wrap">
-        <div class="loader" id="allure-loader">Loading Allure report (3MB)…</div>
-        <iframe id="allure-frame" title="Allure report" loading="lazy"></iframe>
+    <div class="project-header">
+      <div>
+        <div class="title-row">
+          <h1>Dep Admin Portal</h1>
+          <span class="env-chip">QA</span>
+        </div>
+        <div class="subtitle"><a href="https://linux-dep-adminportal-test.azurewebsites.net/" target="_blank" rel="noreferrer">https://linux-dep-adminportal-test.azurewebsites.net/</a></div>
+      </div>
+      <div class="actions">
+        <button type="button" id="allure-toggle" class="btn btn-primary">Open Allure visualisation<span class="meta">run-by-run breakdown</span></button>
       </div>
     </div>
-  </div>
 
-  <div class="cards">
-    <div class="card"><div class="label">Test Flows</div><div class="num">5</div></div>
-    <div class="card"><div class="label">Total Runs</div><div class="num">4</div></div>
-    <div class="card"><div class="label">Last 7 days · pass rate</div><div class="num">0%</div><div class="muted">3 runs</div></div>
-    <div class="card"><div class="label">Currently failing</div><div class="num">1</div><div class="muted">flow</div></div>
-  </div>
-
-  <div class="panel">
-    <h2>Activity — last 52 weeks</h2>
     
+    <div id="allure-panel" class="allure-modal" aria-hidden="true" role="dialog" aria-label="Allure visualisation">
+      <div class="dialog">
+        <div class="head">
+          <span class="title">Allure visualisation</span>
+          <span class="right">
+            <a class="popout" href="allure-report/index.html" target="_blank" rel="noopener">open in new tab ↗</a>
+            <button type="button" class="close" id="allure-close">Close (Esc)</button>
+          </span>
+        </div>
+        <div class="allure-frame-wrap">
+          <div class="loader" id="allure-loader">Loading Allure report (3MB)…</div>
+          <iframe id="allure-frame" title="Allure report" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <section class="kpis" aria-label="Overview">
+      <div class="kpi"><span class="label">Test flows</span><span class="num">5</span><span class="meta">tracked plans</span></div>
+      <div class="kpi"><span class="label">Total runs</span><span class="num">4</span><span class="meta">all time</span></div>
+      <div class="kpi kpi-warn"><span class="label">7-day pass rate</span><span class="num">0%</span><span class="meta">3 runs in the last 7 days</span></div>
+      <div class="kpi kpi-warn"><span class="label">Currently failing</span><span class="num">1</span><span class="meta">flow with a failing last run</span></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Activity — last 52 weeks</h2>
+        <div class="legend">
+          <div class="group"><span>less</span>
+            <span class="swatch" style="background:#ebedf0"></span>
+            <span class="swatch" style="background:#9be9a8"></span>
+            <span class="swatch" style="background:#40c463"></span>
+            <span class="swatch" style="background:#30a14e"></span>
+            <span class="swatch" style="background:#216e39"></span>
+            <span>more</span>
+          </div>
+          <div class="group">fail
+            <span class="swatch" style="background:#ef4444"></span>
+            <span class="swatch" style="background:#b91c1c"></span>
+            <span class="swatch" style="background:#7f1d1d"></span>
+          </div>
+          <div class="group">partial
+            <span class="swatch" style="background:#f59e0b"></span>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
     <svg class="heatmap" viewBox="0 0 738 110" preserveAspectRatio="xMidYMid meet">
       <g transform="translate(36, 14)">
         <text x="0" y="10" class="month">May</text><text x="14" y="10" class="month">Jun</text><text x="84" y="10" class="month">Jul</text><text x="140" y="10" class="month">Aug</text><text x="210" y="10" class="month">Sep</text><text x="266" y="10" class="month">Oct</text><text x="322" y="10" class="month">Nov</text><text x="392" y="10" class="month">Dec</text><text x="448" y="10" class="month">Jan</text><text x="504" y="10" class="month">Feb</text><text x="560" y="10" class="month">Mar</text><text x="630" y="10" class="month">Apr</text><text x="686" y="10" class="month">May</text>
@@ -130,102 +379,98 @@
           <rect x="0" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-05-24 — no runs</title></rect><rect x="14" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-05-31 — no runs</title></rect><rect x="28" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-07 — no runs</title></rect><rect x="42" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-14 — no runs</title></rect><rect x="56" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-21 — no runs</title></rect><rect x="70" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-28 — no runs</title></rect><rect x="84" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-05 — no runs</title></rect><rect x="98" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-12 — no runs</title></rect><rect x="112" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-19 — no runs</title></rect><rect x="126" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-26 — no runs</title></rect><rect x="140" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-02 — no runs</title></rect><rect x="154" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-09 — no runs</title></rect><rect x="168" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-16 — no runs</title></rect><rect x="182" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-23 — no runs</title></rect><rect x="196" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-30 — no runs</title></rect><rect x="210" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-06 — no runs</title></rect><rect x="224" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-13 — no runs</title></rect><rect x="238" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-20 — no runs</title></rect><rect x="252" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-27 — no runs</title></rect><rect x="266" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-04 — no runs</title></rect><rect x="280" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-11 — no runs</title></rect><rect x="294" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-18 — no runs</title></rect><rect x="308" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-25 — no runs</title></rect><rect x="322" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-01 — no runs</title></rect><rect x="336" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-08 — no runs</title></rect><rect x="350" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-15 — no runs</title></rect><rect x="364" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-22 — no runs</title></rect><rect x="378" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-29 — no runs</title></rect><rect x="392" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-06 — no runs</title></rect><rect x="406" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-13 — no runs</title></rect><rect x="420" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-20 — no runs</title></rect><rect x="434" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-27 — no runs</title></rect><rect x="448" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-03 — no runs</title></rect><rect x="462" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-10 — no runs</title></rect><rect x="476" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-17 — no runs</title></rect><rect x="490" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-24 — no runs</title></rect><rect x="504" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-31 — no runs</title></rect><rect x="518" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-07 — no runs</title></rect><rect x="532" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-14 — no runs</title></rect><rect x="546" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-21 — no runs</title></rect><rect x="560" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-28 — no runs</title></rect><rect x="574" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-07 — no runs</title></rect><rect x="588" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-14 — no runs</title></rect><rect x="602" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-21 — no runs</title></rect><rect x="616" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-28 — no runs</title></rect><rect x="630" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-04 — no runs</title></rect><rect x="644" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-11 — no runs</title></rect><rect x="658" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-18 — no runs</title></rect><rect x="672" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-25 — no runs</title></rect><rect x="686" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-02 — no runs</title></rect><rect x="700" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-09 — no runs</title></rect><rect x="714" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-16 — no runs</title></rect><rect x="0" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-05-25 — no runs</title></rect><rect x="14" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-01 — no runs</title></rect><rect x="28" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-08 — no runs</title></rect><rect x="42" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-15 — no runs</title></rect><rect x="56" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-22 — no runs</title></rect><rect x="70" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-29 — no runs</title></rect><rect x="84" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-06 — no runs</title></rect><rect x="98" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-13 — no runs</title></rect><rect x="112" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-20 — no runs</title></rect><rect x="126" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-27 — no runs</title></rect><rect x="140" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-03 — no runs</title></rect><rect x="154" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-10 — no runs</title></rect><rect x="168" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-17 — no runs</title></rect><rect x="182" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-24 — no runs</title></rect><rect x="196" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-31 — no runs</title></rect><rect x="210" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-07 — no runs</title></rect><rect x="224" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-14 — no runs</title></rect><rect x="238" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-21 — no runs</title></rect><rect x="252" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-28 — no runs</title></rect><rect x="266" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-05 — no runs</title></rect><rect x="280" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-12 — no runs</title></rect><rect x="294" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-19 — no runs</title></rect><rect x="308" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-26 — no runs</title></rect><rect x="322" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-02 — no runs</title></rect><rect x="336" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-09 — no runs</title></rect><rect x="350" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-16 — no runs</title></rect><rect x="364" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-23 — no runs</title></rect><rect x="378" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-30 — no runs</title></rect><rect x="392" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-07 — no runs</title></rect><rect x="406" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-14 — no runs</title></rect><rect x="420" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-21 — no runs</title></rect><rect x="434" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-28 — no runs</title></rect><rect x="448" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-04 — no runs</title></rect><rect x="462" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-11 — no runs</title></rect><rect x="476" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-18 — no runs</title></rect><rect x="490" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-25 — no runs</title></rect><rect x="504" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-01 — no runs</title></rect><rect x="518" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-08 — no runs</title></rect><rect x="532" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-15 — no runs</title></rect><rect x="546" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-22 — no runs</title></rect><rect x="560" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-01 — no runs</title></rect><rect x="574" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-08 — no runs</title></rect><rect x="588" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-15 — no runs</title></rect><rect x="602" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-22 — no runs</title></rect><rect x="616" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-29 — no runs</title></rect><rect x="630" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-05 — no runs</title></rect><rect x="644" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-12 — no runs</title></rect><rect x="658" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-19 — no runs</title></rect><rect x="672" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-26 — no runs</title></rect><rect x="686" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-03 — no runs</title></rect><rect x="700" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-10 — no runs</title></rect><rect x="714" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-17 — no runs</title></rect><rect x="0" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-05-26 — no runs</title></rect><rect x="14" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-02 — no runs</title></rect><rect x="28" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-09 — no runs</title></rect><rect x="42" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-16 — no runs</title></rect><rect x="56" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-23 — no runs</title></rect><rect x="70" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-30 — no runs</title></rect><rect x="84" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-07 — no runs</title></rect><rect x="98" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-14 — no runs</title></rect><rect x="112" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-21 — no runs</title></rect><rect x="126" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-28 — no runs</title></rect><rect x="140" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-04 — no runs</title></rect><rect x="154" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-11 — no runs</title></rect><rect x="168" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-18 — no runs</title></rect><rect x="182" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-25 — no runs</title></rect><rect x="196" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-01 — no runs</title></rect><rect x="210" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-08 — no runs</title></rect><rect x="224" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-15 — no runs</title></rect><rect x="238" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-22 — no runs</title></rect><rect x="252" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-29 — no runs</title></rect><rect x="266" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-06 — no runs</title></rect><rect x="280" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-13 — no runs</title></rect><rect x="294" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-20 — no runs</title></rect><rect x="308" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-27 — no runs</title></rect><rect x="322" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-03 — no runs</title></rect><rect x="336" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-10 — no runs</title></rect><rect x="350" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-17 — no runs</title></rect><rect x="364" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-24 — no runs</title></rect><rect x="378" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-01 — no runs</title></rect><rect x="392" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-08 — no runs</title></rect><rect x="406" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-15 — no runs</title></rect><rect x="420" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-22 — no runs</title></rect><rect x="434" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-29 — no runs</title></rect><rect x="448" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-05 — no runs</title></rect><rect x="462" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-12 — no runs</title></rect><rect x="476" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-19 — no runs</title></rect><rect x="490" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-26 — no runs</title></rect><rect x="504" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-02 — no runs</title></rect><rect x="518" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-09 — no runs</title></rect><rect x="532" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-16 — no runs</title></rect><rect x="546" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-23 — no runs</title></rect><rect x="560" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-02 — no runs</title></rect><rect x="574" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-09 — no runs</title></rect><rect x="588" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-16 — no runs</title></rect><rect x="602" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-23 — no runs</title></rect><rect x="616" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-30 — no runs</title></rect><rect x="630" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-06 — no runs</title></rect><rect x="644" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-13 — no runs</title></rect><rect x="658" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-20 — no runs</title></rect><rect x="672" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-27 — no runs</title></rect><rect x="686" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-04 — no runs</title></rect><rect x="700" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-11 — no runs</title></rect><rect x="714" y="28" width="12" height="12" rx="2" fill="#ef4444"><title>2026-05-18 — 1 run(s) · 0 passed · 1 failed · 0 partial</title></rect><rect x="0" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-05-27 — no runs</title></rect><rect x="14" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-03 — no runs</title></rect><rect x="28" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-10 — no runs</title></rect><rect x="42" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-17 — no runs</title></rect><rect x="56" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-24 — no runs</title></rect><rect x="70" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-01 — no runs</title></rect><rect x="84" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-08 — no runs</title></rect><rect x="98" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-15 — no runs</title></rect><rect x="112" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-22 — no runs</title></rect><rect x="126" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-29 — no runs</title></rect><rect x="140" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-05 — no runs</title></rect><rect x="154" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-12 — no runs</title></rect><rect x="168" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-19 — no runs</title></rect><rect x="182" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-26 — no runs</title></rect><rect x="196" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-02 — no runs</title></rect><rect x="210" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-09 — no runs</title></rect><rect x="224" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-16 — no runs</title></rect><rect x="238" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-23 — no runs</title></rect><rect x="252" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-30 — no runs</title></rect><rect x="266" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-07 — no runs</title></rect><rect x="280" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-14 — no runs</title></rect><rect x="294" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-21 — no runs</title></rect><rect x="308" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-28 — no runs</title></rect><rect x="322" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-04 — no runs</title></rect><rect x="336" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-11 — no runs</title></rect><rect x="350" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-18 — no runs</title></rect><rect x="364" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-25 — no runs</title></rect><rect x="378" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-02 — no runs</title></rect><rect x="392" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-09 — no runs</title></rect><rect x="406" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-16 — no runs</title></rect><rect x="420" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-23 — no runs</title></rect><rect x="434" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-30 — no runs</title></rect><rect x="448" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-06 — no runs</title></rect><rect x="462" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-13 — no runs</title></rect><rect x="476" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-20 — no runs</title></rect><rect x="490" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-27 — no runs</title></rect><rect x="504" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-03 — no runs</title></rect><rect x="518" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-10 — no runs</title></rect><rect x="532" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-17 — no runs</title></rect><rect x="546" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-24 — no runs</title></rect><rect x="560" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-03 — no runs</title></rect><rect x="574" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-10 — no runs</title></rect><rect x="588" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-17 — no runs</title></rect><rect x="602" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-24 — no runs</title></rect><rect x="616" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-31 — no runs</title></rect><rect x="630" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-07 — no runs</title></rect><rect x="644" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-14 — no runs</title></rect><rect x="658" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-21 — no runs</title></rect><rect x="672" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-28 — no runs</title></rect><rect x="686" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-05 — no runs</title></rect><rect x="700" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-12 — no runs</title></rect><rect x="714" y="42" width="12" height="12" rx="2" fill="#ef4444"><title>2026-05-19 — 1 run(s) · 0 passed · 1 failed · 0 partial</title></rect><rect x="0" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-05-28 — no runs</title></rect><rect x="14" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-04 — no runs</title></rect><rect x="28" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-11 — no runs</title></rect><rect x="42" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-18 — no runs</title></rect><rect x="56" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-25 — no runs</title></rect><rect x="70" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-02 — no runs</title></rect><rect x="84" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-09 — no runs</title></rect><rect x="98" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-16 — no runs</title></rect><rect x="112" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-23 — no runs</title></rect><rect x="126" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-30 — no runs</title></rect><rect x="140" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-06 — no runs</title></rect><rect x="154" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-13 — no runs</title></rect><rect x="168" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-20 — no runs</title></rect><rect x="182" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-27 — no runs</title></rect><rect x="196" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-03 — no runs</title></rect><rect x="210" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-10 — no runs</title></rect><rect x="224" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-17 — no runs</title></rect><rect x="238" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-24 — no runs</title></rect><rect x="252" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-01 — no runs</title></rect><rect x="266" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-08 — no runs</title></rect><rect x="280" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-15 — no runs</title></rect><rect x="294" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-22 — no runs</title></rect><rect x="308" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-29 — no runs</title></rect><rect x="322" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-05 — no runs</title></rect><rect x="336" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-12 — no runs</title></rect><rect x="350" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-19 — no runs</title></rect><rect x="364" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-26 — no runs</title></rect><rect x="378" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-03 — no runs</title></rect><rect x="392" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-10 — no runs</title></rect><rect x="406" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-17 — no runs</title></rect><rect x="420" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-24 — no runs</title></rect><rect x="434" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-31 — no runs</title></rect><rect x="448" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-07 — no runs</title></rect><rect x="462" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-14 — no runs</title></rect><rect x="476" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-21 — no runs</title></rect><rect x="490" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-28 — no runs</title></rect><rect x="504" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-04 — no runs</title></rect><rect x="518" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-11 — no runs</title></rect><rect x="532" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-18 — no runs</title></rect><rect x="546" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-25 — no runs</title></rect><rect x="560" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-04 — no runs</title></rect><rect x="574" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-11 — no runs</title></rect><rect x="588" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-18 — no runs</title></rect><rect x="602" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-25 — no runs</title></rect><rect x="616" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-01 — no runs</title></rect><rect x="630" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-08 — no runs</title></rect><rect x="644" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-15 — no runs</title></rect><rect x="658" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-22 — no runs</title></rect><rect x="672" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-29 — no runs</title></rect><rect x="686" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-06 — no runs</title></rect><rect x="700" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-13 — no runs</title></rect><rect x="714" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-20 — no runs</title></rect><rect x="0" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-05-29 — no runs</title></rect><rect x="14" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-05 — no runs</title></rect><rect x="28" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-12 — no runs</title></rect><rect x="42" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-19 — no runs</title></rect><rect x="56" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-26 — no runs</title></rect><rect x="70" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-03 — no runs</title></rect><rect x="84" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-10 — no runs</title></rect><rect x="98" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-17 — no runs</title></rect><rect x="112" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-24 — no runs</title></rect><rect x="126" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-31 — no runs</title></rect><rect x="140" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-07 — no runs</title></rect><rect x="154" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-14 — no runs</title></rect><rect x="168" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-21 — no runs</title></rect><rect x="182" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-28 — no runs</title></rect><rect x="196" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-04 — no runs</title></rect><rect x="210" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-11 — no runs</title></rect><rect x="224" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-18 — no runs</title></rect><rect x="238" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-25 — no runs</title></rect><rect x="252" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-02 — no runs</title></rect><rect x="266" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-09 — no runs</title></rect><rect x="280" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-16 — no runs</title></rect><rect x="294" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-23 — no runs</title></rect><rect x="308" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-30 — no runs</title></rect><rect x="322" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-06 — no runs</title></rect><rect x="336" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-13 — no runs</title></rect><rect x="350" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-20 — no runs</title></rect><rect x="364" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-27 — no runs</title></rect><rect x="378" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-04 — no runs</title></rect><rect x="392" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-11 — no runs</title></rect><rect x="406" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-18 — no runs</title></rect><rect x="420" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-25 — no runs</title></rect><rect x="434" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-01 — no runs</title></rect><rect x="448" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-08 — no runs</title></rect><rect x="462" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-15 — no runs</title></rect><rect x="476" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-22 — no runs</title></rect><rect x="490" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-29 — no runs</title></rect><rect x="504" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-05 — no runs</title></rect><rect x="518" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-12 — no runs</title></rect><rect x="532" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-19 — no runs</title></rect><rect x="546" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-26 — no runs</title></rect><rect x="560" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-05 — no runs</title></rect><rect x="574" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-12 — no runs</title></rect><rect x="588" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-19 — no runs</title></rect><rect x="602" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-26 — no runs</title></rect><rect x="616" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-02 — no runs</title></rect><rect x="630" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-09 — no runs</title></rect><rect x="644" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-16 — no runs</title></rect><rect x="658" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-23 — no runs</title></rect><rect x="672" y="70" width="12" height="12" rx="2" fill="#9be9a8"><title>2026-04-30 — 1 run(s) · 0 passed · 0 failed · 0 partial</title></rect><rect x="686" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-07 — no runs</title></rect><rect x="700" y="70" width="12" height="12" rx="2" fill="#9be9a8"><title>2026-05-14 — 1 run(s) · 0 passed · 0 failed · 0 partial</title></rect><rect x="714" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-21 — no runs</title></rect><rect x="0" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-05-30 — no runs</title></rect><rect x="14" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-06 — no runs</title></rect><rect x="28" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-13 — no runs</title></rect><rect x="42" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-20 — no runs</title></rect><rect x="56" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-06-27 — no runs</title></rect><rect x="70" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-04 — no runs</title></rect><rect x="84" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-11 — no runs</title></rect><rect x="98" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-18 — no runs</title></rect><rect x="112" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-25 — no runs</title></rect><rect x="126" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-01 — no runs</title></rect><rect x="140" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-08 — no runs</title></rect><rect x="154" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-15 — no runs</title></rect><rect x="168" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-22 — no runs</title></rect><rect x="182" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-29 — no runs</title></rect><rect x="196" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-05 — no runs</title></rect><rect x="210" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-12 — no runs</title></rect><rect x="224" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-19 — no runs</title></rect><rect x="238" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-26 — no runs</title></rect><rect x="252" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-03 — no runs</title></rect><rect x="266" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-10 — no runs</title></rect><rect x="280" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-17 — no runs</title></rect><rect x="294" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-24 — no runs</title></rect><rect x="308" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-31 — no runs</title></rect><rect x="322" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-07 — no runs</title></rect><rect x="336" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-14 — no runs</title></rect><rect x="350" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-21 — no runs</title></rect><rect x="364" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-28 — no runs</title></rect><rect x="378" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-05 — no runs</title></rect><rect x="392" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-12 — no runs</title></rect><rect x="406" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-19 — no runs</title></rect><rect x="420" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-26 — no runs</title></rect><rect x="434" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-02 — no runs</title></rect><rect x="448" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-09 — no runs</title></rect><rect x="462" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-16 — no runs</title></rect><rect x="476" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-23 — no runs</title></rect><rect x="490" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-30 — no runs</title></rect><rect x="504" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-06 — no runs</title></rect><rect x="518" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-13 — no runs</title></rect><rect x="532" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-20 — no runs</title></rect><rect x="546" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-27 — no runs</title></rect><rect x="560" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-06 — no runs</title></rect><rect x="574" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-13 — no runs</title></rect><rect x="588" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-20 — no runs</title></rect><rect x="602" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-27 — no runs</title></rect><rect x="616" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-03 — no runs</title></rect><rect x="630" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-10 — no runs</title></rect><rect x="644" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-17 — no runs</title></rect><rect x="658" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-24 — no runs</title></rect><rect x="672" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-01 — no runs</title></rect><rect x="686" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-08 — no runs</title></rect><rect x="700" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-15 — no runs</title></rect><rect x="714" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-22 — no runs</title></rect>
         </g>
       </g>
-    </svg>
-    <div class="legend">
-      <span>less</span>
-      <span class="swatch" style="background:#ebedf0"></span>
-      <span class="swatch" style="background:#9be9a8"></span>
-      <span class="swatch" style="background:#40c463"></span>
-      <span class="swatch" style="background:#30a14e"></span>
-      <span class="swatch" style="background:#216e39"></span>
-      <span>more</span>
-      <span style="margin-left:1rem;display:inline-flex;align-items:center;gap:.35rem;">fail
-        <span class="swatch" style="background:#ef4444"></span>
-        <span class="swatch" style="background:#b91c1c"></span>
-        <span class="swatch" style="background:#7f1d1d"></span>
-      </span>
-      <span style="margin-left:1rem;display:inline-flex;align-items:center;gap:.35rem;">partial
-        <span class="swatch" style="background:#f59e0b"></span>
-      </span>
-    </div>
-  </div>
+    </svg></div>
+    </section>
 
-  <div class="panel">
-    <h2>Flows</h2>
-    <table>
-      <thead><tr><th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th></tr></thead>
-      <tbody>
-        <tr>
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Flows</h2>
+        <div class="chips" id="flow-filter" role="tablist" aria-label="Filter flows by status">
+          <button type="button" class="chip active" data-filter="all">All<span class="count">5</span></button>
+          <button type="button" class="chip" data-filter="failing">Failing<span class="count">1</span></button>
+          <button type="button" class="chip" data-filter="partial">Partial<span class="count">0</span></button>
+          <button type="button" class="chip" data-filter="passing">Passing<span class="count">0</span></button>
+          <button type="button" class="chip" data-filter="never">Never run<span class="count">2</span></button>
+        </div>
+      </div>
+      <div class="panel-body no-pad" style="overflow-x:auto;">
+        <table class="flows" id="flows-table">
+          <thead><tr>
+            <th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th>
+          </tr></thead>
+          <tbody>
+        <tr data-status="failing">
           <td class="plan-cell">
             <div class="plan-name">service-requests/create-service-request-v2.md</div>
             <div class="plan-badges"></div>
           </td>
           <td><span class="pill pill-fail">FAILED</span></td>
-          <td>2026-05-19</td>
-          <td>20.3s</td>
-          <td>2</td>
+          <td class="nowrap">2026-05-19</td>
+          <td class="nowrap">20.3s</td>
+          <td class="num">2</td>
           <td><span class="sparkline"><span class="spark spark-fail" title="2026-05-18 — FAILED (44.0s)"></span><span class="spark spark-fail" title="2026-05-19 — FAILED (20.3s)"></span></span></td>
           <td class="links"><a href="test-plans/service-requests/create-service-request-v2.md" title="Open plan">plan</a> · <a href="test-reports/2026-05-19/create-service-request-v2.md">latest report</a></td>
         </tr>
-        <tr>
+        <tr data-status="never">
           <td class="plan-cell">
             <div class="plan-name">cases/create-call-log-entry.md</div>
             <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
           </td>
           <td><span class="pill pill-neutral">[PASS]</span></td>
-          <td>2026-05-14</td>
-          <td>~37 min (incl. exploration of alternative UI)</td>
-          <td>1</td>
+          <td class="nowrap">2026-05-14</td>
+          <td class="nowrap">~37 min (incl. exploration of alternative UI)</td>
+          <td class="num">1</td>
           <td><span class="sparkline"><span class="spark spark-neutral" title="2026-05-14 — [PASS] (~37 min (incl. exploration of alternative UI))"></span></span></td>
           <td class="links"><a href="test-plans/cases/create-call-log-entry.md" title="Open plan">plan</a> · <a href="test-reports/2026-05-14/create-call-log-entry.md">latest report</a></td>
         </tr>
-        <tr>
+        <tr data-status="never">
           <td class="plan-cell">
             <div class="plan-name">cases/create-case.md</div>
             <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
           </td>
           <td><span class="pill pill-neutral">[PASS]</span></td>
-          <td>2026-04-30</td>
-          <td>120s</td>
-          <td>1</td>
+          <td class="nowrap">2026-04-30</td>
+          <td class="nowrap">120s</td>
+          <td class="num">1</td>
           <td><span class="sparkline"><span class="spark spark-neutral" title="2026-04-30 — [PASS] (120s)"></span></span></td>
           <td class="links"><a href="test-plans/cases/create-case.md" title="Open plan">plan</a> · <a href="test-reports/2026-04-30/create-case.md">latest report</a></td>
         </tr>
-        <tr>
+        <tr data-status="never">
           <td class="plan-cell">
             <div class="plan-name">calls/create-call-log.md</div>
             <div class="plan-badges"><span class="badge badge-new">NEW · never run</span> <span class="badge badge-no-spec">no .spec.ts yet</span></div>
           </td>
-          <td><span class="pill pill-neutral">—</span></td>
-          <td>—</td>
-          <td>—</td>
-          <td>0</td>
-          <td><span class="spark-empty">no runs yet</span></td>
+          <td><span class="pill pill-neutral">never run</span></td>
+          <td class="nowrap"><span class="muted">—</span></td>
+          <td class="nowrap"><span class="muted">—</span></td>
+          <td class="num">0</td>
+          <td><span class="spark-empty">—</span></td>
           <td class="links"><a href="test-plans/calls/create-call-log.md" title="Open plan">plan</a> · <span class="muted">no report</span></td>
         </tr>
-        <tr>
+        <tr data-status="never">
           <td class="plan-cell">
             <div class="plan-name">service-requests/create-service-request.md</div>
             <div class="plan-badges"><span class="badge badge-new">NEW · never run</span> <span class="badge badge-no-spec">no .spec.ts yet</span></div>
           </td>
-          <td><span class="pill pill-neutral">—</span></td>
-          <td>—</td>
-          <td>—</td>
-          <td>0</td>
-          <td><span class="spark-empty">no runs yet</span></td>
+          <td><span class="pill pill-neutral">never run</span></td>
+          <td class="nowrap"><span class="muted">—</span></td>
+          <td class="nowrap"><span class="muted">—</span></td>
+          <td class="num">0</td>
+          <td><span class="spark-empty">—</span></td>
           <td class="links"><a href="test-plans/service-requests/create-service-request.md" title="Open plan">plan</a> · <span class="muted">no report</span></td>
         </tr></tbody>
-    </table>
-  </div>
+        </table>
+      </div>
+    </section>
 
-  <h2>Run timeline</h2>
-  
+    <h2>Run timeline</h2>
+    
       <section class="timeline-day">
         <header><h3>Tue, May 19, 2026</h3><span class="muted">1 run</span></header>
         <ul>
       <li class="timeline-run">
         <span class="pill pill-fail">FAILED</span>
-        <a href="test-reports/2026-05-19/create-service-request-v2.md">service-requests/create-service-request-v2.md</a>
+        <a class="run-link" href="test-reports/2026-05-19/create-service-request-v2.md">service-requests/create-service-request-v2.md</a>
         <span class="muted">20.3s · playwright-script (failures pending AI-repair)</span>
       </li></ul>
       </section>
@@ -234,7 +479,7 @@
         <ul>
       <li class="timeline-run">
         <span class="pill pill-fail">FAILED</span>
-        <a href="test-reports/2026-05-18/create-service-request-v2.md">service-requests/create-service-request-v2.md</a>
+        <a class="run-link" href="test-reports/2026-05-18/create-service-request-v2.md">service-requests/create-service-request-v2.md</a>
         <span class="muted">44.0s · playwright-script (failures pending AI-repair)</span>
       </li></ul>
       </section>
@@ -243,7 +488,7 @@
         <ul>
       <li class="timeline-run">
         <span class="pill pill-neutral">[PASS]</span>
-        <a href="test-reports/2026-05-14/create-call-log-entry.md">cases/create-call-log-entry.md</a>
+        <a class="run-link" href="test-reports/2026-05-14/create-call-log-entry.md">cases/create-call-log-entry.md</a>
         <span class="muted">~37 min (incl. exploration of alternative UI)</span>
       </li></ul>
       </section>
@@ -252,12 +497,33 @@
         <ul>
       <li class="timeline-run">
         <span class="pill pill-neutral">[PASS]</span>
-        <a href="test-reports/2026-04-30/create-case.md">cases/create-case.md</a>
+        <a class="run-link" href="test-reports/2026-04-30/create-case.md">cases/create-case.md</a>
         <span class="muted">120s</span>
       </li></ul>
       </section>
 
-  <footer>Generated 2026-05-19 07:34 UTC · project <code>dep</code> · <code>node scripts/build-project-dashboard.js --project=dep</code></footer>
+    <footer class="page-footer">
+      <span>Generated 2026-05-19 08:18 UTC · project <code>dep</code></span>
+      <span><code>node scripts/build-project-dashboard.js --project=dep</code></span>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var chips = Array.prototype.slice.call(document.querySelectorAll('#flow-filter .chip'));
+      var rows = Array.prototype.slice.call(document.querySelectorAll('#flows-table tbody tr[data-status]'));
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+          var f = chip.getAttribute('data-filter');
+          rows.forEach(function (r) {
+            r.style.display = (f === 'all' || r.getAttribute('data-status') === f) ? '' : 'none';
+          });
+        });
+      });
+    })();
+  </script>
 
   <script>
     (function () {

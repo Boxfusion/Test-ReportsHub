@@ -9,6 +9,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { SHARED_CSS } = require('./theme');
 
 const HUB_ROOT = path.resolve(__dirname, '..');
 const PROJECTS_ROOT = path.join(HUB_ROOT, 'projects');
@@ -27,10 +28,33 @@ function readJsonSafe(file) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return null; }
 }
 
+function escapeHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
 function pillFor(result) {
-  if (!result) return '<span class="pill pill-neutral">—</span>';
+  if (!result) return '<span class="pill pill-neutral">no runs</span>';
   const cls = { PASSED: 'pass', FAILED: 'fail', PARTIAL: 'partial' }[result] || 'neutral';
-  return `<span class="pill pill-${cls}">${result}</span>`;
+  return `<span class="pill pill-${cls}">${escapeHtml(result)}</span>`;
+}
+
+function healthOf(summary) {
+  if (!summary || !summary.lastRun) return 'unknown';
+  if (summary.failingFlows > 0) return 'failing';
+  if (summary.lastRun.result === 'PARTIAL') return 'partial';
+  if (summary.lastRun.result === 'PASSED') return 'healthy';
+  return 'unknown';
+}
+
+function healthAccentClass(health) {
+  return {
+    healthy: 'card-accent-pass',
+    failing: 'card-accent-fail',
+    partial: 'card-accent-partial',
+    unknown: 'card-accent-neutral',
+  }[health] || 'card-accent-neutral';
 }
 
 function projectCard(name) {
@@ -40,107 +64,228 @@ function projectCard(name) {
     totalPlans: 0, totalRuns: 0, last7Runs: 0, last7Pass: 0, last7PassPct: null, failingFlows: 0, lastRun: null,
   };
   const displayName = meta.displayName || name;
-  const env = meta.environment ? `<span class="env">${meta.environment}</span>` : '';
-  const appUrl = meta.appUrl ? `<a class="app-url" href="${meta.appUrl}" target="_blank" rel="noreferrer">${meta.appUrl}</a>` : '';
+  const env = meta.environment ? `<span class="env-chip">${escapeHtml(meta.environment)}</span>` : '';
+  const appUrl = meta.appUrl
+    ? `<div class="app-url" title="${escapeHtml(meta.appUrl)}">${escapeHtml(meta.appUrl)}</div>`
+    : '';
   const passPct = summary.last7PassPct == null ? '—' : `${summary.last7PassPct}%`;
   const lastRun = summary.lastRun
-    ? `${pillFor(summary.lastRun.result)} <span class="muted">${summary.lastRun.date}</span>`
+    ? `${pillFor(summary.lastRun.result)} <span class="muted">${escapeHtml(summary.lastRun.date)}</span>`
     : '<span class="muted">no runs yet</span>';
 
+  const health = healthOf(summary);
+  const accent = healthAccentClass(health);
+
   return `
-    <a class="project-card" href="projects/${name}/index.html">
-      <header>
-        <h2>${displayName} ${env}</h2>
+    <a class="project-card ${accent}" href="projects/${encodeURIComponent(name)}/index.html" data-name="${escapeHtml(displayName.toLowerCase())}" data-health="${health}">
+      <div class="project-card-head">
+        <div class="project-card-title">
+          <h2>${escapeHtml(displayName)}</h2>
+          ${env}
+        </div>
         ${appUrl}
-      </header>
+      </div>
       <dl class="stats">
         <div><dt>Last run</dt><dd>${lastRun}</dd></div>
         <div><dt>Flows</dt><dd>${summary.totalPlans}</dd></div>
         <div><dt>Total runs</dt><dd>${summary.totalRuns}</dd></div>
-        <div><dt>Last 7d pass rate</dt><dd>${passPct} <span class="muted">(${summary.last7Runs} run${summary.last7Runs === 1 ? '' : 's'})</span></dd></div>
+        <div><dt>7d pass rate</dt><dd>${passPct} <span class="muted">(${summary.last7Runs} run${summary.last7Runs === 1 ? '' : 's'})</span></dd></div>
         <div><dt>Failing</dt><dd>${summary.failingFlows} <span class="muted">flow${summary.failingFlows === 1 ? '' : 's'}</span></dd></div>
       </dl>
-      <footer class="cta">Open dashboard →</footer>
+      <div class="project-card-foot">
+        <span class="cta">Open dashboard →</span>
+      </div>
     </a>`;
 }
 
 function main() {
   const projects = listProjects();
-  const cards = projects.length === 0
-    ? '<div class="empty">No projects yet. Add one under <code>projects/&lt;name&gt;/</code>.</div>'
-    : projects.map(projectCard).join('');
 
-  const totalPlans = projects.reduce((acc, n) => {
-    const s = readJsonSafe(path.join(PROJECTS_ROOT, n, 'summary.json'));
-    return acc + (s?.totalPlans || 0);
-  }, 0);
-  const totalRuns = projects.reduce((acc, n) => {
-    const s = readJsonSafe(path.join(PROJECTS_ROOT, n, 'summary.json'));
-    return acc + (s?.totalRuns || 0);
-  }, 0);
-  const totalFailing = projects.reduce((acc, n) => {
-    const s = readJsonSafe(path.join(PROJECTS_ROOT, n, 'summary.json'));
-    return acc + (s?.failingFlows || 0);
-  }, 0);
+  const summaries = projects.map((n) => readJsonSafe(path.join(PROJECTS_ROOT, n, 'summary.json')) || {});
+  const totalPlans = summaries.reduce((acc, s) => acc + (s.totalPlans || 0), 0);
+  const totalRuns = summaries.reduce((acc, s) => acc + (s.totalRuns || 0), 0);
+  const totalFailing = summaries.reduce((acc, s) => acc + (s.failingFlows || 0), 0);
+  const last7Runs = summaries.reduce((acc, s) => acc + (s.last7Runs || 0), 0);
+
+  // Sort: failing first, then partial, then healthy, then unknown — alpha within group
+  const ordered = projects
+    .map((name, i) => ({ name, summary: summaries[i] || {}, meta: readJsonSafe(path.join(PROJECTS_ROOT, name, 'meta.json')) || {} }))
+    .sort((a, b) => {
+      const order = { failing: 0, partial: 1, healthy: 2, unknown: 3 };
+      const ha = order[healthOf(a.summary)];
+      const hb = order[healthOf(b.summary)];
+      if (ha !== hb) return ha - hb;
+      return (a.meta.displayName || a.name).localeCompare(b.meta.displayName || b.name);
+    });
+
+  const cards = ordered.length === 0
+    ? `<div class="empty">
+         <strong>No projects yet</strong>
+         Add one under <code>projects/&lt;name&gt;/</code> with a <code>meta.json</code>, then run <code>node scripts/build-all.js</code>.
+       </div>`
+    : ordered.map((p) => projectCard(p.name)).join('');
 
   const generated = new Date().toISOString().replace('T', ' ').slice(0, 16) + ' UTC';
+
+  const failingKpiClass = totalFailing > 0 ? 'kpi-warn' : 'kpi-good';
 
   const out = `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Test Reports Hub</title>
+<title>Test Reports Hub · Boxfusion</title>
 <style>
-  :root {
-    --bg: #f6f8fa; --card: #ffffff; --ink: #0f172a; --muted: #64748b; --border: #e2e8f0;
-    --pass: #15803d; --pass-bg: #dcfce7; --fail: #b91c1c; --fail-bg: #fee2e2;
-    --partial: #b45309; --partial-bg: #fef3c7; --neutral: #475569; --neutral-bg: #f1f5f9;
-    --accent: #2563eb;
+${SHARED_CSS}
+
+  /* ───── Landing-specific ───── */
+  .toolbar {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    margin-bottom: 1.25rem; flex-wrap: wrap;
   }
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 2rem; background: var(--bg); color: var(--ink); line-height: 1.45; }
-  h1 { margin: 0 0 .25rem 0; font-size: 2rem; }
-  .subtitle { color: var(--muted); margin-bottom: 1.5rem; }
-  .summary { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; color: var(--muted); font-size: .9rem; }
-  .summary strong { color: var(--ink); font-size: 1.1rem; margin-right: .25rem; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; }
-  .project-card { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; text-decoration: none; color: var(--ink); transition: border-color .15s, transform .15s; }
-  .project-card:hover { border-color: var(--accent); transform: translateY(-1px); }
-  .project-card header { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem; }
-  .project-card h2 { margin: 0 0 .25rem 0; font-size: 1.15rem; display: flex; align-items: center; gap: .5rem; }
-  .project-card .env { font-size: .65rem; font-weight: 600; letter-spacing: .05em; padding: .1rem .45rem; background: var(--neutral-bg); color: var(--muted); border-radius: 4px; text-transform: uppercase; }
-  .app-url { font-size: .75rem; color: var(--muted); text-decoration: none; word-break: break-all; }
+  .toolbar .chips { gap: .4rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+  .project-card {
+    display: flex; flex-direction: column; gap: .25rem;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 1.1rem 1.25rem 1rem; text-decoration: none; color: var(--ink);
+    box-shadow: var(--shadow-sm);
+    transition: border-color .15s, box-shadow .15s, transform .15s;
+    position: relative; overflow: hidden;
+  }
+  .project-card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--border-strong);
+  }
+  .project-card.card-accent-pass::before { background: var(--pass-line); }
+  .project-card.card-accent-fail::before { background: var(--fail-line); }
+  .project-card.card-accent-partial::before { background: var(--partial-line); }
+  .project-card.card-accent-neutral::before { background: var(--border-strong); }
+  .project-card:hover {
+    border-color: var(--border-strong); box-shadow: var(--shadow-md); transform: translateY(-1px);
+    text-decoration: none;
+  }
+  .project-card-head {
+    display: flex; flex-direction: column; gap: .25rem;
+    margin-bottom: .75rem;
+  }
+  .project-card-title { display: flex; align-items: center; gap: .55rem; flex-wrap: wrap; }
+  .project-card h2 { margin: 0; font-size: 1.05rem; font-weight: 600; letter-spacing: -.01em; }
+  .project-card .app-url {
+    font-size: .76rem; color: var(--muted);
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%;
+  }
   .project-card:hover .app-url { color: var(--accent); }
-  dl.stats { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem 1rem; margin: 1rem 0 .75rem; }
-  dl.stats > div { display: flex; flex-direction: column; }
-  dl.stats dt { font-size: .65rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: .15rem; }
-  dl.stats dd { margin: 0; font-size: .95rem; font-weight: 500; }
-  .pill { display: inline-block; padding: .1rem .5rem; border-radius: 999px; font-size: .7rem; font-weight: 600; letter-spacing: .03em; }
-  .pill-pass { color: var(--pass); background: var(--pass-bg); }
-  .pill-fail { color: var(--fail); background: var(--fail-bg); }
-  .pill-partial { color: var(--partial); background: var(--partial-bg); }
-  .pill-neutral { color: var(--neutral); background: var(--neutral-bg); }
-  .muted { color: var(--muted); font-size: .8rem; }
-  .cta { color: var(--accent); font-size: .85rem; font-weight: 500; }
-  .empty { background: var(--card); border: 1px dashed var(--border); border-radius: 12px; padding: 2rem; text-align: center; color: var(--muted); }
-  footer { color: var(--muted); font-size: .8rem; margin-top: 2.5rem; }
+  dl.stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: .65rem 1rem;
+    margin: 0 0 .85rem; padding: .75rem 0 0; border-top: 1px solid var(--border);
+  }
+  dl.stats > div { display: flex; flex-direction: column; min-width: 0; }
+  dl.stats dt { font-size: .62rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; margin-bottom: .2rem; }
+  dl.stats dd { margin: 0; font-size: .9rem; font-weight: 500; color: var(--ink); display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; }
+  .project-card-foot {
+    display: flex; align-items: center; justify-content: flex-end;
+    border-top: 1px solid var(--border); padding-top: .65rem; margin-top: auto;
+  }
+  .cta { color: var(--accent); font-size: .82rem; font-weight: 500; }
+
+  .no-results {
+    grid-column: 1 / -1;
+    text-align: center; color: var(--muted); padding: 2rem 1rem;
+    border: 1px dashed var(--border); border-radius: var(--radius); background: var(--surface);
+  }
 </style>
 </head>
 <body>
-  <h1>Test Reports Hub</h1>
-  <div class="subtitle">Centralised test report dashboards across Boxfusion projects.</div>
+  <header class="topbar">
+    <div class="inner">
+      <a class="brand" href="index.html">
+        <span class="mark">TR</span>
+        <span class="name">Test Reports Hub<span class="org">Boxfusion</span></span>
+      </a>
+      <nav>
+        <span>${projects.length} project${projects.length === 1 ? '' : 's'}</span>
+      </nav>
+    </div>
+  </header>
 
-  <div class="summary">
-    <span><strong>${projects.length}</strong> project${projects.length === 1 ? '' : 's'}</span>
-    <span><strong>${totalPlans}</strong> test flow${totalPlans === 1 ? '' : 's'}</span>
-    <span><strong>${totalRuns}</strong> total run${totalRuns === 1 ? '' : 's'}</span>
-    <span><strong>${totalFailing}</strong> currently failing</span>
-  </div>
+  <main class="container">
+    <div class="page-head">
+      <h1>Test Reports Hub</h1>
+      <p class="subtitle">Centralised test report dashboards across Boxfusion projects.</p>
+    </div>
 
-  <div class="grid">${cards}</div>
+    <section class="kpis" aria-label="Overview">
+      <div class="kpi"><span class="label">Projects</span><span class="num">${projects.length}</span><span class="meta">tracked here</span></div>
+      <div class="kpi"><span class="label">Test flows</span><span class="num">${totalPlans}</span><span class="meta">across all projects</span></div>
+      <div class="kpi"><span class="label">Total runs</span><span class="num">${totalRuns}</span><span class="meta">${last7Runs} in the last 7 days</span></div>
+      <div class="kpi ${failingKpiClass}"><span class="label">Currently failing</span><span class="num">${totalFailing}</span><span class="meta">flow${totalFailing === 1 ? '' : 's'} with a failing last run</span></div>
+    </section>
 
-  <footer>Generated ${generated} · <code>node scripts/build-landing.js</code></footer>
+    <div class="toolbar">
+      <div class="chips" role="tablist" aria-label="Filter projects by health">
+        <button type="button" class="chip active" data-filter="all">All<span class="count">${projects.length}</span></button>
+        <button type="button" class="chip" data-filter="failing">Failing<span class="count">${ordered.filter((p) => healthOf(p.summary) === 'failing').length}</span></button>
+        <button type="button" class="chip" data-filter="partial">Partial<span class="count">${ordered.filter((p) => healthOf(p.summary) === 'partial').length}</span></button>
+        <button type="button" class="chip" data-filter="healthy">Healthy<span class="count">${ordered.filter((p) => healthOf(p.summary) === 'healthy').length}</span></button>
+        <button type="button" class="chip" data-filter="unknown">Unknown<span class="count">${ordered.filter((p) => healthOf(p.summary) === 'unknown').length}</span></button>
+      </div>
+      <label class="search" aria-label="Search projects">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3-3"></path></svg>
+        <input type="search" id="project-search" placeholder="Search projects…" autocomplete="off" />
+      </label>
+    </div>
+
+    <section class="grid" id="project-grid">${cards}</section>
+    <div id="no-results" class="no-results" hidden>No projects match your search.</div>
+
+    <footer class="page-footer">
+      <span>Generated ${generated}</span>
+      <span><code>node scripts/build-landing.js</code></span>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var grid = document.getElementById('project-grid');
+      if (!grid) return;
+      var cards = Array.prototype.slice.call(grid.querySelectorAll('.project-card'));
+      var chips = Array.prototype.slice.call(document.querySelectorAll('.chip[data-filter]'));
+      var search = document.getElementById('project-search');
+      var noResults = document.getElementById('no-results');
+      var currentFilter = 'all';
+      var currentQuery = '';
+
+      function apply() {
+        var visible = 0;
+        cards.forEach(function (c) {
+          var health = c.getAttribute('data-health') || '';
+          var name = c.getAttribute('data-name') || '';
+          var matchFilter = currentFilter === 'all' || health === currentFilter;
+          var matchQuery = !currentQuery || name.indexOf(currentQuery) !== -1;
+          var show = matchFilter && matchQuery;
+          c.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        if (noResults) noResults.hidden = visible !== 0;
+      }
+
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+          currentFilter = chip.getAttribute('data-filter');
+          apply();
+        });
+      });
+
+      if (search) {
+        search.addEventListener('input', function () {
+          currentQuery = search.value.trim().toLowerCase();
+          apply();
+        });
+      }
+    })();
+  </script>
 </body>
 </html>`;
 
