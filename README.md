@@ -31,6 +31,23 @@ Each project repo has a `scripts/sync-to-hub.js` (or equivalent) that:
 
 The hub is therefore append-only data plus generated HTML. Never hand-edit the dashboards or reports — fix the source project and re-sync.
 
+## Per-project artifacts
+
+Every `projects/<name>/` folder contains the same set of test artifacts, in the same layout. Standard formats (JUnit XML, Allure) sit alongside our custom markdown layer so any CI/DevOps tool can consume the results without bespoke parsing.
+
+| Artifact | Standard | Path (in this hub) | Consumed by |
+|---|---|---|---|
+| **JUnit XML** | JUnit schema (`<testsuites><testsuite><testcase>`) | `projects/<name>/test-results/junit.xml` | Azure DevOps "Publish Test Results", GitHub Actions `dorny/test-reporter`, Jenkins, GitLab, any CI |
+| **Allure report** | Allure single-file HTML | `projects/<name>/allure-report/index.html` | Humans — opens as in-page modal on the project dashboard |
+| **Run report** | Custom markdown | `projects/<name>/test-reports/YYYY-MM-DD/<plan>.md` | Project dashboard, humans |
+| **Bug log** | Custom markdown | `projects/<name>/test-reports/bugs/<plan>.md` | Project dashboard, devs |
+| **Plan** | Custom markdown (canonical spec) | `projects/<name>/test-plans/<folder>/<plan>.md` | `create-test` / `run-test` skills, humans |
+| **Spec** | TypeScript (`@playwright/test`) | `projects/<name>/test-plans/<folder>/<plan>.spec.ts` | Playwright |
+| **Project metadata** | JSON | `projects/<name>/meta.json` | Landing page, project dashboard |
+| **Project summary** | JSON | `projects/<name>/summary.json` | Landing page (auto-generated) |
+
+Intermediate Playwright artifacts (`results.json`, `playwright-report/`, screenshots/traces) are kept local to each project repo and not synced — they're useful for the developer debugging a failure, but not for the central report view.
+
 ## Adding a new project
 
 1. Create `projects/<name>/meta.json`:

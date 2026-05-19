@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.828548">
+<testsuite name="service-requests\create-service-request-v2.spec.ts" timestamp="2026-05-19T08:50:33.129Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.942" errors="0">
+<testcase name="Create Service Request (v2) › TC-01: Login as Admin" classname="service-requests\create-service-request-v2.spec.ts" time="3.942">
+</testcase>
+</testsuite>
+</testsuites>
