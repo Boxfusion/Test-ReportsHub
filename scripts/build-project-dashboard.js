@@ -388,12 +388,27 @@ function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projec
   .timeline-run a { color: var(--ink); text-decoration: none; font-weight: 500; }
   .timeline-run a:hover { color: #2563eb; }
   footer { color: var(--muted); font-size: .8rem; margin-top: 2rem; }
-  .actions { display: flex; gap: .75rem; flex-wrap: wrap; margin: .5rem 0 1.5rem; }
-  .btn { display: inline-block; padding: .55rem 1rem; border-radius: 8px; text-decoration: none; font-size: .9rem; font-weight: 500; border: 1px solid var(--border); background: var(--card); color: var(--ink); transition: border-color .15s, background .15s; }
+  .actions { display: flex; gap: .75rem; flex-wrap: wrap; margin: .5rem 0 1.5rem; align-items: center; }
+  .btn { display: inline-block; padding: .55rem 1rem; border-radius: 8px; text-decoration: none; font-size: .9rem; font-weight: 500; border: 1px solid var(--border); background: var(--card); color: var(--ink); transition: border-color .15s, background .15s; cursor: pointer; font-family: inherit; }
   .btn:hover { border-color: #2563eb; }
   .btn-primary { background: #2563eb; color: #fff; border-color: #2563eb; }
   .btn-primary:hover { background: #1d4ed8; border-color: #1d4ed8; }
   .btn .meta { display: block; font-size: .7rem; font-weight: 400; opacity: .8; margin-top: .15rem; }
+  .allure-modal { display: none; position: fixed; inset: 0; z-index: 1000; align-items: center; justify-content: center; padding: 2.5rem; background: rgba(15, 23, 42, .55); backdrop-filter: blur(2px); }
+  .allure-modal.open { display: flex; }
+  .allure-modal .dialog { background: var(--card); border-radius: 12px; width: 100%; max-width: 1400px; height: 100%; max-height: calc(100vh - 5rem); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,.4); }
+  .allure-modal header { display: flex; align-items: center; justify-content: space-between; padding: .75rem 1.25rem; border-bottom: 1px solid var(--border); background: var(--neutral-bg); }
+  .allure-modal header .title { font-weight: 600; color: var(--ink); font-size: .95rem; }
+  .allure-modal header .right { display: flex; align-items: center; gap: .75rem; color: var(--muted); font-size: .8rem; }
+  .allure-modal header a.popout { color: var(--muted); text-decoration: none; }
+  .allure-modal header a.popout:hover { color: #2563eb; text-decoration: underline; }
+  .allure-modal header button.close { background: transparent; border: 1px solid var(--border); border-radius: 6px; padding: .3rem .7rem; font-size: .8rem; cursor: pointer; color: var(--muted); font-family: inherit; }
+  .allure-modal header button.close:hover { color: var(--ink); border-color: var(--muted); }
+  .allure-frame-wrap { position: relative; flex: 1; background: var(--bg); overflow: hidden; }
+  .allure-frame-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .allure-frame-wrap .loader { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .85rem; pointer-events: none; }
+  .allure-frame-wrap .loader.hidden { display: none; }
+  body.modal-open { overflow: hidden; }
 </style>
 </head>
 <body>
@@ -403,9 +418,26 @@ function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projec
 
   <div class="actions">
     ${hasAllure
-      ? `<a class="btn btn-primary" href="allure-report/index.html" target="_blank" rel="noopener">Open Allure visualisation →<span class="meta">interactive run-by-run breakdown</span></a>`
+      ? `<button type="button" id="allure-toggle" class="btn btn-primary">Open Allure visualisation<span class="meta">interactive run-by-run breakdown · loads inline</span></button>`
       : `<span class="btn" style="opacity:.55;cursor:not-allowed;">Allure report not yet generated<span class="meta">run a test to produce it</span></span>`}
   </div>
+
+  ${hasAllure ? `
+  <div id="allure-panel" class="allure-modal" aria-hidden="true" role="dialog" aria-label="Allure visualisation">
+    <div class="dialog">
+      <header>
+        <span class="title">Allure visualisation</span>
+        <span class="right">
+          <a class="popout" href="allure-report/index.html" target="_blank" rel="noopener">open in new tab ↗</a>
+          <button type="button" class="close" id="allure-close">Close (Esc)</button>
+        </span>
+      </header>
+      <div class="allure-frame-wrap">
+        <div class="loader" id="allure-loader">Loading Allure report (3MB)…</div>
+        <iframe id="allure-frame" title="Allure report" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>` : ''}
 
   <div class="cards">
     <div class="card"><div class="label">Test Flows</div><div class="num">${totalPlans}</div></div>
@@ -448,6 +480,39 @@ function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projec
   ${timelineGroups || '<div class="panel muted">No runs recorded yet.</div>'}
 
   <footer>Generated ${generated} · project <code>${projectName}</code> · <code>node scripts/build-project-dashboard.js --project=${projectName}</code></footer>
+
+  ${hasAllure ? `<script>
+    (function () {
+      var btn = document.getElementById('allure-toggle');
+      var panel = document.getElementById('allure-panel');
+      var frame = document.getElementById('allure-frame');
+      var loader = document.getElementById('allure-loader');
+      var closeBtn = document.getElementById('allure-close');
+      if (!btn || !panel || !frame) return;
+      var loaded = false;
+      function open() {
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        if (!loaded) {
+          frame.addEventListener('load', function () { loader.classList.add('hidden'); }, { once: true });
+          frame.src = 'allure-report/index.html';
+          loaded = true;
+        }
+      }
+      function close() {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+      }
+      btn.addEventListener('click', open);
+      if (closeBtn) closeBtn.addEventListener('click', close);
+      panel.addEventListener('click', function (e) { if (e.target === panel) close(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && panel.classList.contains('open')) close();
+      });
+    })();
+  </script>` : ''}
 </body>
 </html>`;
 }
