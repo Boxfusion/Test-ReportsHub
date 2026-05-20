@@ -19,6 +19,11 @@ const HUB_ROOT = path.resolve(__dirname, '..');
 const HEATMAP_WEEKS = 52;
 const SPARKLINE_RUNS = 12;
 
+// GitHub repo hosting the hub. The re-run button on each flow row opens
+// .github/workflows/run-test.yml in this repo via workflow_dispatch.
+const HUB_REPO_URL = 'https://github.com/Boxfusion/Test-ReportsHub';
+const RUN_TEST_WORKFLOW = `${HUB_REPO_URL}/actions/workflows/run-test.yml`;
+
 function parseArgs(argv) {
   const out = {};
   for (const a of argv.slice(2)) {
@@ -300,6 +305,10 @@ function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projec
       const reportLink = last ? `<a href="${escapeHtml(reportLinkHref(last, projectRoot))}">latest report</a>` : '<span class="muted">no report</span>';
       const links = [planLink, reportLink, bugLinks].filter(Boolean).join(' · ');
       const rowClass = rowFilterClass(planObj, last);
+      const canRun = !!planObj.spec;
+      const rerunBtn = canRun
+        ? `<button type="button" class="btn-rerun" data-action="rerun" data-project="${escapeHtml(projectName)}" data-plan="${escapeHtml(planRel)}" title="Re-run this test in GitHub Actions">▶ Re-run</button>`
+        : `<button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button>`;
       return `
         <tr data-status="${rowClass}">
           <td class="plan-cell">
@@ -312,6 +321,7 @@ function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projec
           <td class="num">${runs.length}</td>
           <td>${sparklineHtml(runs)}</td>
           <td class="links">${links}</td>
+          <td class="actions-cell">${rerunBtn}</td>
         </tr>`;
     }).join('');
 
@@ -433,6 +443,48 @@ ${SHARED_CSS}
   .allure-frame-wrap .loader { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .85rem; pointer-events: none; }
   .allure-frame-wrap .loader.hidden { display: none; }
   body.modal-open { overflow: hidden; }
+
+  /* Re-run button (per-row) */
+  td.actions-cell { white-space: nowrap; }
+  .btn-rerun {
+    display: inline-flex; align-items: center; gap: .3rem;
+    padding: .3rem .65rem; border-radius: 6px;
+    font-size: .8rem; font-weight: 500; font-family: inherit;
+    color: var(--accent); background: var(--accent-bg, rgba(37, 99, 235, .08));
+    border: 1px solid rgba(37, 99, 235, .25);
+    cursor: pointer; transition: background .15s, border-color .15s, transform .05s;
+  }
+  .btn-rerun:hover:not(:disabled) { background: rgba(37, 99, 235, .14); border-color: var(--accent); }
+  .btn-rerun:active:not(:disabled) { transform: translateY(1px); }
+  .btn-rerun:disabled { opacity: .4; cursor: not-allowed; }
+  .btn-rerun.is-pending { background: rgba(37, 99, 235, .14); border-color: var(--accent); animation: pulse-soft 1.5s ease-in-out infinite; }
+  @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: .6; } }
+
+  /* Run-triggered toast */
+  .toast-stack { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 1100; display: flex; flex-direction: column; gap: .65rem; max-width: min(420px, calc(100vw - 2.5rem)); }
+  .toast {
+    background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    border-radius: var(--radius); box-shadow: var(--shadow-lg);
+    padding: .85rem 1rem .9rem; font-size: .85rem; color: var(--ink);
+    transform: translateY(8px); opacity: 0; transition: transform .25s, opacity .25s;
+  }
+  .toast.in { transform: translateY(0); opacity: 1; }
+  .toast .toast-head { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: .5rem; }
+  .toast .toast-title { font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: .45rem; }
+  .toast .toast-title .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(37, 99, 235, .15); animation: pulse-soft 1.5s ease-in-out infinite; }
+  .toast .toast-close { background: transparent; border: 0; color: var(--muted); cursor: pointer; font-size: 1rem; line-height: 1; padding: 0 .15rem; }
+  .toast .toast-close:hover { color: var(--ink); }
+  .toast .toast-body { color: var(--ink-2); line-height: 1.45; }
+  .toast .toast-body p { margin: 0 0 .5rem; }
+  .toast .input-row { display: grid; grid-template-columns: 60px 1fr auto; gap: .35rem .5rem; align-items: center; margin: .25rem 0 .35rem; font-size: .78rem; }
+  .toast .input-row .label { color: var(--muted); text-transform: uppercase; letter-spacing: .04em; font-size: .68rem; }
+  .toast .input-row code { background: var(--surface-2); border: 1px solid var(--border); padding: .15rem .4rem; border-radius: 4px; font-size: .78rem; overflow-x: auto; white-space: nowrap; }
+  .toast .input-row button.copy { background: var(--surface-2); border: 1px solid var(--border); border-radius: 4px; padding: .15rem .45rem; font-size: .7rem; cursor: pointer; color: var(--ink-2); font-family: inherit; }
+  .toast .input-row button.copy:hover { color: var(--ink); border-color: var(--border-strong); }
+  .toast .input-row button.copy.copied { background: var(--pass-bg); color: var(--pass); border-color: var(--pass-line); }
+  .toast .toast-foot { margin-top: .55rem; padding-top: .55rem; border-top: 1px solid var(--border); font-size: .75rem; color: var(--muted); }
+  .toast a { color: var(--accent); text-decoration: none; }
+  .toast a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -529,9 +581,9 @@ ${SHARED_CSS}
       <div class="panel-body no-pad" style="overflow-x:auto;">
         <table class="flows" id="flows-table">
           <thead><tr>
-            <th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th>
+            <th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th><th>Actions</th>
           </tr></thead>
-          <tbody>${flowsRows || '<tr><td colspan="7" class="muted" style="padding:1.5rem 1rem;text-align:center;">No test plans found.</td></tr>'}</tbody>
+          <tbody>${flowsRows || '<tr><td colspan="8" class="muted" style="padding:1.5rem 1rem;text-align:center;">No test plans found.</td></tr>'}</tbody>
         </table>
       </div>
     </section>
@@ -594,6 +646,83 @@ ${SHARED_CSS}
       });
     })();
   </script>` : ''}
+
+  <div id="toast-stack" class="toast-stack" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      var WORKFLOW_URL = ${JSON.stringify(RUN_TEST_WORKFLOW)};
+      var stack = document.getElementById('toast-stack');
+      if (!stack) return;
+
+      function copyToClipboard(text, btn) {
+        var done = function () {
+          if (!btn) return;
+          var original = btn.textContent;
+          btn.textContent = 'copied';
+          btn.classList.add('copied');
+          setTimeout(function () { btn.textContent = original; btn.classList.remove('copied'); }, 1200);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done).catch(function () {
+            window.prompt('Copy:', text);
+          });
+        } else {
+          window.prompt('Copy:', text);
+        }
+      }
+
+      function showToast(project, plan) {
+        var toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML =
+          '<div class="toast-head">' +
+            '<div class="toast-title"><span class="dot"></span>Re-run triggered</div>' +
+            '<button type="button" class="toast-close" aria-label="Close">×</button>' +
+          '</div>' +
+          '<div class="toast-body">' +
+            '<p>A new GitHub Actions tab just opened. Click <strong>Run workflow</strong> there and paste these values:</p>' +
+            '<div class="input-row"><span class="label">project</span><code data-val="' + project.replace(/"/g, '&quot;') + '">' + project + '</code><button type="button" class="copy" data-copy="' + project.replace(/"/g, '&quot;') + '">copy</button></div>' +
+            '<div class="input-row"><span class="label">plan</span><code data-val="' + plan.replace(/"/g, '&quot;') + '">' + plan + '</code><button type="button" class="copy" data-copy="' + plan.replace(/"/g, '&quot;') + '">copy</button></div>' +
+            '<div class="toast-foot">When the run finishes, GitHub auto-commits the report back to this hub. Refresh this page in ~1–2 min to see the updated row.</div>' +
+          '</div>';
+        stack.appendChild(toast);
+        requestAnimationFrame(function () { toast.classList.add('in'); });
+
+        toast.querySelector('.toast-close').addEventListener('click', function () {
+          toast.classList.remove('in');
+          setTimeout(function () { toast.remove(); }, 250);
+        });
+        Array.prototype.slice.call(toast.querySelectorAll('button.copy')).forEach(function (b) {
+          b.addEventListener('click', function () { copyToClipboard(b.getAttribute('data-copy'), b); });
+        });
+
+        // Auto-dismiss after 30s
+        setTimeout(function () {
+          if (!toast.parentNode) return;
+          toast.classList.remove('in');
+          setTimeout(function () { toast.remove(); }, 250);
+        }, 30000);
+      }
+
+      function handleRerun(btn) {
+        var project = btn.getAttribute('data-project');
+        var plan = btn.getAttribute('data-plan');
+        if (!project || !plan) return;
+        // Visual feedback on the row
+        btn.classList.add('is-pending');
+        setTimeout(function () { btn.classList.remove('is-pending'); }, 3000);
+        // Open the GitHub Actions workflow_dispatch UI in a new tab
+        window.open(WORKFLOW_URL, '_blank', 'noopener');
+        // Show the toast with copy-ready input values
+        showToast(project, plan);
+      }
+
+      Array.prototype.slice.call(document.querySelectorAll('[data-action="rerun"]')).forEach(function (btn) {
+        btn.addEventListener('click', function (e) { e.preventDefault(); handleRerun(btn); });
+      });
+    })();
+  </script>
 </body>
 </html>`;
 }

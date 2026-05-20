@@ -62,6 +62,23 @@ Intermediate Playwright artifacts (`results.json`, `playwright-report/`, screens
 2. Create empty `projects/<name>/test-plans/` and `projects/<name>/test-reports/` folders (with a `.gitkeep` each).
 3. Wire that project's CI / run-test skill to push into `projects/<name>/`.
 
+## Re-running a test from the dashboard
+
+Every row in the **Flows** table on each project dashboard has a `▶ Re-run` button. Clicking it:
+
+1. Opens [.github/workflows/run-test.yml](.github/workflows/run-test.yml) in a new GitHub tab.
+2. Shows a toast on the dashboard with the `project` + `plan` values to paste into the workflow inputs.
+3. You click **Run workflow** on the GitHub tab. The workflow:
+   - Checks out the hub
+   - Installs Playwright + Chromium
+   - Runs `projects/<project>/<plan>.spec.ts` against the project's test site
+   - Writes JUnit XML + a markdown report into `projects/<project>/`
+   - Rebuilds the dashboards
+   - Commits the new report back to the hub repo
+4. Refresh the dashboard ~1–2 minutes later — the flow row's status, sparkline, and timeline pick up the new run automatically.
+
+The button is disabled (greyed) for plans that don't have a paired `.spec.ts` yet. Generate one with the project's `create-test` skill, sync, and the button will activate.
+
 ## Regenerating manually
 
 ```bash

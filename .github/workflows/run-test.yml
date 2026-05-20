@@ -1,0 +1,153 @@
+name: Run a test
+run-name: Run ${{ inputs.project }} / ${{ inputs.plan }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: "Project name (matches the folder under projects/)"
+        required: true
+        default: "dep"
+        type: string
+      plan:
+        description: "Plan path under projects/<project>/ (e.g. test-plans/cases/create-case.md)"
+        required: true
+        default: "test-plans/cases/create-case.md"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright
+        run: |
+          npm init -y > /dev/null
+          npm install --no-save --no-package-lock @playwright/test@^1.49
+          npx playwright install chromium --with-deps
+
+      - name: Write CI Playwright config
+        run: |
+          cat > playwright.config.ci.ts <<'EOF'
+          import { defineConfig } from '@playwright/test';
+          export default defineConfig({
+            testDir: '.',
+            workers: 1,
+            timeout: 90_000,
+            reporter: [
+              ['list'],
+              ['json',  { outputFile: 'ci-results/results.json' }],
+              ['junit', { outputFile: 'ci-results/junit.xml' }],
+            ],
+            use: {
+              screenshot: 'only-on-failure',
+              trace: 'retain-on-failure',
+              video: 'retain-on-failure',
+            },
+            outputDir: 'ci-results/artifacts',
+          });
+          EOF
+
+      - name: Resolve paths
+        id: paths
+        run: |
+          PROJECT="${{ inputs.project }}"
+          PLAN="${{ inputs.plan }}"
+          SPEC="projects/$PROJECT/${PLAN%.md}.spec.ts"
+          if [ ! -f "$SPEC" ]; then
+            echo "::error::Spec not found at $SPEC. Sync the project's plans + specs into the hub first."
+            exit 2
+          fi
+          PLAN_BASE="$(basename "$PLAN" .md)"
+          TODAY="$(date -u +%Y-%m-%d)"
+          {
+            echo "spec=$SPEC"
+            echo "project_dir=projects/$PROJECT"
+            echo "plan_base=$PLAN_BASE"
+            echo "today=$TODAY"
+          } >> $GITHUB_OUTPUT
+
+      - name: Run spec
+        id: run
+        continue-on-error: true
+        run: npx playwright test "${{ steps.paths.outputs.spec }}" --config=playwright.config.ci.ts
+
+      - name: Stage results into hub layout
+        if: always()
+        env:
+          PROJ_DIR: ${{ steps.paths.outputs.project_dir }}
+          PLAN_BASE: ${{ steps.paths.outputs.plan_base }}
+          TODAY: ${{ steps.paths.outputs.today }}
+        run: |
+          mkdir -p "$PROJ_DIR/test-results" "$PROJ_DIR/test-reports/$TODAY"
+
+          # JUnit XML — primary artifact for CI consumers
+          if [ -f ci-results/junit.xml ]; then
+            cp ci-results/junit.xml "$PROJ_DIR/test-results/junit.xml"
+          fi
+
+          # Markdown report — what the hub dashboard parses
+          OUTCOME="${{ steps.run.outcome }}"
+          if [ "$OUTCOME" = "success" ]; then
+            RESULT="PASSED"
+          else
+            RESULT="FAILED"
+          fi
+          DURATION=""
+          if [ -f ci-results/results.json ]; then
+            DURATION="$(node -e "const r=require('./ci-results/results.json'); const d=Math.round((r.stats?.duration||0)/100)/10; console.log(d+'s');" 2>/dev/null || echo '')"
+          fi
+          {
+            echo "# Report: $PLAN_BASE"
+            echo ""
+            echo "**Date:** $(date -u +%Y-%m-%dT%H:%MZ)"
+            echo "**Plan:** ${{ inputs.plan }}"
+            echo "**Spec:** ${{ steps.paths.outputs.spec }}"
+            echo "**Execution Mode:** ci-playwright-script"
+            echo "**Result:** $RESULT"
+            echo "**Duration:** ${DURATION:-unknown}"
+            echo "**Run:** https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo ""
+            echo "_Triggered via the re-run button on the project dashboard._"
+          } > "$PROJ_DIR/test-reports/$TODAY/$PLAN_BASE.md"
+
+      - name: Rebuild hub dashboards
+        if: always()
+        run: node scripts/build-all.js
+
+      - name: Commit and push results
+        if: always()
+        run: |
+          git config user.email "ci@boxfusion"
+          git config user.name "Boxfusion CI"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "ci: re-ran ${{ inputs.project }} / ${{ inputs.plan }} → ${{ steps.run.outcome }}"
+            git pull --rebase --autostash || true
+            git push
+          fi
+
+      - name: Job summary
+        if: always()
+        run: |
+          OUTCOME="${{ steps.run.outcome }}"
+          {
+            echo "## Re-run result"
+            echo "- **Project**: \`${{ inputs.project }}\`"
+            echo "- **Plan**: \`${{ inputs.plan }}\`"
+            echo "- **Outcome**: $OUTCOME"
+            echo "- **Spec**: \`${{ steps.paths.outputs.spec }}\`"
+            echo ""
+            echo "Refresh the project dashboard to see the updated row."
+          } >> $GITHUB_STEP_SUMMARY
