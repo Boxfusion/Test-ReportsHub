@@ -10,9 +10,9 @@ on:
         default: "dep"
         type: string
       plan:
-        description: "Plan path under projects/<project>/ (e.g. test-plans/cases/create-case.md)"
+        description: "Plan path under projects/<project>/ — must have a paired .spec.ts. Copy the value from the dashboard toast."
         required: true
-        default: "test-plans/cases/create-case.md"
+        default: "test-plans/service-requests/create-service-request-v2.md"
         type: string
 
 permissions:
@@ -62,19 +62,36 @@ jobs:
         run: |
           PROJECT="${{ inputs.project }}"
           PLAN="${{ inputs.plan }}"
-          SPEC="projects/$PROJECT/${PLAN%.md}.spec.ts"
-          if [ ! -f "$SPEC" ]; then
-            echo "::error::Spec not found at $SPEC. Sync the project's plans + specs into the hub first."
-            exit 2
-          fi
+          PROJ_DIR="projects/$PROJECT"
+          SPEC="$PROJ_DIR/${PLAN%.md}.spec.ts"
           PLAN_BASE="$(basename "$PLAN" .md)"
           TODAY="$(date -u +%Y-%m-%d)"
+
+          # Emit outputs FIRST so later steps can produce a graceful failure report
+          # even when validation below fails.
           {
             echo "spec=$SPEC"
-            echo "project_dir=projects/$PROJECT"
+            echo "project_dir=$PROJ_DIR"
             echo "plan_base=$PLAN_BASE"
             echo "today=$TODAY"
           } >> $GITHUB_OUTPUT
+
+          if [ ! -d "$PROJ_DIR" ]; then
+            echo "::error::Project folder not found: $PROJ_DIR"
+            echo "Available projects:"
+            ls -1 projects/ 2>/dev/null | sed 's/^/  /' || echo "  (no projects/ folder)"
+            exit 2
+          fi
+          if [ ! -f "$SPEC" ]; then
+            echo "::error::Spec not found: $SPEC"
+            echo ""
+            echo "The plan input must point at a .md plan that has a paired .spec.ts in the hub."
+            echo "Available specs in $PROJ_DIR:"
+            (cd "$PROJ_DIR" && find test-plans -name '*.spec.ts' 2>/dev/null | sed 's/\.spec\.ts$/.md/' | sed 's/^/  /') || echo "  (none synced yet)"
+            echo ""
+            echo "Tip: copy the 'plan' value from the toast on the project dashboard — it always matches a synced spec."
+            exit 2
+          fi
 
       - name: Run spec
         id: run
@@ -82,12 +99,17 @@ jobs:
         run: npx playwright test "${{ steps.paths.outputs.spec }}" --config=playwright.config.ci.ts
 
       - name: Stage results into hub layout
-        if: always()
+        if: always() && steps.paths.outputs.project_dir != ''
         env:
           PROJ_DIR: ${{ steps.paths.outputs.project_dir }}
           PLAN_BASE: ${{ steps.paths.outputs.plan_base }}
           TODAY: ${{ steps.paths.outputs.today }}
         run: |
+          # Defence in depth — never let an empty PROJ_DIR escape into mkdir.
+          if [ -z "$PROJ_DIR" ] || [ "$PROJ_DIR" = "projects/" ]; then
+            echo "::error::PROJ_DIR is empty or invalid ('$PROJ_DIR') — refusing to stage."
+            exit 1
+          fi
           mkdir -p "$PROJ_DIR/test-results" "$PROJ_DIR/test-reports/$TODAY"
 
           # JUnit XML — primary artifact for CI consumers
