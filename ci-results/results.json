@@ -1,0 +1,314 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/playwright.config.ci.ts",
+    "rootDir": "/home/runner/work/Test-ReportsHub/Test-ReportsHub",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/746927b8c97af545add7ad6e74ea0b95796f5f6f",
+        "commitHash": "746927b8c97af545add7ad6e74ea0b95796f5f6f",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26188651291"
+      },
+      "gitCommit": {
+        "shortHash": "746927b",
+        "hash": "746927b8c97af545add7ad6e74ea0b95796f5f6f",
+        "subject": "Merge pull request #2 from Boxfusion/mishalia/feat/reports",
+        "body": "Merge pull request #2 from Boxfusion/mishalia/feat/reports\n\nfix: harden run-test workflow against missing-spec inputs",
+        "author": {
+          "name": "MishaliaPillay",
+          "email": "117475572+MishaliaPillay@users.noreply.github.com",
+          "time": 1779309527000
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "time": 1779309527000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/746927b8c97af545add7ad6e74ea0b95796f5f6f",
+            "commitHash": "746927b8c97af545add7ad6e74ea0b95796f5f6f",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26188651291"
+          },
+          "gitCommit": {
+            "shortHash": "746927b",
+            "hash": "746927b8c97af545add7ad6e74ea0b95796f5f6f",
+            "subject": "Merge pull request #2 from Boxfusion/mishalia/feat/reports",
+            "body": "Merge pull request #2 from Boxfusion/mishalia/feat/reports\n\nfix: harden run-test workflow against missing-spec inputs",
+            "author": {
+              "name": "MishaliaPillay",
+              "email": "117475572+MishaliaPillay@users.noreply.github.com",
+              "time": 1779309527000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1779309527000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/runner/work/Test-ReportsHub/Test-ReportsHub",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "ci-results/results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "ci-results/junit.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+      "file": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Create Service Request (v2)",
+          "file": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+          "line": 18,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-01: Login as Admin",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 90743,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                            "column": 28,
+                            "line": 39
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/login/i\u001b[39m\nReceived string: \u001b[31m\"https://linux-dep-adminportal-test.azurewebsites.net/\u001b[7mlogin\u001b[27m\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    5 × unexpected value \"https://linux-dep-adminportal-test.azurewebsites.net/login\"\u001b[22m\n\n\n  37 |\n  38 |     // ASSERT (BLOCKING) dashboard or home page is visible after login\n> 39 |     await expect(page).not.toHaveURL(/login/i);\n     |                            ^\n  40 |     await expect(page.getByRole('menuitem', { name: /Cases/i }).first()).toBeVisible();\n  41 |   });\n  42 |\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:39:28"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-20T20:40:42.177Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "047422c8524377bfd6d3-9fee644e6d7ed7d3dbd1",
+              "file": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+              "line": 19,
+              "column": 7
+            },
+            {
+              "title": "TC-02: Navigate to Service Requests",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12017,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-20T20:42:15.481Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "047422c8524377bfd6d3-e9c7d8fc615ffa09384f",
+              "file": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+              "line": 43,
+              "column": 7
+            },
+            {
+              "title": "TC-03: Create a Service Request",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 92767,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                            "column": 106,
+                            "line": 85
+                          },
+                          "message": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog', { name: /Create Case/i }).locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')\u001b[22m\n\n\n  83 |     // STEP 5: SELECT / TYPE each mandatory field on the form with valid values\n  84 |     // Channel — Call Centre (Ant Design select)\n> 85 |     await dialog.locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select').click();\n     |                                                                                                          ^\n  86 |     await page.locator('.ant-select-item-option').filter({ hasText: 'Call Centre' }).first().click();\n  87 |\n  88 |     // Mobile Number\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:85:106"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-20T20:42:27.604Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "047422c8524377bfd6d3-c8eac75230b20a947690",
+              "file": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+              "line": 62,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-20T20:40:41.599Z",
+    "duration": 199248.158,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}
