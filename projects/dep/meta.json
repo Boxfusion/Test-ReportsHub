@@ -1,0 +1,7 @@
+{
+  "displayName": "Dep Admin Portal",
+  "appUrl": "https://linux-dep-adminportal-test.azurewebsites.net/",
+  "environment": "QA",
+  "sourceRepo": "https://dev.azure.com/boxfusion/PD-Dep/_git/Dep",
+  "description": "Hybrid Markdown + Playwright test reports for the Dep Admin Portal."
+}
