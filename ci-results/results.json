@@ -12,24 +12,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/746927b8c97af545add7ad6e74ea0b95796f5f6f",
-        "commitHash": "746927b8c97af545add7ad6e74ea0b95796f5f6f",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26188651291"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/0c0959e18e5c470787e5eae554cae75649ced4fa",
+        "commitHash": "0c0959e18e5c470787e5eae554cae75649ced4fa",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26189814192"
       },
       "gitCommit": {
-        "shortHash": "746927b",
-        "hash": "746927b8c97af545add7ad6e74ea0b95796f5f6f",
-        "subject": "Merge pull request #2 from Boxfusion/mishalia/feat/reports",
-        "body": "Merge pull request #2 from Boxfusion/mishalia/feat/reports\n\nfix: harden run-test workflow against missing-spec inputs",
+        "shortHash": "0c0959e",
+        "hash": "0c0959e18e5c470787e5eae554cae75649ced4fa",
+        "subject": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure",
+        "body": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure\n",
         "author": {
-          "name": "MishaliaPillay",
-          "email": "117475572+MishaliaPillay@users.noreply.github.com",
-          "time": 1779309527000
+          "name": "Boxfusion CI",
+          "email": "ci@boxfusion",
+          "time": 1779309841000
         },
         "committer": {
-          "name": "GitHub",
-          "email": "noreply@github.com",
-          "time": 1779309527000
+          "name": "Boxfusion CI",
+          "email": "ci@boxfusion",
+          "time": 1779309841000
         },
         "branch": "main"
       },
@@ -43,24 +43,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/746927b8c97af545add7ad6e74ea0b95796f5f6f",
-            "commitHash": "746927b8c97af545add7ad6e74ea0b95796f5f6f",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26188651291"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/0c0959e18e5c470787e5eae554cae75649ced4fa",
+            "commitHash": "0c0959e18e5c470787e5eae554cae75649ced4fa",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26189814192"
           },
           "gitCommit": {
-            "shortHash": "746927b",
-            "hash": "746927b8c97af545add7ad6e74ea0b95796f5f6f",
-            "subject": "Merge pull request #2 from Boxfusion/mishalia/feat/reports",
-            "body": "Merge pull request #2 from Boxfusion/mishalia/feat/reports\n\nfix: harden run-test workflow against missing-spec inputs",
+            "shortHash": "0c0959e",
+            "hash": "0c0959e18e5c470787e5eae554cae75649ced4fa",
+            "subject": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure",
+            "body": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure\n",
             "author": {
-              "name": "MishaliaPillay",
-              "email": "117475572+MishaliaPillay@users.noreply.github.com",
-              "time": 1779309527000
+              "name": "Boxfusion CI",
+              "email": "ci@boxfusion",
+              "time": 1779309841000
             },
             "committer": {
-              "name": "GitHub",
-              "email": "noreply@github.com",
-              "time": 1779309527000
+              "name": "Boxfusion CI",
+              "email": "ci@boxfusion",
+              "time": 1779309841000
             },
             "branch": "main"
           },
@@ -123,7 +123,7 @@
           "specs": [
             {
               "title": "TC-01: Login as Admin",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -136,55 +136,18 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "timedOut",
-                      "duration": 90743,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
-                            "column": 28,
-                            "line": 39
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/login/i\u001b[39m\nReceived string: \u001b[31m\"https://linux-dep-adminportal-test.azurewebsites.net/\u001b[7mlogin\u001b[27m\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    5 × unexpected value \"https://linux-dep-adminportal-test.azurewebsites.net/login\"\u001b[22m\n\n\n  37 |\n  38 |     // ASSERT (BLOCKING) dashboard or home page is visible after login\n> 39 |     await expect(page).not.toHaveURL(/login/i);\n     |                            ^\n  40 |     await expect(page.getByRole('menuitem', { name: /Cases/i }).first()).toBeVisible();\n  41 |   });\n  42 |\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:39:28"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 11613,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T20:40:42.177Z",
+                      "startTime": "2026-05-20T21:03:29.241Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "047422c8524377bfd6d3-9fee644e6d7ed7d3dbd1",
@@ -205,15 +168,15 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12017,
+                      "duration": 10664,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T20:42:15.481Z",
+                      "startTime": "2026-05-20T21:03:41.806Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -239,10 +202,10 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "timedOut",
-                      "duration": 92767,
+                      "duration": 93428,
                       "error": {
                         "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -263,7 +226,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T20:42:27.604Z",
+                      "startTime": "2026-05-20T21:03:52.485Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -304,11 +267,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-20T20:40:41.599Z",
-    "duration": 199248.158,
-    "expected": 1,
+    "startTime": "2026-05-20T21:03:28.713Z",
+    "duration": 117598.164,
+    "expected": 2,
     "skipped": 0,
-    "unexpected": 2,
+    "unexpected": 1,
     "flaky": 0
   }
 }
