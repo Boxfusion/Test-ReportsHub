@@ -6,8 +6,8 @@
 
 # Test info
 
-- Name: projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts >> Create Service Request (v2) >> TC-03: Create a Service Request
-- Location: projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:62:7
+- Name: projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts >> Create Service Request (v2) >> TC-02: Navigate to Service Requests
+- Location: projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:43:7
 
 # Error details
 
