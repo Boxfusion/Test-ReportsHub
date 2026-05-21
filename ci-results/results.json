@@ -12,24 +12,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/0c0959e18e5c470787e5eae554cae75649ced4fa",
-        "commitHash": "0c0959e18e5c470787e5eae554cae75649ced4fa",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26189814192"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/7d5a5386ddbfdd926281192e8612628081c0713c",
+        "commitHash": "7d5a5386ddbfdd926281192e8612628081c0713c",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26207861567"
       },
       "gitCommit": {
-        "shortHash": "0c0959e",
-        "hash": "0c0959e18e5c470787e5eae554cae75649ced4fa",
+        "shortHash": "7d5a538",
+        "hash": "7d5a5386ddbfdd926281192e8612628081c0713c",
         "subject": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure",
         "body": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure\n",
         "author": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1779309841000
+          "time": 1779311126000
         },
         "committer": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1779309841000
+          "time": 1779311126000
         },
         "branch": "main"
       },
@@ -43,24 +43,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/0c0959e18e5c470787e5eae554cae75649ced4fa",
-            "commitHash": "0c0959e18e5c470787e5eae554cae75649ced4fa",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26189814192"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/7d5a5386ddbfdd926281192e8612628081c0713c",
+            "commitHash": "7d5a5386ddbfdd926281192e8612628081c0713c",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26207861567"
           },
           "gitCommit": {
-            "shortHash": "0c0959e",
-            "hash": "0c0959e18e5c470787e5eae554cae75649ced4fa",
+            "shortHash": "7d5a538",
+            "hash": "7d5a5386ddbfdd926281192e8612628081c0713c",
             "subject": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure",
             "body": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure\n",
             "author": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1779309841000
+              "time": 1779311126000
             },
             "committer": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1779309841000
+              "time": 1779311126000
             },
             "branch": "main"
           },
@@ -123,7 +123,7 @@
           "specs": [
             {
               "title": "TC-01: Login as Admin",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -136,18 +136,55 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11613,
-                      "errors": [],
+                      "status": "timedOut",
+                      "duration": 90550,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                            "column": 59,
+                            "line": 27
+                          },
+                          "message": "Error: locator.fill: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Username' })\u001b[22m\n\n\n  25 |\n  26 |     // STEP 3: TYPE username field with `admin`\n> 27 |     await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);\n     |                                                           ^\n  28 |\n  29 |     // STEP 4: TYPE password field with `123qwe`\n  30 |     await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:27:59"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T21:03:29.241Z",
+                      "startTime": "2026-05-21T05:44:16.447Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip"
+                        }
+                      ]
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
               "id": "047422c8524377bfd6d3-9fee644e6d7ed7d3dbd1",
@@ -168,15 +205,15 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 10664,
+                      "duration": 13765,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T21:03:41.806Z",
+                      "startTime": "2026-05-21T05:45:49.383Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -202,10 +239,10 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "timedOut",
-                      "duration": 93428,
+                      "duration": 92508,
                       "error": {
                         "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -226,7 +263,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T21:03:52.485Z",
+                      "startTime": "2026-05-21T05:46:03.253Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -267,11 +304,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-20T21:03:28.713Z",
-    "duration": 117598.164,
-    "expected": 2,
+    "startTime": "2026-05-21T05:44:15.885Z",
+    "duration": 200394.989,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 2,
     "flaky": 0
   }
 }
