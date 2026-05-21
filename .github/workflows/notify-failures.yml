@@ -1,0 +1,78 @@
+name: Notify on test failures
+
+# Fires when a new test report lands on main and contains a FAILED or PARTIAL result.
+# Looks up the responsible dev(s) from projects/<project>/owners.yml and posts an
+# Adaptive Card to the configured Teams channel.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'projects/*/test-reports/**/*.md'
+  workflow_dispatch:
+    inputs:
+      report_path:
+        description: "Optional: explicit report path to (re-)notify on, e.g. projects/dep/test-reports/2026-05-21/create-case.md. Leave blank to use the last commit."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+
+      - name: Identify changed report files
+        id: changed
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EXPLICIT: ${{ inputs.report_path }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.event.after }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] && [ -n "$EXPLICIT" ]; then
+            CHANGED="$EXPLICIT"
+          elif [ -n "$BEFORE" ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            CHANGED=$(git diff --name-only --diff-filter=AM "$BEFORE" "$AFTER" -- 'projects/*/test-reports/*/*.md')
+          else
+            # First push to branch, or workflow_dispatch with no explicit path → use last commit
+            CHANGED=$(git diff-tree --no-commit-id --name-only -r HEAD -- 'projects/*/test-reports/*/*.md')
+          fi
+          {
+            echo "files<<EOF"
+            echo "$CHANGED"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          if [ -z "$CHANGED" ]; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "No report changes detected — skipping."
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            echo "Changed reports:"
+            echo "$CHANGED"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.changed.outputs.has_changes == 'true'
+        with:
+          node-version: "20"
+
+      - name: Install YAML parser
+        if: steps.changed.outputs.has_changes == 'true'
+        run: npm install --no-save --no-package-lock yaml@2
+
+      - name: Scan reports, lookup owners, post Teams cards
+        if: steps.changed.outputs.has_changes == 'true'
+        env:
+          WEBHOOK: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
+          HUB_BASE_URL: https://boxfusion.github.io/Test-ReportsHub
+          GH_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+          GH_DEFAULT_BRANCH: main
+        run: node .github/workflows/scripts/notify.js

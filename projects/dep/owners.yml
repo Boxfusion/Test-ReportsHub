@@ -1,0 +1,32 @@
+# projects/dep/owners.yml
+#
+# Map a Dep test plan to the dev(s) who should be notified when it FAILS or comes back PARTIAL.
+# Read by .github/workflows/notify-failures.yml after every push to main.
+#
+# Lookup rules:
+#   1. Exact match — `plans.<full-plan-key>` where the key is the plan path with `test-plans/` and `.md` stripped
+#      (e.g. plan file `test-plans/cases/create-case.md` → key `cases/create-case`).
+#   2. Folder wildcard — `plans.<folder>/*` matches every plan under that folder.
+#   3. Project default — `default` is used if no plan or folder rule matches.
+#
+# Most-specific rule wins (exact > folder > default).
+#
+# Each entry is a list of devs to notify; each dev needs at minimum a name and an email.
+# The email is shown in the Teams card as `<name> <email>` so the dev knows it's about them.
+# Real Teams @-mentions require a Power Automate flow that interprets msteams.entities — see
+# notify.js's TODO if you want to upgrade later.
+
+default:
+  - name: Mishalia Pillay
+    email: Mishalia.pillay@boxfusion.io
+
+plans:
+  # Per-plan mapping — uncomment + edit as you hand off ownership:
+  # cases/create-case:
+  #   - name: Dev Name
+  #     email: dev@boxfusion.io
+
+  # Per-folder mapping (wildcard) — every plan under cases/ goes to one team:
+  # cases/*:
+  #   - name: Cases Squad
+  #     email: cases-squad@boxfusion.io
