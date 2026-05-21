@@ -13,7 +13,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { SHARED_CSS } = require('./theme');
 
 const HUB_ROOT = path.resolve(__dirname, '..');
 const HEATMAP_WEEKS = 52;
@@ -249,6 +248,29 @@ function rowFilterClass(planObj, last) {
   return 'never';
 }
 
+function titleCaseSlug(slug) {
+  return slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+// Group [planRel, runs] entries by the first folder segment under test-plans/.
+// Plans directly under test-plans/ (no subfolder) fall into the '_root' bucket.
+function groupBySection(entries) {
+  const sections = new Map();
+  for (const [planRel, runs] of entries) {
+    const stripped = planRel.replace(/^test-plans\//, '');
+    const slash = stripped.indexOf('/');
+    const key = slash >= 0 ? stripped.slice(0, slash) : '_root';
+    if (!sections.has(key)) sections.set(key, []);
+    sections.get(key).push([planRel, runs]);
+  }
+  // Sort sections alphabetically, but '_root' first.
+  return new Map([...sections.entries()].sort(([a], [b]) => {
+    if (a === '_root') return -1;
+    if (b === '_root') return 1;
+    return a.localeCompare(b);
+  }));
+}
+
 function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projectRoot, hasAllure }) {
   const totalPlans = plans.length;
   const totalRuns = reports.length;
@@ -287,43 +309,91 @@ function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projec
       </g>
     </svg>`;
 
-  const flowsRows = [...byPlan.entries()]
-    .sort((a, b) => {
-      const aDate = a[1][0]?.date || '0000';
-      const bDate = b[1][0]?.date || '0000';
-      if (aDate !== bDate) return bDate.localeCompare(aDate);
-      return a[0].localeCompare(b[0]);
-    })
-    .map(([planRel, runs]) => {
-      const planObj = plans.find((p) => p.plan === planRel) || { plan: planRel, spec: null, mtime: new Date(0), mdMtime: new Date(0), specMtime: null };
-      const last = runs[0];
-      const status = last ? `<span class="pill pill-${resultPillClass(last.result)}">${escapeHtml(last.result)}</span>` : '<span class="pill pill-neutral">never run</span>';
-      const lastDate = last ? escapeHtml(last.date) : '<span class="muted">—</span>';
-      const dur = last ? escapeHtml(last.duration || '—') : '<span class="muted">—</span>';
-      const bugLinks = bugsForPlan(planRel, bugs).map((b) => `<a href="test-reports/${escapeHtml(b.fileRel)}" title="${escapeHtml(b.name)}">bug</a>`).join(' · ');
-      const planLink = `<a href="${escapeHtml(planRel)}" title="Open plan">plan</a>`;
-      const reportLink = last ? `<a href="${escapeHtml(reportLinkHref(last, projectRoot))}">latest report</a>` : '<span class="muted">no report</span>';
-      const links = [planLink, reportLink, bugLinks].filter(Boolean).join(' · ');
-      const rowClass = rowFilterClass(planObj, last);
-      const canRun = !!planObj.spec;
-      const rerunBtn = canRun
-        ? `<button type="button" class="btn-rerun" data-action="rerun" data-project="${escapeHtml(projectName)}" data-plan="${escapeHtml(planRel)}" title="Re-run this test in GitHub Actions">▶ Re-run</button>`
-        : `<button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button>`;
-      return `
-        <tr data-status="${rowClass}">
-          <td class="plan-cell">
-            <div class="plan-name">${escapeHtml(planRel.replace(/^test-plans\//, ''))}</div>
-            <div class="plan-badges">${badgesFor(planObj, runs)}</div>
-          </td>
-          <td>${status}</td>
-          <td class="nowrap">${lastDate}</td>
-          <td class="nowrap">${dur}</td>
-          <td class="num">${runs.length}</td>
-          <td>${sparklineHtml(runs)}</td>
-          <td class="links">${links}</td>
-          <td class="actions-cell">${rerunBtn}</td>
-        </tr>`;
-    }).join('');
+  function renderPlanRow([planRel, runs], { stripPrefix }) {
+    const planObj = plans.find((p) => p.plan === planRel) || { plan: planRel, spec: null, mtime: new Date(0), mdMtime: new Date(0), specMtime: null };
+    const last = runs[0];
+    const status = last ? `<span class="pill pill-${resultPillClass(last.result)}">${escapeHtml(last.result)}</span>` : '<span class="pill pill-neutral">never run</span>';
+    const lastDate = last ? escapeHtml(last.date) : '<span class="muted">—</span>';
+    const dur = last ? escapeHtml(last.duration || '—') : '<span class="muted">—</span>';
+    const bugLinks = bugsForPlan(planRel, bugs).map((b) => `<a href="test-reports/${escapeHtml(b.fileRel)}" title="${escapeHtml(b.name)}">bug</a>`).join(' · ');
+    const planLink = `<a href="${escapeHtml(planRel)}" title="Open plan">plan</a>`;
+    const reportLink = last ? `<a href="${escapeHtml(reportLinkHref(last, projectRoot))}">latest report</a>` : '<span class="muted">no report</span>';
+    const links = [planLink, reportLink, bugLinks].filter(Boolean).join(' · ');
+    const rowClass = rowFilterClass(planObj, last);
+    const canRun = !!planObj.spec;
+    const rerunBtn = canRun
+      ? `<button type="button" class="btn-rerun" data-action="rerun" data-project="${escapeHtml(projectName)}" data-plan="${escapeHtml(planRel)}" title="Re-run this test in GitHub Actions">▶ Re-run</button>`
+      : `<button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button>`;
+    const displayName = stripPrefix && planRel.startsWith(stripPrefix)
+      ? planRel.slice(stripPrefix.length)
+      : planRel.replace(/^test-plans\//, '');
+    return `
+      <tr data-status="${rowClass}">
+        <td class="plan-cell">
+          <div class="plan-name">${escapeHtml(displayName)}</div>
+          <div class="plan-badges">${badgesFor(planObj, runs)}</div>
+        </td>
+        <td>${status}</td>
+        <td class="nowrap">${lastDate}</td>
+        <td class="nowrap">${dur}</td>
+        <td class="num">${runs.length}</td>
+        <td>${sparklineHtml(runs)}</td>
+        <td class="links">${links}</td>
+        <td class="actions-cell">${rerunBtn}</td>
+      </tr>`;
+  }
+
+  const sortedPlanEntries = [...byPlan.entries()].sort((a, b) => {
+    const aDate = a[1][0]?.date || '0000';
+    const bDate = b[1][0]?.date || '0000';
+    if (aDate !== bDate) return bDate.localeCompare(aDate);
+    return a[0].localeCompare(b[0]);
+  });
+  const sectionMap = groupBySection(sortedPlanEntries);
+
+  const sectionsHtml = [...sectionMap.entries()].map(([sectionKey, entries]) => {
+    const sectionTitle = sectionKey === '_root' ? 'General' : titleCaseSlug(sectionKey);
+    const stripPrefix = sectionKey === '_root' ? 'test-plans/' : `test-plans/${sectionKey}/`;
+    const planCount = entries.length;
+    const failingInSection = entries.filter(([, runs]) => runs[0]?.result === 'FAILED').length;
+
+    const rows = entries.map((e) => renderPlanRow(e, { stripPrefix })).join('');
+
+    const runnablePlans = entries
+      .filter(([planRel]) => plans.find((p) => p.plan === planRel)?.spec)
+      .map(([planRel]) => planRel);
+    const sectionBtn = runnablePlans.length > 0
+      ? `<button type="button" class="btn-rerun btn-rerun-section"
+               data-action="rerun-section"
+               data-project="${escapeHtml(projectName)}"
+               data-section="${escapeHtml(sectionTitle)}"
+               data-plans='${escapeHtml(JSON.stringify(runnablePlans))}'
+               title="Run every plan in this section that has a spec">▶ Run section <span class="meta">${runnablePlans.length}</span></button>`
+      : `<button type="button" class="btn-rerun btn-rerun-section" disabled title="No runnable specs in this section">▶ Run section</button>`;
+
+    const stats = [];
+    stats.push(`<span class="muted">${planCount} plan${planCount === 1 ? '' : 's'}</span>`);
+    if (failingInSection > 0) stats.push(`<span class="pill pill-fail">${failingInSection} failing</span>`);
+
+    return `
+      <section class="panel section-panel" data-section="${escapeHtml(sectionKey)}">
+        <div class="panel-head section-head">
+          <div class="section-title-group">
+            <h3 class="section-title">${escapeHtml(sectionTitle)}</h3>
+            <span class="section-stats">${stats.join('')}</span>
+          </div>
+          <div class="section-actions">${sectionBtn}</div>
+        </div>
+        <div class="panel-body no-pad" style="overflow-x:auto;">
+          <table class="flows">
+            <thead><tr>
+              <th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th><th>Actions</th>
+            </tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      </section>`;
+  }).join('');
 
   const passingCount = [...byPlan.entries()].filter(([, runs]) => runs[0] && runs[0].result === 'PASSED').length;
   const partialCount = [...byPlan.entries()].filter(([, runs]) => runs[0] && runs[0].result === 'PARTIAL').length;
@@ -367,125 +437,7 @@ function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projec
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${escapeHtml(displayName)} · Test Reports Hub</title>
-<style>
-${SHARED_CSS}
-
-  /* ───── Dashboard-specific ───── */
-  .project-header {
-    display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem;
-    flex-wrap: wrap; margin-bottom: 1.5rem;
-  }
-  .project-header .title-row { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
-  .project-header .title-row h1 { margin: 0; }
-  .project-header .subtitle { margin-top: .35rem; }
-
-  .heatmap { width: 100%; height: auto; max-height: 130px; display: block; }
-  .heatmap .month { font-size: 9px; fill: var(--muted); }
-  .heatmap .day { font-size: 9px; fill: var(--muted); }
-  .legend {
-    display: flex; align-items: center; gap: .35rem; font-size: .72rem; color: var(--muted);
-    margin-top: .75rem; flex-wrap: wrap; justify-content: flex-end;
-  }
-  .legend span.swatch { display: inline-block; width: 11px; height: 11px; border-radius: 2px; }
-  .legend .group { display: inline-flex; align-items: center; gap: .35rem; }
-  .legend .group + .group { margin-left: .75rem; }
-
-  table.flows { border-collapse: collapse; width: 100%; }
-  table.flows thead th {
-    text-align: left; padding: .65rem .85rem;
-    background: var(--surface-2); font-size: .7rem; text-transform: uppercase; letter-spacing: .06em;
-    color: var(--muted); border-bottom: 1px solid var(--border); font-weight: 600;
-    position: sticky; top: 0;
-  }
-  table.flows tbody td { padding: .8rem .85rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: .87rem; }
-  table.flows tbody tr:last-child td { border-bottom: none; }
-  table.flows tbody tr:hover { background: var(--surface-2); }
-  table.flows td.nowrap { white-space: nowrap; }
-  table.flows td.num { font-variant-numeric: tabular-nums; }
-  .plan-cell .plan-name { font-weight: 500; color: var(--ink); margin-bottom: .3rem; }
-  .plan-badges { display: flex; gap: .35rem; flex-wrap: wrap; }
-
-  .sparkline { display: inline-flex; gap: 2px; align-items: center; }
-  .spark { width: 10px; height: 14px; border-radius: 2px; }
-  .spark-pass { background: #4ade80; }
-  .spark-fail { background: #f87171; }
-  .spark-partial { background: #fbbf24; }
-  .spark-neutral { background: #cbd5e1; }
-  .spark-empty { color: var(--muted); font-size: .8rem; }
-
-  .links a { color: var(--accent); text-decoration: none; }
-  .links a:hover { text-decoration: underline; }
-
-  .timeline-day {
-    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-    box-shadow: var(--shadow-sm); padding: 1rem 1.25rem; margin-bottom: .75rem;
-  }
-  .timeline-day header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: .35rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border); }
-  .timeline-day ul { list-style: none; margin: 0; padding: 0; }
-  .timeline-run { display: flex; align-items: center; gap: .65rem; padding: .5rem 0; }
-  .timeline-run + .timeline-run { border-top: 1px solid var(--border); }
-  .timeline-run .run-link { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .87rem; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-  .timeline-run .run-link:hover { color: var(--accent); }
-
-  /* Allure modal */
-  .allure-modal { display: none; position: fixed; inset: 0; z-index: 1000; align-items: center; justify-content: center; padding: 2.5rem; background: rgba(15, 23, 42, .55); backdrop-filter: blur(2px); }
-  .allure-modal.open { display: flex; }
-  .allure-modal .dialog { background: var(--surface); border-radius: var(--radius-lg); width: 100%; max-width: 1400px; height: 100%; max-height: calc(100vh - 5rem); display: flex; flex-direction: column; overflow: hidden; box-shadow: var(--shadow-lg); }
-  .allure-modal .head { display: flex; align-items: center; justify-content: space-between; padding: .85rem 1.25rem; border-bottom: 1px solid var(--border); background: var(--surface-2); }
-  .allure-modal .head .title { font-weight: 600; color: var(--ink); font-size: .92rem; }
-  .allure-modal .head .right { display: flex; align-items: center; gap: .75rem; color: var(--muted); font-size: .8rem; }
-  .allure-modal .head a.popout { color: var(--muted); text-decoration: none; }
-  .allure-modal .head a.popout:hover { color: var(--accent); }
-  .allure-modal .head button.close { background: transparent; border: 1px solid var(--border); border-radius: 6px; padding: .35rem .75rem; font-size: .8rem; cursor: pointer; color: var(--ink-2); font-family: inherit; }
-  .allure-modal .head button.close:hover { color: var(--ink); border-color: var(--border-strong); background: var(--surface); }
-  .allure-frame-wrap { position: relative; flex: 1; background: var(--bg); overflow: hidden; }
-  .allure-frame-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
-  .allure-frame-wrap .loader { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .85rem; pointer-events: none; }
-  .allure-frame-wrap .loader.hidden { display: none; }
-  body.modal-open { overflow: hidden; }
-
-  /* Re-run button (per-row) */
-  td.actions-cell { white-space: nowrap; }
-  .btn-rerun {
-    display: inline-flex; align-items: center; gap: .3rem;
-    padding: .3rem .65rem; border-radius: 6px;
-    font-size: .8rem; font-weight: 500; font-family: inherit;
-    color: var(--accent); background: var(--accent-bg, rgba(37, 99, 235, .08));
-    border: 1px solid rgba(37, 99, 235, .25);
-    cursor: pointer; transition: background .15s, border-color .15s, transform .05s;
-  }
-  .btn-rerun:hover:not(:disabled) { background: rgba(37, 99, 235, .14); border-color: var(--accent); }
-  .btn-rerun:active:not(:disabled) { transform: translateY(1px); }
-  .btn-rerun:disabled { opacity: .4; cursor: not-allowed; }
-  .btn-rerun.is-pending { background: rgba(37, 99, 235, .14); border-color: var(--accent); animation: pulse-soft 1.5s ease-in-out infinite; }
-  @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: .6; } }
-
-  /* Run-triggered toast */
-  .toast-stack { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 1100; display: flex; flex-direction: column; gap: .65rem; max-width: min(420px, calc(100vw - 2.5rem)); }
-  .toast {
-    background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent);
-    border-radius: var(--radius); box-shadow: var(--shadow-lg);
-    padding: .85rem 1rem .9rem; font-size: .85rem; color: var(--ink);
-    transform: translateY(8px); opacity: 0; transition: transform .25s, opacity .25s;
-  }
-  .toast.in { transform: translateY(0); opacity: 1; }
-  .toast .toast-head { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: .5rem; }
-  .toast .toast-title { font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: .45rem; }
-  .toast .toast-title .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(37, 99, 235, .15); animation: pulse-soft 1.5s ease-in-out infinite; }
-  .toast .toast-close { background: transparent; border: 0; color: var(--muted); cursor: pointer; font-size: 1rem; line-height: 1; padding: 0 .15rem; }
-  .toast .toast-close:hover { color: var(--ink); }
-  .toast .toast-body { color: var(--ink-2); line-height: 1.45; }
-  .toast .toast-body p { margin: 0 0 .5rem; }
-  .toast .input-row { display: grid; grid-template-columns: 60px 1fr auto; gap: .35rem .5rem; align-items: center; margin: .25rem 0 .35rem; font-size: .78rem; }
-  .toast .input-row .label { color: var(--muted); text-transform: uppercase; letter-spacing: .04em; font-size: .68rem; }
-  .toast .input-row code { background: var(--surface-2); border: 1px solid var(--border); padding: .15rem .4rem; border-radius: 4px; font-size: .78rem; overflow-x: auto; white-space: nowrap; }
-  .toast .input-row button.copy { background: var(--surface-2); border: 1px solid var(--border); border-radius: 4px; padding: .15rem .45rem; font-size: .7rem; cursor: pointer; color: var(--ink-2); font-family: inherit; }
-  .toast .input-row button.copy:hover { color: var(--ink); border-color: var(--border-strong); }
-  .toast .input-row button.copy.copied { background: var(--pass-bg); color: var(--pass); border-color: var(--pass-line); }
-  .toast .toast-foot { margin-top: .55rem; padding-top: .55rem; border-top: 1px solid var(--border); font-size: .75rem; color: var(--muted); }
-  .toast a { color: var(--accent); text-decoration: none; }
-  .toast a:hover { text-decoration: underline; }
-</style>
+<link rel="stylesheet" href="../../assets/dashboard.css" />
 </head>
 <body>
   <header class="topbar">
@@ -567,26 +519,19 @@ ${SHARED_CSS}
       <div class="panel-body">${heatmapSvg}</div>
     </section>
 
-    <section class="panel">
-      <div class="panel-head">
-        <h2>Flows</h2>
-        <div class="chips" id="flow-filter" role="tablist" aria-label="Filter flows by status">
-          <button type="button" class="chip active" data-filter="all">All<span class="count">${totalPlans}</span></button>
-          <button type="button" class="chip" data-filter="failing">Failing<span class="count">${failingFlows}</span></button>
-          <button type="button" class="chip" data-filter="partial">Partial<span class="count">${partialCount}</span></button>
-          <button type="button" class="chip" data-filter="passing">Passing<span class="count">${passingCount}</span></button>
-          <button type="button" class="chip" data-filter="never">Never run<span class="count">${neverCount}</span></button>
-        </div>
+    <div class="flows-toolbar">
+      <h2>Flows by section</h2>
+      <div class="chips" id="flow-filter" role="tablist" aria-label="Filter flows by status">
+        <button type="button" class="chip active" data-filter="all">All<span class="count">${totalPlans}</span></button>
+        <button type="button" class="chip" data-filter="failing">Failing<span class="count">${failingFlows}</span></button>
+        <button type="button" class="chip" data-filter="partial">Partial<span class="count">${partialCount}</span></button>
+        <button type="button" class="chip" data-filter="passing">Passing<span class="count">${passingCount}</span></button>
+        <button type="button" class="chip" data-filter="never">Never run<span class="count">${neverCount}</span></button>
       </div>
-      <div class="panel-body no-pad" style="overflow-x:auto;">
-        <table class="flows" id="flows-table">
-          <thead><tr>
-            <th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th><th>Actions</th>
-          </tr></thead>
-          <tbody>${flowsRows || '<tr><td colspan="8" class="muted" style="padding:1.5rem 1rem;text-align:center;">No test plans found.</td></tr>'}</tbody>
-        </table>
-      </div>
-    </section>
+    </div>
+    <div id="sections-wrap">
+      ${sectionsHtml || '<div class="empty"><strong>No test plans found.</strong>Add a <code>.md</code> file under <code>test-plans/&lt;section&gt;/</code> to see it here.</div>'}
+    </div>
 
     <h2>Run timeline</h2>
     ${timelineGroups || '<div class="empty"><strong>No runs recorded yet.</strong>Reports will appear here once tests are executed.</div>'}
@@ -600,14 +545,20 @@ ${SHARED_CSS}
   <script>
     (function () {
       var chips = Array.prototype.slice.call(document.querySelectorAll('#flow-filter .chip'));
-      var rows = Array.prototype.slice.call(document.querySelectorAll('#flows-table tbody tr[data-status]'));
+      var sections = Array.prototype.slice.call(document.querySelectorAll('.section-panel'));
       chips.forEach(function (chip) {
         chip.addEventListener('click', function () {
           chips.forEach(function (c) { c.classList.remove('active'); });
           chip.classList.add('active');
           var f = chip.getAttribute('data-filter');
-          rows.forEach(function (r) {
-            r.style.display = (f === 'all' || r.getAttribute('data-status') === f) ? '' : 'none';
+          sections.forEach(function (section) {
+            var visible = 0;
+            Array.prototype.slice.call(section.querySelectorAll('tbody tr[data-status]')).forEach(function (r) {
+              var show = (f === 'all' || r.getAttribute('data-status') === f);
+              r.style.display = show ? '' : 'none';
+              if (show) visible++;
+            });
+            section.style.display = visible === 0 ? 'none' : '';
           });
         });
       });
@@ -718,8 +669,65 @@ ${SHARED_CSS}
         showToast(project, plan);
       }
 
+      function escAttr(s) { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); }
+
+      function showSectionToast(project, section, plans) {
+        var toast = document.createElement('div');
+        toast.className = 'toast toast-section';
+        var planRows = plans.map(function (p, i) {
+          return '<div class="input-row"><span class="label">plan ' + (i + 1) + '/' + plans.length + '</span>' +
+                 '<code>' + escAttr(p) + '</code>' +
+                 '<button type="button" class="copy" data-copy="' + escAttr(p) + '">copy</button></div>';
+        }).join('');
+        toast.innerHTML =
+          '<div class="toast-head">' +
+            '<div class="toast-title"><span class="dot"></span>Section: ' + escAttr(section) + '</div>' +
+            '<button type="button" class="toast-close" aria-label="Close">×</button>' +
+          '</div>' +
+          '<div class="toast-body">' +
+            '<p>A GitHub Actions tab opened. The workflow only accepts one plan at a time, so dispatch it ' + plans.length + ' time' + (plans.length === 1 ? '' : 's') + ' — copy each plan in turn:</p>' +
+            '<div class="input-row"><span class="label">project</span><code>' + escAttr(project) + '</code><button type="button" class="copy" data-copy="' + escAttr(project) + '">copy</button></div>' +
+            '<div class="section-plans-list">' + planRows + '</div>' +
+            '<div class="toast-foot">Each run auto-commits its report back to this hub. Refresh after they finish to see the updated rows.</div>' +
+          '</div>';
+        stack.appendChild(toast);
+        requestAnimationFrame(function () { toast.classList.add('in'); });
+
+        toast.querySelector('.toast-close').addEventListener('click', function () {
+          toast.classList.remove('in');
+          setTimeout(function () { toast.remove(); }, 250);
+        });
+        Array.prototype.slice.call(toast.querySelectorAll('button.copy')).forEach(function (b) {
+          b.addEventListener('click', function () { copyToClipboard(b.getAttribute('data-copy'), b); });
+        });
+
+        // Section toasts stay longer than single-plan toasts.
+        setTimeout(function () {
+          if (!toast.parentNode) return;
+          toast.classList.remove('in');
+          setTimeout(function () { toast.remove(); }, 250);
+        }, 60000);
+      }
+
+      function handleRerunSection(btn) {
+        var project = btn.getAttribute('data-project');
+        var section = btn.getAttribute('data-section');
+        var raw = btn.getAttribute('data-plans');
+        if (!project || !raw) return;
+        var plans;
+        try { plans = JSON.parse(raw); } catch (e) { plans = []; }
+        if (!Array.isArray(plans) || plans.length === 0) return;
+        btn.classList.add('is-pending');
+        setTimeout(function () { btn.classList.remove('is-pending'); }, 3000);
+        window.open(WORKFLOW_URL, '_blank', 'noopener');
+        showSectionToast(project, section, plans);
+      }
+
       Array.prototype.slice.call(document.querySelectorAll('[data-action="rerun"]')).forEach(function (btn) {
         btn.addEventListener('click', function (e) { e.preventDefault(); handleRerun(btn); });
+      });
+      Array.prototype.slice.call(document.querySelectorAll('[data-action="rerun-section"]')).forEach(function (btn) {
+        btn.addEventListener('click', function (e) { e.preventDefault(); handleRerunSection(btn); });
       });
     })();
   </script>
