@@ -7,5 +7,9 @@
     "build": "node scripts/build-all.js",
     "build:landing": "node scripts/build-landing.js",
     "build:project": "node scripts/build-project-dashboard.js"
-  }
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
