@@ -16,22 +16,570 @@ Test timeout of 90000ms exceeded.
 ```
 
 ```
-Error: locator.fill: Test timeout of 90000ms exceeded.
+Error: locator.click: Test timeout of 90000ms exceeded.
 Call log:
-  - waiting for getByRole('textbox', { name: 'Username' })
+  - waiting for getByRole('dialog', { name: /Create Case/i }).locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')
 
 ```
 
 # Page snapshot
 
 ```yaml
-- generic [ref=e2]:
-  - heading ":( Application Error" [level=1] [ref=e3]
-  - paragraph [ref=e4]:
-    - text: If you are the application administrator, you can access the
-    - link "diagnostic resources" [ref=e5] [cursor=pointer]:
-      - /url: https://linux-dep-adminportal-test.scm.azurewebsites.net/detectors
-    - text: .
+- generic [ref=e1]:
+  - alert [ref=e2]
+  - generic [ref=e5]:
+    - complementary [ref=e6]:
+      - menu [ref=e10]:
+        - menuitem "home Cases" [ref=e11] [cursor=pointer]:
+          - img "home" [ref=e12]:
+            - img [ref=e13]
+          - link "Cases" [ref=e16]:
+            - /url: /dynamic/Boxfusion.ServiceManagement/service-requests
+        - menuitem "menu-unfold All Cases" [ref=e17] [cursor=pointer]:
+          - img "menu-unfold" [ref=e18]:
+            - img [ref=e19]
+          - link "All Cases" [ref=e22]:
+            - /url: /dynamic/StarterTemplate/cases-table
+        - menuitem "calendar Events" [ref=e23] [cursor=pointer]:
+          - img "calendar" [ref=e24]:
+            - img [ref=e25]
+          - link "Events" [ref=e28]:
+            - /url: /dynamic/Boxfusion.Dep/events-table
+        - menuitem "question-circle FAQ" [ref=e29] [cursor=pointer]:
+          - img "question-circle" [ref=e30]:
+            - img [ref=e31]
+          - link "FAQ" [ref=e35]:
+            - /url: /dynamic/Boxfusion.ServiceManagement/new-faqs-table
+        - menuitem "contacts Contacts" [ref=e36] [cursor=pointer]:
+          - img "contacts" [ref=e37]:
+            - img [ref=e38]
+          - link "Contacts" [ref=e41]:
+            - /url: /dynamic/Boxfusion.ServiceManagement/contacts-table
+        - menuitem "home Facilities" [ref=e42] [cursor=pointer]:
+          - img "home" [ref=e43]:
+            - img [ref=e44]
+          - link "Facilities" [ref=e47]:
+            - /url: /dynamic/Boxfusion.Dep/facilities-table
+        - menuitem "usergroup-delete Customers" [ref=e48] [cursor=pointer]:
+          - img "usergroup-delete" [ref=e49]:
+            - img [ref=e50]
+          - link "Customers" [ref=e53]:
+            - /url: /dynamic/Boxfusion.Dep/table-customers
+        - menuitem "notification Broadcast Notification" [ref=e54] [cursor=pointer]:
+          - img "notification" [ref=e55]:
+            - img [ref=e56]
+          - link "Broadcast Notification" [ref=e59]:
+            - /url: /dynamic/Boxfusion.Dep/broad-cast-notificationstableView
+        - menuitem "pic-left Ambulance Requests" [ref=e60] [cursor=pointer]:
+          - img "pic-left" [ref=e61]:
+            - img [ref=e62]
+          - link "Ambulance Requests" [ref=e65]:
+            - /url: /dynamic/Boxfusion.PatientEngagement/ambulance-requests-tableview
+        - menuitem "environment Case Mapping" [ref=e66] [cursor=pointer]:
+          - img "environment" [ref=e67]:
+            - img [ref=e68]
+          - link "Case Mapping" [ref=e71]:
+            - /url: /dynamic/Boxfusion.ServiceManagement/Spartial_Map
+        - menuitem "wechat Social Media" [ref=e72] [cursor=pointer]:
+          - img "wechat" [ref=e73]:
+            - img [ref=e74]
+          - link "Social Media" [ref=e77]:
+            - /url: /dynamic/Boxfusion.Dep/dep-libraries
+        - menuitem "appstore Content Item Types" [ref=e78] [cursor=pointer]:
+          - img "appstore" [ref=e79]:
+            - img [ref=e80]
+          - link "Content Item Types" [ref=e83]:
+            - /url: /dynamic/boxfusion.content/content-item-types
+        - menuitem "windows Manage Content Libraries" [ref=e84] [cursor=pointer]:
+          - img "windows" [ref=e85]:
+            - img [ref=e86]
+          - link "Manage Content Libraries" [ref=e89]:
+            - /url: /dynamic/boxfusion.content/manage-libraries-list
+        - menuitem "windows Public Libraries" [ref=e90] [cursor=pointer]:
+          - img "windows" [ref=e91]:
+            - img [ref=e92]
+          - link "Public Libraries" [ref=e95]:
+            - /url: /dynamic/boxfusion.content/public-libraries
+        - menuitem "check Service Ratings" [ref=e96] [cursor=pointer]:
+          - img "check" [ref=e97]:
+            - img [ref=e98]
+          - link "Service Ratings" [ref=e101]:
+            - /url: /dynamic/Boxfusion.ServiceManagement/case-service-ratings-table
+        - menuitem "area-chart DashBoards" [ref=e102] [cursor=pointer]:
+          - img "area-chart" [ref=e103]:
+            - img [ref=e104]
+          - generic [ref=e106]: DashBoards
+        - menuitem "message Chat Console" [ref=e107] [cursor=pointer]:
+          - img "message" [ref=e108]:
+            - img [ref=e109]
+          - link "Chat Console" [ref=e112]:
+            - /url: /dynamic/boxfusion.chat/chat-customer-info
+        - menuitem "area-chart Reports" [ref=e113] [cursor=pointer]:
+          - img "area-chart" [ref=e114]:
+            - img [ref=e115]
+          - generic [ref=e117]: Reports
+        - menuitem "Surveys" [ref=e118] [cursor=pointer]:
+          - generic [ref=e119]: Surveys
+        - menuitem "tool Administration" [ref=e120] [cursor=pointer]:
+          - img "tool" [ref=e121]:
+            - img [ref=e122]
+          - generic [ref=e124]: Administration
+        - menuitem "setting Configurations" [ref=e125] [cursor=pointer]:
+          - img "setting" [ref=e126]:
+            - img [ref=e127]
+          - generic [ref=e129]: Configurations
+        - menuitem "edit-reported-user" [ref=e130] [cursor=pointer]:
+          - link "edit-reported-user" [ref=e132]:
+            - /url: /dynamic/Boxfusion.ServiceManagement/edit-reported-user
+        - menuitem "Test Desktop Notif" [ref=e133] [cursor=pointer]:
+          - link "Test Desktop Notif" [ref=e135]:
+            - /url: /dynamic/Boxfusion.Dep/test-site-desk-notif
+      - img "menu-unfold" [ref=e138] [cursor=pointer]:
+        - img [ref=e139]
+    - generic [ref=e141]:
+      - banner [ref=e142]:
+        - generic [ref=e148]:
+          - generic [ref=e150]:
+            - button "edit" [ref=e151] [cursor=pointer]:
+              - img "edit" [ref=e152]:
+                - img [ref=e153]
+            - paragraph [ref=e155] [cursor=pointer]: Shesha/header v11
+            - generic [ref=e156]:
+              - generic [ref=e157]: Live
+              - img "close" [ref=e158] [cursor=pointer]:
+                - img [ref=e159]
+          - generic [ref=e169]:
+            - link [ref=e175] [cursor=pointer]:
+              - /url: /
+              - img [ref=e185]
+            - generic [ref=e187]:
+              - generic [ref=e188]:
+                - generic [ref=e190]:
+                  - generic [ref=e191]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e193] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e197] [cursor=pointer]:
+                  - img "block" [ref=e198]:
+                    - img [ref=e199]
+                  - generic [ref=e201]: Live
+              - generic [ref=e203]:
+                - generic [ref=e204] [cursor=pointer]:
+                  - text: Lebos Lebos
+                  - img "down" [ref=e205]:
+                    - img [ref=e206]
+                - img "user" [ref=e209]:
+                  - img [ref=e210]
+      - main [ref=e212]:
+        - generic [ref=e218]:
+          - generic [ref=e220]:
+            - button "edit" [ref=e221] [cursor=pointer]:
+              - img "edit" [ref=e222]:
+                - img [ref=e223]
+            - paragraph [ref=e225] [cursor=pointer]: Boxfusion.ServiceManagement/service-requests v30
+            - generic [ref=e226]:
+              - generic [ref=e227]: Live
+              - img "close" [ref=e228] [cursor=pointer]:
+                - img [ref=e229]
+          - generic [ref=e242]:
+            - generic [ref=e244]:
+              - generic [ref=e250]:
+                - heading "All Cases" [level=4] [ref=e252] [cursor=pointer]
+                - img "down" [ref=e254]:
+                  - img [ref=e255]
+              - generic [ref=e258]:
+                - generic [ref=e261]:
+                  - textbox [ref=e263]
+                  - button "search" [ref=e266] [cursor=pointer]:
+                    - img "search" [ref=e268]:
+                      - img [ref=e269]
+                - list [ref=e271]:
+                  - listitem [ref=e272]: 1-10 of 3138 items
+                  - listitem "Previous Page" [ref=e273]:
+                    - button "left" [disabled] [ref=e274]:
+                      - img "left" [ref=e275]:
+                        - img [ref=e276]
+                  - listitem "1" [ref=e278] [cursor=pointer]:
+                    - generic [ref=e279]: "1"
+                  - listitem "2" [ref=e280] [cursor=pointer]:
+                    - generic [ref=e281]: "2"
+                  - listitem "3" [ref=e282] [cursor=pointer]:
+                    - generic [ref=e283]: "3"
+                  - listitem "Next 3 Pages" [ref=e284] [cursor=pointer]:
+                    - generic [ref=e286]:
+                      - img "double-right" [ref=e287]:
+                        - img [ref=e288]
+                      - generic [ref=e290]: •••
+                  - listitem "314" [ref=e291] [cursor=pointer]:
+                    - generic [ref=e292]: "314"
+                  - listitem "Next Page" [ref=e293] [cursor=pointer]:
+                    - button "right" [ref=e294]:
+                      - img "right" [ref=e295]:
+                        - img [ref=e296]
+                  - listitem [ref=e298]:
+                    - generic "Page Size" [ref=e299] [cursor=pointer]:
+                      - generic [ref=e300]:
+                        - combobox "Page Size" [ref=e302]
+                        - generic "10 / page" [ref=e303]
+                      - generic:
+                        - img:
+                          - img
+                - button "reload" [ref=e309] [cursor=pointer]:
+                  - img "reload" [ref=e311]:
+                    - img [ref=e312]
+            - button "plus Create Case" [disabled] [ref=e321]:
+              - generic:
+                - img "plus":
+                  - img
+              - generic: Create Case
+            - generic [ref=e329]:
+              - generic [ref=e331]:
+                - button "edit" [ref=e332] [cursor=pointer]:
+                  - img "edit" [ref=e333]:
+                    - img [ref=e334]
+                - paragraph [ref=e336] [cursor=pointer]: Boxfusion.ServiceManagement/case-item-view v25
+                - generic [ref=e337]:
+                  - generic [ref=e338]: Live
+                  - img "close" [ref=e339] [cursor=pointer]:
+                    - img [ref=e340]
+              - generic [ref=e346]:
+                - generic [ref=e347]:
+                  - generic [ref=e348]:
+                    - 'checkbox "question-circle REF009/21/05/2026: Case Type Missing Address Missing From: jim test 21/05/2026 16:09 New Agent Assigned To : None" [ref=e350] [cursor=pointer]'
+                    - generic [ref=e360]:
+                      - generic [ref=e362]:
+                        - img "question-circle" [ref=e375]:
+                          - img [ref=e376]
+                        - generic [ref=e379]:
+                          - strong [ref=e386]: "REF009/21/05/2026: Case Type Missing"
+                          - generic [ref=e392]: Address Missing
+                          - generic [ref=e393]:
+                            - generic [ref=e399]: "From: jim test"
+                            - generic [ref=e405]: 21/05/2026 16:09
+                      - generic [ref=e406]:
+                        - generic [ref=e407]:
+                          - generic [ref=e413]: New
+                          - generic [ref=e419]: Agent
+                        - generic [ref=e427]:
+                          - text: ": :"
+                          - generic [ref=e429]:
+                            - generic "Assigned To" [ref=e431]: "Assigned To :"
+                            - generic [ref=e434]: None
+                  - separator [ref=e435]
+                - generic [ref=e436]:
+                  - generic [ref=e437]:
+                    - 'checkbox "question-circle REF008/21/05/2026: Case Type Missing Address Missing From: jim test 21/05/2026 16:07 New Agent Assigned To : None" [ref=e439] [cursor=pointer]'
+                    - generic [ref=e449]:
+                      - generic [ref=e451]:
+                        - img "question-circle" [ref=e464]:
+                          - img [ref=e465]
+                        - generic [ref=e468]:
+                          - strong [ref=e475]: "REF008/21/05/2026: Case Type Missing"
+                          - generic [ref=e481]: Address Missing
+                          - generic [ref=e482]:
+                            - generic [ref=e488]: "From: jim test"
+                            - generic [ref=e494]: 21/05/2026 16:07
+                      - generic [ref=e495]:
+                        - generic [ref=e496]:
+                          - generic [ref=e502]: New
+                          - generic [ref=e508]: Agent
+                        - generic [ref=e516]:
+                          - text: ": :"
+                          - generic [ref=e518]:
+                            - generic "Assigned To" [ref=e520]: "Assigned To :"
+                            - generic [ref=e523]: None
+                  - separator [ref=e524]
+                - generic [ref=e525]:
+                  - generic [ref=e526]:
+                    - 'checkbox "question-circle REF007/21/05/2026: Case Type Missing Address Missing From: jim test 21/05/2026 14:11 New Agent Assigned To : None" [ref=e528] [cursor=pointer]'
+                    - generic [ref=e538]:
+                      - generic [ref=e540]:
+                        - img "question-circle" [ref=e553]:
+                          - img [ref=e554]
+                        - generic [ref=e557]:
+                          - strong [ref=e564]: "REF007/21/05/2026: Case Type Missing"
+                          - generic [ref=e570]: Address Missing
+                          - generic [ref=e571]:
+                            - generic [ref=e577]: "From: jim test"
+                            - generic [ref=e583]: 21/05/2026 14:11
+                      - generic [ref=e584]:
+                        - generic [ref=e585]:
+                          - generic [ref=e591]: New
+                          - generic [ref=e597]: Agent
+                        - generic [ref=e605]:
+                          - text: ": :"
+                          - generic [ref=e607]:
+                            - generic "Assigned To" [ref=e609]: "Assigned To :"
+                            - generic [ref=e612]: None
+                  - separator [ref=e613]
+                - generic [ref=e614]:
+                  - generic [ref=e615]:
+                    - 'checkbox "question-circle REF006/21/05/2026: Case Type Missing Address Missing From: jim test 21/05/2026 14:03 New Agent Assigned To : None" [ref=e617] [cursor=pointer]'
+                    - generic [ref=e627]:
+                      - generic [ref=e629]:
+                        - img "question-circle" [ref=e642]:
+                          - img [ref=e643]
+                        - generic [ref=e646]:
+                          - strong [ref=e653]: "REF006/21/05/2026: Case Type Missing"
+                          - generic [ref=e659]: Address Missing
+                          - generic [ref=e660]:
+                            - generic [ref=e666]: "From: jim test"
+                            - generic [ref=e672]: 21/05/2026 14:03
+                      - generic [ref=e673]:
+                        - generic [ref=e674]:
+                          - generic [ref=e680]: New
+                          - generic [ref=e686]: Agent
+                        - generic [ref=e694]:
+                          - text: ": :"
+                          - generic [ref=e696]:
+                            - generic "Assigned To" [ref=e698]: "Assigned To :"
+                            - generic [ref=e701]: None
+                  - separator [ref=e702]
+                - generic [ref=e703]:
+                  - generic [ref=e704]:
+                    - 'checkbox "question-circle REF005/21/05/2026: Case Type Missing Address Missing From: jim test 21/05/2026 13:31 New Agent Assigned To : None" [ref=e706] [cursor=pointer]'
+                    - generic [ref=e716]:
+                      - generic [ref=e718]:
+                        - img "question-circle" [ref=e731]:
+                          - img [ref=e732]
+                        - generic [ref=e735]:
+                          - strong [ref=e742]: "REF005/21/05/2026: Case Type Missing"
+                          - generic [ref=e748]: Address Missing
+                          - generic [ref=e749]:
+                            - generic [ref=e755]: "From: jim test"
+                            - generic [ref=e761]: 21/05/2026 13:31
+                      - generic [ref=e762]:
+                        - generic [ref=e763]:
+                          - generic [ref=e769]: New
+                          - generic [ref=e775]: Agent
+                        - generic [ref=e783]:
+                          - text: ": :"
+                          - generic [ref=e785]:
+                            - generic "Assigned To" [ref=e787]: "Assigned To :"
+                            - generic [ref=e790]: None
+                  - separator [ref=e791]
+                - generic [ref=e792]:
+                  - generic [ref=e793]:
+                    - 'checkbox "question-circle REF004/21/05/2026: Case Type Missing Address Missing From: jim test 21/05/2026 13:18 New Agent Assigned To : None" [ref=e795] [cursor=pointer]'
+                    - generic [ref=e805]:
+                      - generic [ref=e807]:
+                        - img "question-circle" [ref=e820]:
+                          - img [ref=e821]
+                        - generic [ref=e824]:
+                          - strong [ref=e831]: "REF004/21/05/2026: Case Type Missing"
+                          - generic [ref=e837]: Address Missing
+                          - generic [ref=e838]:
+                            - generic [ref=e844]: "From: jim test"
+                            - generic [ref=e850]: 21/05/2026 13:18
+                      - generic [ref=e851]:
+                        - generic [ref=e852]:
+                          - generic [ref=e858]: New
+                          - generic [ref=e864]: Agent
+                        - generic [ref=e872]:
+                          - text: ": :"
+                          - generic [ref=e874]:
+                            - generic "Assigned To" [ref=e876]: "Assigned To :"
+                            - generic [ref=e879]: None
+                  - separator [ref=e880]
+                - generic [ref=e881]:
+                  - generic [ref=e882]:
+                    - 'checkbox "question-circle REF003/21/05/2026: Case Type Missing Address Missing From: jim test 21/05/2026 08:38 New Agent Assigned To : None" [ref=e884] [cursor=pointer]'
+                    - generic [ref=e894]:
+                      - generic [ref=e896]:
+                        - img "question-circle" [ref=e909]:
+                          - img [ref=e910]
+                        - generic [ref=e913]:
+                          - strong [ref=e920]: "REF003/21/05/2026: Case Type Missing"
+                          - generic [ref=e926]: Address Missing
+                          - generic [ref=e927]:
+                            - generic [ref=e933]: "From: jim test"
+                            - generic [ref=e939]: 21/05/2026 08:38
+                      - generic [ref=e940]:
+                        - generic [ref=e941]:
+                          - generic [ref=e947]: New
+                          - generic [ref=e953]: Agent
+                        - generic [ref=e961]:
+                          - text: ": :"
+                          - generic [ref=e963]:
+                            - generic "Assigned To" [ref=e965]: "Assigned To :"
+                            - generic [ref=e968]: None
+                  - separator [ref=e969]
+                - generic [ref=e970]:
+                  - generic [ref=e971]:
+                    - 'checkbox "question-circle REF002/21/05/2026: Case Type Missing Address Missing From: jim test 21/05/2026 08:26 New Agent Assigned To : None" [ref=e973] [cursor=pointer]'
+                    - generic [ref=e983]:
+                      - generic [ref=e985]:
+                        - img "question-circle" [ref=e998]:
+                          - img [ref=e999]
+                        - generic [ref=e1002]:
+                          - strong [ref=e1009]: "REF002/21/05/2026: Case Type Missing"
+                          - generic [ref=e1015]: Address Missing
+                          - generic [ref=e1016]:
+                            - generic [ref=e1022]: "From: jim test"
+                            - generic [ref=e1028]: 21/05/2026 08:26
+                      - generic [ref=e1029]:
+                        - generic [ref=e1030]:
+                          - generic [ref=e1036]: New
+                          - generic [ref=e1042]: Agent
+                        - generic [ref=e1050]:
+                          - text: ": :"
+                          - generic [ref=e1052]:
+                            - generic "Assigned To" [ref=e1054]: "Assigned To :"
+                            - generic [ref=e1057]: None
+                  - separator [ref=e1058]
+                - generic [ref=e1059]:
+                  - generic [ref=e1060]:
+                    - 'checkbox "question-circle REF001/21/05/2026: Case Type Missing Address Missing From: jim test 21/05/2026 08:03 New Agent Assigned To : None" [ref=e1062] [cursor=pointer]'
+                    - generic [ref=e1072]:
+                      - generic [ref=e1074]:
+                        - img "question-circle" [ref=e1087]:
+                          - img [ref=e1088]
+                        - generic [ref=e1091]:
+                          - strong [ref=e1098]: "REF001/21/05/2026: Case Type Missing"
+                          - generic [ref=e1104]: Address Missing
+                          - generic [ref=e1105]:
+                            - generic [ref=e1111]: "From: jim test"
+                            - generic [ref=e1117]: 21/05/2026 08:03
+                      - generic [ref=e1118]:
+                        - generic [ref=e1119]:
+                          - generic [ref=e1125]: New
+                          - generic [ref=e1131]: Agent
+                        - generic [ref=e1139]:
+                          - text: ": :"
+                          - generic [ref=e1141]:
+                            - generic "Assigned To" [ref=e1143]: "Assigned To :"
+                            - generic [ref=e1146]: None
+                  - separator [ref=e1147]
+                - generic [ref=e1149]:
+                  - 'checkbox "question-circle REF006/19/05/2026: Case Type Missing Address Missing From: jim test 19/05/2026 15:17 New Agent Assigned To : None" [ref=e1151] [cursor=pointer]'
+                  - generic [ref=e1161]:
+                    - generic [ref=e1163]:
+                      - img "question-circle" [ref=e1176]:
+                        - img [ref=e1177]
+                      - generic [ref=e1180]:
+                        - strong [ref=e1187]: "REF006/19/05/2026: Case Type Missing"
+                        - generic [ref=e1193]: Address Missing
+                        - generic [ref=e1194]:
+                          - generic [ref=e1200]: "From: jim test"
+                          - generic [ref=e1206]: 19/05/2026 15:17
+                    - generic [ref=e1207]:
+                      - generic [ref=e1208]:
+                        - generic [ref=e1214]: New
+                        - generic [ref=e1220]: Agent
+                      - generic [ref=e1228]:
+                        - text: ": :"
+                        - generic [ref=e1230]:
+                          - generic "Assigned To" [ref=e1232]: "Assigned To :"
+                          - generic [ref=e1235]: None
+  - generic [ref=e1236]:
+    - dialog "Create Case":
+      - generic [ref=e1237]:
+        - button "Close" [ref=e1238] [cursor=pointer]:
+          - img "close" [ref=e1240]:
+            - img [ref=e1241]
+        - generic [ref=e1244]: Create Case
+        - generic [ref=e1249]:
+          - generic [ref=e1251]:
+            - button "edit" [ref=e1252] [cursor=pointer]:
+              - img "edit" [ref=e1253]:
+                - img [ref=e1254]
+            - paragraph [ref=e1256] [cursor=pointer]: Boxfusion.ServiceManagement/case-add v3
+            - generic [ref=e1257]:
+              - generic [ref=e1258]: Live
+              - img "close" [ref=e1259] [cursor=pointer]:
+                - img [ref=e1260]
+          - generic [ref=e1269]:
+            - generic [ref=e1274]:
+              - generic [ref=e1276]:
+                - generic [ref=e1282]: Case Channel
+                - generic [ref=e1287]:
+                  - generic "Channel" [ref=e1294]
+                  - generic [ref=e1305] [cursor=pointer]:
+                    - combobox [ref=e1308]
+                    - generic:
+                      - img:
+                        - img
+              - generic [ref=e1310]:
+                - generic [ref=e1311]:
+                  - generic [ref=e1320]: Submitter Details
+                  - button "check" [ref=e1327] [cursor=pointer]:
+                    - img "check" [ref=e1329]:
+                      - img [ref=e1330]
+                - generic [ref=e1339]:
+                  - generic [ref=e1341]:
+                    - button "edit" [ref=e1342] [cursor=pointer]:
+                      - img "edit" [ref=e1343]:
+                        - img [ref=e1344]
+                    - paragraph [ref=e1346] [cursor=pointer]: Boxfusion.Dep/update-submitter v34
+                    - generic [ref=e1347]:
+                      - generic [ref=e1348]: Live
+                      - img "close" [ref=e1349] [cursor=pointer]:
+                        - img [ref=e1350]
+                  - generic [ref=e1356]:
+                    - generic [ref=e1358]:
+                      - generic [ref=e1360]:
+                        - generic "First Name" [ref=e1362]
+                        - textbox [ref=e1367]
+                      - generic [ref=e1369]:
+                        - generic "Mobile Number" [ref=e1371]:
+                          - text: Mobile Number
+                          - generic [ref=e1372]: "*"
+                        - textbox [ref=e1377]
+                      - generic [ref=e1379]:
+                        - generic "Email Address" [ref=e1381]:
+                          - text: Email Address
+                          - generic [ref=e1382]: "*"
+                        - textbox [ref=e1387]
+                    - generic [ref=e1389]:
+                      - generic [ref=e1391]:
+                        - generic "Last Name" [ref=e1393]
+                        - textbox [ref=e1398]
+                      - generic [ref=e1400]:
+                        - generic "Preferred Contact Method" [ref=e1402]
+                        - generic [ref=e1406] [cursor=pointer]:
+                          - combobox [ref=e1409]
+                          - generic:
+                            - img:
+                              - img
+              - generic [ref=e1411]:
+                - generic [ref=e1417]: Case Info
+                - generic [ref=e1418]:
+                  - generic [ref=e1421]:
+                    - generic [ref=e1423]:
+                      - generic "Category" [ref=e1425]:
+                        - text: Category
+                        - generic [ref=e1426]: "*"
+                      - generic [ref=e1430] [cursor=pointer]:
+                        - combobox [ref=e1433]
+                        - generic:
+                          - img:
+                            - img
+                    - strong [ref=e1444]: Priority
+                    - generic [ref=e1449]:
+                      - generic "Description" [ref=e1451]
+                      - textbox [ref=e1455]
+                  - generic [ref=e1458]:
+                    - generic "Case type" [ref=e1462]:
+                      - text: Case type
+                      - generic [ref=e1463]: "*"
+                    - generic [ref=e1467]:
+                      - generic "Address" [ref=e1469]:
+                        - text: Address
+                        - generic [ref=e1470]: "*"
+                      - generic [ref=e1475]:
+                        - img "search" [ref=e1477]:
+                          - img [ref=e1478]
+                        - textbox "Search places" [ref=e1480]
+                    - generic [ref=e1483]:
+                      - generic "Can't Find Address" [ref=e1485]
+                      - checkbox [ref=e1491] [cursor=pointer]
+            - alert [ref=e1496]:
+              - img "info-circle" [ref=e1497]:
+                - img [ref=e1498]
+              - generic [ref=e1502]: The possible matches for 'Submitter Details' will appear here.
+        - generic [ref=e1503]:
+          - button "Cancel" [ref=e1504] [cursor=pointer]:
+            - generic [ref=e1505]: Cancel
+          - button "OK" [ref=e1506] [cursor=pointer]:
+            - generic [ref=e1507]: OK
 ```
 
 # Test source
@@ -48,8 +596,7 @@ Call log:
   9   | 
   10  | async function loginAsAdmin(page: Page) {
   11  |   await page.goto(APP_URL);
-> 12  |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
-      |                                                         ^ Error: locator.fill: Test timeout of 90000ms exceeded.
+  12  |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
   13  |   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);
   14  |   await page.getByRole('button', { name: 'Sign In' }).click();
   15  |   await page.waitForLoadState('networkidle');
@@ -122,7 +669,8 @@ Call log:
   82  | 
   83  |     // STEP 5: SELECT / TYPE each mandatory field on the form with valid values
   84  |     // Channel — Call Centre (Ant Design select)
-  85  |     await dialog.locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select').click();
+> 85  |     await dialog.locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select').click();
+      |                                                                                                          ^ Error: locator.click: Test timeout of 90000ms exceeded.
   86  |     await page.locator('.ant-select-item-option').filter({ hasText: 'Call Centre' }).first().click();
   87  | 
   88  |     // Mobile Number
@@ -150,4 +698,19 @@ Call log:
   110 | 
   111 |     // STEP 7: CLICK the OK button to submit
   112 |     await dialog.getByRole('button', { name: /^OK$/ }).click();
+  113 | 
+  114 |     // ASSERT OK button was clicked and form was submitted
+  115 |     // (covered by waiting for confirmation below)
+  116 | 
+  117 |     // STEP 8: WAIT for confirmation or service request reference to appear
+  118 |     await page.waitForLoadState('networkidle');
+  119 | 
+  120 |     // STEP 9: SNAPSHOT — confirm success message is visible
+  121 |     // SNAPSHOT: success message visible
+  122 | 
+  123 |     // ASSERT (BLOCKING) success message or service request reference is visible after submit
+  124 |     await expect(dialog).toBeHidden({ timeout: 30_000 });
+  125 |   });
+  126 | });
+  127 | 
 ```

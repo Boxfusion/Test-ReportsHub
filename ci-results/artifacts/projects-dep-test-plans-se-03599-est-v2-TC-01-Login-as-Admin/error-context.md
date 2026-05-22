@@ -25,13 +25,11 @@ Call log:
 # Page snapshot
 
 ```yaml
-- generic [ref=e2]:
-  - heading ":( Application Error" [level=1] [ref=e3]
-  - paragraph [ref=e4]:
-    - text: If you are the application administrator, you can access the
-    - link "diagnostic resources" [ref=e5] [cursor=pointer]:
-      - /url: https://linux-dep-adminportal-test.scm.azurewebsites.net/detectors
-    - text: .
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - generic [ref=e4]:
+    - img "Shesha Loading Animation" [ref=e5]
+    - generic [ref=e6]: Initializing...
 ```
 
 # Test source
