@@ -50,6 +50,10 @@ Intermediate Playwright artifacts (`results.json`, `playwright-report/`, screens
 
 ## Adding a new project
 
+A project's `meta.json` decides whether plans and reports are stored **inside this hub** or **read from an external GitHub repo** at build time. There's exactly one knob: the optional `source` field.
+
+### Option A — local (plans + reports synced into this hub)
+
 1. Create `projects/<name>/meta.json`:
    ```json
    {
@@ -61,6 +65,28 @@ Intermediate Playwright artifacts (`results.json`, `playwright-report/`, screens
    ```
 2. Create empty `projects/<name>/test-plans/` and `projects/<name>/test-reports/` folders (with a `.gitkeep` each).
 3. Wire that project's CI / run-test skill to push into `projects/<name>/`.
+
+### Option B — remote (plans + reports live in an external GitHub repo)
+
+1. Create `projects/<name>/meta.json` with a `source` field pointing at the GitHub repo:
+   ```json
+   {
+     "displayName": "PD Telephony",
+     "environment": "QA",
+     "description": "…",
+     "source": {
+       "repo": "https://github.com/Boxfusion/pd-telephony",
+       "branch": "main"
+     }
+   }
+   ```
+   - `branch` is optional — when omitted, the repo's default branch is used.
+   - The external repo must follow the same layout (`test-plans/` and `test-reports/YYYY-MM-DD/` and `test-reports/bugs/` at the repo root).
+2. No `test-plans/` or `test-reports/` folders are needed locally — the build fetches everything from GitHub via the contents API and writes `data.json` + `summary.json` for the dashboards.
+3. For private repos, set `GITHUB_TOKEN` (or `GH_TOKEN`) in your environment. Public repos work unauthenticated but share the 60-req/hour anonymous rate limit, so use a token in CI.
+4. The dashboard's "open plan / spec / report" links resolve to GitHub blob URLs (rendered markdown in the GitHub UI). The hub stores no copies.
+
+Run `node scripts/build-all.js` after creating either kind of project.
 
 ## Re-running a test from the dashboard
 
