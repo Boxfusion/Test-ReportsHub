@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Regenerate every project dashboard and the landing page.
+ * Regenerate per-project data and the landing aggregate.
  * Usage: node scripts/build-all.js
  */
 
@@ -29,11 +29,11 @@ function run(script, args) {
 
 const projects = listProjects();
 if (projects.length === 0) {
-  console.log('[build-all] No projects yet under projects/. Skipping project dashboards.');
+  console.log('[build-all] No projects yet under projects/. Skipping per-project data.');
 } else {
   for (const name of projects) {
-    run('build-project-dashboard.js', [`--project=${name}`]);
+    run('build-project-data.js', [`--project=${name}`]);
   }
 }
-run('build-landing.js', []);
+run('build-hub-data.js', []);
 console.log('[build-all] done.');

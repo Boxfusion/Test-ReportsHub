@@ -1,0 +1,140 @@
+name: Register a project
+run-name: Register project ${{ inputs.slug }}
+
+# Triggered from the "+ Add project" button on the landing page.
+# The UI opens this workflow with a toast showing the values to paste —
+# the workflow then creates projects/<slug>/meta.json, runs build-all,
+# and commits the result back to the hub.
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Project slug (folder name under projects/). Lowercase, kebab-case."
+        required: true
+        type: string
+      displayName:
+        description: "Display name shown on the dashboard."
+        required: true
+        type: string
+      repo:
+        description: "GitHub repo URL containing test-plans/ + test-reports/ at root."
+        required: true
+        type: string
+      branch:
+        description: "Branch to read from (blank = repo default branch)."
+        required: false
+        type: string
+        default: ""
+      environment:
+        description: "Environment label, e.g. QA, Staging, Production."
+        required: false
+        type: string
+        default: ""
+      appUrl:
+        description: "Optional URL of the app under test."
+        required: false
+        type: string
+        default: ""
+      description:
+        description: "Optional one-liner about the project."
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate slug
+        run: |
+          SLUG="${{ inputs.slug }}"
+          if ! echo "$SLUG" | grep -Eq '^[a-z0-9][a-z0-9-]*$'; then
+            echo "::error::Invalid slug '$SLUG'. Use lowercase, kebab-case (e.g. pd-telephony)."
+            exit 2
+          fi
+          if [ -d "projects/$SLUG" ] && [ -f "projects/$SLUG/meta.json" ]; then
+            echo "::error::projects/$SLUG/meta.json already exists. Pick a different slug or edit the existing meta.json directly."
+            exit 2
+          fi
+
+      - name: Validate repo URL
+        run: |
+          REPO="${{ inputs.repo }}"
+          if ! echo "$REPO" | grep -Eq '^https?://github\.com/[^/]+/[^/]+'; then
+            echo "::error::repo must be a GitHub URL like https://github.com/Org/Repo"
+            exit 2
+          fi
+
+      - name: Write meta.json
+        env:
+          SLUG: ${{ inputs.slug }}
+          DISPLAY_NAME: ${{ inputs.displayName }}
+          REPO: ${{ inputs.repo }}
+          BRANCH: ${{ inputs.branch }}
+          ENVIRONMENT: ${{ inputs.environment }}
+          APP_URL: ${{ inputs.appUrl }}
+          DESCRIPTION: ${{ inputs.description }}
+        run: |
+          mkdir -p "projects/$SLUG"
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
+            const slug = process.env.SLUG;
+            const source = { repo: process.env.REPO };
+            if (process.env.BRANCH) source.branch = process.env.BRANCH;
+            const meta = {
+              displayName: process.env.DISPLAY_NAME || slug,
+              environment: process.env.ENVIRONMENT || null,
+              appUrl: process.env.APP_URL || null,
+              description: process.env.DESCRIPTION || null,
+              source,
+            };
+            // Strip null-valued optional fields so the file stays tidy.
+            for (const k of ["environment", "appUrl", "description"]) {
+              if (meta[k] == null || meta[k] === "") delete meta[k];
+            }
+            const out = path.join("projects", slug, "meta.json");
+            fs.writeFileSync(out, JSON.stringify(meta, null, 2) + "\n");
+            console.log("Wrote", out);
+            console.log(JSON.stringify(meta, null, 2));
+          '
+
+      - name: Rebuild hub dashboards
+        run: node scripts/build-all.js
+
+      - name: Commit and push
+        run: |
+          git config user.email "ci@boxfusion"
+          git config user.name "Boxfusion CI"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit (project may already exist with identical config)."
+          else
+            git commit -m "feat: register project ${{ inputs.slug }}"
+            git pull --rebase --autostash || true
+            git push
+          fi
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "## Project registered"
+            echo "- **Slug**: \`${{ inputs.slug }}\`"
+            echo "- **Display name**: ${{ inputs.displayName }}"
+            echo "- **Repo**: ${{ inputs.repo }}"
+            echo "- **Branch**: ${{ inputs.branch }}"
+            echo ""
+            echo "Reload the hub landing page to see the new card."
+          } >> $GITHUB_STEP_SUMMARY
