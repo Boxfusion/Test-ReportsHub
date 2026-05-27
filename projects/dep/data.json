@@ -15,8 +15,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 6,
-    "totalRuns": 7,
-    "last7Runs": 3,
+    "totalRuns": 9,
+    "last7Runs": 4,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 1,
@@ -26,15 +26,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-05-31",
+    "startDate": "2025-06-01",
     "days": [
-      {
-        "iso": "2025-05-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-06-01",
         "runs": 0,
@@ -2522,9 +2515,9 @@
       },
       {
         "iso": "2026-05-22",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2557,9 +2550,9 @@
       },
       {
         "iso": "2026-05-27",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2571,6 +2564,13 @@
       },
       {
         "iso": "2026-05-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-05-30",
         "runs": 0,
         "passed": 0,
         "failed": 0,
@@ -2622,6 +2622,10 @@
           "canRun": false,
           "badges": [
             {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
+            {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
             }
@@ -2651,6 +2655,10 @@
           "specHref": null,
           "canRun": false,
           "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
             {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
@@ -2687,7 +2695,12 @@
           "spec": "test-plans/customers/create-customer.spec.ts",
           "specHref": "test-plans/customers/create-customer.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "partial",
           "status": "PARTIAL",
           "last": {
@@ -2723,17 +2736,27 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-05-21",
+            "date": "2026-05-27",
             "result": "FAILED",
-            "duration": "200.4s",
-            "reportHref": "test-reports/2026-05-21/create-service-request-v2.md"
+            "duration": "285.2s",
+            "reportHref": "test-reports/2026-05-27/create-service-request-v2.md"
           },
-          "runCount": 4,
+          "runCount": 6,
           "history": [
+            {
+              "date": "2026-05-27",
+              "result": "FAILED",
+              "duration": "285.2s"
+            },
+            {
+              "date": "2026-05-22",
+              "result": "FAILED",
+              "duration": "199.6s"
+            },
             {
               "date": "2026-05-21",
               "result": "FAILED",
-              "duration": "200.4s"
+              "duration": "287.2s"
             },
             {
               "date": "2026-05-20",
@@ -2781,6 +2804,32 @@
   ],
   "timeline": [
     {
+      "date": "2026-05-27",
+      "runs": [
+        {
+          "plan": "test-plans/service-requests/create-service-request-v2.md",
+          "planDisplay": "service-requests/create-service-request-v2.md",
+          "result": "FAILED",
+          "duration": "285.2s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-05-27/create-service-request-v2.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "runs": [
+        {
+          "plan": "test-plans/service-requests/create-service-request-v2.md",
+          "planDisplay": "service-requests/create-service-request-v2.md",
+          "result": "FAILED",
+          "duration": "199.6s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-05-22/create-service-request-v2.md"
+        }
+      ]
+    },
+    {
       "date": "2026-05-21",
       "runs": [
         {
@@ -2795,7 +2844,7 @@
           "plan": "test-plans/service-requests/create-service-request-v2.md",
           "planDisplay": "service-requests/create-service-request-v2.md",
           "result": "FAILED",
-          "duration": "200.4s",
+          "duration": "287.2s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-05-21/create-service-request-v2.md"
         }
@@ -2867,5 +2916,5 @@
       ]
     }
   ],
-  "generated": "2026-05-26T11:16:20.535Z"
+  "generated": "2026-05-27T07:24:03.767Z"
 }

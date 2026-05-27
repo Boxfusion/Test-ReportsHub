@@ -28,15 +28,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-05-31",
+    "startDate": "2025-06-01",
     "days": [
-      {
-        "iso": "2025-05-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-06-01",
         "runs": 0,
@@ -2577,10 +2570,17 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-05-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
   "sections": [],
   "timeline": [],
-  "generated": "2026-05-26T11:16:21.761Z"
+  "generated": "2026-05-27T07:24:04.407Z"
 }
