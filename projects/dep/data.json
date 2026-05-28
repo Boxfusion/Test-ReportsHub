@@ -15,13 +15,13 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 6,
-    "totalRuns": 9,
+    "totalRuns": 11,
     "last7Runs": 4,
     "last7Pass": 0,
     "last7PassPct": 0,
-    "failingFlows": 1,
+    "failingFlows": 2,
     "passingFlows": 0,
-    "partialFlows": 1,
+    "partialFlows": 0,
     "neverFlows": 2
   },
   "heatmap": {
@@ -2557,9 +2557,9 @@
       },
       {
         "iso": "2026-05-28",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
@@ -2695,22 +2695,22 @@
           "spec": "test-plans/customers/create-customer.spec.ts",
           "specHref": "test-plans/customers/create-customer.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "partial",
-          "status": "PARTIAL",
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
           "last": {
-            "date": "2026-05-21",
-            "result": "PARTIAL",
-            "duration": "20.1s",
-            "reportHref": "test-reports/2026-05-21/create-customer.md"
+            "date": "2026-05-28",
+            "result": "FAILED",
+            "duration": "123.3s",
+            "reportHref": "test-reports/2026-05-28/create-customer.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-05-28",
+              "result": "FAILED",
+              "duration": "123.3s"
+            },
             {
               "date": "2026-05-21",
               "result": "PARTIAL",
@@ -2736,13 +2736,18 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-05-27",
+            "date": "2026-05-28",
             "result": "FAILED",
-            "duration": "285.2s",
-            "reportHref": "test-reports/2026-05-27/create-service-request-v2.md"
+            "duration": "287.9s",
+            "reportHref": "test-reports/2026-05-28/create-service-request-v2.md"
           },
-          "runCount": 6,
+          "runCount": 7,
           "history": [
+            {
+              "date": "2026-05-28",
+              "result": "FAILED",
+              "duration": "287.9s"
+            },
             {
               "date": "2026-05-27",
               "result": "FAILED",
@@ -2803,6 +2808,27 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-05-28",
+      "runs": [
+        {
+          "plan": "test-plans/customers/create-customer.md",
+          "planDisplay": "customers/create-customer.md",
+          "result": "FAILED",
+          "duration": "123.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-05-28/create-customer.md"
+        },
+        {
+          "plan": "test-plans/service-requests/create-service-request-v2.md",
+          "planDisplay": "service-requests/create-service-request-v2.md",
+          "result": "FAILED",
+          "duration": "287.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-05-28/create-service-request-v2.md"
+        }
+      ]
+    },
     {
       "date": "2026-05-27",
       "runs": [
@@ -2916,5 +2942,5 @@
       ]
     }
   ],
-  "generated": "2026-05-27T19:05:29.938Z"
+  "generated": "2026-05-28T10:52:04.751Z"
 }
