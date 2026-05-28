@@ -6,10 +6,10 @@ run-name: Nightly run · ${{ github.event_name }}
 # rebuilds the hub dashboards and commits everything back in a single push.
 on:
   schedule:
-    # TEMP: 10:20 UTC = 12:20 SAST — testing the schedule wires up.
+    # TEMP: 10:25 UTC = 12:25 SAST — testing the schedule wires up.
     # Revert to '0 2 * * *' (04:00 SAST nightly) once verified.
     # Times are always UTC; scheduled workflows only fire on the default branch.
-    - cron: '20 10 * * *'
+    - cron: '32 10 * * *'
   workflow_dispatch: {}
 
 permissions:
