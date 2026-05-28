@@ -1,0 +1,234 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\playwright.config.ts",
+    "rootDir": "C:/Users/Mishalia Pillay/Desktop/Test-ReportsHub",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Mishalia Pillay/Desktop/Test-ReportsHub/projects/dispatcher/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Mishalia Pillay/Desktop/Test-ReportsHub",
+        "testIgnore": [],
+        "testMatch": [
+          "projects/**/test-plans/**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ],
+      [
+        "list"
+      ],
+      [
+        "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\node_modules\\allure-playwright\\dist\\index.js"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts",
+      "file": "projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Create Service Request",
+          "file": "projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts",
+          "line": 22,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-01: Login as Admin",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11010,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-28T11:53:13.086Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "47967a572922a4ade56b-15fa765c26a6f7c3ae0e",
+              "file": "projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "TC-02: Navigate to Service Requests",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6517,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-28T11:53:25.018Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "47967a572922a4ade56b-cf0c898db02324e7061a",
+              "file": "projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "TC-03: Create a Service Request",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 24709,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')\u001b[22m\n\n    at C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts:92:106",
+                        "location": {
+                          "file": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts",
+                          "column": 106,
+                          "line": 92
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 90 |\u001b[39m     \u001b[90m// Channel — Call Centre (Ant Design select)\u001b[39m\n \u001b[90m 91 |\u001b[39m     \u001b[90m// TODO[selector]: confirm Channel field exists on Dispatcher portal\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m     \u001b[36mawait\u001b[39m dialog\u001b[33m.\u001b[39mlocator(\u001b[32m'.ant-form-item'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m'Channel'\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mlocator(\u001b[32m'.ant-select'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.ant-select-item-option'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m'Call Centre'\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 94 |\u001b[39m\n \u001b[90m 95 |\u001b[39m     \u001b[90m// Mobile Number\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts",
+                            "column": 106,
+                            "line": 92
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')\u001b[22m\n\n\n  90 |     // Channel — Call Centre (Ant Design select)\n  91 |     // TODO[selector]: confirm Channel field exists on Dispatcher portal\n> 92 |     await dialog.locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select').click();\n     |                                                                                                          ^\n  93 |     await page.locator('.ant-select-item-option').filter({ hasText: 'Call Centre' }).first().click();\n  94 |\n  95 |     // Mobile Number\n    at C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts:92:106"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-28T11:53:31.565Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-results\\artifacts\\projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-results\\artifacts\\projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-results\\artifacts\\projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-results\\artifacts\\projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts",
+                        "column": 106,
+                        "line": 92
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "47967a572922a4ade56b-3ec11b7a46e525a66eb5",
+              "file": "projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts",
+              "line": 66,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-28T11:53:11.711Z",
+    "duration": 90555.977,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
