@@ -9,7 +9,7 @@ on:
     # TEMP: 10:25 UTC = 12:25 SAST — testing the schedule wires up.
     # Revert to '0 2 * * *' (04:00 SAST nightly) once verified.
     # Times are always UTC; scheduled workflows only fire on the default branch.
-    - cron: '32 10 * * *'
+    - cron: "35 10 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -24,7 +24,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install Playwright
         run: |
