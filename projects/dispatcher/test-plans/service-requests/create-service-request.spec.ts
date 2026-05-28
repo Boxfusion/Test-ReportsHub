@@ -87,25 +87,23 @@ test.describe('Create Service Request', () => {
     await expect(dialog).toBeVisible();
 
     // STEP 5: SELECT / TYPE each mandatory field on the form with valid values
-    // Channel — Call Centre (Ant Design select)
-    // TODO[selector]: confirm Channel field exists on Dispatcher portal
-    await dialog.locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select').click();
-    await page.locator('.ant-select-item-option').filter({ hasText: 'Call Centre' }).first().click();
+    // Channel — Ant Design combobox; pick first available option
+    await dialog.getByRole('combobox', { name: 'Channel' }).click();
+    await page.getByRole('option').first().click();
 
     // Mobile Number
-    await dialog.locator('.ant-form-item').filter({ hasText: 'Mobile Number' }).locator('input').fill('0766791145');
+    await dialog.getByLabel('Mobile Number', { exact: true }).fill('0766791145');
 
     // Email Address
-    await dialog.locator('.ant-form-item').filter({ hasText: 'Email Address' }).locator('input').fill('automation@boxfusion.io');
+    await dialog.getByLabel('Email Address', { exact: true }).fill('automation@boxfusion.io');
 
     // Category — pick first option
-    await dialog.locator('.ant-form-item').filter({ hasText: 'Category' }).first().locator('.ant-select').click();
-    await page.locator('.ant-select-dropdown:visible .ant-select-item-option').first().click();
+    await dialog.getByRole('combobox', { name: 'Category' }).click();
+    await page.getByRole('option').first().click();
 
-    // Case type — pick first option
-    // TODO[selector]: confirm whether Dispatcher uses "Case type" or "Request type"
-    await dialog.locator('.ant-form-item').filter({ hasText: /Case type|Request type/i }).first().locator('.ant-select').click();
-    await page.locator('.ant-select-dropdown:visible .ant-select-item-option').first().click();
+    // Case type — cascades from Category; wait for it then pick first option
+    await dialog.getByRole('combobox', { name: /Case type|Request type/i }).click();
+    await page.getByRole('option').first().click();
 
     // Address — type into "Search places"
     await dialog.getByRole('textbox', { name: /Search places/i }).fill('1 Sandton Drive, Sandton');
@@ -114,7 +112,7 @@ test.describe('Create Service Request', () => {
     // SNAPSHOT: mandatory fields populated
 
     // ASSERT all mandatory fields are populated before submit
-    await expect(dialog.locator('.ant-form-item').filter({ hasText: 'Mobile Number' }).locator('input')).toHaveValue('0766791145');
+    await expect(dialog.getByLabel('Mobile Number', { exact: true })).toHaveValue('0766791145');
 
     // STEP 7: CLICK the OK button to submit
     await dialog.getByRole('button', { name: /^OK$|^Submit$/i }).click();

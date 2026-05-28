@@ -71,74 +71,6 @@
           "column": 6,
           "specs": [
             {
-              "title": "TC-01: Login as Admin",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11010,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-28T11:53:13.086Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "47967a572922a4ade56b-15fa765c26a6f7c3ae0e",
-              "file": "projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts",
-              "line": 23,
-              "column": 7
-            },
-            {
-              "title": "TC-02: Navigate to Service Requests",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 6517,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-28T11:53:25.018Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "47967a572922a4ade56b-cf0c898db02324e7061a",
-              "file": "projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts",
-              "line": 46,
-              "column": 7
-            },
-            {
               "title": "TC-03: Create a Service Request",
               "ok": false,
               "tags": [],
@@ -154,31 +86,31 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 24709,
+                      "duration": 27109,
                       "error": {
-                        "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')\u001b[22m\n",
-                        "stack": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')\u001b[22m\n\n    at C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts:92:106",
+                        "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().getByRole('combobox', { name: 'Channel' })\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().getByRole('combobox', { name: 'Channel' })\u001b[22m\n\n    at C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts:91:61",
                         "location": {
                           "file": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts",
-                          "column": 106,
-                          "line": 92
+                          "column": 61,
+                          "line": 91
                         },
-                        "snippet": "\u001b[0m \u001b[90m 90 |\u001b[39m     \u001b[90m// Channel — Call Centre (Ant Design select)\u001b[39m\n \u001b[90m 91 |\u001b[39m     \u001b[90m// TODO[selector]: confirm Channel field exists on Dispatcher portal\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m     \u001b[36mawait\u001b[39m dialog\u001b[33m.\u001b[39mlocator(\u001b[32m'.ant-form-item'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m'Channel'\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mlocator(\u001b[32m'.ant-select'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.ant-select-item-option'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m'Call Centre'\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 94 |\u001b[39m\n \u001b[90m 95 |\u001b[39m     \u001b[90m// Mobile Number\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 89 |\u001b[39m     \u001b[90m// STEP 5: SELECT / TYPE each mandatory field on the form with valid values\u001b[39m\n \u001b[90m 90 |\u001b[39m     \u001b[90m// Channel — Ant Design combobox; pick first available option\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 91 |\u001b[39m     \u001b[36mawait\u001b[39m dialog\u001b[33m.\u001b[39mgetByRole(\u001b[32m'combobox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Channel'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 92 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'option'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 93 |\u001b[39m\n \u001b[90m 94 |\u001b[39m     \u001b[90m// Mobile Number\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts",
-                            "column": 106,
-                            "line": 92
+                            "column": 61,
+                            "line": 91
                           },
-                          "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')\u001b[22m\n\n\n  90 |     // Channel — Call Centre (Ant Design select)\n  91 |     // TODO[selector]: confirm Channel field exists on Dispatcher portal\n> 92 |     await dialog.locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select').click();\n     |                                                                                                          ^\n  93 |     await page.locator('.ant-select-item-option').filter({ hasText: 'Call Centre' }).first().click();\n  94 |\n  95 |     // Mobile Number\n    at C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts:92:106"
+                          "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().getByRole('combobox', { name: 'Channel' })\u001b[22m\n\n\n  89 |     // STEP 5: SELECT / TYPE each mandatory field on the form with valid values\n  90 |     // Channel — Ant Design combobox; pick first available option\n> 91 |     await dialog.getByRole('combobox', { name: 'Channel' }).click();\n     |                                                             ^\n  92 |     await page.getByRole('option').first().click();\n  93 |\n  94 |     // Mobile Number\n    at C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts:91:61"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-28T11:53:31.565Z",
+                      "startTime": "2026-05-28T12:00:16.553Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -204,8 +136,8 @@
                       ],
                       "errorLocation": {
                         "file": "C:\\Users\\Mishalia Pillay\\Desktop\\Test-ReportsHub\\projects\\dispatcher\\test-plans\\service-requests\\create-service-request.spec.ts",
-                        "column": 106,
-                        "line": 92
+                        "column": 61,
+                        "line": 91
                       }
                     }
                   ],
@@ -224,9 +156,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-28T11:53:11.711Z",
-    "duration": 90555.977,
-    "expected": 2,
+    "startTime": "2026-05-28T12:00:15.289Z",
+    "duration": 31142.944,
+    "expected": 0,
     "skipped": 0,
     "unexpected": 1,
     "flaky": 0
