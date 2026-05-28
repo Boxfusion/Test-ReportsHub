@@ -1,155 +1,55 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="3" time="287.886869">
-<testsuite name="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" timestamp="2026-05-28T10:47:16.889Z" hostname="" tests="3" failures="0" skipped="0" time="285.54" errors="3">
-<testcase name="Create Service Request (v2) › TC-01: Login as Admin" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="95.395">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/test-failed-1.png]]
-
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/video.webm]]
-
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/error-context.md]]
-
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip]]
-]]>
-</system-out>
-<error message="Test timeout of 90000ms exceeded." type="Error">
-<![CDATA[  projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:19:7 › Create Service Request (v2) › TC-01: Login as Admin 
-
-    Test timeout of 90000ms exceeded.
-
-    Error: locator.fill: Test timeout of 90000ms exceeded.
-    Call log:
-      - waiting for getByRole('textbox', { name: 'Username' })
-
-
-      25 |
-      26 |     // STEP 3: TYPE username field with `admin`
-    > 27 |     await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
-         |                                                           ^
-      28 |
-      29 |     // STEP 4: TYPE password field with `123qwe`
-      30 |     await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:27:59
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/error-context.md
-
-    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip
-    Usage:
-
-        npx playwright show-trace ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</error>
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="1" time="135.05008">
+<testsuite name="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" timestamp="2026-05-28T12:00:31.912Z" hostname="" tests="3" failures="0" skipped="0" time="132.786" errors="1">
+<testcase name="Create Service Request › TC-01: Login as Admin" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="19.978">
 </testcase>
-<testcase name="Create Service Request (v2) › TC-02: Navigate to Service Requests" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="95.034">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/test-failed-1.png]]
-
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/video.webm]]
-
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/error-context.md]]
-
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/trace.zip]]
-]]>
-</system-out>
-<error message="Test timeout of 90000ms exceeded." type="Error">
-<![CDATA[  projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:43:7 › Create Service Request (v2) › TC-02: Navigate to Service Requests 
-
-    Test timeout of 90000ms exceeded.
-
-    Error: locator.fill: Test timeout of 90000ms exceeded.
-    Call log:
-      - waiting for getByRole('textbox', { name: 'Username' })
-
-
-      10 | async function loginAsAdmin(page: Page) {
-      11 |   await page.goto(APP_URL);
-    > 12 |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
-         |                                                         ^
-      13 |   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);
-      14 |   await page.getByRole('button', { name: 'Sign In' }).click();
-      15 |   await page.waitForLoadState('networkidle');
-        at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:12:57)
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:44:5
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/error-context.md
-
-    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/trace.zip
-    Usage:
-
-        npx playwright show-trace ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</error>
+<testcase name="Create Service Request › TC-02: Navigate to Service Requests" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="19.495">
 </testcase>
-<testcase name="Create Service Request (v2) › TC-03: Create a Service Request" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="95.111">
+<testcase name="Create Service Request › TC-03: Create a Service Request" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="93.313">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/test-failed-1.png]]
+[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/test-failed-1.png]]
 
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/video.webm]]
+[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/video.webm]]
 
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/error-context.md]]
+[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/error-context.md]]
 
-[[ATTACHMENT|artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/trace.zip]]
+[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/trace.zip]]
 ]]>
 </system-out>
 <error message="Test timeout of 90000ms exceeded." type="Error">
-<![CDATA[  projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:62:7 › Create Service Request (v2) › TC-03: Create a Service Request 
+<![CDATA[  projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts:66:7 › Create Service Request › TC-03: Create a Service Request 
 
     Test timeout of 90000ms exceeded.
 
-    Error: locator.fill: Test timeout of 90000ms exceeded.
+    Error: locator.click: Test timeout of 90000ms exceeded.
     Call log:
-      - waiting for getByRole('textbox', { name: 'Username' })
+      - waiting for getByRole('dialog').first().locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')
 
 
-      10 | async function loginAsAdmin(page: Page) {
-      11 |   await page.goto(APP_URL);
-    > 12 |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
-         |                                                         ^
-      13 |   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);
-      14 |   await page.getByRole('button', { name: 'Sign In' }).click();
-      15 |   await page.waitForLoadState('networkidle');
-        at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:12:57)
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:63:5
+      90 |     // Channel — Call Centre (Ant Design select)
+      91 |     // TODO[selector]: confirm Channel field exists on Dispatcher portal
+    > 92 |     await dialog.locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select').click();
+         |                                                                                                          ^
+      93 |     await page.locator('.ant-select-item-option').filter({ hasText: 'Call Centre' }).first().click();
+      94 |
+      95 |     // Mobile Number
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts:92:106
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/test-failed-1.png
+    ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/video.webm
+    ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/error-context.md
+    Error Context: ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/error-context.md
 
     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/trace.zip
+    ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/trace.zip
     Usage:
 
-        npx playwright show-trace ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/trace.zip
+        npx playwright show-trace ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>

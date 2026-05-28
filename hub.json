@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-28T11:35:15.298Z",
+  "generated": "2026-05-28T12:02:47.152Z",
   "projects": [
     {
       "name": "dep",
@@ -11,7 +11,7 @@
       "health": "failing",
       "summary": {
         "totalPlans": 6,
-        "totalRuns": 9,
+        "totalRuns": 11,
         "last7Runs": 4,
         "last7Pass": 0,
         "last7PassPct": 0,
@@ -31,9 +31,32 @@
       "environment": "Test",
       "sourceRepo": "https://dev.azure.com/boxfusion/PD-Dep/_git/Dep",
       "description": "Hybrid Markdown + Playwright test reports for the Dispatcher (Lesedi DEP) Admin Portal.",
-      "health": "unknown",
+      "health": "failing",
       "summary": {
         "totalPlans": 1,
+        "totalRuns": 1,
+        "last7Runs": 1,
+        "last7Pass": 0,
+        "last7PassPct": 0,
+        "failingFlows": 1,
+        "lastRun": {
+          "date": "2026-05-28",
+          "result": "FAILED",
+          "plan": "test-plans/service-requests/create-service-request.md"
+        }
+      },
+      "href": "projects/dispatcher/index.html"
+    },
+    {
+      "name": "pd-telephony",
+      "displayName": "pd-telephony",
+      "appUrl": null,
+      "environment": null,
+      "sourceRepo": null,
+      "description": null,
+      "health": "unknown",
+      "summary": {
+        "totalPlans": 0,
         "totalRuns": 0,
         "last7Runs": 0,
         "last7Pass": 0,
@@ -41,14 +64,33 @@
         "failingFlows": 0,
         "lastRun": null
       },
-      "href": "projects/dispatcher/index.html"
+      "href": "projects/pd-telephony/index.html"
+    },
+    {
+      "name": "pd-telephonyy",
+      "displayName": "pd-telephonyy",
+      "appUrl": null,
+      "environment": null,
+      "sourceRepo": null,
+      "description": null,
+      "health": "unknown",
+      "summary": {
+        "totalPlans": 0,
+        "totalRuns": 0,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
+        "failingFlows": 0,
+        "lastRun": null
+      },
+      "href": "projects/pd-telephonyy/index.html"
     }
   ],
   "totals": {
-    "totalProjects": 3,
-    "totalPlans": 6,
-    "totalRuns": 9,
-    "last7Runs": 4,
-    "failingFlows": 1
+    "totalProjects": 4,
+    "totalPlans": 7,
+    "totalRuns": 12,
+    "last7Runs": 5,
+    "failingFlows": 3
   }
 }

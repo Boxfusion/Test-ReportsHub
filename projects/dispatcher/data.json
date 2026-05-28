@@ -15,26 +15,19 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 1,
-    "totalRuns": 0,
-    "last7Runs": 0,
+    "totalRuns": 1,
+    "last7Runs": 1,
     "last7Pass": 0,
-    "last7PassPct": null,
-    "failingFlows": 0,
+    "last7PassPct": 0,
+    "failingFlows": 1,
     "passingFlows": 0,
     "partialFlows": 0,
-    "neverFlows": 1
+    "neverFlows": 0
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-05-31",
+    "startDate": "2025-06-01",
     "days": [
-      {
-        "iso": "2025-05-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-06-01",
         "runs": 0,
@@ -2564,13 +2557,20 @@
       },
       {
         "iso": "2026-05-28",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-05-29",
         "runs": 0,
         "passed": 0,
         "failed": 0,
         "partial": 0
       },
       {
-        "iso": "2026-05-29",
+        "iso": "2026-05-30",
         "runs": 0,
         "passed": 0,
         "failed": 0,
@@ -2590,22 +2590,42 @@
           "spec": "test-plans/service-requests/create-service-request.spec.ts",
           "specHref": "test-plans/service-requests/create-service-request.spec.ts",
           "canRun": true,
-          "badges": [
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-05-28",
+            "result": "FAILED",
+            "duration": "135.1s",
+            "reportHref": "test-reports/2026-05-28/create-service-request.md"
+          },
+          "runCount": 1,
+          "history": [
             {
-              "kind": "new",
-              "text": "NEW · never run"
+              "date": "2026-05-28",
+              "result": "FAILED",
+              "duration": "135.1s"
             }
           ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
           "bugs": []
         }
       ]
     }
   ],
-  "timeline": [],
-  "generated": "2026-05-27T19:05:30.617Z"
+  "timeline": [
+    {
+      "date": "2026-05-28",
+      "runs": [
+        {
+          "plan": "test-plans/service-requests/create-service-request.md",
+          "planDisplay": "service-requests/create-service-request.md",
+          "result": "FAILED",
+          "duration": "135.1s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-05-28/create-service-request.md"
+        }
+      ]
+    }
+  ],
+  "generated": "2026-05-28T12:02:47.054Z"
 }

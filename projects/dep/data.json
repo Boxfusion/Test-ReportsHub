@@ -15,8 +15,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 6,
-    "totalRuns": 9,
-    "last7Runs": 2,
+    "totalRuns": 11,
+    "last7Runs": 4,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 2,
@@ -26,15 +26,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-05-31",
+    "startDate": "2025-06-01",
     "days": [
-      {
-        "iso": "2025-05-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-06-01",
         "runs": 0,
@@ -2575,6 +2568,13 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-05-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2622,6 +2622,10 @@
           "canRun": false,
           "badges": [
             {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
+            {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
             }
@@ -2651,6 +2655,10 @@
           "specHref": null,
           "canRun": false,
           "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
             {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
@@ -2934,5 +2942,5 @@
       ]
     }
   ],
-  "generated": "2026-05-27T19:05:29.938Z"
+  "generated": "2026-05-28T12:02:47.021Z"
 }

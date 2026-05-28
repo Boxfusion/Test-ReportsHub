@@ -3,14 +3,12 @@
   "displayName": "pd-telephonyy",
   "meta": {
     "displayName": "pd-telephonyy",
-    "appUrl": "https://pd-telephony-adminportal-test.shesha.app/login",
-    "environment": "test",
-    "sourceRepo": "https://github.com/Boxfusion/pd-telephony.git",
+    "appUrl": null,
+    "environment": null,
+    "sourceRepo": null,
     "description": null,
     "source": {
-      "kind": "remote",
-      "repo": "https://github.com/Boxfusion/pd-telephony.git",
-      "branch": "main"
+      "kind": "local"
     }
   },
   "hasAllure": false,
@@ -2582,5 +2580,5 @@
   },
   "sections": [],
   "timeline": [],
-  "generated": "2026-05-28T10:52:05.506Z"
+  "generated": "2026-05-28T12:02:47.115Z"
 }

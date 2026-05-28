@@ -1,9 +1,13 @@
 {
   "totalPlans": 1,
-  "totalRuns": 0,
-  "last7Runs": 0,
+  "totalRuns": 1,
+  "last7Runs": 1,
   "last7Pass": 0,
-  "last7PassPct": null,
-  "failingFlows": 0,
-  "lastRun": null
+  "last7PassPct": 0,
+  "failingFlows": 1,
+  "lastRun": {
+    "date": "2026-05-28",
+    "result": "FAILED",
+    "plan": "test-plans/service-requests/create-service-request.md"
+  }
 }
