@@ -12,14 +12,14 @@
       "summary": {
         "totalPlans": 6,
         "totalRuns": 9,
-        "last7Runs": 2,
+        "last7Runs": 4,
         "last7Pass": 0,
         "last7PassPct": 0,
-        "failingFlows": 1,
+        "failingFlows": 2,
         "lastRun": {
-          "date": "2026-05-27",
+          "date": "2026-05-28",
           "result": "FAILED",
-          "plan": "test-plans/service-requests/create-service-request-v2.md"
+          "plan": "test-plans/customers/create-customer.md"
         }
       },
       "href": "projects/dep/index.html"
@@ -45,10 +45,10 @@
     }
   ],
   "totals": {
-    "totalProjects": 2,
-    "totalPlans": 7,
+    "totalProjects": 3,
+    "totalPlans": 6,
     "totalRuns": 9,
-    "last7Runs": 2,
+    "last7Runs": 4,
     "failingFlows": 1
   }
 }
