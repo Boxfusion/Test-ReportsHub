@@ -1,22 +1,20 @@
 {
-  "project": "pd-telephonyy",
-  "displayName": "pd-telephonyy",
+  "project": "dispatcher",
+  "displayName": "Dispatcher Admin Portal",
   "meta": {
-    "displayName": "pd-telephonyy",
-    "appUrl": "https://pd-telephony-adminportal-test.shesha.app/login",
-    "environment": "test",
-    "sourceRepo": "https://github.com/Boxfusion/pd-telephony.git",
-    "description": null,
+    "displayName": "Dispatcher Admin Portal",
+    "appUrl": "https://linux-lesedi-dep-adminportal-test.azurewebsites.net/",
+    "environment": "Test",
+    "sourceRepo": "https://dev.azure.com/boxfusion/PD-Dep/_git/Dep",
+    "description": "Hybrid Markdown + Playwright test reports for the Dispatcher (Lesedi DEP) Admin Portal.",
     "source": {
-      "kind": "remote",
-      "repo": "https://github.com/Boxfusion/pd-telephony.git",
-      "branch": "main"
+      "kind": "local"
     }
   },
   "hasAllure": false,
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 0,
+    "totalPlans": 1,
     "totalRuns": 0,
     "last7Runs": 0,
     "last7Pass": 0,
@@ -24,12 +22,19 @@
     "failingFlows": 0,
     "passingFlows": 0,
     "partialFlows": 0,
-    "neverFlows": 0
+    "neverFlows": 1
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-06-01",
+    "startDate": "2025-05-31",
     "days": [
+      {
+        "iso": "2025-05-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
       {
         "iso": "2025-06-01",
         "runs": 0,
@@ -2570,17 +2575,37 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
-      },
-      {
-        "iso": "2026-05-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
       }
     ]
   },
-  "sections": [],
+  "sections": [
+    {
+      "key": "service-requests",
+      "title": "Service Requests",
+      "stripPrefix": "test-plans/service-requests/",
+      "plans": [
+        {
+          "plan": "test-plans/service-requests/create-service-request.md",
+          "planHref": "test-plans/service-requests/create-service-request.md",
+          "spec": "test-plans/service-requests/create-service-request.spec.ts",
+          "specHref": "test-plans/service-requests/create-service-request.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        }
+      ]
+    }
+  ],
   "timeline": [],
-  "generated": "2026-05-27T19:05:30.791Z"
+  "generated": "2026-05-28T11:35:15.218Z"
 }

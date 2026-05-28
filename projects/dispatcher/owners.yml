@@ -1,0 +1,22 @@
+# projects/dispatcher/owners.yml
+#
+# Map a Dispatcher test plan to the dev(s) who should be notified when it FAILS or comes back PARTIAL.
+# Read by .github/workflows/notify-failures.yml after every push to main.
+#
+# Lookup rules:
+#   1. Exact match — `plans.<full-plan-key>` where the key is the plan path with `test-plans/` and `.md` stripped
+#      (e.g. plan file `test-plans/service-requests/create-service-request.md` → key `service-requests/create-service-request`).
+#   2. Folder wildcard — `plans.<folder>/*` matches every plan under that folder.
+#   3. Project default — `default` is used if no plan or folder rule matches.
+#
+# Most-specific rule wins (exact > folder > default).
+
+default:
+  - name: Mishalia Pillay
+    email: Mishalia.pillay@boxfusion.io
+
+plans:
+  # Per-plan mapping — uncomment + edit as you hand off ownership:
+  # service-requests/create-service-request:
+  #   - name: Dev Name
+  #     email: dev@boxfusion.io

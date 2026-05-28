@@ -1,0 +1,7 @@
+{
+  "displayName": "Dispatcher Admin Portal",
+  "appUrl": "https://linux-lesedi-dep-adminportal-test.azurewebsites.net/",
+  "environment": "Test",
+  "sourceRepo": "https://dev.azure.com/boxfusion/PD-Dep/_git/Dep",
+  "description": "Hybrid Markdown + Playwright test reports for the Dispatcher (Lesedi DEP) Admin Portal."
+}

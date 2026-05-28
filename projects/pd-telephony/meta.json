@@ -1,8 +1,0 @@
-{
-  "displayName": "PD Telephony",
-  "environment": "QA",
-  "description": "Test plans and reports live in the pd-telephony repo. This hub reads them via the GitHub API at build time.",
-  "source": {
-    "repo": "https://github.com/Boxfusion/pd-telephony"
-  }
-}

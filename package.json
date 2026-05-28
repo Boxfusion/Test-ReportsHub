@@ -6,10 +6,20 @@
   "scripts": {
     "build": "node scripts/build-all.js",
     "build:landing": "node scripts/build-landing.js",
-    "build:project": "node scripts/build-project-dashboard.js"
+    "build:project": "node scripts/build-project-dashboard.js",
+    "test:plan": "node scripts/run-plan.js",
+    "test:spec": "playwright test"
   },
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.38.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "allure-playwright": "^2.15.1",
+    "typescript": "^5.6.3"
+  }
 }

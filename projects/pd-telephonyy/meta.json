@@ -1,9 +1,0 @@
-{
-  "displayName": "pd-telephonyy",
-  "environment": "test",
-  "appUrl": "https://pd-telephony-adminportal-test.shesha.app/login",
-  "source": {
-    "repo": "https://github.com/Boxfusion/pd-telephony.git",
-    "branch": "main"
-  }
-}
