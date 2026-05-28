@@ -12,24 +12,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/c3c9f236d191291fbda24ee0cc2c09941ebdceb6",
-        "commitHash": "c3c9f236d191291fbda24ee0cc2c09941ebdceb6",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26573321536"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/405ecf9400fee3bd347d03c317e0548faf87178e",
+        "commitHash": "405ecf9400fee3bd347d03c317e0548faf87178e",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26574810985"
       },
       "gitCommit": {
-        "shortHash": "c3c9f23",
-        "hash": "c3c9f236d191291fbda24ee0cc2c09941ebdceb6",
-        "subject": "[feat]- file setup",
-        "body": "[feat]- file setup\n",
+        "shortHash": "405ecf9",
+        "hash": "405ecf9400fee3bd347d03c317e0548faf87178e",
+        "subject": "ci: re-ran dispatcher / test-plans/service-requests/create-service-request.md → failure",
+        "body": "ci: re-ran dispatcher / test-plans/service-requests/create-service-request.md → failure\n",
         "author": {
-          "name": "Mishalia Pillay",
-          "email": "Mishalia.Pillay@boxfusion.io",
-          "time": 1779969396000
+          "name": "Boxfusion CI",
+          "email": "ci@boxfusion",
+          "time": 1779969767000
         },
         "committer": {
-          "name": "Mishalia Pillay",
-          "email": "Mishalia.Pillay@boxfusion.io",
-          "time": 1779969396000
+          "name": "Boxfusion CI",
+          "email": "ci@boxfusion",
+          "time": 1779969769000
         },
         "branch": "main"
       },
@@ -43,24 +43,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/c3c9f236d191291fbda24ee0cc2c09941ebdceb6",
-            "commitHash": "c3c9f236d191291fbda24ee0cc2c09941ebdceb6",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26573321536"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/405ecf9400fee3bd347d03c317e0548faf87178e",
+            "commitHash": "405ecf9400fee3bd347d03c317e0548faf87178e",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26574810985"
           },
           "gitCommit": {
-            "shortHash": "c3c9f23",
-            "hash": "c3c9f236d191291fbda24ee0cc2c09941ebdceb6",
-            "subject": "[feat]- file setup",
-            "body": "[feat]- file setup\n",
+            "shortHash": "405ecf9",
+            "hash": "405ecf9400fee3bd347d03c317e0548faf87178e",
+            "subject": "ci: re-ran dispatcher / test-plans/service-requests/create-service-request.md → failure",
+            "body": "ci: re-ran dispatcher / test-plans/service-requests/create-service-request.md → failure\n",
             "author": {
-              "name": "Mishalia Pillay",
-              "email": "Mishalia.Pillay@boxfusion.io",
-              "time": 1779969396000
+              "name": "Boxfusion CI",
+              "email": "ci@boxfusion",
+              "time": 1779969767000
             },
             "committer": {
-              "name": "Mishalia Pillay",
-              "email": "Mishalia.Pillay@boxfusion.io",
-              "time": 1779969396000
+              "name": "Boxfusion CI",
+              "email": "ci@boxfusion",
+              "time": 1779969769000
             },
             "branch": "main"
           },
@@ -137,12 +137,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 19978,
+                      "duration": 22936,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-28T12:00:32.374Z",
+                      "startTime": "2026-05-28T12:39:10.763Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -171,12 +171,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 19495,
+                      "duration": 18902,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-28T12:00:53.577Z",
+                      "startTime": "2026-05-28T12:39:33.808Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -205,7 +205,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "timedOut",
-                      "duration": 93313,
+                      "duration": 93328,
                       "error": {
                         "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -217,16 +217,16 @@
                         {
                           "location": {
                             "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts",
-                            "column": 106,
-                            "line": 92
+                            "column": 61,
+                            "line": 91
                           },
-                          "message": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')\u001b[22m\n\n\n  90 |     // Channel — Call Centre (Ant Design select)\n  91 |     // TODO[selector]: confirm Channel field exists on Dispatcher portal\n> 92 |     await dialog.locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select').click();\n     |                                                                                                          ^\n  93 |     await page.locator('.ant-select-item-option').filter({ hasText: 'Call Centre' }).first().click();\n  94 |\n  95 |     // Mobile Number\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts:92:106"
+                          "message": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').first().getByRole('combobox', { name: 'Channel' })\u001b[22m\n\n\n  89 |     // STEP 5: SELECT / TYPE each mandatory field on the form with valid values\n  90 |     // Channel — Ant Design combobox; pick first available option\n> 91 |     await dialog.getByRole('combobox', { name: 'Channel' }).click();\n     |                                                             ^\n  92 |     await page.getByRole('option').first().click();\n  93 |\n  94 |     // Mobile Number\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts:91:61"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-28T12:01:13.091Z",
+                      "startTime": "2026-05-28T12:39:52.728Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -267,8 +267,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-28T12:00:31.832Z",
-    "duration": 135050.08000000002,
+    "startTime": "2026-05-28T12:39:10.126Z",
+    "duration": 136437.59,
     "expected": 2,
     "skipped": 0,
     "unexpected": 1,

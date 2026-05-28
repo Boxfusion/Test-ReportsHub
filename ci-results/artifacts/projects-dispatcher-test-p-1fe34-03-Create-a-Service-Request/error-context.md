@@ -18,7 +18,7 @@ Test timeout of 90000ms exceeded.
 ```
 Error: locator.click: Test timeout of 90000ms exceeded.
 Call log:
-  - waiting for getByRole('dialog').first().locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')
+  - waiting for getByRole('dialog').first().getByRole('combobox', { name: 'Channel' })
 
 ```
 
@@ -670,51 +670,49 @@ Call log:
   87  |     await expect(dialog).toBeVisible();
   88  | 
   89  |     // STEP 5: SELECT / TYPE each mandatory field on the form with valid values
-  90  |     // Channel — Call Centre (Ant Design select)
-  91  |     // TODO[selector]: confirm Channel field exists on Dispatcher portal
-> 92  |     await dialog.locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select').click();
-      |                                                                                                          ^ Error: locator.click: Test timeout of 90000ms exceeded.
-  93  |     await page.locator('.ant-select-item-option').filter({ hasText: 'Call Centre' }).first().click();
-  94  | 
-  95  |     // Mobile Number
-  96  |     await dialog.locator('.ant-form-item').filter({ hasText: 'Mobile Number' }).locator('input').fill('0766791145');
-  97  | 
-  98  |     // Email Address
-  99  |     await dialog.locator('.ant-form-item').filter({ hasText: 'Email Address' }).locator('input').fill('automation@boxfusion.io');
-  100 | 
-  101 |     // Category — pick first option
-  102 |     await dialog.locator('.ant-form-item').filter({ hasText: 'Category' }).first().locator('.ant-select').click();
-  103 |     await page.locator('.ant-select-dropdown:visible .ant-select-item-option').first().click();
-  104 | 
-  105 |     // Case type — pick first option
-  106 |     // TODO[selector]: confirm whether Dispatcher uses "Case type" or "Request type"
-  107 |     await dialog.locator('.ant-form-item').filter({ hasText: /Case type|Request type/i }).first().locator('.ant-select').click();
-  108 |     await page.locator('.ant-select-dropdown:visible .ant-select-item-option').first().click();
-  109 | 
-  110 |     // Address — type into "Search places"
-  111 |     await dialog.getByRole('textbox', { name: /Search places/i }).fill('1 Sandton Drive, Sandton');
-  112 | 
-  113 |     // STEP 6: SNAPSHOT — confirm each mandatory field is populated
-  114 |     // SNAPSHOT: mandatory fields populated
-  115 | 
-  116 |     // ASSERT all mandatory fields are populated before submit
-  117 |     await expect(dialog.locator('.ant-form-item').filter({ hasText: 'Mobile Number' }).locator('input')).toHaveValue('0766791145');
-  118 | 
-  119 |     // STEP 7: CLICK the OK button to submit
-  120 |     await dialog.getByRole('button', { name: /^OK$|^Submit$/i }).click();
-  121 | 
-  122 |     // ASSERT OK button was clicked and form was submitted
-  123 |     // (covered by waiting for confirmation below)
-  124 | 
-  125 |     // STEP 8: WAIT for confirmation or service request reference to appear
-  126 |     await page.waitForLoadState('networkidle');
-  127 | 
-  128 |     // STEP 9: SNAPSHOT — confirm success message is visible
-  129 |     // SNAPSHOT: success message visible
-  130 | 
-  131 |     // ASSERT (BLOCKING) success message or service request reference is visible after submit
-  132 |     await expect(dialog).toBeHidden({ timeout: 30_000 });
-  133 |   });
-  134 | });
-  135 | 
+  90  |     // Channel — Ant Design combobox; pick first available option
+> 91  |     await dialog.getByRole('combobox', { name: 'Channel' }).click();
+      |                                                             ^ Error: locator.click: Test timeout of 90000ms exceeded.
+  92  |     await page.getByRole('option').first().click();
+  93  | 
+  94  |     // Mobile Number
+  95  |     await dialog.getByLabel('Mobile Number', { exact: true }).fill('0766791145');
+  96  | 
+  97  |     // Email Address
+  98  |     await dialog.getByLabel('Email Address', { exact: true }).fill('automation@boxfusion.io');
+  99  | 
+  100 |     // Category — pick first option
+  101 |     await dialog.getByRole('combobox', { name: 'Category' }).click();
+  102 |     await page.getByRole('option').first().click();
+  103 | 
+  104 |     // Case type — cascades from Category; wait for it then pick first option
+  105 |     await dialog.getByRole('combobox', { name: /Case type|Request type/i }).click();
+  106 |     await page.getByRole('option').first().click();
+  107 | 
+  108 |     // Address — type into "Search places"
+  109 |     await dialog.getByRole('textbox', { name: /Search places/i }).fill('1 Sandton Drive, Sandton');
+  110 | 
+  111 |     // STEP 6: SNAPSHOT — confirm each mandatory field is populated
+  112 |     // SNAPSHOT: mandatory fields populated
+  113 | 
+  114 |     // ASSERT all mandatory fields are populated before submit
+  115 |     await expect(dialog.getByLabel('Mobile Number', { exact: true })).toHaveValue('0766791145');
+  116 | 
+  117 |     // STEP 7: CLICK the OK button to submit
+  118 |     await dialog.getByRole('button', { name: /^OK$|^Submit$/i }).click();
+  119 | 
+  120 |     // ASSERT OK button was clicked and form was submitted
+  121 |     // (covered by waiting for confirmation below)
+  122 | 
+  123 |     // STEP 8: WAIT for confirmation or service request reference to appear
+  124 |     await page.waitForLoadState('networkidle');
+  125 | 
+  126 |     // STEP 9: SNAPSHOT — confirm success message is visible
+  127 |     // SNAPSHOT: success message visible
+  128 | 
+  129 |     // ASSERT (BLOCKING) success message or service request reference is visible after submit
+  130 |     await expect(dialog).toBeHidden({ timeout: 30_000 });
+  131 |   });
+  132 | });
+  133 | 
 ```

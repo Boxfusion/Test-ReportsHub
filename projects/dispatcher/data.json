@@ -2596,7 +2596,7 @@
           "last": {
             "date": "2026-05-28",
             "result": "FAILED",
-            "duration": "135.1s",
+            "duration": "136.4s",
             "reportHref": "test-reports/2026-05-28/create-service-request.md"
           },
           "runCount": 1,
@@ -2604,7 +2604,7 @@
             {
               "date": "2026-05-28",
               "result": "FAILED",
-              "duration": "135.1s"
+              "duration": "136.4s"
             }
           ],
           "bugs": []
@@ -2620,12 +2620,12 @@
           "plan": "test-plans/service-requests/create-service-request.md",
           "planDisplay": "service-requests/create-service-request.md",
           "result": "FAILED",
-          "duration": "135.1s",
-          "mode": "ci-playwright-script",
+          "duration": "136.4s",
+          "mode": "ci-nightly",
           "reportHref": "test-reports/2026-05-28/create-service-request.md"
         }
       ]
     }
   ],
-  "generated": "2026-05-28T12:02:47.054Z"
+  "generated": "2026-05-28T12:41:26.731Z"
 }

@@ -1,11 +1,11 @@
 # Report: create-service-request
 
-**Date:** 2026-05-28T12:02Z
+**Date:** 2026-05-28T12:32Z
 **Plan:** test-plans/service-requests/create-service-request.md
 **Spec:** projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts
-**Execution Mode:** ci-playwright-script
+**Execution Mode:** ci-nightly
 **Result:** FAILED
-**Duration:** 135.1s
-**Run:** https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26573321536
+**Duration:** 136.4s
+**Run:** https://github.com/Boxfusion/Test-ReportsHub/actions/runs/26574810985
 
-_Triggered via the re-run button on the project dashboard._
+_Triggered by the nightly schedule._

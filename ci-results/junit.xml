@@ -1,10 +1,10 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="1" time="135.05008">
-<testsuite name="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" timestamp="2026-05-28T12:00:31.912Z" hostname="" tests="3" failures="0" skipped="0" time="132.786" errors="1">
-<testcase name="Create Service Request › TC-01: Login as Admin" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="19.978">
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="1" time="136.43759">
+<testsuite name="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" timestamp="2026-05-28T12:39:10.270Z" hostname="" tests="3" failures="0" skipped="0" time="135.166" errors="1">
+<testcase name="Create Service Request › TC-01: Login as Admin" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="22.936">
 </testcase>
-<testcase name="Create Service Request › TC-02: Navigate to Service Requests" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="19.495">
+<testcase name="Create Service Request › TC-02: Navigate to Service Requests" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="18.902">
 </testcase>
-<testcase name="Create Service Request › TC-03: Create a Service Request" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="93.313">
+<testcase name="Create Service Request › TC-03: Create a Service Request" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="93.328">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/test-failed-1.png]]
@@ -23,17 +23,17 @@
 
     Error: locator.click: Test timeout of 90000ms exceeded.
     Call log:
-      - waiting for getByRole('dialog').first().locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select')
+      - waiting for getByRole('dialog').first().getByRole('combobox', { name: 'Channel' })
 
 
-      90 |     // Channel — Call Centre (Ant Design select)
-      91 |     // TODO[selector]: confirm Channel field exists on Dispatcher portal
-    > 92 |     await dialog.locator('.ant-form-item').filter({ hasText: 'Channel' }).first().locator('.ant-select').click();
-         |                                                                                                          ^
-      93 |     await page.locator('.ant-select-item-option').filter({ hasText: 'Call Centre' }).first().click();
-      94 |
-      95 |     // Mobile Number
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts:92:106
+      89 |     // STEP 5: SELECT / TYPE each mandatory field on the form with valid values
+      90 |     // Channel — Ant Design combobox; pick first available option
+    > 91 |     await dialog.getByRole('combobox', { name: 'Channel' }).click();
+         |                                                             ^
+      92 |     await page.getByRole('option').first().click();
+      93 |
+      94 |     // Mobile Number
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts:91:61
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/test-failed-1.png

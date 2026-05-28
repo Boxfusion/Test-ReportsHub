@@ -2701,7 +2701,7 @@
           "last": {
             "date": "2026-05-28",
             "result": "FAILED",
-            "duration": "123.3s",
+            "duration": "118.7s",
             "reportHref": "test-reports/2026-05-28/create-customer.md"
           },
           "runCount": 2,
@@ -2709,7 +2709,7 @@
             {
               "date": "2026-05-28",
               "result": "FAILED",
-              "duration": "123.3s"
+              "duration": "118.7s"
             },
             {
               "date": "2026-05-21",
@@ -2738,7 +2738,7 @@
           "last": {
             "date": "2026-05-28",
             "result": "FAILED",
-            "duration": "287.9s",
+            "duration": "288.5s",
             "reportHref": "test-reports/2026-05-28/create-service-request-v2.md"
           },
           "runCount": 7,
@@ -2746,7 +2746,7 @@
             {
               "date": "2026-05-28",
               "result": "FAILED",
-              "duration": "287.9s"
+              "duration": "288.5s"
             },
             {
               "date": "2026-05-27",
@@ -2815,7 +2815,7 @@
           "plan": "test-plans/customers/create-customer.md",
           "planDisplay": "customers/create-customer.md",
           "result": "FAILED",
-          "duration": "123.3s",
+          "duration": "118.7s",
           "mode": "ci-nightly",
           "reportHref": "test-reports/2026-05-28/create-customer.md"
         },
@@ -2823,7 +2823,7 @@
           "plan": "test-plans/service-requests/create-service-request-v2.md",
           "planDisplay": "service-requests/create-service-request-v2.md",
           "result": "FAILED",
-          "duration": "287.9s",
+          "duration": "288.5s",
           "mode": "ci-nightly",
           "reportHref": "test-reports/2026-05-28/create-service-request-v2.md"
         }
@@ -2942,5 +2942,5 @@
       ]
     }
   ],
-  "generated": "2026-05-28T12:02:47.021Z"
+  "generated": "2026-05-28T12:41:26.694Z"
 }
