@@ -1,0 +1,140 @@
+name: Nightly tests
+run-name: Nightly run · ${{ github.event_name }}
+
+# Runs every local spec under projects/*/test-plans/**/*.spec.ts, writes a
+# per-plan markdown report into projects/<name>/test-reports/<YYYY-MM-DD>/,
+# rebuilds the hub dashboards and commits everything back in a single push.
+on:
+  schedule:
+    # TEMP: 10:20 UTC = 12:20 SAST — testing the schedule wires up.
+    # Revert to '0 2 * * *' (04:00 SAST nightly) once verified.
+    # Times are always UTC; scheduled workflows only fire on the default branch.
+    - cron: '20 10 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright
+        run: |
+          npm init -y > /dev/null
+          npm install --no-save --no-package-lock @playwright/test@^1.49
+          npx playwright install chromium --with-deps
+
+      - name: Write CI Playwright config
+        run: |
+          cat > playwright.config.ci.ts <<'EOF'
+          import { defineConfig } from '@playwright/test';
+          export default defineConfig({
+            testDir: '.',
+            workers: 1,
+            timeout: 90_000,
+            reporter: [
+              ['list'],
+              ['json',  { outputFile: 'ci-results/results.json' }],
+              ['junit', { outputFile: 'ci-results/junit.xml' }],
+            ],
+            use: {
+              screenshot: 'only-on-failure',
+              trace: 'retain-on-failure',
+              video: 'retain-on-failure',
+            },
+            outputDir: 'ci-results/artifacts',
+          });
+          EOF
+
+      - name: Run every local spec
+        run: |
+          set +e
+          TODAY=$(date -u +%Y-%m-%d)
+          STAMP=$(date -u +%Y-%m-%dT%H:%MZ)
+          PASS=0
+          FAIL=0
+          ROWS=""
+
+          mapfile -t SPECS < <(find projects -name '*.spec.ts' -path '*/test-plans/*' | sort)
+          if [ ${#SPECS[@]} -eq 0 ]; then
+            echo "::warning::No specs found under projects/*/test-plans/. Nothing to run."
+            exit 0
+          fi
+
+          for SPEC in "${SPECS[@]}"; do
+            REL=${SPEC#projects/}
+            PROJECT=${REL%%/*}
+            REST=${REL#$PROJECT/}
+            PLAN=${REST%.spec.ts}.md
+            PLAN_BASE=$(basename "$PLAN" .md)
+            PROJ_DIR="projects/$PROJECT"
+
+            echo "::group::$PROJECT / $PLAN"
+            rm -rf ci-results
+            npx playwright test "$SPEC" --config=playwright.config.ci.ts
+            RC=$?
+            if [ $RC -eq 0 ]; then
+              RESULT=PASSED
+              PASS=$((PASS+1))
+            else
+              RESULT=FAILED
+              FAIL=$((FAIL+1))
+            fi
+
+            DURATION=""
+            if [ -f ci-results/results.json ]; then
+              DURATION=$(node -e "const r=require('./ci-results/results.json'); const d=Math.round((r.stats?.duration||0)/100)/10; console.log(d+'s');" 2>/dev/null || echo '')
+            fi
+
+            mkdir -p "$PROJ_DIR/test-reports/$TODAY"
+            {
+              echo "# Report: $PLAN_BASE"
+              echo ""
+              echo "**Date:** $STAMP"
+              echo "**Plan:** $PLAN"
+              echo "**Spec:** $SPEC"
+              echo "**Execution Mode:** ci-nightly"
+              echo "**Result:** $RESULT"
+              echo "**Duration:** ${DURATION:-unknown}"
+              echo "**Run:** https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo ""
+              echo "_Triggered by the nightly schedule._"
+            } > "$PROJ_DIR/test-reports/$TODAY/$PLAN_BASE.md"
+
+            ROWS="${ROWS}- ${RESULT} · \`${PROJECT}\` / \`${PLAN}\` (${DURATION:-?})\n"
+            echo "::endgroup::"
+          done
+
+          {
+            echo "## Nightly summary — $TODAY"
+            echo ""
+            echo "**Passed:** $PASS · **Failed:** $FAIL · **Total:** ${#SPECS[@]}"
+            echo ""
+            echo -e "$ROWS"
+          } >> $GITHUB_STEP_SUMMARY
+
+      - name: Rebuild hub dashboards
+        if: always()
+        run: node scripts/build-all.js
+
+      - name: Commit and push
+        if: always()
+        run: |
+          git config user.email "ci@boxfusion"
+          git config user.name "Boxfusion CI"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "ci: nightly run $(date -u +%Y-%m-%d)"
+            git pull --rebase --autostash || true
+            git push
+          fi
