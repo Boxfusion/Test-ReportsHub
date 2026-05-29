@@ -1,0 +1,128 @@
+- generic [ref=e1]:
+  - generic [ref=e8]:
+    - complementary [ref=e9]:
+      - menu [ref=e13]:
+        - menuitem "calendar Leave Management" [ref=e14] [cursor=pointer]:
+          - img "calendar" [ref=e15]:
+            - img [ref=e16]
+          - generic [ref=e18]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e19] [cursor=pointer]:
+          - img "calendar" [ref=e20]:
+            - img [ref=e21]
+          - generic [ref=e23]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [expanded] [ref=e24] [cursor=pointer]:
+          - img "book" [ref=e25]:
+            - img [ref=e26]
+          - generic [ref=e28]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e29] [cursor=pointer]:
+          - img "bank" [ref=e30]:
+            - img [ref=e31]
+          - generic [ref=e33]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e34] [cursor=pointer]:
+          - img "apartment" [ref=e35]:
+            - img [ref=e36]
+          - generic [ref=e38]: Workflows
+        - menuitem "tool Administration" [ref=e39] [cursor=pointer]:
+          - img "tool" [ref=e40]:
+            - img [ref=e41]
+          - generic [ref=e43]: Administration
+        - menuitem "setting Configurations" [ref=e44] [cursor=pointer]:
+          - img "setting" [ref=e45]:
+            - img [ref=e46]
+          - generic [ref=e48]: Configurations
+      - img "menu-unfold" [ref=e51] [cursor=pointer]:
+        - img [ref=e52]
+    - generic [ref=e54]:
+      - banner [ref=e55]:
+        - generic [ref=e61]:
+          - generic [ref=e63]:
+            - button "edit" [ref=e64] [cursor=pointer]:
+              - img "edit" [ref=e65]:
+                - img [ref=e66]
+            - paragraph [ref=e68] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e69]:
+              - generic [ref=e70]: Live
+              - img "close" [ref=e71] [cursor=pointer]:
+                - img [ref=e72]
+          - generic [ref=e82]:
+            - link [ref=e88] [cursor=pointer]:
+              - /url: /
+              - img [ref=e98]
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - generic [ref=e103]:
+                  - generic [ref=e104]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e106] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e110] [cursor=pointer]:
+                  - img "block" [ref=e111]:
+                    - img [ref=e112]
+                  - generic [ref=e114]: Live
+              - generic [ref=e116]:
+                - generic [ref=e117] [cursor=pointer]:
+                  - text: System Administrator
+                  - img "down" [ref=e118]:
+                    - img [ref=e119]
+                - img "user" [ref=e122]:
+                  - img [ref=e123]
+      - main [ref=e125]:
+        - generic [ref=e131]:
+          - generic [ref=e133]:
+            - button "edit" [ref=e134] [cursor=pointer]:
+              - img "edit" [ref=e135]:
+                - img [ref=e136]
+            - paragraph [ref=e138] [cursor=pointer]: SaGov.Pmds/sagov-cycle-views v32
+            - generic [ref=e139]:
+              - generic [ref=e140]: Live
+              - img "close" [ref=e141] [cursor=pointer]:
+                - img [ref=e142]
+          - generic [ref=e152]:
+            - generic [ref=e160]: Financial Years
+            - generic [ref=e168]:
+              - generic [ref=e170]:
+                - button "edit" [ref=e171] [cursor=pointer]:
+                  - img "edit" [ref=e172]:
+                    - img [ref=e173]
+                - paragraph [ref=e175] [cursor=pointer]: SaGov.Pmds/sagov-cycle-view-items v36
+                - generic [ref=e176]:
+                  - generic [ref=e177]: Live
+                  - img "close" [ref=e178] [cursor=pointer]:
+                    - img [ref=e179]
+              - generic [ref=e194]:
+                - generic [ref=e196]: FY2026/27
+                - generic [ref=e205]:
+                  - link "Deputy Director General Performance Agreement" [ref=e206] [cursor=pointer]:
+                    - /url: /dynamic/SaGov.Pmds/sagov-cycle-details-view?id=bd84d9b2-a30a-4605-aac3-19bb41f8c374&name=Deputy Director General Performance Agreement&fy=FY2026/27
+                  - link "SL 1-12 Performance Agreement" [ref=e207] [cursor=pointer]:
+                    - /url: /dynamic/SaGov.Pmds/sagov-cycle-details-view?id=7cf9054b-8c69-4313-ae5c-8039bf495c04&name=SL 1-12 Performance Agreement&fy=FY2026/27
+                  - link "Chief Director/Director Performance Agreement" [ref=e208] [cursor=pointer]:
+                    - /url: /dynamic/SaGov.Pmds/sagov-cycle-details-view?id=5f250b11-b86c-4b5e-b239-a9246fc525d3&name=Chief Director/Director Performance Agreement&fy=FY2026/27
+  - alert [ref=e6]
+  - menu [ref=e221]:
+    - menuitem "audit Financial Years" [ref=e222] [cursor=pointer]:
+      - img "audit" [ref=e223]:
+        - img [ref=e224]
+      - link "Financial Years" [ref=e227]:
+        - /url: /dynamic/SaGov.Pmds/sagov-cycle-views
+    - menuitem "align-center My Pmds" [ref=e228] [cursor=pointer]:
+      - img "align-center" [ref=e229]:
+        - img [ref=e230]
+      - link "My Pmds" [ref=e233]:
+        - /url: /dynamic/SaGov.Pmds/sagov-my-financial-years
+    - menuitem "border-outer Dashboards" [ref=e234] [cursor=pointer]:
+      - img "border-outer" [ref=e235]:
+        - img [ref=e236]
+      - text: Dashboards
+    - menuitem "menu-fold PERSAL Integration" [expanded] [active] [ref=e238] [cursor=pointer]:
+      - img "menu-fold" [ref=e239]:
+        - img [ref=e240]
+      - text: PERSAL Integration
+  - menu [ref=e243]:
+    - menuitem "PERSAL Input File Export" [ref=e244] [cursor=pointer]:
+      - link "PERSAL Input File Export" [ref=e246]:
+        - /url: /dynamic/SaGov.Pmds/sagov-persal-input-file-import
+    - menuitem "PERSAL Output File Import" [ref=e247] [cursor=pointer]:
+      - link "PERSAL Output File Import" [ref=e249]:
+        - /url: /dynamic/SaGov.Pmds/pmds-outtput-file-import
+    - menuitem "PERSAL Report File Import" [ref=e250] [cursor=pointer]:
+      - link "PERSAL Report File Import" [ref=e252]:
+        - /url: /dynamic/SaGov.Pmds/pmds-report-file-import

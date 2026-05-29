@@ -1,0 +1,137 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e8]:
+    - complementary [ref=e9]:
+      - menu [ref=e13]:
+        - menuitem "calendar Leave Management" [ref=e14] [cursor=pointer]:
+          - img "calendar" [ref=e15]:
+            - img [ref=e16]
+          - generic [ref=e18]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e19] [cursor=pointer]:
+          - img "calendar" [ref=e20]:
+            - img [ref=e21]
+          - generic [ref=e23]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [expanded] [ref=e24] [cursor=pointer]:
+          - img "book" [ref=e25]:
+            - img [ref=e26]
+          - generic [ref=e28]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e29] [cursor=pointer]:
+          - img "bank" [ref=e30]:
+            - img [ref=e31]
+          - generic [ref=e33]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e34] [cursor=pointer]:
+          - img "apartment" [ref=e35]:
+            - img [ref=e36]
+          - generic [ref=e38]: Workflows
+        - menuitem "tool Administration" [ref=e39] [cursor=pointer]:
+          - img "tool" [ref=e40]:
+            - img [ref=e41]
+          - generic [ref=e43]: Administration
+        - menuitem "setting Configurations" [ref=e44] [cursor=pointer]:
+          - img "setting" [ref=e45]:
+            - img [ref=e46]
+          - generic [ref=e48]: Configurations
+      - img "menu-unfold" [ref=e51] [cursor=pointer]:
+        - img [ref=e52]
+    - generic [ref=e54]:
+      - banner [ref=e55]:
+        - generic [ref=e61]:
+          - generic [ref=e63]:
+            - button "edit" [ref=e64] [cursor=pointer]:
+              - img "edit" [ref=e65]:
+                - img [ref=e66]
+            - paragraph [ref=e68] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e69]:
+              - generic [ref=e70]: Live
+              - img "close" [ref=e71] [cursor=pointer]:
+                - img [ref=e72]
+          - generic [ref=e82]:
+            - link [ref=e88] [cursor=pointer]:
+              - /url: /
+              - img [ref=e98]
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - generic [ref=e103]:
+                  - generic [ref=e104]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e106] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e110] [cursor=pointer]:
+                  - img "block" [ref=e111]:
+                    - img [ref=e112]
+                  - generic [ref=e114]: Live
+              - generic [ref=e116]:
+                - generic [ref=e117] [cursor=pointer]:
+                  - text: System Administrator
+                  - img "down" [ref=e118]:
+                    - img [ref=e119]
+                - img "user" [ref=e122]:
+                  - img [ref=e123]
+      - main [ref=e125]:
+        - generic [ref=e131]:
+          - generic [ref=e133]:
+            - button "edit" [ref=e134] [cursor=pointer]:
+              - img "edit" [ref=e135]:
+                - img [ref=e136]
+            - paragraph [ref=e138] [cursor=pointer]: SaGov.Pmds/sagov-persal-input-file-import v5
+            - generic [ref=e139]:
+              - generic [ref=e140]: Live
+              - img "close" [ref=e141] [cursor=pointer]:
+                - img [ref=e142]
+          - generic [ref=e159]:
+            - generic [ref=e161]:
+              - button "Generate new file" [ref=e167] [cursor=pointer]:
+                - generic [ref=e168]: Generate new file
+              - button "Generate and send to FTP" [ref=e174] [cursor=pointer]:
+                - generic [ref=e175]: Generate and send to FTP
+              - button "redo Resubmit unprocessed transactions" [ref=e181] [cursor=pointer]:
+                - img "redo" [ref=e183]:
+                  - img [ref=e184]
+                - generic [ref=e186]: Resubmit unprocessed transactions
+            - generic [ref=e188]:
+              - 'heading "PMDS: PERSAL Input file export" [level=4] [ref=e194]'
+              - generic [ref=e197]:
+                - tablist [ref=e198]:
+                  - generic [ref=e200]:
+                    - tab "import Import Progress" [selected] [ref=e202] [cursor=pointer]:
+                      - img "import" [ref=e203]:
+                        - img [ref=e204]
+                      - text: Import Progress
+                    - tab "file-text Input Files" [ref=e207] [cursor=pointer]:
+                      - img "file-text" [ref=e208]:
+                        - img [ref=e209]
+                      - text: Input Files
+                    - tab "history History" [ref=e212] [cursor=pointer]:
+                      - img "history" [ref=e213]:
+                        - img [ref=e214]
+                      - text: History
+                - tabpanel "import Import Progress" [ref=e218]:
+                  - alert [ref=e221]:
+                    - generic [ref=e224]: "Ready to send input file to PERSAL? Click the `Generate and send to FTP` button above to begin the process."
+  - alert [ref=e6]
+  - menu [ref=e226]:
+    - menuitem "audit Financial Years" [ref=e227] [cursor=pointer]:
+      - img "audit" [ref=e228]:
+        - img [ref=e229]
+      - link "Financial Years" [ref=e232]:
+        - /url: /dynamic/SaGov.Pmds/sagov-cycle-views
+    - menuitem "align-center My Pmds" [ref=e233] [cursor=pointer]:
+      - img "align-center" [ref=e234]:
+        - img [ref=e235]
+      - link "My Pmds" [ref=e238]:
+        - /url: /dynamic/SaGov.Pmds/sagov-my-financial-years
+    - menuitem "border-outer Dashboards" [ref=e239] [cursor=pointer]:
+      - img "border-outer" [ref=e240]:
+        - img [ref=e241]
+      - text: Dashboards
+    - menuitem "menu-fold PERSAL Integration" [expanded] [ref=e243] [cursor=pointer]:
+      - img "menu-fold" [ref=e244]:
+        - img [ref=e245]
+      - text: PERSAL Integration
+  - menu [ref=e248]:
+    - menuitem "PERSAL Input File Export" [ref=e249] [cursor=pointer]:
+      - link "PERSAL Input File Export" [ref=e251]:
+        - /url: /dynamic/SaGov.Pmds/sagov-persal-input-file-import
+    - menuitem "PERSAL Output File Import" [ref=e252] [cursor=pointer]:
+      - link "PERSAL Output File Import" [ref=e254]:
+        - /url: /dynamic/SaGov.Pmds/pmds-outtput-file-import
+    - menuitem "PERSAL Report File Import" [ref=e255] [cursor=pointer]:
+      - link "PERSAL Report File Import" [ref=e257]:
+        - /url: /dynamic/SaGov.Pmds/pmds-report-file-import

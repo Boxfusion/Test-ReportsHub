@@ -1,0 +1,158 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - menu [ref=e9]:
+        - menuitem "calendar Leave Management" [ref=e10] [cursor=pointer]:
+          - img "calendar" [ref=e11]:
+            - img [ref=e12]
+          - generic [ref=e14]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e15] [cursor=pointer]:
+          - img "calendar" [ref=e16]:
+            - img [ref=e17]
+          - generic [ref=e19]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e20] [cursor=pointer]:
+          - img "book" [ref=e21]:
+            - img [ref=e22]
+          - generic [ref=e24]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e25] [cursor=pointer]:
+          - img "bank" [ref=e26]:
+            - img [ref=e27]
+          - generic [ref=e29]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e30] [cursor=pointer]:
+          - img "apartment" [ref=e31]:
+            - img [ref=e32]
+          - generic [ref=e34]: Workflows
+        - menuitem "tool Administration" [ref=e35] [cursor=pointer]:
+          - img "tool" [ref=e36]:
+            - img [ref=e37]
+          - generic [ref=e39]: Administration
+        - menuitem "setting Configurations" [ref=e40] [cursor=pointer]:
+          - img "setting" [ref=e41]:
+            - img [ref=e42]
+          - generic [ref=e44]: Configurations
+      - img "menu-unfold" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e57]:
+          - generic [ref=e59]:
+            - button "edit" [ref=e60] [cursor=pointer]:
+              - img "edit" [ref=e61]:
+                - img [ref=e62]
+            - paragraph [ref=e64] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e65]:
+              - generic [ref=e66]: Live
+              - img "close" [ref=e67] [cursor=pointer]:
+                - img [ref=e68]
+          - generic [ref=e78]:
+            - link [ref=e84] [cursor=pointer]:
+              - /url: /
+              - img [ref=e94]
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e99]:
+                  - generic [ref=e100]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e102] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e106] [cursor=pointer]:
+                  - img "block" [ref=e107]:
+                    - img [ref=e108]
+                  - generic [ref=e110]: Live
+              - generic [ref=e112]:
+                - generic [ref=e113] [cursor=pointer]:
+                  - text: System Administrator
+                  - img "down" [ref=e114]:
+                    - img [ref=e115]
+                - img "user" [ref=e118]:
+                  - img [ref=e119]
+      - main [ref=e121]:
+        - generic [ref=e127]:
+          - generic [ref=e129]:
+            - button "edit" [ref=e130] [cursor=pointer]:
+              - img "edit" [ref=e131]:
+                - img [ref=e132]
+            - paragraph [ref=e134] [cursor=pointer]: SaGov.Pmds/sagov-cycle-details-view v37
+            - generic [ref=e135]:
+              - generic [ref=e136]: Live
+              - img "close" [ref=e137] [cursor=pointer]:
+                - img [ref=e138]
+          - generic [ref=e150]:
+            - separator [ref=e151]
+            - generic [ref=e159]: SL 1-12 Performance Agreement for FY2026/27
+            - generic [ref=e160]:
+              - tablist [ref=e161]:
+                - generic [ref=e163]:
+                  - tab "Manage Process" [selected] [ref=e165] [cursor=pointer]
+                  - tab "Employee List" [ref=e167] [cursor=pointer]
+              - tabpanel "Manage Process" [ref=e170]:
+                - generic [ref=e172]:
+                  - alert [ref=e173]:
+                    - img "info-circle" [ref=e174]:
+                      - img [ref=e175]
+                    - generic [ref=e179]: "Hint: You can keep track of and manage the PMDS process using the dashboard below. To initiate the Performance management Process, click on the 'Open Process' link below"
+                  - generic [ref=e187]:
+                    - generic [ref=e189]:
+                      - button "edit" [ref=e190] [cursor=pointer]:
+                        - img "edit" [ref=e191]:
+                          - img [ref=e192]
+                      - paragraph [ref=e194] [cursor=pointer]: SaGov.Pmds/sagov-cycle-details-item v35
+                      - generic [ref=e195]:
+                        - generic [ref=e196]: Live
+                        - img "close" [ref=e197] [cursor=pointer]:
+                          - img [ref=e198]
+                    - generic [ref=e204]:
+                      - generic [ref=e205]:
+                        - generic [ref=e214]:
+                          - generic [ref=e217]:
+                            - generic [ref=e221]:
+                              - generic [ref=e227]: Contracting
+                              - generic [ref=e233]: In Progress
+                            - button "Close process" [ref=e241] [cursor=pointer]:
+                              - generic [ref=e242]: Close process
+                          - generic [ref=e247]:
+                            - generic [ref=e253]: "31"
+                            - generic [ref=e259]: Total
+                          - generic [ref=e266]:
+                            - generic [ref=e272]: "0"
+                            - generic [ref=e278]: Not Started
+                          - generic [ref=e285]:
+                            - generic [ref=e291]: "31"
+                            - generic [ref=e297]: In progress
+                          - generic [ref=e304]:
+                            - generic [ref=e310]: "0"
+                            - generic [ref=e316]: Completed
+                        - separator [ref=e317]
+                      - generic [ref=e318]:
+                        - generic [ref=e327]:
+                          - generic [ref=e334]:
+                            - generic [ref=e340]: Mid Year Assessment
+                            - generic [ref=e346]: Not Started
+                          - generic [ref=e352]:
+                            - generic [ref=e358]: "31"
+                            - generic [ref=e364]: Total
+                          - generic [ref=e371]:
+                            - generic [ref=e377]: "31"
+                            - generic [ref=e383]: Not Started
+                          - generic [ref=e390]:
+                            - generic [ref=e396]: "0"
+                            - generic [ref=e402]: In progress
+                          - generic [ref=e409]:
+                            - generic [ref=e415]: "0"
+                            - generic [ref=e421]: Completed
+                        - separator [ref=e422]
+                      - generic [ref=e432]:
+                        - generic [ref=e439]:
+                          - generic [ref=e445]: Annual Assessment
+                          - generic [ref=e451]: Not Started
+                        - generic [ref=e457]:
+                          - generic [ref=e463]: "31"
+                          - generic [ref=e469]: Total
+                        - generic [ref=e476]:
+                          - generic [ref=e482]: "31"
+                          - generic [ref=e488]: Not Started
+                        - generic [ref=e495]:
+                          - generic [ref=e501]: "0"
+                          - generic [ref=e507]: In progress
+                        - generic [ref=e514]:
+                          - generic [ref=e520]: "0"
+                          - generic [ref=e526]: Completed
+  - alert [ref=e527]
