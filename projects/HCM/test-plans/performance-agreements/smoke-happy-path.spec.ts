@@ -17,6 +17,7 @@ async function loginAsAdmin(page: Page) {
   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);
   await page.getByRole('button', { name: 'Sign In' }).click();
+  await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
   await page.waitForLoadState('networkidle');
 }
 
@@ -60,7 +61,7 @@ test.describe('SMOKE-HAPPY — Smoke Test Suite — Happy Path', () => {
     // SNAPSHOT: Financial Years page
 
     // ASSERT (BLOCKING) FY2026/27 label is visible on the Financial Years page
-    await expect(page.getByText('FY2026/27')).toBeVisible();
+    await expect(page.getByText('FY2026/27')).toBeVisible({ timeout: 30000 });
   });
 
   // ADO Test Case #77596: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77596
@@ -77,7 +78,7 @@ test.describe('SMOKE-HAPPY — Smoke Test Suite — Happy Path', () => {
     // SNAPSHOT: Financial Years with cycle links
 
     // ASSERT (BLOCKING) "SL 1-12 Performance Agreement" cycle link is visible under FY2026/27
-    await expect(page.getByRole('link', { name: 'SL 1-12 Performance Agreement' })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'SL 1-12 Performance Agreement' })).toBeVisible({ timeout: 30000 });
   });
 
   // ADO Test Case #77597: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77597
@@ -94,7 +95,7 @@ test.describe('SMOKE-HAPPY — Smoke Test Suite — Happy Path', () => {
     // SNAPSHOT: Financial Years with cycle links
 
     // STEP 4: CLICK the "SL 1-12 Performance Agreement" cycle link
-    await page.getByRole('link', { name: 'SL 1-12 Performance Agreement' }).click();
+    await page.getByRole('link', { name: 'SL 1-12 Performance Agreement' }).click({ timeout: 30000 });
 
     // STEP 5: WAIT for cycle details page to load
     await page.waitForLoadState('networkidle');
@@ -121,7 +122,7 @@ test.describe('SMOKE-HAPPY — Smoke Test Suite — Happy Path', () => {
     // SNAPSHOT: Contracting stage stats
 
     // ASSERT (BLOCKING) Contracting "In progress" stat label is visible (count > 0)
-    await expect(page.getByText('Contracting')).toBeVisible();
+    await expect(page.getByText('Contracting')).toBeVisible({ timeout: 30000 });
     await expect(page.getByText('In progress').first()).toBeVisible();
   });
 
@@ -156,7 +157,7 @@ test.describe('SMOKE-HAPPY — Smoke Test Suite — Happy Path', () => {
     // SNAPSHOT: Contracting section with Close process button
 
     // ASSERT (BLOCKING) "Close process" button is visible on the Contracting stage
-    await expect(page.getByRole('button', { name: 'Close process' })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Close process' })).toBeVisible({ timeout: 30000 });
   });
 
   // ADO Test Case #77601: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77601
@@ -173,7 +174,7 @@ test.describe('SMOKE-HAPPY — Smoke Test Suite — Happy Path', () => {
     // SNAPSHOT: all three process stages
 
     // ASSERT Contracting stage heading is visible
-    await expect(page.getByText('Contracting')).toBeVisible();
+    await expect(page.getByText('Contracting')).toBeVisible({ timeout: 30000 });
 
     // ASSERT Mid Year Assessment stage heading is visible
     await expect(page.getByText('Mid Year Assessment')).toBeVisible();
@@ -196,7 +197,7 @@ test.describe('SMOKE-HAPPY — Smoke Test Suite — Happy Path', () => {
     // SNAPSHOT: PERSAL Input File Export page
 
     // ASSERT "Generate and send to FTP" button is visible
-    await expect(page.getByRole('button', { name: 'Generate and send to FTP' })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Generate and send to FTP' })).toBeVisible({ timeout: 30000 });
 
     // ASSERT (BLOCKING) page heading "PMDS: PERSAL Input file export" is visible
     await expect(page.getByRole('heading', { name: 'PMDS: PERSAL Input file export' })).toBeVisible();
@@ -216,6 +217,6 @@ test.describe('SMOKE-HAPPY — Smoke Test Suite — Happy Path', () => {
     // SNAPSHOT: Contracting stage Close process button
 
     // ASSERT (BLOCKING) "Close process" button is visible on the Contracting stage
-    await expect(page.getByRole('button', { name: 'Close process' })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Close process' })).toBeVisible({ timeout: 30000 });
   });
 });

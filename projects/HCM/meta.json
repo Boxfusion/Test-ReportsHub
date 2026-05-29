@@ -1,0 +1,7 @@
+{
+  "displayName": "HCM Admin Portal",
+  "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
+  "environment": "QA",
+  "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+  "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal."
+}

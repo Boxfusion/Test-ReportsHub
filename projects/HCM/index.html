@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>HCM · Test Reports Hub</title>
+<title>HCM Admin Portal · Test Reports Hub</title>
 <link rel="stylesheet" href="../../assets/dashboard.css" />
 </head>
 <body>
@@ -20,22 +20,37 @@
   </header>
 
   <main class="container">
-    <div class="crumbs"><a href="../../index.html">Projects</a> / <span>HCM</span></div>
+    <div class="crumbs"><a href="../../index.html">Projects</a> / <span>HCM Admin Portal</span></div>
 
     <div class="project-header">
       <div>
         <div class="title-row">
-          <h1>HCM</h1>
-          
+          <h1>HCM Admin Portal</h1>
+          <span class="env-chip">QA</span>
         </div>
-        <div class="subtitle">&nbsp;</div>
+        <div class="subtitle"><a href="https://pd-hcm-adminportal-qa.shesha.app/" target="_blank" rel="noreferrer">https://pd-hcm-adminportal-qa.shesha.app/</a></div>
       </div>
       <div class="actions">
-        <span class="btn disabled" aria-disabled="true">Allure report not generated<span class="meta">run a test to produce it</span></span>
+        <button type="button" id="allure-toggle" class="btn btn-primary">Open Allure visualisation<span class="meta">run-by-run breakdown</span></button>
       </div>
     </div>
 
     
+    <div id="allure-panel" class="allure-modal" aria-hidden="true" role="dialog" aria-label="Allure visualisation">
+      <div class="dialog">
+        <div class="head">
+          <span class="title">Allure visualisation</span>
+          <span class="right">
+            <a class="popout" href="allure-report/index.html" target="_blank" rel="noopener">open in new tab ↗</a>
+            <button type="button" class="close" id="allure-close">Close (Esc)</button>
+          </span>
+        </div>
+        <div class="allure-frame-wrap">
+          <div class="loader" id="allure-loader">Loading Allure report (3MB)…</div>
+          <iframe id="allure-frame" title="Allure report" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
 
     <section class="kpis" aria-label="Overview">
       <div class="kpi"><span class="label">Test flows</span><span class="num">1</span><span class="meta">tracked plans</span></div>
@@ -116,9 +131,9 @@
         </td>
         <td><span class="pill pill-pass">PASSED</span></td>
         <td class="nowrap">2026-05-29</td>
-        <td class="nowrap">7.7s</td>
+        <td class="nowrap">9.2s</td>
         <td class="num">1</td>
-        <td><span class="sparkline"><span class="spark spark-pass" title="2026-05-29 — PASSED (7.7s)"></span></span></td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-05-29 — PASSED (9.2s)"></span></span></td>
         <td class="links"><a href="test-plans/performance-agreements/smoke-happy-path.md" title="Open plan">plan</a> · <a href="test-reports/2026-05-29/smoke-happy-path.md">latest report</a></td>
         <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="HCM" data-plan="test-plans/performance-agreements/smoke-happy-path.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
       </tr></tbody>
@@ -135,12 +150,12 @@
       <li class="timeline-run">
         <span class="pill pill-pass">PASSED</span>
         <a class="run-link" href="test-reports/2026-05-29/smoke-happy-path.md">performance-agreements/smoke-happy-path.md</a>
-        <span class="muted">7.7s · playwright-script</span>
+        <span class="muted">9.2s · playwright-script</span>
       </li></ul>
       </section>
 
     <footer class="page-footer">
-      <span>Generated 2026-05-29 11:34 UTC · project <code>HCM</code></span>
+      <span>Generated 2026-05-29 12:14 UTC · project <code>HCM</code></span>
       <span><code>node scripts/build-project-dashboard.js --project=HCM</code></span>
     </footer>
   </main>
@@ -168,7 +183,38 @@
     })();
   </script>
 
-  
+  <script>
+    (function () {
+      var btn = document.getElementById('allure-toggle');
+      var panel = document.getElementById('allure-panel');
+      var frame = document.getElementById('allure-frame');
+      var loader = document.getElementById('allure-loader');
+      var closeBtn = document.getElementById('allure-close');
+      if (!btn || !panel || !frame) return;
+      var loaded = false;
+      function open() {
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        if (!loaded) {
+          frame.addEventListener('load', function () { loader.classList.add('hidden'); }, { once: true });
+          frame.src = 'allure-report/index.html';
+          loaded = true;
+        }
+      }
+      function close() {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+      }
+      btn.addEventListener('click', open);
+      if (closeBtn) closeBtn.addEventListener('click', close);
+      panel.addEventListener('click', function (e) { if (e.target === panel) close(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && panel.classList.contains('open')) close();
+      });
+    })();
+  </script>
 
   <div id="toast-stack" class="toast-stack" aria-live="polite"></div>
 
