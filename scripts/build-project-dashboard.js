@@ -731,6 +731,8 @@ function html({ plans, reports, byPlan, heatmap, bugs, meta, projectName, projec
       });
     })();
   </script>
+
+  <script src="../../assets/markdown-viewer.js"></script>
 </body>
 </html>`;
 }

@@ -347,6 +347,7 @@ const SHELL_TEMPLATE = `<!DOCTYPE html>
 
   <script src="data.js"></script>
   <script src="../../assets/dashboard.js"></script>
+  <script src="../../assets/markdown-viewer.js"></script>
 </body>
 </html>
 `;
