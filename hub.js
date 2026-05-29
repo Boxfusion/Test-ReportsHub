@@ -1,1 +1,35 @@
-window.__HUB__ = {"generated":"2026-05-28T12:41:26.848Z","projects":[{"name":"dep","displayName":"Dep Admin Portal","appUrl":"https://linux-dep-adminportal-test.azurewebsites.net/","environment":"QA","sourceRepo":"https://dev.azure.com/boxfusion/PD-Dep/_git/Dep","description":"Hybrid Markdown + Playwright test reports for the Dep Admin Portal.","health":"failing","summary":{"totalPlans":6,"totalRuns":11,"last7Runs":4,"last7Pass":0,"last7PassPct":0,"failingFlows":2,"lastRun":{"date":"2026-05-28","result":"FAILED","plan":"test-plans/customers/create-customer.md"}},"href":"projects/dep/index.html"},{"name":"dispatcher","displayName":"Dispatcher Admin Portal","appUrl":"https://linux-lesedi-dep-adminportal-test.azurewebsites.net/","environment":"Test","sourceRepo":"https://dev.azure.com/boxfusion/PD-Dep/_git/Dep","description":"Hybrid Markdown + Playwright test reports for the Dispatcher (Lesedi DEP) Admin Portal.","health":"failing","summary":{"totalPlans":1,"totalRuns":1,"last7Runs":1,"last7Pass":0,"last7PassPct":0,"failingFlows":1,"lastRun":{"date":"2026-05-28","result":"FAILED","plan":"test-plans/service-requests/create-service-request.md"}},"href":"projects/dispatcher/index.html"},{"name":"pd-telephony","displayName":"pd-telephony","appUrl":null,"environment":null,"sourceRepo":null,"description":null,"health":"unknown","summary":{"totalPlans":0,"totalRuns":0,"last7Runs":0,"last7Pass":0,"last7PassPct":null,"failingFlows":0,"lastRun":null},"href":"projects/pd-telephony/index.html"},{"name":"pd-telephonyy","displayName":"pd-telephonyy","appUrl":null,"environment":null,"sourceRepo":null,"description":null,"health":"unknown","summary":{"totalPlans":0,"totalRuns":0,"last7Runs":0,"last7Pass":0,"last7PassPct":null,"failingFlows":0,"lastRun":null},"href":"projects/pd-telephonyy/index.html"}],"totals":{"totalProjects":4,"totalPlans":7,"totalRuns":12,"last7Runs":5,"failingFlows":3}};
+window.__HUB__ = {
+  "generated": "2026-05-29T08:00:00.000Z",
+  "projects": [
+    {
+      "name": "dep",
+      "displayName": "Dep Admin Portal",
+      "appUrl": "https://linux-dep-adminportal-test.azurewebsites.net/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Dep/_git/Dep",
+      "description": "Hybrid Markdown + Playwright test reports for the Dep Admin Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 6,
+        "totalRuns": 11,
+        "last7Runs": 4,
+        "last7Pass": 0,
+        "last7PassPct": 0,
+        "failingFlows": 2,
+        "lastRun": {
+          "date": "2026-05-28",
+          "result": "FAILED",
+          "plan": "test-plans/customers/create-customer.md"
+        }
+      },
+      "href": "projects/dep/index.html"
+    }
+  ],
+  "totals": {
+    "totalProjects": 1,
+    "totalPlans": 6,
+    "totalRuns": 11,
+    "last7Runs": 4,
+    "failingFlows": 2
+  }
+};

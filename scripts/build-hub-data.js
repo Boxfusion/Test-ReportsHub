@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /**
  * Build the top-level landing data:
- *   - hub.json     ← list of projects + per-project rollup
- *   - index.html   ← thin shell that fetches hub.json (written once)
+ *   - hub.json  ← list of projects + per-project rollup (pretty-printed)
+ *   - hub.js    ← same data as window.__HUB__ so the page works over file://
  *
+ * index.html is tracked in git and is never touched by this script.
  * Reads each project's meta.json + summary.json (written by build-project-data.js).
  *
  * Usage: node scripts/build-hub-data.js
@@ -15,10 +16,7 @@ const path = require('path');
 const HUB_ROOT = path.resolve(__dirname, '..');
 const PROJECTS_ROOT = path.join(HUB_ROOT, 'projects');
 const HUB_JSON = path.join(HUB_ROOT, 'hub.json');
-// Sibling .js so the landing page works when opened over file:// — browsers
-// block fetch() from file origins but happily run <script src>.
 const HUB_JS = path.join(HUB_ROOT, 'hub.js');
-const INDEX_HTML = path.join(HUB_ROOT, 'index.html');
 
 function listProjects() {
   if (!fs.existsSync(PROJECTS_ROOT)) return [];
@@ -40,36 +38,6 @@ function healthOf(summary) {
   if (summary.lastRun.result === 'PASSED') return 'healthy';
   return 'unknown';
 }
-
-const SHELL_TEMPLATE = `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Test Reports Hub · Boxfusion</title>
-<link rel="stylesheet" href="assets/dashboard.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="inner">
-      <a class="brand" href="index.html">
-        <span class="mark">TR</span>
-        <span class="name">Test Reports Hub<span class="org">Boxfusion</span></span>
-      </a>
-      <nav id="topbar-nav"></nav>
-    </div>
-  </header>
-
-  <main class="container" id="landing-root">
-    <div class="dashboard-loading">Loading projects…</div>
-  </main>
-
-  <script src="hub.js"></script>
-  <script src="assets/landing.js"></script>
-  <script src="assets/markdown-viewer.js"></script>
-</body>
-</html>
-`;
 
 function build() {
   const names = listProjects();
@@ -122,11 +90,7 @@ function build() {
   fs.writeFileSync(HUB_JSON, JSON.stringify(hub, null, 2));
   fs.writeFileSync(HUB_JS, `window.__HUB__ = ${JSON.stringify(hub)};\n`);
 
-  if (!fs.existsSync(INDEX_HTML) || fs.readFileSync(INDEX_HTML, 'utf8') !== SHELL_TEMPLATE) {
-    fs.writeFileSync(INDEX_HTML, SHELL_TEMPLATE);
-  }
-
-  console.log(`[hub] ${projects.length} project(s) → hub.json`);
+  console.log(`[hub] ${projects.length} project(s) → hub.json + hub.js`);
 }
 
 if (require.main === module) build();

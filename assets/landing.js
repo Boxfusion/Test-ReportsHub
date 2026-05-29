@@ -99,11 +99,6 @@
       : projects.map(projectCardHtml).join('');
 
     root.innerHTML = `
-      <div class="page-head">
-        <h1>Test Reports Hub</h1>
-        <p class="subtitle">Centralised test report dashboards across Boxfusion projects.</p>
-      </div>
-
       <section class="kpis" aria-label="Overview">
         <div class="kpi"><span class="label">Projects</span><span class="num">${t.totalProjects || 0}</span><span class="meta">tracked here</span></div>
         <div class="kpi"><span class="label">Test flows</span><span class="num">${t.totalPlans || 0}</span><span class="meta">across all projects</span></div>
