@@ -286,6 +286,8 @@ ${SHARED_CSS}
       }
     })();
   </script>
+
+  <script src="assets/markdown-viewer.js"></script>
 </body>
 </html>`;
 

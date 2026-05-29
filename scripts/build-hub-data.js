@@ -66,6 +66,7 @@ const SHELL_TEMPLATE = `<!DOCTYPE html>
 
   <script src="hub.js"></script>
   <script src="assets/landing.js"></script>
+  <script src="assets/markdown-viewer.js"></script>
 </body>
 </html>
 `;
