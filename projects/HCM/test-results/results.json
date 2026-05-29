@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\Boxfusion-New\\Desktop\\Repos\\Test-ReportsHub\\playwright.config.ts",
-    "rootDir": "C:/Users/Boxfusion-New/Desktop/Repos/Test-ReportsHub",
+    "configFile": "C:\\Users\\Mishalia Pillay\\Desktop\\Testing\\Test-ReportsHub\\playwright.config.ts",
+    "rootDir": "C:/Users/Mishalia Pillay/Desktop/Testing/Test-ReportsHub",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -16,7 +16,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/Boxfusion-New/Desktop/Repos/Test-ReportsHub/projects/HCM/test-results/artifacts",
+        "outputDir": "C:/Users/Mishalia Pillay/Desktop/Testing/Test-ReportsHub/projects/HCM/test-results/artifacts",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -24,7 +24,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/Boxfusion-New/Desktop/Repos/Test-ReportsHub",
+        "testDir": "C:/Users/Mishalia Pillay/Desktop/Testing/Test-ReportsHub",
         "testIgnore": [],
         "testMatch": [
           "projects/**/test-plans/**/*.spec.ts"
@@ -41,7 +41,7 @@
         "list"
       ],
       [
-        "C:\\Users\\Boxfusion-New\\Desktop\\Repos\\Test-ReportsHub\\node_modules\\allure-playwright\\dist\\index.js"
+        "C:\\Users\\Mishalia Pillay\\Desktop\\Testing\\Test-ReportsHub\\node_modules\\allure-playwright\\dist\\index.js"
       ]
     ],
     "reportSlowTests": {
@@ -67,7 +67,7 @@
         {
           "title": "SMOKE-HAPPY — Smoke Test Suite — Happy Path",
           "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-          "line": 23,
+          "line": 24,
           "column": 6,
           "specs": [
             {
@@ -86,12 +86,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4867,
+                      "duration": 7029,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T11:32:51.434Z",
+                      "startTime": "2026-05-29T12:12:49.758Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -101,7 +101,7 @@
               ],
               "id": "79a6a06a83a2929d9363-3be2bdfcd9293b441f1d",
               "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 25,
+              "line": 26,
               "column": 7
             },
             {
@@ -120,12 +120,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7033,
+                      "duration": 8746,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T11:32:56.412Z",
+                      "startTime": "2026-05-29T12:12:57.102Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -135,7 +135,7 @@
               ],
               "id": "79a6a06a83a2929d9363-5c88fb372528df2ca877",
               "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 50,
+              "line": 51,
               "column": 7
             },
             {
@@ -154,12 +154,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7697,
+                      "duration": 9155,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T11:33:03.455Z",
+                      "startTime": "2026-05-29T12:13:05.868Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -169,7 +169,7 @@
               ],
               "id": "79a6a06a83a2929d9363-fd41bc8b84248de14687",
               "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 67,
+              "line": 68,
               "column": 7
             },
             {
@@ -188,12 +188,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 8458,
+                      "duration": 10870,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T11:33:11.164Z",
+                      "startTime": "2026-05-29T12:13:15.041Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -203,7 +203,7 @@
               ],
               "id": "79a6a06a83a2929d9363-806e7045de20730b6b0e",
               "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 84,
+              "line": 85,
               "column": 7
             },
             {
@@ -222,12 +222,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7031,
+                      "duration": 11677,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T11:33:19.650Z",
+                      "startTime": "2026-05-29T12:13:25.933Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -237,7 +237,7 @@
               ],
               "id": "79a6a06a83a2929d9363-12e9b2a1cb7a114de42c",
               "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 111,
+              "line": 112,
               "column": 7
             },
             {
@@ -256,12 +256,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6461,
+                      "duration": 8152,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T11:33:26.693Z",
+                      "startTime": "2026-05-29T12:13:37.635Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -271,7 +271,7 @@
               ],
               "id": "79a6a06a83a2929d9363-6596a82bb48326ed0226",
               "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 129,
+              "line": 130,
               "column": 7
             },
             {
@@ -290,12 +290,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7536,
+                      "duration": 9304,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T11:33:33.180Z",
+                      "startTime": "2026-05-29T12:13:45.807Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -305,7 +305,7 @@
               ],
               "id": "79a6a06a83a2929d9363-41eb47a62492e0fe3939",
               "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 146,
+              "line": 147,
               "column": 7
             },
             {
@@ -324,12 +324,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6696,
+                      "duration": 8336,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T11:33:40.727Z",
+                      "startTime": "2026-05-29T12:13:55.132Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -339,7 +339,7 @@
               ],
               "id": "79a6a06a83a2929d9363-e815c4eea9801096bcfb",
               "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 163,
+              "line": 164,
               "column": 7
             },
             {
@@ -358,12 +358,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7371,
+                      "duration": 7998,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T11:33:47.440Z",
+                      "startTime": "2026-05-29T12:14:03.490Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -373,7 +373,7 @@
               ],
               "id": "79a6a06a83a2929d9363-ee13462906eaedbbd82b",
               "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 186,
+              "line": 187,
               "column": 7
             },
             {
@@ -392,12 +392,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6730,
+                      "duration": 8516,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T11:33:54.846Z",
+                      "startTime": "2026-05-29T12:14:11.512Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -407,7 +407,7 @@
               ],
               "id": "79a6a06a83a2929d9363-fcc65bcef87dc8d70f4f",
               "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 206,
+              "line": 207,
               "column": 7
             }
           ]
@@ -417,8 +417,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-29T11:32:50.944Z",
-    "duration": 70924.88699999999,
+    "startTime": "2026-05-29T12:12:48.062Z",
+    "duration": 93111.77500000001,
     "expected": 10,
     "skipped": 0,
     "unexpected": 0,

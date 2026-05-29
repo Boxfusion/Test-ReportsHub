@@ -1,0 +1,233 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\HCM\test-plans\performance-agreements\smoke-happy-path.spec.ts >> SMOKE-HAPPY — Smoke Test Suite — Happy Path >> TC-06: Step 5 - Review Performance Agreement
+- Location: projects\HCM\test-plans\performance-agreements\smoke-happy-path.spec.ts:129:7
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('In Progress').first()
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 10000ms
+  - waiting for getByText('In Progress').first()
+
+```
+
+```yaml
+- img
+- strong: Welcome!
+- strong: Please enter your personal details in order to access your profile.
+- img "mail"
+- textbox "Username"
+- img "lock"
+- textbox "Password"
+- img "eye-invisible"
+- button "Sign In"
+- checkbox
+- text: Remember Me
+- link "Forget Password":
+  - /url: /no-auth/shesha/forgot-password?mode=edit
+- text: Don't have an account?
+- link "Register":
+  - /url: /no-auth/Shesha/otp-verification
+- alert
+```
+
+# Test source
+
+```ts
+  42  |     await page.waitForLoadState('networkidle');
+  43  | 
+  44  |     // ASSERT (BLOCKING) URL no longer contains /login and SaGov PMDS menu is visible
+  45  |     await expect(page).not.toHaveURL(/login/i);
+  46  |     await expect(page.getByRole('menuitem', { name: 'book SaGov PMDS' })).toBeVisible();
+  47  |   });
+  48  | 
+  49  |   // ADO Test Case #77595: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77595
+  50  |   test('TC-02: Step 1 - Financial Year Starts', async ({ page }) => {
+  51  |     await loginAsAdmin(page);
+  52  | 
+  53  |     // STEP 1: NAVIGATE to Financial Years page
+  54  |     await page.goto(FINANCIAL_YEARS_URL);
+  55  | 
+  56  |     // STEP 2: WAIT for Financial Years page to load
+  57  |     await page.waitForLoadState('networkidle');
+  58  | 
+  59  |     // STEP 3: SNAPSHOT — confirm Financial Years page heading and FY entry are visible
+  60  |     // SNAPSHOT: Financial Years page
+  61  | 
+  62  |     // ASSERT (BLOCKING) FY2026/27 label is visible on the Financial Years page
+  63  |     await expect(page.getByText('FY2026/27')).toBeVisible({ timeout: 30000 });
+  64  |   });
+  65  | 
+  66  |   // ADO Test Case #77596: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77596
+  67  |   test('TC-03: Step 2 - Create Cycle and Send Notifications', async ({ page }) => {
+  68  |     await loginAsAdmin(page);
+  69  | 
+  70  |     // STEP 1: NAVIGATE to Financial Years page
+  71  |     await page.goto(FINANCIAL_YEARS_URL);
+  72  | 
+  73  |     // STEP 2: WAIT for Financial Years page to load
+  74  |     await page.waitForLoadState('networkidle');
+  75  | 
+  76  |     // STEP 3: SNAPSHOT — confirm at least one cycle link is visible under FY2026/27
+  77  |     // SNAPSHOT: Financial Years with cycle links
+  78  | 
+  79  |     // ASSERT (BLOCKING) "SL 1-12 Performance Agreement" cycle link is visible under FY2026/27
+  80  |     await expect(page.getByRole('link', { name: 'SL 1-12 Performance Agreement' })).toBeVisible({ timeout: 30000 });
+  81  |   });
+  82  | 
+  83  |   // ADO Test Case #77597: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77597
+  84  |   test('TC-04: Step 3 - Open Performance Agreement Process', async ({ page }) => {
+  85  |     await loginAsAdmin(page);
+  86  | 
+  87  |     // STEP 1: NAVIGATE to Financial Years page
+  88  |     await page.goto(FINANCIAL_YEARS_URL);
+  89  | 
+  90  |     // STEP 2: WAIT for Financial Years page to load
+  91  |     await page.waitForLoadState('networkidle');
+  92  | 
+  93  |     // STEP 3: SNAPSHOT — confirm cycle links are visible
+  94  |     // SNAPSHOT: Financial Years with cycle links
+  95  | 
+  96  |     // STEP 4: CLICK the "SL 1-12 Performance Agreement" cycle link
+  97  |     await page.getByRole('link', { name: 'SL 1-12 Performance Agreement' }).click({ timeout: 30000 });
+  98  | 
+  99  |     // STEP 5: WAIT for cycle details page to load
+  100 |     await page.waitForLoadState('networkidle');
+  101 | 
+  102 |     // STEP 6: SNAPSHOT — confirm Manage Process tab with Contracting stage is visible
+  103 |     // SNAPSHOT: cycle details Manage Process tab
+  104 | 
+  105 |     // ASSERT (BLOCKING) Contracting stage status shows "In Progress"
+  106 |     await expect(page.getByText('Contracting')).toBeVisible();
+  107 |     await expect(page.getByText('In Progress').first()).toBeVisible();
+  108 |   });
+  109 | 
+  110 |   // ADO Test Case #77598: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77598
+  111 |   test('TC-05: Step 4 - Draft Performance Agreement', async ({ page }) => {
+  112 |     await loginAsAdmin(page);
+  113 | 
+  114 |     // STEP 1: NAVIGATE to cycle details for "SL 1-12 Performance Agreement"
+  115 |     await page.goto(CYCLE_URL);
+  116 | 
+  117 |     // STEP 2: WAIT for page to load
+  118 |     await page.waitForLoadState('networkidle');
+  119 | 
+  120 |     // STEP 3: SNAPSHOT — confirm Contracting stage statistics panel is visible
+  121 |     // SNAPSHOT: Contracting stage stats
+  122 | 
+  123 |     // ASSERT (BLOCKING) Contracting "In progress" stat label is visible (count > 0)
+  124 |     await expect(page.getByText('Contracting')).toBeVisible({ timeout: 30000 });
+  125 |     await expect(page.getByText('In progress').first()).toBeVisible();
+  126 |   });
+  127 | 
+  128 |   // ADO Test Case #77599: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77599
+  129 |   test('TC-06: Step 5 - Review Performance Agreement', async ({ page }) => {
+  130 |     await loginAsAdmin(page);
+  131 | 
+  132 |     // STEP 1: NAVIGATE to cycle details for "SL 1-12 Performance Agreement"
+  133 |     await page.goto(CYCLE_URL);
+  134 | 
+  135 |     // STEP 2: WAIT for page to load
+  136 |     await page.waitForLoadState('networkidle');
+  137 | 
+  138 |     // STEP 3: SNAPSHOT — confirm Contracting stage is still active
+  139 |     // SNAPSHOT: Contracting stage active
+  140 | 
+  141 |     // ASSERT (BLOCKING) Contracting stage shows "In Progress" status
+> 142 |     await expect(page.getByText('In Progress').first()).toBeVisible();
+      |                                                         ^ Error: expect(locator).toBeVisible() failed
+  143 |   });
+  144 | 
+  145 |   // ADO Test Case #77600: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77600
+  146 |   test('TC-07: Step 6 - No Dispute Raised', async ({ page }) => {
+  147 |     await loginAsAdmin(page);
+  148 | 
+  149 |     // STEP 1: NAVIGATE to cycle details for "SL 1-12 Performance Agreement"
+  150 |     await page.goto(CYCLE_URL);
+  151 | 
+  152 |     // STEP 2: WAIT for page to load
+  153 |     await page.waitForLoadState('networkidle');
+  154 | 
+  155 |     // STEP 3: SNAPSHOT — confirm Contracting section shows Close process button
+  156 |     // SNAPSHOT: Contracting section with Close process button
+  157 | 
+  158 |     // ASSERT (BLOCKING) "Close process" button is visible on the Contracting stage
+  159 |     await expect(page.getByRole('button', { name: 'Close process' })).toBeVisible({ timeout: 30000 });
+  160 |   });
+  161 | 
+  162 |   // ADO Test Case #77601: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77601
+  163 |   test('TC-08: Step 7 - Verify Performance Agreement', async ({ page }) => {
+  164 |     await loginAsAdmin(page);
+  165 | 
+  166 |     // STEP 1: NAVIGATE to cycle details for "SL 1-12 Performance Agreement"
+  167 |     await page.goto(CYCLE_URL);
+  168 | 
+  169 |     // STEP 2: WAIT for page to load
+  170 |     await page.waitForLoadState('networkidle');
+  171 | 
+  172 |     // STEP 3: SNAPSHOT — confirm all three PMDS process stages are visible
+  173 |     // SNAPSHOT: all three process stages
+  174 | 
+  175 |     // ASSERT Contracting stage heading is visible
+  176 |     await expect(page.getByText('Contracting')).toBeVisible({ timeout: 30000 });
+  177 | 
+  178 |     // ASSERT Mid Year Assessment stage heading is visible
+  179 |     await expect(page.getByText('Mid Year Assessment')).toBeVisible();
+  180 | 
+  181 |     // ASSERT (BLOCKING) Annual Assessment stage heading is visible
+  182 |     await expect(page.getByText('Annual Assessment')).toBeVisible();
+  183 |   });
+  184 | 
+  185 |   // ADO Test Case #77602: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77602
+  186 |   test('TC-09: Step 8 - Interface to PERSAL', async ({ page }) => {
+  187 |     await loginAsAdmin(page);
+  188 | 
+  189 |     // STEP 1: NAVIGATE to PERSAL Input File Export page
+  190 |     await page.goto(PERSAL_URL);
+  191 | 
+  192 |     // STEP 2: WAIT for PERSAL Input File Export page to load
+  193 |     await page.waitForLoadState('domcontentloaded');
+  194 | 
+  195 |     // STEP 3: SNAPSHOT — confirm page heading and action buttons are visible
+  196 |     // SNAPSHOT: PERSAL Input File Export page
+  197 | 
+  198 |     // ASSERT "Generate and send to FTP" button is visible
+  199 |     await expect(page.getByRole('button', { name: 'Generate and send to FTP' })).toBeVisible({ timeout: 30000 });
+  200 | 
+  201 |     // ASSERT (BLOCKING) page heading "PMDS: PERSAL Input file export" is visible
+  202 |     await expect(page.getByRole('heading', { name: 'PMDS: PERSAL Input file export' })).toBeVisible();
+  203 |   });
+  204 | 
+  205 |   // ADO Test Case #77603: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/77603
+  206 |   test('TC-10: Step 9 - End Performance Agreement Process', async ({ page }) => {
+  207 |     await loginAsAdmin(page);
+  208 | 
+  209 |     // STEP 1: NAVIGATE to cycle details for "SL 1-12 Performance Agreement"
+  210 |     await page.goto(CYCLE_URL);
+  211 | 
+  212 |     // STEP 2: WAIT for page to load
+  213 |     await page.waitForLoadState('networkidle');
+  214 | 
+  215 |     // STEP 3: SNAPSHOT — confirm Contracting stage shows Close process button
+  216 |     // SNAPSHOT: Contracting stage Close process button
+  217 | 
+  218 |     // ASSERT (BLOCKING) "Close process" button is visible on the Contracting stage
+  219 |     await expect(page.getByRole('button', { name: 'Close process' })).toBeVisible({ timeout: 30000 });
+  220 |   });
+  221 | });
+  222 | 
+```

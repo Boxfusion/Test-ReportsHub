@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-28T12:41:26.848Z",
+  "generated": "2026-05-29T11:53:03.337Z",
   "projects": [
     {
       "name": "dep",
@@ -25,72 +25,34 @@
       "href": "projects/dep/index.html"
     },
     {
-      "name": "dispatcher",
-      "displayName": "Dispatcher Admin Portal",
-      "appUrl": "https://linux-lesedi-dep-adminportal-test.azurewebsites.net/",
-      "environment": "Test",
-      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Dep/_git/Dep",
-      "description": "Hybrid Markdown + Playwright test reports for the Dispatcher (Lesedi DEP) Admin Portal.",
-      "health": "failing",
+      "name": "HCM",
+      "displayName": "HCM Admin Portal",
+      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+      "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
+      "health": "healthy",
       "summary": {
         "totalPlans": 1,
         "totalRuns": 1,
         "last7Runs": 1,
-        "last7Pass": 0,
-        "last7PassPct": 0,
-        "failingFlows": 1,
+        "last7Pass": 1,
+        "last7PassPct": 100,
+        "failingFlows": 0,
         "lastRun": {
-          "date": "2026-05-28",
-          "result": "FAILED",
-          "plan": "test-plans/service-requests/create-service-request.md"
+          "date": "2026-05-29",
+          "result": "PASSED",
+          "plan": "test-plans/performance-agreements/smoke-happy-path.md"
         }
       },
-      "href": "projects/dispatcher/index.html"
-    },
-    {
-      "name": "pd-telephony",
-      "displayName": "pd-telephony",
-      "appUrl": null,
-      "environment": null,
-      "sourceRepo": null,
-      "description": null,
-      "health": "unknown",
-      "summary": {
-        "totalPlans": 0,
-        "totalRuns": 0,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 0,
-        "lastRun": null
-      },
-      "href": "projects/pd-telephony/index.html"
-    },
-    {
-      "name": "pd-telephonyy",
-      "displayName": "pd-telephonyy",
-      "appUrl": null,
-      "environment": null,
-      "sourceRepo": null,
-      "description": null,
-      "health": "unknown",
-      "summary": {
-        "totalPlans": 0,
-        "totalRuns": 0,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 0,
-        "lastRun": null
-      },
-      "href": "projects/pd-telephonyy/index.html"
+      "href": "projects/HCM/index.html"
     }
   ],
   "totals": {
-    "totalProjects": 4,
+    "totalProjects": 2,
     "totalPlans": 7,
     "totalRuns": 12,
     "last7Runs": 5,
-    "failingFlows": 3
+    "failingFlows": 2
   }
 }
