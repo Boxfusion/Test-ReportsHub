@@ -1,0 +1,13 @@
+{
+  "totalPlans": 1,
+  "totalRuns": 1,
+  "last7Runs": 1,
+  "last7Pass": 1,
+  "last7PassPct": 100,
+  "failingFlows": 0,
+  "lastRun": {
+    "date": "2026-05-29",
+    "result": "PASSED",
+    "plan": "test-plans/performance-agreements/smoke-happy-path.md"
+  }
+}
