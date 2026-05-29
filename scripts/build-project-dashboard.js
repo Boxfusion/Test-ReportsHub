@@ -60,7 +60,10 @@ function parseReport(file, reportsRoot) {
   const meta = {};
   for (const line of raw.split(/\r?\n/).slice(0, 30)) {
     const m = line.match(/^\*\*([A-Za-z ]+):\*\*\s*(.+?)\s*$/);
-    if (m) meta[m[1].trim().toLowerCase()] = m[2].trim();
+    if (m) {
+      const key = m[1].trim().toLowerCase();
+      if (!(key in meta)) meta[key] = m[2].trim();
+    }
   }
   const titleLine = raw.match(/^#\s+(.+)$/m);
   const planRel = meta.plan ? meta.plan.replace(/\\/g, '/') : null;
