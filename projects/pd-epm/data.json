@@ -1,26 +1,29 @@
 {
-  "project": "HCM",
-  "displayName": "HCM Admin Portal",
+  "project": "pd-epm",
+  "displayName": "pd-epm",
   "meta": {
-    "displayName": "HCM Admin Portal",
-    "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
-    "environment": "QA",
-    "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
-    "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
+    "displayName": "pd-epm",
+    "appUrl": "https://gpotp-smartgov-adminportal-dev.shesha.app/login?internalLogin=true",
+    "environment": "qa",
+    "sourceRepo": "https://dev.azure.com/boxfusion/PD-Epm/_git/Epm",
+    "description": null,
     "source": {
-      "kind": "local"
+      "kind": "remote",
+      "provider": "azure",
+      "repo": "https://dev.azure.com/boxfusion/PD-Epm/_git/Epm",
+      "branch": "main"
     }
   },
-  "hasAllure": true,
+  "hasAllure": false,
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 1,
-    "totalRuns": 1,
-    "last7Runs": 1,
-    "last7Pass": 1,
-    "last7PassPct": 100,
+    "totalPlans": 0,
+    "totalRuns": 0,
+    "last7Runs": 0,
+    "last7Pass": 0,
+    "last7PassPct": null,
     "failingFlows": 0,
-    "passingFlows": 1,
+    "passingFlows": 0,
     "partialFlows": 0,
     "neverFlows": 0
   },
@@ -2515,8 +2518,8 @@
       },
       {
         "iso": "2026-05-29",
-        "runs": 1,
-        "passed": 1,
+        "runs": 0,
+        "passed": 0,
         "failed": 0,
         "partial": 0
       },
@@ -2578,59 +2581,7 @@
       }
     ]
   },
-  "sections": [
-    {
-      "key": "performance-agreements",
-      "title": "Performance Agreements",
-      "stripPrefix": "test-plans/performance-agreements/",
-      "plans": [
-        {
-          "plan": "test-plans/performance-agreements/smoke-happy-path.md",
-          "planHref": "test-plans/performance-agreements/smoke-happy-path.md",
-          "spec": "test-plans/performance-agreements/smoke-happy-path.spec.ts",
-          "specHref": "test-plans/performance-agreements/smoke-happy-path.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "passing",
-          "status": "PASSED",
-          "last": {
-            "date": "2026-05-29",
-            "result": "PASSED",
-            "duration": "9.2s",
-            "reportHref": "test-reports/2026-05-29/smoke-happy-path.md"
-          },
-          "runCount": 1,
-          "history": [
-            {
-              "date": "2026-05-29",
-              "result": "PASSED",
-              "duration": "9.2s"
-            }
-          ],
-          "bugs": []
-        }
-      ]
-    }
-  ],
-  "timeline": [
-    {
-      "date": "2026-05-29",
-      "runs": [
-        {
-          "plan": "test-plans/performance-agreements/smoke-happy-path.md",
-          "planDisplay": "performance-agreements/smoke-happy-path.md",
-          "result": "PASSED",
-          "duration": "9.2s",
-          "mode": "playwright-script",
-          "reportHref": "test-reports/2026-05-29/smoke-happy-path.md"
-        }
-      ]
-    }
-  ],
-  "generated": "2026-06-01T13:59:31.108Z"
+  "sections": [],
+  "timeline": [],
+  "generated": "2026-06-01T13:59:31.619Z"
 }
