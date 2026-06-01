@@ -1,0 +1,9 @@
+{
+  "displayName": "pd-epm",
+  "environment": "qa",
+  "appUrl": "https://gpotp-smartgov-adminportal-dev.shesha.app/login?internalLogin=true",
+  "source": {
+    "repo": "https://dev.azure.com/boxfusion/PD-Epm/_git/Epm",
+    "branch": "main"
+  }
+}
