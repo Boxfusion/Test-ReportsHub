@@ -224,9 +224,9 @@
                   <input name="displayName" required placeholder="PD Telephony" autocomplete="off" />
                 </label>
                 <label class="full">
-                  <span>GitHub repo URL <em>*</em></span>
-                  <input name="repo" type="url" required placeholder="https://github.com/Boxfusion/pd-telephony" autocomplete="off" />
-                  <small>The repo where <code>test-plans/</code> and <code>test-reports/</code> live.</small>
+                  <span>Repo URL <em>*</em></span>
+                  <input name="repo" type="url" required placeholder="https://github.com/Org/Repo  or  https://dev.azure.com/Org/Project/_git/Repo" autocomplete="off" />
+                  <small>GitHub or Azure DevOps Git repo where <code>test-plans/</code> and <code>test-reports/</code> live. Private ADO repos need the hub's <code>AZURE_DEVOPS_PAT</code> secret.</small>
                 </label>
                 <label>
                   <span>Branch</span>

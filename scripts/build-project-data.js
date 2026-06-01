@@ -18,6 +18,16 @@ const fs = require('fs');
 const path = require('path');
 const pathPosix = path.posix;
 const { createGithubSource } = require('./lib/github-source');
+const { createAzureDevopsSource, isAzureDevopsUrl } = require('./lib/azure-devops-source');
+
+// Pick the remote adapter by repo URL: Azure DevOps vs GitHub. Both expose the
+// same { files, readFile, viewerUrl } shape so the rest of the pipeline is
+// source-agnostic.
+function createRemoteSource(srcMeta) {
+  return isAzureDevopsUrl(srcMeta.repo)
+    ? createAzureDevopsSource(srcMeta)
+    : createGithubSource(srcMeta);
+}
 
 const HUB_ROOT = path.resolve(__dirname, '..');
 const HEATMAP_WEEKS = 52;
@@ -361,7 +371,7 @@ async function build(projectName) {
   const meta = fs.existsSync(metaFile) ? JSON.parse(fs.readFileSync(metaFile, 'utf8')) : {};
 
   const source = meta.source
-    ? await createGithubSource(meta.source)
+    ? await createRemoteSource(meta.source)
     : createLocalSource(projectRoot);
 
   const hasAllure = source.files.some((f) => f.path === 'allure-report/index.html');
@@ -395,7 +405,7 @@ async function build(projectName) {
       sourceRepo: meta.sourceRepo || (meta.source?.repo ?? null),
       description: meta.description || null,
       source: source.kind === 'remote'
-        ? { kind: 'remote', repo: meta.source.repo, branch: source.branch }
+        ? { kind: 'remote', provider: source.provider || 'github', repo: meta.source.repo, branch: source.branch }
         : { kind: 'local' },
     },
     hasAllure,

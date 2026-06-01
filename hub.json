@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-29T11:53:03.337Z",
+  "generated": "2026-06-01T08:55:51.882Z",
   "projects": [
     {
       "name": "dep",
@@ -12,7 +12,7 @@
       "summary": {
         "totalPlans": 6,
         "totalRuns": 11,
-        "last7Runs": 4,
+        "last7Runs": 3,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 2,
@@ -52,7 +52,7 @@
     "totalProjects": 2,
     "totalPlans": 7,
     "totalRuns": 12,
-    "last7Runs": 5,
+    "last7Runs": 4,
     "failingFlows": 2
   }
 }

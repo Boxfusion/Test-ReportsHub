@@ -144,6 +144,9 @@ jobs:
 
       - name: Rebuild hub dashboards
         if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
         run: node scripts/build-all.js
 
       - name: Commit and push results

@@ -18,7 +18,7 @@ on:
         required: true
         type: string
       repo:
-        description: "GitHub repo URL containing test-plans/ + test-reports/ at root."
+        description: "Repo URL with test-plans/ + test-reports/ at root. GitHub (https://github.com/Org/Repo) or Azure DevOps (https://dev.azure.com/Org/Project/_git/Repo)."
         required: true
         type: string
       branch:
@@ -71,8 +71,14 @@ jobs:
       - name: Validate repo URL
         run: |
           REPO="${{ inputs.repo }}"
-          if ! echo "$REPO" | grep -Eq '^https?://github\.com/[^/]+/[^/]+'; then
-            echo "::error::repo must be a GitHub URL like https://github.com/Org/Repo"
+          if echo "$REPO" | grep -Eq '^https?://github\.com/[^/]+/[^/]+'; then
+            echo "Recognised GitHub repo URL."
+          elif echo "$REPO" | grep -Eq '^https?://dev\.azure\.com/[^/]+/[^/]+/_git/[^/]+'; then
+            echo "Recognised Azure DevOps repo URL."
+          elif echo "$REPO" | grep -Eq '^https?://[^/.]+\.visualstudio\.com/[^/]+/_git/[^/]+'; then
+            echo "Recognised legacy Azure DevOps (visualstudio.com) repo URL."
+          else
+            echo "::error::repo must be a GitHub URL (https://github.com/Org/Repo) or an Azure DevOps Git URL (https://dev.azure.com/Org/Project/_git/Repo)"
             exit 2
           fi
 
@@ -111,6 +117,12 @@ jobs:
           '
 
       - name: Rebuild hub dashboards
+        env:
+          # Lets build-project-data.js read plans/reports from private source
+          # repos. GITHUB_TOKEN is provided automatically; AZURE_DEVOPS_PAT must
+          # be added as a repo/org secret (Code:Read scope) for private ADO repos.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
         run: node scripts/build-all.js
 
       - name: Commit and push

@@ -1,12 +1,12 @@
 {
-  "project": "dep",
-  "displayName": "Dep Admin Portal",
+  "project": "HCM",
+  "displayName": "HCM Admin Portal",
   "meta": {
-    "displayName": "Dep Admin Portal",
-    "appUrl": "https://linux-dep-adminportal-test.azurewebsites.net/",
+    "displayName": "HCM Admin Portal",
+    "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
     "environment": "QA",
-    "sourceRepo": "https://dev.azure.com/boxfusion/PD-Dep/_git/Dep",
-    "description": "Hybrid Markdown + Playwright test reports for the Dep Admin Portal.",
+    "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+    "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
     "source": {
       "kind": "local"
     }
@@ -14,15 +14,15 @@
   "hasAllure": true,
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 6,
-    "totalRuns": 11,
-    "last7Runs": 3,
-    "last7Pass": 0,
-    "last7PassPct": 0,
-    "failingFlows": 2,
-    "passingFlows": 0,
+    "totalPlans": 1,
+    "totalRuns": 1,
+    "last7Runs": 1,
+    "last7Pass": 1,
+    "last7PassPct": 100,
+    "failingFlows": 0,
+    "passingFlows": 1,
     "partialFlows": 0,
-    "neverFlows": 2
+    "neverFlows": 0
   },
   "heatmap": {
     "weeks": 52,
@@ -2319,7 +2319,7 @@
       },
       {
         "iso": "2026-04-30",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
         "failed": 0,
         "partial": 0
@@ -2417,7 +2417,7 @@
       },
       {
         "iso": "2026-05-14",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
         "failed": 0,
         "partial": 0
@@ -2445,37 +2445,37 @@
       },
       {
         "iso": "2026-05-18",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
-        "failed": 1,
+        "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-05-19",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
-        "failed": 1,
+        "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-05-20",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
-        "failed": 1,
+        "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-05-21",
-        "runs": 2,
+        "runs": 0,
         "passed": 0,
-        "failed": 1,
-        "partial": 1
+        "failed": 0,
+        "partial": 0
       },
       {
         "iso": "2026-05-22",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
-        "failed": 1,
+        "failed": 0,
         "partial": 0
       },
       {
@@ -2508,22 +2508,22 @@
       },
       {
         "iso": "2026-05-27",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
-        "failed": 1,
+        "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-05-28",
-        "runs": 2,
+        "runs": 0,
         "passed": 0,
-        "failed": 2,
+        "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-05-29",
-        "runs": 0,
-        "passed": 0,
+        "runs": 1,
+        "passed": 1,
         "failed": 0,
         "partial": 0
       },
@@ -2580,238 +2580,38 @@
   },
   "sections": [
     {
-      "key": "calls",
-      "title": "Calls",
-      "stripPrefix": "test-plans/calls/",
+      "key": "performance-agreements",
+      "title": "Performance Agreements",
+      "stripPrefix": "test-plans/performance-agreements/",
       "plans": [
         {
-          "plan": "test-plans/calls/create-call-log.md",
-          "planHref": "test-plans/calls/create-call-log.md",
-          "spec": null,
-          "specHref": null,
-          "canRun": false,
-          "badges": [
-            {
-              "kind": "new",
-              "text": "NEW · never run"
-            },
-            {
-              "kind": "no-spec",
-              "text": "no .spec.ts yet"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
-          "bugs": []
-        }
-      ]
-    },
-    {
-      "key": "cases",
-      "title": "Cases",
-      "stripPrefix": "test-plans/cases/",
-      "plans": [
-        {
-          "plan": "test-plans/cases/create-call-log-entry.md",
-          "planHref": "test-plans/cases/create-call-log-entry.md",
-          "spec": null,
-          "specHref": null,
-          "canRun": false,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            },
-            {
-              "kind": "no-spec",
-              "text": "no .spec.ts yet"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "[PASS]",
-          "last": {
-            "date": "2026-05-14",
-            "result": "[PASS]",
-            "duration": "~37 min (incl. exploration of alternative UI)",
-            "reportHref": "test-reports/2026-05-14/create-call-log-entry.md"
-          },
-          "runCount": 1,
-          "history": [
-            {
-              "date": "2026-05-14",
-              "result": "[PASS]",
-              "duration": "~37 min (incl. exploration of alternative UI)"
-            }
-          ],
-          "bugs": []
-        },
-        {
-          "plan": "test-plans/cases/create-case.md",
-          "planHref": "test-plans/cases/create-case.md",
-          "spec": null,
-          "specHref": null,
-          "canRun": false,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            },
-            {
-              "kind": "no-spec",
-              "text": "no .spec.ts yet"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "[PASS]",
-          "last": {
-            "date": "2026-04-30",
-            "result": "[PASS]",
-            "duration": "120s",
-            "reportHref": "test-reports/2026-04-30/create-case.md"
-          },
-          "runCount": 1,
-          "history": [
-            {
-              "date": "2026-04-30",
-              "result": "[PASS]",
-              "duration": "120s"
-            }
-          ],
-          "bugs": []
-        }
-      ]
-    },
-    {
-      "key": "customers",
-      "title": "Customers",
-      "stripPrefix": "test-plans/customers/",
-      "plans": [
-        {
-          "plan": "test-plans/customers/create-customer.md",
-          "planHref": "test-plans/customers/create-customer.md",
-          "spec": "test-plans/customers/create-customer.spec.ts",
-          "specHref": "test-plans/customers/create-customer.spec.ts",
+          "plan": "test-plans/performance-agreements/smoke-happy-path.md",
+          "planHref": "test-plans/performance-agreements/smoke-happy-path.md",
+          "spec": "test-plans/performance-agreements/smoke-happy-path.spec.ts",
+          "specHref": "test-plans/performance-agreements/smoke-happy-path.spec.ts",
           "canRun": true,
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
-          "rowStatus": "failing",
-          "status": "FAILED",
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
-            "date": "2026-05-28",
-            "result": "FAILED",
-            "duration": "118.7s",
-            "reportHref": "test-reports/2026-05-28/create-customer.md"
+            "date": "2026-05-29",
+            "result": "PASSED",
+            "duration": "9.2s",
+            "reportHref": "test-reports/2026-05-29/smoke-happy-path.md"
           },
-          "runCount": 2,
+          "runCount": 1,
           "history": [
             {
-              "date": "2026-05-28",
-              "result": "FAILED",
-              "duration": "118.7s"
-            },
-            {
-              "date": "2026-05-21",
-              "result": "PARTIAL",
-              "duration": "20.1s"
+              "date": "2026-05-29",
+              "result": "PASSED",
+              "duration": "9.2s"
             }
           ],
-          "bugs": []
-        }
-      ]
-    },
-    {
-      "key": "service-requests",
-      "title": "Service Requests",
-      "stripPrefix": "test-plans/service-requests/",
-      "plans": [
-        {
-          "plan": "test-plans/service-requests/create-service-request-v2.md",
-          "planHref": "test-plans/service-requests/create-service-request-v2.md",
-          "spec": "test-plans/service-requests/create-service-request-v2.spec.ts",
-          "specHref": "test-plans/service-requests/create-service-request-v2.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "failing",
-          "status": "FAILED",
-          "last": {
-            "date": "2026-05-28",
-            "result": "FAILED",
-            "duration": "288.5s",
-            "reportHref": "test-reports/2026-05-28/create-service-request-v2.md"
-          },
-          "runCount": 7,
-          "history": [
-            {
-              "date": "2026-05-28",
-              "result": "FAILED",
-              "duration": "288.5s"
-            },
-            {
-              "date": "2026-05-27",
-              "result": "FAILED",
-              "duration": "285.2s"
-            },
-            {
-              "date": "2026-05-22",
-              "result": "FAILED",
-              "duration": "199.6s"
-            },
-            {
-              "date": "2026-05-21",
-              "result": "FAILED",
-              "duration": "287.2s"
-            },
-            {
-              "date": "2026-05-20",
-              "result": "FAILED",
-              "duration": "117.6s"
-            },
-            {
-              "date": "2026-05-19",
-              "result": "FAILED",
-              "duration": "20.3s"
-            },
-            {
-              "date": "2026-05-18",
-              "result": "FAILED",
-              "duration": "44.0s"
-            }
-          ],
-          "bugs": []
-        },
-        {
-          "plan": "test-plans/service-requests/create-service-request.md",
-          "planHref": "test-plans/service-requests/create-service-request.md",
-          "spec": null,
-          "specHref": null,
-          "canRun": false,
-          "badges": [
-            {
-              "kind": "new",
-              "text": "NEW · never run"
-            },
-            {
-              "kind": "no-spec",
-              "text": "no .spec.ts yet"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
           "bugs": []
         }
       ]
@@ -2819,138 +2619,18 @@
   ],
   "timeline": [
     {
-      "date": "2026-05-28",
+      "date": "2026-05-29",
       "runs": [
         {
-          "plan": "test-plans/customers/create-customer.md",
-          "planDisplay": "customers/create-customer.md",
-          "result": "FAILED",
-          "duration": "118.7s",
-          "mode": "ci-nightly",
-          "reportHref": "test-reports/2026-05-28/create-customer.md"
-        },
-        {
-          "plan": "test-plans/service-requests/create-service-request-v2.md",
-          "planDisplay": "service-requests/create-service-request-v2.md",
-          "result": "FAILED",
-          "duration": "288.5s",
-          "mode": "ci-nightly",
-          "reportHref": "test-reports/2026-05-28/create-service-request-v2.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-27",
-      "runs": [
-        {
-          "plan": "test-plans/service-requests/create-service-request-v2.md",
-          "planDisplay": "service-requests/create-service-request-v2.md",
-          "result": "FAILED",
-          "duration": "285.2s",
-          "mode": "ci-playwright-script",
-          "reportHref": "test-reports/2026-05-27/create-service-request-v2.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-22",
-      "runs": [
-        {
-          "plan": "test-plans/service-requests/create-service-request-v2.md",
-          "planDisplay": "service-requests/create-service-request-v2.md",
-          "result": "FAILED",
-          "duration": "199.6s",
-          "mode": "ci-playwright-script",
-          "reportHref": "test-reports/2026-05-22/create-service-request-v2.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-21",
-      "runs": [
-        {
-          "plan": "test-plans/customers/create-customer.md",
-          "planDisplay": "customers/create-customer.md",
-          "result": "PARTIAL",
-          "duration": "20.1s",
-          "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-05-21/create-customer.md"
-        },
-        {
-          "plan": "test-plans/service-requests/create-service-request-v2.md",
-          "planDisplay": "service-requests/create-service-request-v2.md",
-          "result": "FAILED",
-          "duration": "287.2s",
-          "mode": "ci-playwright-script",
-          "reportHref": "test-reports/2026-05-21/create-service-request-v2.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-20",
-      "runs": [
-        {
-          "plan": "test-plans/service-requests/create-service-request-v2.md",
-          "planDisplay": "service-requests/create-service-request-v2.md",
-          "result": "FAILED",
-          "duration": "117.6s",
-          "mode": "ci-playwright-script",
-          "reportHref": "test-reports/2026-05-20/create-service-request-v2.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-19",
-      "runs": [
-        {
-          "plan": "test-plans/service-requests/create-service-request-v2.md",
-          "planDisplay": "service-requests/create-service-request-v2.md",
-          "result": "FAILED",
-          "duration": "20.3s",
-          "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-05-19/create-service-request-v2.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-18",
-      "runs": [
-        {
-          "plan": "test-plans/service-requests/create-service-request-v2.md",
-          "planDisplay": "service-requests/create-service-request-v2.md",
-          "result": "FAILED",
-          "duration": "44.0s",
-          "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-05-18/create-service-request-v2.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "runs": [
-        {
-          "plan": "test-plans/cases/create-call-log-entry.md",
-          "planDisplay": "cases/create-call-log-entry.md",
-          "result": "[PASS]",
-          "duration": "~37 min (incl. exploration of alternative UI)",
-          "mode": null,
-          "reportHref": "test-reports/2026-05-14/create-call-log-entry.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-04-30",
-      "runs": [
-        {
-          "plan": "test-plans/cases/create-case.md",
-          "planDisplay": "cases/create-case.md",
-          "result": "[PASS]",
-          "duration": "120s",
-          "mode": null,
-          "reportHref": "test-reports/2026-04-30/create-case.md"
+          "plan": "test-plans/performance-agreements/smoke-happy-path.md",
+          "planDisplay": "performance-agreements/smoke-happy-path.md",
+          "result": "PASSED",
+          "duration": "9.2s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-05-29/smoke-happy-path.md"
         }
       ]
     }
   ],
-  "generated": "2026-06-01T08:55:51.811Z"
+  "generated": "2026-06-01T08:55:51.718Z"
 }
