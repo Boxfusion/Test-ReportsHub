@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\Mishalia Pillay\\Desktop\\Testing\\Test-ReportsHub\\playwright.config.ts",
-    "rootDir": "C:/Users/Mishalia Pillay/Desktop/Testing/Test-ReportsHub",
+    "configFile": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\playwright.config.ts",
+    "rootDir": "C:/Users/tiyim/OneDrive/Desktop/Test-ReportsHub",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -16,7 +16,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/Mishalia Pillay/Desktop/Testing/Test-ReportsHub/projects/HCM/test-results/artifacts",
+        "outputDir": "C:/Users/tiyim/OneDrive/Desktop/Test-ReportsHub/projects/HCM/test-results/artifacts",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -24,7 +24,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/Mishalia Pillay/Desktop/Testing/Test-ReportsHub",
+        "testDir": "C:/Users/tiyim/OneDrive/Desktop/Test-ReportsHub",
         "testIgnore": [],
         "testMatch": [
           "projects/**/test-plans/**/*.spec.ts"
@@ -41,7 +41,7 @@
         "list"
       ],
       [
-        "C:\\Users\\Mishalia Pillay\\Desktop\\Testing\\Test-ReportsHub\\node_modules\\allure-playwright\\dist\\index.js"
+        "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\node_modules\\allure-playwright\\dist\\index.js"
       ]
     ],
     "reportSlowTests": {
@@ -58,16 +58,16 @@
   },
   "suites": [
     {
-      "title": "projects\\HCM\\test-plans\\performance-agreements\\smoke-happy-path.spec.ts",
-      "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
+      "title": "projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+      "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "SMOKE-HAPPY — Smoke Test Suite — Happy Path",
-          "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-          "line": 24,
+          "title": "ELEAVE-ADD-HOLIDAY — Add a New Public Holiday Dialog",
+          "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
+          "line": 25,
           "column": 6,
           "specs": [
             {
@@ -86,12 +86,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7029,
+                      "duration": 3475,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T12:12:49.758Z",
+                      "startTime": "2026-06-02T09:58:28.604Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -99,316 +99,270 @@
                   "status": "expected"
                 }
               ],
-              "id": "79a6a06a83a2929d9363-3be2bdfcd9293b441f1d",
-              "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 26,
+              "id": "1b47c866066a12490dda-d9ba37c5858cf8048883",
+              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
+              "line": 27,
               "column": 7
             },
             {
-              "title": "TC-02: Step 1 - Financial Year Starts",
+              "title": "TC-02: System should add the holiday when 'OK' button is clicked",
               "ok": true,
               "tags": [],
               "tests": [
                 {
                   "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "fixme",
+                      "location": {
+                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+                        "line": 46,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 8746,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T12:12:57.102Z",
-                      "annotations": [],
+                      "startTime": "2026-06-02T09:58:32.224Z",
+                      "annotations": [
+                        {
+                          "type": "fixme",
+                          "location": {
+                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+                            "line": 46,
+                            "column": 8
+                          }
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
-              "id": "79a6a06a83a2929d9363-5c88fb372528df2ca877",
-              "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 51,
-              "column": 7
+              "id": "1b47c866066a12490dda-63becb08dcb4d3ccfbbd",
+              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
+              "line": 46,
+              "column": 8
             },
             {
-              "title": "TC-03: Step 2 - Create Cycle and Send Notifications",
+              "title": "TC-03: System should redirect to the Public Holidays page when 'OK' button is clicked",
               "ok": true,
               "tags": [],
               "tests": [
                 {
                   "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "fixme",
+                      "location": {
+                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+                        "line": 61,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9155,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T12:13:05.868Z",
-                      "annotations": [],
+                      "startTime": "2026-06-02T09:58:32.224Z",
+                      "annotations": [
+                        {
+                          "type": "fixme",
+                          "location": {
+                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+                            "line": 61,
+                            "column": 8
+                          }
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
-              "id": "79a6a06a83a2929d9363-fd41bc8b84248de14687",
-              "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 68,
-              "column": 7
+              "id": "1b47c866066a12490dda-669ccde8122cd713bc59",
+              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
+              "line": 61,
+              "column": 8
             },
             {
-              "title": "TC-04: Step 3 - Open Performance Agreement Process",
+              "title": "TC-04: The added holiday should appear on the calendar",
               "ok": true,
               "tags": [],
               "tests": [
                 {
                   "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "fixme",
+                      "location": {
+                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+                        "line": 76,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 10870,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T12:13:15.041Z",
-                      "annotations": [],
+                      "startTime": "2026-06-02T09:58:32.225Z",
+                      "annotations": [
+                        {
+                          "type": "fixme",
+                          "location": {
+                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+                            "line": 76,
+                            "column": 8
+                          }
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
-              "id": "79a6a06a83a2929d9363-806e7045de20730b6b0e",
-              "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 85,
-              "column": 7
+              "id": "1b47c866066a12490dda-371989f40688abe65b97",
+              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
+              "line": 76,
+              "column": 8
             },
             {
-              "title": "TC-05: Step 4 - Draft Performance Agreement",
+              "title": "TC-05: The 'OK' button should remain inactive until the user populates the 'Name' field",
               "ok": true,
               "tags": [],
               "tests": [
                 {
                   "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "fixme",
+                      "location": {
+                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+                        "line": 93,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11677,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T12:13:25.933Z",
-                      "annotations": [],
+                      "startTime": "2026-06-02T09:58:32.225Z",
+                      "annotations": [
+                        {
+                          "type": "fixme",
+                          "location": {
+                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+                            "line": 93,
+                            "column": 8
+                          }
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
-              "id": "79a6a06a83a2929d9363-12e9b2a1cb7a114de42c",
-              "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 112,
-              "column": 7
+              "id": "1b47c866066a12490dda-4f1d2ae4450634b15504",
+              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
+              "line": 93,
+              "column": 8
             },
             {
-              "title": "TC-06: Step 5 - Review Performance Agreement",
+              "title": "TC-06: The 'OK' button should remain inactive until the user populates the 'Date' field",
               "ok": true,
               "tags": [],
               "tests": [
                 {
                   "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "fixme",
+                      "location": {
+                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+                        "line": 106,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 8152,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-29T12:13:37.635Z",
-                      "annotations": [],
+                      "startTime": "2026-06-02T09:58:32.225Z",
+                      "annotations": [
+                        {
+                          "type": "fixme",
+                          "location": {
+                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
+                            "line": 106,
+                            "column": 8
+                          }
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
-              "id": "79a6a06a83a2929d9363-6596a82bb48326ed0226",
-              "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 130,
-              "column": 7
-            },
-            {
-              "title": "TC-07: Step 6 - No Dispute Raised",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9304,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-29T12:13:45.807Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "79a6a06a83a2929d9363-41eb47a62492e0fe3939",
-              "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 147,
-              "column": 7
-            },
-            {
-              "title": "TC-08: Step 7 - Verify Performance Agreement",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 8336,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-29T12:13:55.132Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "79a6a06a83a2929d9363-e815c4eea9801096bcfb",
-              "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 164,
-              "column": 7
-            },
-            {
-              "title": "TC-09: Step 8 - Interface to PERSAL",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 7998,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-29T12:14:03.490Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "79a6a06a83a2929d9363-ee13462906eaedbbd82b",
-              "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 187,
-              "column": 7
-            },
-            {
-              "title": "TC-10: Step 9 - End Performance Agreement Process",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 8516,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-29T12:14:11.512Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "79a6a06a83a2929d9363-fcc65bcef87dc8d70f4f",
-              "file": "projects/HCM/test-plans/performance-agreements/smoke-happy-path.spec.ts",
-              "line": 207,
-              "column": 7
+              "id": "1b47c866066a12490dda-47031e3989e669e1c075",
+              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
+              "line": 106,
+              "column": 8
             }
           ]
         }
@@ -417,10 +371,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-29T12:12:48.062Z",
-    "duration": 93111.77500000001,
-    "expected": 10,
-    "skipped": 0,
+    "startTime": "2026-06-02T09:58:27.970Z",
+    "duration": 4463.9839999999995,
+    "expected": 1,
+    "skipped": 5,
     "unexpected": 0,
     "flaky": 0
   }
