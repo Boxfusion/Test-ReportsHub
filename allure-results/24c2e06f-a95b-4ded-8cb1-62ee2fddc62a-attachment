@@ -1,0 +1,573 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts >> ELEAVE-SMOKE-APPLY — Application for Leave >> TC-11: 'Don't Delegate' closes modal and returns to My Items
+- Location: projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts:276:7
+
+# Error details
+
+```
+TimeoutError: locator.check: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('.ant-checkbox-wrapper').filter({ hasText: 'I hereby certify' }).getByRole('checkbox')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - menu [ref=e9]:
+        - menuitem "calendar Leave Management" [ref=e10] [cursor=pointer]:
+          - img "calendar" [ref=e11]:
+            - img [ref=e12]
+          - generic [ref=e14]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e15] [cursor=pointer]:
+          - img "calendar" [ref=e16]:
+            - img [ref=e17]
+          - generic [ref=e19]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e20] [cursor=pointer]:
+          - img "book" [ref=e21]:
+            - img [ref=e22]
+          - generic [ref=e24]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e25] [cursor=pointer]:
+          - img "bank" [ref=e26]:
+            - img [ref=e27]
+          - generic [ref=e29]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e30] [cursor=pointer]:
+          - img "apartment" [ref=e31]:
+            - img [ref=e32]
+          - generic [ref=e34]: Workflows
+        - menuitem "tool Administration" [ref=e35] [cursor=pointer]:
+          - img "tool" [ref=e36]:
+            - img [ref=e37]
+          - generic [ref=e39]: Administration
+        - menuitem "setting Configurations" [ref=e40] [cursor=pointer]:
+          - img "setting" [ref=e41]:
+            - img [ref=e42]
+          - generic [ref=e44]: Configurations
+      - img "menu-unfold" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e57]:
+          - generic [ref=e59]:
+            - button "edit" [ref=e60] [cursor=pointer]:
+              - img "edit" [ref=e61]:
+                - img [ref=e62]
+            - paragraph [ref=e64] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e65]:
+              - generic [ref=e66]: Live
+              - img "close" [ref=e67] [cursor=pointer]:
+                - img [ref=e68]
+          - generic [ref=e78]:
+            - link [ref=e84] [cursor=pointer]:
+              - /url: /
+              - img [ref=e94]
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e99]:
+                  - generic [ref=e100]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e102] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e106] [cursor=pointer]:
+                  - img "block" [ref=e107]:
+                    - img [ref=e108]
+                  - generic [ref=e110]: Live
+              - generic [ref=e112]:
+                - generic [ref=e113] [cursor=pointer]:
+                  - text: Thabo Musa Victor Mthembu
+                  - img "down" [ref=e114]:
+                    - img [ref=e115]
+                - img "user" [ref=e118]:
+                  - img [ref=e119]
+      - main [ref=e121]:
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - generic [ref=e130]:
+              - heading "New Leave Application:" [level=4] [ref=e132]:
+                - strong [ref=e133]: "New Leave Application:"
+              - generic [ref=e138]: Draft
+            - generic [ref=e139]:
+              - generic [ref=e140]: "Ref No: LA2026/12527"
+              - generic [ref=e141]: "Created by: Thabo Musa Victor Mthembu a few seconds ago"
+          - generic [ref=e146]:
+            - generic [ref=e148]:
+              - button "edit" [ref=e149] [cursor=pointer]:
+                - img "edit" [ref=e150]:
+                  - img [ref=e151]
+              - paragraph [ref=e153] [cursor=pointer]: SaGov.Leave/sagov-leave-application v76
+              - generic [ref=e154]:
+                - generic [ref=e155]: Live
+                - img "close" [ref=e156] [cursor=pointer]:
+                  - img [ref=e157]
+            - generic [ref=e167]:
+              - generic [ref=e169]:
+                - alert [ref=e170]:
+                  - img "info-circle" [ref=e171]:
+                    - img [ref=e172]
+                  - generic [ref=e176]: Capture the details of the leave you wish to apply for below.
+                  - button "close" [ref=e177] [cursor=pointer]:
+                    - img "close" [ref=e178]:
+                      - img [ref=e179]
+                - generic [ref=e184]:
+                  - generic [ref=e185]:
+                    - img "right" [ref=e187] [cursor=pointer]:
+                      - img [ref=e188]
+                    - generic [ref=e190]: Leave Application
+                  - generic [ref=e194]:
+                    - generic [ref=e195]:
+                      - generic [ref=e198]:
+                        - generic [ref=e200]:
+                          - generic [ref=e202]:
+                            - generic "Who are you requesting the leave for?" [ref=e204]:
+                              - text: Who are you requesting the leave for?
+                              - generic [ref=e205]: "*"
+                            - generic [ref=e210]:
+                              - generic [ref=e212] [cursor=pointer]:
+                                - radio "Myself" [checked] [ref=e214]
+                                - generic [ref=e216]: Myself
+                              - generic [ref=e218] [cursor=pointer]:
+                                - radio "Someone else" [ref=e220]
+                                - generic [ref=e222]: Someone else
+                          - generic [ref=e224]:
+                            - generic "PERSAL No" [ref=e226]
+                            - generic [ref=e229]: GOV00003
+                          - generic [ref=e231]:
+                            - generic "Category" [ref=e233]:
+                              - text: Category
+                              - generic [ref=e234]: "*"
+                            - generic [ref=e238] [cursor=pointer]:
+                              - generic [ref=e239]:
+                                - combobox [ref=e241]
+                                - generic "Annual Leave" [ref=e242]
+                              - generic:
+                                - img:
+                                  - img
+                              - img [ref=e244]:
+                                - img [ref=e245]
+                          - generic [ref=e248]:
+                            - generic "Sub-Category" [ref=e250]:
+                              - text: Sub-Category
+                              - generic [ref=e251]: "*"
+                            - generic [ref=e255] [cursor=pointer]:
+                              - generic [ref=e256]:
+                                - combobox [ref=e258]
+                                - generic "Annual Leave" [ref=e259]
+                              - generic:
+                                - img:
+                                  - img
+                              - img [ref=e261]:
+                                - img [ref=e262]
+                        - generic [ref=e267]:
+                          - generic "Duration" [ref=e269]:
+                            - text: Duration
+                            - generic [ref=e270]: "*"
+                          - generic [ref=e275]:
+                            - generic [ref=e277] [cursor=pointer]:
+                              - radio "Hours" [ref=e279]
+                              - generic [ref=e281]: Hours
+                            - generic [ref=e283] [cursor=pointer]:
+                              - radio "Days" [checked] [ref=e285]
+                              - generic [ref=e287]: Days
+                        - generic [ref=e289]:
+                          - generic "Start Date" [ref=e291]:
+                            - text: Start Date
+                            - generic [ref=e292]: "*"
+                          - generic [ref=e297]:
+                            - textbox "Select date" [ref=e298]: 17/07/2026
+                            - generic:
+                              - img "calendar":
+                                - img
+                            - button "close-circle" [ref=e299] [cursor=pointer]:
+                              - img "close-circle" [ref=e300]:
+                                - img [ref=e301]
+                        - generic [ref=e304]:
+                          - generic "End Date" [ref=e306]:
+                            - text: End Date
+                            - generic [ref=e307]: "*"
+                          - generic [ref=e312]:
+                            - textbox "Select date" [ref=e313]: 17/07/2026
+                            - generic:
+                              - img "calendar":
+                                - img
+                            - button "close-circle" [ref=e314] [cursor=pointer]:
+                              - img "close-circle" [ref=e315]:
+                                - img [ref=e316]
+                        - generic [ref=e325]:
+                          - alert [ref=e326]:
+                            - img "check-circle" [ref=e327]:
+                              - img [ref=e328]
+                            - generic [ref=e332]: "Great!: You have selected to take 1 day off"
+                            - button "close" [ref=e333] [cursor=pointer]:
+                              - img "close" [ref=e334]:
+                                - img [ref=e335]
+                          - alert [ref=e337]:
+                            - img "info-circle" [ref=e338]:
+                              - img [ref=e339]
+                            - generic [ref=e343]: "Available days: Please note that you only have 65 day(s) (current leave cycle) left for this particular leave type"
+                            - button "close" [ref=e344] [cursor=pointer]:
+                              - img "close" [ref=e345]:
+                                - img [ref=e346]
+                        - generic [ref=e349]:
+                          - generic "Address" [ref=e351]:
+                            - text: Address
+                            - generic [ref=e352]: "*"
+                          - textbox [active] [ref=e356]: 12 West Avenue, Pretoria
+                        - generic [ref=e358]:
+                          - generic "Telephone" [ref=e360]
+                          - textbox [ref=e365]: "+27761425683"
+                        - generic [ref=e367]:
+                          - generic "Notes" [ref=e369]
+                          - textbox [ref=e373]
+                        - generic [ref=e375]:
+                          - generic "Supporting documents" [ref=e377]
+                          - button "upload (press to upload)" [ref=e385] [cursor=pointer]:
+                            - img "upload" [ref=e387]:
+                              - img [ref=e388]
+                            - generic [ref=e390]: (press to upload)
+                        - strong [ref=e399]:
+                          - text: "Your leave will be routed as follows:"
+                          - text: "Recommender: Infra Manager-1-(Kavitha Naidoo)-Infrastructure"
+                          - text: "Approver: HOD - Infrasturcture-1-(Naledi weeeee Khumalo)-Infrastructure"
+                      - generic [ref=e402]:
+                        - generic [ref=e403]:
+                          - generic [ref=e404]:
+                            - generic [ref=e407]: Existing Leave
+                            - generic [ref=e410]: Existing in progress cancellation
+                            - generic [ref=e413]: Public Holidays
+                            - generic [ref=e416]: Colleague Leave
+                          - generic [ref=e417] [cursor=pointer]:
+                            - text: Views
+                            - img "down" [ref=e418]:
+                              - img [ref=e419]
+                        - generic [ref=e421]:
+                          - generic [ref=e422]:
+                            - generic [ref=e423]:
+                              - button "Today" [ref=e424]
+                              - button "Back" [ref=e425]
+                              - button "Next" [ref=e426]
+                            - generic [ref=e427]: June 2026
+                          - table "Month View" [ref=e428]:
+                            - row "Sun Mon Tue Wed Thu Fri Sat" [ref=e429]:
+                              - columnheader "Sun" [ref=e431]
+                              - columnheader "Mon" [ref=e433]
+                              - columnheader "Tue" [ref=e435]
+                              - columnheader "Wed" [ref=e437]
+                              - columnheader "Thu" [ref=e439]
+                              - columnheader "Fri" [ref=e441]
+                              - columnheader "Sat" [ref=e443]
+                            - rowgroup [ref=e444]:
+                              - row "31 01 02 03 04 05 06" [ref=e453]:
+                                - generic [ref=e454]:
+                                  - cell "31" [ref=e455]:
+                                    - button "31" [ref=e456] [cursor=pointer]
+                                  - cell "01" [ref=e457]:
+                                    - button "01" [ref=e458] [cursor=pointer]
+                                  - cell "02" [ref=e459]:
+                                    - button "02" [ref=e460] [cursor=pointer]
+                                  - cell "03" [ref=e461]:
+                                    - button "03" [ref=e462] [cursor=pointer]
+                                  - cell "04" [ref=e463]:
+                                    - button "04" [ref=e464] [cursor=pointer]
+                                  - cell "05" [ref=e465]:
+                                    - button "05" [ref=e466] [cursor=pointer]
+                                  - cell "06" [ref=e467]:
+                                    - button "06" [ref=e468] [cursor=pointer]
+                            - rowgroup [ref=e469]:
+                              - row "07 08 09 10 11 12 13 Annual Leave" [ref=e478]:
+                                - generic [ref=e479]:
+                                  - cell "07" [ref=e480]:
+                                    - button "07" [ref=e481] [cursor=pointer]
+                                  - cell "08" [ref=e482]:
+                                    - button "08" [ref=e483] [cursor=pointer]
+                                  - cell "09" [ref=e484]:
+                                    - button "09" [ref=e485] [cursor=pointer]
+                                  - cell "10" [ref=e486]:
+                                    - button "10" [ref=e487] [cursor=pointer]
+                                  - cell "11" [ref=e488]:
+                                    - button "11" [ref=e489] [cursor=pointer]
+                                  - cell "12" [ref=e490]:
+                                    - button "12" [ref=e491] [cursor=pointer]
+                                  - cell "13" [ref=e492]:
+                                    - button "13" [ref=e493] [cursor=pointer]
+                                - generic "Annual Leave" [ref=e498] [cursor=pointer]:
+                                  - generic [ref=e500]: Annual Leave
+                            - rowgroup [ref=e501]:
+                              - row "14 15 16 17 18 19 20 Annual Leave" [ref=e510]:
+                                - generic [ref=e511]:
+                                  - cell "14" [ref=e512]:
+                                    - button "14" [ref=e513] [cursor=pointer]
+                                  - cell "15" [ref=e514]:
+                                    - button "15" [ref=e515] [cursor=pointer]
+                                  - cell "16" [ref=e516]:
+                                    - button "16" [ref=e517] [cursor=pointer]
+                                  - cell "17" [ref=e518]:
+                                    - button "17" [ref=e519] [cursor=pointer]
+                                  - cell "18" [ref=e520]:
+                                    - button "18" [ref=e521] [cursor=pointer]
+                                  - cell "19" [ref=e522]:
+                                    - button "19" [ref=e523] [cursor=pointer]
+                                  - cell "20" [ref=e524]:
+                                    - button "20" [ref=e525] [cursor=pointer]
+                                - generic "Annual Leave" [ref=e530] [cursor=pointer]:
+                                  - generic [ref=e532]: Annual Leave
+                            - rowgroup [ref=e533]:
+                              - row "21 22 23 24 25 26 27 Annual Leave" [ref=e542]:
+                                - generic [ref=e543]:
+                                  - cell "21" [ref=e544]:
+                                    - button "21" [ref=e545] [cursor=pointer]
+                                  - cell "22" [ref=e546]:
+                                    - button "22" [ref=e547] [cursor=pointer]
+                                  - cell "23" [ref=e548]:
+                                    - button "23" [ref=e549] [cursor=pointer]
+                                  - cell "24" [ref=e550]:
+                                    - button "24" [ref=e551] [cursor=pointer]
+                                  - cell "25" [ref=e552]:
+                                    - button "25" [ref=e553] [cursor=pointer]
+                                  - cell "26" [ref=e554]:
+                                    - button "26" [ref=e555] [cursor=pointer]
+                                  - cell "27" [ref=e556]:
+                                    - button "27" [ref=e557] [cursor=pointer]
+                                - generic "Annual Leave" [ref=e562] [cursor=pointer]:
+                                  - generic [ref=e564]: Annual Leave
+                            - rowgroup [ref=e565]:
+                              - row "28 29 30 01 02 03 04" [ref=e574]:
+                                - generic [ref=e575]:
+                                  - cell "28" [ref=e576]:
+                                    - button "28" [ref=e577] [cursor=pointer]
+                                  - cell "29" [ref=e578]:
+                                    - button "29" [ref=e579] [cursor=pointer]
+                                  - cell "30" [ref=e580]:
+                                    - button "30" [ref=e581] [cursor=pointer]
+                                  - cell "01" [ref=e582]:
+                                    - button "01" [ref=e583] [cursor=pointer]
+                                  - cell "02" [ref=e584]:
+                                    - button "02" [ref=e585] [cursor=pointer]
+                                  - cell "03" [ref=e586]:
+                                    - button "03" [ref=e587] [cursor=pointer]
+                                  - cell "04" [ref=e588]:
+                                    - button "04" [ref=e589] [cursor=pointer]
+                    - generic [ref=e591]:
+                      - checkbox [ref=e599] [cursor=pointer]
+                      - generic [ref=e606]: I hereby certify that I have acquainted myself of my available leave credits and with the rules governing the leave I have applied for. Further, I am certifying that the information provided is correct. Any falsification of information in this regard may form ground for disciplinary action. I fully understand that if I do not have sufficient leave credits from my previous or current leave cycle to cover for my application, my capped leave as at 30 June 2000 will be automatically utilised.
+              - generic [ref=e608]:
+                - button "Close" [ref=e614] [cursor=pointer]:
+                  - generic [ref=e615]: Close
+                - button "Submit" [disabled] [ref=e621]:
+                  - generic: Submit
+  - alert [ref=e622]
+```
+
+# Test source
+
+```ts
+  28  | import { saveSubmittedApplication } from './shared';
+  29  | 
+  30  | const APP_URL = 'https://pd-hcm-adminportal-qa.shesha.app/';
+  31  | const USER = { user: 'GOV003', password: '123qwe' };
+  32  | const MY_ITEMS_URL = `${APP_URL}dynamic/SaGov.Leave/my_items2`;
+  33  | 
+  34  | async function loginAsUser(page: Page) {
+  35  |   await page.goto(APP_URL);
+  36  |   await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  37  |   await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  38  |   await page.getByRole('button', { name: 'Sign In' }).click();
+  39  |   await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
+  40  |   await page.waitForLoadState('networkidle');
+  41  | }
+  42  | 
+  43  | // Workflows -> My Items -> Create New -> SaGov Leave Application -> Draft form.
+  44  | async function openNewLeaveApplication(page: Page) {
+  45  |   await loginAsUser(page);
+  46  |   await page.goto(MY_ITEMS_URL);
+  47  |   await page.waitForLoadState('networkidle');
+  48  |   await page.getByRole('button', { name: 'plus Create New down' }).click();
+  49  |   await page.getByRole('menuitem', { name: 'SaGov Leave Application', exact: true }).click();
+  50  |   await expect(page.getByRole('heading', { name: 'New Leave Application:' })).toBeVisible({ timeout: 30000 });
+  51  | }
+  52  | 
+  53  | // The Category select is a searchable antd combobox scoped by its form-item label.
+  54  | async function selectCategory(page: Page, name: string) {
+  55  |   const combo = page.locator('.ant-form-item:has(label[title="Category"]) input[role="combobox"]');
+  56  |   await combo.click();
+  57  |   await combo.fill(name);
+  58  |   await page.locator('.ant-select-item-option', { hasText: name }).first().click();
+  59  | }
+  60  | 
+  61  | // Sub-Category appears once a Category is chosen. Its dropdown lists 'Annual Leave' and
+  62  | // 'Unpaid Leave Authorized' — scope to that open dropdown so the lingering Category dropdown
+  63  | // (which also offers 'Annual Leave') is not matched by mistake.
+  64  | async function selectSubCategory(page: Page, name: string) {
+  65  |   const combo = page.locator('.ant-form-item:has(label[title="Sub-Category"]) input[role="combobox"]');
+  66  |   await combo.click();
+  67  |   await page.locator(
+  68  |     '.ant-select-dropdown:not(.ant-select-dropdown-hidden):has-text("Unpaid Leave Authorized") .ant-select-item-option',
+  69  |     { hasText: name },
+  70  |   ).first().click();
+  71  | }
+  72  | 
+  73  | const pad = (n: number) => String(n).padStart(2, '0');
+  74  | const fmtDate = (d: Date) => `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()}`;
+  75  | 
+  76  | // Pick a future weekday, set Start = End = that day, and confirm the form does not flag an overlap
+  77  | // with existing leave. On a clash, step a week forward and retry. Returns the date used (dd/mm/yyyy).
+  78  | async function fillNonOverlappingSingleDay(page: Page): Promise<string> {
+  79  |   const start = page.getByRole('textbox', { name: 'Select date' }).first();
+  80  |   const end = page.getByRole('textbox', { name: 'Select date' }).nth(1);
+  81  |   const base = new Date();
+  82  |   base.setDate(base.getDate() + 42); // ~6 weeks out, clear of the seeded test data
+  83  |   for (let i = 0; i < 10; i++) {
+  84  |     const d = new Date(base);
+  85  |     d.setDate(base.getDate() + i * 7);
+  86  |     while (d.getDay() === 0 || d.getDay() === 6) d.setDate(d.getDate() + 1); // roll onto a weekday
+  87  |     const date = fmtDate(d);
+  88  |     await start.fill(date);
+  89  |     await start.press('Enter');
+  90  |     await end.fill(date);
+  91  |     await end.press('Enter');
+  92  |     await page.waitForTimeout(1000);
+  93  |     if (await page.getByText('There are overlaps with existing leave requests').count() === 0) {
+  94  |       return date;
+  95  |     }
+  96  |   }
+  97  |   throw new Error('Could not find a non-overlapping leave date after 10 attempts');
+  98  | }
+  99  | 
+  100 | // Read the generated reference number from the form header ("Ref No: LA2026/####").
+  101 | async function readLeaveRef(page: Page): Promise<string> {
+  102 |   const el = page.getByText(/Ref No:\s*LA\d{4}\/\d+/).first();
+  103 |   await expect(el).toBeVisible({ timeout: 30000 });
+  104 |   const txt = (await el.textContent()) || '';
+  105 |   const m = txt.match(/LA\d{4}\/\d+/);
+  106 |   if (!m) throw new Error(`Could not parse leave ref from "${txt}"`);
+  107 |   return m[0];
+  108 | }
+  109 | 
+  110 | // Category -> Sub-Category -> Duration -> Start/End date. Shared by the banner/balance/submit cases.
+  111 | async function fillCoreLeaveFields(page: Page): Promise<string> {
+  112 |   await selectCategory(page, 'Annual Leave');
+  113 |   await selectSubCategory(page, 'Annual Leave');
+  114 |   await page.getByRole('radio', { name: 'Days' }).check();
+  115 |   return await fillNonOverlappingSingleDay(page);
+  116 | }
+  117 | 
+  118 | // SEEDED submit flow (recorded live). Fills every required field in the requested order so the
+  119 | // certification checkbox + Submit button enable, then leaves the form ready to Submit. Returns the
+  120 | // generated ref + the start date so the chain can target this application downstream.
+  121 | async function fillLeaveApplicationReadyToSubmit(page: Page): Promise<{ ref: string; startDate: string }> {
+  122 |   await openNewLeaveApplication(page);
+  123 |   const ref = await readLeaveRef(page);
+  124 |   const startDate = await fillCoreLeaveFields(page);
+  125 |   // Address (required)
+  126 |   await page.locator('.ant-form-item:has(label[title="Address"])').getByRole('textbox').fill('12 West Avenue, Pretoria');
+  127 |   // Certification checkbox — enables Submit once the required fields are present.
+> 128 |   await page.locator('.ant-checkbox-wrapper').filter({ hasText: 'I hereby certify' }).getByRole('checkbox').check();
+      |                                                                                                             ^ TimeoutError: locator.check: Timeout 15000ms exceeded.
+  129 |   await expect(page.getByRole('button', { name: 'Submit', exact: true }).first()).toBeEnabled({ timeout: 15000 });
+  130 |   await page.waitForTimeout(1000); // let the form's scripts settle before Submit
+  131 |   return { ref, startDate };
+  132 | }
+  133 | 
+  134 | test.describe('ELEAVE-SMOKE-APPLY — Application for Leave', () => {
+  135 | 
+  136 |   // ADO #101956
+  137 |   test('TC-01: Create New Leave Application — login and reach My Items', async ({ page }) => {
+  138 |     // STEP 1: NAVIGATE to the app
+  139 |     await page.goto(APP_URL);
+  140 |     // STEP 2: SNAPSHOT — confirm login page is visible
+  141 |     // STEP 3: TYPE Username field with `GOV003`
+  142 |     await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  143 |     // STEP 4: TYPE Password field with `123qwe`
+  144 |     await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  145 |     // STEP 5: CLICK the Sign In button
+  146 |     await page.getByRole('button', { name: 'Sign In' }).click();
+  147 |     // STEP 6: WAIT for the landing page to load
+  148 |     await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
+  149 |     await page.waitForLoadState('networkidle');
+  150 |     // STEP 7: CLICK Workflows -> My Items
+  151 |     await page.getByRole('menuitem', { name: 'apartment Workflows' }).click();
+  152 |     // The side-menu flyout animates and an overlay can intercept the first click (menu-expand
+  153 |     // race); wait for the My Items entry, then click its link, forcing past the transient overlay.
+  154 |     const myItems = page.getByRole('menuitem', { name: 'My Items' });
+  155 |     await myItems.waitFor({ state: 'visible' });
+  156 |     await myItems.getByRole('link', { name: 'My Items' }).click({ force: true });
+  157 |     // STEP 8: WAIT for the My Items page to load
+  158 |     await page.waitForURL(/my_items2/, { timeout: 30000 });
+  159 |     // ASSERT (BLOCKING) not on /login and the My Items page is displayed
+  160 |     await expect(page).not.toHaveURL(/login/i);
+  161 |     await expect(page.getByRole('heading', { name: 'My Items' })).toBeVisible({ timeout: 30000 });
+  162 |   });
+  163 | 
+  164 |   // ADO #101957
+  165 |   test('TC-02: My Items page loads with leave application list', async ({ page }) => {
+  166 |     await loginAsUser(page);
+  167 |     await page.goto(MY_ITEMS_URL);
+  168 |     await page.waitForLoadState('networkidle');
+  169 |     // STEP 1: SNAPSHOT Observe the My Items list and scrollbar
+  170 |     // ASSERT (BLOCKING) the leave application list is displayed
+  171 |     await expect(page.getByRole('heading', { name: 'My Items' })).toBeVisible({ timeout: 30000 });
+  172 |     await expect(page.getByRole('table')).toBeVisible();
+  173 |     await expect(page.getByRole('columnheader', { name: 'Ref No' })).toBeVisible();
+  174 |   });
+  175 | 
+  176 |   // ADO #101958
+  177 |   test('TC-03: Create New dropdown shows SaGov Leave Application option', async ({ page }) => {
+  178 |     await loginAsUser(page);
+  179 |     await page.goto(MY_ITEMS_URL);
+  180 |     await page.waitForLoadState('networkidle');
+  181 |     // STEP 1-2: SNAPSHOT + CLICK the Create New button
+  182 |     await page.getByRole('button', { name: 'plus Create New down' }).click();
+  183 |     // STEP 3: SNAPSHOT Inspect the dropdown items
+  184 |     // ASSERT (BLOCKING) 'SaGov Leave Application' is listed as an option
+  185 |     await expect(page.getByRole('menuitem', { name: 'SaGov Leave Application', exact: true })).toBeVisible();
+  186 |   });
+  187 | 
+  188 |   // ADO #101959
+  189 |   test('TC-04: New leave application form opens on option selection', async ({ page }) => {
+  190 |     await openNewLeaveApplication(page);
+  191 |     // STEP 1-2: SNAPSHOT + CLICK the 'SaGov Leave Application' option (handled by helper)
+  192 |     // STEP 3: SNAPSHOT Inspect form fields
+  193 |     // ASSERT (BLOCKING) the form shows Category, Start Date, End Date, Address, Telephone
+  194 |     await expect(page.locator('label[title="Category"]')).toBeVisible();
+  195 |     await expect(page.getByText('Start Date')).toBeVisible();
+  196 |     await expect(page.getByText('End Date')).toBeVisible();
+  197 |     await expect(page.getByText('Address').first()).toBeVisible();
+  198 |     await expect(page.getByText('Telephone')).toBeVisible();
+  199 |     // NOTE: Sub-Category and the Duration (Days/Hours) radio appear once a Category is chosen.
+  200 |   });
+  201 | 
+  202 |   // ADO #101960
+  203 |   test('TC-05: Category and sub-category populate correctly', async ({ page }) => {
+  204 |     await openNewLeaveApplication(page);
+  205 |     // STEP 1-3: select 'Annual Leave' in Category
+  206 |     await selectCategory(page, 'Annual Leave');
+  207 |     await expect(page.locator('.ant-form-item:has(label[title="Category"]) .ant-select-selection-item')).toHaveText('Annual Leave');
+  208 |     // STEP 4-6: the Sub-Category select is revealed once a Category is chosen; pick 'Annual Leave'
+  209 |     await selectSubCategory(page, 'Annual Leave');
+  210 |     // ASSERT (BLOCKING) Sub-Category field displays 'Annual Leave' with no validation error
+  211 |     await expect(page.locator('.ant-form-item:has(label[title="Sub-Category"]) .ant-select-selection-item')).toHaveText('Annual Leave');
+  212 |   });
+  213 | 
+  214 |   // ADO #101961 — on v76 the green confirmation banner now surfaces.
+  215 |   test("TC-06: Same-day start and end date shows '1 day off' confirmation", async ({ page }) => {
+  216 |     await openNewLeaveApplication(page);
+  217 |     // Category -> Sub-Category -> Duration -> Start = End (a clean single working day)
+  218 |     await fillCoreLeaveFields(page);
+  219 |     // STEP 3: SNAPSHOT Observe the confirmation banner
+  220 |     // ASSERT (BLOCKING) a green '1 day off' confirmation is displayed
+  221 |     await expect(page.getByText(/You have selected to take 1 day off/i)).toBeVisible({ timeout: 15000 });
+  222 |   });
+  223 | 
+  224 |   // ADO #101962 — on v76 the available-days balance message now surfaces on the applicant form.
+  225 |   test('TC-07: Available leave balance message shown after date selection', async ({ page }) => {
+  226 |     await openNewLeaveApplication(page);
+  227 |     await fillCoreLeaveFields(page);
+  228 |     // STEP 1: SNAPSHOT Observe the informational message box
+```

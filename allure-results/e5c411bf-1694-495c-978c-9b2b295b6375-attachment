@@ -1,0 +1,536 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\HCM\test-plans\eLeave\capture-new-leave-application.spec.ts >> ELEAVE-CAPTURE — Capture New Leave Application >> TC-42: Display 'Family Relationship' field when 'Family Responsibility Leave' is selected
+- Location: projects\HCM\test-plans\eLeave\capture-new-leave-application.spec.ts:360:7
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for getByTitle('Family Rsponsibility', { exact: true })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - menu [ref=e9]:
+        - menuitem "calendar Leave Management" [ref=e10] [cursor=pointer]:
+          - img "calendar" [ref=e11]:
+            - img [ref=e12]
+          - generic [ref=e14]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e15] [cursor=pointer]:
+          - img "calendar" [ref=e16]:
+            - img [ref=e17]
+          - generic [ref=e19]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e20] [cursor=pointer]:
+          - img "book" [ref=e21]:
+            - img [ref=e22]
+          - generic [ref=e24]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e25] [cursor=pointer]:
+          - img "bank" [ref=e26]:
+            - img [ref=e27]
+          - generic [ref=e29]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e30] [cursor=pointer]:
+          - img "apartment" [ref=e31]:
+            - img [ref=e32]
+          - generic [ref=e34]: Workflows
+        - menuitem "tool Administration" [ref=e35] [cursor=pointer]:
+          - img "tool" [ref=e36]:
+            - img [ref=e37]
+          - generic [ref=e39]: Administration
+        - menuitem "setting Configurations" [ref=e40] [cursor=pointer]:
+          - img "setting" [ref=e41]:
+            - img [ref=e42]
+          - generic [ref=e44]: Configurations
+      - img "menu-unfold" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e57]:
+          - generic [ref=e59]:
+            - button "edit" [ref=e60] [cursor=pointer]:
+              - img "edit" [ref=e61]:
+                - img [ref=e62]
+            - paragraph [ref=e64] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e65]:
+              - generic [ref=e66]: Live
+              - img "close" [ref=e67] [cursor=pointer]:
+                - img [ref=e68]
+          - generic [ref=e78]:
+            - link [ref=e84] [cursor=pointer]:
+              - /url: /
+              - img [ref=e94]
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e99]:
+                  - generic [ref=e100]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e102] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e106] [cursor=pointer]:
+                  - img "block" [ref=e107]:
+                    - img [ref=e108]
+                  - generic [ref=e110]: Live
+              - generic [ref=e112]:
+                - generic [ref=e113] [cursor=pointer]:
+                  - text: Thabo Musa Victor Mthembu
+                  - img "down" [ref=e114]:
+                    - img [ref=e115]
+                - img "user" [ref=e118]:
+                  - img [ref=e119]
+      - main [ref=e121]:
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - generic [ref=e130]:
+              - heading "New Leave Application:" [level=4] [ref=e132]:
+                - strong [ref=e133]: "New Leave Application:"
+              - generic [ref=e138]: Draft
+            - generic [ref=e139]:
+              - generic [ref=e140]: "Ref No: LA2026/11912"
+              - generic [ref=e141]: "Created by: Thabo Musa Victor Mthembu a few seconds ago"
+          - generic [ref=e146]:
+            - generic [ref=e148]:
+              - button "edit" [ref=e149] [cursor=pointer]:
+                - img "edit" [ref=e150]:
+                  - img [ref=e151]
+              - paragraph [ref=e153] [cursor=pointer]: SaGov.Leave/sagov-leave-application v74
+              - generic [ref=e154]:
+                - generic [ref=e155]: Live
+                - img "close" [ref=e156] [cursor=pointer]:
+                  - img [ref=e157]
+            - generic [ref=e167]:
+              - generic [ref=e169]:
+                - alert [ref=e170]:
+                  - img "info-circle" [ref=e171]:
+                    - img [ref=e172]
+                  - generic [ref=e176]: Capture the details of the leave you wish to apply for below.
+                  - button "close" [ref=e177] [cursor=pointer]:
+                    - img "close" [ref=e178]:
+                      - img [ref=e179]
+                - generic [ref=e184]:
+                  - generic [ref=e185]:
+                    - img "right" [ref=e187] [cursor=pointer]:
+                      - img [ref=e188]
+                    - generic [ref=e190]: Leave Application
+                  - generic [ref=e195]:
+                    - generic [ref=e198]:
+                      - generic [ref=e200]:
+                        - generic [ref=e202]:
+                          - generic "Who are you requesting the leave for?" [ref=e204]:
+                            - text: Who are you requesting the leave for?
+                            - generic [ref=e205]: "*"
+                          - generic [ref=e210]:
+                            - generic [ref=e212] [cursor=pointer]:
+                              - radio "Myself" [checked] [ref=e214]
+                              - generic [ref=e216]: Myself
+                            - generic [ref=e218] [cursor=pointer]:
+                              - radio "Someone else" [ref=e220]
+                              - generic [ref=e222]: Someone else
+                        - generic [ref=e224]:
+                          - generic "PERSAL No" [ref=e226]
+                          - generic [ref=e229]: GOV00003
+                        - generic [ref=e231]:
+                          - generic "Category" [ref=e233]:
+                            - text: Category
+                            - generic [ref=e234]: "*"
+                          - generic [ref=e238] [cursor=pointer]:
+                            - combobox [expanded] [active] [ref=e241]:
+                              - listbox:
+                                - option "Absences not Recorded as Leave": b8817fe9-1938-460b-856e-8e660889178b
+                            - generic:
+                              - img:
+                                - img
+                      - generic [ref=e243]:
+                        - generic "Start Date" [ref=e245]:
+                          - text: Start Date
+                          - generic [ref=e246]: "*"
+                        - generic [ref=e251]:
+                          - textbox "Select date" [ref=e252]
+                          - generic:
+                            - img "calendar":
+                              - img
+                      - generic [ref=e254]:
+                        - generic "End Date" [ref=e256]:
+                          - text: End Date
+                          - generic [ref=e257]: "*"
+                        - generic [ref=e262]:
+                          - textbox "Select date" [ref=e263]
+                          - generic:
+                            - img "calendar":
+                              - img
+                      - generic [ref=e272]:
+                        - generic "Address" [ref=e274]:
+                          - text: Address
+                          - generic [ref=e275]: "*"
+                        - textbox [ref=e279]
+                      - generic [ref=e281]:
+                        - generic "Telephone" [ref=e283]
+                        - textbox [ref=e288]: "+27761425683"
+                      - generic [ref=e290]:
+                        - generic "Notes" [ref=e292]
+                        - textbox [ref=e296]
+                      - generic [ref=e298]:
+                        - generic "Supporting documents" [ref=e300]
+                        - button "upload (press to upload)" [ref=e308] [cursor=pointer]:
+                          - img "upload" [ref=e310]:
+                            - img [ref=e311]
+                          - generic [ref=e313]: (press to upload)
+                      - strong [ref=e322]:
+                        - text: "Your leave will be routed as follows:"
+                        - text: "Recommender: Infra Manager-1-(Kavitha Naidoo)-Infrastructure"
+                        - text: "Approver: HOD - Infrasturcture-1-(Naledi weeeee Khumalo)-Infrastructure"
+                    - generic [ref=e325]:
+                      - generic [ref=e326]:
+                        - generic [ref=e327]:
+                          - generic [ref=e330]: Existing Leave
+                          - generic [ref=e333]: Existing in progress cancellation
+                          - generic [ref=e336]: Public Holidays
+                          - generic [ref=e339]: Colleague Leave
+                        - generic [ref=e340] [cursor=pointer]:
+                          - text: Views
+                          - img "down" [ref=e341]:
+                            - img [ref=e342]
+                      - generic [ref=e344]:
+                        - generic [ref=e345]:
+                          - generic [ref=e346]:
+                            - button "Today" [ref=e347]
+                            - button "Back" [ref=e348]
+                            - button "Next" [ref=e349]
+                          - generic [ref=e350]: June 2026
+                        - table "Month View" [ref=e351]:
+                          - row "Sun Mon Tue Wed Thu Fri Sat" [ref=e352]:
+                            - columnheader "Sun" [ref=e354]
+                            - columnheader "Mon" [ref=e356]
+                            - columnheader "Tue" [ref=e358]
+                            - columnheader "Wed" [ref=e360]
+                            - columnheader "Thu" [ref=e362]
+                            - columnheader "Fri" [ref=e364]
+                            - columnheader "Sat" [ref=e366]
+                          - rowgroup [ref=e367]:
+                            - row "31 01 02 03 04 05 06" [ref=e376]:
+                              - generic [ref=e377]:
+                                - cell "31" [ref=e378]:
+                                  - button "31" [ref=e379] [cursor=pointer]
+                                - cell "01" [ref=e380]:
+                                  - button "01" [ref=e381] [cursor=pointer]
+                                - cell "02" [ref=e382]:
+                                  - button "02" [ref=e383] [cursor=pointer]
+                                - cell "03" [ref=e384]:
+                                  - button "03" [ref=e385] [cursor=pointer]
+                                - cell "04" [ref=e386]:
+                                  - button "04" [ref=e387] [cursor=pointer]
+                                - cell "05" [ref=e388]:
+                                  - button "05" [ref=e389] [cursor=pointer]
+                                - cell "06" [ref=e390]:
+                                  - button "06" [ref=e391] [cursor=pointer]
+                          - rowgroup [ref=e392]:
+                            - row "07 08 09 10 11 12 13 Annual Leave" [ref=e401]:
+                              - generic [ref=e402]:
+                                - cell "07" [ref=e403]:
+                                  - button "07" [ref=e404] [cursor=pointer]
+                                - cell "08" [ref=e405]:
+                                  - button "08" [ref=e406] [cursor=pointer]
+                                - cell "09" [ref=e407]:
+                                  - button "09" [ref=e408] [cursor=pointer]
+                                - cell "10" [ref=e409]:
+                                  - button "10" [ref=e410] [cursor=pointer]
+                                - cell "11" [ref=e411]:
+                                  - button "11" [ref=e412] [cursor=pointer]
+                                - cell "12" [ref=e413]:
+                                  - button "12" [ref=e414] [cursor=pointer]
+                                - cell "13" [ref=e415]:
+                                  - button "13" [ref=e416] [cursor=pointer]
+                              - generic "Annual Leave" [ref=e421] [cursor=pointer]:
+                                - generic [ref=e423]: Annual Leave
+                          - rowgroup [ref=e424]:
+                            - row "14 15 16 17 18 19 20" [ref=e433]:
+                              - generic [ref=e434]:
+                                - cell "14" [ref=e435]:
+                                  - button "14" [ref=e436] [cursor=pointer]
+                                - cell "15" [ref=e437]:
+                                  - button "15" [ref=e438] [cursor=pointer]
+                                - cell "16" [ref=e439]:
+                                  - button "16" [ref=e440] [cursor=pointer]
+                                - cell "17" [ref=e441]:
+                                  - button "17" [ref=e442] [cursor=pointer]
+                                - cell "18" [ref=e443]:
+                                  - button "18" [ref=e444] [cursor=pointer]
+                                - cell "19" [ref=e445]:
+                                  - button "19" [ref=e446] [cursor=pointer]
+                                - cell "20" [ref=e447]:
+                                  - button "20" [ref=e448] [cursor=pointer]
+                          - rowgroup [ref=e449]:
+                            - row "21 22 23 24 25 26 27" [ref=e458]:
+                              - generic [ref=e459]:
+                                - cell "21" [ref=e460]:
+                                  - button "21" [ref=e461] [cursor=pointer]
+                                - cell "22" [ref=e462]:
+                                  - button "22" [ref=e463] [cursor=pointer]
+                                - cell "23" [ref=e464]:
+                                  - button "23" [ref=e465] [cursor=pointer]
+                                - cell "24" [ref=e466]:
+                                  - button "24" [ref=e467] [cursor=pointer]
+                                - cell "25" [ref=e468]:
+                                  - button "25" [ref=e469] [cursor=pointer]
+                                - cell "26" [ref=e470]:
+                                  - button "26" [ref=e471] [cursor=pointer]
+                                - cell "27" [ref=e472]:
+                                  - button "27" [ref=e473] [cursor=pointer]
+                          - rowgroup [ref=e474]:
+                            - row "28 29 30 01 02 03 04" [ref=e483]:
+                              - generic [ref=e484]:
+                                - cell "28" [ref=e485]:
+                                  - button "28" [ref=e486] [cursor=pointer]
+                                - cell "29" [ref=e487]:
+                                  - button "29" [ref=e488] [cursor=pointer]
+                                - cell "30" [ref=e489]:
+                                  - button "30" [ref=e490] [cursor=pointer]
+                                - cell "01" [ref=e491]:
+                                  - button "01" [ref=e492] [cursor=pointer]
+                                - cell "02" [ref=e493]:
+                                  - button "02" [ref=e494] [cursor=pointer]
+                                - cell "03" [ref=e495]:
+                                  - button "03" [ref=e496] [cursor=pointer]
+                                - cell "04" [ref=e497]:
+                                  - button "04" [ref=e498] [cursor=pointer]
+              - button "Close" [ref=e506] [cursor=pointer]:
+                - generic [ref=e507]: Close
+  - alert [ref=e508]
+  - generic [ref=e514]:
+    - generic "Absences not Recorded as Leave" [ref=e515] [cursor=pointer]:
+      - generic [ref=e516]: Absences not Recorded as Leave
+    - generic "Adoption Leave" [ref=e517] [cursor=pointer]:
+      - generic [ref=e518]: Adoption Leave
+    - generic "Amateur Sport – Participation" [ref=e519] [cursor=pointer]:
+      - generic [ref=e520]: Amateur Sport – Participation
+    - generic "Annual Leave" [ref=e521] [cursor=pointer]:
+      - generic [ref=e522]: Annual Leave
+    - generic "Attend Classes During Working Hours" [ref=e523] [cursor=pointer]:
+      - generic [ref=e524]: Attend Classes During Working Hours
+    - generic "Community/ Third Party Protest" [ref=e525] [cursor=pointer]:
+      - generic [ref=e526]: Community/ Third Party Protest
+    - generic "Cultural Events – Participation" [ref=e527] [cursor=pointer]:
+      - generic [ref=e528]: Cultural Events – Participation
+    - generic "Family Rsponsibility" [ref=e529] [cursor=pointer]:
+      - generic [ref=e530]: Family Rsponsibility
+    - generic "Leave for Occupational Diseases" [ref=e531] [cursor=pointer]:
+      - generic [ref=e532]: Leave for Occupational Diseases
+    - generic "Maternity Leave" [ref=e533] [cursor=pointer]:
+      - generic [ref=e534]: Maternity Leave
+```
+
+# Test source
+
+```ts
+  268 |     await openNewLeaveApplication(page);
+  269 |     // STEP 1: NAVIGATE Navigate to the new leave application form
+  270 |     // (handled by openNewLeaveApplication)
+  271 |     // STEP 2: SNAPSHOT Verify the approver field is prepopulated
+  272 |     // ASSERT (BLOCKING) The approver field is prepopulated with the correct data
+  273 |     await expect(page.getByText(/Approver:\s*.+/)).toBeVisible();
+  274 |   });
+  275 | 
+  276 |   // ADO #86394
+  277 |   test('TC-32: The telephone field should be a read-only field', async ({ page }) => {
+  278 |     await openNewLeaveApplication(page);
+  279 |     // STEP 1: NAVIGATE Navigate to the eleave-wf-capture-newleaveapplication view
+  280 |     // (handled by openNewLeaveApplication)
+  281 |     // STEP 2: SNAPSHOT Locate the telephone field
+  282 |     // STEP 3: SNAPSHOT — confirm the target element for: Attempt to edit the telephone field
+  283 |     // STEP 4: CLICK Attempt to edit the telephone field
+  284 |     // ASSERT (BLOCKING) The telephone field is displayed as read-only and cannot be edited
+  285 |     // The Telephone field is prepopulated (+27...) and not editable on the live form.
+  286 |     await expect(page.locator('input[value^="+27"]')).toBeVisible();
+  287 |     // TODO[assertion]: confirm the telephone input carries readOnly/disabled (capture the exact attribute on first run)
+  288 |   });
+  289 | 
+  290 |   // ADO #86395
+  291 |   test('TC-33: The telephone field should contain the mobile number of the applicant', async ({ page }) => {
+  292 |     await openNewLeaveApplication(page);
+  293 |     // STEP 1: NAVIGATE Navigate to the eleave-wf-capture-newleaveapplication view
+  294 |     // (handled by openNewLeaveApplication)
+  295 |     // STEP 2: SNAPSHOT Locate the telephone field
+  296 |     // STEP 3: SNAPSHOT Verify the field contains the mobile number of the applicant
+  297 |     // ASSERT (BLOCKING) The telephone field contains the mobile number of the applicant
+  298 |     await expect(page.locator('input[value^="+27"]')).toBeVisible();
+  299 |   });
+  300 | 
+  301 |   // ADO #86397 — drifted: live v74 form shows Start Date directly (no Days/Hours Duration toggle)
+  302 |   test("TC-34: Display 'Start Date' field when 'Days' option is selected", async ({ page }) => {
+  303 |     await openNewLeaveApplication(page);
+  304 |     // STEP 1-4: live form has no Duration(Days/Hours) toggle; Start Date is shown unconditionally
+  305 |     // ASSERT (BLOCKING) The 'Start Date' field is displayed
+  306 |     await expect(page.getByText('Start Date')).toBeVisible();
+  307 |     // TODO[selector]: plan assumes a Duration "Days" toggle gates Start Date; the v74 form shows it directly — plan likely stale
+  308 |   });
+  309 | 
+  310 |   // ADO #86398 — drifted (see TC-34)
+  311 |   test("TC-35: Display 'End Date' field when 'Days' option is selected", async ({ page }) => {
+  312 |     await openNewLeaveApplication(page);
+  313 |     // ASSERT (BLOCKING) The 'End Date' field is displayed
+  314 |     await expect(page.getByText('End Date')).toBeVisible();
+  315 |     // TODO[selector]: plan assumes a Duration "Days" toggle gates End Date; the v74 form shows it directly — plan likely stale
+  316 |   });
+  317 | 
+  318 |   // ADO #86400 — drifted: no Hours duration option on the live v74 form
+  319 |   test("TC-36: Display 'Date' field when 'Hours' option is selected", async ({ page }) => {
+  320 |     test.skip(true, "The live v74 form has no 'Hours' duration option (only Start Date/End Date). Plan step is stale vs the current form.");
+  321 |   });
+  322 | 
+  323 |   // ADO #86401 — drifted (see TC-36)
+  324 |   test("TC-37: Display 'Start Time' field when 'Hours' option is selected", async ({ page }) => {
+  325 |     test.skip(true, "The live v74 form has no 'Hours' duration option / Start Time field. Plan step is stale vs the current form.");
+  326 |   });
+  327 | 
+  328 |   // ADO #86402 — drifted (see TC-36)
+  329 |   test("TC-38: Display 'End Time' field when 'Hours' option is selected", async ({ page }) => {
+  330 |     test.skip(true, "The live v74 form has no 'Hours' duration option / End Time field. Plan step is stale vs the current form.");
+  331 |   });
+  332 | 
+  333 |   // ADO #86404 — drifted: selecting a Category reveals a Sub-Category (not a "Duration") field
+  334 |   test("TC-39: Display 'Duration' field when 'Annual Leave' is selected", async ({ page }) => {
+  335 |     await openNewLeaveApplication(page);
+  336 |     // STEP 1: NAVIGATE Navigate to the leave application form
+  337 |     // (handled by openNewLeaveApplication)
+  338 |     // STEP 2: SNAPSHOT — confirm the target element for: Select 'Annual Leave' from the leave type options
+  339 |     // STEP 3: SELECT Select 'Annual Leave' from the leave type options
+  340 |     await page.getByRole('combobox').first().click();
+  341 |     await page.getByTitle('Annual Leave', { exact: true }).last().click();
+  342 |     // ASSERT (BLOCKING) The 'Duration' field is displayed on the form
+  343 |     // The live v74 form shows no "Duration" field; selecting a Category reveals "Sub-Category".
+  344 |     await expect(page.getByText('Sub-Category')).toBeVisible();
+  345 |     // TODO[assertion]: plan expects a "Duration" field; the v74 form reveals "Sub-Category" instead — plan likely stale
+  346 |   });
+  347 | 
+  348 |   // ADO #86406
+  349 |   test("TC-40: Display 'Type of Illness' field when 'Normal Sick Leave' is selected", async ({ page }) => {
+  350 |     test.skip(true, "No 'Normal Sick Leave' category on the live v74 form (closest is 'Leave for Occupational Diseases'); 'Type of Illness' field not confirmed. Capture on seeded run.");
+  351 |     // TODO[selector]: confirm sick-leave category label + whether a 'Type of Illness' field renders
+  352 |   });
+  353 | 
+  354 |   // ADO #86407
+  355 |   test("TC-41: 'Type of Illness' field should be a dropdown list", async ({ page }) => {
+  356 |     test.skip(true, "Depends on TC-40's 'Type of Illness' field, not confirmed on the live v74 form.");
+  357 |   });
+  358 | 
+  359 |   // ADO #86409
+  360 |   test("TC-42: Display 'Family Relationship' field when 'Family Responsibility Leave' is selected", async ({ page }) => {
+  361 |     await openNewLeaveApplication(page);
+  362 |     // STEP 1: NAVIGATE Navigate to the leave application form
+  363 |     // (handled by openNewLeaveApplication)
+  364 |     // STEP 2: SNAPSHOT — confirm the target element for: Select 'Family Responsibility Leave'
+  365 |     // STEP 3: SELECT Select 'Family Responsibility Leave' from the leave type options
+  366 |     await page.getByRole('combobox').first().click();
+  367 |     // Live category label is spelled "Family Rsponsibility"
+> 368 |     await page.getByTitle('Family Rsponsibility', { exact: true }).click();
+      |                                                                    ^ TimeoutError: locator.click: Timeout 15000ms exceeded.
+  369 |     // ASSERT (BLOCKING) The 'Family Relationship' field is displayed on the form
+  370 |     // TODO[assertion]: capture the exact conditional field label for Family Responsibility on first seeded run
+  371 |     await expect(page.getByText('Sub-Category')).toBeVisible();
+  372 |   });
+  373 | 
+  374 |   // ADO #86410
+  375 |   test("TC-43: 'Family Relationship' field should be a dropdown", async ({ page }) => {
+  376 |     test.skip(true, "Depends on TC-42's 'Family Relationship' field; the live v74 form surfaces a Sub-Category select instead — confirm on seeded run.");
+  377 |   });
+  378 | 
+  379 |   // ADO #86412
+  380 |   test('TC-44: The system should allow a user to select a leave type', async ({ page }) => {
+  381 |     await openNewLeaveApplication(page);
+  382 |     // STEP 1: NAVIGATE Navigate to the leave application form
+  383 |     // (handled by openNewLeaveApplication)
+  384 |     // STEP 2: SNAPSHOT Verify the presence of a leave type selection field
+  385 |     await expect(page.getByText('Category', { exact: true })).toBeVisible();
+  386 |     // STEP 3: SNAPSHOT — confirm the target element for: Select a leave type from the available options
+  387 |     // STEP 4: SELECT Select a leave type from the available options
+  388 |     await page.getByRole('combobox').first().click();
+  389 |     await page.getByTitle('Annual Leave', { exact: true }).last().click();
+  390 |     // ASSERT (BLOCKING) The user is able to select a leave type from the available options
+  391 |     await expect(page.getByText('Annual Leave')).toBeVisible();
+  392 |   });
+  393 | 
+  394 |   // ADO #86413
+  395 |   test('TC-45: The system should require additional information based on the selected leave type', async ({ page }) => {
+  396 |     await openNewLeaveApplication(page);
+  397 |     // STEP 1: NAVIGATE Navigate to the leave application form
+  398 |     // (handled by openNewLeaveApplication)
+  399 |     // STEP 2: SNAPSHOT — confirm the target element for: Select a specific leave type
+  400 |     // STEP 3: SELECT Select a specific leave type from the leave type selection
+  401 |     await page.getByRole('combobox').first().click();
+  402 |     await page.getByTitle('Annual Leave', { exact: true }).last().click();
+  403 |     // STEP 4: SNAPSHOT Verify that additional information fields appear
+  404 |     // ASSERT (BLOCKING) Additional information fields are displayed based on the selected leave type
+  405 |     await expect(page.getByText('Sub-Category')).toBeVisible();
+  406 |   });
+  407 | 
+  408 |   // ADO #86415
+  409 |   test('TC-46: Applicant Name field should be an auto-search field', async ({ page }) => {
+  410 |     await openNewLeaveApplication(page);
+  411 |     // STEP 1: NAVIGATE Navigate to the eleave-wf-capture-newleaveapplication view
+  412 |     // (handled by openNewLeaveApplication)
+  413 |     // STEP 2: NAVIGATE Focus on the 'Applicant Name' field
+  414 |     // On the live form the applicant selector is the "Leave Profile" search-select (Someone else).
+  415 |     await page.getByRole('radio', { name: 'Someone else' }).click();
+  416 |     await expect(page.getByText('Leave Profile')).toBeVisible();
+  417 |     // STEP 3-5: type a known applicant name and verify suggestions
+  418 |     // ASSERT (BLOCKING) A list of suggested applicant names is displayed as the user types
+  419 |     // TODO[selector]: type into the Leave Profile combobox and assert the suggestion list — capture the exact input/option refs on first seeded run
+  420 |   });
+  421 | 
+  422 |   // ADO #86416
+  423 |   test('TC-47: System prepopulates address and telephone of selected applicant', async ({ page }) => {
+  424 |     test.skip(true, 'Requires selecting a real applicant from the Leave Profile search and asserting prepopulation — needs a known seeded applicant.');
+  425 |   });
+  426 | 
+  427 |   // ADO #86418
+  428 |   test("TC-48: Display 'Applicant Name' field when 'someone else' option is selected", async ({ page }) => {
+  429 |     await openNewLeaveApplication(page);
+  430 |     // STEP 1: NAVIGATE Navigate to the leave application form.
+  431 |     // (handled by openNewLeaveApplication)
+  432 |     // STEP 2: SNAPSHOT — confirm the target element for: Select the 'someone else' option
+  433 |     // STEP 3: SELECT Select the 'someone else' option for requesting leave.
+  434 |     await page.getByRole('radio', { name: 'Someone else' }).click();
+  435 |     // STEP 4: SNAPSHOT Verify the 'Applicant Name' field is displayed.
+  436 |     // ASSERT (BLOCKING) The 'Applicant Name' field is displayed when the 'someone else' option is selected.
+  437 |     // On the live v74 form the applicant selector is labelled "Leave Profile".
+  438 |     await expect(page.getByText('Leave Profile')).toBeVisible();
+  439 |   });
+  440 | 
+  441 |   // ADO #86420
+  442 |   test("TC-49: Prepopulate address when 'Myself' option is selected", async ({ page }) => {
+  443 |     await openNewLeaveApplication(page);
+  444 |     // STEP 1: NAVIGATE Navigate to the leave request form
+  445 |     // (handled by openNewLeaveApplication — defaults to "Myself")
+  446 |     // STEP 2: SNAPSHOT — confirm the target element for: Select the 'Myself' option
+  447 |     // STEP 3: SELECT Select the 'Myself' option
+  448 |     await page.getByRole('radio', { name: 'Myself' }).click();
+  449 |     // STEP 4: SNAPSHOT Verify the address field is prepopulated from the user profile
+  450 |     // ASSERT (BLOCKING) The address field is prepopulated with the user's profile address
+  451 |     // NOTE: GOV003's Address input renders empty in QA; asserting the field is present (label visible).
+  452 |     await expect(page.getByText('Address').first()).toBeVisible();
+  453 |   });
+  454 | 
+  455 |   // ADO #86421
+  456 |   test("TC-50: Prepopulate telephone when 'Myself' option is selected", async ({ page }) => {
+  457 |     await openNewLeaveApplication(page);
+  458 |     // STEP 1: NAVIGATE Navigate to the leave request form
+  459 |     // (handled by openNewLeaveApplication — defaults to "Myself")
+  460 |     // STEP 2: SNAPSHOT — confirm the target element for: Select the 'Myself' option
+  461 |     // STEP 3: SELECT Select the 'Myself' option
+  462 |     await page.getByRole('radio', { name: 'Myself' }).click();
+  463 |     // STEP 4: SNAPSHOT Verify the telephone field is prepopulated from the user profile
+  464 |     // ASSERT (BLOCKING) The telephone field is prepopulated with the user's profile telephone number
+  465 |     await expect(page.locator('input[value^="+27"]')).toBeVisible();
+  466 |   });
+  467 | 
+  468 |   // ADO #86422
+```

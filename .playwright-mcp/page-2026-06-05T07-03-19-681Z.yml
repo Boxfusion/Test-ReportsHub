@@ -1,0 +1,138 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e8]:
+    - complementary [ref=e9]:
+      - menu [ref=e13]:
+        - menuitem "calendar Leave Management" [ref=e14] [cursor=pointer]:
+          - img "calendar" [ref=e15]:
+            - img [ref=e16]
+          - generic [ref=e18]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e19] [cursor=pointer]:
+          - img "calendar" [ref=e20]:
+            - img [ref=e21]
+          - generic [ref=e23]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e24] [cursor=pointer]:
+          - img "book" [ref=e25]:
+            - img [ref=e26]
+          - generic [ref=e28]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e29] [cursor=pointer]:
+          - img "bank" [ref=e30]:
+            - img [ref=e31]
+          - generic [ref=e33]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e34] [cursor=pointer]:
+          - img "apartment" [ref=e35]:
+            - img [ref=e36]
+          - generic [ref=e38]: Workflows
+        - menuitem "tool Administration" [ref=e39] [cursor=pointer]:
+          - img "tool" [ref=e40]:
+            - img [ref=e41]
+          - generic [ref=e43]: Administration
+        - menuitem "setting Configurations" [ref=e44] [cursor=pointer]:
+          - img "setting" [ref=e45]:
+            - img [ref=e46]
+          - generic [ref=e48]: Configurations
+      - img "menu-unfold" [ref=e51] [cursor=pointer]:
+        - img [ref=e52]
+    - generic [ref=e54]:
+      - banner [ref=e55]:
+        - generic [ref=e61]:
+          - generic [ref=e63]:
+            - button "edit" [ref=e64] [cursor=pointer]:
+              - img "edit" [ref=e65]:
+                - img [ref=e66]
+            - paragraph [ref=e68] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e69]:
+              - generic [ref=e70]: Live
+              - img "close" [ref=e71] [cursor=pointer]:
+                - img [ref=e72]
+          - generic [ref=e82]:
+            - link [ref=e88] [cursor=pointer]:
+              - /url: /
+              - img [ref=e98]
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - generic [ref=e103]:
+                  - generic [ref=e104]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e106] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e110] [cursor=pointer]:
+                  - img "block" [ref=e111]:
+                    - img [ref=e112]
+                  - generic [ref=e114]: Live
+              - generic [ref=e116]:
+                - generic [ref=e117] [cursor=pointer]:
+                  - text: Naledi weeeee Khumalo
+                  - img "down" [ref=e118]:
+                    - img [ref=e119]
+                - img "user" [ref=e122]:
+                  - img [ref=e123]
+      - main [ref=e125]:
+        - generic [ref=e131]:
+          - generic [ref=e133]:
+            - button "edit" [ref=e134] [cursor=pointer]:
+              - img "edit" [ref=e135]:
+                - img [ref=e136]
+            - paragraph [ref=e138] [cursor=pointer]: Shesha.Workflow/workflows-inbox v4
+            - generic [ref=e139]:
+              - generic [ref=e140]: Live
+              - img "close" [ref=e141] [cursor=pointer]:
+                - img [ref=e142]
+          - generic [ref=e154]:
+            - generic [ref=e156]:
+              - heading "Incoming Items" [level=4] [ref=e162] [cursor=pointer]
+              - generic [ref=e164]:
+                - generic [ref=e167]:
+                  - textbox [ref=e169]
+                  - button "search" [ref=e172] [cursor=pointer]:
+                    - img "search" [ref=e174]:
+                      - img [ref=e175]
+                - button "filter" [ref=e182] [cursor=pointer]:
+                  - img "filter" [ref=e184]:
+                    - img [ref=e185]
+                - button "sliders" [ref=e192] [cursor=pointer]:
+                  - img "sliders" [ref=e194]:
+                    - img [ref=e195]
+                - button "reload" [ref=e202] [cursor=pointer]:
+                  - img "reload" [ref=e204]:
+                    - img [ref=e205]
+            - button "download Export" [ref=e214] [cursor=pointer]:
+              - img "download" [ref=e216]:
+                - img [ref=e217]
+              - generic [ref=e219]: Export
+            - generic [ref=e226]:
+              - generic [ref=e228]:
+                - img "loading" [ref=e229]:
+                  - img [ref=e230]
+                - generic [ref=e232]: loading...
+              - generic:
+                - generic:
+                  - table:
+                    - row "Ref No Initiator Type Name Action Required Received Date Period In Possession Target Date Status":
+                      - columnheader
+                      - columnheader "Ref No":
+                        - text: Ref No
+                        - separator
+                      - columnheader "Initiator":
+                        - text: Initiator
+                        - separator
+                      - columnheader "Type":
+                        - text: Type
+                        - separator
+                      - columnheader "Name":
+                        - text: Name
+                        - separator
+                      - columnheader "Action Required":
+                        - text: Action Required
+                        - separator
+                      - columnheader "Received Date":
+                        - text: Received Date
+                        - separator
+                      - columnheader "Period In Possession":
+                        - text: Period In Possession
+                        - separator
+                      - columnheader "Target Date":
+                        - text: Target Date
+                        - separator
+                      - columnheader "Status":
+                        - text: Status
+                        - separator
+                    - rowgroup
+  - alert [ref=e6]

@@ -9,7 +9,7 @@
 
 import { test, expect, Page } from '@playwright/test';
 
-const APP_URL = 'https://pd-hcm-adminportal-qa.azurewebsites.net/';
+const APP_URL = 'https://pd-hcm-adminportal-qa.shesha.app/';
 const ADMIN = { user: 'admin', password: 'P@ssw0rd' };
 const INBOX_URL = `${APP_URL}dynamic/Shesha.Workflow/workflows-inbox`;
 
@@ -25,7 +25,7 @@ async function loginAsAdmin(page: Page) {
 test.describe('ELEAVE-NOT-RECOMMEND — Not Recommend Leave Application Dialog', () => {
 
   test('TC-01: Login as Admin', async ({ page }) => {
-    // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.azurewebsites.net/
+    // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
     await page.goto(APP_URL);
     // STEP 2: SNAPSHOT — confirm login page is visible
     // SNAPSHOT: login page
@@ -39,11 +39,12 @@ test.describe('ELEAVE-NOT-RECOMMEND — Not Recommend Leave Application Dialog',
     await page.waitForLoadState('networkidle');
     // ASSERT (BLOCKING) URL no longer contains /login and the authenticated home page is visible
     await expect(page).not.toHaveURL(/login/i);
-    await expect(page.getByRole('menuitem', { name: 'calendar Leave Management' })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('menuitem', { name: 'calendar SaGov Leave Management' })).toBeVisible({ timeout: 30000 });
   });
 
   // ADO Test Case #86608: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86608
-  test.fixme("TC-02: System should decline the leave application when 'Ok' button is clicked", async ({ page }) => {
+  test("TC-02: System should decline the leave application when 'Ok' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: SNAPSHOT — confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
     // SNAPSHOT: confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
@@ -58,7 +59,8 @@ test.describe('ELEAVE-NOT-RECOMMEND — Not Recommend Leave Application Dialog',
   });
 
   // ADO Test Case #86609: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86609
-  test.fixme("TC-03: System should redirect to Home page when 'Ok' button is clicked", async ({ page }) => {
+  test("TC-03: System should redirect to Home page when 'Ok' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: SNAPSHOT — confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
     // SNAPSHOT: confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
@@ -73,7 +75,8 @@ test.describe('ELEAVE-NOT-RECOMMEND — Not Recommend Leave Application Dialog',
   });
 
   // ADO Test Case #86611: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86611
-  test.fixme("TC-04: System closes the dialog when the 'Close' button is clicked", async ({ page }) => {
+  test("TC-04: System closes the dialog when the 'Close' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: SNAPSHOT — confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
     // SNAPSHOT: confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
@@ -88,7 +91,8 @@ test.describe('ELEAVE-NOT-RECOMMEND — Not Recommend Leave Application Dialog',
   });
 
   // ADO Test Case #86612: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86612
-  test.fixme("TC-05: System displays leave application details when the 'Close' button is clicked", async ({ page }) => {
+  test("TC-05: System displays leave application details when the 'Close' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: SNAPSHOT — confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
     // SNAPSHOT: confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
@@ -103,7 +107,8 @@ test.describe('ELEAVE-NOT-RECOMMEND — Not Recommend Leave Application Dialog',
   });
 
   // ADO Test Case #86614: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86614
-  test.fixme("TC-06: The system should not allow a user to not recommend a leave application without populating comments", async ({ page }) => {
+  test("TC-06: The system should not allow a user to not recommend a leave application without populating comments", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: SNAPSHOT — confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
     // SNAPSHOT: confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox

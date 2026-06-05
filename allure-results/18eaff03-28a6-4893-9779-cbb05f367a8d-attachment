@@ -1,0 +1,455 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\HCM\test-plans\eLeave\capture-new-leave-application.spec.ts >> ELEAVE-CAPTURE — Capture New Leave Application >> TC-44: The system should allow a user to select a leave type
+- Location: projects\HCM\test-plans\eLeave\capture-new-leave-application.spec.ts:389:7
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('heading', { name: 'New Leave Application:' })
+Expected: visible
+Timeout: 30000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 30000ms
+  - waiting for getByRole('heading', { name: 'New Leave Application:' })
+
+```
+
+```yaml
+- complementary:
+  - menu:
+    - menuitem "calendar Leave Management":
+      - img "calendar"
+      - text: Leave Management
+    - menuitem "calendar SaGov Leave Management":
+      - img "calendar"
+      - text: SaGov Leave Management
+    - menuitem "book SaGov PMDS":
+      - img "book"
+      - text: SaGov PMDS
+    - menuitem "bank Organisational Structure":
+      - img "bank"
+      - text: Organisational Structure
+    - menuitem "apartment Workflows":
+      - img "apartment"
+      - text: Workflows
+    - menuitem "tool Administration":
+      - img "tool"
+      - text: Administration
+    - menuitem "setting Configurations":
+      - img "setting"
+      - text: Configurations
+  - img "menu-unfold"
+- banner:
+  - button "edit":
+    - img "edit"
+  - paragraph: Shesha/header v14
+  - text: Live
+  - img "close"
+  - link:
+    - /url: /
+    - img
+  - text: Live Mode
+  - switch "Switch to Edit mode"
+  - img "block"
+  - text: Live Thabo Musa Victor Mthembu
+  - img "down"
+  - img "user"
+- main:
+  - button "edit":
+    - img "edit"
+  - paragraph: SaGov.Leave/my_items2 v31
+  - text: Live
+  - img "close"
+  - heading "My Items" [level=4]
+  - textbox
+  - button "search":
+    - img "search"
+  - button "filter":
+    - img "filter"
+  - button "sliders":
+    - img "sliders"
+  - list:
+    - listitem: 1-10 of 34 items
+    - listitem "Previous Page":
+      - button "left" [disabled]:
+        - img "left"
+    - listitem "1"
+    - listitem "2"
+    - listitem "3"
+    - listitem "4"
+    - listitem "Next Page":
+      - button "right":
+        - img "right"
+    - listitem:
+      - combobox "Page Size"
+      - text: 10 / page
+  - button "reload":
+    - img "reload"
+  - button "plus Create New down":
+    - img "plus"
+    - text: Create New
+    - img "down"
+  - button "Reassign"
+  - button "download Export":
+    - img "download"
+    - text: Export
+  - table:
+    - row "Ref No Type Name Initiated Date Status Progress":
+      - columnheader
+      - columnheader "Ref No":
+        - text: Ref No
+        - separator
+      - columnheader "Type":
+        - text: Type
+        - separator
+      - columnheader "Name":
+        - text: Name
+        - separator
+      - columnheader "Initiated Date":
+        - text: Initiated Date
+        - separator
+      - columnheader "Status":
+        - text: Status
+        - separator
+      - columnheader "Progress":
+        - text: Progress
+        - separator
+    - rowgroup:
+      - row "search LC:2026-18188 SaGov Leave Cancellation 1 day Adoption Leave Leave by TMV Mthembu from Fri 08 May 26 to Fri 08 May 26 26/05/2026 19:03 Declined close":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow?id=080dbc14-8ffd-4f88-93ae-a75fd8e4f034
+            - img "search"
+        - cell "LC:2026-18188"
+        - cell "SaGov Leave Cancellation"
+        - cell "1 day Adoption Leave Leave by TMV Mthembu from Fri 08 May 26 to Fri 08 May 26"
+        - cell "26/05/2026 19:03"
+        - cell "Declined"
+        - cell "close":
+          - img
+          - img
+          - img
+          - img "close"
+      - row "search LC:2026-18186 SaGov Leave Cancellation 3 days Annual Leave Leave by TMV Mthembu from Mon 08 Jun 26 to Wed 10 Jun 26 26/05/2026 19:02 Declined close":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow?id=2987e5ca-1cb2-4c24-aa89-0a5b92b286c2
+            - img "search"
+        - cell "LC:2026-18186"
+        - cell "SaGov Leave Cancellation"
+        - cell "3 days Annual Leave Leave by TMV Mthembu from Mon 08 Jun 26 to Wed 10 Jun 26"
+        - cell "26/05/2026 19:02"
+        - cell "Declined"
+        - cell "close":
+          - img
+          - img
+          - img "close"
+      - row "search LC:2026-18184 SaGov Leave Cancellation 1 day Unpaid Leave Authorized Leave by TMV Mthembu from Mon 25 May 26 to Mon 25 May 26 26/05/2026 19:02 Declined close":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow?id=b803c418-e492-4b06-96af-539387d3b186
+            - img "search"
+        - cell "LC:2026-18184"
+        - cell "SaGov Leave Cancellation"
+        - cell "1 day Unpaid Leave Authorized Leave by TMV Mthembu from Mon 25 May 26 to Mon 25 May 26"
+        - cell "26/05/2026 19:02"
+        - cell "Declined"
+        - cell "close":
+          - img
+          - img
+          - img
+          - img "close"
+      - row "search LA2026/11631 SaGov Leave Application 1 day Adoption Leave Leave by TMV Mthembu from Fri 08 May 26 to Fri 08 May 26 26/05/2026 17:41 In Progress":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow?id=4c489fd3-ad47-497e-ad33-3ade4f506e28
+            - img "search"
+        - cell "LA2026/11631"
+        - cell "SaGov Leave Application"
+        - cell "1 day Adoption Leave Leave by TMV Mthembu from Fri 08 May 26 to Fri 08 May 26"
+        - cell "26/05/2026 17:41"
+        - cell "In Progress"
+        - cell:
+          - img
+          - img
+          - img
+          - img
+      - row "search LA2026/11628 SaGov Leave Application 3 days Annual Leave Leave by TMV Mthembu from Mon 08 Jun 26 to Wed 10 Jun 26 26/05/2026 17:40 Approved With Full Pay":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow?id=f4cfb317-ddc9-4550-a463-05c19ada34a8
+            - img "search"
+        - cell "LA2026/11628"
+        - cell "SaGov Leave Application"
+        - cell "3 days Annual Leave Leave by TMV Mthembu from Mon 08 Jun 26 to Wed 10 Jun 26"
+        - cell "26/05/2026 17:40"
+        - cell "Approved With Full Pay"
+        - cell:
+          - img
+          - img
+          - img
+          - img
+      - row "search LA2026/11625 SaGov Leave Application 1 day Unpaid Leave Authorized Leave by TMV Mthembu from Mon 25 May 26 to Mon 25 May 26 26/05/2026 17:33 Approved Without Pay":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow?id=279ebeac-0ecb-4935-9efb-8d95c5b62d8a
+            - img "search"
+        - cell "LA2026/11625"
+        - cell "SaGov Leave Application"
+        - cell "1 day Unpaid Leave Authorized Leave by TMV Mthembu from Mon 25 May 26 to Mon 25 May 26"
+        - cell "26/05/2026 17:33"
+        - cell "Approved Without Pay"
+        - cell:
+          - img
+          - img
+          - img
+          - img
+          - img
+      - row "search LA2026/11459 Leave Application 2 days Annual Leave Leave by TMV Mthembu from Wed 13 May 26 to Thu 14 May 26 12/05/2026 15:05 In Progress":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow?id=e10f9480-413a-4b83-a079-046970e1a32e
+            - img "search"
+        - cell "LA2026/11459"
+        - cell "Leave Application"
+        - cell "2 days Annual Leave Leave by TMV Mthembu from Wed 13 May 26 to Thu 14 May 26"
+        - cell "12/05/2026 15:05"
+        - cell "In Progress"
+        - cell:
+          - img
+          - img
+          - img
+      - row "search LA2026/11450 Leave Application 1 day Annual Leave Leave by TMV Mthembu from Tue 19 May 26 to Tue 19 May 26 12/05/2026 13:21 In Progress":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow?id=329bec44-9285-47b0-81c0-eec23d3c33cb
+            - img "search"
+        - cell "LA2026/11450"
+        - cell "Leave Application"
+        - cell "1 day Annual Leave Leave by TMV Mthembu from Tue 19 May 26 to Tue 19 May 26"
+        - cell "12/05/2026 13:21"
+        - cell "In Progress"
+        - cell:
+          - img
+          - img
+          - img
+      - row "search LA2026/11416 Leave Application 1 day Annual Leave Leave by TMV Mthembu from Mon 18 May 26 to Mon 18 May 26 12/05/2026 10:46 In Progress":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow?id=7e7b9ff4-dbda-4cc1-8979-fda282d772a4
+            - img "search"
+        - cell "LA2026/11416"
+        - cell "Leave Application"
+        - cell "1 day Annual Leave Leave by TMV Mthembu from Mon 18 May 26 to Mon 18 May 26"
+        - cell "12/05/2026 10:46"
+        - cell "In Progress"
+        - cell:
+          - img
+          - img
+          - img
+      - row "search LA2026/11409 Leave Application 2 days Annual Leave Leave by TMV Mthembu from Mon 11 May 26 to Tue 12 May 26 11/05/2026 14:45 In Progress":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow?id=e11fe0f5-e506-43a5-b264-b3d5a0f8ba3e
+            - img "search"
+        - cell "LA2026/11409"
+        - cell "Leave Application"
+        - cell "2 days Annual Leave Leave by TMV Mthembu from Mon 11 May 26 to Tue 12 May 26"
+        - cell "11/05/2026 14:45"
+        - cell "In Progress"
+        - cell:
+          - img
+          - img
+          - img
+          - img
+- alert
+- menu:
+  - menuitem "Change of Supervisor Workflow Process":
+    - button "Change of Supervisor Workflow Process"
+  - menuitem "Dha Change of Supervisor":
+    - button "Dha Change of Supervisor"
+  - menuitem "Leave Application Process":
+    - button "Leave Application Process"
+  - menuitem "Leave Cancellation Process":
+    - button "Leave Cancellation Process"
+  - menuitem "Leave Process":
+    - button "Leave Process"
+  - menuitem "Mid year Assessment Performance Review":
+    - button "Mid year Assessment Performance Review"
+  - menuitem "SaGov Annual Assessment":
+    - button "SaGov Annual Assessment"
+  - menuitem "SaGov Change of Supervisor Workflow":
+    - button "SaGov Change of Supervisor Workflow"
+  - menuitem "SaGov Leave Application":
+    - button "SaGov Leave Application"
+  - menuitem "SaGov Leave Cancellation":
+    - button "SaGov Leave Cancellation"
+  - menuitem "SaGov Leave Cancellationn":
+    - button "SaGov Leave Cancellationn"
+  - menuitem "Test Test":
+    - button "Test Test"
+```
+
+# Test source
+
+```ts
+  1   | // AUTO-RECORDED from test-plans/eLeave/capture-new-leave-application.md
+  2   | // Source: Azure DevOps test plan #79625, suite #86340
+  3   | // The .md plan is canonical. AI-repair will patch failing lines in this file.
+  4   | // Do not hand-edit unless you are also updating the .md plan.
+  5   | //
+  6   | // Recorded live on the SaGov.Leave/sagov-leave-application v74 draft form as applicant
+  7   | // GOV003 (Thabo Musa Victor Mthembu). The navigation path Workflows -> My Items ->
+  8   | // Create New -> SaGov Leave Application reaches the Draft step of a brand-new application,
+  9   | // so the form-level cases (radios, leave-type/category, verification type, prepopulation,
+  10  | // close dialog) are recorded against real selectors.
+  11  | //
+  12  | // SKIPPED: cases that need an OTP/SMS round-trip, real wall-clock OTP expiry, hourly-leave
+  13  | // accumulation, a seeded pending Change-of-Supervisor item, or a Submit that would mutate
+  14  | // live QA data are guarded with test.skip + reason. AI-repair / a seeded-data run resolves
+  15  | // the remaining // TODO markers.
+  16  | //
+  17  | // NOTE: the live v74 form differs from several ADO-authored steps. It has no separate
+  18  | // "Duration (Days/Hours)" toggle (Start Date + End Date are shown directly), and the
+  19  | // leave type is captured via the "Category" + "Sub-Category" selects. Those drifted
+  20  | // cases are recorded to the closest live equivalent and flagged inline.
+  21  | 
+  22  | import { test, expect, Page } from '@playwright/test';
+  23  | 
+  24  | const APP_URL = 'https://pd-hcm-adminportal-qa.shesha.app/';
+  25  | const USER = { user: 'GOV003', password: '123qwe' };
+  26  | const MY_ITEMS_URL = `${APP_URL}dynamic/SaGov.Leave/my_items2`;
+  27  | 
+  28  | async function loginAsUser(page: Page) {
+  29  |   await page.goto(APP_URL);
+  30  |   await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  31  |   await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  32  |   await page.getByRole('button', { name: 'Sign In' }).click();
+  33  |   await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
+  34  |   await page.waitForLoadState('networkidle');
+  35  | }
+  36  | 
+  37  | // Workflows -> My Items -> Create New -> SaGov Leave Application -> Draft form.
+  38  | // Lands with "Who are you requesting the leave for?" defaulted to "Myself".
+  39  | async function openNewLeaveApplication(page: Page) {
+  40  |   await loginAsUser(page);
+  41  |   // Direct nav to My Items (equivalent to Workflows -> My Items; avoids the menu-expand race).
+  42  |   // The menu-click path itself is exercised by TC-53.
+  43  |   await page.goto(MY_ITEMS_URL);
+  44  |   await page.waitForLoadState('networkidle');
+  45  |   await page.getByRole('button', { name: 'plus Create New down' }).click();
+  46  |   await page.getByRole('menuitem', { name: 'SaGov Leave Application', exact: true }).click();
+> 47  |   await expect(page.getByRole('heading', { name: 'New Leave Application:' })).toBeVisible({ timeout: 30000 });
+      |                                                                               ^ Error: expect(locator).toBeVisible() failed
+  48  | }
+  49  | 
+  50  | // Select a leave type in the "Category" select. The Myself form has THREE comboboxes
+  51  | // (Leave Profile, Category, Sub-Category) so the Category one must be label-scoped, not .first().
+  52  | async function selectCategory(page: Page, name: string) {
+  53  |   const combo = page.locator('.ant-form-item:has(label[title="Category"]) input[role="combobox"]');
+  54  |   await combo.click();
+  55  |   // The select is searchable; typing filters the (virtualized) option list so far-down
+  56  |   // options render. Match by text — option titles carry stray trailing spaces.
+  57  |   await combo.fill(name);
+  58  |   await page.locator('.ant-select-item-option', { hasText: name }).first().click();
+  59  | }
+  60  | 
+  61  | test.describe('ELEAVE-CAPTURE — Capture New Leave Application', () => {
+  62  | 
+  63  |   test('TC-01: Login as Admin', async ({ page }) => {
+  64  |     // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
+  65  |     await page.goto(APP_URL);
+  66  |     // STEP 2: SNAPSHOT — confirm login page is visible
+  67  |     // SNAPSHOT: login page
+  68  |     // STEP 3: TYPE Username field with `GOV003`
+  69  |     await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  70  |     // STEP 4: TYPE Password field with `123qwe`
+  71  |     await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  72  |     // STEP 5: CLICK the Sign In button
+  73  |     await page.getByRole('button', { name: 'Sign In' }).click();
+  74  |     // STEP 6: WAIT for the home page / workflow inbox to load
+  75  |     await page.waitForLoadState('networkidle');
+  76  |     // ASSERT (BLOCKING) URL no longer contains /login and the authenticated home page is visible
+  77  |     await expect(page).not.toHaveURL(/login/i);
+  78  |     await expect(page.getByText('Thabo Musa Victor Mthembu')).toBeVisible({ timeout: 30000 });
+  79  |   });
+  80  | 
+  81  |   // ADO #86342
+  82  |   test('TC-02: Park hourly leave request that does not accumulate to 8 hours', async ({ page }) => {
+  83  |     test.skip(true, 'Requires hourly-leave configuration + accumulation engine; cannot be observed from the draft form without seeded hourly requests.');
+  84  |   });
+  85  | 
+  86  |   // ADO #86344
+  87  |   test('TC-03: Create a leave request for one day when hourly leave request accumulates to 8 hours', async ({ page }) => {
+  88  |     test.skip(true, 'Requires hourly-leave accumulation to 8h across seeded requests; business-logic, not observable on the draft form.');
+  89  |   });
+  90  | 
+  91  |   // ADO #86345
+  92  |   test('TC-04: Route the leave request to the recommender when hourly leave request accumulates to 8 hours', async ({ page }) => {
+  93  |     test.skip(true, 'Requires hourly-leave accumulation + a Submit that routes/mutates live QA data.');
+  94  |   });
+  95  | 
+  96  |   // ADO #86347
+  97  |   test('TC-05: System should check if hourly leave request amounts to 8 hours', async ({ page }) => {
+  98  |     test.skip(true, 'Requires hourly-leave configuration; internal 8h check is not surfaced on the draft form.');
+  99  |   });
+  100 | 
+  101 |   // ADO #86349
+  102 |   test('TC-06: The attached consent form should appear throughout the workflow steps', async ({ page }) => {
+  103 |     test.skip(true, 'Requires a submitted application walked through every workflow step (recommend/approve) — needs seeded routing + multiple actor logins.');
+  104 |   });
+  105 | 
+  106 |   // ADO #86351
+  107 |   test("TC-07: Submit leave request to the next step when 'OK' clicked after capturing OTP", async ({ page }) => {
+  108 |     test.skip(true, 'Requires a live OTP/SMS round-trip and a routing Submit that mutates live QA data.');
+  109 |   });
+  110 | 
+  111 |   // ADO #86353
+  112 |   test('TC-08: Display error message when OTP has expired', async ({ page }) => {
+  113 |     test.skip(true, 'Requires a real expired OTP from the SMS gateway.');
+  114 |   });
+  115 | 
+  116 |   // ADO #86355
+  117 |   test("TC-09: 'Close' button removes the dialog and displays 'New Leave Application' page", async ({ page }) => {
+  118 |     test.skip(true, 'Requires the SMS Verification dialog, which only opens after an OTP submit (SMS round-trip).');
+  119 |   });
+  120 | 
+  121 |   // ADO #86357
+  122 |   test("TC-10: Remove 'Send Code' dialog when 'Cancel' button is clicked", async ({ page }) => {
+  123 |     test.skip(true, "Requires the 'Send Code' dialog reached via the SMS Verification OTP flow.");
+  124 |   });
+  125 | 
+  126 |   // ADO #86358
+  127 |   test("TC-11: Return to 'SMS Verification' dialog when 'Cancel' button is clicked", async ({ page }) => {
+  128 |     test.skip(true, "Requires the 'Send Code' / 'SMS Verification' dialog reached via the OTP flow.");
+  129 |   });
+  130 | 
+  131 |   // ADO #86360
+  132 |   test("TC-12: Send a code to the registered applicant cell number when 'OK' clicked", async ({ page }) => {
+  133 |     test.skip(true, 'Requires a live SMS gateway send — not assertable in an automated read-only run.');
+  134 |   });
+  135 | 
+  136 |   // ADO #86362
+  137 |   test("TC-13: Display 'Send code' dialog when user clicks the 'Click Here' link", async ({ page }) => {
+  138 |     test.skip(true, 'Requires the SMS Verification dialog (OTP flow) where the Click Here link lives.');
+  139 |   });
+  140 | 
+  141 |   // ADO #86364
+  142 |   test("TC-14: Display pop-up dialog on 'Click here' link click", async ({ page }) => {
+  143 |     test.skip(true, 'Requires the SMS Verification dialog (OTP flow).');
+  144 |   });
+  145 | 
+  146 |   // ADO #86366
+  147 |   test('TC-15: OTP should expire in 3 minutes', async ({ page }) => {
+```

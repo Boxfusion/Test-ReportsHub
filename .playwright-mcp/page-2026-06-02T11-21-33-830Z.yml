@@ -1,0 +1,713 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e301]:
+    - complementary [ref=e302]:
+      - menu [ref=e306]:
+        - menuitem "calendar Leave Management" [ref=e307] [cursor=pointer]:
+          - img "calendar" [ref=e308]:
+            - img [ref=e309]
+          - generic [ref=e311]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e312] [cursor=pointer]:
+          - img "calendar" [ref=e313]:
+            - img [ref=e314]
+          - generic [ref=e316]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e317] [cursor=pointer]:
+          - img "book" [ref=e318]:
+            - img [ref=e319]
+          - generic [ref=e321]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e322] [cursor=pointer]:
+          - img "bank" [ref=e323]:
+            - img [ref=e324]
+          - generic [ref=e326]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e327] [cursor=pointer]:
+          - img "apartment" [ref=e328]:
+            - img [ref=e329]
+          - generic [ref=e331]: Workflows
+        - menuitem "tool Administration" [ref=e332] [cursor=pointer]:
+          - img "tool" [ref=e333]:
+            - img [ref=e334]
+          - generic [ref=e336]: Administration
+        - menuitem "setting Configurations" [ref=e337] [cursor=pointer]:
+          - img "setting" [ref=e338]:
+            - img [ref=e339]
+          - generic [ref=e341]: Configurations
+      - img "menu-unfold" [ref=e344] [cursor=pointer]:
+        - img [ref=e345]
+    - generic [ref=e347]:
+      - banner [ref=e348]:
+        - generic [ref=e354]:
+          - generic [ref=e356]:
+            - button "edit" [ref=e357] [cursor=pointer]:
+              - img "edit" [ref=e358]:
+                - img [ref=e359]
+            - paragraph [ref=e361] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e362]:
+              - generic [ref=e363]: Live
+              - img "close" [ref=e364] [cursor=pointer]:
+                - img [ref=e365]
+          - generic [ref=e375]:
+            - link [ref=e381] [cursor=pointer]:
+              - /url: /
+              - img [ref=e391]
+            - generic [ref=e393]:
+              - generic [ref=e394]:
+                - generic [ref=e396]:
+                  - generic [ref=e397]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e399] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e403] [cursor=pointer]:
+                  - img "block" [ref=e404]:
+                    - img [ref=e405]
+                  - generic [ref=e407]: Live
+              - generic [ref=e409]:
+                - generic [ref=e410] [cursor=pointer]:
+                  - text: System Administrator
+                  - img "down" [ref=e411]:
+                    - img [ref=e412]
+                - img "user" [ref=e415]:
+                  - img [ref=e416]
+      - main [ref=e418]:
+        - generic [ref=e424]:
+          - generic [ref=e426]:
+            - button "edit" [ref=e427] [cursor=pointer]:
+              - img "edit" [ref=e428]:
+                - img [ref=e429]
+            - paragraph [ref=e431] [cursor=pointer]: SaGov.Leave/sagov-leave-applications v41
+            - generic [ref=e432]:
+              - generic [ref=e433]: Live
+              - img "close" [ref=e434] [cursor=pointer]:
+                - img [ref=e435]
+          - generic [ref=e447]:
+            - generic [ref=e449]:
+              - heading "Leave Applications Dashboard" [level=4] [ref=e455] [cursor=pointer]
+              - generic [ref=e457]:
+                - generic [ref=e460]:
+                  - textbox [ref=e462]
+                  - button "search" [ref=e465] [cursor=pointer]:
+                    - img "search" [ref=e467]:
+                      - img [ref=e468]
+                - button "filter" [ref=e475] [cursor=pointer]:
+                  - img "filter" [ref=e477]:
+                    - img [ref=e478]
+                - button "reload" [ref=e485] [cursor=pointer]:
+                  - img "reload" [ref=e487]:
+                    - img [ref=e488]
+                - button "sliders" [ref=e495] [cursor=pointer]:
+                  - img "sliders" [ref=e497]:
+                    - img [ref=e498]
+                - list [ref=e500]:
+                  - listitem [ref=e501]: 1-10 of 42 items
+                  - listitem "Previous Page" [ref=e502]:
+                    - button "left" [disabled] [ref=e503]:
+                      - img "left" [ref=e504]:
+                        - img [ref=e505]
+                  - listitem "1" [ref=e507] [cursor=pointer]:
+                    - generic [ref=e508]: "1"
+                  - listitem "2" [ref=e509] [cursor=pointer]:
+                    - generic [ref=e510]: "2"
+                  - listitem "3" [ref=e511] [cursor=pointer]:
+                    - generic [ref=e512]: "3"
+                  - listitem "4" [ref=e513] [cursor=pointer]:
+                    - generic [ref=e514]: "4"
+                  - listitem "5" [ref=e515] [cursor=pointer]:
+                    - generic [ref=e516]: "5"
+                  - listitem "Next Page" [ref=e517] [cursor=pointer]:
+                    - button "right" [ref=e518]:
+                      - img "right" [ref=e519]:
+                        - img [ref=e520]
+                  - listitem [ref=e522]:
+                    - generic "Page Size" [ref=e523] [cursor=pointer]:
+                      - generic [ref=e524]:
+                        - combobox "Page Size" [ref=e526]
+                        - generic "10 / page" [ref=e527]
+                      - generic:
+                        - img:
+                          - img
+            - button "cloud-download Export" [ref=e535] [cursor=pointer]:
+              - img "cloud-download" [ref=e537]:
+                - img [ref=e538]
+              - generic [ref=e541]: Export
+            - table [ref=e551]:
+              - row "Toggle All Rows Selected Ref Request Type Date Submitted PERSAL No Applicant Name Gender Race Salary Level Job Title Organisation Unit Recommender(s) Date Recommended Approver(s) Date Approved Verifier(s) Date Verified Attachments Verifier(s) Date Attachments Verified Leave From Leave To Leave Type Has Attachments Is Bulk Generated Current Action Text Progress Status Current Action Activated On Current Action Overdue Date Current Action Assignee(s) Location Payment Status Duration (Days) Type Of Days Reconciliation Status" [ref=e552]:
+                - columnheader "Toggle All Rows Selected" [ref=e553]:
+                  - checkbox "Toggle All Rows Selected" [ref=e555] [cursor=pointer]
+                - columnheader [ref=e556]
+                - columnheader "Ref" [ref=e557] [cursor=pointer]:
+                  - text: Ref
+                  - separator [ref=e558]
+                - columnheader "Request Type" [ref=e559] [cursor=pointer]:
+                  - text: Request Type
+                  - separator [ref=e560]
+                - columnheader "Date Submitted" [ref=e561] [cursor=pointer]:
+                  - text: Date Submitted
+                  - separator [ref=e562]
+                - columnheader "PERSAL No" [ref=e563] [cursor=pointer]:
+                  - text: PERSAL No
+                  - separator [ref=e564]
+                - columnheader "Applicant Name" [ref=e565] [cursor=pointer]:
+                  - text: Applicant Name
+                  - separator [ref=e566]
+                - columnheader "Gender" [ref=e567] [cursor=pointer]:
+                  - text: Gender
+                  - separator [ref=e568]
+                - columnheader "Race" [ref=e569] [cursor=pointer]:
+                  - text: Race
+                  - separator [ref=e570]
+                - columnheader "Salary Level" [ref=e571] [cursor=pointer]:
+                  - text: Salary Level
+                  - separator [ref=e572]
+                - columnheader "Job Title" [ref=e573] [cursor=pointer]:
+                  - text: Job Title
+                  - separator [ref=e574]
+                - columnheader "Organisation Unit" [ref=e575] [cursor=pointer]:
+                  - text: Organisation Unit
+                  - separator [ref=e576]
+                - columnheader "Recommender(s)" [ref=e577] [cursor=pointer]:
+                  - text: Recommender(s)
+                  - separator [ref=e578]
+                - columnheader "Date Recommended" [ref=e579] [cursor=pointer]:
+                  - text: Date Recommended
+                  - separator [ref=e580]
+                - columnheader "Approver(s)" [ref=e581] [cursor=pointer]:
+                  - text: Approver(s)
+                  - separator [ref=e582]
+                - columnheader "Date Approved" [ref=e583] [cursor=pointer]:
+                  - text: Date Approved
+                  - separator [ref=e584]
+                - columnheader "Verifier(s)" [ref=e585] [cursor=pointer]:
+                  - text: Verifier(s)
+                  - separator [ref=e586]
+                - columnheader "Date Verified" [ref=e587] [cursor=pointer]:
+                  - text: Date Verified
+                  - separator [ref=e588]
+                - columnheader "Attachments Verifier(s)" [ref=e589] [cursor=pointer]:
+                  - text: Attachments Verifier(s)
+                  - separator [ref=e590]
+                - columnheader "Date Attachments Verified" [ref=e591] [cursor=pointer]:
+                  - text: Date Attachments Verified
+                  - separator [ref=e592]
+                - columnheader "Leave From" [ref=e593] [cursor=pointer]:
+                  - text: Leave From
+                  - separator [ref=e594]
+                - columnheader "Leave To" [ref=e595] [cursor=pointer]:
+                  - text: Leave To
+                  - separator [ref=e596]
+                - columnheader "Leave Type" [ref=e597] [cursor=pointer]:
+                  - text: Leave Type
+                  - separator [ref=e598]
+                - columnheader "Has Attachments" [ref=e599] [cursor=pointer]:
+                  - text: Has Attachments
+                  - separator [ref=e600]
+                - columnheader "Is Bulk Generated" [ref=e601] [cursor=pointer]:
+                  - text: Is Bulk Generated
+                  - separator [ref=e602]
+                - columnheader "Current Action Text" [ref=e603] [cursor=pointer]:
+                  - text: Current Action Text
+                  - separator [ref=e604]
+                - columnheader "Progress" [ref=e605] [cursor=pointer]:
+                  - text: Progress
+                  - separator [ref=e606]
+                - columnheader "Status" [ref=e607] [cursor=pointer]:
+                  - text: Status
+                  - separator [ref=e608]
+                - columnheader "Current Action Activated On" [ref=e609] [cursor=pointer]:
+                  - text: Current Action Activated On
+                  - separator [ref=e610]
+                - columnheader "Current Action Overdue Date" [ref=e611] [cursor=pointer]:
+                  - text: Current Action Overdue Date
+                  - separator [ref=e612]
+                - columnheader "Current Action Assignee(s)" [ref=e613] [cursor=pointer]:
+                  - text: Current Action Assignee(s)
+                  - separator [ref=e614]
+                - columnheader "Location" [ref=e615] [cursor=pointer]:
+                  - text: Location
+                  - separator [ref=e616]
+                - columnheader "Payment Status" [ref=e617] [cursor=pointer]:
+                  - text: Payment Status
+                  - separator [ref=e618]
+                - columnheader "Duration (Days)" [ref=e619] [cursor=pointer]:
+                  - text: Duration (Days)
+                  - separator [ref=e620]
+                - columnheader "Type Of Days" [ref=e621] [cursor=pointer]:
+                  - text: Type Of Days
+                  - separator [ref=e622]
+                - columnheader "Reconciliation Status" [ref=e623] [cursor=pointer]:
+                  - text: Reconciliation Status
+                  - separator [ref=e624]
+              - rowgroup [ref=e625]:
+                - row "Toggle Row Selected search LA2026/11459 Leave Application 12/05/2026 15:05 GOV00003 Thabo Musa Victor Mthembu Male African 9 test OFFICE OF THE MINISTER Kavitha Naidoo 26/05/2026 17:59 13/05/2026 08:00 14/05/2026 18:00 Annual Leave Yes No Approve Leave In Progress 26/05/2026 17:59 28/05/2026 17:59 Naledi weeeee Khumalo 2 days Working Days" [ref=e626]:
+                  - cell "Toggle Row Selected" [ref=e627]:
+                    - checkbox "Toggle Row Selected" [ref=e629] [cursor=pointer]
+                  - cell "search" [ref=e630]:
+                    - link "search" [ref=e631] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=e10f9480-413a-4b83-a079-046970e1a32e
+                      - img "search" [ref=e632]:
+                        - img [ref=e633]
+                  - cell "LA2026/11459" [ref=e635]
+                  - cell "Leave Application" [ref=e636]
+                  - cell "12/05/2026 15:05" [ref=e637]
+                  - cell "GOV00003" [ref=e638]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e639]
+                  - cell "Male" [ref=e640]
+                  - cell "African" [ref=e641]:
+                    - generic [ref=e646]: African
+                  - cell "9" [ref=e647]
+                  - cell "test" [ref=e648]
+                  - cell "OFFICE OF THE MINISTER" [ref=e649]
+                  - cell "Kavitha Naidoo" [ref=e650]
+                  - cell "26/05/2026 17:59" [ref=e651]
+                  - cell [ref=e652]
+                  - cell [ref=e653]
+                  - cell [ref=e654]
+                  - cell [ref=e655]
+                  - cell [ref=e656]
+                  - cell [ref=e657]
+                  - cell "13/05/2026 08:00" [ref=e658]
+                  - cell "14/05/2026 18:00" [ref=e659]
+                  - cell "Annual Leave" [ref=e660]
+                  - cell "Yes" [ref=e661]
+                  - cell "No" [ref=e662]
+                  - cell "Approve Leave" [ref=e663]
+                  - cell [ref=e664]:
+                    - generic [ref=e671]:
+                      - img [ref=e673]
+                      - img [ref=e676]
+                      - img [ref=e679]
+                  - cell "In Progress" [ref=e681]
+                  - cell "26/05/2026 17:59" [ref=e682]
+                  - cell "28/05/2026 17:59" [ref=e683]
+                  - cell "Naledi weeeee Khumalo" [ref=e684]
+                  - cell [ref=e685]
+                  - cell [ref=e686]
+                  - cell "2 days" [ref=e687]
+                  - cell "Working Days" [ref=e688]
+                  - cell [ref=e689]
+                - row "Toggle Row Selected search LA2026/11628 Leave Application 26/05/2026 17:40 GOV00003 Thabo Musa Victor Mthembu Male African 9 test OFFICE OF THE MINISTER Kavitha Naidoo 26/05/2026 17:57 Naledi weeeee Khumalo 26/05/2026 19:00 08/06/2026 08:00 10/06/2026 18:00 Annual Leave No No Generate PERSAL Input In Progress 26/05/2026 19:05 With Full Pay 3 days Working Days" [ref=e690]:
+                  - cell "Toggle Row Selected" [ref=e691]:
+                    - checkbox "Toggle Row Selected" [ref=e693] [cursor=pointer]
+                  - cell "search" [ref=e694]:
+                    - link "search" [ref=e695] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=f4cfb317-ddc9-4550-a463-05c19ada34a8
+                      - img "search" [ref=e696]:
+                        - img [ref=e697]
+                  - cell "LA2026/11628" [ref=e699]
+                  - cell "Leave Application" [ref=e700]
+                  - cell "26/05/2026 17:40" [ref=e701]
+                  - cell "GOV00003" [ref=e702]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e703]
+                  - cell "Male" [ref=e704]
+                  - cell "African" [ref=e705]:
+                    - generic [ref=e710]: African
+                  - cell "9" [ref=e711]
+                  - cell "test" [ref=e712]
+                  - cell "OFFICE OF THE MINISTER" [ref=e713]
+                  - cell "Kavitha Naidoo" [ref=e714]
+                  - cell "26/05/2026 17:57" [ref=e715]
+                  - cell "Naledi weeeee Khumalo" [ref=e716]
+                  - cell "26/05/2026 19:00" [ref=e717]
+                  - cell [ref=e718]
+                  - cell [ref=e719]
+                  - cell [ref=e720]
+                  - cell [ref=e721]
+                  - cell "08/06/2026 08:00" [ref=e722]
+                  - cell "10/06/2026 18:00" [ref=e723]
+                  - cell "Annual Leave" [ref=e724]
+                  - cell "No" [ref=e725]
+                  - cell "No" [ref=e726]
+                  - cell "Generate PERSAL Input" [ref=e727]
+                  - cell [ref=e728]:
+                    - generic [ref=e735]:
+                      - img [ref=e737]
+                      - img [ref=e740]
+                      - img [ref=e743]
+                      - img [ref=e746]
+                  - cell "In Progress" [ref=e749]
+                  - cell "26/05/2026 19:05" [ref=e750]
+                  - cell [ref=e751]
+                  - cell [ref=e752]
+                  - cell [ref=e753]
+                  - cell "With Full Pay" [ref=e754]
+                  - cell "3 days" [ref=e755]
+                  - cell "Working Days" [ref=e756]
+                  - cell [ref=e757]
+                - row "Toggle Row Selected search LA2026/10155 Leave Application 13/04/2026 22:28 GOV00003 Thabo Musa Victor Mthembu Male African 9 test OFFICE OF THE MINISTER Kavitha Naidoo 13/04/2026 22:30 Kavitha Naidoo 13/04/2026 22:30 13/04/2026 08:00 13/04/2026 18:00 Annual Leave No No Cancelled With Full Pay 1 day Working Days" [ref=e758]:
+                  - cell "Toggle Row Selected" [ref=e759]:
+                    - checkbox "Toggle Row Selected" [ref=e761] [cursor=pointer]
+                  - cell "search" [ref=e762]:
+                    - link "search" [ref=e763] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=232eac7f-d19a-40e0-af61-0bd7464f36cb
+                      - img "search" [ref=e764]:
+                        - img [ref=e765]
+                  - cell "LA2026/10155" [ref=e767]
+                  - cell "Leave Application" [ref=e768]
+                  - cell "13/04/2026 22:28" [ref=e769]
+                  - cell "GOV00003" [ref=e770]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e771]
+                  - cell "Male" [ref=e772]
+                  - cell "African" [ref=e773]:
+                    - generic [ref=e778]: African
+                  - cell "9" [ref=e779]
+                  - cell "test" [ref=e780]
+                  - cell "OFFICE OF THE MINISTER" [ref=e781]
+                  - cell "Kavitha Naidoo" [ref=e782]
+                  - cell "13/04/2026 22:30" [ref=e783]
+                  - cell "Kavitha Naidoo" [ref=e784]
+                  - cell "13/04/2026 22:30" [ref=e785]
+                  - cell [ref=e786]
+                  - cell [ref=e787]
+                  - cell [ref=e788]
+                  - cell [ref=e789]
+                  - cell "13/04/2026 08:00" [ref=e790]
+                  - cell "13/04/2026 18:00" [ref=e791]
+                  - cell "Annual Leave" [ref=e792]
+                  - cell "No" [ref=e793]
+                  - cell "No" [ref=e794]
+                  - cell [ref=e795]
+                  - cell [ref=e796]:
+                    - generic [ref=e803]:
+                      - img [ref=e805]
+                      - img [ref=e808]
+                      - img [ref=e811]
+                  - cell "Cancelled" [ref=e814]
+                  - cell [ref=e815]
+                  - cell [ref=e816]
+                  - cell [ref=e817]
+                  - cell [ref=e818]
+                  - cell "With Full Pay" [ref=e819]
+                  - cell "1 day" [ref=e820]
+                  - cell "Working Days" [ref=e821]
+                  - cell [ref=e822]
+                - row "Toggle Row Selected search LA2026/10135 Leave Application 13/04/2026 13:35 GOV00003 Thabo Musa Victor Mthembu Male African 9 test OFFICE OF THE MINISTER Kavitha Naidoo 13/04/2026 13:47 Naledi weeeee Khumalo 13/04/2026 13:53 07/04/2026 08:00 07/04/2026 18:00 Annual Leave No No Cancelled With Full Pay 1 day Working Days" [ref=e823]:
+                  - cell "Toggle Row Selected" [ref=e824]:
+                    - checkbox "Toggle Row Selected" [ref=e826] [cursor=pointer]
+                  - cell "search" [ref=e827]:
+                    - link "search" [ref=e828] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=42ef7ec3-16fc-4368-8cd1-1659049d3ba6
+                      - img "search" [ref=e829]:
+                        - img [ref=e830]
+                  - cell "LA2026/10135" [ref=e832]
+                  - cell "Leave Application" [ref=e833]
+                  - cell "13/04/2026 13:35" [ref=e834]
+                  - cell "GOV00003" [ref=e835]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e836]
+                  - cell "Male" [ref=e837]
+                  - cell "African" [ref=e838]:
+                    - generic [ref=e843]: African
+                  - cell "9" [ref=e844]
+                  - cell "test" [ref=e845]
+                  - cell "OFFICE OF THE MINISTER" [ref=e846]
+                  - cell "Kavitha Naidoo" [ref=e847]
+                  - cell "13/04/2026 13:47" [ref=e848]
+                  - cell "Naledi weeeee Khumalo" [ref=e849]
+                  - cell "13/04/2026 13:53" [ref=e850]
+                  - cell [ref=e851]
+                  - cell [ref=e852]
+                  - cell [ref=e853]
+                  - cell [ref=e854]
+                  - cell "07/04/2026 08:00" [ref=e855]
+                  - cell "07/04/2026 18:00" [ref=e856]
+                  - cell "Annual Leave" [ref=e857]
+                  - cell "No" [ref=e858]
+                  - cell "No" [ref=e859]
+                  - cell [ref=e860]
+                  - cell [ref=e861]:
+                    - generic [ref=e868]:
+                      - img [ref=e870]
+                      - img [ref=e873]
+                      - img [ref=e876]
+                      - img [ref=e879]
+                  - cell "Cancelled" [ref=e882]
+                  - cell [ref=e883]
+                  - cell [ref=e884]
+                  - cell [ref=e885]
+                  - cell [ref=e886]
+                  - cell "With Full Pay" [ref=e887]
+                  - cell "1 day" [ref=e888]
+                  - cell "Working Days" [ref=e889]
+                  - cell [ref=e890]
+                - row "Toggle Row Selected search LA2026/10560 Leave Application 07/05/2026 08:36 GOV00003 Thabo Musa Victor Mthembu Male African 9 test OFFICE OF THE MINISTER Thabo Musa Victor Mthembu 11/05/2026 14:45 11/05/2026 08:00 13/05/2026 18:00 Annual Leave No No Cancelled 3 days Working Days" [ref=e891]:
+                  - cell "Toggle Row Selected" [ref=e892]:
+                    - checkbox "Toggle Row Selected" [ref=e894] [cursor=pointer]
+                  - cell "search" [ref=e895]:
+                    - link "search" [ref=e896] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=dd0d2b9a-ca09-4624-8faa-201d1f518c7f
+                      - img "search" [ref=e897]:
+                        - img [ref=e898]
+                  - cell "LA2026/10560" [ref=e900]
+                  - cell "Leave Application" [ref=e901]
+                  - cell "07/05/2026 08:36" [ref=e902]
+                  - cell "GOV00003" [ref=e903]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e904]
+                  - cell "Male" [ref=e905]
+                  - cell "African" [ref=e906]:
+                    - generic [ref=e911]: African
+                  - cell "9" [ref=e912]
+                  - cell "test" [ref=e913]
+                  - cell "OFFICE OF THE MINISTER" [ref=e914]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e915]
+                  - cell "11/05/2026 14:45" [ref=e916]
+                  - cell [ref=e917]
+                  - cell [ref=e918]
+                  - cell [ref=e919]
+                  - cell [ref=e920]
+                  - cell [ref=e921]
+                  - cell [ref=e922]
+                  - cell "11/05/2026 08:00" [ref=e923]
+                  - cell "13/05/2026 18:00" [ref=e924]
+                  - cell "Annual Leave" [ref=e925]
+                  - cell "No" [ref=e926]
+                  - cell "No" [ref=e927]
+                  - cell [ref=e928]
+                  - cell [ref=e929]:
+                    - generic [ref=e936]:
+                      - img [ref=e938]
+                      - img [ref=e941]
+                  - cell "Cancelled" [ref=e944]
+                  - cell [ref=e945]
+                  - cell [ref=e946]
+                  - cell [ref=e947]
+                  - cell [ref=e948]
+                  - cell [ref=e949]
+                  - cell "3 days" [ref=e950]
+                  - cell "Working Days" [ref=e951]
+                  - cell [ref=e952]
+                - row "Toggle Row Selected search LA2026/10234 Leave Application 22/04/2026 12:58 GOV00500 Andrew Smith Male 6 Product Management Andrew Smith 22/04/2026 13:00 Andrew Smith 22/04/2026 13:00 13/05/2026 08:00 15/05/2026 18:00 Annual Leave Yes No Verify In Progress 22/04/2026 13:00 Sarah Johnson, Andrew Smith With Full Pay 3 days Working Days" [ref=e953]:
+                  - cell "Toggle Row Selected" [ref=e954]:
+                    - checkbox "Toggle Row Selected" [ref=e956] [cursor=pointer]
+                  - cell "search" [ref=e957]:
+                    - link "search" [ref=e958] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=b2c6ac8f-a54f-4016-a725-23ddb0f4d345
+                      - img "search" [ref=e959]:
+                        - img [ref=e960]
+                  - cell "LA2026/10234" [ref=e962]
+                  - cell "Leave Application" [ref=e963]
+                  - cell "22/04/2026 12:58" [ref=e964]
+                  - cell "GOV00500" [ref=e965]
+                  - cell "Andrew Smith" [ref=e966]
+                  - cell "Male" [ref=e967]
+                  - cell [ref=e968]
+                  - cell "6" [ref=e972]
+                  - cell [ref=e973]
+                  - cell "Product Management" [ref=e974]
+                  - cell "Andrew Smith" [ref=e975]
+                  - cell "22/04/2026 13:00" [ref=e976]
+                  - cell "Andrew Smith" [ref=e977]
+                  - cell "22/04/2026 13:00" [ref=e978]
+                  - cell [ref=e979]
+                  - cell [ref=e980]
+                  - cell [ref=e981]
+                  - cell [ref=e982]
+                  - cell "13/05/2026 08:00" [ref=e983]
+                  - cell "15/05/2026 18:00" [ref=e984]
+                  - cell "Annual Leave" [ref=e985]
+                  - cell "Yes" [ref=e986]
+                  - cell "No" [ref=e987]
+                  - cell "Verify" [ref=e988]
+                  - cell [ref=e989]:
+                    - generic [ref=e996]:
+                      - img [ref=e998]
+                      - img [ref=e1001]
+                      - img [ref=e1004]
+                  - cell "In Progress" [ref=e1006]
+                  - cell "22/04/2026 13:00" [ref=e1007]
+                  - cell [ref=e1008]
+                  - cell "Sarah Johnson, Andrew Smith" [ref=e1009]
+                  - cell [ref=e1010]
+                  - cell "With Full Pay" [ref=e1011]
+                  - cell "3 days" [ref=e1012]
+                  - cell "Working Days" [ref=e1013]
+                  - cell [ref=e1014]
+                - row "Toggle Row Selected search LA2026/11631 Leave Application 26/05/2026 17:41 GOV00003 Thabo Musa Victor Mthembu Male African 9 test OFFICE OF THE MINISTER Kavitha Naidoo 26/05/2026 17:57 Naledi weeeee Khumalo 26/05/2026 19:01 Thabo Musa Victor Mthembu 26/05/2026 17:54 15/05/2026 08:00 15/05/2026 18:00 Adoption Leave No No Cancelled 1 day Working Days" [ref=e1015]:
+                  - cell "Toggle Row Selected" [ref=e1016]:
+                    - checkbox "Toggle Row Selected" [ref=e1018] [cursor=pointer]
+                  - cell "search" [ref=e1019]:
+                    - link "search" [ref=e1020] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=4c489fd3-ad47-497e-ad33-3ade4f506e28
+                      - img "search" [ref=e1021]:
+                        - img [ref=e1022]
+                  - cell "LA2026/11631" [ref=e1024]
+                  - cell "Leave Application" [ref=e1025]
+                  - cell "26/05/2026 17:41" [ref=e1026]
+                  - cell "GOV00003" [ref=e1027]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1028]
+                  - cell "Male" [ref=e1029]
+                  - cell "African" [ref=e1030]:
+                    - generic [ref=e1035]: African
+                  - cell "9" [ref=e1036]
+                  - cell "test" [ref=e1037]
+                  - cell "OFFICE OF THE MINISTER" [ref=e1038]
+                  - cell "Kavitha Naidoo" [ref=e1039]
+                  - cell "26/05/2026 17:57" [ref=e1040]
+                  - cell "Naledi weeeee Khumalo" [ref=e1041]
+                  - cell "26/05/2026 19:01" [ref=e1042]
+                  - cell [ref=e1043]
+                  - cell [ref=e1044]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1045]
+                  - cell "26/05/2026 17:54" [ref=e1046]
+                  - cell "15/05/2026 08:00" [ref=e1047]
+                  - cell "15/05/2026 18:00" [ref=e1048]
+                  - cell "Adoption Leave" [ref=e1049]
+                  - cell "No" [ref=e1050]
+                  - cell "No" [ref=e1051]
+                  - cell [ref=e1052]
+                  - cell [ref=e1053]:
+                    - generic [ref=e1060]:
+                      - img [ref=e1062]
+                      - img [ref=e1065]
+                      - img [ref=e1068]
+                      - img [ref=e1071]
+                  - cell "Cancelled" [ref=e1073]
+                  - cell [ref=e1074]
+                  - cell [ref=e1075]
+                  - cell [ref=e1076]
+                  - cell [ref=e1077]
+                  - cell [ref=e1078]
+                  - cell "1 day" [ref=e1079]
+                  - cell "Working Days" [ref=e1080]
+                  - cell [ref=e1081]
+                - row "Toggle Row Selected search LA2026/11387 Leave Application 11/05/2026 13:22 GOV00003 Thabo Musa Victor Mthembu Male African 9 test OFFICE OF THE MINISTER Kavitha Naidoo 11/05/2026 13:31 Naledi weeeee Khumalo 11/05/2026 13:33 06/05/2026 08:00 07/05/2026 18:00 Annual Leave Yes No Generate PERSAL Input In Progress 11/05/2026 13:36 With Full Pay 2 days Working Days" [ref=e1082]:
+                  - cell "Toggle Row Selected" [ref=e1083]:
+                    - checkbox "Toggle Row Selected" [ref=e1085] [cursor=pointer]
+                  - cell "search" [ref=e1086]:
+                    - link "search" [ref=e1087] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=52ad1608-1fd6-411b-beec-3fbf6a524fe4
+                      - img "search" [ref=e1088]:
+                        - img [ref=e1089]
+                  - cell "LA2026/11387" [ref=e1091]
+                  - cell "Leave Application" [ref=e1092]
+                  - cell "11/05/2026 13:22" [ref=e1093]
+                  - cell "GOV00003" [ref=e1094]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1095]
+                  - cell "Male" [ref=e1096]
+                  - cell "African" [ref=e1097]:
+                    - generic [ref=e1102]: African
+                  - cell "9" [ref=e1103]
+                  - cell "test" [ref=e1104]
+                  - cell "OFFICE OF THE MINISTER" [ref=e1105]
+                  - cell "Kavitha Naidoo" [ref=e1106]
+                  - cell "11/05/2026 13:31" [ref=e1107]
+                  - cell "Naledi weeeee Khumalo" [ref=e1108]
+                  - cell "11/05/2026 13:33" [ref=e1109]
+                  - cell [ref=e1110]
+                  - cell [ref=e1111]
+                  - cell [ref=e1112]
+                  - cell [ref=e1113]
+                  - cell "06/05/2026 08:00" [ref=e1114]
+                  - cell "07/05/2026 18:00" [ref=e1115]
+                  - cell "Annual Leave" [ref=e1116]
+                  - cell "Yes" [ref=e1117]
+                  - cell "No" [ref=e1118]
+                  - cell "Generate PERSAL Input" [ref=e1119]
+                  - cell [ref=e1120]:
+                    - generic [ref=e1127]:
+                      - img [ref=e1129]
+                      - img [ref=e1132]
+                      - img [ref=e1135]
+                      - img [ref=e1138]
+                      - img [ref=e1141]
+                  - cell "In Progress" [ref=e1144]
+                  - cell "11/05/2026 13:36" [ref=e1145]
+                  - cell [ref=e1146]
+                  - cell [ref=e1147]
+                  - cell [ref=e1148]
+                  - cell "With Full Pay" [ref=e1149]
+                  - cell "2 days" [ref=e1150]
+                  - cell "Working Days" [ref=e1151]
+                  - cell [ref=e1152]
+                - row "Toggle Row Selected search LA2026/10125 Leave Application 13/04/2026 13:18 GOV00003 Thabo Musa Victor Mthembu Male African 9 test OFFICE OF THE MINISTER Kavitha Naidoo 13/04/2026 13:31 Naledi weeeee Khumalo 13/04/2026 13:52 Thabo Musa Victor Mthembu 13/04/2026 13:29 Thabo Musa Victor Mthembu 13/04/2026 13:30 14/04/2026 08:00 15/04/2026 18:00 Annual Leave Yes No Completed 2 days Working Days" [ref=e1153]:
+                  - cell "Toggle Row Selected" [ref=e1154]:
+                    - checkbox "Toggle Row Selected" [ref=e1156] [cursor=pointer]
+                  - cell "search" [ref=e1157]:
+                    - link "search" [ref=e1158] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=958b7ba7-ebe4-4bd3-ae5b-578bbe6c0c2f
+                      - img "search" [ref=e1159]:
+                        - img [ref=e1160]
+                  - cell "LA2026/10125" [ref=e1162]
+                  - cell "Leave Application" [ref=e1163]
+                  - cell "13/04/2026 13:18" [ref=e1164]
+                  - cell "GOV00003" [ref=e1165]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1166]
+                  - cell "Male" [ref=e1167]
+                  - cell "African" [ref=e1168]:
+                    - generic [ref=e1173]: African
+                  - cell "9" [ref=e1174]
+                  - cell "test" [ref=e1175]
+                  - cell "OFFICE OF THE MINISTER" [ref=e1176]
+                  - cell "Kavitha Naidoo" [ref=e1177]
+                  - cell "13/04/2026 13:31" [ref=e1178]
+                  - cell "Naledi weeeee Khumalo" [ref=e1179]
+                  - cell "13/04/2026 13:52" [ref=e1180]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1181]
+                  - cell "13/04/2026 13:29" [ref=e1182]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1183]
+                  - cell "13/04/2026 13:30" [ref=e1184]
+                  - cell "14/04/2026 08:00" [ref=e1185]
+                  - cell "15/04/2026 18:00" [ref=e1186]
+                  - cell "Annual Leave" [ref=e1187]
+                  - cell "Yes" [ref=e1188]
+                  - cell "No" [ref=e1189]
+                  - cell [ref=e1190]
+                  - cell [ref=e1191]:
+                    - generic [ref=e1198]:
+                      - img [ref=e1200]
+                      - img [ref=e1203]
+                      - img [ref=e1206]
+                      - img [ref=e1209]
+                      - img [ref=e1212]
+                  - cell "Completed" [ref=e1214]
+                  - cell [ref=e1215]
+                  - cell [ref=e1216]
+                  - cell [ref=e1217]
+                  - cell [ref=e1218]
+                  - cell [ref=e1219]
+                  - cell "2 days" [ref=e1220]
+                  - cell "Working Days" [ref=e1221]
+                  - cell [ref=e1222]
+                - row "Toggle Row Selected search LA2026/10186 Leave Application 14/04/2026 10:30 GOV00003 Thabo Musa Victor Mthembu Male African 9 test OFFICE OF THE MINISTER Kavitha Naidoo 16/04/2026 13:05 Naledi weeeee Khumalo 19/04/2026 16:16 08/04/2026 08:00 08/04/2026 18:00 Unpaid Leave Authorized No No Generate PERSAL Input In Progress 19/04/2026 16:17 Without Pay 1 day Calendar Days" [ref=e1223]:
+                  - cell "Toggle Row Selected" [ref=e1224]:
+                    - checkbox "Toggle Row Selected" [ref=e1226] [cursor=pointer]
+                  - cell "search" [ref=e1227]:
+                    - link "search" [ref=e1228] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=96c2e5a0-594d-4659-8b44-603b170a7f9c
+                      - img "search" [ref=e1229]:
+                        - img [ref=e1230]
+                  - cell "LA2026/10186" [ref=e1232]
+                  - cell "Leave Application" [ref=e1233]
+                  - cell "14/04/2026 10:30" [ref=e1234]
+                  - cell "GOV00003" [ref=e1235]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1236]
+                  - cell "Male" [ref=e1237]
+                  - cell "African" [ref=e1238]:
+                    - generic [ref=e1243]: African
+                  - cell "9" [ref=e1244]
+                  - cell "test" [ref=e1245]
+                  - cell "OFFICE OF THE MINISTER" [ref=e1246]
+                  - cell "Kavitha Naidoo" [ref=e1247]
+                  - cell "16/04/2026 13:05" [ref=e1248]
+                  - cell "Naledi weeeee Khumalo" [ref=e1249]
+                  - cell "19/04/2026 16:16" [ref=e1250]
+                  - cell [ref=e1251]
+                  - cell [ref=e1252]
+                  - cell [ref=e1253]
+                  - cell [ref=e1254]
+                  - cell "08/04/2026 08:00" [ref=e1255]
+                  - cell "08/04/2026 18:00" [ref=e1256]
+                  - cell "Unpaid Leave Authorized" [ref=e1257]
+                  - cell "No" [ref=e1258]
+                  - cell "No" [ref=e1259]
+                  - cell "Generate PERSAL Input" [ref=e1260]
+                  - cell [ref=e1261]:
+                    - generic [ref=e1268]:
+                      - img [ref=e1270]
+                      - img [ref=e1273]
+                      - img [ref=e1276]
+                      - img [ref=e1279]
+                      - img [ref=e1282]
+                  - cell "In Progress" [ref=e1285]
+                  - cell "19/04/2026 16:17" [ref=e1286]
+                  - cell [ref=e1287]
+                  - cell [ref=e1288]
+                  - cell [ref=e1289]
+                  - cell "Without Pay" [ref=e1290]
+                  - cell "1 day" [ref=e1291]
+                  - cell "Calendar Days" [ref=e1292]
+                  - cell [ref=e1293]
+  - alert [ref=e6]

@@ -1,0 +1,466 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e942]:
+    - complementary [ref=e943]:
+      - menu [ref=e947]:
+        - menuitem "calendar Leave Management" [ref=e948] [cursor=pointer]:
+          - img "calendar" [ref=e949]:
+            - img [ref=e950]
+          - generic [ref=e952]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e953] [cursor=pointer]:
+          - img "calendar" [ref=e954]:
+            - img [ref=e955]
+          - generic [ref=e957]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e958] [cursor=pointer]:
+          - img "book" [ref=e959]:
+            - img [ref=e960]
+          - generic [ref=e962]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e963] [cursor=pointer]:
+          - img "bank" [ref=e964]:
+            - img [ref=e965]
+          - generic [ref=e967]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e968] [cursor=pointer]:
+          - img "apartment" [ref=e969]:
+            - img [ref=e970]
+          - generic [ref=e972]: Workflows
+        - menuitem "tool Administration" [ref=e973] [cursor=pointer]:
+          - img "tool" [ref=e974]:
+            - img [ref=e975]
+          - generic [ref=e977]: Administration
+        - menuitem "setting Configurations" [ref=e978] [cursor=pointer]:
+          - img "setting" [ref=e979]:
+            - img [ref=e980]
+          - generic [ref=e982]: Configurations
+      - img "menu-unfold" [ref=e985] [cursor=pointer]:
+        - img [ref=e986]
+    - generic [ref=e988]:
+      - banner [ref=e989]:
+        - generic [ref=e995]:
+          - generic [ref=e997]:
+            - button "edit" [ref=e998] [cursor=pointer]:
+              - img "edit" [ref=e999]:
+                - img [ref=e1000]
+            - paragraph [ref=e1002] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e1003]:
+              - generic [ref=e1004]: Live
+              - img "close" [ref=e1005] [cursor=pointer]:
+                - img [ref=e1006]
+          - generic [ref=e1016]:
+            - link [ref=e1022] [cursor=pointer]:
+              - /url: /
+              - img [ref=e1032]
+            - generic [ref=e1034]:
+              - generic [ref=e1035]:
+                - generic [ref=e1037]:
+                  - generic [ref=e1038]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e1040] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e1044] [cursor=pointer]:
+                  - img "block" [ref=e1045]:
+                    - img [ref=e1046]
+                  - generic [ref=e1048]: Live
+              - generic [ref=e1050]:
+                - generic [ref=e1051] [cursor=pointer]:
+                  - text: Kavitha Naidoo
+                  - img "down" [ref=e1052]:
+                    - img [ref=e1053]
+                - img "user" [ref=e1056]:
+                  - img [ref=e1057]
+      - main [ref=e1059]:
+        - generic [ref=e1064]:
+          - generic [ref=e1065]:
+            - generic [ref=e1066]:
+              - generic [ref=e1068]:
+                - 'heading "Recommend Leave: 1 day Annual Leave Leave by TMV Mthembu from Thu 30 Apr 26 to Thu 30 Apr 26" [level=4] [ref=e1070]':
+                  - strong [ref=e1071]: "Recommend Leave:"
+                  - text: 1 day Annual Leave Leave by TMV Mthembu from Thu 30 Apr 26 to Thu 30 Apr 26
+                - generic [ref=e1074]: OVERDUE (DUE 22 days ago)
+                - generic [ref=e1079]: In Progress
+              - generic [ref=e1080]: Received from Thabo Musa Victor Mthembu 24 days ago
+            - generic [ref=e1081]:
+              - generic [ref=e1082]:
+                - generic [ref=e1084]:
+                  - img [ref=e1086]
+                  - img [ref=e1089]
+                - button "menu" [ref=e1091] [cursor=pointer]:
+                  - img "menu" [ref=e1093]:
+                    - img [ref=e1094]
+              - generic [ref=e1096]: "Ref No: LA2026/11402"
+              - generic [ref=e1097]: "Created by: Thabo Musa Victor Mthembu 24 days ago"
+              - generic [ref=e1098]: "SLA: 2 business days"
+          - generic [ref=e1100]:
+            - generic [ref=e1101]:
+              - img "loading" [ref=e1102]:
+                - img [ref=e1103]
+              - generic [ref=e1105]: Fetching data...
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "edit":
+                          - img "edit":
+                            - img
+                        - paragraph: SaGov.Leave/sagov-recommend-leave-application v62
+                        - generic:
+                          - generic: Live
+                          - img "close":
+                            - img
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - alert:
+                                          - generic:
+                                            - generic:
+                                              - generic: Please download and review all attachments before selecting the confirmation checkbox. The action buttons will remain disabled until the attachments have been downloaded
+                                          - button "close":
+                                            - img "close":
+                                              - img
+                                        - alert:
+                                          - generic:
+                                            - generic:
+                                              - generic: "Hint: Review the leave application and recommend or not recommend."
+                                          - button "close":
+                                            - img "close":
+                                              - img
+                                        - generic:
+                                          - generic:
+                                            - generic:
+                                              - generic:
+                                                - img "right":
+                                                  - img
+                                              - generic: Leave Application Details
+                                            - generic:
+                                              - generic:
+                                                - generic:
+                                                  - generic:
+                                                    - generic:
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic "Applicant Name"
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic "PERSAL Number"
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic "Type Of Verification"
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic:
+                                                                        - generic:
+                                                                          - generic:
+                                                                            - generic:
+                                                                              - generic:
+                                                                                - generic:
+                                                                                  - radio "Otp" [disabled]
+                                                                                - generic: Otp
+                                                                            - generic:
+                                                                              - generic:
+                                                                                - generic:
+                                                                                  - radio "Consent Form" [disabled]
+                                                                                - generic: Consent Form
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic "Consent Form"
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic "Category"
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic "Sub-Category"
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic "Duration Type"
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic:
+                                                                        - generic:
+                                                                          - generic:
+                                                                            - generic:
+                                                                              - generic:
+                                                                                - generic:
+                                                                                  - radio "Hours" [disabled]
+                                                                                - generic: Hours
+                                                                            - generic:
+                                                                              - generic:
+                                                                                - generic:
+                                                                                  - radio "Days" [disabled]
+                                                                                - generic: Days
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic "Start Date"
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic "End Date"
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic:
+                                                                        - generic:
+                                                                          - generic:
+                                                                            - generic:
+                                                                              - generic:
+                                                                                - generic:
+                                                                                  - generic:
+                                                                                    - generic:
+                                                                                      - generic:
+                                                                                        - img "loading":
+                                                                                          - img
+                                                                                        - generic: loading...
+                                                                                  - generic:
+                                                                                    - generic:
+                                                                                      - table:
+                                                                                        - row "Ref No Date Start time End time Duration":
+                                                                                          - columnheader "Ref No":
+                                                                                            - text: Ref No
+                                                                                            - separator
+                                                                                          - columnheader "Date":
+                                                                                            - text: Date
+                                                                                            - separator
+                                                                                          - columnheader "Start time":
+                                                                                            - text: Start time
+                                                                                            - separator
+                                                                                          - columnheader "End time":
+                                                                                            - text: End time
+                                                                                            - separator
+                                                                                          - columnheader "Duration":
+                                                                                            - text: Duration
+                                                                                            - separator
+                                                                                        - rowgroup
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic:
+                                                                        - alert:
+                                                                          - img "exclamation-circle":
+                                                                            - img
+                                                                          - button "close":
+                                                                            - img "close":
+                                                                              - img
+                                                                        - alert:
+                                                                          - img "check-circle":
+                                                                            - img
+                                                                          - button "close":
+                                                                            - img "close":
+                                                                              - img
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic "Address"
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic "Telephone"
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic "Notes"
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic "Applicant Comment(s)"
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic "Supporting Documents"
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic:
+                                                                        - generic:
+                                                                          - generic:
+                                                                            - generic:
+                                                                              - checkbox
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic:
+                                                                      - generic:
+                                                                        - generic:
+                                                                          - generic: l acknowledge that l have reviewed the leave application along with any accompanying supporting documents.
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic: Existing Leave
+                                                                - generic:
+                                                                  - generic: Existing in progress cancellation
+                                                                - generic:
+                                                                  - generic: Public Holidays
+                                                                - generic:
+                                                                  - generic: Colleague Leave
+                                                              - generic:
+                                                                - text: Views
+                                                                - img "down":
+                                                                  - img
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - button "Today"
+                                                                  - button "Back"
+                                                                  - button "Next"
+                                                                - generic: June 2026
+                                                                - generic:
+                                                                  - button "Month"
+                                                                  - button "Week"
+                                                                  - button "Day"
+                                                              - table "Month View":
+                                                                - row "Sun Mon Tue Wed Thu Fri Sat":
+                                                                  - generic:
+                                                                    - columnheader "Sun"
+                                                                  - generic:
+                                                                    - columnheader "Mon"
+                                                                  - generic:
+                                                                    - columnheader "Tue"
+                                                                  - generic:
+                                                                    - columnheader "Wed"
+                                                                  - generic:
+                                                                    - columnheader "Thu"
+                                                                  - generic:
+                                                                    - columnheader "Fri"
+                                                                  - generic:
+                                                                    - columnheader "Sat"
+                                                                - rowgroup:
+                                                                  - row "31 01 02 03 04 05 06":
+                                                                    - generic:
+                                                                      - cell "31":
+                                                                        - button "31"
+                                                                      - cell "01":
+                                                                        - button "01"
+                                                                      - cell "02":
+                                                                        - button "02"
+                                                                      - cell "03":
+                                                                        - button "03"
+                                                                      - cell "04":
+                                                                        - button "04"
+                                                                      - cell "05":
+                                                                        - button "05"
+                                                                      - cell "06":
+                                                                        - button "06"
+                                                                - rowgroup:
+                                                                  - row "07 08 09 10 11 12 13":
+                                                                    - generic:
+                                                                      - cell "07":
+                                                                        - button "07"
+                                                                      - cell "08":
+                                                                        - button "08"
+                                                                      - cell "09":
+                                                                        - button "09"
+                                                                      - cell "10":
+                                                                        - button "10"
+                                                                      - cell "11":
+                                                                        - button "11"
+                                                                      - cell "12":
+                                                                        - button "12"
+                                                                      - cell "13":
+                                                                        - button "13"
+                                                                - rowgroup:
+                                                                  - row "14 15 16 17 18 19 20":
+                                                                    - generic:
+                                                                      - cell "14":
+                                                                        - button "14"
+                                                                      - cell "15":
+                                                                        - button "15"
+                                                                      - cell "16":
+                                                                        - button "16"
+                                                                      - cell "17":
+                                                                        - button "17"
+                                                                      - cell "18":
+                                                                        - button "18"
+                                                                      - cell "19":
+                                                                        - button "19"
+                                                                      - cell "20":
+                                                                        - button "20"
+                                                                - rowgroup:
+                                                                  - row "21 22 23 24 25 26 27":
+                                                                    - generic:
+                                                                      - cell "21":
+                                                                        - button "21"
+                                                                      - cell "22":
+                                                                        - button "22"
+                                                                      - cell "23":
+                                                                        - button "23"
+                                                                      - cell "24":
+                                                                        - button "24"
+                                                                      - cell "25":
+                                                                        - button "25"
+                                                                      - cell "26":
+                                                                        - button "26"
+                                                                      - cell "27":
+                                                                        - button "27"
+                                                                - rowgroup:
+                                                                  - row "28 29 30 01 02 03 04":
+                                                                    - generic:
+                                                                      - cell "28":
+                                                                        - button "28"
+                                                                      - cell "29":
+                                                                        - button "29"
+                                                                      - cell "30":
+                                                                        - button "30"
+                                                                      - cell "01":
+                                                                        - button "01"
+                                                                      - cell "02":
+                                                                        - button "02"
+                                                                      - cell "03":
+                                                                        - button "03"
+                                                                      - cell "04":
+                                                                        - button "04"
+                                        - generic:
+                                          - generic:
+                                            - generic:
+                                              - generic:
+                                                - generic:
+                                                  - generic:
+                                                    - generic:
+                                                      - button "Close":
+                                                        - generic: Close
+                                            - generic:
+                                              - generic:
+                                                - generic:
+                                                  - generic:
+                                                    - generic:
+                                                      - button "Not Recommend":
+                                                        - generic: Not Recommend
+                                            - generic:
+                                              - generic:
+                                                - generic:
+                                                  - generic:
+                                                    - generic:
+                                                      - button "Recommend" [disabled]:
+                                                        - generic: Recommend
+                                            - generic:
+                                              - generic:
+                                                - generic:
+                                                  - generic:
+                                                    - generic:
+                                                      - button "Recommend" [disabled]:
+                                                        - generic: Recommend
+  - alert [ref=e6]

@@ -4,3 +4,6 @@ Thumbs.db
 *.log
 .env
 .env.local
+
+# Transient eLeave smoke-test chain state (recorded at runtime by the apply spec)
+.submitted-application.json

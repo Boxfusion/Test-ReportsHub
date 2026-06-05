@@ -1,0 +1,181 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts >> ELEAVE-SMOKE-APPLY — Application for Leave >> TC-05: Category and sub-category populate correctly
+- Location: projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts:157:7
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('heading', { name: 'New Leave Application:' })
+Expected: visible
+Timeout: 30000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 30000ms
+  - waiting for getByRole('heading', { name: 'New Leave Application:' })
+
+```
+
+```yaml
+- 'heading "Application error: a client-side exception has occurred (see the browser console for more information)." [level=2]'
+```
+
+# Test source
+
+```ts
+  1   | // AUTO-RECORDED from test-plans/eLeaveSmokeTest/application-for-leave.md
+  2   | // Source: Azure DevOps test plan #101528, suite #101941 (Application for leave)
+  3   | // The .md plan is canonical. AI-repair will patch failing lines in this file.
+  4   | // Do not hand-edit unless you are also updating the .md plan.
+  5   | //
+  6   | // Recorded live on the SaGov.Leave/sagov-leave-application v74 Draft form as applicant
+  7   | // GOV003 (Thabo Musa Victor Mthembu) via Workflows -> My Items -> Create New ->
+  8   | // SaGov Leave Application. Login, My Items, the Create New dropdown, the new-leave form
+  9   | // (Category -> Sub-Category reveal, Start/End Date textboxes, Address, Telephone) and the
+  10  | // disabled Submit reveal were all captured against real selectors.
+  11  | //
+  12  | // DRIFT vs the ADO-authored steps (the live v74 form differs):
+  13  | //   * No T&Cs / certification checkbox is present on the applicant form (TC-09/TC-12 assume one).
+  14  | //   * No green "Great! You have selected to take 1 day off" banner surfaced on same-day dates (TC-06).
+  15  | //   * No "Available days ..." balance message surfaced on the applicant draft (TC-07);
+  16  | //     that message IS shown on the recommend/approve detail forms (see the other specs).
+  17  | //   * Submit is gated by required-field validation (disabled), not by a T&Cs tick.
+  18  | // Those cases are recorded to the closest live equivalent and flagged inline with TODO markers.
+  19  | //
+  20  | // SKIPPED: cases whose only assertion needs a real Submit (Delegate modal, routing) — that
+  21  | // mutates live QA data — are guarded with test.skip + reason.
+  22  | 
+  23  | import { test, expect, Page } from '@playwright/test';
+  24  | 
+  25  | const APP_URL = 'https://pd-hcm-adminportal-qa.shesha.app/';
+  26  | const USER = { user: 'GOV003', password: '123qwe' };
+  27  | const MY_ITEMS_URL = `${APP_URL}dynamic/SaGov.Leave/my_items2`;
+  28  | 
+  29  | async function loginAsUser(page: Page) {
+  30  |   await page.goto(APP_URL);
+  31  |   await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  32  |   await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  33  |   await page.getByRole('button', { name: 'Sign In' }).click();
+  34  |   await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
+  35  |   await page.waitForLoadState('networkidle');
+  36  | }
+  37  | 
+  38  | // Workflows -> My Items -> Create New -> SaGov Leave Application -> Draft form.
+  39  | async function openNewLeaveApplication(page: Page) {
+  40  |   await loginAsUser(page);
+  41  |   await page.goto(MY_ITEMS_URL);
+  42  |   await page.waitForLoadState('networkidle');
+  43  |   await page.getByRole('button', { name: 'plus Create New down' }).click();
+  44  |   await page.getByRole('menuitem', { name: 'SaGov Leave Application', exact: true }).click();
+> 45  |   await expect(page.getByRole('heading', { name: 'New Leave Application:' })).toBeVisible({ timeout: 30000 });
+      |                                                                               ^ Error: expect(locator).toBeVisible() failed
+  46  | }
+  47  | 
+  48  | // The Category select is a searchable antd combobox scoped by its form-item label.
+  49  | async function selectCategory(page: Page, name: string) {
+  50  |   const combo = page.locator('.ant-form-item:has(label[title="Category"]) input[role="combobox"]');
+  51  |   await combo.click();
+  52  |   await combo.fill(name);
+  53  |   await page.locator('.ant-select-item-option', { hasText: name }).first().click();
+  54  | }
+  55  | 
+  56  | // SEEDED submit flow (recorded live). Fills every required field on the v74 form so the
+  57  | // certification checkbox + Submit button enable. Annual Leave / single future weekday so the
+  58  | // request is a clean "1 day off". Leaves the form ready to Submit.
+  59  | const SEED_LEAVE_DATE = '15/06/2026'; // a future Monday — single working day, avoids backdated rules
+  60  | 
+  61  | async function fillLeaveApplicationReadyToSubmit(page: Page) {
+  62  |   await openNewLeaveApplication(page);
+  63  |   // Category -> reveals Sub-Category
+  64  |   await selectCategory(page, 'Annual Leave');
+  65  |   const subCombo = page.locator('.ant-form-item:has(label[title="Sub-Category"]) input[role="combobox"]');
+  66  |   await subCombo.click();
+  67  |   // The Category dropdown lingers in the DOM, so scope to the Sub-Category dropdown — the one
+  68  |   // offering 'Unpaid Leave Authorized' — to avoid clicking the wrong 'Annual Leave' option.
+  69  |   await page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden):has-text("Unpaid Leave Authorized") .ant-select-item-option', { hasText: 'Annual Leave' }).first().click();
+  70  |   // Start + End date (same day)
+  71  |   await page.getByRole('textbox', { name: 'Select date' }).first().fill(SEED_LEAVE_DATE);
+  72  |   await page.getByRole('textbox', { name: 'Select date' }).first().press('Enter');
+  73  |   await page.getByRole('textbox', { name: 'Select date' }).nth(1).fill(SEED_LEAVE_DATE);
+  74  |   await page.getByRole('textbox', { name: 'Select date' }).nth(1).press('Enter');
+  75  |   // Address (required)
+  76  |   await page.locator('.ant-form-item:has(label[title="Address"])').getByRole('textbox').fill('12 West Avenue, Pretoria');
+  77  |   // Duration radio — set LAST (after dates+address). Setting it earlier desyncs the v74 form's
+  78  |   // validation model and Submit then falsely flags Sub-Category/Duration as invalid.
+  79  |   await page.getByRole('radio', { name: 'Days' }).check();
+  80  |   // Certification checkbox — enables Submit
+  81  |   await page.getByRole('checkbox').last().check();
+  82  |   await expect(page.getByRole('button', { name: 'Submit', exact: true }).first()).toBeEnabled({ timeout: 15000 });
+  83  |   // Let the form's (error-prone) scripts settle before Submit.
+  84  |   await page.waitForTimeout(1500);
+  85  | }
+  86  | 
+  87  | test.describe('ELEAVE-SMOKE-APPLY — Application for Leave', () => {
+  88  | 
+  89  |   // ADO #101956
+  90  |   test('TC-01: Create New Leave Application — login and reach My Items', async ({ page }) => {
+  91  |     // STEP 1: NAVIGATE to the app
+  92  |     await page.goto(APP_URL);
+  93  |     // STEP 2: SNAPSHOT — confirm login page is visible
+  94  |     // STEP 3: TYPE Username field with `GOV003`
+  95  |     await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  96  |     // STEP 4: TYPE Password field with `123qwe`
+  97  |     await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  98  |     // STEP 5: CLICK the Sign In button
+  99  |     await page.getByRole('button', { name: 'Sign In' }).click();
+  100 |     // STEP 6: WAIT for the landing page to load
+  101 |     await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
+  102 |     await page.waitForLoadState('networkidle');
+  103 |     // STEP 7: CLICK Workflows -> My Items
+  104 |     await page.getByRole('menuitem', { name: 'apartment Workflows' }).click();
+  105 |     // The side-menu flyout animates and an overlay can intercept the first click (menu-expand
+  106 |     // race); wait for the My Items entry, then click its link, forcing past the transient overlay.
+  107 |     const myItems = page.getByRole('menuitem', { name: 'My Items' });
+  108 |     await myItems.waitFor({ state: 'visible' });
+  109 |     await myItems.getByRole('link', { name: 'My Items' }).click({ force: true });
+  110 |     // STEP 8: WAIT for the My Items page to load
+  111 |     await page.waitForURL(/my_items2/, { timeout: 30000 });
+  112 |     // ASSERT (BLOCKING) not on /login and the My Items page is displayed
+  113 |     await expect(page).not.toHaveURL(/login/i);
+  114 |     await expect(page.getByRole('heading', { name: 'My Items' })).toBeVisible({ timeout: 30000 });
+  115 |   });
+  116 | 
+  117 |   // ADO #101957
+  118 |   test('TC-02: My Items page loads with leave application list', async ({ page }) => {
+  119 |     await loginAsUser(page);
+  120 |     await page.goto(MY_ITEMS_URL);
+  121 |     await page.waitForLoadState('networkidle');
+  122 |     // STEP 1: SNAPSHOT Observe the My Items list and scrollbar
+  123 |     // ASSERT (BLOCKING) the leave application list is displayed
+  124 |     await expect(page.getByRole('heading', { name: 'My Items' })).toBeVisible({ timeout: 30000 });
+  125 |     await expect(page.getByRole('table')).toBeVisible();
+  126 |     await expect(page.getByRole('columnheader', { name: 'Ref No' })).toBeVisible();
+  127 |   });
+  128 | 
+  129 |   // ADO #101958
+  130 |   test('TC-03: Create New dropdown shows SaGov Leave Application option', async ({ page }) => {
+  131 |     await loginAsUser(page);
+  132 |     await page.goto(MY_ITEMS_URL);
+  133 |     await page.waitForLoadState('networkidle');
+  134 |     // STEP 1-2: SNAPSHOT + CLICK the Create New button
+  135 |     await page.getByRole('button', { name: 'plus Create New down' }).click();
+  136 |     // STEP 3: SNAPSHOT Inspect the dropdown items
+  137 |     // ASSERT (BLOCKING) 'SaGov Leave Application' is listed as an option
+  138 |     await expect(page.getByRole('menuitem', { name: 'SaGov Leave Application', exact: true })).toBeVisible();
+  139 |   });
+  140 | 
+  141 |   // ADO #101959
+  142 |   test('TC-04: New leave application form opens on option selection', async ({ page }) => {
+  143 |     await openNewLeaveApplication(page);
+  144 |     // STEP 1-2: SNAPSHOT + CLICK the 'SaGov Leave Application' option (handled by helper)
+  145 |     // STEP 3: SNAPSHOT Inspect form fields
+```

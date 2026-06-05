@@ -1,0 +1,534 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts >> ELEAVE-SMOKE-RECOMMEND — Recommend Leave >> TC-06: 'Recommend' action button is visible and clickable on backdated leave
+- Location: projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts:125:7
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('button', { name: 'Recommend', exact: true })
+Expected: visible
+Error: strict mode violation: getByRole('button', { name: 'Recommend', exact: true }) resolved to 2 elements:
+    1) <button disabled type="button" class="ant-btn css-1lo1l9k css-var-Rkq ant-btn-primary sha-toolbar-btn sha-toolbar-btn-configurable">…</button> aka getByRole('button', { name: 'Recommend' }).nth(1)
+    2) <button disabled type="button" class="ant-btn css-1lo1l9k css-var-Rkq ant-btn-primary sha-toolbar-btn sha-toolbar-btn-configurable">…</button> aka getByRole('button', { name: 'Recommend' }).nth(2)
+
+Call log:
+  - Expect "toBeVisible" with timeout 10000ms
+  - waiting for getByRole('button', { name: 'Recommend', exact: true })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - menu [ref=e9]:
+        - menuitem "calendar Leave Management" [ref=e10] [cursor=pointer]:
+          - img "calendar" [ref=e11]:
+            - img [ref=e12]
+          - generic [ref=e14]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e15] [cursor=pointer]:
+          - img "calendar" [ref=e16]:
+            - img [ref=e17]
+          - generic [ref=e19]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e20] [cursor=pointer]:
+          - img "book" [ref=e21]:
+            - img [ref=e22]
+          - generic [ref=e24]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e25] [cursor=pointer]:
+          - img "bank" [ref=e26]:
+            - img [ref=e27]
+          - generic [ref=e29]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e30] [cursor=pointer]:
+          - img "apartment" [ref=e31]:
+            - img [ref=e32]
+          - generic [ref=e34]: Workflows
+        - menuitem "tool Administration" [ref=e35] [cursor=pointer]:
+          - img "tool" [ref=e36]:
+            - img [ref=e37]
+          - generic [ref=e39]: Administration
+        - menuitem "setting Configurations" [ref=e40] [cursor=pointer]:
+          - img "setting" [ref=e41]:
+            - img [ref=e42]
+          - generic [ref=e44]: Configurations
+      - img "menu-unfold" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e57]:
+          - generic [ref=e59]:
+            - button "edit" [ref=e60] [cursor=pointer]:
+              - img "edit" [ref=e61]:
+                - img [ref=e62]
+            - paragraph [ref=e64] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e65]:
+              - generic [ref=e66]: Live
+              - img "close" [ref=e67] [cursor=pointer]:
+                - img [ref=e68]
+          - generic [ref=e78]:
+            - link [ref=e84] [cursor=pointer]:
+              - /url: /
+              - img [ref=e94]
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e99]:
+                  - generic [ref=e100]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e102] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e106] [cursor=pointer]:
+                  - img "block" [ref=e107]:
+                    - img [ref=e108]
+                  - generic [ref=e110]: Live
+              - generic [ref=e112]:
+                - generic [ref=e113] [cursor=pointer]:
+                  - text: Kavitha Naidoo
+                  - img "down" [ref=e114]:
+                    - img [ref=e115]
+                - img "user" [ref=e118]:
+                  - img [ref=e119]
+      - main [ref=e121]:
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - generic [ref=e130]:
+                - 'heading "Recommend Leave: 1 day Annual Leave Leave by TMV Mthembu from Thu 30 Apr 26 to Thu 30 Apr 26" [level=4] [ref=e132]':
+                  - strong [ref=e133]: "Recommend Leave:"
+                  - text: 1 day Annual Leave Leave by TMV Mthembu from Thu 30 Apr 26 to Thu 30 Apr 26
+                - generic [ref=e136]: OVERDUE (DUE 22 days ago)
+                - generic [ref=e141]: In Progress
+              - generic [ref=e142]: Received from Thabo Musa Victor Mthembu 24 days ago
+            - generic [ref=e143]:
+              - generic [ref=e144]:
+                - generic [ref=e146]:
+                  - img [ref=e148]
+                  - img [ref=e151]
+                - button "menu" [ref=e153] [cursor=pointer]:
+                  - img "menu" [ref=e155]:
+                    - img [ref=e156]
+              - generic [ref=e158]: "Ref No: LA2026/11402"
+              - generic [ref=e159]: "Created by: Thabo Musa Victor Mthembu 24 days ago"
+              - generic [ref=e160]: "SLA: 2 business days"
+          - generic [ref=e165]:
+            - generic [ref=e167]:
+              - button "edit" [ref=e168] [cursor=pointer]:
+                - img "edit" [ref=e169]:
+                  - img [ref=e170]
+              - paragraph [ref=e172] [cursor=pointer]: SaGov.Leave/sagov-recommend-leave-application v62
+              - generic [ref=e173]:
+                - generic [ref=e174]: Live
+                - img "close" [ref=e175] [cursor=pointer]:
+                  - img [ref=e176]
+            - generic [ref=e188]:
+              - alert [ref=e189]:
+                - generic [ref=e192]: Please download and review all attachments before selecting the confirmation checkbox. The action buttons will remain disabled until the attachments have been downloaded
+                - button "close" [ref=e193] [cursor=pointer]:
+                  - img "close" [ref=e194]:
+                    - img [ref=e195]
+              - alert [ref=e197]:
+                - generic [ref=e200]: "Hint: Review the leave application and recommend or not recommend."
+                - button "close" [ref=e201] [cursor=pointer]:
+                  - img "close" [ref=e202]:
+                    - img [ref=e203]
+              - generic [ref=e206]:
+                - generic [ref=e207]:
+                  - img "right" [ref=e209] [cursor=pointer]:
+                    - img [ref=e210]
+                  - generic [ref=e212]: Leave Application Details
+                - generic [ref=e217]:
+                  - generic [ref=e220]:
+                    - generic [ref=e222]:
+                      - generic "Applicant Name" [ref=e224]
+                      - generic [ref=e227]: unknown
+                    - generic [ref=e229]:
+                      - generic "PERSAL Number" [ref=e231]
+                      - generic [ref=e234]: GOV00003
+                    - generic [ref=e236]:
+                      - generic "Category" [ref=e238]
+                      - generic [ref=e241]: unknown
+                    - generic [ref=e243]:
+                      - generic "Sub-Category" [ref=e245]
+                      - generic [ref=e248]: unknown
+                    - generic [ref=e250]:
+                      - generic "Duration Type" [ref=e252]
+                      - generic [ref=e258]:
+                        - generic [ref=e260]:
+                          - radio "Hours" [disabled] [ref=e262]
+                          - generic [ref=e264]: Hours
+                        - generic [ref=e266]:
+                          - radio "Days" [checked] [disabled] [ref=e268]
+                          - generic [ref=e270]: Days
+                    - generic [ref=e272]:
+                      - generic "Start Date" [ref=e274]
+                      - generic [ref=e277]: 30/04/2026
+                    - generic [ref=e279]:
+                      - generic "End Date" [ref=e281]
+                      - generic [ref=e284]: 30/04/2026
+                    - generic [ref=e286]:
+                      - generic [ref=e292]:
+                        - alert [ref=e293]:
+                          - img "exclamation-circle" [ref=e294]:
+                            - img [ref=e295]
+                          - generic [ref=e299]: "Available days: Please note that Thabo Musa Victor Mthembu only has *67 day(s)* left for this particular leave type."
+                          - button "close" [ref=e300] [cursor=pointer]:
+                            - img "close" [ref=e301]:
+                              - img [ref=e302]
+                        - alert [ref=e304]:
+                          - img "check-circle" [ref=e305]:
+                            - img [ref=e306]
+                          - generic [ref=e310]: Thabo Musa Victor Mthembu has taken 1 day off
+                          - button "close" [ref=e311] [cursor=pointer]:
+                            - img "close" [ref=e312]:
+                              - img [ref=e313]
+                      - generic [ref=e316]:
+                        - generic "Address" [ref=e318]
+                        - generic [ref=e321]: west avenue
+                      - generic [ref=e323]:
+                        - generic "Telephone" [ref=e325]
+                        - generic [ref=e328]: "+27761425683"
+                      - generic [ref=e330]:
+                        - generic "Applicant Comment(s)" [ref=e332]
+                        - generic [ref=e335]: testing
+                      - generic "Supporting Documents" [ref=e339]
+                    - generic [ref=e343]:
+                      - checkbox [ref=e351] [cursor=pointer]
+                      - generic [ref=e358]: l acknowledge that l have reviewed the leave application along with any accompanying supporting documents.
+                  - generic [ref=e361]:
+                    - generic [ref=e362]:
+                      - generic [ref=e363]:
+                        - generic [ref=e366]: Existing Leave
+                        - generic [ref=e369]: Existing in progress cancellation
+                        - generic [ref=e372]: Public Holidays
+                        - generic [ref=e375]: Colleague Leave
+                      - generic [ref=e376] [cursor=pointer]:
+                        - text: Views
+                        - img "down" [ref=e377]:
+                          - img [ref=e378]
+                    - generic [ref=e380]:
+                      - generic [ref=e381]:
+                        - generic [ref=e382]:
+                          - button "Today" [ref=e383]
+                          - button "Back" [ref=e384]
+                          - button "Next" [ref=e385]
+                        - generic [ref=e386]: June 2026
+                        - generic [ref=e387]:
+                          - button "Month" [ref=e388]
+                          - button "Week" [ref=e389]
+                          - button "Day" [ref=e390]
+                      - table "Month View" [ref=e391]:
+                        - row "Sun Mon Tue Wed Thu Fri Sat" [ref=e392]:
+                          - columnheader "Sun" [ref=e394]
+                          - columnheader "Mon" [ref=e396]
+                          - columnheader "Tue" [ref=e398]
+                          - columnheader "Wed" [ref=e400]
+                          - columnheader "Thu" [ref=e402]
+                          - columnheader "Fri" [ref=e404]
+                          - columnheader "Sat" [ref=e406]
+                        - rowgroup [ref=e407]:
+                          - row "31 01 02 03 04 05 06" [ref=e416]:
+                            - generic [ref=e417]:
+                              - cell "31" [ref=e418]:
+                                - button "31" [ref=e419] [cursor=pointer]
+                              - cell "01" [ref=e420]:
+                                - button "01" [ref=e421] [cursor=pointer]
+                              - cell "02" [ref=e422]:
+                                - button "02" [ref=e423] [cursor=pointer]
+                              - cell "03" [ref=e424]:
+                                - button "03" [ref=e425] [cursor=pointer]
+                              - cell "04" [ref=e426]:
+                                - button "04" [ref=e427] [cursor=pointer]
+                              - cell "05" [ref=e428]:
+                                - button "05" [ref=e429] [cursor=pointer]
+                              - cell "06" [ref=e430]:
+                                - button "06" [ref=e431] [cursor=pointer]
+                        - rowgroup [ref=e432]:
+                          - row "07 08 09 10 11 12 13" [ref=e441]:
+                            - generic [ref=e442]:
+                              - cell "07" [ref=e443]:
+                                - button "07" [ref=e444] [cursor=pointer]
+                              - cell "08" [ref=e445]:
+                                - button "08" [ref=e446] [cursor=pointer]
+                              - cell "09" [ref=e447]:
+                                - button "09" [ref=e448] [cursor=pointer]
+                              - cell "10" [ref=e449]:
+                                - button "10" [ref=e450] [cursor=pointer]
+                              - cell "11" [ref=e451]:
+                                - button "11" [ref=e452] [cursor=pointer]
+                              - cell "12" [ref=e453]:
+                                - button "12" [ref=e454] [cursor=pointer]
+                              - cell "13" [ref=e455]:
+                                - button "13" [ref=e456] [cursor=pointer]
+                        - rowgroup [ref=e457]:
+                          - row "14 15 16 17 18 19 20" [ref=e466]:
+                            - generic [ref=e467]:
+                              - cell "14" [ref=e468]:
+                                - button "14" [ref=e469] [cursor=pointer]
+                              - cell "15" [ref=e470]:
+                                - button "15" [ref=e471] [cursor=pointer]
+                              - cell "16" [ref=e472]:
+                                - button "16" [ref=e473] [cursor=pointer]
+                              - cell "17" [ref=e474]:
+                                - button "17" [ref=e475] [cursor=pointer]
+                              - cell "18" [ref=e476]:
+                                - button "18" [ref=e477] [cursor=pointer]
+                              - cell "19" [ref=e478]:
+                                - button "19" [ref=e479] [cursor=pointer]
+                              - cell "20" [ref=e480]:
+                                - button "20" [ref=e481] [cursor=pointer]
+                        - rowgroup [ref=e482]:
+                          - row "21 22 23 24 25 26 27" [ref=e491]:
+                            - generic [ref=e492]:
+                              - cell "21" [ref=e493]:
+                                - button "21" [ref=e494] [cursor=pointer]
+                              - cell "22" [ref=e495]:
+                                - button "22" [ref=e496] [cursor=pointer]
+                              - cell "23" [ref=e497]:
+                                - button "23" [ref=e498] [cursor=pointer]
+                              - cell "24" [ref=e499]:
+                                - button "24" [ref=e500] [cursor=pointer]
+                              - cell "25" [ref=e501]:
+                                - button "25" [ref=e502] [cursor=pointer]
+                              - cell "26" [ref=e503]:
+                                - button "26" [ref=e504] [cursor=pointer]
+                              - cell "27" [ref=e505]:
+                                - button "27" [ref=e506] [cursor=pointer]
+                        - rowgroup [ref=e507]:
+                          - row "28 29 30 01 02 03 04" [ref=e516]:
+                            - generic [ref=e517]:
+                              - cell "28" [ref=e518]:
+                                - button "28" [ref=e519] [cursor=pointer]
+                              - cell "29" [ref=e520]:
+                                - button "29" [ref=e521] [cursor=pointer]
+                              - cell "30" [ref=e522]:
+                                - button "30" [ref=e523] [cursor=pointer]
+                              - cell "01" [ref=e524]:
+                                - button "01" [ref=e525] [cursor=pointer]
+                              - cell "02" [ref=e526]:
+                                - button "02" [ref=e527] [cursor=pointer]
+                              - cell "03" [ref=e528]:
+                                - button "03" [ref=e529] [cursor=pointer]
+                              - cell "04" [ref=e530]:
+                                - button "04" [ref=e531] [cursor=pointer]
+              - generic [ref=e533]:
+                - button "Close" [ref=e539] [cursor=pointer]:
+                  - generic [ref=e540]: Close
+                - button "Send Back" [ref=e546] [cursor=pointer]:
+                  - generic [ref=e547]: Send Back
+                - button "Not Recommend" [ref=e553] [cursor=pointer]:
+                  - generic [ref=e554]: Not Recommend
+                - button "Recommend" [disabled] [ref=e560]:
+                  - generic: Recommend
+  - alert [ref=e561]
+```
+
+# Test source
+
+```ts
+  28  | const APP_URL = 'https://pd-hcm-adminportal-qa.shesha.app/';
+  29  | const USER = { user: 'GOV012', password: '123qwe' };
+  30  | const INBOX_URL = `${APP_URL}dynamic/Shesha.Workflow/workflows-inbox`;
+  31  | 
+  32  | async function loginAsUser(page: Page) {
+  33  |   await page.goto(APP_URL);
+  34  |   await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  35  |   await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  36  |   await page.getByRole('button', { name: 'Sign In' }).click();
+  37  |   await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
+  38  |   await page.waitForLoadState('networkidle');
+  39  | }
+  40  | 
+  41  | async function openInbox(page: Page) {
+  42  |   await loginAsUser(page);
+  43  |   await page.goto(INBOX_URL);
+  44  |   await page.waitForLoadState('networkidle');
+  45  |   await expect(page.getByRole('heading', { name: 'Incoming Items' })).toBeVisible({ timeout: 30000 });
+  46  | }
+  47  | 
+  48  | // Open the first row whose Action Required is "Recommend Leave" by clicking its search link.
+  49  | async function openFirstRecommendItem(page: Page) {
+  50  |   await openInbox(page);
+  51  |   await page.getByRole('row', { name: /Recommend Leave/ }).first().getByRole('link').click();
+  52  |   await expect(page.getByRole('heading', { name: /Recommend Leave:/ })).toBeVisible({ timeout: 30000 });
+  53  | }
+  54  | 
+  55  | test.describe('ELEAVE-SMOKE-RECOMMEND — Recommend Leave', () => {
+  56  | 
+  57  |   // ADO #101972
+  58  |   test('TC-01: Login with valid credentials redirects to home', async ({ page }) => {
+  59  |     // STEP 1: NAVIGATE to the app
+  60  |     await page.goto(APP_URL);
+  61  |     // STEP 2: SNAPSHOT — confirm login page is visible
+  62  |     // STEP 3: TYPE Username field with `GOV012`
+  63  |     await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  64  |     // STEP 4: TYPE Password field with `123qwe`
+  65  |     await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  66  |     // STEP 5: CLICK the Sign In button
+  67  |     await page.getByRole('button', { name: 'Sign In' }).click();
+  68  |     // STEP 6: WAIT for the home/dashboard page to load
+  69  |     await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
+  70  |     await page.waitForLoadState('networkidle');
+  71  |     // ASSERT (BLOCKING) not on /login and the authenticated app is visible
+  72  |     await expect(page).not.toHaveURL(/login/i);
+  73  |     await expect(page.getByText('Kavitha Naidoo')).toBeVisible({ timeout: 30000 });
+  74  |   });
+  75  | 
+  76  |   // ADO #101973 — ADO note: bug observed (login fails silently with no visible error)
+  77  |   test('TC-02: Login with invalid credentials shows error and stays on login page', async ({ page }) => {
+  78  |     await page.goto(APP_URL);
+  79  |     // STEP 2-3: TYPE invalid username + password
+  80  |     await page.getByRole('textbox', { name: 'Username' }).fill('GOV012');
+  81  |     await page.getByRole('textbox', { name: 'Password' }).fill('wrong-password-xyz');
+  82  |     // STEP 4: CLICK the Sign In button
+  83  |     await page.getByRole('button', { name: 'Sign In' }).click();
+  84  |     // STEP 5: SNAPSHOT Observe the page state
+  85  |     await page.waitForTimeout(3000);
+  86  |     // ASSERT (BLOCKING) the user remains on the login page
+  87  |     await expect(page).toHaveURL(/login/i);
+  88  |     // TODO[assertion]: ADO records that NO visible error message is shown (bug). When fixed, assert
+  89  |     // the error toast/text here; for now we only assert the user stays on /login.
+  90  |   });
+  91  | 
+  92  |   // ADO #101974
+  93  |   test('TC-03: Inbox loads with pending leave applications', async ({ page }) => {
+  94  |     await openInbox(page);
+  95  |     // STEP 2: SNAPSHOT Observe the table contents
+  96  |     // ASSERT (BLOCKING) the Inbox table shows the expected columns
+  97  |     await expect(page.getByRole('columnheader', { name: 'Ref No' })).toBeVisible();
+  98  |     await expect(page.getByRole('columnheader', { name: 'Initiator' })).toBeVisible();
+  99  |     await expect(page.getByRole('columnheader', { name: 'Action Required' })).toBeVisible();
+  100 |     await expect(page.getByRole('columnheader', { name: 'Status' })).toBeVisible();
+  101 |     // NOTE: live headers (Ref No / Type / Name / Action Required / Received Date /
+  102 |     // Period In Possession / Target Date) differ from the ADO-worded column list.
+  103 |   });
+  104 | 
+  105 |   // ADO #101975
+  106 |   test('TC-04: Selecting an inbox item opens the leave application detail', async ({ page }) => {
+  107 |     await openFirstRecommendItem(page);
+  108 |     // STEP 3: SNAPSHOT Observe the form content
+  109 |     // ASSERT (BLOCKING) the detail opens showing applicant, leave type and dates
+  110 |     await expect(page.getByText('Thabo Musa Victor Mthembu').first()).toBeVisible();
+  111 |     await expect(page.getByText('Annual Leave').first()).toBeVisible();
+  112 |     await expect(page.getByText('Start Date')).toBeVisible();
+  113 |   });
+  114 | 
+  115 |   // ADO #101976
+  116 |   test('TC-05: Leave application detail shows leave balance and taken days summary', async ({ page }) => {
+  117 |     await openFirstRecommendItem(page);
+  118 |     // STEP 1: SNAPSHOT Observe the summary messages on the form
+  119 |     // ASSERT (BLOCKING) both the available-days and taken-days messages are visible
+  120 |     await expect(page.getByText(/Available days: Please note/)).toBeVisible();
+  121 |     await expect(page.getByText(/has taken .* day/)).toBeVisible();
+  122 |   });
+  123 | 
+  124 |   // ADO #101977
+  125 |   test("TC-06: 'Recommend' action button is visible and clickable on backdated leave", async ({ page }) => {
+  126 |     await openFirstRecommendItem(page);
+  127 |     // STEP 1: the Recommend button is visible (but disabled until the acknowledge checkbox is ticked)
+> 128 |     await expect(page.getByRole('button', { name: 'Recommend', exact: true })).toBeVisible();
+      |                                                                                ^ Error: expect(locator).toBeVisible() failed
+  129 |     // tick the "l acknowledge ..." checkbox to enable the action buttons
+  130 |     await page.getByRole('checkbox').first().check();
+  131 |     await expect(page.getByRole('button', { name: 'Recommend', exact: true })).toBeEnabled();
+  132 |     // STEP 2-3: CLICK Recommend -> a comment/memo dialog opens
+  133 |     await page.getByRole('button', { name: 'Recommend', exact: true }).click();
+  134 |     // ASSERT (BLOCKING) clicking Recommend opens a comment/memo dialog
+  135 |     await expect(page.getByRole('dialog', { name: 'BackDated Leave' })).toBeVisible({ timeout: 15000 });
+  136 |   });
+  137 | 
+  138 |   // ADO #101978
+  139 |   test('TC-07: Supervisor comment dialog accepts free text input', async ({ page }) => {
+  140 |     await openFirstRecommendItem(page);
+  141 |     await page.getByRole('checkbox').first().check();
+  142 |     await page.getByRole('button', { name: 'Recommend', exact: true }).click();
+  143 |     const dialog = page.getByRole('dialog', { name: 'BackDated Leave' });
+  144 |     await expect(dialog).toBeVisible({ timeout: 15000 });
+  145 |     // STEP 1-2: TYPE into the comment textarea
+  146 |     await dialog.getByRole('textbox').fill('Testing backdated Leave application');
+  147 |     // STEP 3: SNAPSHOT Observe field state
+  148 |     // ASSERT (BLOCKING) the typed comment is retained with no validation errors
+  149 |     await expect(dialog.getByRole('textbox')).toHaveValue('Testing backdated Leave application');
+  150 |     // Entering a comment also enables the (previously disabled) Ok button.
+  151 |     await expect(dialog.getByRole('button', { name: 'Ok', exact: true })).toBeEnabled();
+  152 |   });
+  153 | 
+  154 |   // ADO #101979 — ADO note: warning (no visible status change after Ok; backend needs verification)
+  155 |   test("TC-08: Clicking 'Ok' on recommend dialog submits and returns to Inbox", async ({ page }) => {
+  156 |     test.skip(true, "Clicking 'Ok' processes the recommendation and mutates live QA data (routes the application to the approver). Run only in a seeded mutation pass.");
+  157 |     // TODO[selector]: after Ok, assert redirect back to the Inbox and that the processed item is gone / status-updated.
+  158 |   });
+  159 | 
+  160 |   // ADO #101980 — ADO note: BUG CONFIRMED (console errors on form load)
+  161 |   test('TC-09: Leave application form fields load without JS errors', async ({ page }) => {
+  162 |     const consoleErrors: string[] = [];
+  163 |     page.on('console', msg => { if (msg.type() === 'error') consoleErrors.push(msg.text()); });
+  164 |     await openFirstRecommendItem(page);
+  165 |     await page.waitForTimeout(3000);
+  166 |     // STEP 1: SNAPSHOT Open the leave application and check the console for errors
+  167 |     // ASSERT (BLOCKING) the console is clean — no JS errors
+  168 |     // ADO records this FAILS: "Cannot read properties of undefined" errors fire on load.
+  169 |     expect(consoleErrors, `Console errors observed on form load (ADO-confirmed bug):\n${consoleErrors.slice(0, 10).join('\n')}`).toHaveLength(0);
+  170 |   });
+  171 | 
+  172 |   // ADO #101981
+  173 |   test('TC-10: Backdated leave enforces mandatory supervisor comment', async ({ page }) => {
+  174 |     await openFirstRecommendItem(page);
+  175 |     await page.getByRole('checkbox').first().check();
+  176 |     // STEP 1-2: CLICK Recommend, then attempt to confirm without a comment
+  177 |     await page.getByRole('button', { name: 'Recommend', exact: true }).click();
+  178 |     const dialog = page.getByRole('dialog', { name: 'BackDated Leave' });
+  179 |     await expect(dialog).toBeVisible({ timeout: 15000 });
+  180 |     // ASSERT (BLOCKING) submission is blocked / a comment is required for backdated leave.
+  181 |     // The Ok button is disabled until a comment is entered, enforcing the mandatory comment.
+  182 |     await expect(dialog.getByRole('button', { name: 'Ok', exact: true })).toBeDisabled();
+  183 |     await expect(dialog.getByText(/about to recommend a backdated leave/i)).toBeVisible();
+  184 |   });
+  185 | 
+  186 |   // ADO #101982
+  187 |   test('TC-11: Unauthenticated access to Inbox is blocked', async ({ page, context }) => {
+  188 |     // STEP 1: NAVIGATE directly to a workflow-action URL with no session
+  189 |     await context.clearCookies();
+  190 |     await page.goto(`${APP_URL}shesha/workflow-action?id=46ff39dc-703f-4ed4-8b50-734f6315dc61&todoid=fb9e8004-a696-4527-9530-44b5d6f0374b`);
+  191 |     await page.waitForLoadState('networkidle');
+  192 |     // STEP 2: SNAPSHOT Observe the response
+  193 |     // ASSERT (BLOCKING) the unauthenticated request is redirected to login (or 401/403)
+  194 |     await expect(page).toHaveURL(/login/i, { timeout: 30000 });
+  195 |   });
+  196 | 
+  197 |   // ADO #101983
+  198 |   test('TC-12: Inbox renders rows for both SaGov and standard Leave Application types', async ({ page }) => {
+  199 |     await openInbox(page);
+  200 |     // STEP 1: SNAPSHOT both SaGov and standard Leave Application rows are present
+  201 |     // ASSERT (BLOCKING) rows for both process types render without errors
+  202 |     await expect(page.getByRole('cell', { name: 'Leave Application', exact: true }).first()).toBeVisible();
+  203 |     await expect(page.getByRole('cell', { name: 'SaGov Leave Application', exact: true }).first()).toBeVisible();
+  204 |   });
+  205 | 
+  206 |   // ADO #101984 — ADO note: BUG CONFIRMED (Show Dialog failure surfaced silently)
+  207 |   test('TC-13: Show Dialog action failure surfaces a user-facing error', async ({ page }) => {
+  208 |     test.skip(true, 'Requires reproducing a Show Dialog action failure on demand. ADO confirms the failure ("Failed to execute action shesha.common:Show Dialog, error: null") surfaced silently with no user-facing error — log as a bug if reproduced.');
+  209 |     // TODO[selector]: when the dialog-failure path is reproducible, assert a user-facing error toast appears and the form does not crash.
+  210 |   });
+  211 | 
+  212 |   // ADO #101985
+  213 |   test('TC-14: Overdue items in Inbox are visually distinguished', async ({ page }) => {
+  214 |     await openInbox(page);
+  215 |     // STEP 1-2: overdue items (Target Date in the past) should be visually flagged.
+  216 |     // The detail header shows "OVERDUE (DUE ... ago)"; in the Inbox the Target Date cell carries the
+  217 |     // overdue styling. Assert at least one overdue indicator is present.
+  218 |     // ASSERT (BLOCKING) overdue items are visually flagged distinctly
+  219 |     // TODO[assertion]: capture the exact overdue CSS class / badge selector for the Target Date cell
+  220 |     // on first repaired run; for now assert overdue dates render in the table.
+  221 |     await expect(page.getByRole('cell', { name: '13/05/2026' }).first()).toBeVisible();
+  222 |   });
+  223 | 
+  224 | });
+  225 | 
+```

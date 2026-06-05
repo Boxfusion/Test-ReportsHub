@@ -1,0 +1,164 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\HCM\test-plans\eLeave\capture-new-leave-application.spec.ts >> ELEAVE-CAPTURE — Capture New Leave Application >> TC-45: The system should require additional information based on the selected leave type
+- Location: projects\HCM\test-plans\eLeave\capture-new-leave-application.spec.ts:399:7
+
+# Error details
+
+```
+TimeoutError: locator.fill: Timeout 15000ms exceeded.
+Call log:
+  - waiting for getByRole('textbox', { name: 'Username' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active]:
+  - img "loading" [ref=e1]:
+    - img [ref=e2]
+  - alert [ref=e4]
+```
+
+# Test source
+
+```ts
+  1   | // AUTO-RECORDED from test-plans/eLeave/capture-new-leave-application.md
+  2   | // Source: Azure DevOps test plan #79625, suite #86340
+  3   | // The .md plan is canonical. AI-repair will patch failing lines in this file.
+  4   | // Do not hand-edit unless you are also updating the .md plan.
+  5   | //
+  6   | // Recorded live on the SaGov.Leave/sagov-leave-application v74 draft form as applicant
+  7   | // GOV003 (Thabo Musa Victor Mthembu). The navigation path Workflows -> My Items ->
+  8   | // Create New -> SaGov Leave Application reaches the Draft step of a brand-new application,
+  9   | // so the form-level cases (radios, leave-type/category, verification type, prepopulation,
+  10  | // close dialog) are recorded against real selectors.
+  11  | //
+  12  | // SKIPPED: cases that need an OTP/SMS round-trip, real wall-clock OTP expiry, hourly-leave
+  13  | // accumulation, a seeded pending Change-of-Supervisor item, or a Submit that would mutate
+  14  | // live QA data are guarded with test.skip + reason. AI-repair / a seeded-data run resolves
+  15  | // the remaining // TODO markers.
+  16  | //
+  17  | // NOTE: the live v74 form differs from several ADO-authored steps. It has no separate
+  18  | // "Duration (Days/Hours)" toggle (Start Date + End Date are shown directly), and the
+  19  | // leave type is captured via the "Category" + "Sub-Category" selects. Those drifted
+  20  | // cases are recorded to the closest live equivalent and flagged inline.
+  21  | 
+  22  | import { test, expect, Page } from '@playwright/test';
+  23  | 
+  24  | const APP_URL = 'https://pd-hcm-adminportal-qa.shesha.app/';
+  25  | const USER = { user: 'GOV003', password: '123qwe' };
+  26  | const MY_ITEMS_URL = `${APP_URL}dynamic/SaGov.Leave/my_items2`;
+  27  | 
+  28  | async function loginAsUser(page: Page) {
+  29  |   await page.goto(APP_URL);
+> 30  |   await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+      |                                                         ^ TimeoutError: locator.fill: Timeout 15000ms exceeded.
+  31  |   await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  32  |   await page.getByRole('button', { name: 'Sign In' }).click();
+  33  |   await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
+  34  |   await page.waitForLoadState('networkidle');
+  35  | }
+  36  | 
+  37  | // Workflows -> My Items -> Create New -> SaGov Leave Application -> Draft form.
+  38  | // Lands with "Who are you requesting the leave for?" defaulted to "Myself".
+  39  | async function openNewLeaveApplication(page: Page) {
+  40  |   await loginAsUser(page);
+  41  |   // Direct nav to My Items (equivalent to Workflows -> My Items; avoids the menu-expand race).
+  42  |   // The menu-click path itself is exercised by TC-53.
+  43  |   await page.goto(MY_ITEMS_URL);
+  44  |   await page.waitForLoadState('networkidle');
+  45  |   await page.getByRole('button', { name: 'plus Create New down' }).click();
+  46  |   await page.getByRole('menuitem', { name: 'SaGov Leave Application', exact: true }).click();
+  47  |   await expect(page.getByRole('heading', { name: 'New Leave Application:' })).toBeVisible({ timeout: 30000 });
+  48  | }
+  49  | 
+  50  | // Select a leave type in the "Category" select. The Myself form has THREE comboboxes
+  51  | // (Leave Profile, Category, Sub-Category) so the Category one must be label-scoped, not .first().
+  52  | async function selectCategory(page: Page, title: string) {
+  53  |   await page.locator('.ant-form-item:has(label[title="Category"]) input[role="combobox"]').click();
+  54  |   await page.locator(`.ant-select-item-option[title="${title}"]`).click();
+  55  | }
+  56  | 
+  57  | test.describe('ELEAVE-CAPTURE — Capture New Leave Application', () => {
+  58  | 
+  59  |   test('TC-01: Login as Admin', async ({ page }) => {
+  60  |     // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
+  61  |     await page.goto(APP_URL);
+  62  |     // STEP 2: SNAPSHOT — confirm login page is visible
+  63  |     // SNAPSHOT: login page
+  64  |     // STEP 3: TYPE Username field with `GOV003`
+  65  |     await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  66  |     // STEP 4: TYPE Password field with `123qwe`
+  67  |     await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  68  |     // STEP 5: CLICK the Sign In button
+  69  |     await page.getByRole('button', { name: 'Sign In' }).click();
+  70  |     // STEP 6: WAIT for the home page / workflow inbox to load
+  71  |     await page.waitForLoadState('networkidle');
+  72  |     // ASSERT (BLOCKING) URL no longer contains /login and the authenticated home page is visible
+  73  |     await expect(page).not.toHaveURL(/login/i);
+  74  |     await expect(page.getByText('Thabo Musa Victor Mthembu')).toBeVisible({ timeout: 30000 });
+  75  |   });
+  76  | 
+  77  |   // ADO #86342
+  78  |   test('TC-02: Park hourly leave request that does not accumulate to 8 hours', async ({ page }) => {
+  79  |     test.skip(true, 'Requires hourly-leave configuration + accumulation engine; cannot be observed from the draft form without seeded hourly requests.');
+  80  |   });
+  81  | 
+  82  |   // ADO #86344
+  83  |   test('TC-03: Create a leave request for one day when hourly leave request accumulates to 8 hours', async ({ page }) => {
+  84  |     test.skip(true, 'Requires hourly-leave accumulation to 8h across seeded requests; business-logic, not observable on the draft form.');
+  85  |   });
+  86  | 
+  87  |   // ADO #86345
+  88  |   test('TC-04: Route the leave request to the recommender when hourly leave request accumulates to 8 hours', async ({ page }) => {
+  89  |     test.skip(true, 'Requires hourly-leave accumulation + a Submit that routes/mutates live QA data.');
+  90  |   });
+  91  | 
+  92  |   // ADO #86347
+  93  |   test('TC-05: System should check if hourly leave request amounts to 8 hours', async ({ page }) => {
+  94  |     test.skip(true, 'Requires hourly-leave configuration; internal 8h check is not surfaced on the draft form.');
+  95  |   });
+  96  | 
+  97  |   // ADO #86349
+  98  |   test('TC-06: The attached consent form should appear throughout the workflow steps', async ({ page }) => {
+  99  |     test.skip(true, 'Requires a submitted application walked through every workflow step (recommend/approve) — needs seeded routing + multiple actor logins.');
+  100 |   });
+  101 | 
+  102 |   // ADO #86351
+  103 |   test("TC-07: Submit leave request to the next step when 'OK' clicked after capturing OTP", async ({ page }) => {
+  104 |     test.skip(true, 'Requires a live OTP/SMS round-trip and a routing Submit that mutates live QA data.');
+  105 |   });
+  106 | 
+  107 |   // ADO #86353
+  108 |   test('TC-08: Display error message when OTP has expired', async ({ page }) => {
+  109 |     test.skip(true, 'Requires a real expired OTP from the SMS gateway.');
+  110 |   });
+  111 | 
+  112 |   // ADO #86355
+  113 |   test("TC-09: 'Close' button removes the dialog and displays 'New Leave Application' page", async ({ page }) => {
+  114 |     test.skip(true, 'Requires the SMS Verification dialog, which only opens after an OTP submit (SMS round-trip).');
+  115 |   });
+  116 | 
+  117 |   // ADO #86357
+  118 |   test("TC-10: Remove 'Send Code' dialog when 'Cancel' button is clicked", async ({ page }) => {
+  119 |     test.skip(true, "Requires the 'Send Code' dialog reached via the SMS Verification OTP flow.");
+  120 |   });
+  121 | 
+  122 |   // ADO #86358
+  123 |   test("TC-11: Return to 'SMS Verification' dialog when 'Cancel' button is clicked", async ({ page }) => {
+  124 |     test.skip(true, "Requires the 'Send Code' / 'SMS Verification' dialog reached via the OTP flow.");
+  125 |   });
+  126 | 
+  127 |   // ADO #86360
+  128 |   test("TC-12: Send a code to the registered applicant cell number when 'OK' clicked", async ({ page }) => {
+  129 |     test.skip(true, 'Requires a live SMS gateway send — not assertable in an automated read-only run.');
+  130 |   });
+```

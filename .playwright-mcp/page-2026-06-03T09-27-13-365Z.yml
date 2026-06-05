@@ -1,0 +1,92 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e280]:
+    - complementary [ref=e281]:
+      - menu [ref=e285]:
+        - menuitem "calendar Leave Management" [ref=e286] [cursor=pointer]:
+          - img "calendar" [ref=e287]:
+            - img [ref=e288]
+          - generic [ref=e290]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e291] [cursor=pointer]:
+          - img "calendar" [ref=e292]:
+            - img [ref=e293]
+          - generic [ref=e295]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e296] [cursor=pointer]:
+          - img "book" [ref=e297]:
+            - img [ref=e298]
+          - generic [ref=e300]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e301] [cursor=pointer]:
+          - img "bank" [ref=e302]:
+            - img [ref=e303]
+          - generic [ref=e305]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e306] [cursor=pointer]:
+          - img "apartment" [ref=e307]:
+            - img [ref=e308]
+          - generic [ref=e310]: Workflows
+        - menuitem "tool Administration" [ref=e311] [cursor=pointer]:
+          - img "tool" [ref=e312]:
+            - img [ref=e313]
+          - generic [ref=e315]: Administration
+        - menuitem "setting Configurations" [ref=e316] [cursor=pointer]:
+          - img "setting" [ref=e317]:
+            - img [ref=e318]
+          - generic [ref=e320]: Configurations
+      - img "menu-unfold" [ref=e323] [cursor=pointer]:
+        - img [ref=e324]
+    - generic [ref=e326]:
+      - banner [ref=e327]:
+        - generic [ref=e333]:
+          - generic [ref=e335]:
+            - button "edit" [ref=e336] [cursor=pointer]:
+              - img "edit" [ref=e337]:
+                - img [ref=e338]
+            - paragraph [ref=e340] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e341]:
+              - generic [ref=e342]: Live
+              - img "close" [ref=e343] [cursor=pointer]:
+                - img [ref=e344]
+          - generic [ref=e354]:
+            - link [ref=e360] [cursor=pointer]:
+              - /url: /
+              - img [ref=e370]
+            - generic [ref=e372]:
+              - generic [ref=e373]:
+                - generic [ref=e375]:
+                  - generic [ref=e376]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e378] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e382] [cursor=pointer]:
+                  - img "block" [ref=e383]:
+                    - img [ref=e384]
+                  - generic [ref=e386]: Live
+              - generic [ref=e388]:
+                - generic [ref=e389] [cursor=pointer]:
+                  - text: Thabo Musa Victor Mthembu
+                  - img "down" [ref=e390]:
+                    - img [ref=e391]
+                - img "user" [ref=e394]:
+                  - img [ref=e395]
+      - main [ref=e397]:
+        - generic [ref=e399]:
+          - img "Clickable Image" [ref=e401] [cursor=pointer]
+          - generic [ref=e402]:
+            - generic [ref=e404]:
+              - img "arrow-right" [ref=e405]:
+                - img [ref=e406]
+              - link "Build your first app" [ref=e408] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/get-started/tutorial/the-basics/
+                - heading "Build your first app" [level=4] [ref=e409]
+              - paragraph [ref=e410]: A quickstart guide to help you build an app using Shesha
+            - generic [ref=e412]:
+              - img "arrow-right" [ref=e413]:
+                - img [ref=e414]
+              - link "Documentation" [ref=e416] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/get-started/Introduction
+                - heading "Documentation" [level=4] [ref=e417]
+              - paragraph [ref=e418]: A deeper dive into core Shesha functionality
+            - generic [ref=e420]:
+              - img "arrow-right" [ref=e421]:
+                - img [ref=e422]
+              - link "How to change landing page" [ref=e424] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/fundamentals/how-to-change-home-page/
+                - heading "How to change landing page" [level=4] [ref=e425]
+              - paragraph [ref=e426]: Change your landing page to a custom page
+  - alert [ref=e6]

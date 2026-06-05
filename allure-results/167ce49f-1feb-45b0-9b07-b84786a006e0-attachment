@@ -1,0 +1,487 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts >> ELEAVE-SMOKE-RECOMMEND — Recommend Leave >> TC-09: Leave application form fields load without JS errors
+- Location: projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts:161:7
+
+# Error details
+
+```
+Error: Console errors observed on form load (ADO-confirmed bug):
+executeScriptSync error TypeError: Cannot read properties of undefined (reading 'typeOfVerification')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:34)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)
+executeScriptSync error TypeError: Cannot read properties of undefined (reading 'consentForm')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:34)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)
+executeScriptSync error TypeError: Cannot read properties of undefined (reading 'leaveType')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:34)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)
+executeScriptSync error TypeError: Cannot read properties of undefined (reading 'isAccumulatedLeave')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:26)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)
+executeScriptSync error TypeError: Cannot read properties of undefined (reading 'isAccumulatedLeave')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:25)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)
+executeScriptSync error TypeError: Cannot read properties of undefined (reading 'notes')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:38)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)
+executeScriptSync error TypeError: Cannot read properties of undefined (reading 'applicantComment')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:34)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)
+executeScriptSync error TypeError: Cannot read properties of undefined (reading 'leaveType')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:9:81)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)
+executeScriptSync error TypeError: Cannot read properties of undefined (reading 'leaveType')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:9:81)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)
+executeScriptSync error TypeError: Cannot read properties of undefined (reading 'fileList')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:53)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)
+
+expect(received).toHaveLength(expected)
+
+Expected length: 0
+Received length: 17
+Received array:  ["executeScriptSync error TypeError: Cannot read properties of undefined (reading 'typeOfVerification')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:34)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)", "executeScriptSync error TypeError: Cannot read properties of undefined (reading 'consentForm')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:34)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)", "executeScriptSync error TypeError: Cannot read properties of undefined (reading 'leaveType')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:34)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)", "executeScriptSync error TypeError: Cannot read properties of undefined (reading 'isAccumulatedLeave')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:26)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)", "executeScriptSync error TypeError: Cannot read properties of undefined (reading 'isAccumulatedLeave')
+    at eval (eval at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:12), <anonymous>:5:25)
+    at j2 (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:33)
+    at $n (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1891)
+    at $a (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:1569)
+    at $o (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:3333:2205)
+    at bL (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1098:611)
+    at bZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/f1a12f00-1466e8215b17e359.js:1131:1132)
+    at rE (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:40344)
+    at iZ (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:117029)
+    at ia (https://pd-hcm-adminportal-qa.shesha.app/_next/static/chunks/fd9d1056-f663fedf02e529ac.js:1:95165)", …]
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - menu [ref=e9]:
+        - menuitem "calendar Leave Management" [ref=e10] [cursor=pointer]:
+          - img "calendar" [ref=e11]:
+            - img [ref=e12]
+          - generic [ref=e14]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e15] [cursor=pointer]:
+          - img "calendar" [ref=e16]:
+            - img [ref=e17]
+          - generic [ref=e19]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e20] [cursor=pointer]:
+          - img "book" [ref=e21]:
+            - img [ref=e22]
+          - generic [ref=e24]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e25] [cursor=pointer]:
+          - img "bank" [ref=e26]:
+            - img [ref=e27]
+          - generic [ref=e29]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e30] [cursor=pointer]:
+          - img "apartment" [ref=e31]:
+            - img [ref=e32]
+          - generic [ref=e34]: Workflows
+        - menuitem "tool Administration" [ref=e35] [cursor=pointer]:
+          - img "tool" [ref=e36]:
+            - img [ref=e37]
+          - generic [ref=e39]: Administration
+        - menuitem "setting Configurations" [ref=e40] [cursor=pointer]:
+          - img "setting" [ref=e41]:
+            - img [ref=e42]
+          - generic [ref=e44]: Configurations
+      - img "menu-unfold" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e57]:
+          - generic [ref=e59]:
+            - button "edit" [ref=e60] [cursor=pointer]:
+              - img "edit" [ref=e61]:
+                - img [ref=e62]
+            - paragraph [ref=e64] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e65]:
+              - generic [ref=e66]: Live
+              - img "close" [ref=e67] [cursor=pointer]:
+                - img [ref=e68]
+          - generic [ref=e78]:
+            - link [ref=e84] [cursor=pointer]:
+              - /url: /
+              - img [ref=e94]
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e99]:
+                  - generic [ref=e100]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e102] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e106] [cursor=pointer]:
+                  - img "block" [ref=e107]:
+                    - img [ref=e108]
+                  - generic [ref=e110]: Live
+              - generic [ref=e112]:
+                - generic [ref=e113] [cursor=pointer]:
+                  - text: Kavitha Naidoo
+                  - img "down" [ref=e114]:
+                    - img [ref=e115]
+                - img "user" [ref=e118]:
+                  - img [ref=e119]
+      - main [ref=e121]:
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - generic [ref=e130]:
+                - 'heading "Recommend Leave: 1 day Annual Leave Leave by TMV Mthembu from Thu 30 Apr 26 to Thu 30 Apr 26" [level=4] [ref=e132]':
+                  - strong [ref=e133]: "Recommend Leave:"
+                  - text: 1 day Annual Leave Leave by TMV Mthembu from Thu 30 Apr 26 to Thu 30 Apr 26
+                - generic [ref=e136]: OVERDUE (DUE 22 days ago)
+                - generic [ref=e141]: In Progress
+              - generic [ref=e142]: Received from Thabo Musa Victor Mthembu 24 days ago
+            - generic [ref=e143]:
+              - generic [ref=e144]:
+                - generic [ref=e146]:
+                  - img [ref=e148]
+                  - img [ref=e151]
+                - button "menu" [ref=e153] [cursor=pointer]:
+                  - img "menu" [ref=e155]:
+                    - img [ref=e156]
+              - generic [ref=e158]: "Ref No: LA2026/11402"
+              - generic [ref=e159]: "Created by: Thabo Musa Victor Mthembu 24 days ago"
+              - generic [ref=e160]: "SLA: 2 business days"
+          - generic [ref=e165]:
+            - generic [ref=e167]:
+              - button "edit" [ref=e168] [cursor=pointer]:
+                - img "edit" [ref=e169]:
+                  - img [ref=e170]
+              - paragraph [ref=e172] [cursor=pointer]: SaGov.Leave/sagov-recommend-leave-application v62
+              - generic [ref=e173]:
+                - generic [ref=e174]: Live
+                - img "close" [ref=e175] [cursor=pointer]:
+                  - img [ref=e176]
+            - generic [ref=e188]:
+              - alert [ref=e189]:
+                - generic [ref=e192]: Please download and review all attachments before selecting the confirmation checkbox. The action buttons will remain disabled until the attachments have been downloaded
+                - button "close" [ref=e193] [cursor=pointer]:
+                  - img "close" [ref=e194]:
+                    - img [ref=e195]
+              - alert [ref=e197]:
+                - generic [ref=e200]: "Hint: Review the leave application and recommend or not recommend."
+                - button "close" [ref=e201] [cursor=pointer]:
+                  - img "close" [ref=e202]:
+                    - img [ref=e203]
+              - generic [ref=e206]:
+                - generic [ref=e207]:
+                  - img "right" [ref=e209] [cursor=pointer]:
+                    - img [ref=e210]
+                  - generic [ref=e212]: Leave Application Details
+                - generic [ref=e217]:
+                  - generic [ref=e220]:
+                    - generic [ref=e222]:
+                      - generic "Applicant Name" [ref=e224]
+                      - generic [ref=e227]: Thabo Musa Victor Mthembu
+                    - generic [ref=e229]:
+                      - generic "PERSAL Number" [ref=e231]
+                      - generic [ref=e234]: GOV00003
+                    - generic [ref=e236]:
+                      - generic "Category" [ref=e238]
+                      - generic [ref=e241]: Annual Leave
+                    - generic [ref=e243]:
+                      - generic "Sub-Category" [ref=e245]
+                      - generic [ref=e248]: Annual Leave
+                    - generic [ref=e250]:
+                      - generic "Duration Type" [ref=e252]
+                      - generic [ref=e258]:
+                        - generic [ref=e260]:
+                          - radio "Hours" [disabled] [ref=e262]
+                          - generic [ref=e264]: Hours
+                        - generic [ref=e266]:
+                          - radio "Days" [checked] [disabled] [ref=e268]
+                          - generic [ref=e270]: Days
+                    - generic [ref=e272]:
+                      - generic "Start Date" [ref=e274]
+                      - generic [ref=e277]: 30/04/2026
+                    - generic [ref=e279]:
+                      - generic "End Date" [ref=e281]
+                      - generic [ref=e284]: 30/04/2026
+                    - generic [ref=e286]:
+                      - generic [ref=e292]:
+                        - alert [ref=e293]:
+                          - img "exclamation-circle" [ref=e294]:
+                            - img [ref=e295]
+                          - generic [ref=e299]: "Available days: Please note that Thabo Musa Victor Mthembu only has *67 day(s)* left for this particular leave type."
+                          - button "close" [ref=e300] [cursor=pointer]:
+                            - img "close" [ref=e301]:
+                              - img [ref=e302]
+                        - alert [ref=e304]:
+                          - img "check-circle" [ref=e305]:
+                            - img [ref=e306]
+                          - generic [ref=e310]: Thabo Musa Victor Mthembu has taken 1 day off
+                          - button "close" [ref=e311] [cursor=pointer]:
+                            - img "close" [ref=e312]:
+                              - img [ref=e313]
+                      - generic [ref=e316]:
+                        - generic "Address" [ref=e318]
+                        - generic [ref=e321]: west avenue
+                      - generic [ref=e323]:
+                        - generic "Telephone" [ref=e325]
+                        - generic [ref=e328]: "+27761425683"
+                      - generic [ref=e330]:
+                        - generic "Applicant Comment(s)" [ref=e332]
+                        - generic [ref=e335]: testing
+                      - generic "Supporting Documents" [ref=e339]
+                    - generic [ref=e343]:
+                      - checkbox [ref=e351] [cursor=pointer]
+                      - generic [ref=e358]: l acknowledge that l have reviewed the leave application along with any accompanying supporting documents.
+                  - generic [ref=e361]:
+                    - generic [ref=e362]:
+                      - generic [ref=e363]:
+                        - generic [ref=e366]: Existing Leave
+                        - generic [ref=e369]: Existing in progress cancellation
+                        - generic [ref=e372]: Public Holidays
+                        - generic [ref=e375]: Colleague Leave
+                      - generic [ref=e376] [cursor=pointer]:
+                        - text: Views
+                        - img "down" [ref=e377]:
+                          - img [ref=e378]
+                    - generic [ref=e380]:
+                      - generic [ref=e381]:
+                        - generic [ref=e382]:
+                          - button "Today" [ref=e383]
+                          - button "Back" [ref=e384]
+                          - button "Next" [ref=e385]
+                        - generic [ref=e386]: June 2026
+                        - generic [ref=e387]:
+                          - button "Month" [ref=e388]
+                          - button "Week" [ref=e389]
+                          - button "Day" [ref=e390]
+                      - table "Month View" [ref=e391]:
+                        - row "Sun Mon Tue Wed Thu Fri Sat" [ref=e392]:
+                          - columnheader "Sun" [ref=e394]
+                          - columnheader "Mon" [ref=e396]
+                          - columnheader "Tue" [ref=e398]
+                          - columnheader "Wed" [ref=e400]
+                          - columnheader "Thu" [ref=e402]
+                          - columnheader "Fri" [ref=e404]
+                          - columnheader "Sat" [ref=e406]
+                        - rowgroup [ref=e407]:
+                          - row "31 01 02 03 04 05 06" [ref=e416]:
+                            - generic [ref=e417]:
+                              - cell "31" [ref=e418]:
+                                - button "31" [ref=e419] [cursor=pointer]
+                              - cell "01" [ref=e420]:
+                                - button "01" [ref=e421] [cursor=pointer]
+                              - cell "02" [ref=e422]:
+                                - button "02" [ref=e423] [cursor=pointer]
+                              - cell "03" [ref=e424]:
+                                - button "03" [ref=e425] [cursor=pointer]
+                              - cell "04" [ref=e426]:
+                                - button "04" [ref=e427] [cursor=pointer]
+                              - cell "05" [ref=e428]:
+                                - button "05" [ref=e429] [cursor=pointer]
+                              - cell "06" [ref=e430]:
+                                - button "06" [ref=e431] [cursor=pointer]
+                        - rowgroup [ref=e432]:
+                          - row "07 08 09 10 11 12 13 Annual Leave" [ref=e441]:
+                            - generic [ref=e442]:
+                              - cell "07" [ref=e443]:
+                                - button "07" [ref=e444] [cursor=pointer]
+                              - cell "08" [ref=e445]:
+                                - button "08" [ref=e446] [cursor=pointer]
+                              - cell "09" [ref=e447]:
+                                - button "09" [ref=e448] [cursor=pointer]
+                              - cell "10" [ref=e449]:
+                                - button "10" [ref=e450] [cursor=pointer]
+                              - cell "11" [ref=e451]:
+                                - button "11" [ref=e452] [cursor=pointer]
+                              - cell "12" [ref=e453]:
+                                - button "12" [ref=e454] [cursor=pointer]
+                              - cell "13" [ref=e455]:
+                                - button "13" [ref=e456] [cursor=pointer]
+                            - generic "Annual Leave" [ref=e461] [cursor=pointer]:
+                              - generic [ref=e463]: Annual Leave
+                        - rowgroup [ref=e464]:
+                          - row "14 15 16 17 18 19 20" [ref=e473]:
+                            - generic [ref=e474]:
+                              - cell "14" [ref=e475]:
+                                - button "14" [ref=e476] [cursor=pointer]
+                              - cell "15" [ref=e477]:
+                                - button "15" [ref=e478] [cursor=pointer]
+                              - cell "16" [ref=e479]:
+                                - button "16" [ref=e480] [cursor=pointer]
+                              - cell "17" [ref=e481]:
+                                - button "17" [ref=e482] [cursor=pointer]
+                              - cell "18" [ref=e483]:
+                                - button "18" [ref=e484] [cursor=pointer]
+                              - cell "19" [ref=e485]:
+                                - button "19" [ref=e486] [cursor=pointer]
+                              - cell "20" [ref=e487]:
+                                - button "20" [ref=e488] [cursor=pointer]
+                        - rowgroup [ref=e489]:
+                          - row "21 22 23 24 25 26 27" [ref=e498]:
+                            - generic [ref=e499]:
+                              - cell "21" [ref=e500]:
+                                - button "21" [ref=e501] [cursor=pointer]
+                              - cell "22" [ref=e502]:
+                                - button "22" [ref=e503] [cursor=pointer]
+                              - cell "23" [ref=e504]:
+                                - button "23" [ref=e505] [cursor=pointer]
+                              - cell "24" [ref=e506]:
+                                - button "24" [ref=e507] [cursor=pointer]
+                              - cell "25" [ref=e508]:
+                                - button "25" [ref=e509] [cursor=pointer]
+                              - cell "26" [ref=e510]:
+                                - button "26" [ref=e511] [cursor=pointer]
+                              - cell "27" [ref=e512]:
+                                - button "27" [ref=e513] [cursor=pointer]
+                        - rowgroup [ref=e514]:
+                          - row "28 29 30 01 02 03 04" [ref=e523]:
+                            - generic [ref=e524]:
+                              - cell "28" [ref=e525]:
+                                - button "28" [ref=e526] [cursor=pointer]
+                              - cell "29" [ref=e527]:
+                                - button "29" [ref=e528] [cursor=pointer]
+                              - cell "30" [ref=e529]:
+                                - button "30" [ref=e530] [cursor=pointer]
+                              - cell "01" [ref=e531]:
+                                - button "01" [ref=e532] [cursor=pointer]
+                              - cell "02" [ref=e533]:
+                                - button "02" [ref=e534] [cursor=pointer]
+                              - cell "03" [ref=e535]:
+                                - button "03" [ref=e536] [cursor=pointer]
+                              - cell "04" [ref=e537]:
+                                - button "04" [ref=e538] [cursor=pointer]
+              - generic [ref=e540]:
+                - button "Close" [ref=e546] [cursor=pointer]:
+                  - generic [ref=e547]: Close
+                - button "Send Back" [ref=e553] [cursor=pointer]:
+                  - generic [ref=e554]: Send Back
+                - button "Not Recommend" [ref=e560] [cursor=pointer]:
+                  - generic [ref=e561]: Not Recommend
+                - button "Recommend" [disabled] [ref=e567]:
+                  - generic: Recommend
+  - alert [ref=e568]
+```

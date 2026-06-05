@@ -1,0 +1,326 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e1555]:
+    - complementary [ref=e1556]:
+      - menu [ref=e1560]:
+        - menuitem "calendar Leave Management" [ref=e1561] [cursor=pointer]:
+          - img "calendar" [ref=e1562]:
+            - img [ref=e1563]
+          - generic [ref=e1565]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e1566] [cursor=pointer]:
+          - img "calendar" [ref=e1567]:
+            - img [ref=e1568]
+          - generic [ref=e1570]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e1571] [cursor=pointer]:
+          - img "book" [ref=e1572]:
+            - img [ref=e1573]
+          - generic [ref=e1575]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e1576] [cursor=pointer]:
+          - img "bank" [ref=e1577]:
+            - img [ref=e1578]
+          - generic [ref=e1580]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e1581] [cursor=pointer]:
+          - img "apartment" [ref=e1582]:
+            - img [ref=e1583]
+          - generic [ref=e1585]: Workflows
+        - menuitem "tool Administration" [ref=e1586] [cursor=pointer]:
+          - img "tool" [ref=e1587]:
+            - img [ref=e1588]
+          - generic [ref=e1590]: Administration
+        - menuitem "setting Configurations" [ref=e1591] [cursor=pointer]:
+          - img "setting" [ref=e1592]:
+            - img [ref=e1593]
+          - generic [ref=e1595]: Configurations
+      - img "menu-unfold" [ref=e1598] [cursor=pointer]:
+        - img [ref=e1599]
+    - generic [ref=e1601]:
+      - banner [ref=e1602]:
+        - generic [ref=e1608]:
+          - generic [ref=e1610]:
+            - button "edit" [ref=e1611] [cursor=pointer]:
+              - img "edit" [ref=e1612]:
+                - img [ref=e1613]
+            - paragraph [ref=e1615] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e1616]:
+              - generic [ref=e1617]: Live
+              - img "close" [ref=e1618] [cursor=pointer]:
+                - img [ref=e1619]
+          - generic [ref=e1629]:
+            - link [ref=e1635] [cursor=pointer]:
+              - /url: /
+              - img [ref=e1645]
+            - generic [ref=e1647]:
+              - generic [ref=e1648]:
+                - generic [ref=e1650]:
+                  - generic [ref=e1651]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e1653] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e1657] [cursor=pointer]:
+                  - img "block" [ref=e1658]:
+                    - img [ref=e1659]
+                  - generic [ref=e1661]: Live
+              - generic [ref=e1663]:
+                - generic [ref=e1664] [cursor=pointer]:
+                  - text: Thabo Musa Victor Mthembu
+                  - img "down" [ref=e1665]:
+                    - img [ref=e1666]
+                - img "user" [ref=e1669]:
+                  - img [ref=e1670]
+      - main [ref=e1672]:
+        - generic [ref=e1678]:
+          - generic [ref=e1680]:
+            - button "edit" [ref=e1681] [cursor=pointer]:
+              - img "edit" [ref=e1682]:
+                - img [ref=e1683]
+            - paragraph [ref=e1685] [cursor=pointer]: SaGov.Leave/my_items2 v31
+            - generic [ref=e1686]:
+              - generic [ref=e1687]: Live
+              - img "close" [ref=e1688] [cursor=pointer]:
+                - img [ref=e1689]
+          - generic [ref=e1701]:
+            - generic [ref=e1703]:
+              - heading "My Items" [level=4] [ref=e1709] [cursor=pointer]
+              - generic [ref=e1711]:
+                - generic [ref=e1714]:
+                  - textbox [ref=e1716]
+                  - button "search" [ref=e1719] [cursor=pointer]:
+                    - img "search" [ref=e1721]:
+                      - img [ref=e1722]
+                - button "filter" [ref=e1729] [cursor=pointer]:
+                  - img "filter" [ref=e1731]:
+                    - img [ref=e1732]
+                - button "sliders" [ref=e1739] [cursor=pointer]:
+                  - img "sliders" [ref=e1741]:
+                    - img [ref=e1742]
+                - list [ref=e1744]:
+                  - listitem [ref=e1745]: 1-10 of 39 items
+                  - listitem "Previous Page" [ref=e1746]:
+                    - button "left" [disabled] [ref=e1747]:
+                      - img "left" [ref=e1748]:
+                        - img [ref=e1749]
+                  - listitem "1" [ref=e1751] [cursor=pointer]:
+                    - generic [ref=e1752]: "1"
+                  - listitem "2" [ref=e1753] [cursor=pointer]:
+                    - generic [ref=e1754]: "2"
+                  - listitem "3" [ref=e1755] [cursor=pointer]:
+                    - generic [ref=e1756]: "3"
+                  - listitem "4" [ref=e1757] [cursor=pointer]:
+                    - generic [ref=e1758]: "4"
+                  - listitem "Next Page" [ref=e1759] [cursor=pointer]:
+                    - button "right" [ref=e1760]:
+                      - img "right" [ref=e1761]:
+                        - img [ref=e1762]
+                  - listitem [ref=e1764]:
+                    - generic "Page Size" [ref=e1765] [cursor=pointer]:
+                      - generic [ref=e1766]:
+                        - combobox "Page Size" [ref=e1768]
+                        - generic "10 / page" [ref=e1769]
+                      - generic:
+                        - img:
+                          - img
+                - button "reload" [ref=e1775] [cursor=pointer]:
+                  - img "reload" [ref=e1777]:
+                    - img [ref=e1778]
+            - generic [ref=e1785]:
+              - button "plus Create New down" [ref=e1787] [cursor=pointer]:
+                - img "plus" [ref=e1789]:
+                  - img [ref=e1790]
+                - generic [ref=e1793]: Create New
+                - img "down" [ref=e1794]:
+                  - img [ref=e1795]
+              - button "Reassign" [ref=e1798] [cursor=pointer]:
+                - generic [ref=e1799]: Reassign
+              - button "download Export" [ref=e1801] [cursor=pointer]:
+                - img "download" [ref=e1803]:
+                  - img [ref=e1804]
+                - generic [ref=e1806]: Export
+            - table [ref=e1816]:
+              - row "Ref No Type Name Initiated Date Status Progress" [ref=e1817]:
+                - columnheader [ref=e1818]
+                - columnheader "Ref No" [ref=e1819] [cursor=pointer]:
+                  - text: Ref No
+                  - separator [ref=e1820]
+                - columnheader "Type" [ref=e1821] [cursor=pointer]:
+                  - text: Type
+                  - separator [ref=e1822]
+                - columnheader "Name" [ref=e1823] [cursor=pointer]:
+                  - text: Name
+                  - separator [ref=e1824]
+                - columnheader "Initiated Date" [ref=e1825] [cursor=pointer]:
+                  - text: Initiated Date
+                  - separator [ref=e1826]
+                - columnheader "Status" [ref=e1827] [cursor=pointer]:
+                  - text: Status
+                  - separator [ref=e1828]
+                - columnheader "Progress" [ref=e1829]:
+                  - text: Progress
+                  - separator [ref=e1830]
+              - rowgroup [ref=e1831]:
+                - row "search LA2026/12498 SaGov Leave Application 1 day Annual Leave Leave by TMV Mthembu from Wed 24 Jun 26 to Wed 24 Jun 26 05/06/2026 08:53 In Progress" [ref=e1832]:
+                  - cell "search" [ref=e1833]:
+                    - link "search" [ref=e1834] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=02ea547e-2500-462c-a723-dfc2795985ad
+                      - img "search" [ref=e1835]:
+                        - img [ref=e1836]
+                  - cell "LA2026/12498" [ref=e1838]
+                  - cell "SaGov Leave Application" [ref=e1839]
+                  - cell "1 day Annual Leave Leave by TMV Mthembu from Wed 24 Jun 26 to Wed 24 Jun 26" [ref=e1840]
+                  - cell "05/06/2026 08:53" [ref=e1841]
+                  - cell "In Progress" [ref=e1842]
+                  - cell [ref=e1843]:
+                    - generic [ref=e1850]:
+                      - img [ref=e1852]
+                      - img [ref=e1855]
+                - row "search PA2026/5966 SaGov Performance Agreement Workflow Definition Performance Agreement for Thabo Musa Victor Mthembu- FY2026/27 05/06/2026 08:52 Draft" [ref=e1857]:
+                  - cell "search" [ref=e1858]:
+                    - link "search" [ref=e1859] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=613e2e46-5453-40d4-8c23-7a826cb8af80
+                      - img "search" [ref=e1860]:
+                        - img [ref=e1861]
+                  - cell "PA2026/5966" [ref=e1863]
+                  - cell "SaGov Performance Agreement Workflow Definition" [ref=e1864]
+                  - cell "Performance Agreement for Thabo Musa Victor Mthembu- FY2026/27" [ref=e1865]
+                  - cell "05/06/2026 08:52" [ref=e1866]
+                  - cell "Draft" [ref=e1867]
+                  - cell [ref=e1868]:
+                    - generic [ref=e1875]:
+                      - img [ref=e1877]
+                      - img [ref=e1880]
+                - row "search LA2026/12385 SaGov Leave Application 1 day Annual Leave Leave by TMV Mthembu from Mon 15 Jun 26 to Mon 15 Jun 26 04/06/2026 14:09 In Progress" [ref=e1882]:
+                  - cell "search" [ref=e1883]:
+                    - link "search" [ref=e1884] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=e52af1ff-190f-4a8c-9494-ec8a9c01fc45
+                      - img "search" [ref=e1885]:
+                        - img [ref=e1886]
+                  - cell "LA2026/12385" [ref=e1888]
+                  - cell "SaGov Leave Application" [ref=e1889]
+                  - cell "1 day Annual Leave Leave by TMV Mthembu from Mon 15 Jun 26 to Mon 15 Jun 26" [ref=e1890]
+                  - cell "04/06/2026 14:09" [ref=e1891]
+                  - cell "In Progress" [ref=e1892]
+                  - cell [ref=e1893]:
+                    - generic [ref=e1900]:
+                      - img [ref=e1902]
+                      - img [ref=e1905]
+                      - img [ref=e1908]
+                - row "search LC:2026-18600 SaGov Leave Cancellation 1 day Annual Leave Leave by TMV Mthembu from Thu 04 Jun 26 to Thu 04 Jun 26 04/06/2026 12:27 Cancellation Completed" [ref=e1910]:
+                  - cell "search" [ref=e1911]:
+                    - link "search" [ref=e1912] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=6714e19d-d802-48ff-b710-8d4f114477d9
+                      - img "search" [ref=e1913]:
+                        - img [ref=e1914]
+                  - cell "LC:2026-18600" [ref=e1916]
+                  - cell "SaGov Leave Cancellation" [ref=e1917]
+                  - cell "1 day Annual Leave Leave by TMV Mthembu from Thu 04 Jun 26 to Thu 04 Jun 26" [ref=e1918]
+                  - cell "04/06/2026 12:27" [ref=e1919]
+                  - cell "Cancellation Completed" [ref=e1920]
+                  - cell [ref=e1921]:
+                    - generic [ref=e1928]:
+                      - img [ref=e1930]
+                      - img [ref=e1933]
+                      - img [ref=e1936]
+                - row "search LA2026/12182 SaGov Leave Application 1 day Annual Leave Leave by TMV Mthembu from Thu 04 Jun 26 to Thu 04 Jun 26 04/06/2026 09:54 Cancelled" [ref=e1938]:
+                  - cell "search" [ref=e1939]:
+                    - link "search" [ref=e1940] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=f9c087a7-aec9-498b-893f-e97b26980494
+                      - img "search" [ref=e1941]:
+                        - img [ref=e1942]
+                  - cell "LA2026/12182" [ref=e1944]
+                  - cell "SaGov Leave Application" [ref=e1945]
+                  - cell "1 day Annual Leave Leave by TMV Mthembu from Thu 04 Jun 26 to Thu 04 Jun 26" [ref=e1946]
+                  - cell "04/06/2026 09:54" [ref=e1947]
+                  - cell "Cancelled" [ref=e1948]
+                  - cell [ref=e1949]:
+                    - generic [ref=e1956]:
+                      - img [ref=e1958]
+                      - img [ref=e1961]
+                      - img [ref=e1964]
+                      - img [ref=e1967]
+                - row "search LC:2026-18188 SaGov Leave Cancellation 1 day Adoption Leave Leave by TMV Mthembu from Fri 08 May 26 to Fri 08 May 26 26/05/2026 19:03 Declined close" [ref=e1970]:
+                  - cell "search" [ref=e1971]:
+                    - link "search" [ref=e1972] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=080dbc14-8ffd-4f88-93ae-a75fd8e4f034
+                      - img "search" [ref=e1973]:
+                        - img [ref=e1974]
+                  - cell "LC:2026-18188" [ref=e1976]
+                  - cell "SaGov Leave Cancellation" [ref=e1977]
+                  - cell "1 day Adoption Leave Leave by TMV Mthembu from Fri 08 May 26 to Fri 08 May 26" [ref=e1978]
+                  - cell "26/05/2026 19:03" [ref=e1979]
+                  - cell "Declined" [ref=e1980]
+                  - cell "close" [ref=e1981]:
+                    - generic [ref=e1988]:
+                      - img [ref=e1990]
+                      - img [ref=e1993]
+                      - generic [ref=e1996]:
+                        - img [ref=e1997]
+                        - img "close" [ref=e2000]:
+                          - img [ref=e2001]
+                - row "search LC:2026-18186 SaGov Leave Cancellation 3 days Annual Leave Leave by TMV Mthembu from Mon 08 Jun 26 to Wed 10 Jun 26 26/05/2026 19:02 Declined close" [ref=e2003]:
+                  - cell "search" [ref=e2004]:
+                    - link "search" [ref=e2005] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=2987e5ca-1cb2-4c24-aa89-0a5b92b286c2
+                      - img "search" [ref=e2006]:
+                        - img [ref=e2007]
+                  - cell "LC:2026-18186" [ref=e2009]
+                  - cell "SaGov Leave Cancellation" [ref=e2010]
+                  - cell "3 days Annual Leave Leave by TMV Mthembu from Mon 08 Jun 26 to Wed 10 Jun 26" [ref=e2011]
+                  - cell "26/05/2026 19:02" [ref=e2012]
+                  - cell "Declined" [ref=e2013]
+                  - cell "close" [ref=e2014]:
+                    - generic [ref=e2021]:
+                      - img [ref=e2023]
+                      - generic [ref=e2026]:
+                        - img [ref=e2027]
+                        - img "close" [ref=e2030]:
+                          - img [ref=e2031]
+                - row "search LC:2026-18184 SaGov Leave Cancellation 1 day Unpaid Leave Authorized Leave by TMV Mthembu from Mon 25 May 26 to Mon 25 May 26 26/05/2026 19:02 Declined close" [ref=e2033]:
+                  - cell "search" [ref=e2034]:
+                    - link "search" [ref=e2035] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=b803c418-e492-4b06-96af-539387d3b186
+                      - img "search" [ref=e2036]:
+                        - img [ref=e2037]
+                  - cell "LC:2026-18184" [ref=e2039]
+                  - cell "SaGov Leave Cancellation" [ref=e2040]
+                  - cell "1 day Unpaid Leave Authorized Leave by TMV Mthembu from Mon 25 May 26 to Mon 25 May 26" [ref=e2041]
+                  - cell "26/05/2026 19:02" [ref=e2042]
+                  - cell "Declined" [ref=e2043]
+                  - cell "close" [ref=e2044]:
+                    - generic [ref=e2051]:
+                      - img [ref=e2053]
+                      - img [ref=e2056]
+                      - generic [ref=e2059]:
+                        - img [ref=e2060]
+                        - img "close" [ref=e2063]:
+                          - img [ref=e2064]
+                - row "search LA2026/11631 SaGov Leave Application 1 day Adoption Leave Leave by TMV Mthembu from Fri 08 May 26 to Fri 08 May 26 26/05/2026 17:41 In Progress" [ref=e2066]:
+                  - cell "search" [ref=e2067]:
+                    - link "search" [ref=e2068] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=4c489fd3-ad47-497e-ad33-3ade4f506e28
+                      - img "search" [ref=e2069]:
+                        - img [ref=e2070]
+                  - cell "LA2026/11631" [ref=e2072]
+                  - cell "SaGov Leave Application" [ref=e2073]
+                  - cell "1 day Adoption Leave Leave by TMV Mthembu from Fri 08 May 26 to Fri 08 May 26" [ref=e2074]
+                  - cell "26/05/2026 17:41" [ref=e2075]
+                  - cell "In Progress" [ref=e2076]
+                  - cell [ref=e2077]:
+                    - generic [ref=e2084]:
+                      - img [ref=e2086]
+                      - img [ref=e2089]
+                      - img [ref=e2092]
+                      - img [ref=e2095]
+                - row "search LA2026/11628 SaGov Leave Application 3 days Annual Leave Leave by TMV Mthembu from Mon 08 Jun 26 to Wed 10 Jun 26 26/05/2026 17:40 Approved With Full Pay" [ref=e2097]:
+                  - cell "search" [ref=e2098]:
+                    - link "search" [ref=e2099] [cursor=pointer]:
+                      - /url: /shesha/workflow?id=f4cfb317-ddc9-4550-a463-05c19ada34a8
+                      - img "search" [ref=e2100]:
+                        - img [ref=e2101]
+                  - cell "LA2026/11628" [ref=e2103]
+                  - cell "SaGov Leave Application" [ref=e2104]
+                  - cell "3 days Annual Leave Leave by TMV Mthembu from Mon 08 Jun 26 to Wed 10 Jun 26" [ref=e2105]
+                  - cell "26/05/2026 17:40" [ref=e2106]
+                  - cell "Approved With Full Pay" [ref=e2107]
+                  - cell [ref=e2108]:
+                    - generic [ref=e2115]:
+                      - img [ref=e2117]
+                      - img [ref=e2120]
+                      - img [ref=e2123]
+                      - img [ref=e2126]
+  - alert [ref=e6]

@@ -8,9 +8,9 @@
 ## Metadata
 | Field | Value |
 |-------|-------|
-| App URL | https://pd-hcm-adminportal-qa.azurewebsites.net/ |
+| App URL | https://pd-hcm-adminportal-qa.shesha.app/ |
 | Environment | QA |
-| Login As | admin / P@ssw0rd |
+| Login As | GOV003 / 123qwe (applicant — Thabo Musa Victor Mthembu) |
 | ADO Plan | [#79625](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=79625&suiteId=86340) |
 | ADO Suite | #86340 — eleave-wf-capture-newleaveaplication |
 
@@ -18,8 +18,9 @@
 > Validate the **Capture New Leave Application** workflow step of eLeave — leave-type driven field behaviour, applicant selection, duration handling (days vs hours), verification method (OTP / Consent Form), mandatory-field enforcement, hourly-leave accumulation, and submission routing.
 
 ## Preconditions
-- [ ] App is reachable at https://pd-hcm-adminportal-qa.azurewebsites.net/
-- [ ] Admin credentials are valid (admin / P@ssw0rd)
+- [ ] App is reachable at https://pd-hcm-adminportal-qa.shesha.app/
+- [ ] Applicant credentials are valid (GOV003 / 123qwe)
+- [ ] To open a new application: Workflows → My Items → Create New → SaGov Leave Application
 - [ ] At least one leave application exists and is routed to the **Capture New Leave Application** step (for the action/verification cases)
 - [ ] The acting user has the role required to perform the Capture New Leave Application step
 
@@ -29,10 +30,10 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to https://pd-hcm-adminportal-qa.azurewebsites.net/
+  1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
   2. SNAPSHOT — confirm login page is visible
-  3. TYPE Username field with `admin`
-  4. TYPE Password field with `P@ssw0rd`
+  3. TYPE Username field with `GOV003`
+  4. TYPE Password field with `123qwe`
   5. CLICK the Sign In button
   6. WAIT for the home page / workflow inbox to load
 - **Expected result:** User is logged in and the eLeave workflow inbox is reachable

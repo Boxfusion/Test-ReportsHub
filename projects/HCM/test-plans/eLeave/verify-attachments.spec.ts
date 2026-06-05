@@ -9,7 +9,7 @@
 
 import { test, expect, Page } from '@playwright/test';
 
-const APP_URL = 'https://pd-hcm-adminportal-qa.azurewebsites.net/';
+const APP_URL = 'https://pd-hcm-adminportal-qa.shesha.app/';
 const ADMIN = { user: 'admin', password: 'P@ssw0rd' };
 const INBOX_URL = `${APP_URL}dynamic/Shesha.Workflow/workflows-inbox`;
 
@@ -25,7 +25,7 @@ async function loginAsAdmin(page: Page) {
 test.describe('ELEAVE-VERIFY-ATTACHMENTS — Verify Attachments', () => {
 
   test('TC-01: Login as Admin', async ({ page }) => {
-    // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.azurewebsites.net/
+    // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
     await page.goto(APP_URL);
     // STEP 2: SNAPSHOT — confirm login page is visible
     // SNAPSHOT: login page
@@ -39,11 +39,12 @@ test.describe('ELEAVE-VERIFY-ATTACHMENTS — Verify Attachments', () => {
     await page.waitForLoadState('networkidle');
     // ASSERT (BLOCKING) URL no longer contains /login and the authenticated home page is visible
     await expect(page).not.toHaveURL(/login/i);
-    await expect(page.getByRole('menuitem', { name: 'calendar Leave Management' })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('menuitem', { name: 'calendar SaGov Leave Management' })).toBeVisible({ timeout: 30000 });
   });
 
   // ADO Test Case #86564: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86564
-  test.fixme('TC-02: Verify button routes the item to the next step', async ({ page }) => {
+  test('TC-02: Verify button routes the item to the next step', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-verifyattachments-details view
     // TODO[selector]: reach eleave-wf-verifyattachments-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -58,7 +59,8 @@ test.describe('ELEAVE-VERIFY-ATTACHMENTS — Verify Attachments', () => {
   });
 
   // ADO Test Case #86565: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86565
-  test.fixme('TC-03: Verify button redirects the user to the Home page', async ({ page }) => {
+  test('TC-03: Verify button redirects the user to the Home page', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-verifyattachments-details view
     // TODO[selector]: reach eleave-wf-verifyattachments-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -73,7 +75,8 @@ test.describe('ELEAVE-VERIFY-ATTACHMENTS — Verify Attachments', () => {
   });
 
   // ADO Test Case #86567: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86567
-  test.fixme("TC-04: Display 'Refer Back' dialog when 'Refer Back' button is clicked", async ({ page }) => {
+  test("TC-04: Display 'Refer Back' dialog when 'Refer Back' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-verifyattachments-details view
     // TODO[selector]: reach eleave-wf-verifyattachments-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -88,7 +91,8 @@ test.describe('ELEAVE-VERIFY-ATTACHMENTS — Verify Attachments', () => {
   });
 
   // ADO Test Case #86569: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86569
-  test.fixme("TC-05: Display 'Close Leave Application' dialog when 'Close' button is clicked", async ({ page }) => {
+  test("TC-05: Display 'Close Leave Application' dialog when 'Close' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-verifyattachments-details view
     // TODO[selector]: reach eleave-wf-verifyattachments-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -103,7 +107,8 @@ test.describe('ELEAVE-VERIFY-ATTACHMENTS — Verify Attachments', () => {
   });
 
   // ADO Test Case #86571: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86571
-  test.fixme("TC-06: Verify button should be activated after a user downloads the supporting documents", async ({ page }) => {
+  test("TC-06: Verify button should be activated after a user downloads the supporting documents", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-verifyattachments-details view
     // TODO[selector]: reach eleave-wf-verifyattachments-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -120,7 +125,8 @@ test.describe('ELEAVE-VERIFY-ATTACHMENTS — Verify Attachments', () => {
   });
 
   // ADO Test Case #86573: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86573
-  test.fixme('TC-07: User cannot verify attachments without downloading them first', async ({ page }) => {
+  test('TC-07: User cannot verify attachments without downloading them first', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-verifyattachments-details view
     // TODO[selector]: reach eleave-wf-verifyattachments-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -135,7 +141,8 @@ test.describe('ELEAVE-VERIFY-ATTACHMENTS — Verify Attachments', () => {
   });
 
   // ADO Test Case #86574: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86574
-  test.fixme('TC-08: User cannot verify attachments without viewing them after downloading', async ({ page }) => {
+  test('TC-08: User cannot verify attachments without viewing them after downloading', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-verifyattachments-details view
     // TODO[selector]: reach eleave-wf-verifyattachments-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -154,7 +161,8 @@ test.describe('ELEAVE-VERIFY-ATTACHMENTS — Verify Attachments', () => {
   });
 
   // ADO Test Case #86576: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86576
-  test.fixme('TC-09: User should be able to view captured leave application details', async ({ page }) => {
+  test('TC-09: User should be able to view captured leave application details', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-verifyattachments-details view
     // TODO[selector]: reach eleave-wf-verifyattachments-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -167,7 +175,8 @@ test.describe('ELEAVE-VERIFY-ATTACHMENTS — Verify Attachments', () => {
   });
 
   // ADO Test Case #86577: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86577
-  test.fixme('TC-10: User should be able to download attached documents', async ({ page }) => {
+  test('TC-10: User should be able to download attached documents', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-verifyattachments-details view
     // TODO[selector]: reach eleave-wf-verifyattachments-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)

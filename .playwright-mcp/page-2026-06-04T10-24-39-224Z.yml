@@ -1,0 +1,30 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e181]:
+    - img [ref=e189]
+    - generic [ref=e191]:
+      - strong [ref=e200]: Welcome!
+      - strong [ref=e209]: Please enter your personal details in order to access your profile.
+    - generic [ref=e215]:
+      - img "mail" [ref=e217]:
+        - img [ref=e218]
+      - textbox "Username" [ref=e220]
+    - generic [ref=e226]:
+      - img "lock" [ref=e228]:
+        - img [ref=e229]
+      - textbox "Password" [ref=e231]
+      - img "eye-invisible" [ref=e233] [cursor=pointer]:
+        - img [ref=e234]
+    - button "Sign In" [ref=e242] [cursor=pointer]:
+      - generic [ref=e243]: Sign In
+    - generic [ref=e245]:
+      - generic [ref=e247]:
+        - checkbox [ref=e255] [cursor=pointer]
+        - generic [ref=e262]: Remember Me
+      - link "Forget Password" [ref=e268] [cursor=pointer]:
+        - /url: /no-auth/shesha/forgot-password?mode=edit
+    - generic [ref=e270]:
+      - generic [ref=e276]: Don't have an account?
+      - link "Register" [ref=e282] [cursor=pointer]:
+        - /url: /no-auth/Shesha/otp-verification
+        - generic [ref=e283]: Register
+  - alert [ref=e6]

@@ -1,0 +1,277 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e1109]:
+    - complementary [ref=e1110]:
+      - menu [ref=e1114]:
+        - menuitem "calendar Leave Management" [ref=e1115] [cursor=pointer]:
+          - img "calendar" [ref=e1116]:
+            - img [ref=e1117]
+          - generic [ref=e1119]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e1120] [cursor=pointer]:
+          - img "calendar" [ref=e1121]:
+            - img [ref=e1122]
+          - generic [ref=e1124]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e1125] [cursor=pointer]:
+          - img "book" [ref=e1126]:
+            - img [ref=e1127]
+          - generic [ref=e1129]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e1130] [cursor=pointer]:
+          - img "bank" [ref=e1131]:
+            - img [ref=e1132]
+          - generic [ref=e1134]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e1135] [cursor=pointer]:
+          - img "apartment" [ref=e1136]:
+            - img [ref=e1137]
+          - generic [ref=e1139]: Workflows
+        - menuitem "tool Administration" [ref=e1140] [cursor=pointer]:
+          - img "tool" [ref=e1141]:
+            - img [ref=e1142]
+          - generic [ref=e1144]: Administration
+        - menuitem "setting Configurations" [ref=e1145] [cursor=pointer]:
+          - img "setting" [ref=e1146]:
+            - img [ref=e1147]
+          - generic [ref=e1149]: Configurations
+      - img "menu-unfold" [ref=e1152] [cursor=pointer]:
+        - img [ref=e1153]
+    - generic [ref=e1155]:
+      - banner [ref=e1156]:
+        - generic [ref=e1162]:
+          - generic [ref=e1164]:
+            - button "edit" [ref=e1165] [cursor=pointer]:
+              - img "edit" [ref=e1166]:
+                - img [ref=e1167]
+            - paragraph [ref=e1169] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e1170]:
+              - generic [ref=e1171]: Live
+              - img "close" [ref=e1172] [cursor=pointer]:
+                - img [ref=e1173]
+          - generic [ref=e1183]:
+            - link [ref=e1189] [cursor=pointer]:
+              - /url: /
+              - img [ref=e1199]
+            - generic [ref=e1201]:
+              - generic [ref=e1202]:
+                - generic [ref=e1204]:
+                  - generic [ref=e1205]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e1207] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e1211] [cursor=pointer]:
+                  - img "block" [ref=e1212]:
+                    - img [ref=e1213]
+                  - generic [ref=e1215]: Live
+              - generic [ref=e1217]:
+                - generic [ref=e1218] [cursor=pointer]:
+                  - text: Kavitha Naidoo
+                  - img "down" [ref=e1219]:
+                    - img [ref=e1220]
+                - img "user" [ref=e1223]:
+                  - img [ref=e1224]
+      - main [ref=e1226]:
+        - generic [ref=e1232]:
+          - generic [ref=e1234]:
+            - button "edit" [ref=e1235] [cursor=pointer]:
+              - img "edit" [ref=e1236]:
+                - img [ref=e1237]
+            - paragraph [ref=e1239] [cursor=pointer]: Shesha.Workflow/workflows-inbox v4
+            - generic [ref=e1240]:
+              - generic [ref=e1241]: Live
+              - img "close" [ref=e1242] [cursor=pointer]:
+                - img [ref=e1243]
+          - generic [ref=e1255]:
+            - generic [ref=e1257]:
+              - heading "Incoming Items" [level=4] [ref=e1263] [cursor=pointer]
+              - generic [ref=e1265]:
+                - generic [ref=e1268]:
+                  - textbox [ref=e1270]
+                  - button "search" [ref=e1273] [cursor=pointer]:
+                    - img "search" [ref=e1275]:
+                      - img [ref=e1276]
+                - button "filter" [ref=e1283] [cursor=pointer]:
+                  - img "filter" [ref=e1285]:
+                    - img [ref=e1286]
+                - button "sliders" [ref=e1293] [cursor=pointer]:
+                  - img "sliders" [ref=e1295]:
+                    - img [ref=e1296]
+                - list [ref=e1298]:
+                  - listitem [ref=e1299]: 1-7 of 7 items
+                  - listitem "Previous Page" [ref=e1300]:
+                    - button "left" [disabled] [ref=e1301]:
+                      - img "left" [ref=e1302]:
+                        - img [ref=e1303]
+                  - listitem "1" [ref=e1305] [cursor=pointer]:
+                    - generic [ref=e1306]: "1"
+                  - listitem "Next Page" [ref=e1307]:
+                    - button "right" [disabled] [ref=e1308]:
+                      - img "right" [ref=e1309]:
+                        - img [ref=e1310]
+                  - listitem [ref=e1312]:
+                    - generic "Page Size" [ref=e1313] [cursor=pointer]:
+                      - generic [ref=e1314]:
+                        - combobox "Page Size" [ref=e1316]
+                        - generic "10 / page" [ref=e1317]
+                      - generic:
+                        - img:
+                          - img
+                - button "reload" [ref=e1323] [cursor=pointer]:
+                  - img "reload" [ref=e1325]:
+                    - img [ref=e1326]
+            - button "download Export" [ref=e1335] [cursor=pointer]:
+              - img "download" [ref=e1337]:
+                - img [ref=e1338]
+              - generic [ref=e1340]: Export
+            - table [ref=e1350]:
+              - row "Ref No Initiator Type Name Action Required Received Date Period In Possession Target Date Status" [ref=e1351]:
+                - columnheader [ref=e1352]
+                - columnheader "Ref No" [ref=e1353] [cursor=pointer]:
+                  - text: Ref No
+                  - separator [ref=e1354]
+                - columnheader "Initiator" [ref=e1355] [cursor=pointer]:
+                  - text: Initiator
+                  - separator [ref=e1356]
+                - columnheader "Type" [ref=e1357] [cursor=pointer]:
+                  - text: Type
+                  - separator [ref=e1358]
+                - columnheader "Name" [ref=e1359] [cursor=pointer]:
+                  - text: Name
+                  - separator [ref=e1360]
+                - columnheader "Action Required" [ref=e1361] [cursor=pointer]:
+                  - text: Action Required
+                  - separator [ref=e1362]
+                - columnheader "Received Date" [ref=e1363] [cursor=pointer]:
+                  - text: Received Date
+                  - separator [ref=e1364]
+                - columnheader "Period In Possession" [ref=e1365]:
+                  - text: Period In Possession
+                  - separator [ref=e1366]
+                - columnheader "Target Date" [ref=e1367] [cursor=pointer]:
+                  - text: Target Date
+                  - separator [ref=e1368]
+                - columnheader "Status" [ref=e1369] [cursor=pointer]:
+                  - text: Status
+                  - separator [ref=e1370]
+              - rowgroup [ref=e1371]:
+                - row "search LA2026/11402 Thabo Musa Victor Mthembu Leave Application 1 day Annual Leave Leave by TMV Mthembu from Thu 30 Apr 26 to Thu 30 Apr 26 Recommend Leave 11/05/2026 25 days ago 13/05/2026 In Progress" [ref=e1372]:
+                  - cell "search" [ref=e1373]:
+                    - link "search" [ref=e1374] [cursor=pointer]:
+                      - /url: /shesha/workflow-action?id=46ff39dc-703f-4ed4-8b50-734f6315dc61&todoid=fb9e8004-a696-4527-9530-44b5d6f0374b
+                      - img "search" [ref=e1375]:
+                        - img [ref=e1376]
+                  - cell "LA2026/11402" [ref=e1378]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1379]
+                  - cell "Leave Application" [ref=e1380]
+                  - cell "1 day Annual Leave Leave by TMV Mthembu from Thu 30 Apr 26 to Thu 30 Apr 26" [ref=e1381]
+                  - cell "Recommend Leave" [ref=e1382]
+                  - cell "11/05/2026" [ref=e1383]:
+                    - generic [ref=e1388]: 11/05/2026
+                  - cell "25 days ago" [ref=e1389]:
+                    - generic [ref=e1397]: 25 days ago
+                  - cell "13/05/2026" [ref=e1398]:
+                    - generic [ref=e1403]: 13/05/2026
+                  - cell "In Progress" [ref=e1404]
+                - row "search LA2026/11393 Thabo Musa Victor Mthembu Leave Application 1 day Annual Leave Leave by TMV Mthembu from Mon 27 Apr 26 to Mon 27 Apr 26 Recommend Leave 11/05/2026 25 days ago 13/05/2026 In Progress" [ref=e1405]:
+                  - cell "search" [ref=e1406]:
+                    - link "search" [ref=e1407] [cursor=pointer]:
+                      - /url: /shesha/workflow-action?id=87604855-5f4c-42f3-9c50-dc21f61b700a&todoid=43e615de-c7f3-445f-a19f-383402f51ef9
+                      - img "search" [ref=e1408]:
+                        - img [ref=e1409]
+                  - cell "LA2026/11393" [ref=e1411]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1412]
+                  - cell "Leave Application" [ref=e1413]
+                  - cell "1 day Annual Leave Leave by TMV Mthembu from Mon 27 Apr 26 to Mon 27 Apr 26" [ref=e1414]
+                  - cell "Recommend Leave" [ref=e1415]
+                  - cell "11/05/2026" [ref=e1416]:
+                    - generic [ref=e1421]: 11/05/2026
+                  - cell "25 days ago" [ref=e1422]:
+                    - generic [ref=e1430]: 25 days ago
+                  - cell "13/05/2026" [ref=e1431]:
+                    - generic [ref=e1436]: 13/05/2026
+                  - cell "In Progress" [ref=e1437]
+                - row "search LA2026/10863 Thabo Musa Victor Mthembu Leave Application 2 days Annual Leave Leave by TMV Mthembu from Tue 28 Apr 26 to Wed 29 Apr 26 Recommend Leave 07/05/2026 a month ago 11/05/2026 In Progress" [ref=e1438]:
+                  - cell "search" [ref=e1439]:
+                    - link "search" [ref=e1440] [cursor=pointer]:
+                      - /url: /shesha/workflow-action?id=aa0d7b10-3b5b-4d4e-8ddb-9a3c12c40cbc&todoid=02f9624a-ca05-48af-a884-cbeac4438c12
+                      - img "search" [ref=e1441]:
+                        - img [ref=e1442]
+                  - cell "LA2026/10863" [ref=e1444]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1445]
+                  - cell "Leave Application" [ref=e1446]
+                  - cell "2 days Annual Leave Leave by TMV Mthembu from Tue 28 Apr 26 to Wed 29 Apr 26" [ref=e1447]
+                  - cell "Recommend Leave" [ref=e1448]
+                  - cell "07/05/2026" [ref=e1449]:
+                    - generic [ref=e1454]: 07/05/2026
+                  - cell "a month ago" [ref=e1455]:
+                    - generic [ref=e1463]: a month ago
+                  - cell "11/05/2026" [ref=e1464]:
+                    - generic [ref=e1469]: 11/05/2026
+                  - cell "In Progress" [ref=e1470]
+                - row "search LA2026/10230 Thabo Musa Victor Mthembu SaGov Leave Application 1 day Family Responsibility (Sick) Leave by TMV Mthembu from Fri 24 Apr 26 to Fri 24 Apr 26 Recommend Leave 20/04/2026 2 months ago 22/04/2026 In Progress" [ref=e1471]:
+                  - cell "search" [ref=e1472]:
+                    - link "search" [ref=e1473] [cursor=pointer]:
+                      - /url: /shesha/workflow-action?id=7a300920-39b0-4303-bdfb-fa79dcb68d9b&todoid=594fe4c5-4300-4223-bd65-d3fe9080ebed
+                      - img "search" [ref=e1474]:
+                        - img [ref=e1475]
+                  - cell "LA2026/10230" [ref=e1477]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1478]
+                  - cell "SaGov Leave Application" [ref=e1479]
+                  - cell "1 day Family Responsibility (Sick) Leave by TMV Mthembu from Fri 24 Apr 26 to Fri 24 Apr 26" [ref=e1480]
+                  - cell "Recommend Leave" [ref=e1481]
+                  - cell "20/04/2026" [ref=e1482]:
+                    - generic [ref=e1487]: 20/04/2026
+                  - cell "2 months ago" [ref=e1488]:
+                    - generic [ref=e1496]: 2 months ago
+                  - cell "22/04/2026" [ref=e1497]:
+                    - generic [ref=e1502]: 22/04/2026
+                  - cell "In Progress" [ref=e1503]
+                - row "search LA2026/10227 Thabo Musa Victor Mthembu SaGov Leave Application 1 day Family Responsibility (Death) Leave by TMV Mthembu from Thu 23 Apr 26 to Thu 23 Apr 26 Recommend Leave 20/04/2026 2 months ago 22/04/2026 In Progress" [ref=e1504]:
+                  - cell "search" [ref=e1505]:
+                    - link "search" [ref=e1506] [cursor=pointer]:
+                      - /url: /shesha/workflow-action?id=665a670d-4bc7-4d23-ae50-6a22bbb249db&todoid=092a7f11-6a17-4057-9ed7-058d0db33559
+                      - img "search" [ref=e1507]:
+                        - img [ref=e1508]
+                  - cell "LA2026/10227" [ref=e1510]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1511]
+                  - cell "SaGov Leave Application" [ref=e1512]
+                  - cell "1 day Family Responsibility (Death) Leave by TMV Mthembu from Thu 23 Apr 26 to Thu 23 Apr 26" [ref=e1513]
+                  - cell "Recommend Leave" [ref=e1514]
+                  - cell "20/04/2026" [ref=e1515]:
+                    - generic [ref=e1520]: 20/04/2026
+                  - cell "2 months ago" [ref=e1521]:
+                    - generic [ref=e1529]: 2 months ago
+                  - cell "22/04/2026" [ref=e1530]:
+                    - generic [ref=e1535]: 22/04/2026
+                  - cell "In Progress" [ref=e1536]
+                - row "search LA2026/10224 Thabo Musa Victor Mthembu SaGov Leave Application 1 day Family Responsibility (Children with Special Needs) Leave by TMV Mthembu from Wed 22 Apr 26 to Wed 22 Apr 26 Recommend Leave 20/04/2026 2 months ago 22/04/2026 In Progress" [ref=e1537]:
+                  - cell "search" [ref=e1538]:
+                    - link "search" [ref=e1539] [cursor=pointer]:
+                      - /url: /shesha/workflow-action?id=e270fa76-7d11-41d6-b145-ad53a5f32e0d&todoid=c9b71171-4422-4214-9cc7-542710e45d69
+                      - img "search" [ref=e1540]:
+                        - img [ref=e1541]
+                  - cell "LA2026/10224" [ref=e1543]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1544]
+                  - cell "SaGov Leave Application" [ref=e1545]
+                  - cell "1 day Family Responsibility (Children with Special Needs) Leave by TMV Mthembu from Wed 22 Apr 26 to Wed 22 Apr 26" [ref=e1546]
+                  - cell "Recommend Leave" [ref=e1547]
+                  - cell "20/04/2026" [ref=e1548]:
+                    - generic [ref=e1553]: 20/04/2026
+                  - cell "2 months ago" [ref=e1554]:
+                    - generic [ref=e1562]: 2 months ago
+                  - cell "22/04/2026" [ref=e1563]:
+                    - generic [ref=e1568]: 22/04/2026
+                  - cell "In Progress" [ref=e1569]
+                - row "search LA2026/10183 Thabo Musa Victor Mthembu SaGov Leave Application 2 days Annual Leave Leave by TMV Mthembu from Mon 20 Apr 26 to Tue 21 Apr 26 Recommend Leave 14/04/2026 2 months ago 16/04/2026 In Progress" [ref=e1570]:
+                  - cell "search" [ref=e1571]:
+                    - link "search" [ref=e1572] [cursor=pointer]:
+                      - /url: /shesha/workflow-action?id=fbf70483-3708-4baa-8265-b89a459c2e11&todoid=cec2a012-02bf-40ea-84de-9c28468e825f
+                      - img "search" [ref=e1573]:
+                        - img [ref=e1574]
+                  - cell "LA2026/10183" [ref=e1576]
+                  - cell "Thabo Musa Victor Mthembu" [ref=e1577]
+                  - cell "SaGov Leave Application" [ref=e1578]
+                  - cell "2 days Annual Leave Leave by TMV Mthembu from Mon 20 Apr 26 to Tue 21 Apr 26" [ref=e1579]
+                  - cell "Recommend Leave" [ref=e1580]
+                  - cell "14/04/2026" [ref=e1581]:
+                    - generic [ref=e1586]: 14/04/2026
+                  - cell "2 months ago" [ref=e1587]:
+                    - generic [ref=e1595]: 2 months ago
+                  - cell "16/04/2026" [ref=e1596]:
+                    - generic [ref=e1601]: 16/04/2026
+                  - cell "In Progress" [ref=e1602]
+  - alert [ref=e6]

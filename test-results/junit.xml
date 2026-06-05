@@ -1,0 +1,148 @@
+<testsuites id="" name="" tests="35" failures="0" skipped="35" errors="0" time="0.336951">
+<testsuite name="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" timestamp="2026-06-05T07:22:18.739Z" hostname="chromium" tests="14" failures="0" skipped="14" time="0" errors="0">
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-01: Create New Leave Application — login and reach My Items" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-02: My Items page loads with leave application list" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-03: Create New dropdown shows SaGov Leave Application option" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-04: New leave application form opens on option selection" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-05: Category and sub-category populate correctly" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-06: Same-day start and end date shows &apos;1 day off&apos; confirmation" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-07: Available leave balance message shown after date selection" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-08: Address and telephone fields accept valid input" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-09: Submit is blocked until the certification checkbox is ticked" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-10: Delegation modal appears on submit" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-11: &apos;Don&apos;t Delegate&apos; closes modal and returns to My Items" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-12: Submit without required fields shows validation errors" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-13: End date before start date is rejected" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-14: Leave spanning a weekend counts only working days" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts" timestamp="2026-06-05T07:22:18.739Z" hostname="chromium" tests="8" failures="0" skipped="8" time="0" errors="0">
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-01: Login with valid credentials redirects to home" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-02: Login with invalid credentials shows error and stays on login page" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-03: Inbox loads with pending leave applications" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-04: Selecting the submitted application opens its leave detail" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-05: Leave application detail shows leave balance and taken days summary" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-06: &apos;Approve with Full Pay&apos; action becomes available after acknowledgement" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-07: Backdated comment dialog accepts free text input" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-08: Approve with Full Pay processes the submitted application and returns to the Inbox" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" timestamp="2026-06-05T07:22:18.739Z" hostname="chromium" tests="13" failures="0" skipped="13" time="0" errors="0">
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-01: Login with valid credentials redirects to home" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-02: Login with invalid credentials shows error and stays on login page" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-03: Inbox loads with pending leave applications" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-04: Selecting the submitted application opens its leave detail" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-05: Leave application detail shows leave balance and taken days summary" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-06: &apos;Recommend&apos; action becomes available after acknowledgement" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-07: Backdated comment dialog accepts free text input" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-08: Recommend processes the submitted application and returns to the Inbox" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-10: Backdated leave enforces mandatory supervisor comment" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-11: Unauthenticated access to Inbox is blocked" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-12: Inbox renders rows for both SaGov and standard Leave Application types" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-13: Show Dialog action failure surfaces a user-facing error" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-14: Overdue items in Inbox are visually distinguished" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

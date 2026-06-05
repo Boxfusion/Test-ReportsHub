@@ -8,7 +8,7 @@
 ## Metadata
 | Field | Value |
 |-------|-------|
-| App URL | https://pd-hcm-adminportal-qa.azurewebsites.net/ |
+| App URL | https://pd-hcm-adminportal-qa.shesha.app/ |
 | Environment | QA |
 | Login As | admin / P@ssw0rd |
 | ADO Plan | [#79625](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=79625&suiteId=86624) |
@@ -18,7 +18,7 @@
 > Validate the **Add a New Personal Leave Balance** (Add Personal Credit) dialog of eLeave — the OK action (adds the credits and redirects to the Leave Balances dashboard), the mandatory-field enforcement, and the Close action (dismisses the dialog).
 
 ## Preconditions
-- [ ] App is reachable at https://pd-hcm-adminportal-qa.azurewebsites.net/
+- [ ] App is reachable at https://pd-hcm-adminportal-qa.shesha.app/
 - [ ] Admin credentials are valid (admin / P@ssw0rd)
 - [ ] The Leave Balances Administration table is reachable with the Add Personal Credit action available
 - [ ] The acting user has the role required to administer leave balances
@@ -29,7 +29,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to https://pd-hcm-adminportal-qa.azurewebsites.net/
+  1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
   2. SNAPSHOT — confirm login page is visible
   3. TYPE Username field with `admin`
   4. TYPE Password field with `P@ssw0rd`

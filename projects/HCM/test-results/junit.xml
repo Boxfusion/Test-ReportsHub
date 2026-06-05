@@ -1,0 +1,143 @@
+<testsuites id="" name="" tests="35" failures="0" skipped="9" errors="0" time="236.960737">
+<testsuite name="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" timestamp="2026-06-04T12:49:29.628Z" hostname="chromium" tests="14" failures="0" skipped="5" time="129.21" errors="0">
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-01: Create New Leave Application — login and reach My Items" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" time="4.027">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-02: My Items page loads with leave application list" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" time="6.069">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-03: Create New dropdown shows SaGov Leave Application option" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" time="6.199">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-04: New leave application form opens on option selection" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" time="8.458">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-05: Category and sub-category populate correctly" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" time="47.585">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts\projects-HCM-test-plans-eL-76d9d-category-populate-correctly-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|artifacts\projects-HCM-test-plans-eL-76d9d-category-populate-correctly-chromium\video.webm]]
+
+[[ATTACHMENT|artifacts\projects-HCM-test-plans-eL-76d9d-category-populate-correctly-chromium\error-context.md]]
+
+[[ATTACHMENT|artifacts\projects-HCM-test-plans-eL-76d9d-category-populate-correctly-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-06: Same-day start and end date shows &apos;1 day off&apos; confirmation" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" time="12.456">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-07: Available leave balance message shown after date selection" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<properties>
+<property name="skip" value="Available-days message not surfaced on the v74 applicant draft form; needs a seeded/complete form to confirm.">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-08: Address and telephone fields accept valid input" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" time="8.124">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-09: Submit is blocked until T&amp;Cs checkbox is ticked" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" time="8.686">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-10: Delegation modal appears on submit" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<properties>
+<property name="skip" value="Seeded mutation — submits a real leave application to QA. Enable with SEED_SUBMIT=1.">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-11: &apos;Don&apos;t Delegate&apos; closes modal and returns to My Items" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<properties>
+<property name="skip" value="Seeded mutation — submits a real leave application to QA. Enable with SEED_SUBMIT=1.">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-12: Submit without required fields shows validation errors" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<properties>
+<property name="skip" value="The v74 form disables Submit until required fields are filled (no empty-submit path) and has no T&amp;Cs checkbox; inline-error path needs a seeded run.">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-13: End date before start date is rejected" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts" time="8.969">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPLY — Application for Leave › TC-14: Leave spanning a weekend counts only working days" classname="projects\HCM\test-plans\eLeaveSmokeTest\application-for-leave.spec.ts">
+<properties>
+<property name="skip" value="The day-off count banner (&quot;5 days, not 7&quot;) was not surfaced on the v74 applicant draft; needs a seeded/complete form to confirm weekend exclusion.">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts" timestamp="2026-06-04T12:49:29.628Z" hostname="chromium" tests="8" failures="0" skipped="2" time="38.153" errors="0">
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-01: Login with valid credentials redirects to home" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts" time="2.598">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-02: Login with invalid credentials shows error and stays on login page" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts" time="4.82">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-03: Inbox loads with pending leave applications" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts" time="5.813">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-04: Selecting an inbox item opens the leave application detail" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts" time="7.649">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-05: Leave application detail shows leave balance and taken days summary" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts" time="7.432">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-06: &apos;Approve with full Pay&apos; action button is visible and clickable on backdated leave" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts" time="9.453">
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-07: Supervisor comment dialog accepts free text input" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts">
+<properties>
+<property name="skip" value="Reaching the comment dialog requires enabling the Approve action (acknowledge + download supporting attachments). The dialog itself is the SaGov.Leave/backdated-comments form (see recommend-leave.spec.ts). Capture on a seeded/attachment-free run.">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-APPROVE — Approve Leave › TC-08: Clicking &apos;Ok&apos; on Approve dialog submits and returns to Inbox" classname="projects\HCM\test-plans\eLeaveSmokeTest\approve-leave.spec.ts">
+<properties>
+<property name="skip" value="Clicking &apos;Ok&apos; processes the approval and mutates live QA data. Run only in a seeded mutation pass.">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" timestamp="2026-06-04T12:49:29.628Z" hostname="chromium" tests="13" failures="0" skipped="2" time="66.353" errors="0">
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-01: Login with valid credentials redirects to home" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="2.836">
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-02: Login with invalid credentials shows error and stays on login page" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="4.838">
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-03: Inbox loads with pending leave applications" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="5.941">
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-04: Selecting an inbox item opens the leave application detail" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="7.793">
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-05: Leave application detail shows leave balance and taken days summary" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="7.759">
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-06: &apos;Recommend&apos; action button is visible and clickable on backdated leave" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="7.969">
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-07: Supervisor comment dialog accepts free text input" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="7.619">
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-08: Clicking &apos;Ok&apos; on recommend dialog submits and returns to Inbox" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<properties>
+<property name="skip" value="Clicking &apos;Ok&apos; processes the recommendation and mutates live QA data (routes the application to the approver). Run only in a seeded mutation pass.">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-10: Backdated leave enforces mandatory supervisor comment" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="8.096">
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-11: Unauthenticated access to Inbox is blocked" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="2.288">
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-12: Inbox renders rows for both SaGov and standard Leave Application types" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="5.154">
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-13: Show Dialog action failure surfaces a user-facing error" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts">
+<properties>
+<property name="skip" value="Requires reproducing a Show Dialog action failure on demand. ADO confirms the failure (&quot;Failed to execute action shesha.common:Show Dialog, error: null&quot;) surfaced silently with no user-facing error — log as a bug if reproduced.">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-SMOKE-RECOMMEND — Recommend Leave › TC-14: Overdue items in Inbox are visually distinguished" classname="projects\HCM\test-plans\eLeaveSmokeTest\recommend-leave.spec.ts" time="5.631">
+</testcase>
+</testsuite>
+</testsuites>

@@ -58,20 +58,20 @@
   },
   "suites": [
     {
-      "title": "projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-      "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
+      "title": "projects\\HCM\\test-plans\\eLeaveSmokeTest\\approve-leave.spec.ts",
+      "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "ELEAVE-ADD-HOLIDAY — Add a New Public Holiday Dialog",
-          "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
-          "line": 25,
+          "title": "ELEAVE-SMOKE-APPROVE — Approve Leave",
+          "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+          "line": 73,
           "column": 6,
           "specs": [
             {
-              "title": "TC-01: Login as Admin",
+              "title": "TC-01: Login with valid credentials redirects to home",
               "ok": true,
               "tags": [],
               "tests": [
@@ -86,12 +86,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3475,
+                      "duration": 3991,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-02T09:58:28.604Z",
+                      "startTime": "2026-06-05T07:32:16.342Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -99,221 +99,183 @@
                   "status": "expected"
                 }
               ],
-              "id": "1b47c866066a12490dda-d9ba37c5858cf8048883",
-              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
-              "line": 27,
+              "id": "db8638f35633769b9358-895b9f7e0691e08cd921",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 76,
               "column": 7
             },
             {
-              "title": "TC-02: System should add the holiday when 'OK' button is clicked",
+              "title": "TC-02: Login with invalid credentials shows error and stays on login page",
               "ok": true,
               "tags": [],
               "tests": [
                 {
                   "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-                        "line": 46,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
+                  "annotations": [],
+                  "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
+                      "status": "passed",
+                      "duration": 5694,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-02T09:58:32.224Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-                            "line": 46,
-                            "column": 8
-                          }
-                        }
-                      ],
+                      "startTime": "2026-06-05T07:32:20.445Z",
+                      "annotations": [],
                       "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
-              "id": "1b47c866066a12490dda-63becb08dcb4d3ccfbbd",
-              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
-              "line": 46,
-              "column": 8
+              "id": "db8638f35633769b9358-cc7873a1eb8bc4055fdb",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 89,
+              "column": 7
             },
             {
-              "title": "TC-03: System should redirect to the Public Holidays page when 'OK' button is clicked",
+              "title": "TC-03: Inbox loads with pending leave applications",
               "ok": true,
               "tags": [],
               "tests": [
                 {
                   "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-                        "line": 61,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
+                  "annotations": [],
+                  "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
+                      "status": "passed",
+                      "duration": 8447,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-02T09:58:32.224Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-                            "line": 61,
-                            "column": 8
-                          }
-                        }
-                      ],
+                      "startTime": "2026-06-05T07:32:26.147Z",
+                      "annotations": [],
                       "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
-              "id": "1b47c866066a12490dda-669ccde8122cd713bc59",
-              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
-              "line": 61,
-              "column": 8
+              "id": "db8638f35633769b9358-fde8a30d6c904db94b84",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 101,
+              "column": 7
             },
             {
-              "title": "TC-04: The added holiday should appear on the calendar",
+              "title": "TC-04: Selecting the submitted application opens its leave detail",
               "ok": true,
               "tags": [],
               "tests": [
                 {
                   "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-                        "line": 76,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
+                  "annotations": [],
+                  "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
+                      "status": "passed",
+                      "duration": 7974,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-02T09:58:32.225Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-                            "line": 76,
-                            "column": 8
-                          }
-                        }
-                      ],
+                      "startTime": "2026-06-05T07:32:34.605Z",
+                      "annotations": [],
                       "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
-              "id": "1b47c866066a12490dda-371989f40688abe65b97",
-              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
-              "line": 76,
-              "column": 8
+              "id": "db8638f35633769b9358-3f22c3f2baab979a49e4",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 111,
+              "column": 7
             },
             {
-              "title": "TC-05: The 'OK' button should remain inactive until the user populates the 'Name' field",
+              "title": "TC-05: Leave application detail shows leave balance and taken days summary",
               "ok": true,
               "tags": [],
               "tests": [
                 {
                   "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-                        "line": 93,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
+                  "annotations": [],
+                  "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
+                      "status": "passed",
+                      "duration": 9315,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-02T09:58:32.225Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-                            "line": 93,
-                            "column": 8
-                          }
-                        }
-                      ],
+                      "startTime": "2026-06-05T07:32:42.591Z",
+                      "annotations": [],
                       "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
-              "id": "1b47c866066a12490dda-4f1d2ae4450634b15504",
-              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
-              "line": 93,
-              "column": 8
+              "id": "db8638f35633769b9358-e7f970512158c175483c",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 120,
+              "column": 7
             },
             {
-              "title": "TC-06: The 'OK' button should remain inactive until the user populates the 'Date' field",
+              "title": "TC-06: 'Approve with Full Pay' action becomes available after acknowledgement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11996,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-05T07:32:51.920Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db8638f35633769b9358-2c80ec1390e0d8fba667",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 128,
+              "column": 7
+            },
+            {
+              "title": "TC-07: Backdated comment dialog accepts free text input",
               "ok": true,
               "tags": [],
               "tests": [
@@ -321,11 +283,12 @@
                   "timeout": 90000,
                   "annotations": [
                     {
-                      "type": "fixme",
+                      "type": "skip",
+                      "description": "The chain application is future-dated; the comment dialog applies only to backdated leave (future-dated Approve processes directly — verified live).",
                       "location": {
-                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-                        "line": 106,
-                        "column": 8
+                        "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeaveSmokeTest\\approve-leave.spec.ts",
+                        "line": 146,
+                        "column": 10
                       }
                     }
                   ],
@@ -337,19 +300,20 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 0,
+                      "duration": 242,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-02T09:58:32.225Z",
+                      "startTime": "2026-06-05T07:33:03.931Z",
                       "annotations": [
                         {
-                          "type": "fixme",
+                          "type": "skip",
+                          "description": "The chain application is future-dated; the comment dialog applies only to backdated leave (future-dated Approve processes directly — verified live).",
                           "location": {
-                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeave\\add-public-holiday-dialog.spec.ts",
-                            "line": 106,
-                            "column": 8
+                            "file": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\projects\\HCM\\test-plans\\eLeaveSmokeTest\\approve-leave.spec.ts",
+                            "line": 146,
+                            "column": 10
                           }
                         }
                       ],
@@ -359,10 +323,44 @@
                   "status": "skipped"
                 }
               ],
-              "id": "1b47c866066a12490dda-47031e3989e669e1c075",
-              "file": "projects/HCM/test-plans/eLeave/add-public-holiday-dialog.spec.ts",
-              "line": 106,
-              "column": 8
+              "id": "db8638f35633769b9358-0209642fad632c45c153",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 145,
+              "column": 7
+            },
+            {
+              "title": "TC-08: Approve with Full Pay processes the submitted application and returns to the Inbox",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16568,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-05T07:33:04.185Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db8638f35633769b9358-86799ef8cbccbcfa89e9",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 161,
+              "column": 7
             }
           ]
         }
@@ -371,10 +369,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-02T09:58:27.970Z",
-    "duration": 4463.9839999999995,
-    "expected": 1,
-    "skipped": 5,
+    "startTime": "2026-06-05T07:32:15.732Z",
+    "duration": 65337.99800000001,
+    "expected": 7,
+    "skipped": 1,
     "unexpected": 0,
     "flaky": 0
   }

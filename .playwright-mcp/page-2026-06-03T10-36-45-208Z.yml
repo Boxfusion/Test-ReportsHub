@@ -1,0 +1,296 @@
+- generic [ref=e1]:
+  - generic [ref=e645]:
+    - complementary [ref=e646]:
+      - menu [ref=e650]:
+        - menuitem "calendar Leave Management" [ref=e651] [cursor=pointer]:
+          - img "calendar" [ref=e652]:
+            - img [ref=e653]
+          - generic [ref=e655]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e656] [cursor=pointer]:
+          - img "calendar" [ref=e657]:
+            - img [ref=e658]
+          - generic [ref=e660]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e661] [cursor=pointer]:
+          - img "book" [ref=e662]:
+            - img [ref=e663]
+          - generic [ref=e665]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e666] [cursor=pointer]:
+          - img "bank" [ref=e667]:
+            - img [ref=e668]
+          - generic [ref=e670]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e671] [cursor=pointer]:
+          - img "apartment" [ref=e672]:
+            - img [ref=e673]
+          - generic [ref=e675]: Workflows
+        - menuitem "tool Administration" [ref=e676] [cursor=pointer]:
+          - img "tool" [ref=e677]:
+            - img [ref=e678]
+          - generic [ref=e680]: Administration
+        - menuitem "setting Configurations" [ref=e681] [cursor=pointer]:
+          - img "setting" [ref=e682]:
+            - img [ref=e683]
+          - generic [ref=e685]: Configurations
+      - img "menu-unfold" [ref=e688] [cursor=pointer]:
+        - img [ref=e689]
+    - generic [ref=e691]:
+      - banner [ref=e692]:
+        - generic [ref=e698]:
+          - generic [ref=e700]:
+            - button "edit" [ref=e701] [cursor=pointer]:
+              - img "edit" [ref=e702]:
+                - img [ref=e703]
+            - paragraph [ref=e705] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e706]:
+              - generic [ref=e707]: Live
+              - img "close" [ref=e708] [cursor=pointer]:
+                - img [ref=e709]
+          - generic [ref=e719]:
+            - link [ref=e725] [cursor=pointer]:
+              - /url: /
+              - img [ref=e735]
+            - generic [ref=e737]:
+              - generic [ref=e738]:
+                - generic [ref=e740]:
+                  - generic [ref=e741]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e743] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e747] [cursor=pointer]:
+                  - img "block" [ref=e748]:
+                    - img [ref=e749]
+                  - generic [ref=e751]: Live
+              - generic [ref=e753]:
+                - generic [ref=e754] [cursor=pointer]:
+                  - text: Thabo Musa Victor Mthembu
+                  - img "down" [ref=e755]:
+                    - img [ref=e756]
+                - img "user" [ref=e759]:
+                  - img [ref=e760]
+      - main [ref=e762]:
+        - generic [ref=e767]:
+          - generic [ref=e768]:
+            - generic [ref=e771]:
+              - heading "New Leave Application:" [level=4] [ref=e773]:
+                - strong [ref=e774]: "New Leave Application:"
+              - generic [ref=e779]: Draft
+            - generic [ref=e780]:
+              - generic [ref=e781]: "Ref No: LA2026/11969"
+              - generic [ref=e782]: "Created by: Thabo Musa Victor Mthembu a few seconds ago"
+          - generic [ref=e787]:
+            - generic [ref=e789]:
+              - button "edit" [ref=e790] [cursor=pointer]:
+                - img "edit" [ref=e791]:
+                  - img [ref=e792]
+              - paragraph [ref=e794] [cursor=pointer]: SaGov.Leave/sagov-leave-application v74
+              - generic [ref=e795]:
+                - generic [ref=e796]: Live
+                - img "close" [ref=e797] [cursor=pointer]:
+                  - img [ref=e798]
+            - generic [ref=e808]:
+              - generic [ref=e810]:
+                - alert [ref=e811]:
+                  - img "info-circle" [ref=e812]:
+                    - img [ref=e813]
+                  - generic [ref=e817]: Capture the details of the leave you wish to apply for below.
+                  - button "close" [ref=e818] [cursor=pointer]:
+                    - img "close" [ref=e819]:
+                      - img [ref=e820]
+                - generic [ref=e825]:
+                  - generic [ref=e826]:
+                    - img "right" [ref=e828] [cursor=pointer]:
+                      - img [ref=e829]
+                    - generic [ref=e831]: Leave Application
+                  - generic [ref=e836]:
+                    - generic [ref=e839]:
+                      - generic [ref=e841]:
+                        - generic [ref=e843]:
+                          - generic "Who are you requesting the leave for?" [ref=e845]:
+                            - text: Who are you requesting the leave for?
+                            - generic [ref=e846]: "*"
+                          - generic [ref=e851]:
+                            - generic [ref=e853] [cursor=pointer]:
+                              - radio "Myself" [checked] [ref=e855]
+                              - generic [ref=e857]: Myself
+                            - generic [ref=e859] [cursor=pointer]:
+                              - radio "Someone else" [ref=e861]
+                              - generic [ref=e863]: Someone else
+                        - generic [ref=e865]:
+                          - generic "PERSAL No" [ref=e867]
+                          - generic [ref=e870]: GOV00003
+                        - generic [ref=e872]:
+                          - generic "Category" [ref=e874]:
+                            - text: Category
+                            - generic [ref=e875]: "*"
+                          - generic [ref=e879] [cursor=pointer]:
+                            - generic: Family Rsponsibility
+                            - generic [ref=e880]:
+                              - combobox [active] [ref=e882]
+                              - generic "Family Rsponsibility" [ref=e1181]
+                            - generic:
+                              - img:
+                                - img
+                            - img [ref=e1178]:
+                              - img [ref=e1179]
+                        - generic [ref=e1183]:
+                          - generic "Sub-Category" [ref=e1185]:
+                            - text: Sub-Category
+                            - generic [ref=e1186]: "*"
+                          - generic [ref=e1190] [cursor=pointer]:
+                            - combobox [ref=e1193]
+                            - generic:
+                              - img:
+                                - img
+                      - generic [ref=e884]:
+                        - generic "Start Date" [ref=e886]:
+                          - text: Start Date
+                          - generic [ref=e887]: "*"
+                        - generic [ref=e892]:
+                          - textbox "Select date" [ref=e893]
+                          - generic:
+                            - img "calendar":
+                              - img
+                      - generic [ref=e895]:
+                        - generic "End Date" [ref=e897]:
+                          - text: End Date
+                          - generic [ref=e898]: "*"
+                        - generic [ref=e903]:
+                          - textbox "Select date" [ref=e904]
+                          - generic:
+                            - img "calendar":
+                              - img
+                      - generic [ref=e913]:
+                        - generic "Address" [ref=e915]:
+                          - text: Address
+                          - generic [ref=e916]: "*"
+                        - textbox [ref=e920]
+                      - generic [ref=e922]:
+                        - generic "Telephone" [ref=e924]
+                        - textbox [ref=e929]: "+27761425683"
+                      - generic [ref=e931]:
+                        - generic "Notes" [ref=e933]
+                        - textbox [ref=e937]
+                      - generic [ref=e939]:
+                        - generic "Supporting documents" [ref=e941]
+                        - button "upload (press to upload)" [ref=e949] [cursor=pointer]:
+                          - img "upload" [ref=e951]:
+                            - img [ref=e952]
+                          - generic [ref=e954]: (press to upload)
+                      - strong [ref=e963]:
+                        - text: "Your leave will be routed as follows:"
+                        - text: "Recommender: Infra Manager-1-(Kavitha Naidoo)-Infrastructure"
+                        - text: "Approver: HOD - Infrasturcture-1-(Naledi weeeee Khumalo)-Infrastructure"
+                    - generic [ref=e966]:
+                      - generic [ref=e967]:
+                        - generic [ref=e968]:
+                          - generic [ref=e971]: Existing Leave
+                          - generic [ref=e974]: Existing in progress cancellation
+                          - generic [ref=e977]: Public Holidays
+                          - generic [ref=e980]: Colleague Leave
+                        - generic [ref=e981] [cursor=pointer]:
+                          - text: Views
+                          - img "down" [ref=e982]:
+                            - img [ref=e983]
+                      - generic [ref=e985]:
+                        - generic [ref=e986]:
+                          - generic [ref=e987]:
+                            - button "Today" [ref=e988]
+                            - button "Back" [ref=e989]
+                            - button "Next" [ref=e990]
+                          - generic [ref=e991]: June 2026
+                        - table "Month View" [ref=e992]:
+                          - row "Sun Mon Tue Wed Thu Fri Sat" [ref=e993]:
+                            - columnheader "Sun" [ref=e995]
+                            - columnheader "Mon" [ref=e997]
+                            - columnheader "Tue" [ref=e999]
+                            - columnheader "Wed" [ref=e1001]
+                            - columnheader "Thu" [ref=e1003]
+                            - columnheader "Fri" [ref=e1005]
+                            - columnheader "Sat" [ref=e1007]
+                          - rowgroup [ref=e1008]:
+                            - row "31 01 02 03 04 05 06" [ref=e1017]:
+                              - generic [ref=e1018]:
+                                - cell "31" [ref=e1019]:
+                                  - button "31" [ref=e1020] [cursor=pointer]
+                                - cell "01" [ref=e1021]:
+                                  - button "01" [ref=e1022] [cursor=pointer]
+                                - cell "02" [ref=e1023]:
+                                  - button "02" [ref=e1024] [cursor=pointer]
+                                - cell "03" [ref=e1025]:
+                                  - button "03" [ref=e1026] [cursor=pointer]
+                                - cell "04" [ref=e1027]:
+                                  - button "04" [ref=e1028] [cursor=pointer]
+                                - cell "05" [ref=e1029]:
+                                  - button "05" [ref=e1030] [cursor=pointer]
+                                - cell "06" [ref=e1031]:
+                                  - button "06" [ref=e1032] [cursor=pointer]
+                          - rowgroup [ref=e1033]:
+                            - row "07 08 09 10 11 12 13 Annual Leave" [ref=e1042]:
+                              - generic [ref=e1043]:
+                                - cell "07" [ref=e1044]:
+                                  - button "07" [ref=e1045] [cursor=pointer]
+                                - cell "08" [ref=e1046]:
+                                  - button "08" [ref=e1047] [cursor=pointer]
+                                - cell "09" [ref=e1048]:
+                                  - button "09" [ref=e1049] [cursor=pointer]
+                                - cell "10" [ref=e1050]:
+                                  - button "10" [ref=e1051] [cursor=pointer]
+                                - cell "11" [ref=e1052]:
+                                  - button "11" [ref=e1053] [cursor=pointer]
+                                - cell "12" [ref=e1054]:
+                                  - button "12" [ref=e1055] [cursor=pointer]
+                                - cell "13" [ref=e1056]:
+                                  - button "13" [ref=e1057] [cursor=pointer]
+                              - generic "Annual Leave" [ref=e1062] [cursor=pointer]:
+                                - generic [ref=e1064]: Annual Leave
+                          - rowgroup [ref=e1065]:
+                            - row "14 15 16 17 18 19 20" [ref=e1074]:
+                              - generic [ref=e1075]:
+                                - cell "14" [ref=e1076]:
+                                  - button "14" [ref=e1077] [cursor=pointer]
+                                - cell "15" [ref=e1078]:
+                                  - button "15" [ref=e1079] [cursor=pointer]
+                                - cell "16" [ref=e1080]:
+                                  - button "16" [ref=e1081] [cursor=pointer]
+                                - cell "17" [ref=e1082]:
+                                  - button "17" [ref=e1083] [cursor=pointer]
+                                - cell "18" [ref=e1084]:
+                                  - button "18" [ref=e1085] [cursor=pointer]
+                                - cell "19" [ref=e1086]:
+                                  - button "19" [ref=e1087] [cursor=pointer]
+                                - cell "20" [ref=e1088]:
+                                  - button "20" [ref=e1089] [cursor=pointer]
+                          - rowgroup [ref=e1090]:
+                            - row "21 22 23 24 25 26 27" [ref=e1099]:
+                              - generic [ref=e1100]:
+                                - cell "21" [ref=e1101]:
+                                  - button "21" [ref=e1102] [cursor=pointer]
+                                - cell "22" [ref=e1103]:
+                                  - button "22" [ref=e1104] [cursor=pointer]
+                                - cell "23" [ref=e1105]:
+                                  - button "23" [ref=e1106] [cursor=pointer]
+                                - cell "24" [ref=e1107]:
+                                  - button "24" [ref=e1108] [cursor=pointer]
+                                - cell "25" [ref=e1109]:
+                                  - button "25" [ref=e1110] [cursor=pointer]
+                                - cell "26" [ref=e1111]:
+                                  - button "26" [ref=e1112] [cursor=pointer]
+                                - cell "27" [ref=e1113]:
+                                  - button "27" [ref=e1114] [cursor=pointer]
+                          - rowgroup [ref=e1115]:
+                            - row "28 29 30 01 02 03 04" [ref=e1124]:
+                              - generic [ref=e1125]:
+                                - cell "28" [ref=e1126]:
+                                  - button "28" [ref=e1127] [cursor=pointer]
+                                - cell "29" [ref=e1128]:
+                                  - button "29" [ref=e1129] [cursor=pointer]
+                                - cell "30" [ref=e1130]:
+                                  - button "30" [ref=e1131] [cursor=pointer]
+                                - cell "01" [ref=e1132]:
+                                  - button "01" [ref=e1133] [cursor=pointer]
+                                - cell "02" [ref=e1134]:
+                                  - button "02" [ref=e1135] [cursor=pointer]
+                                - cell "03" [ref=e1136]:
+                                  - button "03" [ref=e1137] [cursor=pointer]
+                                - cell "04" [ref=e1138]:
+                                  - button "04" [ref=e1139] [cursor=pointer]
+              - button "Close" [ref=e1147] [cursor=pointer]:
+                - generic [ref=e1148]: Close
+  - alert [ref=e6]

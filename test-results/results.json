@@ -1,0 +1,839 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\playwright.config.ts",
+    "rootDir": "C:/Users/tiyim/OneDrive/Desktop/Test-ReportsHub",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/tiyim/OneDrive/Desktop/Test-ReportsHub/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/tiyim/OneDrive/Desktop/Test-ReportsHub",
+        "testIgnore": [],
+        "testMatch": [
+          "projects/**/test-plans/**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results\\results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results\\junit.xml"
+        }
+      ],
+      [
+        "C:\\Users\\tiyim\\OneDrive\\Desktop\\Test-ReportsHub\\node_modules\\allure-playwright\\dist\\index.js",
+        {
+          "outputFolder": "allure-results",
+          "detail": true,
+          "suiteTitle": false
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "projects\\HCM\\test-plans\\eLeaveSmokeTest\\application-for-leave.spec.ts",
+      "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "ELEAVE-SMOKE-APPLY — Application for Leave",
+          "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+          "line": 134,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-01: Create New Leave Application — login and reach My Items",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-51a8f5b8d453b942a9cd",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 137,
+              "column": 7
+            },
+            {
+              "title": "TC-02: My Items page loads with leave application list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-e00ac5e0c5d35451fc13",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 165,
+              "column": 7
+            },
+            {
+              "title": "TC-03: Create New dropdown shows SaGov Leave Application option",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-6d96cfa7c3c9f6e87d6c",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 177,
+              "column": 7
+            },
+            {
+              "title": "TC-04: New leave application form opens on option selection",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-6ef4fe9ea10071ae523a",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 189,
+              "column": 7
+            },
+            {
+              "title": "TC-05: Category and sub-category populate correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-1c71ebb4463b6ec6342c",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 203,
+              "column": 7
+            },
+            {
+              "title": "TC-06: Same-day start and end date shows '1 day off' confirmation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-403326e9a3dca08941dc",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 215,
+              "column": 7
+            },
+            {
+              "title": "TC-07: Available leave balance message shown after date selection",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-c0f279190d948b027891",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 225,
+              "column": 7
+            },
+            {
+              "title": "TC-08: Address and telephone fields accept valid input",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-370a44cff0e8956bbbf4",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 234,
+              "column": 7
+            },
+            {
+              "title": "TC-09: Submit is blocked until the certification checkbox is ticked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-bbe388623134e96a80e1",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 246,
+              "column": 7
+            },
+            {
+              "title": "TC-10: Delegation modal appears on submit",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-90bd51da9057f3a7876f",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 259,
+              "column": 7
+            },
+            {
+              "title": "TC-11: 'Don't Delegate' closes modal and returns to My Items",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-e25ca22aa7aa6b5b50b9",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 276,
+              "column": 7
+            },
+            {
+              "title": "TC-12: Submit without required fields shows validation errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-0985ddc5d8ba1007e749",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 294,
+              "column": 7
+            },
+            {
+              "title": "TC-13: End date before start date is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-d876bc467419bf775fcb",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 302,
+              "column": 7
+            },
+            {
+              "title": "TC-14: Leave spanning a weekend counts only working days",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c2ceb2ad9efdcbffdbf7-5b2add2e9f52055fd43e",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/application-for-leave.spec.ts",
+              "line": 322,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "projects\\HCM\\test-plans\\eLeaveSmokeTest\\approve-leave.spec.ts",
+      "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "ELEAVE-SMOKE-APPROVE — Approve Leave",
+          "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+          "line": 73,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-01: Login with valid credentials redirects to home",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "db8638f35633769b9358-895b9f7e0691e08cd921",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 76,
+              "column": 7
+            },
+            {
+              "title": "TC-02: Login with invalid credentials shows error and stays on login page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "db8638f35633769b9358-cc7873a1eb8bc4055fdb",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 89,
+              "column": 7
+            },
+            {
+              "title": "TC-03: Inbox loads with pending leave applications",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "db8638f35633769b9358-fde8a30d6c904db94b84",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 101,
+              "column": 7
+            },
+            {
+              "title": "TC-04: Selecting the submitted application opens its leave detail",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "db8638f35633769b9358-3f22c3f2baab979a49e4",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 111,
+              "column": 7
+            },
+            {
+              "title": "TC-05: Leave application detail shows leave balance and taken days summary",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "db8638f35633769b9358-e7f970512158c175483c",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 120,
+              "column": 7
+            },
+            {
+              "title": "TC-06: 'Approve with Full Pay' action becomes available after acknowledgement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "db8638f35633769b9358-2c80ec1390e0d8fba667",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 128,
+              "column": 7
+            },
+            {
+              "title": "TC-07: Backdated comment dialog accepts free text input",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "db8638f35633769b9358-0209642fad632c45c153",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 145,
+              "column": 7
+            },
+            {
+              "title": "TC-08: Approve with Full Pay processes the submitted application and returns to the Inbox",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "db8638f35633769b9358-86799ef8cbccbcfa89e9",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/approve-leave.spec.ts",
+              "line": 161,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "projects\\HCM\\test-plans\\eLeaveSmokeTest\\recommend-leave.spec.ts",
+      "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "ELEAVE-SMOKE-RECOMMEND — Recommend Leave",
+          "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+          "line": 77,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-01: Login with valid credentials redirects to home",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-71ed5cc0a4d3a49a7c10",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 80,
+              "column": 7
+            },
+            {
+              "title": "TC-02: Login with invalid credentials shows error and stays on login page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-ef5f94b61d7be3d1360e",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "TC-03: Inbox loads with pending leave applications",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-a8e29a098125e90e874f",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 109,
+              "column": 7
+            },
+            {
+              "title": "TC-04: Selecting the submitted application opens its leave detail",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-75ac49324bd31369d396",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 119,
+              "column": 7
+            },
+            {
+              "title": "TC-05: Leave application detail shows leave balance and taken days summary",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-f0786de53dd9c2570f89",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 128,
+              "column": 7
+            },
+            {
+              "title": "TC-06: 'Recommend' action becomes available after acknowledgement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-7ff8383acd5058ba1ee8",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 136,
+              "column": 7
+            },
+            {
+              "title": "TC-07: Backdated comment dialog accepts free text input",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-c2ea527e1fc12a2c015f",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 151,
+              "column": 7
+            },
+            {
+              "title": "TC-08: Recommend processes the submitted application and returns to the Inbox",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-eb44a1acf750e53ac24c",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 168,
+              "column": 7
+            },
+            {
+              "title": "TC-10: Backdated leave enforces mandatory supervisor comment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-ca8cd6ac41a81b3e6b25",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 189,
+              "column": 7
+            },
+            {
+              "title": "TC-11: Unauthenticated access to Inbox is blocked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-8669ef21e8f752d1e4e4",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 203,
+              "column": 7
+            },
+            {
+              "title": "TC-12: Inbox renders rows for both SaGov and standard Leave Application types",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-16c4e71df9e73e365a66",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 212,
+              "column": 7
+            },
+            {
+              "title": "TC-13: Show Dialog action failure surfaces a user-facing error",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-cbf22c2982923ae7f2fc",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 220,
+              "column": 7
+            },
+            {
+              "title": "TC-14: Overdue items in Inbox are visually distinguished",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "10d2ff9aa1e73e9af0ac-793c9b9f642e24998898",
+              "file": "projects/HCM/test-plans/eLeaveSmokeTest/recommend-leave.spec.ts",
+              "line": 226,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-06-05T07:22:18.403Z",
+    "duration": 336.951,
+    "expected": 0,
+    "skipped": 35,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

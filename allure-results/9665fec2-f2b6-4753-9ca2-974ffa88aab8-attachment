@@ -1,0 +1,268 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\HCM\test-plans\eLeave\capture-new-leave-application.spec.ts >> ELEAVE-CAPTURE — Capture New Leave Application >> TC-53: Clicking create new leave opens the draft step of a leave application
+- Location: projects\HCM\test-plans\eLeave\capture-new-leave-application.spec.ts:495:7
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for getByRole('menuitem', { name: 'My Items' })
+    - locator resolved to <li tabindex="-1" role="menuitem" class="ant-menu-item ant-menu-item-only-child" data-menu-id="rc-menu-uuid-75919-1-SSBIpAv37GmwHWdG9lKMdEX1m9yGgb">…</li>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is not visible
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is not stable
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is not stable
+  - retrying click action
+    - waiting 100ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+    - <div>…</div> from <div class="css-1lo1l9k ant-app css-var-Rkq">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 100ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div>…</div> from <div class="css-1lo1l9k ant-app css-var-Rkq">…</div> subtree intercepts pointer events
+  27 × retrying click action
+       - waiting 500ms
+       - waiting for element to be visible, enabled and stable
+       - element is not visible
+  - retrying click action
+    - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - menu [ref=e9]:
+        - menuitem "calendar Leave Management" [ref=e10] [cursor=pointer]:
+          - img "calendar" [ref=e11]:
+            - img [ref=e12]
+          - generic [ref=e14]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e15] [cursor=pointer]:
+          - img "calendar" [ref=e16]:
+            - img [ref=e17]
+          - generic [ref=e19]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e20] [cursor=pointer]:
+          - img "book" [ref=e21]:
+            - img [ref=e22]
+          - generic [ref=e24]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e25] [cursor=pointer]:
+          - img "bank" [ref=e26]:
+            - img [ref=e27]
+          - generic [ref=e29]: Organisational Structure
+        - menuitem "apartment Workflows" [active] [ref=e30] [cursor=pointer]:
+          - img "apartment" [ref=e31]:
+            - img [ref=e32]
+          - generic [ref=e34]: Workflows
+        - menuitem "tool Administration" [ref=e35] [cursor=pointer]:
+          - img "tool" [ref=e36]:
+            - img [ref=e37]
+          - generic [ref=e39]: Administration
+        - menuitem "setting Configurations" [ref=e40] [cursor=pointer]:
+          - img "setting" [ref=e41]:
+            - img [ref=e42]
+          - generic [ref=e44]: Configurations
+      - img "menu-unfold" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e57]:
+          - generic [ref=e59]:
+            - button "edit" [ref=e60] [cursor=pointer]:
+              - img "edit" [ref=e61]:
+                - img [ref=e62]
+            - paragraph [ref=e64] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e65]:
+              - generic [ref=e66]: Live
+              - img "close" [ref=e67] [cursor=pointer]:
+                - img [ref=e68]
+          - generic [ref=e78]:
+            - link [ref=e84] [cursor=pointer]:
+              - /url: /
+              - img [ref=e94]
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e99]:
+                  - generic [ref=e100]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e102] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e106] [cursor=pointer]:
+                  - img "block" [ref=e107]:
+                    - img [ref=e108]
+                  - generic [ref=e110]: Live
+              - generic [ref=e112]:
+                - generic [ref=e113] [cursor=pointer]:
+                  - text: Thabo Musa Victor Mthembu
+                  - img "down" [ref=e114]:
+                    - img [ref=e115]
+                - img "user" [ref=e118]:
+                  - img [ref=e119]
+      - main [ref=e121]:
+        - generic [ref=e123]:
+          - img "Clickable Image" [ref=e125] [cursor=pointer]
+          - generic [ref=e126]:
+            - generic [ref=e128]:
+              - img "arrow-right" [ref=e129]:
+                - img [ref=e130]
+              - link "Build your first app" [ref=e132] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/get-started/tutorial/the-basics/
+                - heading "Build your first app" [level=4] [ref=e133]
+              - paragraph [ref=e134]: A quickstart guide to help you build an app using Shesha
+            - generic [ref=e136]:
+              - img "arrow-right" [ref=e137]:
+                - img [ref=e138]
+              - link "Documentation" [ref=e140] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/get-started/Introduction
+                - heading "Documentation" [level=4] [ref=e141]
+              - paragraph [ref=e142]: A deeper dive into core Shesha functionality
+            - generic [ref=e144]:
+              - img "arrow-right" [ref=e145]:
+                - img [ref=e146]
+              - link "How to change landing page" [ref=e148] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/fundamentals/how-to-change-home-page/
+                - heading "How to change landing page" [level=4] [ref=e149]
+              - paragraph [ref=e150]: Change your landing page to a custom page
+  - alert [ref=e151]
+```
+
+# Test source
+
+```ts
+  399 |     // STEP 2: SNAPSHOT — confirm the target element for: Select a specific leave type
+  400 |     // STEP 3: SELECT Select a specific leave type from the leave type selection
+  401 |     await page.getByRole('combobox').first().click();
+  402 |     await page.getByTitle('Annual Leave', { exact: true }).last().click();
+  403 |     // STEP 4: SNAPSHOT Verify that additional information fields appear
+  404 |     // ASSERT (BLOCKING) Additional information fields are displayed based on the selected leave type
+  405 |     await expect(page.getByText('Sub-Category')).toBeVisible();
+  406 |   });
+  407 | 
+  408 |   // ADO #86415
+  409 |   test('TC-46: Applicant Name field should be an auto-search field', async ({ page }) => {
+  410 |     await openNewLeaveApplication(page);
+  411 |     // STEP 1: NAVIGATE Navigate to the eleave-wf-capture-newleaveapplication view
+  412 |     // (handled by openNewLeaveApplication)
+  413 |     // STEP 2: NAVIGATE Focus on the 'Applicant Name' field
+  414 |     // On the live form the applicant selector is the "Leave Profile" search-select (Someone else).
+  415 |     await page.getByRole('radio', { name: 'Someone else' }).click();
+  416 |     await expect(page.getByText('Leave Profile')).toBeVisible();
+  417 |     // STEP 3-5: type a known applicant name and verify suggestions
+  418 |     // ASSERT (BLOCKING) A list of suggested applicant names is displayed as the user types
+  419 |     // TODO[selector]: type into the Leave Profile combobox and assert the suggestion list — capture the exact input/option refs on first seeded run
+  420 |   });
+  421 | 
+  422 |   // ADO #86416
+  423 |   test('TC-47: System prepopulates address and telephone of selected applicant', async ({ page }) => {
+  424 |     test.skip(true, 'Requires selecting a real applicant from the Leave Profile search and asserting prepopulation — needs a known seeded applicant.');
+  425 |   });
+  426 | 
+  427 |   // ADO #86418
+  428 |   test("TC-48: Display 'Applicant Name' field when 'someone else' option is selected", async ({ page }) => {
+  429 |     await openNewLeaveApplication(page);
+  430 |     // STEP 1: NAVIGATE Navigate to the leave application form.
+  431 |     // (handled by openNewLeaveApplication)
+  432 |     // STEP 2: SNAPSHOT — confirm the target element for: Select the 'someone else' option
+  433 |     // STEP 3: SELECT Select the 'someone else' option for requesting leave.
+  434 |     await page.getByRole('radio', { name: 'Someone else' }).click();
+  435 |     // STEP 4: SNAPSHOT Verify the 'Applicant Name' field is displayed.
+  436 |     // ASSERT (BLOCKING) The 'Applicant Name' field is displayed when the 'someone else' option is selected.
+  437 |     // On the live v74 form the applicant selector is labelled "Leave Profile".
+  438 |     await expect(page.getByText('Leave Profile')).toBeVisible();
+  439 |   });
+  440 | 
+  441 |   // ADO #86420
+  442 |   test("TC-49: Prepopulate address when 'Myself' option is selected", async ({ page }) => {
+  443 |     await openNewLeaveApplication(page);
+  444 |     // STEP 1: NAVIGATE Navigate to the leave request form
+  445 |     // (handled by openNewLeaveApplication — defaults to "Myself")
+  446 |     // STEP 2: SNAPSHOT — confirm the target element for: Select the 'Myself' option
+  447 |     // STEP 3: SELECT Select the 'Myself' option
+  448 |     await page.getByRole('radio', { name: 'Myself' }).click();
+  449 |     // STEP 4: SNAPSHOT Verify the address field is prepopulated from the user profile
+  450 |     // ASSERT (BLOCKING) The address field is prepopulated with the user's profile address
+  451 |     // NOTE: GOV003's Address input renders empty in QA; asserting the field is present (label visible).
+  452 |     await expect(page.getByText('Address').first()).toBeVisible();
+  453 |   });
+  454 | 
+  455 |   // ADO #86421
+  456 |   test("TC-50: Prepopulate telephone when 'Myself' option is selected", async ({ page }) => {
+  457 |     await openNewLeaveApplication(page);
+  458 |     // STEP 1: NAVIGATE Navigate to the leave request form
+  459 |     // (handled by openNewLeaveApplication — defaults to "Myself")
+  460 |     // STEP 2: SNAPSHOT — confirm the target element for: Select the 'Myself' option
+  461 |     // STEP 3: SELECT Select the 'Myself' option
+  462 |     await page.getByRole('radio', { name: 'Myself' }).click();
+  463 |     // STEP 4: SNAPSHOT Verify the telephone field is prepopulated from the user profile
+  464 |     // ASSERT (BLOCKING) The telephone field is prepopulated with the user's profile telephone number
+  465 |     await expect(page.locator('input[value^="+27"]')).toBeVisible();
+  466 |   });
+  467 | 
+  468 |   // ADO #86422
+  469 |   test("TC-51: Prepopulate recommender when 'Myself' option is selected", async ({ page }) => {
+  470 |     await openNewLeaveApplication(page);
+  471 |     // STEP 1: NAVIGATE Navigate to the leave request form
+  472 |     // (handled by openNewLeaveApplication — defaults to "Myself")
+  473 |     // STEP 2: SNAPSHOT — confirm the target element for: Select the 'Myself' option
+  474 |     // STEP 3: SELECT Select the 'Myself' option
+  475 |     await page.getByRole('radio', { name: 'Myself' }).click();
+  476 |     // STEP 4: SNAPSHOT Verify the recommender field is prepopulated from the organisational structure
+  477 |     // ASSERT (BLOCKING) The recommender field is prepopulated from the organisational structure
+  478 |     await expect(page.getByText(/Recommender:\s*.+/)).toBeVisible();
+  479 |   });
+  480 | 
+  481 |   // ADO #86423
+  482 |   test("TC-52: Prepopulate approver when 'Myself' option is selected", async ({ page }) => {
+  483 |     await openNewLeaveApplication(page);
+  484 |     // STEP 1: NAVIGATE Navigate to the leave request form
+  485 |     // (handled by openNewLeaveApplication — defaults to "Myself")
+  486 |     // STEP 2: SNAPSHOT — confirm the target element for: Select the 'Myself' option
+  487 |     // STEP 3: SELECT Select the 'Myself' option
+  488 |     await page.getByRole('radio', { name: 'Myself' }).click();
+  489 |     // STEP 4: SNAPSHOT Verify the approver field is prepopulated from the organisational structure
+  490 |     // ASSERT (BLOCKING) The approver field is prepopulated from the organisational structure
+  491 |     await expect(page.getByText(/Approver:\s*.+/)).toBeVisible();
+  492 |   });
+  493 | 
+  494 |   // ADO #86425
+  495 |   test('TC-53: Clicking create new leave opens the draft step of a leave application', async ({ page }) => {
+  496 |     await loginAsUser(page);
+  497 |     // STEP 1: NAVIGATE Navigate to the leave management system
+  498 |     await page.getByRole('menuitem', { name: 'apartment Workflows' }).click();
+> 499 |     await page.getByRole('menuitem', { name: 'My Items' }).click();
+      |                                                            ^ TimeoutError: locator.click: Timeout 15000ms exceeded.
+  500 |     await page.waitForURL(/my_items2/, { timeout: 30000 });
+  501 |     // STEP 2: SNAPSHOT — confirm the target element for: Click on the 'Create New Leave' button
+  502 |     // SNAPSHOT: Create New dropdown
+  503 |     // STEP 3: CLICK Click on the 'Create New Leave' button
+  504 |     await page.getByRole('button', { name: 'plus Create New down' }).click();
+  505 |     await page.getByRole('menuitem', { name: 'SaGov Leave Application', exact: true }).click();
+  506 |     // ASSERT (BLOCKING) The system opens the draft step of a leave application
+  507 |     await expect(page.getByRole('heading', { name: 'New Leave Application:' })).toBeVisible({ timeout: 30000 });
+  508 |     await expect(page.getByText('Draft')).toBeVisible();
+  509 |   });
+  510 | 
+  511 | });
+  512 | 
+```

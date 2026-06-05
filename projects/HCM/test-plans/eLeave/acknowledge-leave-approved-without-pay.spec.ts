@@ -9,7 +9,7 @@
 
 import { test, expect, Page } from '@playwright/test';
 
-const APP_URL = 'https://pd-hcm-adminportal-qa.azurewebsites.net/';
+const APP_URL = 'https://pd-hcm-adminportal-qa.shesha.app/';
 const ADMIN = { user: 'admin', password: 'P@ssw0rd' };
 const INBOX_URL = `${APP_URL}dynamic/Shesha.Workflow/workflows-inbox`;
 
@@ -25,7 +25,7 @@ async function loginAsAdmin(page: Page) {
 test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay', () => {
 
   test('TC-01: Login as Admin', async ({ page }) => {
-    // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.azurewebsites.net/
+    // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
     await page.goto(APP_URL);
     // STEP 2: SNAPSHOT — confirm login page is visible
     // SNAPSHOT: login page
@@ -39,11 +39,12 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
     await page.waitForLoadState('networkidle');
     // ASSERT (BLOCKING) URL no longer contains /login and the authenticated home page is visible
     await expect(page).not.toHaveURL(/login/i);
-    await expect(page.getByRole('menuitem', { name: 'calendar Leave Management' })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('menuitem', { name: 'calendar SaGov Leave Management' })).toBeVisible({ timeout: 30000 });
   });
 
   // ADO Test Case #86474: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86474
-  test.fixme("TC-02: Route item to the next step when 'Submit' button is clicked", async ({ page }) => {
+  test("TC-02: Route item to the next step when 'Submit' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-acknowledgeleaveapprovedwithoutpay-details view
     // TODO[selector]: reach eleave-wf-acknowledgeleaveapprovedwithoutpay-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -58,7 +59,8 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
   });
 
   // ADO Test Case #86475: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86475
-  test.fixme("TC-03: Change status to 'Approved Without Full Pay' when 'Submit' button is clicked", async ({ page }) => {
+  test("TC-03: Change status to 'Approved Without Full Pay' when 'Submit' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-acknowledgeleaveapprovedwithoutpay-details view
     // TODO[selector]: reach eleave-wf-acknowledgeleaveapprovedwithoutpay-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -73,7 +75,8 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
   });
 
   // ADO Test Case #86477: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86477
-  test.fixme('TC-04: System should not allow a user to action an item without checking the declaration box', async ({ page }) => {
+  test('TC-04: System should not allow a user to action an item without checking the declaration box', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-acknowledgeleaveapprovedwithoutpay-details view
     // TODO[selector]: reach eleave-wf-acknowledgeleaveapprovedwithoutpay-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -88,7 +91,8 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
   });
 
   // ADO Test Case #86479: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86479
-  test.fixme("TC-05: Display 'Override' dialog when 'Override' button is clicked", async ({ page }) => {
+  test("TC-05: Display 'Override' dialog when 'Override' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-acknowledgeleaveapprovedwithoutpay-details view
     // TODO[selector]: reach eleave-wf-acknowledgeleaveapprovedwithoutpay-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -103,7 +107,8 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
   });
 
   // ADO Test Case #86481: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86481
-  test.fixme("TC-06: Display 'Send Back to Approver' dialog when 'Send Back to Approver' button is clicked", async ({ page }) => {
+  test("TC-06: Display 'Send Back to Approver' dialog when 'Send Back to Approver' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-acknowledgeleaveapprovedwithoutpay-details view
     // TODO[selector]: reach eleave-wf-acknowledgeleaveapprovedwithoutpay-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -118,7 +123,8 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
   });
 
   // ADO Test Case #86483: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86483
-  test.fixme("TC-07: Display 'Refer Back' dialog when 'Refer Back' button is clicked", async ({ page }) => {
+  test("TC-07: Display 'Refer Back' dialog when 'Refer Back' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-acknowledgeleaveapprovedwithoutpay-details view
     // TODO[selector]: reach eleave-wf-acknowledgeleaveapprovedwithoutpay-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -133,7 +139,8 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
   });
 
   // ADO Test Case #86485: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86485
-  test.fixme("TC-08: Display 'Close Leave Application' dialog when 'Close' button is clicked", async ({ page }) => {
+  test("TC-08: Display 'Close Leave Application' dialog when 'Close' button is clicked", async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-acknowledgeleaveapprovedwithoutpay-details view
     // TODO[selector]: reach eleave-wf-acknowledgeleaveapprovedwithoutpay-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -148,7 +155,8 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
   });
 
   // ADO Test Case #86487: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86487
-  test.fixme('TC-09: System should not allow action without downloading supporting documents', async ({ page }) => {
+  test('TC-09: System should not allow action without downloading supporting documents', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the leave application with supporting documents attached
     // TODO[selector]: reach leave application with supporting documents attached via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -163,7 +171,8 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
   });
 
   // ADO Test Case #86488: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86488
-  test.fixme('TC-10: System should not allow action without reviewing supporting documents', async ({ page }) => {
+  test('TC-10: System should not allow action without reviewing supporting documents', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the leave application with supporting documents attached
     // TODO[selector]: reach leave application with supporting documents attached via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -182,7 +191,8 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
   });
 
   // ADO Test Case #86490: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86490
-  test.fixme('TC-11: A user should be able to view the captured leave application details', async ({ page }) => {
+  test('TC-11: A user should be able to view the captured leave application details', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-acknowledgeleaveapprovedwithoutpay-details view
     // TODO[selector]: reach eleave-wf-acknowledgeleaveapprovedwithoutpay-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)
@@ -195,7 +205,8 @@ test.describe('ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay
   });
 
   // ADO Test Case #86491: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86491
-  test.fixme('TC-12: A user should be able to download supporting documents', async ({ page }) => {
+  test('TC-12: A user should be able to download supporting documents', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: NAVIGATE Navigate to the eleave-wf-acknowledgeleaveapprovedwithoutpay-details view
     // TODO[selector]: reach eleave-wf-acknowledgeleaveapprovedwithoutpay-details via the workflows-inbox magnifying-glass link (requires a leave application seeded at this step)

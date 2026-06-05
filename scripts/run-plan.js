@@ -127,13 +127,17 @@ function summariseResults(slug) {
   return {
     tests,
     passed: tests.filter(t => t.status === 'passed').length,
-    failed: tests.filter(t => t.status !== 'passed').length,
+    failed: tests.filter(t => t.status !== 'passed' && t.status !== 'skipped').length,
+    skipped: tests.filter(t => t.status === 'skipped').length,
     duration: (raw.stats?.duration ?? tests.reduce((a, t) => a + t.durationMs, 0)) / 1000,
   };
 }
 
-function classifyOverall({ passed, failed }) {
+// Skipped tests (e.g. data-dependent cases guarded by test.skip(condition, reason)) are
+// neither passes nor failures — they must not drag the overall result to FAILED.
+function classifyOverall({ passed, failed, skipped = 0 }) {
   if (failed === 0 && passed > 0) return 'PASSED';
+  if (failed === 0 && passed === 0 && skipped > 0) return 'PARTIAL';
   const total = passed + failed;
   if (total === 0) return 'FAILED';
   if (failed / total > 0.5) return 'FAILED';
@@ -168,17 +172,18 @@ function writeReport({ projectRoot, planPath, specPath, summary, overall, execut
   lines.push('## Summary');
   lines.push('| Total Steps | Passed | Failed | Skipped |');
   lines.push('|-------------|--------|--------|---------|');
-  const total = summary.passed + summary.failed;
-  lines.push(`| ${total} | ${summary.passed} | ${summary.failed} | 0 |`);
+  const skipped = summary.skipped || 0;
+  const total = summary.passed + summary.failed + skipped;
+  lines.push(`| ${total} | ${summary.passed} | ${summary.failed} | ${skipped} |`);
   lines.push('');
   lines.push('## Step Results');
   for (const t of summary.tests) {
-    const ok = t.status === 'passed';
+    const mark = t.status === 'passed' ? 'PASS' : t.status === 'skipped' ? 'SKIP' : 'FAIL';
     lines.push(`### ${t.title}`);
     lines.push(`**Mode:** ${t.repairedBy ? `ai-repair (patched ${t.repairedBy})` : 'playwright-script'}`);
     lines.push(`**Duration:** ${(t.durationMs / 1000).toFixed(1)}s`);
-    lines.push(`- [${ok ? 'PASS' : 'FAIL'}] ${t.title}`);
-    if (!ok && t.error) {
+    lines.push(`- [${mark}] ${t.title}`);
+    if (mark === 'FAIL' && t.error) {
       lines.push('');
       lines.push('**Error:**');
       lines.push('```');

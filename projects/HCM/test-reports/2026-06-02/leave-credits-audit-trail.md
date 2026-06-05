@@ -1,23 +1,23 @@
 # Report: Test Plan: ELEAVE-CREDITS-AUDIT — Leave Credits Audit Trail
-**Date:** 2026-06-02 09:58 UTC
+**Date:** 2026-06-02 12:28 UTC
 **Plan:** test-plans/eLeave/leave-credits-audit-trail.md
 **Spec:** test-plans/eLeave/leave-credits-audit-trail.spec.ts
-**Execution Mode:** playwright-script (failures pending AI-repair)
-**Result:** PARTIAL
-**Duration:** 4.5s
+**Execution Mode:** playwright-script
+**Result:** PASSED
+**Duration:** 12.7s
 
 ## Summary
 | Total Steps | Passed | Failed | Skipped |
 |-------------|--------|--------|---------|
-| 2 | 1 | 1 | 0 |
+| 2 | 2 | 0 | 0 |
 
 ## Step Results
 ### TC-01: Login as Admin
 **Mode:** playwright-script
-**Duration:** 3.5s
+**Duration:** 3.8s
 - [PASS] TC-01: Login as Admin
 
 ### TC-02: Export button downloads audit into an Excel sheet
 **Mode:** playwright-script
-**Duration:** 0.0s
-- [FAIL] TC-02: Export button downloads audit into an Excel sheet
+**Duration:** 7.8s
+- [PASS] TC-02: Export button downloads audit into an Excel sheet

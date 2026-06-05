@@ -1,0 +1,265 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\HCM\test-plans\eLeave\capture-new-leave-application.spec.ts >> ELEAVE-CAPTURE — Capture New Leave Application >> TC-30: System should prepopulate the recommender from the organisational structure
+- Location: projects\HCM\test-plans\eLeave\capture-new-leave-application.spec.ts:256:7
+
+# Error details
+
+```
+TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "load"
+============================================================
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - menu [ref=e9]:
+        - menuitem "calendar Leave Management" [ref=e10] [cursor=pointer]:
+          - img "calendar" [ref=e11]:
+            - img [ref=e12]
+          - generic [ref=e14]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e15] [cursor=pointer]:
+          - img "calendar" [ref=e16]:
+            - img [ref=e17]
+          - generic [ref=e19]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e20] [cursor=pointer]:
+          - img "book" [ref=e21]:
+            - img [ref=e22]
+          - generic [ref=e24]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e25] [cursor=pointer]:
+          - img "bank" [ref=e26]:
+            - img [ref=e27]
+          - generic [ref=e29]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e30] [cursor=pointer]:
+          - img "apartment" [ref=e31]:
+            - img [ref=e32]
+          - generic [ref=e34]: Workflows
+        - menuitem "tool Administration" [ref=e35] [cursor=pointer]:
+          - img "tool" [ref=e36]:
+            - img [ref=e37]
+          - generic [ref=e39]: Administration
+        - menuitem "setting Configurations" [ref=e40] [cursor=pointer]:
+          - img "setting" [ref=e41]:
+            - img [ref=e42]
+          - generic [ref=e44]: Configurations
+      - img "menu-unfold" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e57]:
+          - generic [ref=e59]:
+            - button "edit" [ref=e60] [cursor=pointer]:
+              - img "edit" [ref=e61]:
+                - img [ref=e62]
+            - paragraph [ref=e64] [cursor=pointer]: Shesha/header v14
+            - generic [ref=e65]:
+              - generic [ref=e66]: Live
+              - img "close" [ref=e67] [cursor=pointer]:
+                - img [ref=e68]
+          - generic [ref=e78]:
+            - link [ref=e84] [cursor=pointer]:
+              - /url: /
+              - img [ref=e94]
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e99]:
+                  - generic [ref=e100]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e102] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e106] [cursor=pointer]:
+                  - img "block" [ref=e107]:
+                    - img [ref=e108]
+                  - generic [ref=e110]: Live
+              - generic [ref=e112]:
+                - generic [ref=e113] [cursor=pointer]:
+                  - text: Thabo Musa Victor Mthembu
+                  - img "down" [ref=e114]:
+                    - img [ref=e115]
+                - img "user" [ref=e118]:
+                  - img [ref=e119]
+      - main [ref=e121]:
+        - generic [ref=e123]:
+          - img "Clickable Image" [ref=e125] [cursor=pointer]
+          - generic [ref=e126]:
+            - generic [ref=e128]:
+              - img "arrow-right" [ref=e129]:
+                - img [ref=e130]
+              - link "Build your first app" [ref=e132] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/get-started/tutorial/the-basics/
+                - heading "Build your first app" [level=4] [ref=e133]
+              - paragraph [ref=e134]: A quickstart guide to help you build an app using Shesha
+            - generic [ref=e136]:
+              - img "arrow-right" [ref=e137]:
+                - img [ref=e138]
+              - link "Documentation" [ref=e140] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/get-started/Introduction
+                - heading "Documentation" [level=4] [ref=e141]
+              - paragraph [ref=e142]: A deeper dive into core Shesha functionality
+            - generic [ref=e144]:
+              - img "arrow-right" [ref=e145]:
+                - img [ref=e146]
+              - link "How to change landing page" [ref=e148] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/fundamentals/how-to-change-home-page/
+                - heading "How to change landing page" [level=4] [ref=e149]
+              - paragraph [ref=e150]: Change your landing page to a custom page
+  - alert [ref=e151]
+```
+
+# Test source
+
+```ts
+  1   | // AUTO-RECORDED from test-plans/eLeave/capture-new-leave-application.md
+  2   | // Source: Azure DevOps test plan #79625, suite #86340
+  3   | // The .md plan is canonical. AI-repair will patch failing lines in this file.
+  4   | // Do not hand-edit unless you are also updating the .md plan.
+  5   | //
+  6   | // Recorded live on the SaGov.Leave/sagov-leave-application v74 draft form as applicant
+  7   | // GOV003 (Thabo Musa Victor Mthembu). The navigation path Workflows -> My Items ->
+  8   | // Create New -> SaGov Leave Application reaches the Draft step of a brand-new application,
+  9   | // so the form-level cases (radios, leave-type/category, verification type, prepopulation,
+  10  | // close dialog) are recorded against real selectors.
+  11  | //
+  12  | // SKIPPED: cases that need an OTP/SMS round-trip, real wall-clock OTP expiry, hourly-leave
+  13  | // accumulation, a seeded pending Change-of-Supervisor item, or a Submit that would mutate
+  14  | // live QA data are guarded with test.skip + reason. AI-repair / a seeded-data run resolves
+  15  | // the remaining // TODO markers.
+  16  | //
+  17  | // NOTE: the live v74 form differs from several ADO-authored steps. It has no separate
+  18  | // "Duration (Days/Hours)" toggle (Start Date + End Date are shown directly), and the
+  19  | // leave type is captured via the "Category" + "Sub-Category" selects. Those drifted
+  20  | // cases are recorded to the closest live equivalent and flagged inline.
+  21  | 
+  22  | import { test, expect, Page } from '@playwright/test';
+  23  | 
+  24  | const APP_URL = 'https://pd-hcm-adminportal-qa.shesha.app/';
+  25  | const USER = { user: 'GOV003', password: '123qwe' };
+  26  | const MY_ITEMS_URL = `${APP_URL}dynamic/SaGov.Leave/my_items2`;
+  27  | 
+  28  | async function loginAsUser(page: Page) {
+  29  |   await page.goto(APP_URL);
+  30  |   await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  31  |   await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  32  |   await page.getByRole('button', { name: 'Sign In' }).click();
+  33  |   await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
+  34  |   await page.waitForLoadState('networkidle');
+  35  | }
+  36  | 
+  37  | // Workflows -> My Items -> Create New -> SaGov Leave Application -> Draft form.
+  38  | // Lands with "Who are you requesting the leave for?" defaulted to "Myself".
+  39  | async function openNewLeaveApplication(page: Page) {
+  40  |   await loginAsUser(page);
+  41  |   await page.getByRole('menuitem', { name: 'apartment Workflows' }).click();
+  42  |   await page.getByRole('menuitem', { name: 'My Items' }).click();
+> 43  |   await page.waitForURL(/my_items2/, { timeout: 30000 });
+      |              ^ TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+  44  |   await page.getByRole('button', { name: 'plus Create New down' }).click();
+  45  |   await page.getByRole('menuitem', { name: 'SaGov Leave Application', exact: true }).click();
+  46  |   await expect(page.getByRole('heading', { name: 'New Leave Application:' })).toBeVisible({ timeout: 30000 });
+  47  | }
+  48  | 
+  49  | test.describe('ELEAVE-CAPTURE — Capture New Leave Application', () => {
+  50  | 
+  51  |   test('TC-01: Login as Admin', async ({ page }) => {
+  52  |     // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
+  53  |     await page.goto(APP_URL);
+  54  |     // STEP 2: SNAPSHOT — confirm login page is visible
+  55  |     // SNAPSHOT: login page
+  56  |     // STEP 3: TYPE Username field with `GOV003`
+  57  |     await page.getByRole('textbox', { name: 'Username' }).fill(USER.user);
+  58  |     // STEP 4: TYPE Password field with `123qwe`
+  59  |     await page.getByRole('textbox', { name: 'Password' }).fill(USER.password);
+  60  |     // STEP 5: CLICK the Sign In button
+  61  |     await page.getByRole('button', { name: 'Sign In' }).click();
+  62  |     // STEP 6: WAIT for the home page / workflow inbox to load
+  63  |     await page.waitForLoadState('networkidle');
+  64  |     // ASSERT (BLOCKING) URL no longer contains /login and the authenticated home page is visible
+  65  |     await expect(page).not.toHaveURL(/login/i);
+  66  |     await expect(page.getByText('Thabo Musa Victor Mthembu')).toBeVisible({ timeout: 30000 });
+  67  |   });
+  68  | 
+  69  |   // ADO #86342
+  70  |   test('TC-02: Park hourly leave request that does not accumulate to 8 hours', async ({ page }) => {
+  71  |     test.skip(true, 'Requires hourly-leave configuration + accumulation engine; cannot be observed from the draft form without seeded hourly requests.');
+  72  |   });
+  73  | 
+  74  |   // ADO #86344
+  75  |   test('TC-03: Create a leave request for one day when hourly leave request accumulates to 8 hours', async ({ page }) => {
+  76  |     test.skip(true, 'Requires hourly-leave accumulation to 8h across seeded requests; business-logic, not observable on the draft form.');
+  77  |   });
+  78  | 
+  79  |   // ADO #86345
+  80  |   test('TC-04: Route the leave request to the recommender when hourly leave request accumulates to 8 hours', async ({ page }) => {
+  81  |     test.skip(true, 'Requires hourly-leave accumulation + a Submit that routes/mutates live QA data.');
+  82  |   });
+  83  | 
+  84  |   // ADO #86347
+  85  |   test('TC-05: System should check if hourly leave request amounts to 8 hours', async ({ page }) => {
+  86  |     test.skip(true, 'Requires hourly-leave configuration; internal 8h check is not surfaced on the draft form.');
+  87  |   });
+  88  | 
+  89  |   // ADO #86349
+  90  |   test('TC-06: The attached consent form should appear throughout the workflow steps', async ({ page }) => {
+  91  |     test.skip(true, 'Requires a submitted application walked through every workflow step (recommend/approve) — needs seeded routing + multiple actor logins.');
+  92  |   });
+  93  | 
+  94  |   // ADO #86351
+  95  |   test("TC-07: Submit leave request to the next step when 'OK' clicked after capturing OTP", async ({ page }) => {
+  96  |     test.skip(true, 'Requires a live OTP/SMS round-trip and a routing Submit that mutates live QA data.');
+  97  |   });
+  98  | 
+  99  |   // ADO #86353
+  100 |   test('TC-08: Display error message when OTP has expired', async ({ page }) => {
+  101 |     test.skip(true, 'Requires a real expired OTP from the SMS gateway.');
+  102 |   });
+  103 | 
+  104 |   // ADO #86355
+  105 |   test("TC-09: 'Close' button removes the dialog and displays 'New Leave Application' page", async ({ page }) => {
+  106 |     test.skip(true, 'Requires the SMS Verification dialog, which only opens after an OTP submit (SMS round-trip).');
+  107 |   });
+  108 | 
+  109 |   // ADO #86357
+  110 |   test("TC-10: Remove 'Send Code' dialog when 'Cancel' button is clicked", async ({ page }) => {
+  111 |     test.skip(true, "Requires the 'Send Code' dialog reached via the SMS Verification OTP flow.");
+  112 |   });
+  113 | 
+  114 |   // ADO #86358
+  115 |   test("TC-11: Return to 'SMS Verification' dialog when 'Cancel' button is clicked", async ({ page }) => {
+  116 |     test.skip(true, "Requires the 'Send Code' / 'SMS Verification' dialog reached via the OTP flow.");
+  117 |   });
+  118 | 
+  119 |   // ADO #86360
+  120 |   test("TC-12: Send a code to the registered applicant cell number when 'OK' clicked", async ({ page }) => {
+  121 |     test.skip(true, 'Requires a live SMS gateway send — not assertable in an automated read-only run.');
+  122 |   });
+  123 | 
+  124 |   // ADO #86362
+  125 |   test("TC-13: Display 'Send code' dialog when user clicks the 'Click Here' link", async ({ page }) => {
+  126 |     test.skip(true, 'Requires the SMS Verification dialog (OTP flow) where the Click Here link lives.');
+  127 |   });
+  128 | 
+  129 |   // ADO #86364
+  130 |   test("TC-14: Display pop-up dialog on 'Click here' link click", async ({ page }) => {
+  131 |     test.skip(true, 'Requires the SMS Verification dialog (OTP flow).');
+  132 |   });
+  133 | 
+  134 |   // ADO #86366
+  135 |   test('TC-15: OTP should expire in 3 minutes', async ({ page }) => {
+  136 |     test.skip(true, 'Requires a 3-minute wall-clock wait against a real OTP — unsuitable for the fast runner.');
+  137 |   });
+  138 | 
+  139 |   // ADO #86368
+  140 |   test('TC-16: The system should show the time remaining for an OTP to expire', async ({ page }) => {
+  141 |     test.skip(true, 'Requires the SMS Verification dialog (OTP flow) to read the countdown.');
+  142 |   });
+  143 | 
+```

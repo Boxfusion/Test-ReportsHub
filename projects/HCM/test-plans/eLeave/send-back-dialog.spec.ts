@@ -9,7 +9,7 @@
 
 import { test, expect, Page } from '@playwright/test';
 
-const APP_URL = 'https://pd-hcm-adminportal-qa.azurewebsites.net/';
+const APP_URL = 'https://pd-hcm-adminportal-qa.shesha.app/';
 const ADMIN = { user: 'admin', password: 'P@ssw0rd' };
 const INBOX_URL = `${APP_URL}dynamic/Shesha.Workflow/workflows-inbox`;
 
@@ -25,7 +25,7 @@ async function loginAsAdmin(page: Page) {
 test.describe('ELEAVE-SEND-BACK — Send Back Dialog', () => {
 
   test('TC-01: Login as Admin', async ({ page }) => {
-    // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.azurewebsites.net/
+    // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
     await page.goto(APP_URL);
     // STEP 2: SNAPSHOT — confirm login page is visible
     // SNAPSHOT: login page
@@ -39,11 +39,12 @@ test.describe('ELEAVE-SEND-BACK — Send Back Dialog', () => {
     await page.waitForLoadState('networkidle');
     // ASSERT (BLOCKING) URL no longer contains /login and the authenticated home page is visible
     await expect(page).not.toHaveURL(/login/i);
-    await expect(page.getByRole('menuitem', { name: 'calendar Leave Management' })).toBeVisible({ timeout: 30000 });
+    await expect(page.getByRole('menuitem', { name: 'calendar SaGov Leave Management' })).toBeVisible({ timeout: 30000 });
   });
 
   // ADO Test Case #86590: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86590
-  test.fixme('TC-02: The \'Ok\' button sends the leave application back to the selected step', async ({ page }) => {
+  test('TC-02: The \'Ok\' button sends the leave application back to the selected step', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: SNAPSHOT — confirm the target element for: Open the eleave-wf-sendback-dialogbox
     // SNAPSHOT: confirm the target element for: Open the eleave-wf-sendback-dialogbox
@@ -58,7 +59,8 @@ test.describe('ELEAVE-SEND-BACK — Send Back Dialog', () => {
   });
 
   // ADO Test Case #86592: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86592
-  test.fixme('TC-03: System should not allow sending back a leave application without comments', async ({ page }) => {
+  test('TC-03: System should not allow sending back a leave application without comments', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: SNAPSHOT — confirm the target element for: Open the eleave-wf-sendback-dialogbox
     // SNAPSHOT: confirm the target element for: Open the eleave-wf-sendback-dialogbox
@@ -73,7 +75,8 @@ test.describe('ELEAVE-SEND-BACK — Send Back Dialog', () => {
   });
 
   // ADO Test Case #86594: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86594
-  test.fixme('TC-04: Close the dialog when the \'Close\' button is clicked', async ({ page }) => {
+  test('TC-04: Close the dialog when the \'Close\' button is clicked', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: SNAPSHOT — confirm the target element for: Open the eleave-wf-sendback-dialogbox
     // SNAPSHOT: confirm the target element for: Open the eleave-wf-sendback-dialogbox
@@ -88,7 +91,8 @@ test.describe('ELEAVE-SEND-BACK — Send Back Dialog', () => {
   });
 
   // ADO Test Case #86595: https://dev.azure.com/boxfusion/pd-Hcm/_workitems/edit/86595
-  test.fixme('TC-05: Display leave application details when the \'Close\' button is clicked', async ({ page }) => {
+  test('TC-05: Display leave application details when the \'Close\' button is clicked', async ({ page }) => {
+    test.skip(true, "Requires a leave application parked at the relevant workflow step; submit actions would also mutate live QA data - not recorded in this read-only run");
     await loginAsAdmin(page);
     // STEP 1: SNAPSHOT — confirm the target element for: Open the eleave-wf-sendback-dialogbox
     // SNAPSHOT: confirm the target element for: Open the eleave-wf-sendback-dialogbox
