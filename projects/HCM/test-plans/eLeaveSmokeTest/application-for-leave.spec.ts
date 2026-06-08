@@ -153,7 +153,12 @@ test.describe('ELEAVE-SMOKE-APPLY — Application for Leave', () => {
     // race); wait for the My Items entry, then click its link, forcing past the transient overlay.
     const myItems = page.getByRole('menuitem', { name: 'My Items' });
     await myItems.waitFor({ state: 'visible' });
-    await myItems.getByRole('link', { name: 'My Items' }).click({ force: true });
+    // The flyout popup animates into position; a forced click can fire while it is transiently
+    // off-screen ("outside of the viewport"). Scroll it in and use a normal auto-waiting click,
+    // which also retries past the menu-expand overlay the old force click was guarding against.
+    const myItemsLink = myItems.getByRole('link', { name: 'My Items' });
+    await myItemsLink.scrollIntoViewIfNeeded();
+    await myItemsLink.click();
     // STEP 8: WAIT for the My Items page to load
     await page.waitForURL(/my_items2/, { timeout: 30000 });
     // ASSERT (BLOCKING) not on /login and the My Items page is displayed
