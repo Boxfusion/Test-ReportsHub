@@ -4,3 +4,18 @@ Thumbs.db
 *.log
 .env
 .env.local
+
+# Playwright MCP browser snapshots
+.playwright-mcp/
+
+# Allure raw results & generated reports (root and nested under projects/)
+allure-results/
+allure-report/
+allure-report--*/
+
+# Playwright run output
+playwright-report/
+test-results/
+
+# Loose screenshots dropped in the repo root
+/REF*.png

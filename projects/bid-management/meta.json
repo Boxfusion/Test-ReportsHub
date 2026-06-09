@@ -1,0 +1,7 @@
+{
+  "displayName": "Bid Management",
+  "appUrl": "https://linux-supplychainmanagement-adminportal-qa.azurewebsites.net/login",
+  "environment": "QA Site",
+  "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
+  "description": "Hybrid Markdown + Playwright test reports for the Supply Chain Management (Bid Management) Admin Portal."
+}
