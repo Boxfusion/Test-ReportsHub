@@ -8,7 +8,7 @@
 ## Metadata
 | Field | Value |
 |-------|-------|
-| App URL | https://pd-hcm-adminportal-qa.azurewebsites.net/ |
+| App URL | https://pd-hcm-adminportal-qa.shesha.app/ |
 | Environment | QA |
 | Login As | admin / P@ssw0rd |
 | ADO Plan | [#79625](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=79625&suiteId=86426) |
@@ -18,7 +18,7 @@
 > Validate the **Leave Application Dashboard** table of eLeave — bulk selection behaviour (Reassign / Cancel Leave buttons hiding when more than one row is selected), the magnifying-glass drill-down, the View in Z1 as PDF and Print Bulk Z1 actions, the Cancel Leave and Reassign dialogs, and the Export to Excel action.
 
 ## Preconditions
-- [ ] App is reachable at https://pd-hcm-adminportal-qa.azurewebsites.net/
+- [ ] App is reachable at https://pd-hcm-adminportal-qa.shesha.app/
 - [ ] Admin credentials are valid (admin / P@ssw0rd)
 - [ ] At least two leave applications exist on the Leave Application Dashboard table
 - [ ] The acting user has the role required to view and action the Leave Application Dashboard
@@ -29,7 +29,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to https://pd-hcm-adminportal-qa.azurewebsites.net/
+  1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
   2. SNAPSHOT — confirm login page is visible
   3. TYPE Username field with `admin`
   4. TYPE Password field with `P@ssw0rd`

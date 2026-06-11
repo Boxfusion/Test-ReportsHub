@@ -8,7 +8,7 @@
 ## Metadata
 | Field | Value |
 |-------|-------|
-| App URL | https://pd-hcm-adminportal-qa.azurewebsites.net/ |
+| App URL | https://pd-hcm-adminportal-qa.shesha.app/ |
 | Environment | QA |
 | Login As | admin / P@ssw0rd |
 | ADO Plan | [#79625](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=79625&suiteId=86596) |
@@ -18,7 +18,7 @@
 > Validate the **Override** dialog of eLeave — the OK action (overrides the approver's decision to approve without pay, changes the status to 'Approved With Full Pay' and redirects to Home) and the Close action (dismisses the dialog and re-displays the leave application details).
 
 ## Preconditions
-- [ ] App is reachable at https://pd-hcm-adminportal-qa.azurewebsites.net/
+- [ ] App is reachable at https://pd-hcm-adminportal-qa.shesha.app/
 - [ ] Admin credentials are valid (admin / P@ssw0rd)
 - [ ] At least one leave application exists that was approved without pay and is available to override
 - [ ] The acting user has the role required to override the approver's decision
@@ -29,7 +29,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to https://pd-hcm-adminportal-qa.azurewebsites.net/
+  1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
   2. SNAPSHOT — confirm login page is visible
   3. TYPE Username field with `admin`
   4. TYPE Password field with `P@ssw0rd`
