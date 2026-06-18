@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-08T09:24:44.891Z",
+  "generated": "2026-06-18T12:39:24.845Z",
   "projects": [
     {
       "name": "dep",
@@ -25,6 +25,52 @@
       "href": "projects/dep/index.html"
     },
     {
+      "name": "HCM",
+      "displayName": "HCM Admin Portal",
+      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+      "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 24,
+        "totalRuns": 37,
+        "last7Runs": 8,
+        "last7Pass": 2,
+        "last7PassPct": 25,
+        "failingFlows": 17,
+        "lastRun": {
+          "date": "2026-06-15",
+          "result": "UNKNOWN",
+          "plan": null
+        }
+      },
+      "href": "projects/HCM/index.html"
+    },
+    {
+      "name": "dispatch",
+      "displayName": "NC Dispatch",
+      "appUrl": "https://ncdoh-dispatcher-adminportal-qa.shesha.app/login",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-dispatcher-V2",
+      "description": "Hybrid Markdown + Playwright test reports for the NC Dispatch (Dispatcher) Admin Portal.",
+      "health": "partial",
+      "summary": {
+        "totalPlans": 3,
+        "totalRuns": 4,
+        "last7Runs": 4,
+        "last7Pass": 1,
+        "last7PassPct": 25,
+        "failingFlows": 0,
+        "lastRun": {
+          "date": "2026-06-17",
+          "result": "PARTIAL",
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md"
+        }
+      },
+      "href": "projects/dispatch/index.html"
+    },
+    {
       "name": "bid-management",
       "displayName": "Bid Management",
       "appUrl": "https://linux-supplychainmanagement-adminportal-qa.azurewebsites.net/login",
@@ -35,9 +81,9 @@
       "summary": {
         "totalPlans": 1,
         "totalRuns": 6,
-        "last7Runs": 6,
-        "last7Pass": 3,
-        "last7PassPct": 50,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
         "failingFlows": 0,
         "lastRun": {
           "date": "2026-06-08",
@@ -48,53 +94,34 @@
       "href": "projects/bid-management/index.html"
     },
     {
-      "name": "HCM",
-      "displayName": "HCM Admin Portal",
-      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
+      "name": "invoice-tracking",
+      "displayName": "Invoice Tracking",
+      "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
       "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
-      "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
+      "description": "Hybrid Markdown + Playwright test reports for the Invoice Tracking (ITS) Admin Portal.",
       "health": "healthy",
       "summary": {
         "totalPlans": 1,
-        "totalRuns": 1,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
+        "totalRuns": 10,
+        "last7Runs": 10,
+        "last7Pass": 6,
+        "last7PassPct": 60,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-05-29",
+          "date": "2026-06-18",
           "result": "PASSED",
-          "plan": "test-plans/performance-agreements/smoke-happy-path.md"
+          "plan": "test-plans/invoice-process/bas.md (TC-03)"
         }
       },
-      "href": "projects/HCM/index.html"
-    },
-    {
-      "name": "dispatch",
-      "displayName": "NC Dispatch",
-      "appUrl": "https://ncdoh-dispatcher-adminportal-pre-prod.shesha.app/login",
-      "environment": "Pre-Prod",
-      "sourceRepo": "https://dev.azure.com/boxfusion/pd-dispatcher-V2",
-      "description": "Hybrid Markdown + Playwright test reports for the NC Dispatch (Dispatcher) Admin Portal.",
-      "health": "unknown",
-      "summary": {
-        "totalPlans": 0,
-        "totalRuns": 0,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 0,
-        "lastRun": null
-      },
-      "href": "projects/dispatch/index.html"
+      "href": "projects/invoice-tracking/index.html"
     }
   ],
   "totals": {
-    "totalProjects": 4,
-    "totalPlans": 8,
-    "totalRuns": 18,
-    "last7Runs": 6,
-    "failingFlows": 2
+    "totalProjects": 5,
+    "totalPlans": 35,
+    "totalRuns": 68,
+    "last7Runs": 22,
+    "failingFlows": 19
   }
 }

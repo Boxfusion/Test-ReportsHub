@@ -3,81 +3,38 @@
   "displayName": "NC Dispatch",
   "meta": {
     "displayName": "NC Dispatch",
-    "appUrl": "https://ncdoh-dispatcher-adminportal-pre-prod.shesha.app/login",
-    "environment": "Pre-Prod",
+    "appUrl": "https://ncdoh-dispatcher-adminportal-qa.shesha.app/login",
+    "environment": "QA",
     "sourceRepo": "https://dev.azure.com/boxfusion/pd-dispatcher-V2",
     "description": "Hybrid Markdown + Playwright test reports for the NC Dispatch (Dispatcher) Admin Portal.",
     "source": {
       "kind": "local"
     }
   },
-  "hasAllure": false,
-  "allureReports": [],
+  "hasAllure": true,
+  "allureReports": [
+    {
+      "slug": null,
+      "label": null,
+      "href": "allure-report/index.html"
+    }
+  ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 0,
-    "totalRuns": 0,
-    "last7Runs": 0,
-    "last7Pass": 0,
-    "last7PassPct": null,
+    "totalPlans": 3,
+    "totalRuns": 4,
+    "last7Runs": 4,
+    "last7Pass": 1,
+    "last7PassPct": 25,
     "failingFlows": 0,
-    "passingFlows": 0,
-    "partialFlows": 0,
-    "neverFlows": 0
+    "passingFlows": 1,
+    "partialFlows": 1,
+    "neverFlows": 1
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-06-14",
+    "startDate": "2025-06-21",
     "days": [
-      {
-        "iso": "2025-06-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-06-21",
         "runs": 0,
@@ -2576,10 +2533,189 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-06-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-17",
+        "runs": 4,
+        "passed": 1,
+        "failed": 0,
+        "partial": 1
+      },
+      {
+        "iso": "2026-06-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
-  "sections": [],
-  "timeline": [],
-  "generated": "2026-06-08T09:24:44.799Z"
+  "sections": [
+    {
+      "key": "administrative-functions",
+      "title": "Administrative Functions",
+      "stripPrefix": "test-plans/administrative-functions/",
+      "plans": [
+        {
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md",
+          "planHref": "test-plans/administrative-functions/admin-functions-crud.md",
+          "spec": "test-plans/administrative-functions/admin-functions-crud.spec.ts",
+          "specHref": "test-plans/administrative-functions/admin-functions-crud.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "partial",
+          "status": "PARTIAL",
+          "last": {
+            "date": "2026-06-17",
+            "result": "PARTIAL",
+            "duration": "18.4s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-17/admin-functions-crud.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-17",
+              "result": "PARTIAL",
+              "duration": "18.4s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/incident-types.md",
+          "planHref": "test-plans/administrative-functions/incident-types.md",
+          "spec": "test-plans/administrative-functions/incident-types.spec.ts",
+          "specHref": "test-plans/administrative-functions/incident-types.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-06-17",
+            "result": "PASSED",
+            "duration": "10.8s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-17/incident-types.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-17",
+              "result": "PASSED",
+              "duration": "10.8s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        }
+      ]
+    },
+    {
+      "key": "operational",
+      "title": "Operational",
+      "stripPrefix": "test-plans/operational/",
+      "plans": [
+        {
+          "plan": "test-plans/operational/incident-creation.md",
+          "planHref": "test-plans/operational/incident-creation.md",
+          "spec": "test-plans/operational/incident-creation.spec.ts",
+          "specHref": "test-plans/operational/incident-creation.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-17",
+      "runs": [
+        {
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md",
+          "planDisplay": "administrative-functions/admin-functions-crud.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "18.4s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-17/admin-functions-crud.md"
+        },
+        {
+          "plan": "_Administrative Functions (ADO plan #65099 / suite #65100) — exploratory create+edit smoke_",
+          "planDisplay": "_Administrative Functions (ADO plan #65099 / suite #65100) — exploratory create+edit smoke_",
+          "variant": null,
+          "result": "PASSED (1 APP DEFECT LOGGED — SEE BUGS)",
+          "duration": "",
+          "mode": "mcp-live (headed)",
+          "reportHref": "test-reports/2026-06-17/administrative-functions-crud-smoke.md"
+        },
+        {
+          "plan": "_Dispatcher console — operational incident logging (exploratory)_",
+          "planDisplay": "_Dispatcher console — operational incident logging (exploratory)_",
+          "variant": null,
+          "result": "PASSED (INCIDENT CREATED) — DISPATCH STEP BLOCKED (TELEPHONY-GATED)",
+          "duration": "",
+          "mode": "mcp-live (headed)",
+          "reportHref": "test-reports/2026-06-17/incident-creation-call-taker.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/incident-types.md",
+          "planDisplay": "administrative-functions/incident-types.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "10.8s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-06-17/incident-types.md"
+        }
+      ]
+    }
+  ],
+  "generated": "2026-06-18T12:39:24.522Z"
 }
