@@ -8,7 +8,7 @@
 ## Metadata
 | Field | Value |
 |-------|-------|
-| App URL | https://pd-hcm-adminportal-qa.azurewebsites.net/ |
+| App URL | https://pd-hcm-adminportal-qa.shesha.app/ |
 | Environment | QA |
 | Login As | admin / P@ssw0rd |
 | ADO Plan | [#79625](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=79625&suiteId=86455) |
@@ -18,7 +18,7 @@
 > Validate the **Leave Balances Administration** table of eLeave — the Delete confirmation, Edit Leave Credits dialog, magnifying-glass drill-down, Recalculate Family Leave Balances confirmation, View Audit routing, Add Shared/Personal Credit dialogs and Export to Excel.
 
 ## Preconditions
-- [ ] App is reachable at https://pd-hcm-adminportal-qa.azurewebsites.net/
+- [ ] App is reachable at https://pd-hcm-adminportal-qa.shesha.app/
 - [ ] Admin credentials are valid (admin / P@ssw0rd)
 - [ ] At least one leave balance record exists on the Leave Balances Administration table
 - [ ] The acting user has the role required to administer leave balances
@@ -29,7 +29,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to https://pd-hcm-adminportal-qa.azurewebsites.net/
+  1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
   2. SNAPSHOT — confirm login page is visible
   3. TYPE Username field with `admin`
   4. TYPE Password field with `P@ssw0rd`

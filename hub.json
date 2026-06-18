@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-29T11:53:03.337Z",
+  "generated": "2026-06-08T09:24:44.891Z",
   "projects": [
     {
       "name": "dep",
@@ -12,9 +12,9 @@
       "summary": {
         "totalPlans": 6,
         "totalRuns": 11,
-        "last7Runs": 4,
+        "last7Runs": 0,
         "last7Pass": 0,
-        "last7PassPct": 0,
+        "last7PassPct": null,
         "failingFlows": 2,
         "lastRun": {
           "date": "2026-05-28",
@@ -23,6 +23,29 @@
         }
       },
       "href": "projects/dep/index.html"
+    },
+    {
+      "name": "bid-management",
+      "displayName": "Bid Management",
+      "appUrl": "https://linux-supplychainmanagement-adminportal-qa.azurewebsites.net/login",
+      "environment": "QA Site",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
+      "description": "Hybrid Markdown + Playwright test reports for the Supply Chain Management (Bid Management) Admin Portal.",
+      "health": "healthy",
+      "summary": {
+        "totalPlans": 1,
+        "totalRuns": 6,
+        "last7Runs": 6,
+        "last7Pass": 3,
+        "last7PassPct": 50,
+        "failingFlows": 0,
+        "lastRun": {
+          "date": "2026-06-08",
+          "result": "PASSED",
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md"
+        }
+      },
+      "href": "projects/bid-management/index.html"
     },
     {
       "name": "HCM",
@@ -35,9 +58,9 @@
       "summary": {
         "totalPlans": 1,
         "totalRuns": 1,
-        "last7Runs": 1,
-        "last7Pass": 1,
-        "last7PassPct": 100,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
         "failingFlows": 0,
         "lastRun": {
           "date": "2026-05-29",
@@ -46,13 +69,32 @@
         }
       },
       "href": "projects/HCM/index.html"
+    },
+    {
+      "name": "dispatch",
+      "displayName": "NC Dispatch",
+      "appUrl": "https://ncdoh-dispatcher-adminportal-pre-prod.shesha.app/login",
+      "environment": "Pre-Prod",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-dispatcher-V2",
+      "description": "Hybrid Markdown + Playwright test reports for the NC Dispatch (Dispatcher) Admin Portal.",
+      "health": "unknown",
+      "summary": {
+        "totalPlans": 0,
+        "totalRuns": 0,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
+        "failingFlows": 0,
+        "lastRun": null
+      },
+      "href": "projects/dispatch/index.html"
     }
   ],
   "totals": {
-    "totalProjects": 2,
-    "totalPlans": 7,
-    "totalRuns": 12,
-    "last7Runs": 5,
+    "totalProjects": 4,
+    "totalPlans": 8,
+    "totalRuns": 18,
+    "last7Runs": 6,
     "failingFlows": 2
   }
 }

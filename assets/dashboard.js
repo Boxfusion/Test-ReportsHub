@@ -254,17 +254,20 @@
       ? `<div class="empty"><strong>No test plans found.</strong>Add a <code>.md</code> file under <code>test-plans/&lt;section&gt;/</code> to see it here.</div>`
       : sections.map((s) => sectionPanel(s, data.project)).join('');
 
-    const allureButton = data.hasAllure
-      ? `<button type="button" id="allure-toggle" class="btn btn-primary">Open Allure visualisation<span class="meta">run-by-run breakdown</span></button>`
+    const allureReports = (data.allureReports && data.allureReports.length)
+      ? data.allureReports
+      : (data.hasAllure ? [{ label: null, href: 'allure-report/index.html' }] : []);
+    const allureButton = allureReports.length
+      ? allureReports.map((r) => `<button type="button" class="btn btn-primary allure-toggle" data-allure-href="${esc(r.href)}" data-allure-label="${esc(r.label || '')}">Open Allure${r.label ? ` · ${esc(r.label)}` : ' visualisation'}<span class="meta">${r.label ? `${esc(r.label)} run-by-run` : 'run-by-run breakdown'}</span></button>`).join('')
       : `<span class="btn disabled" aria-disabled="true">Allure report not generated<span class="meta">run a test to produce it</span></span>`;
 
-    const allurePanel = data.hasAllure ? `
+    const allurePanel = allureReports.length ? `
       <div id="allure-panel" class="allure-modal" aria-hidden="true" role="dialog" aria-label="Allure visualisation">
         <div class="dialog">
           <div class="head">
-            <span class="title">Allure visualisation</span>
+            <span class="title" id="allure-title">Allure visualisation</span>
             <span class="right">
-              <a class="popout" href="allure-report/index.html" target="_blank" rel="noopener">open in new tab ↗</a>
+              <a class="popout" id="allure-popout" href="#" target="_blank" rel="noopener">open in new tab ↗</a>
               <button type="button" class="close" id="allure-close">Close (Esc)</button>
             </span>
           </div>
@@ -375,22 +378,28 @@
 
   // ────── Allure modal ──────
   function wireAllure() {
-    const btn = document.getElementById('allure-toggle');
+    const toggles = Array.from(document.querySelectorAll('.allure-toggle'));
     const panel = document.getElementById('allure-panel');
     const frame = document.getElementById('allure-frame');
     const loader = document.getElementById('allure-loader');
+    const popout = document.getElementById('allure-popout');
+    const title = document.getElementById('allure-title');
     const closeBtn = document.getElementById('allure-close');
-    if (!btn || !panel || !frame) return;
-    let loaded = false;
+    if (!toggles.length || !panel || !frame) return;
+    let currentHref = null;
 
-    function open() {
+    function open(href, label) {
       panel.classList.add('open');
       panel.setAttribute('aria-hidden', 'false');
       document.body.classList.add('modal-open');
-      if (!loaded) {
+      if (popout) popout.href = href;
+      if (title) title.textContent = label ? `Allure visualisation · ${label}` : 'Allure visualisation';
+      // Reload the iframe only when switching to a different variant's report.
+      if (href !== currentHref) {
+        if (loader) loader.classList.remove('hidden');
         frame.addEventListener('load', () => { if (loader) loader.classList.add('hidden'); }, { once: true });
-        frame.src = 'allure-report/index.html';
-        loaded = true;
+        frame.src = href;
+        currentHref = href;
       }
     }
     function close() {
@@ -399,7 +408,8 @@
       document.body.classList.remove('modal-open');
     }
 
-    btn.addEventListener('click', open);
+    toggles.forEach((b) => b.addEventListener('click', () =>
+      open(b.getAttribute('data-allure-href'), b.getAttribute('data-allure-label') || '')));
     if (closeBtn) closeBtn.addEventListener('click', close);
     panel.addEventListener('click', (e) => { if (e.target === panel) close(); });
     document.addEventListener('keydown', (e) => {

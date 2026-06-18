@@ -8,7 +8,7 @@
 ## Metadata
 | Field | Value |
 |-------|-------|
-| App URL | https://pd-hcm-adminportal-qa.azurewebsites.net/ |
+| App URL | https://pd-hcm-adminportal-qa.shesha.app/ |
 | Environment | QA |
 | Login As | admin / P@ssw0rd |
 | ADO Plan | [#79625](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=79625&suiteId=86554) |
@@ -18,7 +18,7 @@
 > Validate the **Reassign** dialog of eLeave — reassigning an application to a selected step and assignee on OK, the OK button remaining inactive until all mandatory fields are populated, and the ability to select the step to reassign to.
 
 ## Preconditions
-- [ ] App is reachable at https://pd-hcm-adminportal-qa.azurewebsites.net/
+- [ ] App is reachable at https://pd-hcm-adminportal-qa.shesha.app/
 - [ ] Admin credentials are valid (admin / P@ssw0rd)
 - [ ] At least one leave application exists that can be reassigned from the Leave Application Dashboard
 - [ ] The acting user has the role required to reassign leave applications
@@ -29,7 +29,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to https://pd-hcm-adminportal-qa.azurewebsites.net/
+  1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
   2. SNAPSHOT — confirm login page is visible
   3. TYPE Username field with `admin`
   4. TYPE Password field with `P@ssw0rd`
