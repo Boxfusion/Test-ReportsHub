@@ -8,8 +8,8 @@
 ## Metadata
 | Field | Value |
 |-------|-------|
-| App URL | https://ncdoh-dispatcher-adminportal-pre-prod.shesha.app/login |
-| Environment | Pre-Prod |
+| App URL | https://ncdoh-dispatcher-adminportal-qa.shesha.app/login |
+| Environment | QA |
 | Login As | Admin / 123qwe |
 | ADO Plan | [#65099](https://dev.azure.com/boxfusion/pd-dispatcher-V2/_testPlans/define?planId=65099&suiteId=65132) |
 | ADO Suite | #65132 — 2.2 Incident Types (under 2. Administrative Functions) |
@@ -32,7 +32,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to https://ncdoh-dispatcher-adminportal-pre-prod.shesha.app/login
+  1. NAVIGATE to https://ncdoh-dispatcher-adminportal-qa.shesha.app/login
   2. SNAPSHOT — confirm the login page (Username, Password, Sign In) is visible
   3. TYPE Username with `Admin`
   4. TYPE Password with `123qwe`

@@ -12,13 +12,20 @@
     }
   },
   "hasAllure": true,
+  "allureReports": [
+    {
+      "slug": null,
+      "label": null,
+      "href": "allure-report/index.html"
+    }
+  ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 6,
     "totalRuns": 11,
-    "last7Runs": 4,
+    "last7Runs": 0,
     "last7Pass": 0,
-    "last7PassPct": 0,
+    "last7PassPct": null,
     "failingFlows": 2,
     "passingFlows": 0,
     "partialFlows": 0,
@@ -26,99 +33,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-06-01",
+    "startDate": "2025-06-14",
     "days": [
-      {
-        "iso": "2025-06-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-06-14",
         "runs": 0,
@@ -2575,6 +2491,97 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-05-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2636,6 +2643,7 @@
             "date": "2026-05-14",
             "result": "[PASS]",
             "duration": "~37 min (incl. exploration of alternative UI)",
+            "variant": null,
             "reportHref": "test-reports/2026-05-14/create-call-log-entry.md"
           },
           "runCount": 1,
@@ -2643,7 +2651,8 @@
             {
               "date": "2026-05-14",
               "result": "[PASS]",
-              "duration": "~37 min (incl. exploration of alternative UI)"
+              "duration": "~37 min (incl. exploration of alternative UI)",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2670,6 +2679,7 @@
             "date": "2026-04-30",
             "result": "[PASS]",
             "duration": "120s",
+            "variant": null,
             "reportHref": "test-reports/2026-04-30/create-case.md"
           },
           "runCount": 1,
@@ -2677,7 +2687,8 @@
             {
               "date": "2026-04-30",
               "result": "[PASS]",
-              "duration": "120s"
+              "duration": "120s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2695,13 +2706,19 @@
           "spec": "test-plans/customers/create-customer.spec.ts",
           "specHref": "test-plans/customers/create-customer.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
             "date": "2026-05-28",
             "result": "FAILED",
             "duration": "118.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-05-28/create-customer.md"
           },
           "runCount": 2,
@@ -2709,12 +2726,14 @@
             {
               "date": "2026-05-28",
               "result": "FAILED",
-              "duration": "118.7s"
+              "duration": "118.7s",
+              "variant": null
             },
             {
               "date": "2026-05-21",
               "result": "PARTIAL",
-              "duration": "20.1s"
+              "duration": "20.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2732,13 +2751,19 @@
           "spec": "test-plans/service-requests/create-service-request-v2.spec.ts",
           "specHref": "test-plans/service-requests/create-service-request-v2.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
             "date": "2026-05-28",
             "result": "FAILED",
             "duration": "288.5s",
+            "variant": null,
             "reportHref": "test-reports/2026-05-28/create-service-request-v2.md"
           },
           "runCount": 7,
@@ -2746,37 +2771,44 @@
             {
               "date": "2026-05-28",
               "result": "FAILED",
-              "duration": "288.5s"
+              "duration": "288.5s",
+              "variant": null
             },
             {
               "date": "2026-05-27",
               "result": "FAILED",
-              "duration": "285.2s"
+              "duration": "285.2s",
+              "variant": null
             },
             {
               "date": "2026-05-22",
               "result": "FAILED",
-              "duration": "199.6s"
+              "duration": "199.6s",
+              "variant": null
             },
             {
               "date": "2026-05-21",
               "result": "FAILED",
-              "duration": "287.2s"
+              "duration": "287.2s",
+              "variant": null
             },
             {
               "date": "2026-05-20",
               "result": "FAILED",
-              "duration": "117.6s"
+              "duration": "117.6s",
+              "variant": null
             },
             {
               "date": "2026-05-19",
               "result": "FAILED",
-              "duration": "20.3s"
+              "duration": "20.3s",
+              "variant": null
             },
             {
               "date": "2026-05-18",
               "result": "FAILED",
-              "duration": "44.0s"
+              "duration": "44.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2814,6 +2846,7 @@
         {
           "plan": "test-plans/customers/create-customer.md",
           "planDisplay": "customers/create-customer.md",
+          "variant": null,
           "result": "FAILED",
           "duration": "118.7s",
           "mode": "ci-nightly",
@@ -2822,6 +2855,7 @@
         {
           "plan": "test-plans/service-requests/create-service-request-v2.md",
           "planDisplay": "service-requests/create-service-request-v2.md",
+          "variant": null,
           "result": "FAILED",
           "duration": "288.5s",
           "mode": "ci-nightly",
@@ -2835,6 +2869,7 @@
         {
           "plan": "test-plans/service-requests/create-service-request-v2.md",
           "planDisplay": "service-requests/create-service-request-v2.md",
+          "variant": null,
           "result": "FAILED",
           "duration": "285.2s",
           "mode": "ci-playwright-script",
@@ -2848,6 +2883,7 @@
         {
           "plan": "test-plans/service-requests/create-service-request-v2.md",
           "planDisplay": "service-requests/create-service-request-v2.md",
+          "variant": null,
           "result": "FAILED",
           "duration": "199.6s",
           "mode": "ci-playwright-script",
@@ -2861,6 +2897,7 @@
         {
           "plan": "test-plans/customers/create-customer.md",
           "planDisplay": "customers/create-customer.md",
+          "variant": null,
           "result": "PARTIAL",
           "duration": "20.1s",
           "mode": "playwright-script (failures pending AI-repair)",
@@ -2869,6 +2906,7 @@
         {
           "plan": "test-plans/service-requests/create-service-request-v2.md",
           "planDisplay": "service-requests/create-service-request-v2.md",
+          "variant": null,
           "result": "FAILED",
           "duration": "287.2s",
           "mode": "ci-playwright-script",
@@ -2882,6 +2920,7 @@
         {
           "plan": "test-plans/service-requests/create-service-request-v2.md",
           "planDisplay": "service-requests/create-service-request-v2.md",
+          "variant": null,
           "result": "FAILED",
           "duration": "117.6s",
           "mode": "ci-playwright-script",
@@ -2895,6 +2934,7 @@
         {
           "plan": "test-plans/service-requests/create-service-request-v2.md",
           "planDisplay": "service-requests/create-service-request-v2.md",
+          "variant": null,
           "result": "FAILED",
           "duration": "20.3s",
           "mode": "playwright-script (failures pending AI-repair)",
@@ -2908,6 +2948,7 @@
         {
           "plan": "test-plans/service-requests/create-service-request-v2.md",
           "planDisplay": "service-requests/create-service-request-v2.md",
+          "variant": null,
           "result": "FAILED",
           "duration": "44.0s",
           "mode": "playwright-script (failures pending AI-repair)",
@@ -2921,6 +2962,7 @@
         {
           "plan": "test-plans/cases/create-call-log-entry.md",
           "planDisplay": "cases/create-call-log-entry.md",
+          "variant": null,
           "result": "[PASS]",
           "duration": "~37 min (incl. exploration of alternative UI)",
           "mode": null,
@@ -2934,6 +2976,7 @@
         {
           "plan": "test-plans/cases/create-case.md",
           "planDisplay": "cases/create-case.md",
+          "variant": null,
           "result": "[PASS]",
           "duration": "120s",
           "mode": null,
@@ -2942,5 +2985,5 @@
       ]
     }
   ],
-  "generated": "2026-05-28T12:41:26.694Z"
+  "generated": "2026-06-08T09:24:44.726Z"
 }

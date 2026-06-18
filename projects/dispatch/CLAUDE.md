@@ -36,10 +36,10 @@ Before executing ANY test plan:
 | Key | Value |
 |-----|-------|
 | App | NC Dispatch (Dispatcher Admin Portal) |
-| URL | https://ncdoh-dispatcher-adminportal-pre-prod.shesha.app/login |
-| Environment | Pre-Prod |
+| URL | https://ncdoh-dispatcher-adminportal-qa.shesha.app/login |
+| Environment | QA |
 
-> **Environment note:** Pre-Prod is the current target. QA is in use for performance testing for now; switch the App URL/environment to QA once that work is complete.
+> **Environment note:** QA is the current target (switched 2026-06-17). The previous Pre-Prod URL was `https://ncdoh-dispatcher-adminportal-pre-prod.shesha.app/login`.
 
 ## Credentials
 | Role | Username | Password |

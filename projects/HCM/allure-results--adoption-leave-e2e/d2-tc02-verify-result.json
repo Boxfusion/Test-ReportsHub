@@ -1,0 +1,39 @@
+{
+  "uuid": "d2a0492c-7c02-4d02-9d02-08c8a2e8d602",
+  "historyId": "d2a04b8c7e6deffaf8b66b1a12299d02",
+  "name": "TC-02: Verify Attachments (Thabo Mthembu, GOV003 — applicant self-verify)",
+  "fullName": "eLeave Adoption Leave E2E > TC-02: Verify Attachments (Thabo Mthembu, GOV003 — applicant self-verify)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1781089217000,
+  "stop": 1781089252000,
+  "labels": [
+    { "name": "parentSuite", "value": "HCM" },
+    { "name": "suite", "value": "eLeave — Adoption Leave Happy Path" },
+    { "name": "subSuite", "value": "Verify Attachments (Adoption-specific — no ADO suite in #101528)" },
+    { "name": "feature", "value": "eLeave — SaGov Leave Application" },
+    { "name": "story", "value": "Adoption Leave E2E — LA2026/12806" }
+  ],
+  "parameters": [
+    { "name": "Ref No", "value": "LA2026/12806" },
+    { "name": "ADO Suite", "value": "none — Adoption-Leave-specific workflow step" },
+    { "name": "ADO Plan", "value": "eLeave Smoke test (#101528)" }
+  ],
+  "steps": [
+    {
+      "name": "Item routed BACK to the applicant's own Workflows → Inbox as action \"Verify Attachments\" (NOT to the recommender)",
+      "status": "passed", "stage": "finished",
+      "start": 1781089217000, "stop": 1781089238000
+    },
+    {
+      "name": "Downloaded attachment → Verify button enabled (no acknowledge checkbox on this step)",
+      "status": "passed", "stage": "finished",
+      "start": 1781089238000, "stop": 1781089248000
+    },
+    {
+      "name": "Verify → item routed onward to the Recommender (Kavitha)",
+      "status": "passed", "stage": "finished",
+      "start": 1781089248000, "stop": 1781089252000
+    }
+  ]
+}

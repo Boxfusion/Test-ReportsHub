@@ -11,7 +11,7 @@
 
 import { test, expect, Page } from '@playwright/test';
 
-const APP_URL = 'https://ncdoh-dispatcher-adminportal-pre-prod.shesha.app/login';
+const APP_URL = 'https://ncdoh-dispatcher-adminportal-qa.shesha.app/login';
 const ADMIN = { user: 'Admin', password: '123qwe' };
 const INCIDENT_TYPES_URL = `${APP_URL.replace('/login', '')}/dynamic/Boxfusion.Ems/incident-types`;
 
@@ -22,7 +22,9 @@ async function login(page: Page) {
   await page.getByPlaceholder('Password').fill(ADMIN.password);
   await page.getByRole('button', { name: 'Sign In' }).click();
   await page.waitForURL((url) => !url.href.includes('/login'), { timeout: 30000 });
-  await page.waitForLoadState('networkidle');
+  // AI-repair (2026-06-17): the Shesha app holds background connections open (offline-mode
+  // polling / websockets), so `networkidle` never settles and the wait times out. Drop it —
+  // waitForURL above confirms login succeeded, and downstream steps wait on concrete elements.
 }
 
 // Recorded live: reach the Incident Types grid directly by URL. The collapsed Shesha sidebar's
@@ -30,7 +32,7 @@ async function login(page: Page) {
 // so navigate to the form URL (module Boxfusion.Ems) like the run-test specs do elsewhere.
 async function gotoIncidentTypes(page: Page) {
   await page.goto(INCIDENT_TYPES_URL);
-  await page.waitForLoadState('networkidle');
+  // AI-repair (2026-06-17): no `networkidle` wait (never settles on this Shesha app).
   // The page heading is "Call Types" (the entity is surfaced as Call Types in this grid).
   await expect(page.getByRole('heading', { name: 'Call Types' })).toBeVisible({ timeout: 30000 });
 }
@@ -42,7 +44,8 @@ async function searchGrid(page: Page, term: string) {
   const box = page.getByRole('textbox').first();
   await box.fill(term);
   await page.getByRole('button', { name: 'search' }).click();
-  await page.waitForLoadState('networkidle');
+  // AI-repair (2026-06-17): no `networkidle` wait; callers assert on the resulting rows.
+  await page.waitForTimeout(1500);
 }
 
 test.describe('ADMIN-2.2 — Incident Types', () => {

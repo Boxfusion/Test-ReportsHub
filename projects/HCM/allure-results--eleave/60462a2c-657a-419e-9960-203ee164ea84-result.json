@@ -1,0 +1,76 @@
+{
+  "uuid": "60462a2c-657a-419e-9960-203ee164ea84",
+  "historyId": "2337b7d8866441c23960ed564a4cbb6a",
+  "name": "TC-03: Approve with Full Pay (Naledi Khumalo, GOV022 — HOD)",
+  "fullName": "eLeave Annual Leave E2E > TC-03: Approve with Full Pay (Naledi Khumalo, GOV022 — HOD)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1781008738000,
+  "stop": 1781008821000,
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "HCM"
+    },
+    {
+      "name": "suite",
+      "value": "eLeave — Annual Leave Happy Path"
+    },
+    {
+      "name": "subSuite",
+      "value": "Approve leave (#101991)"
+    },
+    {
+      "name": "feature",
+      "value": "eLeave — SaGov Leave Application"
+    },
+    {
+      "name": "story",
+      "value": "Annual Leave E2E — LA2026/12721"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "LA2026/12721"
+    },
+    {
+      "name": "ADO Suite",
+      "value": "Approve leave (#101991)"
+    },
+    {
+      "name": "ADO Plan",
+      "value": "eLeave Smoke test (#101528)"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Inbox → open LA2026/12721 (Action: Approve Leave; received from Kavitha)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008738000,
+      "stop": 1781008758750
+    },
+    {
+      "name": "Downloaded attachment + ticked acknowledge",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008758750,
+      "stop": 1781008779500
+    },
+    {
+      "name": "Approve with Full Pay → item left Naledi's inbox",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008779500,
+      "stop": 1781008800250
+    },
+    {
+      "name": "INFO (not a verified test case): system auto-moved item to \"Generate PERSAL Input\"; PERSAL Transactions row Create Transaction 12/06→15/06, no errors. No DevOps test case for this step in plan #101528.",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008800250,
+      "stop": 1781008821000
+    }
+  ]
+}
