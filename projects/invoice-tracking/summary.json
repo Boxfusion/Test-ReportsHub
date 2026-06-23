@@ -1,13 +1,13 @@
 {
-  "totalPlans": 1,
-  "totalRuns": 10,
-  "last7Runs": 10,
-  "last7Pass": 6,
-  "last7PassPct": 60,
+  "totalPlans": 2,
+  "totalRuns": 21,
+  "last7Runs": 21,
+  "last7Pass": 8,
+  "last7PassPct": 38,
   "failingFlows": 0,
   "lastRun": {
-    "date": "2026-06-18",
-    "result": "PASSED",
-    "plan": "test-plans/invoice-process/bas.md (TC-03)"
+    "date": "2026-06-23",
+    "result": "PASSED — INVOICE **PAID + FILED**",
+    "plan": "test-plans/invoice-process/bas.md (TC-01 → TC-14, happy path)"
   }
 }

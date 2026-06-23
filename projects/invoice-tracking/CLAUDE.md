@@ -45,7 +45,10 @@ Before executing ANY test plan:
 | Admin / Invoice Capturer / Verifier / Authoriser | ThulileM | 123qwe |
 | Branch Finance Admin / Responsible Person / Voucher Preparer | TaniaSmith | 123qwe |
 | System Administrator (BAS Report & Payment Stub imports) | Admin | 123qwe |
-| Capture Filing (Gwen Simbeni) | GwenB | 123qwe |
+| Capture Filing (Gwen Simbeni) — **also LOGIS Verify Voucher** (Internal Control) | GwenB | 123qwe |
+| LOGIS Invoice Capturer / Capture & Link / Pre-Authorise (SCM); Thulile lacks LOGIS rights | MoshadiM | 123qwe |
+
+> **LOGIS chain proven end-to-end (2026-06-19, PAY10093/2026 → Paid + Filed):** Register/Capture&Link/Pre-Authorise = MoshadiM (SCM); Certify/Verify Invoice = TaniaSmith (Business Unit); Approve Invoice = Kamogelo Shabangu; Assign Responsible Official = Sarah Mohlala (SCM Supervisor); **Verify Voucher + Capture Filing = GwenB (Internal Control)**; Final Authorise (BAS import, Source Doc Type=INV) + Attach Payment Stub import = Admin. LOGIS Payment Number entered manually at Capture & Link. ⚠️ LOGIS Payment Stub matches on **Purchase Order Number** (not payment number). See `test-reports/2026-06-19/logis-full-chain-PAY10093.md`.
 
 > **Approval-chain note:** The BAS invoice flow is a multi-role chain (Register → Certify → Prepare/Verify/Authorise Voucher → Final Authorise Payment → Filing). Additional role logins (Branch Finance Admin, Certifier, Responsible Person, Verifier, Authoriser) are discovered live as steps hand off; record each new account here as it's confirmed.
 
