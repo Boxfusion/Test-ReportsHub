@@ -1,0 +1,83 @@
+{
+  "uuid": "f46521c7-5508-4652-b604-ddfc134cb264",
+  "historyId": "127c7c4a1cd70b4d0c18069dd696aae2",
+  "name": "TC-01: Apply — Capture Annual Leave (Thabo Mthembu, GOV003)",
+  "fullName": "eLeave Annual Leave E2E > TC-01: Apply — Capture Annual Leave (Thabo Mthembu, GOV003)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1781008250000,
+  "stop": 1781008496000,
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "HCM"
+    },
+    {
+      "name": "suite",
+      "value": "eLeave — Annual Leave Happy Path"
+    },
+    {
+      "name": "subSuite",
+      "value": "Application for leave (#101941)"
+    },
+    {
+      "name": "feature",
+      "value": "eLeave — SaGov Leave Application"
+    },
+    {
+      "name": "story",
+      "value": "Annual Leave E2E — LA2026/12721"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "LA2026/12721"
+    },
+    {
+      "name": "ADO Suite",
+      "value": "Application for leave (#101941)"
+    },
+    {
+      "name": "ADO Plan",
+      "value": "eLeave Smoke test (#101528)"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Workflows → My Items → Create New → SaGov Leave Application",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008250000,
+      "stop": 1781008299200
+    },
+    {
+      "name": "Category = Annual Leave, Sub-Category = Annual Leave, Duration = Days",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008299200,
+      "stop": 1781008348400
+    },
+    {
+      "name": "Start 12/06/2026, End 15/06/2026 → app confirmed \"2 day off\" (weekend excluded)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008348400,
+      "stop": 1781008397600
+    },
+    {
+      "name": "Address captured + supporting document attached",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008397600,
+      "stop": 1781008446800
+    },
+    {
+      "name": "Certification ticked → Submit → Delegate modal → Don't Delegate → status In Progress",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008446800,
+      "stop": 1781008496000
+    }
+  ]
+}

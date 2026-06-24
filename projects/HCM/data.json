@@ -14,76 +14,37 @@
   "hasAllure": true,
   "allureReports": [
     {
-      "slug": null,
-      "label": null,
-      "href": "allure-report/index.html"
+      "slug": "annual-leave-e2e",
+      "label": "annual-leave-e2e",
+      "href": "allure-report--annual-leave-e2e/index.html"
+    },
+    {
+      "slug": "eleave",
+      "label": "eleave",
+      "href": "allure-report--eleave/index.html"
+    },
+    {
+      "slug": "sick-leave-e2e",
+      "label": "sick-leave-e2e",
+      "href": "allure-report--sick-leave-e2e/index.html"
     }
   ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 1,
-    "totalRuns": 1,
-    "last7Runs": 0,
-    "last7Pass": 0,
-    "last7PassPct": null,
-    "failingFlows": 0,
-    "passingFlows": 1,
-    "partialFlows": 0,
-    "neverFlows": 0
+    "totalPlans": 24,
+    "totalRuns": 37,
+    "last7Runs": 8,
+    "last7Pass": 2,
+    "last7PassPct": 25,
+    "failingFlows": 17,
+    "passingFlows": 11,
+    "partialFlows": 1,
+    "neverFlows": 5
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-06-14",
+    "startDate": "2025-06-21",
     "days": [
-      {
-        "iso": "2025-06-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-06-21",
         "runs": 0,
@@ -2508,10 +2469,10 @@
       },
       {
         "iso": "2026-06-02",
-        "runs": 0,
+        "runs": 18,
         "passed": 0,
-        "failed": 0,
-        "partial": 0
+        "failed": 17,
+        "partial": 1
       },
       {
         "iso": "2026-06-03",
@@ -2557,27 +2518,76 @@
       },
       {
         "iso": "2026-06-09",
-        "runs": 0,
-        "passed": 0,
+        "runs": 1,
+        "passed": 1,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-06-10",
-        "runs": 0,
-        "passed": 0,
+        "runs": 4,
+        "passed": 4,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-06-11",
+        "runs": 5,
+        "passed": 4,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-12",
+        "runs": 4,
+        "passed": 2,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-13",
         "runs": 0,
         "passed": 0,
         "failed": 0,
         "partial": 0
       },
       {
-        "iso": "2026-06-12",
+        "iso": "2026-06-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-15",
+        "runs": 4,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-19",
         "runs": 0,
         "passed": 0,
         "failed": 0,
@@ -2586,6 +2596,704 @@
     ]
   },
   "sections": [
+    {
+      "key": "eLeave",
+      "title": "ELeave",
+      "stripPrefix": "test-plans/eLeave/",
+      "plans": [
+        {
+          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md",
+          "planHref": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md",
+          "spec": "test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+          "specHref": "test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/acknowledge-leave-approved-without-pay.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/add-personal-credit-dialog.md",
+          "planHref": "test-plans/eLeave/add-personal-credit-dialog.md",
+          "spec": "test-plans/eLeave/add-personal-credit-dialog.spec.ts",
+          "specHref": "test-plans/eLeave/add-personal-credit-dialog.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/add-personal-credit-dialog.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/add-public-holiday-dialog.md",
+          "planHref": "test-plans/eLeave/add-public-holiday-dialog.md",
+          "spec": "test-plans/eLeave/add-public-holiday-dialog.spec.ts",
+          "specHref": "test-plans/eLeave/add-public-holiday-dialog.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/add-public-holiday-dialog.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/approve-leave-cancellation.md",
+          "planHref": "test-plans/eLeave/approve-leave-cancellation.md",
+          "spec": "test-plans/eLeave/approve-leave-cancellation.spec.ts",
+          "specHref": "test-plans/eLeave/approve-leave-cancellation.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/approve-leave-cancellation.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/approve-without-pay-dialog.md",
+          "planHref": "test-plans/eLeave/approve-without-pay-dialog.md",
+          "spec": "test-plans/eLeave/approve-without-pay-dialog.spec.ts",
+          "specHref": "test-plans/eLeave/approve-without-pay-dialog.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/approve-without-pay-dialog.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/edit-leave-credits-dialog.md",
+          "planHref": "test-plans/eLeave/edit-leave-credits-dialog.md",
+          "spec": "test-plans/eLeave/edit-leave-credits-dialog.spec.ts",
+          "specHref": "test-plans/eLeave/edit-leave-credits-dialog.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/edit-leave-credits-dialog.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/holiday-calendar-details.md",
+          "planHref": "test-plans/eLeave/holiday-calendar-details.md",
+          "spec": "test-plans/eLeave/holiday-calendar-details.spec.ts",
+          "specHref": "test-plans/eLeave/holiday-calendar-details.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/holiday-calendar-details.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/leave-application-dashboard.md",
+          "planHref": "test-plans/eLeave/leave-application-dashboard.md",
+          "spec": "test-plans/eLeave/leave-application-dashboard.spec.ts",
+          "specHref": "test-plans/eLeave/leave-application-dashboard.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/leave-application-dashboard.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/leave-balances-administration.md",
+          "planHref": "test-plans/eLeave/leave-balances-administration.md",
+          "spec": "test-plans/eLeave/leave-balances-administration.spec.ts",
+          "specHref": "test-plans/eLeave/leave-balances-administration.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/leave-balances-administration.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/leave-balances-details.md",
+          "planHref": "test-plans/eLeave/leave-balances-details.md",
+          "spec": "test-plans/eLeave/leave-balances-details.spec.ts",
+          "specHref": "test-plans/eLeave/leave-balances-details.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/leave-balances-details.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/leave-credits-audit-trail.md",
+          "planHref": "test-plans/eLeave/leave-credits-audit-trail.md",
+          "spec": "test-plans/eLeave/leave-credits-audit-trail.spec.ts",
+          "specHref": "test-plans/eLeave/leave-credits-audit-trail.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "partial",
+          "status": "PARTIAL",
+          "last": {
+            "date": "2026-06-02",
+            "result": "PARTIAL",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/leave-credits-audit-trail.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "PARTIAL",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/not-approve-leave-application.md",
+          "planHref": "test-plans/eLeave/not-approve-leave-application.md",
+          "spec": "test-plans/eLeave/not-approve-leave-application.spec.ts",
+          "specHref": "test-plans/eLeave/not-approve-leave-application.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/not-approve-leave-application.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/not-recommend-leave-application.md",
+          "planHref": "test-plans/eLeave/not-recommend-leave-application.md",
+          "spec": "test-plans/eLeave/not-recommend-leave-application.spec.ts",
+          "specHref": "test-plans/eLeave/not-recommend-leave-application.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/not-recommend-leave-application.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/override-dialog.md",
+          "planHref": "test-plans/eLeave/override-dialog.md",
+          "spec": "test-plans/eLeave/override-dialog.spec.ts",
+          "specHref": "test-plans/eLeave/override-dialog.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/override-dialog.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/reassign-dialog.md",
+          "planHref": "test-plans/eLeave/reassign-dialog.md",
+          "spec": "test-plans/eLeave/reassign-dialog.spec.ts",
+          "specHref": "test-plans/eLeave/reassign-dialog.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/reassign-dialog.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/refer-back-dialog.md",
+          "planHref": "test-plans/eLeave/refer-back-dialog.md",
+          "spec": "test-plans/eLeave/refer-back-dialog.spec.ts",
+          "specHref": "test-plans/eLeave/refer-back-dialog.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/refer-back-dialog.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/send-back-dialog.md",
+          "planHref": "test-plans/eLeave/send-back-dialog.md",
+          "spec": "test-plans/eLeave/send-back-dialog.spec.ts",
+          "specHref": "test-plans/eLeave/send-back-dialog.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/send-back-dialog.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/verify-attachments.md",
+          "planHref": "test-plans/eLeave/verify-attachments.md",
+          "spec": "test-plans/eLeave/verify-attachments.spec.ts",
+          "specHref": "test-plans/eLeave/verify-attachments.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-06-02",
+            "result": "FAILED",
+            "duration": "0.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-02/verify-attachments.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-02",
+              "result": "FAILED",
+              "duration": "0.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/approve-leave-application.md",
+          "planHref": "test-plans/eLeave/approve-leave-application.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            },
+            {
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md",
+          "planHref": "test-plans/eLeave/capture-new-leave-application.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            },
+            {
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/close-leave-application.md",
+          "planHref": "test-plans/eLeave/close-leave-application.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            },
+            {
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/recommend-leave-application.md",
+          "planHref": "test-plans/eLeave/recommend-leave-application.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            },
+            {
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/eLeave/verify-leave-application.md",
+          "planHref": "test-plans/eLeave/verify-leave-application.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            },
+            {
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        }
+      ]
+    },
     {
       "key": "performance-agreements",
       "title": "Performance Agreements",
@@ -2628,6 +3336,360 @@
   ],
   "timeline": [
     {
+      "date": "2026-06-15",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "add-delegation-via-my-profile-e2e.md",
+          "variant": null,
+          "result": "UNKNOWN",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-06-15/add-delegation-via-my-profile-e2e.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "apply-leave-with-delegation-e2e-happy-path.md",
+          "variant": null,
+          "result": "UNKNOWN",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-06-15/apply-leave-with-delegation-e2e-happy-path.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "delegate-can-act-on-delegators-items-e2e.md",
+          "variant": null,
+          "result": "UNKNOWN",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-06-15/delegate-can-act-on-delegators-items-e2e.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "future-dated-delegation-blocked-today-e2e.md",
+          "variant": null,
+          "result": "UNKNOWN",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-06-15/future-dated-delegation-blocked-today-e2e.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-12",
+      "runs": [
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Recommend / Approve-without-Pay / Acknowledge chain — Approve Without Pay variant)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (+ Recommend / Approve-without-Pay / Acknowledge chain — Approve Without Pay variant)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~11 min (09:50–10:01 UTC)",
+          "mode": "mcp-live",
+          "reportHref": "test-reports/2026-06-12/approve-without-pay-acknowledge-e2e-happy-path.md"
+        },
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Recommend/Approve chain — Backdated Leave variant)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (+ Recommend/Approve chain — Backdated Leave variant)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~8 min (12:57–13:05 UTC)",
+          "mode": "mcp-live",
+          "reportHref": "test-reports/2026-06-12/backdated-annual-leave-e2e-happy-path.md"
+        },
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (Negative path — validation guard variant)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (Negative path — validation guard variant)",
+          "variant": null,
+          "result": "PASSED (SYSTEM CORRECTLY PREVENTED SUBMISSION)",
+          "duration": "~4 min (13:17–13:21 UTC)",
+          "mode": "mcp-live",
+          "reportHref": "test-reports/2026-06-12/negative-path-weekend-only-leave-validation.md"
+        },
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (One-Step Approver routing variant)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (One-Step Approver routing variant)",
+          "variant": null,
+          "result": "PASSED (BUSINESS RULE WORKS — RECOMMEND STEP SKIPPED)",
+          "duration": "~6 min (14:00–14:07 UTC)",
+          "mode": "mcp-live",
+          "reportHref": "test-reports/2026-06-12/one-step-approver-skip-recommend-e2e.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-11",
+      "runs": [
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Recommend/Approve chain — \"Someone Else\" variant)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (+ Recommend/Approve chain — \"Someone Else\" variant)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~9 min (11:44–11:52 UTC)",
+          "mode": "mcp-live",
+          "reportHref": "test-reports/2026-06-11/apply-for-someone-else-annual-leave-e2e-happy-path.md"
+        },
+        {
+          "plan": "_ad-hoc — SaGov Change of Supervisor Workflow (no markdown plan yet)_",
+          "planDisplay": "_ad-hoc — SaGov Change of Supervisor Workflow (no markdown plan yet)_",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~13 min (08:58–09:11 UTC)",
+          "mode": "mcp-live",
+          "reportHref": "test-reports/2026-06-11/change-of-supervisor-e2e-happy-path.md"
+        },
+        {
+          "plan": "_ad-hoc — SaGov Leave Cancellation flow (no markdown plan yet)_",
+          "planDisplay": "_ad-hoc — SaGov Leave Cancellation flow (no markdown plan yet)_",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~6 min (08:25–08:31 UTC)",
+          "mode": "mcp-live",
+          "reportHref": "test-reports/2026-06-11/leave-cancellation-e2e-happy-path.md"
+        },
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Recommend/Approve chain — Maternity Leave variant)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (+ Recommend/Approve chain — Maternity Leave variant)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~8 min (07:01–07:09 UTC)",
+          "mode": "mcp-live",
+          "reportHref": "test-reports/2026-06-11/maternity-leave-e2e-happy-path.md"
+        },
+        {
+          "plan": "_ad-hoc — Negative path (workflow rejection branches)_",
+          "planDisplay": "_ad-hoc — Negative path (workflow rejection branches)_",
+          "variant": null,
+          "result": "PASSED (ALL REJECTION BRANCHES BEHAVED AS EXPECTED)",
+          "duration": "~40 min (12:11–12:50 UTC)",
+          "mode": "mcp-live",
+          "reportHref": "test-reports/2026-06-11/negative-path-workflow-rejections-e2e.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-10",
+      "runs": [
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Verify/Recommend/Approve chain — Adoption Leave variant)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (+ Verify/Recommend/Approve chain — Adoption Leave variant)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~25 min (10:38–11:04 UTC)",
+          "mode": "mcp-live (headed)",
+          "reportHref": "test-reports/2026-06-10/adoption-leave-e2e-happy-path.md"
+        },
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Recommend/Approve chain)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (+ Recommend/Approve chain)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~12 min (06:39–07:01 UTC)",
+          "mode": "mcp-live (headed)",
+          "reportHref": "test-reports/2026-06-10/backdated-annual-leave-e2e-happy-path.md"
+        },
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Recommend/Approve chain — Sick Leave variant)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (+ Recommend/Approve chain — Sick Leave variant)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~16 min (09:48–10:04 UTC)",
+          "mode": "mcp-live (headed)",
+          "reportHref": "test-reports/2026-06-10/backdated-sick-leave-e2e-happy-path.md"
+        },
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Recommend/Approve chain — Family Responsibility variant)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (+ Recommend/Approve chain — Family Responsibility variant)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~8 min (11:31–11:39 UTC)",
+          "mode": "mcp-live (headed)",
+          "reportHref": "test-reports/2026-06-10/family-responsibility-death-e2e-happy-path.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-09",
+      "runs": [
+        {
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Recommend/Approve chain)",
+          "planDisplay": "eLeave/capture-new-leave-application.md (+ Recommend/Approve chain)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~10 min (12:30–12:41 UTC)",
+          "mode": "mcp-live (headed)",
+          "reportHref": "test-reports/2026-06-09/annual-leave-e2e-happy-path.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-02",
+      "runs": [
+        {
+          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md",
+          "planDisplay": "eLeave/acknowledge-leave-approved-without-pay.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/acknowledge-leave-approved-without-pay.md"
+        },
+        {
+          "plan": "test-plans/eLeave/add-personal-credit-dialog.md",
+          "planDisplay": "eLeave/add-personal-credit-dialog.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/add-personal-credit-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/add-public-holiday-dialog.md",
+          "planDisplay": "eLeave/add-public-holiday-dialog.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/add-public-holiday-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/approve-leave-cancellation.md",
+          "planDisplay": "eLeave/approve-leave-cancellation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/approve-leave-cancellation.md"
+        },
+        {
+          "plan": "test-plans/eLeave/approve-without-pay-dialog.md",
+          "planDisplay": "eLeave/approve-without-pay-dialog.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/approve-without-pay-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/edit-leave-credits-dialog.md",
+          "planDisplay": "eLeave/edit-leave-credits-dialog.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/edit-leave-credits-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/holiday-calendar-details.md",
+          "planDisplay": "eLeave/holiday-calendar-details.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/holiday-calendar-details.md"
+        },
+        {
+          "plan": "test-plans/eLeave/leave-application-dashboard.md",
+          "planDisplay": "eLeave/leave-application-dashboard.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/leave-application-dashboard.md"
+        },
+        {
+          "plan": "test-plans/eLeave/leave-balances-administration.md",
+          "planDisplay": "eLeave/leave-balances-administration.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/leave-balances-administration.md"
+        },
+        {
+          "plan": "test-plans/eLeave/leave-balances-details.md",
+          "planDisplay": "eLeave/leave-balances-details.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/leave-balances-details.md"
+        },
+        {
+          "plan": "test-plans/eLeave/leave-credits-audit-trail.md",
+          "planDisplay": "eLeave/leave-credits-audit-trail.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/leave-credits-audit-trail.md"
+        },
+        {
+          "plan": "test-plans/eLeave/not-approve-leave-application.md",
+          "planDisplay": "eLeave/not-approve-leave-application.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/not-approve-leave-application.md"
+        },
+        {
+          "plan": "test-plans/eLeave/not-recommend-leave-application.md",
+          "planDisplay": "eLeave/not-recommend-leave-application.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/not-recommend-leave-application.md"
+        },
+        {
+          "plan": "test-plans/eLeave/override-dialog.md",
+          "planDisplay": "eLeave/override-dialog.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/override-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/reassign-dialog.md",
+          "planDisplay": "eLeave/reassign-dialog.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/reassign-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/refer-back-dialog.md",
+          "planDisplay": "eLeave/refer-back-dialog.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/refer-back-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/send-back-dialog.md",
+          "planDisplay": "eLeave/send-back-dialog.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/send-back-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/verify-attachments.md",
+          "planDisplay": "eLeave/verify-attachments.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "0.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-02/verify-attachments.md"
+        }
+      ]
+    },
+    {
       "date": "2026-05-29",
       "runs": [
         {
@@ -2642,5 +3704,5 @@
       ]
     }
   ],
-  "generated": "2026-06-08T09:24:44.486Z"
+  "generated": "2026-06-18T12:39:23.796Z"
 }

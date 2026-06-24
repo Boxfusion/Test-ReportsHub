@@ -1,7 +1,7 @@
 {
   "displayName": "NC Dispatch",
-  "appUrl": "https://ncdoh-dispatcher-adminportal-pre-prod.shesha.app/login",
-  "environment": "Pre-Prod",
+  "appUrl": "https://ncdoh-dispatcher-adminportal-qa.shesha.app/login",
+  "environment": "QA",
   "sourceRepo": "https://dev.azure.com/boxfusion/pd-dispatcher-V2",
   "description": "Hybrid Markdown + Playwright test reports for the NC Dispatch (Dispatcher) Admin Portal."
 }

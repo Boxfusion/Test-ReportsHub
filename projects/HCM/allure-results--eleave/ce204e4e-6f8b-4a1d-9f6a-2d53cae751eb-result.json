@@ -1,0 +1,69 @@
+{
+  "uuid": "ce204e4e-6f8b-4a1d-9f6a-2d53cae751eb",
+  "historyId": "cc58fa787e6deffaf8b66b1a12299545",
+  "name": "TC-02: Recommend (Kavitha Naidoo, GOV012 — Infra Manager)",
+  "fullName": "eLeave Annual Leave E2E > TC-02: Recommend (Kavitha Naidoo, GOV012 — Infra Manager)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1781008560000,
+  "stop": 1781008715000,
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "HCM"
+    },
+    {
+      "name": "suite",
+      "value": "eLeave — Annual Leave Happy Path"
+    },
+    {
+      "name": "subSuite",
+      "value": "Recommend Leave (#101970)"
+    },
+    {
+      "name": "feature",
+      "value": "eLeave — SaGov Leave Application"
+    },
+    {
+      "name": "story",
+      "value": "Annual Leave E2E — LA2026/12721"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "LA2026/12721"
+    },
+    {
+      "name": "ADO Suite",
+      "value": "Recommend Leave (#101970)"
+    },
+    {
+      "name": "ADO Plan",
+      "value": "eLeave Smoke test (#101528)"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Workflows → Inbox → open LA2026/12721 (Action: Recommend Leave)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008560000,
+      "stop": 1781008611666
+    },
+    {
+      "name": "Downloaded attachment + ticked \"I acknowledge…\" (gates action buttons)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008611666,
+      "stop": 1781008663332
+    },
+    {
+      "name": "Recommend → item left Kavitha's inbox",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1781008663332,
+      "stop": 1781008714998
+    }
+  ]
+}

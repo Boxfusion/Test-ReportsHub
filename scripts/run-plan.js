@@ -67,10 +67,17 @@ function parseArgs(argv) {
 
 function runPlaywright(specPath, slug, grep) {
   const specArg = path.relative(HUB_ROOT, specPath).replace(/\\/g, '/');
-  const args = ['playwright', 'test', specArg, '--reporter=json,list,allure-playwright'];
+  // No --reporter override: rely on playwright.config.ts, whose reporters write to THIS project's
+  // folder (json/junit/html/allure under projects/<slug>/). A CLI --reporter would drop those
+  // per-project output paths and dump Allure into the hub-root allure-results instead.
+  const args = ['playwright', 'test', specArg];
   if (grep) { args.push('-g', grep); }
   const resultsJson = path.join(HUB_ROOT, 'projects', slug, 'test-results', 'results.json');
   if (fs.existsSync(resultsJson)) fs.unlinkSync(resultsJson);
+  // Clean this project's allure-results so the generated report reflects ONLY this run — the
+  // allure reporter appends, so without this a variant run would mix with the previous one.
+  const allureResults = path.join(HUB_ROOT, 'projects', slug, 'allure-results');
+  fs.rmSync(allureResults, { recursive: true, force: true });
   const res = spawnSync('npx', args, {
     cwd: HUB_ROOT,
     stdio: ['ignore', 'inherit', 'inherit'],
@@ -146,19 +153,22 @@ function planTitle(planPath) {
   return m ? m[1].trim() : path.basename(planPath, '.md');
 }
 
-function writeReport({ projectRoot, planPath, specPath, summary, overall, executionMode }) {
+function writeReport({ projectRoot, planPath, specPath, summary, overall, executionMode, runLabel, labelSlug }) {
   const day = todayStr();
   const reportsRoot = path.join(projectRoot, 'test-reports');
   const dir = path.join(reportsRoot, day);
   fs.mkdirSync(dir, { recursive: true });
   const name = path.basename(planPath, '.md');
-  const reportPath = path.join(dir, `${name}.md`);
+  // A run label (e.g. EVAL_CRITERIA=90/10) suffixes the filename so variant runs of the SAME plan
+  // coexist instead of overwriting each other, and is recorded in the report header below.
+  const reportPath = path.join(dir, `${labelSlug ? `${name}--${labelSlug}` : name}.md`);
   const planRel = path.relative(projectRoot, planPath).replace(/\\/g, '/');
   const specRel = path.relative(projectRoot, specPath).replace(/\\/g, '/');
 
   const lines = [];
-  lines.push(`# Report: ${planTitle(planPath)}`);
+  lines.push(`# Report: ${planTitle(planPath)}${runLabel ? ` — ${runLabel}` : ''}`);
   lines.push(`**Date:** ${utcStamp()}`);
+  if (runLabel) lines.push(`**Variant:** ${runLabel}`);
   lines.push(`**Plan:** ${planRel}`);
   lines.push(`**Spec:** ${specRel}`);
   lines.push(`**Execution Mode:** ${executionMode}`);
@@ -214,16 +224,22 @@ function main() {
   const overall = classifyOverall(summary);
   const executionMode = summary.failed === 0 ? 'playwright-script' : 'playwright-script (failures pending AI-repair)';
 
+  // Optional run label: differentiates variant runs of the same plan (e.g. EVAL_CRITERIA=90/10 vs
+  // 80/20). Falls back to EVAL_CRITERIA so bid-management variants are tagged without extra flags.
+  const runLabel = process.env.RUN_LABEL || process.env.EVAL_CRITERIA || '';
+  const labelSlug = runLabel.replace(/[^A-Za-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
   let reportPath = null;
   let allureReportPath = null;
   if (!opts.noReport) {
-    reportPath = writeReport({ projectRoot, planPath: planAbs, specPath, summary, overall, executionMode });
-    allureReportPath = buildAllureReport(slug);
+    reportPath = writeReport({ projectRoot, planPath: planAbs, specPath, summary, overall, executionMode, runLabel, labelSlug });
+    allureReportPath = buildAllureReport(slug, labelSlug);
   }
 
   emit({
     status: overall.toLowerCase(),
     project: slug,
+    variant: runLabel || null,
     planPath: planRel,
     specPath: path.relative(HUB_ROOT, specPath).replace(/\\/g, '/'),
     reportPath: reportPath ? path.relative(HUB_ROOT, reportPath).replace(/\\/g, '/') : null,
@@ -233,9 +249,11 @@ function main() {
   });
 }
 
-function buildAllureReport(slug) {
+function buildAllureReport(slug, labelSlug) {
   const resultsDir = path.join(HUB_ROOT, 'projects', slug, 'allure-results');
-  const reportDir = path.join(HUB_ROOT, 'projects', slug, 'allure-report');
+  // Per-variant report dir so variant runs (e.g. 90/10 vs 80/20) don't overwrite each other,
+  // matching the variant-suffixed markdown reports. Unlabelled runs keep the plain allure-report.
+  const reportDir = path.join(HUB_ROOT, 'projects', slug, labelSlug ? `allure-report--${labelSlug}` : 'allure-report');
   if (!fs.existsSync(resultsDir) || fs.readdirSync(resultsDir).length === 0) {
     return null;
   }

@@ -1,0 +1,44 @@
+{
+  "uuid": "e3a0592c-7c03-4e03-9e03-08c8a2e8e603",
+  "historyId": "e3a05b8c7e6deffaf8b66b1a12299e03",
+  "name": "TC-03: Approve with Full Pay (Naledi Khumalo, GOV022 — HOD)",
+  "fullName": "eLeave Family Responsibility E2E > TC-03: Approve with Full Pay (Naledi Khumalo, GOV022 — HOD)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1781091493000,
+  "stop": 1781091545000,
+  "labels": [
+    { "name": "parentSuite", "value": "HCM" },
+    { "name": "suite", "value": "eLeave — Family Responsibility (Death) Happy Path" },
+    { "name": "subSuite", "value": "Approve leave (#101991)" },
+    { "name": "feature", "value": "eLeave — SaGov Leave Application" },
+    { "name": "story", "value": "Family Responsibility (Death) E2E — LA2026/12814" }
+  ],
+  "parameters": [
+    { "name": "Ref No", "value": "LA2026/12814" },
+    { "name": "ADO Suite", "value": "Approve leave (#101991)" },
+    { "name": "ADO Plan", "value": "eLeave Smoke test (#101528)" }
+  ],
+  "steps": [
+    {
+      "name": "Login as GOV022 (view mode Latest); Inbox → open LA2026/12814 (Action: Approve Leave; received from Kavitha)",
+      "status": "passed", "stage": "finished",
+      "start": 1781091493000, "stop": 1781091525000
+    },
+    {
+      "name": "Downloaded attachment + ticked acknowledge (offered Not Approve / Approve without Pay / Approve with Full Pay)",
+      "status": "passed", "stage": "finished",
+      "start": 1781091525000, "stop": 1781091538000
+    },
+    {
+      "name": "Approve with Full Pay → item left Naledi's inbox (no backdated dialog — future date)",
+      "status": "passed", "stage": "finished",
+      "start": 1781091538000, "stop": 1781091543000
+    },
+    {
+      "name": "INFO (not a verified test case): system auto-moved item to \"GENERATE PERSALINPUT\"; PERSAL Transactions row Create Transaction 18/06→18/06. No DevOps test case for this step in plan #101528.",
+      "status": "passed", "stage": "finished",
+      "start": 1781091543000, "stop": 1781091545000
+    }
+  ]
+}
