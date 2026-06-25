@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-18T12:39:24.845Z",
+  "generated": "2026-06-23T13:05:24.636Z",
   "projects": [
     {
       "name": "dep",
@@ -35,9 +35,9 @@
       "summary": {
         "totalPlans": 24,
         "totalRuns": 37,
-        "last7Runs": 8,
-        "last7Pass": 2,
-        "last7PassPct": 25,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
         "failingFlows": 17,
         "lastRun": {
           "date": "2026-06-15",
@@ -57,13 +57,13 @@
       "health": "partial",
       "summary": {
         "totalPlans": 3,
-        "totalRuns": 4,
-        "last7Runs": 4,
-        "last7Pass": 1,
-        "last7PassPct": 25,
+        "totalRuns": 11,
+        "last7Runs": 11,
+        "last7Pass": 2,
+        "last7PassPct": 18,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-06-17",
+          "date": "2026-06-23",
           "result": "PARTIAL",
           "plan": "test-plans/administrative-functions/admin-functions-crud.md"
         }
@@ -120,8 +120,8 @@
   "totals": {
     "totalProjects": 5,
     "totalPlans": 35,
-    "totalRuns": 68,
-    "last7Runs": 22,
+    "totalRuns": 75,
+    "last7Runs": 21,
     "failingFlows": 19
   }
 }

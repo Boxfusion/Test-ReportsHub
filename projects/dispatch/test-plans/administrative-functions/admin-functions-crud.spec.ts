@@ -6,9 +6,13 @@
 // for each Administrative-Functions entity it opens the entity's grid by direct URL, searches for the
 // `Auto Test …` record we created, and asserts the row is present. The "Edit …" cases additionally
 // assert the edited value where it is visible in the grid (Site Type Levels 1->2; Point of Interest
-// contact -> 0987654321). It does NOT re-create records, to avoid duplicate test data.
+// contact -> 0987654321). Most entities are verify-only to avoid duplicate test data.
+//
+// EXCEPTION (Agent): the seed `autotestagent` no longer matches a grid cell, so "Add Agent" now
+// genuinely CREATES a fresh agent through the Add-New dialog (unique username per run) and then
+// searches + asserts it — selectors recorded live 2026-06-25 (RegisterAgent → 200).
 
-import { test, expect, Page } from '@playwright/test';
+import { test, expect, Page, Locator } from '@playwright/test';
 
 const BASE = 'https://ncdoh-dispatcher-adminportal-qa.shesha.app';
 const APP_URL = `${BASE}/login`;
@@ -49,6 +53,47 @@ async function expectRow(page: Page, cellText: string) {
   await expect(page.getByRole('cell', { name: cellText }).first()).toBeVisible({ timeout: 25000 });
 }
 
+// Open an AntD select (click the selector, not the readonly input that intercepts) and pick an option
+// by visible text from the rendered dropdown portal.
+async function pickAntdSelect(page: Page, sel: Locator, optionText: string) {
+  await sel.locator('.ant-select-selector').click();
+  await page
+    .locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden) .ant-select-item-option', { hasText: optionText })
+    .first()
+    .click({ timeout: 10000 });
+}
+
+// CREATE a brand-new agent via the Add-New dialog on the agent-roles-table grid (must already be on it).
+// Uses a unique username per run so re-runs never collide. Returns the username to search/verify.
+// Field order in the dialog: Name, Surname, Mobile Number, Email Address, Username, Roles*, Regions*,
+// Station(optional), Password*, Verify Password* — recorded live 2026-06-25.
+async function createAgentRecord(page: Page): Promise<string> {
+  const stamp = Date.now().toString().slice(-9);
+  const username = `qatestagent${stamp}`;
+  await page.getByRole('button', { name: /Add New/ }).click();
+  const modal = page.locator('.ant-modal-content');
+  await expect(modal).toBeVisible({ timeout: 15000 });
+
+  const tb = modal.getByRole('textbox');
+  await tb.nth(0).fill('QA Auto');                 // Name
+  await tb.nth(1).fill(`Agent ${stamp}`);          // Surname
+  await tb.nth(2).fill(`0${stamp}`);               // Mobile Number (unique per run — server enforces uniqueness)
+  await tb.nth(3).fill(`${username}@test.com`);    // Email Address
+  await tb.nth(4).fill(username);                  // Username (overwrites pre-filled admin)
+
+  // Roles* is a multi-select (stays open after pick) — close it before opening Regions.
+  await pickAntdSelect(page, modal.locator('.ant-select').nth(0), 'Call Taker');
+  await modal.locator('.ant-modal-title').click();
+  await pickAntdSelect(page, modal.locator('.ant-select').nth(1), 'Frances Baard');
+
+  await modal.getByRole('textbox', { name: 'Password * :', exact: true }).fill('P@ssw0rd123');
+  await modal.getByRole('textbox', { name: 'Verify Password * :' }).fill('P@ssw0rd123');
+
+  await modal.getByRole('button', { name: 'OK' }).click();
+  await expect(modal).toBeHidden({ timeout: 20000 });
+  return username;
+}
+
 interface Entity {
   key: string;        // display name used in the test titles
   form: string;       // Boxfusion.<module>/<form> grid path
@@ -56,6 +101,7 @@ interface Entity {
   cell: string;       // grid cell asserted (substring match)
   hasEdit: boolean;   // whether we performed an Edit on this entity today
   editCell?: string;  // exact grid value the edit established (asserted in the Edit case)
+  create?: (page: Page) => Promise<string>; // if set, "Add" genuinely creates and returns the term to verify
 }
 
 const ENTITIES: Entity[] = [
@@ -66,7 +112,7 @@ const ENTITIES: Entity[] = [
   // Agent & Resource grids split the person into Name / Surname columns (Name="Auto", Surname="Test
   // Agent"/"Test Resource"), so "Auto Test …" never matches one cell. Search + assert by the unique
   // username instead (Username column).
-  { key: 'Agent',            form: 'Boxfusion.Dispatcher/agent-roles-table',             term: 'autotestagent',               cell: 'autotestagent',               hasEdit: true },
+  { key: 'Agent',            form: 'Boxfusion.Dispatcher/agent-roles-table',             term: 'autotestagent',               cell: 'autotestagent',               hasEdit: true, create: createAgentRecord },
   { key: 'Resource',         form: 'Boxfusion.Ems/resources',                            term: 'autotestresource',            cell: 'autotestresource',            hasEdit: true },
   { key: 'Station',          form: 'Boxfusion.Dispatcher/dispatch-base',                 term: 'Auto Test Station',           cell: 'Auto Test Station',           hasEdit: true },
   { key: 'Crew',             form: 'Boxfusion.Ems/EmsDispatchTeam-Table',                term: 'AutoTestCrew',                cell: 'AutoTestCrew 003',            hasEdit: false },
@@ -87,9 +133,16 @@ test.describe('Administrative Functions — Create/Edit verification (2026-06-17
     test.describe(e.key, () => {
 
       test(`Add ${e.key}`, async ({ page }) => {
-        test.setTimeout(60_000);
+        test.setTimeout(90_000);
         await login(page);
         await gotoGrid(page, e.form);
+        if (e.create) {
+          // Genuinely create the record, then search + assert the new row.
+          const term = await e.create(page);
+          await searchGrid(page, term);
+          await expectRow(page, term);
+          return;
+        }
         await searchGrid(page, e.term);
         // ASSERT (BLOCKING) the record we created today is present in the grid.
         await expectRow(page, e.cell);

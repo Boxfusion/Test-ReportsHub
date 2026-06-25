@@ -22,10 +22,10 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 3,
-    "totalRuns": 4,
-    "last7Runs": 4,
-    "last7Pass": 1,
-    "last7PassPct": 25,
+    "totalRuns": 11,
+    "last7Runs": 11,
+    "last7Pass": 2,
+    "last7PassPct": 18,
     "failingFlows": 0,
     "passingFlows": 1,
     "partialFlows": 1,
@@ -33,57 +33,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-06-21",
+    "startDate": "2025-06-28",
     "days": [
-      {
-        "iso": "2025-06-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-06-28",
         "runs": 0,
@@ -2582,6 +2533,55 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-06-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-23",
+        "runs": 7,
+        "passed": 1,
+        "failed": 0,
+        "partial": 1
+      },
+      {
+        "iso": "2026-06-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2601,14 +2601,20 @@
           "rowStatus": "partial",
           "status": "PARTIAL",
           "last": {
-            "date": "2026-06-17",
+            "date": "2026-06-23",
             "result": "PARTIAL",
-            "duration": "18.4s",
+            "duration": "11.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-06-17/admin-functions-crud.md"
+            "reportHref": "test-reports/2026-06-23/admin-functions-crud.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-06-23",
+              "result": "PARTIAL",
+              "duration": "11.1s",
+              "variant": null
+            },
             {
               "date": "2026-06-17",
               "result": "PARTIAL",
@@ -2628,14 +2634,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-06-17",
+            "date": "2026-06-23",
             "result": "PASSED",
-            "duration": "10.8s",
+            "duration": "9.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-06-17/incident-types.md"
+            "reportHref": "test-reports/2026-06-23/incident-types.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-06-23",
+              "result": "PASSED",
+              "duration": "9.9s",
+              "variant": null
+            },
             {
               "date": "2026-06-17",
               "result": "PASSED",
@@ -2675,6 +2687,74 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-06-23",
+      "runs": [
+        {
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md",
+          "planDisplay": "administrative-functions/admin-functions-crud.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "11.1s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-23/admin-functions-crud.md"
+        },
+        {
+          "plan": "_Administrative Functions (ADO #65099 / suite #65100) — live create of NEW records per entity_",
+          "planDisplay": "_Administrative Functions (ADO #65099 / suite #65100) — live create of NEW records per entity_",
+          "variant": null,
+          "result": "PASSED — A NEW RECORD CREATED FOR EVERY TARGETED ENTITY",
+          "duration": "",
+          "mode": "ai-driven (live MCP)",
+          "reportHref": "test-reports/2026-06-23/admin-management-create-new-records.md"
+        },
+        {
+          "plan": "test-plans/operational/incident-creation.md (TC-01 continuation — dispatch leg)",
+          "planDisplay": "operational/incident-creation.md (TC-01 continuation — dispatch leg)",
+          "variant": null,
+          "result": "PARTIAL — TAKE OWNERSHIP PASSED; DISPATCH BLOCKED (NO ON-SHIFT/ONLINE RESOURCES — TELEPHONY/SHIFT GATING)",
+          "duration": "",
+          "mode": "ai-driven (live MCP)",
+          "reportHref": "test-reports/2026-06-23/dispatch-incident-take-ownership-qaagent.md"
+        },
+        {
+          "plan": "test-plans/operational/incident-creation.md (dispatch + status lifecycle leg)",
+          "planDisplay": "operational/incident-creation.md (dispatch + status lifecycle leg)",
+          "variant": null,
+          "result": "PASSED (DISPATCH + LIFECYCLE) · SMS NOTIFICATION NOT YET RECEIVED (OPEN ITEM)",
+          "duration": "",
+          "mode": "ai-driven (live MCP)",
+          "reportHref": "test-reports/2026-06-23/dispatch-vehicle-incident-585-sms.md"
+        },
+        {
+          "plan": "test-plans/operational/incident-creation.md (TC-01 + dispatch leg)",
+          "planDisplay": "operational/incident-creation.md (TC-01 + dispatch leg)",
+          "variant": null,
+          "result": "PASSED — INCIDENT CREATED, OWNED, VEHICLE DISPATCHED, AND FULL STATUS LIFECYCLE DRIVEN TO RELEASED",
+          "duration": "",
+          "mode": "ai-driven (live MCP)",
+          "reportHref": "test-reports/2026-06-23/dispatch-vehicle-incident-586.md"
+        },
+        {
+          "plan": "test-plans/operational/incident-creation.md (TC-01)",
+          "planDisplay": "operational/incident-creation.md (TC-01)",
+          "variant": null,
+          "result": "PASSED — INCIDENT CREATED (DISPATCH STEP OUT OF SCOPE, TELEPHONY-GATED)",
+          "duration": "",
+          "mode": "ai-driven (live MCP)",
+          "reportHref": "test-reports/2026-06-23/incident-creation-call-taker-qaagent.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/incident-types.md",
+          "planDisplay": "administrative-functions/incident-types.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "9.9s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-06-23/incident-types.md"
+        }
+      ]
+    },
     {
       "date": "2026-06-17",
       "runs": [
@@ -2717,5 +2797,5 @@
       ]
     }
   ],
-  "generated": "2026-06-18T12:39:24.522Z"
+  "generated": "2026-06-23T13:05:24.429Z"
 }
