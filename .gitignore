@@ -8,10 +8,9 @@ Thumbs.db
 # Playwright MCP browser snapshots
 .playwright-mcp/
 
-# Allure raw results & generated reports (root and nested under projects/)
+# Allure raw results (intermediate). NOTE: generated allure-report/ dirs are
+# intentionally tracked — they are the published artefacts served via GitHub Pages.
 allure-results/
-allure-report/
-allure-report--*/
 
 # Playwright run output
 playwright-report/

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T13:05:24.636Z",
+  "generated": "2026-06-19T06:21:43.269Z",
   "projects": [
     {
       "name": "dep",
@@ -35,9 +35,9 @@
       "summary": {
         "totalPlans": 24,
         "totalRuns": 37,
-        "last7Runs": 0,
+        "last7Runs": 4,
         "last7Pass": 0,
-        "last7PassPct": null,
+        "last7PassPct": 0,
         "failingFlows": 17,
         "lastRun": {
           "date": "2026-06-15",
@@ -57,13 +57,13 @@
       "health": "partial",
       "summary": {
         "totalPlans": 3,
-        "totalRuns": 11,
-        "last7Runs": 11,
-        "last7Pass": 2,
-        "last7PassPct": 18,
+        "totalRuns": 4,
+        "last7Runs": 4,
+        "last7Pass": 1,
+        "last7PassPct": 25,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-06-23",
+          "date": "2026-06-17",
           "result": "PARTIAL",
           "plan": "test-plans/administrative-functions/admin-functions-crud.md"
         }
@@ -102,16 +102,16 @@
       "description": "Hybrid Markdown + Playwright test reports for the Invoice Tracking (ITS) Admin Portal.",
       "health": "healthy",
       "summary": {
-        "totalPlans": 1,
-        "totalRuns": 10,
-        "last7Runs": 10,
-        "last7Pass": 6,
-        "last7PassPct": 60,
+        "totalPlans": 2,
+        "totalRuns": 11,
+        "last7Runs": 11,
+        "last7Pass": 7,
+        "last7PassPct": 64,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-06-18",
+          "date": "2026-06-19",
           "result": "PASSED",
-          "plan": "test-plans/invoice-process/bas.md (TC-03)"
+          "plan": "test-plans/invoice-process/bas.md"
         }
       },
       "href": "projects/invoice-tracking/index.html"
@@ -119,9 +119,9 @@
   ],
   "totals": {
     "totalProjects": 5,
-    "totalPlans": 35,
-    "totalRuns": 75,
-    "last7Runs": 21,
+    "totalPlans": 36,
+    "totalRuns": 69,
+    "last7Runs": 19,
     "failingFlows": 19
   }
 }
