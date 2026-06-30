@@ -4,7 +4,8 @@
 **Plan:** _Dispatcher console — operational incident logging (exploratory)_
 **Spec:** _none — live MCP-driven execution (headed)_
 **Execution Mode:** mcp-live (headed)
-**Result:** PASSED (incident created) — dispatch step BLOCKED (telephony-gated)
+**Result:** PASSED
+**Summary:** incident created — dispatch step BLOCKED (telephony-gated
 
 | App | URL | Environment |
 |-----|-----|-------------|

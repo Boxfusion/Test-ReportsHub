@@ -23,7 +23,7 @@ record and asserting the row (and, where the edit changed a grid-visible field, 
 - **Vehicle Type** — Add (`Auto Test Ambulance` present) · Edit (persists after marker-URL edit).
 - **Device** — Add (`Auto Test Device` present) · Edit (persists).
 - **Vehicle** — Add (`AUTO TEST NC` present) · Edit (persists).
-- **Agent** — Add (`Auto Test Agent` present) · Edit (persists; Station set on edit).
+- **Agent** — Add (**creates a fresh agent** via Add-New: Name/Surname/Mobile/Email/Username + Role *Call Taker* + Region *Frances Baard* + Password; unique username/mobile/email per run, then searches + asserts the new row — `RegisterAgent` 200) · Edit (persists; Station set on edit).
 - **Resource** — Add (`Auto Test Resource` present) · Edit (persists).
 - **Station** — Add (`Auto Test Station` present) · Edit (persists).
 - **Crew** — Add (`AutoTestCrew 003` present).

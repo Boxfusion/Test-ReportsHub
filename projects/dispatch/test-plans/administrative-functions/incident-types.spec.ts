@@ -102,15 +102,23 @@ test.describe('ADMIN-2.2 — Incident Types', () => {
     await login(page);
     await gotoIncidentTypes(page);
     // STEP: the live page uses an INLINE add-row (plus-circle), not an "Add New Record" dialog.
-    // Fill the add-row (Triage Level select, Call Types text, optional Resolution SLA) then add.
+    // Reconciled live 2026-06-23: fill the add-row (Triage Level combobox, Call Types textbox,
+    // Resolution SLA spinbutton) then commit with the plus-circle. Unique name keeps re-runs idempotent.
+    const callType = `Broken Leg ${Date.now()}`;
     const addRow = page.getByRole('row').filter({ has: page.getByRole('button', { name: 'plus-circle' }) });
-    // TODO[selector]: confirm the add-row field order/locators live, then set Triage Level + Call Type.
-    // await addRow.getByRole('combobox').click(); /* pick a triage level */
-    // await addRow.getByRole('textbox').fill(`Automated Call Type ${Date.now()}`);
+    // STEP: pick Triage Level (dropdown options expose a title attr, e.g. P2-Amber)
+    await addRow.getByRole('combobox').click();
+    await page.getByTitle('P2-Amber').click();
+    // STEP: type the Call Type name
+    await addRow.getByRole('textbox').fill(callType);
+    // STEP: set Resolution SLA
+    await addRow.getByRole('spinbutton').fill('45');
+    // STEP: commit the new row
     await addRow.getByRole('button', { name: 'plus-circle' }).click();
+    // STEP: verify via search
+    await searchGrid(page, callType);
     // ASSERT (BLOCKING) the new incident type appears in the table
-    // TODO[assertion]: assert the newly-added Call Type row is present after save.
-    await expect(page.getByRole('table')).toBeVisible();
+    await expect(page.getByRole('cell', { name: callType }).first()).toBeVisible({ timeout: 15000 });
   });
 
   // ADO Test Case #65705: https://dev.azure.com/boxfusion/pd-dispatcher-V2/_workitems/edit/65705
