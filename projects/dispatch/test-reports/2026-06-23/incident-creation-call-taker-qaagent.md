@@ -4,7 +4,8 @@
 **Plan:** test-plans/operational/incident-creation.md (TC-01)
 **Spec:** n/a — driven live via Playwright MCP (headed)
 **Execution Mode:** ai-driven (live MCP)
-**Result:** PASSED — incident created (dispatch step out of scope, telephony-gated)
+**Result:** PASSED
+**Summary:** incident created (dispatch step out of scope, telephony-gated
 **Environment:** QA — https://ncdoh-dispatcher-adminportal-qa.shesha.app/
 
 ## Scenario

@@ -4,7 +4,8 @@
 **Plan:** _Administrative Functions (ADO plan #65099 / suite #65100) — exploratory create+edit smoke_
 **Spec:** _none — live MCP-driven execution (no paired .spec.ts)_
 **Execution Mode:** mcp-live (headed)
-**Result:** PASSED (1 app defect logged — see Bugs)
+**Result:** PASSED
+**Summary:** 1 app defect logged — see Bugs
 
 | App | URL | Environment |
 |-----|-----|-------------|

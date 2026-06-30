@@ -4,7 +4,8 @@
 **Plan:** _Administrative Functions (ADO #65099 / suite #65100) — live create of NEW records per entity_
 **Spec:** n/a — driven live via Playwright MCP (headed, user-observed)
 **Execution Mode:** ai-driven (live MCP)
-**Result:** PASSED — a new record created for every targeted entity
+**Result:** PASSED
+**Summary:** a new record created for every targeted entity
 **Environment:** QA — https://ncdoh-dispatcher-adminportal-qa.shesha.app/ (Admin)
 
 ## Context

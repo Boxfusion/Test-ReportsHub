@@ -4,7 +4,8 @@
 **Plan:** Administrative Functions CRUD (ADO suite "2. Administrative Functions", plan #65099) — create leg
 **Spec:** n/a — driven live via Playwright MCP
 **Execution Mode:** ai-driven (live MCP)
-**Result:** PASSED — 11/11 record types created, every field populated (incl. non-mandatory)
+**Result:** PASSED
+**Summary:** 11/11 record types created, every field populated (incl. non-mandatory
 **Environment:** QA — https://ncdoh-dispatcher-adminportal-qa.shesha.app/ (logged in as **Admin**)
 
 ## Scenario

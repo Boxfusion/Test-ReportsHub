@@ -4,7 +4,8 @@
 **Plan:** test-plans/operational/incident-dispatch-lifecycle.md (reusing the 586/588 record set)
 **Spec:** n/a — driven live via Playwright MCP
 **Execution Mode:** ai-driven (live MCP)
-**Result:** PASSED — incident created, owned, dispatched, **full status lifecycle driven Crew Informed → Released**, incident auto-closed
+**Result:** PASSED
+**Summary:** incident created, owned, dispatched, **full status lifecycle driven Crew Informed → Released**, incident auto-closed
 **Environment:** QA — https://ncdoh-dispatcher-adminportal-qa.shesha.app/
 
 ## Scenario

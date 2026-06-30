@@ -4,7 +4,8 @@
 **Plan:** test-plans/operational/incident-creation.md (TC-01 + dispatch leg)
 **Spec:** n/a — driven live via Playwright MCP (headed)
 **Execution Mode:** ai-driven (live MCP)
-**Result:** PASSED — incident created, owned, vehicle dispatched, and full status lifecycle driven to Released
+**Result:** PASSED
+**Summary:** incident created, owned, vehicle dispatched, and full status lifecycle driven to Released
 **Environment:** QA — https://ncdoh-dispatcher-adminportal-qa.shesha.app/
 
 ## Scenario

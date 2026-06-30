@@ -21,69 +21,20 @@
   ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 3,
-    "totalRuns": 11,
-    "last7Runs": 11,
-    "last7Pass": 2,
-    "last7PassPct": 18,
+    "totalPlans": 15,
+    "totalRuns": 19,
+    "last7Runs": 8,
+    "last7Pass": 7,
+    "last7PassPct": 88,
     "failingFlows": 0,
-    "passingFlows": 1,
-    "partialFlows": 1,
-    "neverFlows": 1
+    "passingFlows": 10,
+    "partialFlows": 2,
+    "neverFlows": 12
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-06-28",
+    "startDate": "2025-07-05",
     "days": [
-      {
-        "iso": "2025-06-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-07-05",
         "runs": 0,
@@ -2516,7 +2467,7 @@
       {
         "iso": "2026-06-17",
         "runs": 4,
-        "passed": 1,
+        "passed": 3,
         "failed": 0,
         "partial": 1
       },
@@ -2558,26 +2509,75 @@
       {
         "iso": "2026-06-23",
         "runs": 7,
-        "passed": 1,
+        "passed": 5,
+        "failed": 0,
+        "partial": 2
+      },
+      {
+        "iso": "2026-06-24",
+        "runs": 4,
+        "passed": 3,
         "failed": 0,
         "partial": 1
       },
       {
-        "iso": "2026-06-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
         "iso": "2026-06-25",
-        "runs": 0,
-        "passed": 0,
+        "runs": 3,
+        "passed": 3,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-06-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-29",
+        "runs": 1,
+        "passed": 1,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-03",
         "runs": 0,
         "passed": 0,
         "failed": 0,
@@ -2597,18 +2597,29 @@
           "spec": "test-plans/administrative-functions/admin-functions-crud.spec.ts",
           "specHref": "test-plans/administrative-functions/admin-functions-crud.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "partial",
           "status": "PARTIAL",
           "last": {
-            "date": "2026-06-23",
+            "date": "2026-06-24",
             "result": "PARTIAL",
-            "duration": "11.1s",
+            "duration": "12.0s",
             "variant": null,
-            "reportHref": "test-reports/2026-06-23/admin-functions-crud.md"
+            "reportHref": "test-reports/2026-06-24/admin-functions-crud.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-06-24",
+              "result": "PARTIAL",
+              "duration": "12.0s",
+              "variant": null
+            },
             {
               "date": "2026-06-23",
               "result": "PARTIAL",
@@ -2634,14 +2645,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-06-23",
+            "date": "2026-06-24",
             "result": "PASSED",
-            "duration": "9.9s",
+            "duration": "12.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-06-23/incident-types.md"
+            "reportHref": "test-reports/2026-06-24/incident-types.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-06-24",
+              "result": "PASSED",
+              "duration": "12.2s",
+              "variant": null
+            },
             {
               "date": "2026-06-23",
               "result": "PASSED",
@@ -2656,19 +2673,202 @@
             }
           ],
           "bugs": []
-        }
-      ]
-    },
-    {
-      "key": "operational",
-      "title": "Operational",
-      "stripPrefix": "test-plans/operational/",
-      "plans": [
+        },
         {
-          "plan": "test-plans/operational/incident-creation.md",
-          "planHref": "test-plans/operational/incident-creation.md",
-          "spec": "test-plans/operational/incident-creation.spec.ts",
-          "specHref": "test-plans/operational/incident-creation.spec.ts",
+          "plan": "test-plans/administrative-functions/agents.md",
+          "planHref": "test-plans/administrative-functions/agents.md",
+          "spec": "test-plans/administrative-functions/agents.spec.ts",
+          "specHref": "test-plans/administrative-functions/agents.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/crews.md",
+          "planHref": "test-plans/administrative-functions/crews.md",
+          "spec": "test-plans/administrative-functions/crews.spec.ts",
+          "specHref": "test-plans/administrative-functions/crews.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/devices.md",
+          "planHref": "test-plans/administrative-functions/devices.md",
+          "spec": "test-plans/administrative-functions/devices.spec.ts",
+          "specHref": "test-plans/administrative-functions/devices.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/points-of-interest.md",
+          "planHref": "test-plans/administrative-functions/points-of-interest.md",
+          "spec": "test-plans/administrative-functions/points-of-interest.spec.ts",
+          "specHref": "test-plans/administrative-functions/points-of-interest.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/resources.md",
+          "planHref": "test-plans/administrative-functions/resources.md",
+          "spec": "test-plans/administrative-functions/resources.spec.ts",
+          "specHref": "test-plans/administrative-functions/resources.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/shift-assignment.md",
+          "planHref": "test-plans/administrative-functions/shift-assignment.md",
+          "spec": "test-plans/administrative-functions/shift-assignment.spec.ts",
+          "specHref": "test-plans/administrative-functions/shift-assignment.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/shifts.md",
+          "planHref": "test-plans/administrative-functions/shifts.md",
+          "spec": "test-plans/administrative-functions/shifts.spec.ts",
+          "specHref": "test-plans/administrative-functions/shifts.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/site-types.md",
+          "planHref": "test-plans/administrative-functions/site-types.md",
+          "spec": "test-plans/administrative-functions/site-types.spec.ts",
+          "specHref": "test-plans/administrative-functions/site-types.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/stations.md",
+          "planHref": "test-plans/administrative-functions/stations.md",
+          "spec": "test-plans/administrative-functions/stations.spec.ts",
+          "specHref": "test-plans/administrative-functions/stations.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/vehicle-types.md",
+          "planHref": "test-plans/administrative-functions/vehicle-types.md",
+          "spec": "test-plans/administrative-functions/vehicle-types.spec.ts",
+          "specHref": "test-plans/administrative-functions/vehicle-types.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/vehicles.md",
+          "planHref": "test-plans/administrative-functions/vehicles.md",
+          "spec": "test-plans/administrative-functions/vehicles.spec.ts",
+          "specHref": "test-plans/administrative-functions/vehicles.spec.ts",
           "canRun": true,
           "badges": [
             {
@@ -2684,9 +2884,153 @@
           "bugs": []
         }
       ]
+    },
+    {
+      "key": "operational",
+      "title": "Operational",
+      "stripPrefix": "test-plans/operational/",
+      "plans": [
+        {
+          "plan": "test-plans/operational/incident-creation.md",
+          "planHref": "test-plans/operational/incident-creation.md",
+          "spec": "test-plans/operational/incident-creation.spec.ts",
+          "specHref": "test-plans/operational/incident-creation.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-06-24",
+            "result": "PASSED",
+            "duration": "45.7s",
+            "variant": null,
+            "reportHref": "test-reports/2026-06-24/incident-creation.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-06-24",
+              "result": "PASSED",
+              "duration": "45.7s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/operational/incident-dispatch-lifecycle.md",
+          "planHref": "test-plans/operational/incident-dispatch-lifecycle.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            },
+            {
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        }
+      ]
     }
   ],
   "timeline": [
+    {
+      "date": "2026-06-29",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "schedule-transfer-actions.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "ai-driven (live MCP)",
+          "reportHref": "test-reports/2026-06-29/schedule-transfer-actions.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-25",
+      "runs": [
+        {
+          "plan": "Administrative Functions CRUD (ADO suite \"2. Administrative Functions\", plan #65099) — create leg",
+          "planDisplay": "Administrative Functions CRUD (ADO suite \"2. Administrative Functions\", plan #65099) — create leg",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "ai-driven (live MCP)",
+          "reportHref": "test-reports/2026-06-25/admin-functions-create-all-records.md"
+        },
+        {
+          "plan": "test-plans/operational/incident-dispatch-lifecycle.md (reusing the 586/588 record set)",
+          "planDisplay": "operational/incident-dispatch-lifecycle.md (reusing the 586/588 record set)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "ai-driven (live MCP)",
+          "reportHref": "test-reports/2026-06-25/incident-591-dispatch-lifecycle.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "schedule-transfer.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "ai-driven (live MCP)",
+          "reportHref": "test-reports/2026-06-25/schedule-transfer.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "runs": [
+        {
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md",
+          "planDisplay": "administrative-functions/admin-functions-crud.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "12.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-06-24/admin-functions-crud.md"
+        },
+        {
+          "plan": "test-plans/operational/incident-creation.md (TC-01 + dispatch leg)",
+          "planDisplay": "operational/incident-creation.md (TC-01 + dispatch leg)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "ai-driven (live MCP)",
+          "reportHref": "test-reports/2026-06-24/incident-588-dispatch-sms.md"
+        },
+        {
+          "plan": "test-plans/operational/incident-creation.md",
+          "planDisplay": "operational/incident-creation.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "45.7s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-06-24/incident-creation.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/incident-types.md",
+          "planDisplay": "administrative-functions/incident-types.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.2s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-06-24/incident-types.md"
+        }
+      ]
+    },
     {
       "date": "2026-06-23",
       "runs": [
@@ -2703,7 +3047,7 @@
           "plan": "_Administrative Functions (ADO #65099 / suite #65100) — live create of NEW records per entity_",
           "planDisplay": "_Administrative Functions (ADO #65099 / suite #65100) — live create of NEW records per entity_",
           "variant": null,
-          "result": "PASSED — A NEW RECORD CREATED FOR EVERY TARGETED ENTITY",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP)",
           "reportHref": "test-reports/2026-06-23/admin-management-create-new-records.md"
@@ -2712,7 +3056,7 @@
           "plan": "test-plans/operational/incident-creation.md (TC-01 continuation — dispatch leg)",
           "planDisplay": "operational/incident-creation.md (TC-01 continuation — dispatch leg)",
           "variant": null,
-          "result": "PARTIAL — TAKE OWNERSHIP PASSED; DISPATCH BLOCKED (NO ON-SHIFT/ONLINE RESOURCES — TELEPHONY/SHIFT GATING)",
+          "result": "PARTIAL",
           "duration": "",
           "mode": "ai-driven (live MCP)",
           "reportHref": "test-reports/2026-06-23/dispatch-incident-take-ownership-qaagent.md"
@@ -2721,7 +3065,7 @@
           "plan": "test-plans/operational/incident-creation.md (dispatch + status lifecycle leg)",
           "planDisplay": "operational/incident-creation.md (dispatch + status lifecycle leg)",
           "variant": null,
-          "result": "PASSED (DISPATCH + LIFECYCLE) · SMS NOTIFICATION NOT YET RECEIVED (OPEN ITEM)",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP)",
           "reportHref": "test-reports/2026-06-23/dispatch-vehicle-incident-585-sms.md"
@@ -2730,7 +3074,7 @@
           "plan": "test-plans/operational/incident-creation.md (TC-01 + dispatch leg)",
           "planDisplay": "operational/incident-creation.md (TC-01 + dispatch leg)",
           "variant": null,
-          "result": "PASSED — INCIDENT CREATED, OWNED, VEHICLE DISPATCHED, AND FULL STATUS LIFECYCLE DRIVEN TO RELEASED",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP)",
           "reportHref": "test-reports/2026-06-23/dispatch-vehicle-incident-586.md"
@@ -2739,7 +3083,7 @@
           "plan": "test-plans/operational/incident-creation.md (TC-01)",
           "planDisplay": "operational/incident-creation.md (TC-01)",
           "variant": null,
-          "result": "PASSED — INCIDENT CREATED (DISPATCH STEP OUT OF SCOPE, TELEPHONY-GATED)",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP)",
           "reportHref": "test-reports/2026-06-23/incident-creation-call-taker-qaagent.md"
@@ -2771,7 +3115,7 @@
           "plan": "_Administrative Functions (ADO plan #65099 / suite #65100) — exploratory create+edit smoke_",
           "planDisplay": "_Administrative Functions (ADO plan #65099 / suite #65100) — exploratory create+edit smoke_",
           "variant": null,
-          "result": "PASSED (1 APP DEFECT LOGGED — SEE BUGS)",
+          "result": "PASSED",
           "duration": "",
           "mode": "mcp-live (headed)",
           "reportHref": "test-reports/2026-06-17/administrative-functions-crud-smoke.md"
@@ -2780,7 +3124,7 @@
           "plan": "_Dispatcher console — operational incident logging (exploratory)_",
           "planDisplay": "_Dispatcher console — operational incident logging (exploratory)_",
           "variant": null,
-          "result": "PASSED (INCIDENT CREATED) — DISPATCH STEP BLOCKED (TELEPHONY-GATED)",
+          "result": "PASSED",
           "duration": "",
           "mode": "mcp-live (headed)",
           "reportHref": "test-reports/2026-06-17/incident-creation-call-taker.md"
@@ -2797,5 +3141,5 @@
       ]
     }
   ],
-  "generated": "2026-06-23T13:05:24.429Z"
+  "generated": "2026-06-30T07:22:06.439Z"
 }

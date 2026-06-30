@@ -4,7 +4,8 @@
 **Plan:** test-plans/operational/incident-creation.md (TC-01 + dispatch leg)
 **Spec:** n/a — driven live via Playwright MCP
 **Execution Mode:** ai-driven (live MCP)
-**Result:** PASSED (incident created, owned, dispatched) · SMS to caller/responder NOT received (open item) · resource auto-released
+**Result:** PASSED
+**Summary:** incident created, owned, dispatched · SMS to caller/responder NOT received (open item) · resource auto-released
 **Environment:** QA — https://ncdoh-dispatcher-adminportal-qa.shesha.app/
 
 ## Scenario

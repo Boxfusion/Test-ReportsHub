@@ -4,7 +4,8 @@
 **Plan:** test-plans/operational/incident-creation.md (TC-01 continuation — dispatch leg)
 **Spec:** n/a — driven live via Playwright MCP (headed)
 **Execution Mode:** ai-driven (live MCP)
-**Result:** PARTIAL — Take Ownership PASSED; Dispatch BLOCKED (no on-shift/online resources — telephony/shift gating)
+**Result:** PARTIAL
+**Summary:** Take Ownership PASSED; Dispatch BLOCKED (no on-shift/online resources — telephony/shift gating
 **Environment:** QA — https://ncdoh-dispatcher-adminportal-qa.shesha.app/
 
 ## Scenario

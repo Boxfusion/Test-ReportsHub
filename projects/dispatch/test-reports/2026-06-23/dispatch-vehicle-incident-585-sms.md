@@ -4,7 +4,8 @@
 **Plan:** test-plans/operational/incident-creation.md (dispatch + status lifecycle leg)
 **Spec:** n/a — driven live via Playwright MCP (headed)
 **Execution Mode:** ai-driven (live MCP)
-**Result:** PASSED (dispatch + lifecycle) · SMS notification NOT yet received (open item)
+**Result:** PASSED
+**Summary:** dispatch + lifecycle · SMS notification NOT yet received (open item
 **Environment:** QA — https://ncdoh-dispatcher-adminportal-qa.shesha.app/
 
 ## Scenario
