@@ -178,9 +178,10 @@ test.describe('ADMIN-2.13 — Crews', () => {
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     // STEP: MODIFY Crew Number; re-supply Crew Members + Crew Skill Type (edit form doesn't prefill them)
     const num = crewNumberField(page);
-    await num.click();
-    await num.press('End');
-    await num.pressSequentially(' x');
+    // Bounded toggle (not an unbounded append): appending each run eventually overflows the
+    // field's server-side length limit → UpdateCrew 500. Oscillate a ' x' suffix instead.
+    const _cur = await num.inputValue();
+    await num.fill(_cur.endsWith(' x') ? _cur.slice(0, -2) : _cur + ' x');
     await pickFirstVisible(page, 'Crew Members');
     await pickFirstVisible(page, 'Crew Skill Type');
     await num.click(); // blur any open dropdown before saving
@@ -206,9 +207,10 @@ test.describe('ADMIN-2.13 — Crews', () => {
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     // STEP: MODIFY Crew Number; re-supply Crew Members + Crew Skill Type (edit form doesn't prefill them)
     const num = crewNumberField(page);
-    await num.click();
-    await num.press('End');
-    await num.pressSequentially(' x');
+    // Bounded toggle (not an unbounded append): appending each run eventually overflows the
+    // field's server-side length limit → UpdateCrew 500. Oscillate a ' x' suffix instead.
+    const _cur = await num.inputValue();
+    await num.fill(_cur.endsWith(' x') ? _cur.slice(0, -2) : _cur + ' x');
     await pickFirstVisible(page, 'Crew Members');
     await pickFirstVisible(page, 'Crew Skill Type');
     await num.click(); // blur any open dropdown before saving

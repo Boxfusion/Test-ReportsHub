@@ -117,7 +117,9 @@ const ENTITIES: Entity[] = [
   { key: 'Station',          form: 'Boxfusion.Dispatcher/dispatch-base',                 term: 'Auto Test Station',           cell: 'Auto Test Station',           hasEdit: true },
   { key: 'Crew',             form: 'Boxfusion.Ems/EmsDispatchTeam-Table',                term: 'AutoTestCrew',                cell: 'AutoTestCrew 003',            hasEdit: false },
   { key: 'Shift',            form: 'boxfusion.shiftmanagement/shift-table',              term: 'Auto Test Shift',             cell: 'Auto Test Shift',             hasEdit: true },
-  { key: 'Shift Assignment', form: 'Boxfusion.Dispatcher/dispatch-shift-assignment-table', term: 'AUTO TEST NC',             cell: 'Auto Test Shift',             hasEdit: true },
+  // The shift-assignment quick-search does NOT index the vehicle column ('AUTO TEST NC' → 0 hits);
+  // it matches the shift/resource/station columns. Search by the assignment's resource instead.
+  { key: 'Shift Assignment', form: 'Boxfusion.Dispatcher/dispatch-shift-assignment-table', term: 'Auto Test Resource',      cell: 'Auto Test Shift',             hasEdit: true },
   { key: 'Site Type',        form: 'Boxfusion.Dispatcher/site-types',                    term: 'Auto Test Site Type',         cell: 'Auto Test Site Type',         hasEdit: true, editCell: '2' },
   { key: 'Point of Interest',form: 'Boxfusion.Ems/emergency-site',                       term: 'Auto Test Point of Interest', cell: 'Auto Test Point of Interest', hasEdit: true, editCell: '0987654321' },
 ];

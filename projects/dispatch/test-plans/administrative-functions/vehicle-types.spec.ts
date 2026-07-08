@@ -214,9 +214,10 @@ test.describe('ADMIN-2.5 — Vehicle Types', () => {
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     // STEP: MODIFY a field (append to the first enabled text input on the edit form)
     const field = detailView(page).locator('input.ant-input:not([disabled])').first();
-    await field.click();
-    await field.press('End');
-    await field.pressSequentially(' x');
+    // Bounded toggle (not an unbounded append): appending each run eventually overflows the
+    // field's server-side length limit → 500. Oscillate a ' x' suffix instead.
+    const _cur = await field.inputValue();
+    await field.fill(_cur.endsWith(' x') ? _cur.slice(0, -2) : _cur + ' x');
     // STEP: CLICK Save
     await toolBtn(page, /^Save$/).click();
     // ASSERT (BLOCKING) the edit saved (returns to view mode — Edit visible again, no error)

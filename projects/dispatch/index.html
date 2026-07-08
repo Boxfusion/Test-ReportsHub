@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Test Reports Hub · Boxfusion</title>
+<title>NC Dispatch · Test Reports Hub</title>
 <link rel="stylesheet" href="../../assets/dashboard.css" />
 </head>
 <body>
@@ -19,14 +19,963 @@
     </div>
   </header>
 
-  <main class="container" id="dashboard-root">
-    <div class="dashboard-loading">Loading dashboard…</div>
+  <main class="container">
+    <div class="crumbs"><a href="../../index.html">Projects</a> / <span>NC Dispatch</span></div>
+
+    <div class="project-header">
+      <div>
+        <div class="title-row">
+          <h1>NC Dispatch</h1>
+          <span class="env-chip">QA</span>
+        </div>
+        <div class="subtitle"><a href="https://ncdoh-dispatcher-adminportal-qa.shesha.app/login" target="_blank" rel="noreferrer">https://ncdoh-dispatcher-adminportal-qa.shesha.app/login</a></div>
+      </div>
+      <div class="actions">
+        <button type="button" id="allure-toggle" class="btn btn-primary">Open Allure visualisation<span class="meta">run-by-run breakdown</span></button>
+      </div>
+    </div>
+
+    
+    <div id="allure-panel" class="allure-modal" aria-hidden="true" role="dialog" aria-label="Allure visualisation">
+      <div class="dialog">
+        <div class="head">
+          <span class="title">Allure visualisation</span>
+          <span class="right">
+            <a class="popout" href="allure-report/index.html" target="_blank" rel="noopener">open in new tab ↗</a>
+            <button type="button" class="close" id="allure-close">Close (Esc)</button>
+          </span>
+        </div>
+        <div class="allure-frame-wrap">
+          <div class="loader" id="allure-loader">Loading Allure report (3MB)…</div>
+          <iframe id="allure-frame" title="Allure report" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <section class="kpis" aria-label="Overview">
+      <div class="kpi"><span class="label">Test flows</span><span class="num">15</span><span class="meta">tracked plans</span></div>
+      <div class="kpi"><span class="label">Total runs</span><span class="num">47</span><span class="meta">all time</span></div>
+      <div class="kpi kpi-good"><span class="label">7-day pass rate</span><span class="num">86%</span><span class="meta">28 runs in the last 7 days</span></div>
+      <div class="kpi kpi-good"><span class="label">Currently failing</span><span class="num">0</span><span class="meta">flows with a failing last run</span></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Activity — last 52 weeks</h2>
+        <div class="legend">
+          <div class="group"><span>less</span>
+            <span class="swatch" style="background:#ebedf0"></span>
+            <span class="swatch" style="background:#9be9a8"></span>
+            <span class="swatch" style="background:#40c463"></span>
+            <span class="swatch" style="background:#30a14e"></span>
+            <span class="swatch" style="background:#216e39"></span>
+            <span>more</span>
+          </div>
+          <div class="group">fail
+            <span class="swatch" style="background:#ef4444"></span>
+            <span class="swatch" style="background:#b91c1c"></span>
+            <span class="swatch" style="background:#7f1d1d"></span>
+          </div>
+          <div class="group">partial
+            <span class="swatch" style="background:#f59e0b"></span>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+    <svg class="heatmap" viewBox="0 0 738 110" preserveAspectRatio="xMidYMid meet">
+      <g transform="translate(36, 14)">
+        <text x="0" y="10" class="month">Jul</text><text x="42" y="10" class="month">Aug</text><text x="112" y="10" class="month">Sep</text><text x="168" y="10" class="month">Oct</text><text x="224" y="10" class="month">Nov</text><text x="294" y="10" class="month">Dec</text><text x="350" y="10" class="month">Jan</text><text x="406" y="10" class="month">Feb</text><text x="462" y="10" class="month">Mar</text><text x="532" y="10" class="month">Apr</text><text x="588" y="10" class="month">May</text><text x="658" y="10" class="month">Jun</text><text x="714" y="10" class="month">Jul</text>
+        <g transform="translate(0, 16)">
+          <text x="-30" y="24" class="day">Mon</text><text x="-30" y="52" class="day">Wed</text><text x="-30" y="80" class="day">Fri</text>
+          <rect x="0" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-12 — no runs</title></rect><rect x="14" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-19 — no runs</title></rect><rect x="28" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-26 — no runs</title></rect><rect x="42" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-02 — no runs</title></rect><rect x="56" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-09 — no runs</title></rect><rect x="70" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-16 — no runs</title></rect><rect x="84" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-23 — no runs</title></rect><rect x="98" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-30 — no runs</title></rect><rect x="112" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-06 — no runs</title></rect><rect x="126" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-13 — no runs</title></rect><rect x="140" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-20 — no runs</title></rect><rect x="154" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-27 — no runs</title></rect><rect x="168" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-04 — no runs</title></rect><rect x="182" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-11 — no runs</title></rect><rect x="196" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-18 — no runs</title></rect><rect x="210" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-25 — no runs</title></rect><rect x="224" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-01 — no runs</title></rect><rect x="238" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-08 — no runs</title></rect><rect x="252" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-15 — no runs</title></rect><rect x="266" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-22 — no runs</title></rect><rect x="280" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-29 — no runs</title></rect><rect x="294" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-06 — no runs</title></rect><rect x="308" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-13 — no runs</title></rect><rect x="322" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-20 — no runs</title></rect><rect x="336" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-27 — no runs</title></rect><rect x="350" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-03 — no runs</title></rect><rect x="364" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-10 — no runs</title></rect><rect x="378" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-17 — no runs</title></rect><rect x="392" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-24 — no runs</title></rect><rect x="406" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-31 — no runs</title></rect><rect x="420" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-07 — no runs</title></rect><rect x="434" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-14 — no runs</title></rect><rect x="448" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-21 — no runs</title></rect><rect x="462" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-28 — no runs</title></rect><rect x="476" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-07 — no runs</title></rect><rect x="490" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-14 — no runs</title></rect><rect x="504" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-21 — no runs</title></rect><rect x="518" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-28 — no runs</title></rect><rect x="532" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-04 — no runs</title></rect><rect x="546" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-11 — no runs</title></rect><rect x="560" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-18 — no runs</title></rect><rect x="574" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-25 — no runs</title></rect><rect x="588" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-02 — no runs</title></rect><rect x="602" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-09 — no runs</title></rect><rect x="616" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-16 — no runs</title></rect><rect x="630" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-23 — no runs</title></rect><rect x="644" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-30 — no runs</title></rect><rect x="658" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-06 — no runs</title></rect><rect x="672" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-13 — no runs</title></rect><rect x="686" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-20 — no runs</title></rect><rect x="700" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-27 — no runs</title></rect><rect x="714" y="0" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-07-04 — no runs</title></rect><rect x="0" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-13 — no runs</title></rect><rect x="14" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-20 — no runs</title></rect><rect x="28" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-27 — no runs</title></rect><rect x="42" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-03 — no runs</title></rect><rect x="56" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-10 — no runs</title></rect><rect x="70" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-17 — no runs</title></rect><rect x="84" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-24 — no runs</title></rect><rect x="98" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-31 — no runs</title></rect><rect x="112" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-07 — no runs</title></rect><rect x="126" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-14 — no runs</title></rect><rect x="140" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-21 — no runs</title></rect><rect x="154" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-28 — no runs</title></rect><rect x="168" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-05 — no runs</title></rect><rect x="182" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-12 — no runs</title></rect><rect x="196" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-19 — no runs</title></rect><rect x="210" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-26 — no runs</title></rect><rect x="224" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-02 — no runs</title></rect><rect x="238" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-09 — no runs</title></rect><rect x="252" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-16 — no runs</title></rect><rect x="266" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-23 — no runs</title></rect><rect x="280" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-30 — no runs</title></rect><rect x="294" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-07 — no runs</title></rect><rect x="308" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-14 — no runs</title></rect><rect x="322" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-21 — no runs</title></rect><rect x="336" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-28 — no runs</title></rect><rect x="350" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-04 — no runs</title></rect><rect x="364" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-11 — no runs</title></rect><rect x="378" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-18 — no runs</title></rect><rect x="392" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-25 — no runs</title></rect><rect x="406" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-01 — no runs</title></rect><rect x="420" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-08 — no runs</title></rect><rect x="434" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-15 — no runs</title></rect><rect x="448" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-22 — no runs</title></rect><rect x="462" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-01 — no runs</title></rect><rect x="476" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-08 — no runs</title></rect><rect x="490" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-15 — no runs</title></rect><rect x="504" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-22 — no runs</title></rect><rect x="518" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-29 — no runs</title></rect><rect x="532" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-05 — no runs</title></rect><rect x="546" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-12 — no runs</title></rect><rect x="560" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-19 — no runs</title></rect><rect x="574" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-26 — no runs</title></rect><rect x="588" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-03 — no runs</title></rect><rect x="602" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-10 — no runs</title></rect><rect x="616" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-17 — no runs</title></rect><rect x="630" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-24 — no runs</title></rect><rect x="644" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-31 — no runs</title></rect><rect x="658" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-07 — no runs</title></rect><rect x="672" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-14 — no runs</title></rect><rect x="686" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-21 — no runs</title></rect><rect x="700" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-28 — no runs</title></rect><rect x="714" y="14" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-07-05 — no runs</title></rect><rect x="0" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-14 — no runs</title></rect><rect x="14" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-21 — no runs</title></rect><rect x="28" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-28 — no runs</title></rect><rect x="42" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-04 — no runs</title></rect><rect x="56" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-11 — no runs</title></rect><rect x="70" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-18 — no runs</title></rect><rect x="84" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-25 — no runs</title></rect><rect x="98" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-01 — no runs</title></rect><rect x="112" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-08 — no runs</title></rect><rect x="126" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-15 — no runs</title></rect><rect x="140" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-22 — no runs</title></rect><rect x="154" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-29 — no runs</title></rect><rect x="168" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-06 — no runs</title></rect><rect x="182" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-13 — no runs</title></rect><rect x="196" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-20 — no runs</title></rect><rect x="210" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-27 — no runs</title></rect><rect x="224" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-03 — no runs</title></rect><rect x="238" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-10 — no runs</title></rect><rect x="252" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-17 — no runs</title></rect><rect x="266" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-24 — no runs</title></rect><rect x="280" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-01 — no runs</title></rect><rect x="294" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-08 — no runs</title></rect><rect x="308" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-15 — no runs</title></rect><rect x="322" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-22 — no runs</title></rect><rect x="336" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-29 — no runs</title></rect><rect x="350" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-05 — no runs</title></rect><rect x="364" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-12 — no runs</title></rect><rect x="378" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-19 — no runs</title></rect><rect x="392" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-26 — no runs</title></rect><rect x="406" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-02 — no runs</title></rect><rect x="420" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-09 — no runs</title></rect><rect x="434" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-16 — no runs</title></rect><rect x="448" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-23 — no runs</title></rect><rect x="462" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-02 — no runs</title></rect><rect x="476" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-09 — no runs</title></rect><rect x="490" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-16 — no runs</title></rect><rect x="504" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-23 — no runs</title></rect><rect x="518" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-30 — no runs</title></rect><rect x="532" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-06 — no runs</title></rect><rect x="546" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-13 — no runs</title></rect><rect x="560" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-20 — no runs</title></rect><rect x="574" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-27 — no runs</title></rect><rect x="588" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-04 — no runs</title></rect><rect x="602" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-11 — no runs</title></rect><rect x="616" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-18 — no runs</title></rect><rect x="630" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-25 — no runs</title></rect><rect x="644" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-01 — no runs</title></rect><rect x="658" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-08 — no runs</title></rect><rect x="672" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-15 — no runs</title></rect><rect x="686" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-22 — no runs</title></rect><rect x="700" y="28" width="12" height="12" rx="2" fill="#9be9a8"><title>2026-06-29 — 1 run(s) · 1 passed · 0 failed · 0 partial</title></rect><rect x="714" y="28" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-07-06 — no runs</title></rect><rect x="0" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-15 — no runs</title></rect><rect x="14" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-22 — no runs</title></rect><rect x="28" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-29 — no runs</title></rect><rect x="42" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-05 — no runs</title></rect><rect x="56" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-12 — no runs</title></rect><rect x="70" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-19 — no runs</title></rect><rect x="84" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-26 — no runs</title></rect><rect x="98" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-02 — no runs</title></rect><rect x="112" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-09 — no runs</title></rect><rect x="126" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-16 — no runs</title></rect><rect x="140" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-23 — no runs</title></rect><rect x="154" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-30 — no runs</title></rect><rect x="168" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-07 — no runs</title></rect><rect x="182" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-14 — no runs</title></rect><rect x="196" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-21 — no runs</title></rect><rect x="210" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-28 — no runs</title></rect><rect x="224" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-04 — no runs</title></rect><rect x="238" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-11 — no runs</title></rect><rect x="252" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-18 — no runs</title></rect><rect x="266" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-25 — no runs</title></rect><rect x="280" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-02 — no runs</title></rect><rect x="294" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-09 — no runs</title></rect><rect x="308" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-16 — no runs</title></rect><rect x="322" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-23 — no runs</title></rect><rect x="336" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-30 — no runs</title></rect><rect x="350" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-06 — no runs</title></rect><rect x="364" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-13 — no runs</title></rect><rect x="378" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-20 — no runs</title></rect><rect x="392" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-27 — no runs</title></rect><rect x="406" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-03 — no runs</title></rect><rect x="420" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-10 — no runs</title></rect><rect x="434" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-17 — no runs</title></rect><rect x="448" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-24 — no runs</title></rect><rect x="462" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-03 — no runs</title></rect><rect x="476" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-10 — no runs</title></rect><rect x="490" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-17 — no runs</title></rect><rect x="504" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-24 — no runs</title></rect><rect x="518" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-31 — no runs</title></rect><rect x="532" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-07 — no runs</title></rect><rect x="546" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-14 — no runs</title></rect><rect x="560" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-21 — no runs</title></rect><rect x="574" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-28 — no runs</title></rect><rect x="588" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-05 — no runs</title></rect><rect x="602" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-12 — no runs</title></rect><rect x="616" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-19 — no runs</title></rect><rect x="630" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-26 — no runs</title></rect><rect x="644" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-02 — no runs</title></rect><rect x="658" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-09 — no runs</title></rect><rect x="672" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-16 — no runs</title></rect><rect x="686" y="42" width="12" height="12" rx="2" fill="#f59e0b"><title>2026-06-23 — 7 run(s) · 5 passed · 0 failed · 2 partial</title></rect><rect x="700" y="42" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-30 — no runs</title></rect><rect x="714" y="42" width="12" height="12" rx="2" fill="#f59e0b"><title>2026-07-07 — 14 run(s) · 10 passed · 0 failed · 4 partial</title></rect><rect x="0" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-16 — no runs</title></rect><rect x="14" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-23 — no runs</title></rect><rect x="28" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-30 — no runs</title></rect><rect x="42" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-06 — no runs</title></rect><rect x="56" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-13 — no runs</title></rect><rect x="70" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-20 — no runs</title></rect><rect x="84" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-27 — no runs</title></rect><rect x="98" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-03 — no runs</title></rect><rect x="112" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-10 — no runs</title></rect><rect x="126" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-17 — no runs</title></rect><rect x="140" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-24 — no runs</title></rect><rect x="154" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-01 — no runs</title></rect><rect x="168" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-08 — no runs</title></rect><rect x="182" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-15 — no runs</title></rect><rect x="196" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-22 — no runs</title></rect><rect x="210" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-29 — no runs</title></rect><rect x="224" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-05 — no runs</title></rect><rect x="238" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-12 — no runs</title></rect><rect x="252" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-19 — no runs</title></rect><rect x="266" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-26 — no runs</title></rect><rect x="280" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-03 — no runs</title></rect><rect x="294" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-10 — no runs</title></rect><rect x="308" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-17 — no runs</title></rect><rect x="322" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-24 — no runs</title></rect><rect x="336" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-31 — no runs</title></rect><rect x="350" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-07 — no runs</title></rect><rect x="364" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-14 — no runs</title></rect><rect x="378" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-21 — no runs</title></rect><rect x="392" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-28 — no runs</title></rect><rect x="406" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-04 — no runs</title></rect><rect x="420" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-11 — no runs</title></rect><rect x="434" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-18 — no runs</title></rect><rect x="448" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-25 — no runs</title></rect><rect x="462" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-04 — no runs</title></rect><rect x="476" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-11 — no runs</title></rect><rect x="490" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-18 — no runs</title></rect><rect x="504" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-25 — no runs</title></rect><rect x="518" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-01 — no runs</title></rect><rect x="532" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-08 — no runs</title></rect><rect x="546" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-15 — no runs</title></rect><rect x="560" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-22 — no runs</title></rect><rect x="574" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-29 — no runs</title></rect><rect x="588" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-06 — no runs</title></rect><rect x="602" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-13 — no runs</title></rect><rect x="616" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-20 — no runs</title></rect><rect x="630" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-27 — no runs</title></rect><rect x="644" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-03 — no runs</title></rect><rect x="658" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-10 — no runs</title></rect><rect x="672" y="56" width="12" height="12" rx="2" fill="#f59e0b"><title>2026-06-17 — 4 run(s) · 3 passed · 0 failed · 1 partial</title></rect><rect x="686" y="56" width="12" height="12" rx="2" fill="#f59e0b"><title>2026-06-24 — 4 run(s) · 3 passed · 0 failed · 1 partial</title></rect><rect x="700" y="56" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-07-01 — no runs</title></rect><rect x="714" y="56" width="12" height="12" rx="2" fill="#216e39"><title>2026-07-08 — 14 run(s) · 14 passed · 0 failed · 0 partial</title></rect><rect x="0" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-17 — no runs</title></rect><rect x="14" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-24 — no runs</title></rect><rect x="28" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-31 — no runs</title></rect><rect x="42" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-07 — no runs</title></rect><rect x="56" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-14 — no runs</title></rect><rect x="70" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-21 — no runs</title></rect><rect x="84" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-28 — no runs</title></rect><rect x="98" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-04 — no runs</title></rect><rect x="112" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-11 — no runs</title></rect><rect x="126" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-18 — no runs</title></rect><rect x="140" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-25 — no runs</title></rect><rect x="154" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-02 — no runs</title></rect><rect x="168" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-09 — no runs</title></rect><rect x="182" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-16 — no runs</title></rect><rect x="196" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-23 — no runs</title></rect><rect x="210" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-30 — no runs</title></rect><rect x="224" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-06 — no runs</title></rect><rect x="238" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-13 — no runs</title></rect><rect x="252" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-20 — no runs</title></rect><rect x="266" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-27 — no runs</title></rect><rect x="280" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-04 — no runs</title></rect><rect x="294" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-11 — no runs</title></rect><rect x="308" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-18 — no runs</title></rect><rect x="322" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-25 — no runs</title></rect><rect x="336" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-01 — no runs</title></rect><rect x="350" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-08 — no runs</title></rect><rect x="364" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-15 — no runs</title></rect><rect x="378" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-22 — no runs</title></rect><rect x="392" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-29 — no runs</title></rect><rect x="406" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-05 — no runs</title></rect><rect x="420" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-12 — no runs</title></rect><rect x="434" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-19 — no runs</title></rect><rect x="448" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-26 — no runs</title></rect><rect x="462" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-05 — no runs</title></rect><rect x="476" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-12 — no runs</title></rect><rect x="490" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-19 — no runs</title></rect><rect x="504" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-26 — no runs</title></rect><rect x="518" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-02 — no runs</title></rect><rect x="532" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-09 — no runs</title></rect><rect x="546" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-16 — no runs</title></rect><rect x="560" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-23 — no runs</title></rect><rect x="574" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-30 — no runs</title></rect><rect x="588" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-07 — no runs</title></rect><rect x="602" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-14 — no runs</title></rect><rect x="616" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-21 — no runs</title></rect><rect x="630" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-28 — no runs</title></rect><rect x="644" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-04 — no runs</title></rect><rect x="658" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-11 — no runs</title></rect><rect x="672" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-18 — no runs</title></rect><rect x="686" y="70" width="12" height="12" rx="2" fill="#30a14e"><title>2026-06-25 — 3 run(s) · 3 passed · 0 failed · 0 partial</title></rect><rect x="700" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-07-02 — no runs</title></rect><rect x="714" y="70" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-07-09 — no runs</title></rect><rect x="0" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-18 — no runs</title></rect><rect x="14" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-07-25 — no runs</title></rect><rect x="28" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-01 — no runs</title></rect><rect x="42" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-08 — no runs</title></rect><rect x="56" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-15 — no runs</title></rect><rect x="70" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-22 — no runs</title></rect><rect x="84" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-08-29 — no runs</title></rect><rect x="98" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-05 — no runs</title></rect><rect x="112" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-12 — no runs</title></rect><rect x="126" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-19 — no runs</title></rect><rect x="140" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-09-26 — no runs</title></rect><rect x="154" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-03 — no runs</title></rect><rect x="168" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-10 — no runs</title></rect><rect x="182" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-17 — no runs</title></rect><rect x="196" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-24 — no runs</title></rect><rect x="210" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-10-31 — no runs</title></rect><rect x="224" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-07 — no runs</title></rect><rect x="238" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-14 — no runs</title></rect><rect x="252" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-21 — no runs</title></rect><rect x="266" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-11-28 — no runs</title></rect><rect x="280" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-05 — no runs</title></rect><rect x="294" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-12 — no runs</title></rect><rect x="308" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-19 — no runs</title></rect><rect x="322" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2025-12-26 — no runs</title></rect><rect x="336" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-02 — no runs</title></rect><rect x="350" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-09 — no runs</title></rect><rect x="364" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-16 — no runs</title></rect><rect x="378" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-23 — no runs</title></rect><rect x="392" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-01-30 — no runs</title></rect><rect x="406" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-06 — no runs</title></rect><rect x="420" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-13 — no runs</title></rect><rect x="434" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-20 — no runs</title></rect><rect x="448" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-02-27 — no runs</title></rect><rect x="462" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-06 — no runs</title></rect><rect x="476" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-13 — no runs</title></rect><rect x="490" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-20 — no runs</title></rect><rect x="504" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-03-27 — no runs</title></rect><rect x="518" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-03 — no runs</title></rect><rect x="532" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-10 — no runs</title></rect><rect x="546" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-17 — no runs</title></rect><rect x="560" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-04-24 — no runs</title></rect><rect x="574" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-01 — no runs</title></rect><rect x="588" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-08 — no runs</title></rect><rect x="602" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-15 — no runs</title></rect><rect x="616" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-22 — no runs</title></rect><rect x="630" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-05-29 — no runs</title></rect><rect x="644" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-05 — no runs</title></rect><rect x="658" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-12 — no runs</title></rect><rect x="672" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-19 — no runs</title></rect><rect x="686" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-06-26 — no runs</title></rect><rect x="700" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-07-03 — no runs</title></rect><rect x="714" y="84" width="12" height="12" rx="2" fill="#ebedf0"><title>2026-07-10 — no runs</title></rect>
+        </g>
+      </g>
+    </svg></div>
+    </section>
+
+    <div class="flows-toolbar">
+      <h2>Flows by section</h2>
+      <div class="chips" id="flow-filter" role="tablist" aria-label="Filter flows by status">
+        <button type="button" class="chip active" data-filter="all">All<span class="count">15</span></button>
+        <button type="button" class="chip" data-filter="failing">Failing<span class="count">0</span></button>
+        <button type="button" class="chip" data-filter="partial">Partial<span class="count">1</span></button>
+        <button type="button" class="chip" data-filter="passing">Passing<span class="count">22</span></button>
+        <button type="button" class="chip" data-filter="never">Never run<span class="count">1</span></button>
+      </div>
+    </div>
+    <div id="sections-wrap">
+      
+      <section class="panel section-panel" data-section="_root">
+        <div class="panel-head section-head">
+          <div class="section-title-group">
+            <h3 class="section-title">General</h3>
+            <span class="section-stats"><span class="muted">2 plans</span></span>
+          </div>
+          <div class="section-actions"><button type="button" class="btn-rerun btn-rerun-section" disabled title="No runnable specs in this section">▶ Run section</button></div>
+        </div>
+        <div class="panel-body no-pad" style="overflow-x:auto;">
+          <table class="flows">
+            <thead><tr>
+              <th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th><th>Actions</th>
+            </tr></thead>
+            <tbody>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">Administrative Functions CRUD (ADO suite &quot;2. Administrative Functions&quot;, plan #65099) — create leg</div>
+          <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-06-25</td>
+        <td class="nowrap">—</td>
+        <td class="num">1</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-06-25 — PASSED ()"></span></span></td>
+        <td class="links"><a href="Administrative Functions CRUD (ADO suite &quot;2. Administrative Functions&quot;, plan #65099) — create leg" title="Open plan">plan</a> · <a href="test-reports/2026-06-25/admin-functions-create-all-records.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">_Dispatcher console — operational incident logging (exploratory)_</div>
+          <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-06-17</td>
+        <td class="nowrap">—</td>
+        <td class="num">1</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-06-17 — PASSED ()"></span></span></td>
+        <td class="links"><a href="_Dispatcher console — operational incident logging (exploratory)_" title="Open plan">plan</a> · <a href="test-reports/2026-06-17/incident-creation-call-taker.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button></td>
+      </tr></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel section-panel" data-section="_Administrative Functions (ADO #65099 ">
+        <div class="panel-head section-head">
+          <div class="section-title-group">
+            <h3 class="section-title">_Administrative Functions (ADO #65099 </h3>
+            <span class="section-stats"><span class="muted">1 plan</span></span>
+          </div>
+          <div class="section-actions"><button type="button" class="btn-rerun btn-rerun-section" disabled title="No runnable specs in this section">▶ Run section</button></div>
+        </div>
+        <div class="panel-body no-pad" style="overflow-x:auto;">
+          <table class="flows">
+            <thead><tr>
+              <th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th><th>Actions</th>
+            </tr></thead>
+            <tbody>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">_Administrative Functions (ADO #65099 / suite #65100) — live create of NEW records per entity_</div>
+          <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-06-23</td>
+        <td class="nowrap">—</td>
+        <td class="num">1</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-06-23 — PASSED ()"></span></span></td>
+        <td class="links"><a href="_Administrative Functions (ADO #65099 / suite #65100) — live create of NEW records per entity_" title="Open plan">plan</a> · <a href="test-reports/2026-06-23/admin-management-create-new-records.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button></td>
+      </tr></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel section-panel" data-section="_Administrative Functions (ADO plan #65099 ">
+        <div class="panel-head section-head">
+          <div class="section-title-group">
+            <h3 class="section-title">_Administrative Functions (ADO plan #65099 </h3>
+            <span class="section-stats"><span class="muted">1 plan</span></span>
+          </div>
+          <div class="section-actions"><button type="button" class="btn-rerun btn-rerun-section" disabled title="No runnable specs in this section">▶ Run section</button></div>
+        </div>
+        <div class="panel-body no-pad" style="overflow-x:auto;">
+          <table class="flows">
+            <thead><tr>
+              <th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th><th>Actions</th>
+            </tr></thead>
+            <tbody>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">_Administrative Functions (ADO plan #65099 / suite #65100) — exploratory create+edit smoke_</div>
+          <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-06-17</td>
+        <td class="nowrap">—</td>
+        <td class="num">1</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-06-17 — PASSED ()"></span></span></td>
+        <td class="links"><a href="_Administrative Functions (ADO plan #65099 / suite #65100) — exploratory create+edit smoke_" title="Open plan">plan</a> · <a href="test-reports/2026-06-17/administrative-functions-crud-smoke.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button></td>
+      </tr></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel section-panel" data-section="administrative-functions">
+        <div class="panel-head section-head">
+          <div class="section-title-group">
+            <h3 class="section-title">Administrative Functions</h3>
+            <span class="section-stats"><span class="muted">13 plans</span></span>
+          </div>
+          <div class="section-actions"><button type="button" class="btn-rerun btn-rerun-section"
+               data-action="rerun-section"
+               data-project="dispatch"
+               data-section="Administrative Functions"
+               data-plans='[&quot;test-plans/administrative-functions/admin-functions-crud.md&quot;,&quot;test-plans/administrative-functions/agents.md&quot;,&quot;test-plans/administrative-functions/crews.md&quot;,&quot;test-plans/administrative-functions/devices.md&quot;,&quot;test-plans/administrative-functions/incident-types.md&quot;,&quot;test-plans/administrative-functions/points-of-interest.md&quot;,&quot;test-plans/administrative-functions/resources.md&quot;,&quot;test-plans/administrative-functions/shift-assignment.md&quot;,&quot;test-plans/administrative-functions/shifts.md&quot;,&quot;test-plans/administrative-functions/site-types.md&quot;,&quot;test-plans/administrative-functions/stations.md&quot;,&quot;test-plans/administrative-functions/vehicle-types.md&quot;,&quot;test-plans/administrative-functions/vehicles.md&quot;]'
+               title="Run every plan in this section that has a spec">▶ Run section <span class="meta">13</span></button></div>
+        </div>
+        <div class="panel-body no-pad" style="overflow-x:auto;">
+          <table class="flows">
+            <thead><tr>
+              <th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th><th>Actions</th>
+            </tr></thead>
+            <tbody>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">admin-functions-crud.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">311.0s</td>
+        <td class="num">5</td>
+        <td><span class="sparkline"><span class="spark spark-partial" title="2026-06-17 — PARTIAL (361.3s)"></span><span class="spark spark-partial" title="2026-06-23 — PARTIAL (425.6s)"></span><span class="spark spark-partial" title="2026-06-24 — PARTIAL (390.9s)"></span><span class="spark spark-partial" title="2026-07-07 — PARTIAL (356.3s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (311.0s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/admin-functions-crud.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/admin-functions-crud.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/admin-functions-crud.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">agents.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">193.9s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-partial" title="2026-07-07 — PARTIAL (216.2s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (193.9s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/agents.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/agents.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/agents.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">crews.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">131.1s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-07-07 — PASSED (110.1s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (131.1s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/crews.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/crews.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/crews.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">devices.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">134.1s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-07-07 — PASSED (118.6s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (134.1s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/devices.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/devices.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/devices.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">incident-types.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">112.4s</td>
+        <td class="num">5</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-06-17 — PASSED (112.7s)"></span><span class="spark spark-pass" title="2026-06-23 — PASSED (132.6s)"></span><span class="spark spark-pass" title="2026-06-24 — PASSED (139.0s)"></span><span class="spark spark-pass" title="2026-07-07 — PASSED (93.7s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (112.4s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/incident-types.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/incident-types.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/incident-types.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">points-of-interest.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">138.6s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-07-07 — PASSED (169.0s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (138.6s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/points-of-interest.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/points-of-interest.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/points-of-interest.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">resources.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">169.5s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-partial" title="2026-07-07 — PARTIAL (181.7s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (169.5s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/resources.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/resources.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/resources.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">shift-assignment.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">138.6s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-07-07 — PASSED (181.2s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (138.6s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/shift-assignment.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/shift-assignment.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/shift-assignment.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">shifts.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">123.0s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-07-07 — PASSED (106.0s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (123.0s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/shifts.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/shifts.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/shifts.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">site-types.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">133.7s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-07-07 — PASSED (110.8s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (133.7s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/site-types.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/site-types.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/site-types.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">stations.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">151.2s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-07-07 — PASSED (119.5s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (151.2s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/stations.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/stations.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/stations.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">vehicle-types.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">129.9s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-07-07 — PASSED (120.0s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (129.9s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/vehicle-types.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/vehicle-types.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/vehicle-types.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">vehicles.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">143.8s</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-partial" title="2026-07-07 — PARTIAL (204.8s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (143.8s)"></span></span></td>
+        <td class="links"><a href="test-plans/administrative-functions/vehicles.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/vehicles.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/administrative-functions/vehicles.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel section-panel" data-section="operational">
+        <div class="panel-head section-head">
+          <div class="section-title-group">
+            <h3 class="section-title">Operational</h3>
+            <span class="section-stats"><span class="muted">7 plans</span></span>
+          </div>
+          <div class="section-actions"><button type="button" class="btn-rerun btn-rerun-section"
+               data-action="rerun-section"
+               data-project="dispatch"
+               data-section="Operational"
+               data-plans='[&quot;test-plans/operational/incident-creation.md&quot;]'
+               title="Run every plan in this section that has a spec">▶ Run section <span class="meta">1</span></button></div>
+        </div>
+        <div class="panel-body no-pad" style="overflow-x:auto;">
+          <table class="flows">
+            <thead><tr>
+              <th>Plan</th><th>Last result</th><th>Last run</th><th>Duration</th><th>Runs</th><th>History</th><th>Links</th><th>Actions</th>
+            </tr></thead>
+            <tbody>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">incident-creation.md</div>
+          <div class="plan-badges"></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-07-08</td>
+        <td class="nowrap">32.1s</td>
+        <td class="num">3</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-06-24 — PASSED (49.4s)"></span><span class="spark spark-pass" title="2026-07-07 — PASSED (42.5s)"></span><span class="spark spark-pass" title="2026-07-08 — PASSED (32.1s)"></span></span></td>
+        <td class="links"><a href="test-plans/operational/incident-creation.md" title="Open plan">plan</a> · <a href="test-reports/2026-07-08/incident-creation.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" data-action="rerun" data-project="dispatch" data-plan="test-plans/operational/incident-creation.md" title="Re-run this test in GitHub Actions">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">incident-dispatch-lifecycle.md (reusing the 586/588 record set)</div>
+          <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-06-25</td>
+        <td class="nowrap">—</td>
+        <td class="num">1</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-06-25 — PASSED ()"></span></span></td>
+        <td class="links"><a href="test-plans/operational/incident-dispatch-lifecycle.md (reusing the 586/588 record set)" title="Open plan">plan</a> · <a href="test-reports/2026-06-25/incident-591-dispatch-lifecycle.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">incident-creation.md (TC-01 + dispatch leg)</div>
+          <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-06-24</td>
+        <td class="nowrap">—</td>
+        <td class="num">2</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-06-23 — PASSED ()"></span><span class="spark spark-pass" title="2026-06-24 — PASSED ()"></span></span></td>
+        <td class="links"><a href="test-plans/operational/incident-creation.md (TC-01 + dispatch leg)" title="Open plan">plan</a> · <a href="test-reports/2026-06-24/incident-588-dispatch-sms.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">incident-creation.md (dispatch + status lifecycle leg)</div>
+          <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-06-23</td>
+        <td class="nowrap">—</td>
+        <td class="num">1</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-06-23 — PASSED ()"></span></span></td>
+        <td class="links"><a href="test-plans/operational/incident-creation.md (dispatch + status lifecycle leg)" title="Open plan">plan</a> · <a href="test-reports/2026-06-23/dispatch-vehicle-incident-585-sms.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="partial">
+        <td class="plan-cell">
+          <div class="plan-name">incident-creation.md (TC-01 continuation — dispatch leg)</div>
+          <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
+        </td>
+        <td><span class="pill pill-partial">PARTIAL</span></td>
+        <td class="nowrap">2026-06-23</td>
+        <td class="nowrap">—</td>
+        <td class="num">1</td>
+        <td><span class="sparkline"><span class="spark spark-partial" title="2026-06-23 — PARTIAL ()"></span></span></td>
+        <td class="links"><a href="test-plans/operational/incident-creation.md (TC-01 continuation — dispatch leg)" title="Open plan">plan</a> · <a href="test-reports/2026-06-23/dispatch-incident-take-ownership-qaagent.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="passing">
+        <td class="plan-cell">
+          <div class="plan-name">incident-creation.md (TC-01)</div>
+          <div class="plan-badges"><span class="badge badge-no-spec">no .spec.ts yet</span></div>
+        </td>
+        <td><span class="pill pill-pass">PASSED</span></td>
+        <td class="nowrap">2026-06-23</td>
+        <td class="nowrap">—</td>
+        <td class="num">1</td>
+        <td><span class="sparkline"><span class="spark spark-pass" title="2026-06-23 — PASSED ()"></span></span></td>
+        <td class="links"><a href="test-plans/operational/incident-creation.md (TC-01)" title="Open plan">plan</a> · <a href="test-reports/2026-06-23/incident-creation-call-taker-qaagent.md">latest report</a></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button></td>
+      </tr>
+      <tr data-status="never">
+        <td class="plan-cell">
+          <div class="plan-name">incident-dispatch-lifecycle.md</div>
+          <div class="plan-badges"><span class="badge badge-new">NEW · never run</span> <span class="badge badge-no-spec">no .spec.ts yet</span></div>
+        </td>
+        <td><span class="pill pill-neutral">never run</span></td>
+        <td class="nowrap"><span class="muted">—</span></td>
+        <td class="nowrap"><span class="muted">—</span></td>
+        <td class="num">0</td>
+        <td><span class="spark-empty">—</span></td>
+        <td class="links"><a href="test-plans/operational/incident-dispatch-lifecycle.md" title="Open plan">plan</a> · <span class="muted">no report</span></td>
+        <td class="actions-cell"><button type="button" class="btn-rerun" disabled title="No spec file — generate one with /create-test first">▶ Re-run</button></td>
+      </tr></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <h2>Run timeline</h2>
+    
+      <section class="timeline-day">
+        <header><h3>Wed, Jul 8, 2026</h3><span class="muted">14 runs</span></header>
+        <ul>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/admin-functions-crud.md">administrative-functions/admin-functions-crud.md</a>
+        <span class="muted">311.0s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/agents.md">administrative-functions/agents.md</a>
+        <span class="muted">193.9s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/crews.md">administrative-functions/crews.md</a>
+        <span class="muted">131.1s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/devices.md">administrative-functions/devices.md</a>
+        <span class="muted">134.1s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/incident-creation.md">operational/incident-creation.md</a>
+        <span class="muted">32.1s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/incident-types.md">administrative-functions/incident-types.md</a>
+        <span class="muted">112.4s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/points-of-interest.md">administrative-functions/points-of-interest.md</a>
+        <span class="muted">138.6s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/resources.md">administrative-functions/resources.md</a>
+        <span class="muted">169.5s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/shift-assignment.md">administrative-functions/shift-assignment.md</a>
+        <span class="muted">138.6s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/shifts.md">administrative-functions/shifts.md</a>
+        <span class="muted">123.0s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/site-types.md">administrative-functions/site-types.md</a>
+        <span class="muted">133.7s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/stations.md">administrative-functions/stations.md</a>
+        <span class="muted">151.2s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/vehicle-types.md">administrative-functions/vehicle-types.md</a>
+        <span class="muted">129.9s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-08/vehicles.md">administrative-functions/vehicles.md</a>
+        <span class="muted">143.8s · playwright-script</span>
+      </li></ul>
+      </section>
+      <section class="timeline-day">
+        <header><h3>Tue, Jul 7, 2026</h3><span class="muted">14 runs</span></header>
+        <ul>
+      <li class="timeline-run">
+        <span class="pill pill-partial">PARTIAL</span>
+        <a class="run-link" href="test-reports/2026-07-07/admin-functions-crud.md">administrative-functions/admin-functions-crud.md</a>
+        <span class="muted">356.3s · playwright-script (failures pending AI-repair)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-partial">PARTIAL</span>
+        <a class="run-link" href="test-reports/2026-07-07/agents.md">administrative-functions/agents.md</a>
+        <span class="muted">216.2s · playwright-script (failures pending AI-repair)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-07/crews.md">administrative-functions/crews.md</a>
+        <span class="muted">110.1s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-07/devices.md">administrative-functions/devices.md</a>
+        <span class="muted">118.6s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-07/incident-creation.md">operational/incident-creation.md</a>
+        <span class="muted">42.5s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-07/incident-types.md">administrative-functions/incident-types.md</a>
+        <span class="muted">93.7s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-07/points-of-interest.md">administrative-functions/points-of-interest.md</a>
+        <span class="muted">169.0s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-partial">PARTIAL</span>
+        <a class="run-link" href="test-reports/2026-07-07/resources.md">administrative-functions/resources.md</a>
+        <span class="muted">181.7s · playwright-script (failures pending AI-repair)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-07/shift-assignment.md">administrative-functions/shift-assignment.md</a>
+        <span class="muted">181.2s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-07/shifts.md">administrative-functions/shifts.md</a>
+        <span class="muted">106.0s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-07/site-types.md">administrative-functions/site-types.md</a>
+        <span class="muted">110.8s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-07/stations.md">administrative-functions/stations.md</a>
+        <span class="muted">119.5s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-07-07/vehicle-types.md">administrative-functions/vehicle-types.md</a>
+        <span class="muted">120.0s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-partial">PARTIAL</span>
+        <a class="run-link" href="test-reports/2026-07-07/vehicles.md">administrative-functions/vehicles.md</a>
+        <span class="muted">204.8s · playwright-script (failures pending AI-repair)</span>
+      </li></ul>
+      </section>
+      <section class="timeline-day">
+        <header><h3>Mon, Jun 29, 2026</h3><span class="muted">1 run</span></header>
+        <ul>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-29/schedule-transfer-actions.md">schedule-transfer-actions.md</a>
+        <span class="muted"> · ai-driven (live MCP)</span>
+      </li></ul>
+      </section>
+      <section class="timeline-day">
+        <header><h3>Thu, Jun 25, 2026</h3><span class="muted">3 runs</span></header>
+        <ul>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-25/admin-functions-create-all-records.md">Administrative Functions CRUD (ADO suite &quot;2. Administrative Functions&quot;, plan #65099) — create leg</a>
+        <span class="muted"> · ai-driven (live MCP)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-25/incident-591-dispatch-lifecycle.md">operational/incident-dispatch-lifecycle.md (reusing the 586/588 record set)</a>
+        <span class="muted"> · ai-driven (live MCP)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-25/schedule-transfer.md">schedule-transfer.md</a>
+        <span class="muted"> · ai-driven (live MCP)</span>
+      </li></ul>
+      </section>
+      <section class="timeline-day">
+        <header><h3>Wed, Jun 24, 2026</h3><span class="muted">4 runs</span></header>
+        <ul>
+      <li class="timeline-run">
+        <span class="pill pill-partial">PARTIAL</span>
+        <a class="run-link" href="test-reports/2026-06-24/admin-functions-crud.md">administrative-functions/admin-functions-crud.md</a>
+        <span class="muted">390.9s · playwright-script (failures pending AI-repair)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-24/incident-588-dispatch-sms.md">operational/incident-creation.md (TC-01 + dispatch leg)</a>
+        <span class="muted"> · ai-driven (live MCP)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-24/incident-creation.md">operational/incident-creation.md</a>
+        <span class="muted">49.4s · playwright-script</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-24/incident-types.md">administrative-functions/incident-types.md</a>
+        <span class="muted">139.0s · playwright-script</span>
+      </li></ul>
+      </section>
+      <section class="timeline-day">
+        <header><h3>Tue, Jun 23, 2026</h3><span class="muted">7 runs</span></header>
+        <ul>
+      <li class="timeline-run">
+        <span class="pill pill-partial">PARTIAL</span>
+        <a class="run-link" href="test-reports/2026-06-23/admin-functions-crud.md">administrative-functions/admin-functions-crud.md</a>
+        <span class="muted">425.6s · playwright-script (failures pending AI-repair)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-23/admin-management-create-new-records.md">_Administrative Functions (ADO #65099 / suite #65100) — live create of NEW records per entity_</a>
+        <span class="muted"> · ai-driven (live MCP)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-partial">PARTIAL</span>
+        <a class="run-link" href="test-reports/2026-06-23/dispatch-incident-take-ownership-qaagent.md">operational/incident-creation.md (TC-01 continuation — dispatch leg)</a>
+        <span class="muted"> · ai-driven (live MCP)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-23/dispatch-vehicle-incident-585-sms.md">operational/incident-creation.md (dispatch + status lifecycle leg)</a>
+        <span class="muted"> · ai-driven (live MCP)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-23/dispatch-vehicle-incident-586.md">operational/incident-creation.md (TC-01 + dispatch leg)</a>
+        <span class="muted"> · ai-driven (live MCP)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-23/incident-creation-call-taker-qaagent.md">operational/incident-creation.md (TC-01)</a>
+        <span class="muted"> · ai-driven (live MCP)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-23/incident-types.md">administrative-functions/incident-types.md</a>
+        <span class="muted">132.6s · playwright-script</span>
+      </li></ul>
+      </section>
+      <section class="timeline-day">
+        <header><h3>Wed, Jun 17, 2026</h3><span class="muted">4 runs</span></header>
+        <ul>
+      <li class="timeline-run">
+        <span class="pill pill-partial">PARTIAL</span>
+        <a class="run-link" href="test-reports/2026-06-17/admin-functions-crud.md">administrative-functions/admin-functions-crud.md</a>
+        <span class="muted">361.3s · playwright-script (failures pending AI-repair)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-17/administrative-functions-crud-smoke.md">_Administrative Functions (ADO plan #65099 / suite #65100) — exploratory create+edit smoke_</a>
+        <span class="muted"> · mcp-live (headed)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-17/incident-creation-call-taker.md">_Dispatcher console — operational incident logging (exploratory)_</a>
+        <span class="muted"> · mcp-live (headed)</span>
+      </li>
+      <li class="timeline-run">
+        <span class="pill pill-pass">PASSED</span>
+        <a class="run-link" href="test-reports/2026-06-17/incident-types.md">administrative-functions/incident-types.md</a>
+        <span class="muted">112.7s · playwright-script</span>
+      </li></ul>
+      </section>
+
+    <footer class="page-footer">
+      <span>Generated 2026-07-08 07:34 UTC · project <code>dispatch</code></span>
+      <span><code>node scripts/build-project-dashboard.js --project=dispatch</code></span>
+    </footer>
   </main>
+
+  <script>
+    (function () {
+      var chips = Array.prototype.slice.call(document.querySelectorAll('#flow-filter .chip'));
+      var sections = Array.prototype.slice.call(document.querySelectorAll('.section-panel'));
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+          var f = chip.getAttribute('data-filter');
+          sections.forEach(function (section) {
+            var visible = 0;
+            Array.prototype.slice.call(section.querySelectorAll('tbody tr[data-status]')).forEach(function (r) {
+              var show = (f === 'all' || r.getAttribute('data-status') === f);
+              r.style.display = show ? '' : 'none';
+              if (show) visible++;
+            });
+            section.style.display = visible === 0 ? 'none' : '';
+          });
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('allure-toggle');
+      var panel = document.getElementById('allure-panel');
+      var frame = document.getElementById('allure-frame');
+      var loader = document.getElementById('allure-loader');
+      var closeBtn = document.getElementById('allure-close');
+      if (!btn || !panel || !frame) return;
+      var loaded = false;
+      function open() {
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        if (!loaded) {
+          frame.addEventListener('load', function () { loader.classList.add('hidden'); }, { once: true });
+          frame.src = 'allure-report/index.html';
+          loaded = true;
+        }
+      }
+      function close() {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+      }
+      btn.addEventListener('click', open);
+      if (closeBtn) closeBtn.addEventListener('click', close);
+      panel.addEventListener('click', function (e) { if (e.target === panel) close(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && panel.classList.contains('open')) close();
+      });
+    })();
+  </script>
 
   <div id="toast-stack" class="toast-stack" aria-live="polite"></div>
 
-  <script src="data.js"></script>
-  <script src="../../assets/dashboard.js"></script>
+  <script>
+    (function () {
+      var WORKFLOW_URL = "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml";
+      var stack = document.getElementById('toast-stack');
+      if (!stack) return;
+
+      function copyToClipboard(text, btn) {
+        var done = function () {
+          if (!btn) return;
+          var original = btn.textContent;
+          btn.textContent = 'copied';
+          btn.classList.add('copied');
+          setTimeout(function () { btn.textContent = original; btn.classList.remove('copied'); }, 1200);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done).catch(function () {
+            window.prompt('Copy:', text);
+          });
+        } else {
+          window.prompt('Copy:', text);
+        }
+      }
+
+      function showToast(project, plan) {
+        var toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML =
+          '<div class="toast-head">' +
+            '<div class="toast-title"><span class="dot"></span>Re-run triggered</div>' +
+            '<button type="button" class="toast-close" aria-label="Close">×</button>' +
+          '</div>' +
+          '<div class="toast-body">' +
+            '<p>A new GitHub Actions tab just opened. Click <strong>Run workflow</strong> there and paste these values:</p>' +
+            '<div class="input-row"><span class="label">project</span><code data-val="' + project.replace(/"/g, '&quot;') + '">' + project + '</code><button type="button" class="copy" data-copy="' + project.replace(/"/g, '&quot;') + '">copy</button></div>' +
+            '<div class="input-row"><span class="label">plan</span><code data-val="' + plan.replace(/"/g, '&quot;') + '">' + plan + '</code><button type="button" class="copy" data-copy="' + plan.replace(/"/g, '&quot;') + '">copy</button></div>' +
+            '<div class="toast-foot">When the run finishes, GitHub auto-commits the report back to this hub. Refresh this page in ~1–2 min to see the updated row.</div>' +
+          '</div>';
+        stack.appendChild(toast);
+        requestAnimationFrame(function () { toast.classList.add('in'); });
+
+        toast.querySelector('.toast-close').addEventListener('click', function () {
+          toast.classList.remove('in');
+          setTimeout(function () { toast.remove(); }, 250);
+        });
+        Array.prototype.slice.call(toast.querySelectorAll('button.copy')).forEach(function (b) {
+          b.addEventListener('click', function () { copyToClipboard(b.getAttribute('data-copy'), b); });
+        });
+
+        // Auto-dismiss after 30s
+        setTimeout(function () {
+          if (!toast.parentNode) return;
+          toast.classList.remove('in');
+          setTimeout(function () { toast.remove(); }, 250);
+        }, 30000);
+      }
+
+      function handleRerun(btn) {
+        var project = btn.getAttribute('data-project');
+        var plan = btn.getAttribute('data-plan');
+        if (!project || !plan) return;
+        // Visual feedback on the row
+        btn.classList.add('is-pending');
+        setTimeout(function () { btn.classList.remove('is-pending'); }, 3000);
+        // Open the GitHub Actions workflow_dispatch UI in a new tab
+        window.open(WORKFLOW_URL, '_blank', 'noopener');
+        // Show the toast with copy-ready input values
+        showToast(project, plan);
+      }
+
+      function escAttr(s) { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); }
+
+      function showSectionToast(project, section, plans) {
+        var toast = document.createElement('div');
+        toast.className = 'toast toast-section';
+        var planRows = plans.map(function (p, i) {
+          return '<div class="input-row"><span class="label">plan ' + (i + 1) + '/' + plans.length + '</span>' +
+                 '<code>' + escAttr(p) + '</code>' +
+                 '<button type="button" class="copy" data-copy="' + escAttr(p) + '">copy</button></div>';
+        }).join('');
+        toast.innerHTML =
+          '<div class="toast-head">' +
+            '<div class="toast-title"><span class="dot"></span>Section: ' + escAttr(section) + '</div>' +
+            '<button type="button" class="toast-close" aria-label="Close">×</button>' +
+          '</div>' +
+          '<div class="toast-body">' +
+            '<p>A GitHub Actions tab opened. The workflow only accepts one plan at a time, so dispatch it ' + plans.length + ' time' + (plans.length === 1 ? '' : 's') + ' — copy each plan in turn:</p>' +
+            '<div class="input-row"><span class="label">project</span><code>' + escAttr(project) + '</code><button type="button" class="copy" data-copy="' + escAttr(project) + '">copy</button></div>' +
+            '<div class="section-plans-list">' + planRows + '</div>' +
+            '<div class="toast-foot">Each run auto-commits its report back to this hub. Refresh after they finish to see the updated rows.</div>' +
+          '</div>';
+        stack.appendChild(toast);
+        requestAnimationFrame(function () { toast.classList.add('in'); });
+
+        toast.querySelector('.toast-close').addEventListener('click', function () {
+          toast.classList.remove('in');
+          setTimeout(function () { toast.remove(); }, 250);
+        });
+        Array.prototype.slice.call(toast.querySelectorAll('button.copy')).forEach(function (b) {
+          b.addEventListener('click', function () { copyToClipboard(b.getAttribute('data-copy'), b); });
+        });
+
+        // Section toasts stay longer than single-plan toasts.
+        setTimeout(function () {
+          if (!toast.parentNode) return;
+          toast.classList.remove('in');
+          setTimeout(function () { toast.remove(); }, 250);
+        }, 60000);
+      }
+
+      function handleRerunSection(btn) {
+        var project = btn.getAttribute('data-project');
+        var section = btn.getAttribute('data-section');
+        var raw = btn.getAttribute('data-plans');
+        if (!project || !raw) return;
+        var plans;
+        try { plans = JSON.parse(raw); } catch (e) { plans = []; }
+        if (!Array.isArray(plans) || plans.length === 0) return;
+        btn.classList.add('is-pending');
+        setTimeout(function () { btn.classList.remove('is-pending'); }, 3000);
+        window.open(WORKFLOW_URL, '_blank', 'noopener');
+        showSectionToast(project, section, plans);
+      }
+
+      Array.prototype.slice.call(document.querySelectorAll('[data-action="rerun"]')).forEach(function (btn) {
+        btn.addEventListener('click', function (e) { e.preventDefault(); handleRerun(btn); });
+      });
+      Array.prototype.slice.call(document.querySelectorAll('[data-action="rerun-section"]')).forEach(function (btn) {
+        btn.addEventListener('click', function (e) { e.preventDefault(); handleRerunSection(btn); });
+      });
+    })();
+  </script>
+
   <script src="../../assets/markdown-viewer.js"></script>
 </body>
 </html>

@@ -92,8 +92,8 @@ test.describe('ADMIN-2.4 — Vehicles', () => {
     await login(page);
     await gotoGrid(page);
     await expect(page.getByRole('table')).toBeVisible();
-    await searchGrid(page, 'NC');
-    await expect(page.getByRole('cell', { name: /NC/ }).first()).toBeVisible({ timeout: 15000 });
+    await searchGrid(page, 'QAV');
+    await expect(page.getByRole('cell', { name: /QAV/ }).first()).toBeVisible({ timeout: 15000 });
   });
 
   // ADO Test Case #65740: https://dev.azure.com/boxfusion/pd-dispatcher-V2/_workitems/edit/65740

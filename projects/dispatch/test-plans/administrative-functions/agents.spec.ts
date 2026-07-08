@@ -143,10 +143,10 @@ test.describe('ADMIN-2.14 — Agents', () => {
     await toolBtn(page, /^Edit$/).click();
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     // STEP: MODIFY the Surname field
+    // Use a bounded fill (not an unbounded append): the surname column has a server-side length
+    // limit (~50 chars) and appending each run eventually overflows it → PUT UpdateAgent 500.
     const surname = surnameField(page);
-    await surname.click();
-    await surname.press('End');
-    await surname.pressSequentially(' x');
+    await surname.fill('QA Edit');
     // STEP: CLICK Save
     await toolBtn(page, /^Save$/).click();
     // ASSERT (BLOCKING) saved — returns to view mode (Edit visible again)
@@ -172,10 +172,9 @@ test.describe('ADMIN-2.14 — Agents', () => {
     await page.locator(ROW_EDIT).first().click();
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     // STEP: MODIFY the Surname field then Save
+    // Bounded fill (not an unbounded append) — see TC-08 note re: surname length limit / 500.
     const surname = surnameField(page);
-    await surname.click();
-    await surname.press('End');
-    await surname.pressSequentially(' x');
+    await surname.fill('QA Edit');
     await toolBtn(page, /^Save$/).click();
     // ASSERT (BLOCKING) saved — returns to view mode (Edit visible)
     await expect(toolBtn(page, /^Edit$/)).toBeVisible({ timeout: 20000 });
