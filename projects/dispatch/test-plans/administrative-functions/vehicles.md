@@ -49,7 +49,7 @@
 - **Steps:**
   1. NAVIGATE to the Vehicles page (`/dynamic/Boxfusion.Ems/vehicles`)
   2. ASSERT (BLOCKING) the Vehicles grid is displayed
-  3. TYPE a full/partial registration (e.g. `NC`) into the search box and trigger the search
+  3. TYPE a full/partial registration (e.g. `QAV`) into the search box and trigger the search
   4. ASSERT matching vehicle(s) are displayed
 - **Expected result:** Matching vehicle(s) are displayed.
 - **Assertions:**

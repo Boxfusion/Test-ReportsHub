@@ -22,68 +22,19 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 15,
-    "totalRuns": 19,
-    "last7Runs": 8,
-    "last7Pass": 7,
-    "last7PassPct": 88,
+    "totalRuns": 47,
+    "last7Runs": 28,
+    "last7Pass": 24,
+    "last7PassPct": 86,
     "failingFlows": 0,
-    "passingFlows": 10,
-    "partialFlows": 2,
-    "neverFlows": 12
+    "passingFlows": 22,
+    "partialFlows": 1,
+    "neverFlows": 1
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-07-05",
+    "startDate": "2025-07-12",
     "days": [
-      {
-        "iso": "2025-07-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-07-12",
         "runs": 0,
@@ -2582,6 +2533,55 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-07-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-07",
+        "runs": 14,
+        "passed": 10,
+        "failed": 0,
+        "partial": 4
+      },
+      {
+        "iso": "2026-07-08",
+        "runs": 14,
+        "passed": 14,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2597,23 +2597,30 @@
           "spec": "test-plans/administrative-functions/admin-functions-crud.spec.ts",
           "specHref": "test-plans/administrative-functions/admin-functions-crud.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "partial",
-          "status": "PARTIAL",
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
-            "date": "2026-06-24",
-            "result": "PARTIAL",
-            "duration": "12.0s",
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "11.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-06-24/admin-functions-crud.md"
+            "reportHref": "test-reports/2026-07-08/admin-functions-crud.md"
           },
-          "runCount": 3,
+          "runCount": 5,
           "history": [
+            {
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "11.7s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PARTIAL",
+              "duration": "10.6s",
+              "variant": null
+            },
             {
               "date": "2026-06-24",
               "result": "PARTIAL",
@@ -2636,6 +2643,105 @@
           "bugs": []
         },
         {
+          "plan": "test-plans/administrative-functions/agents.md",
+          "planHref": "test-plans/administrative-functions/agents.md",
+          "spec": "test-plans/administrative-functions/agents.spec.ts",
+          "specHref": "test-plans/administrative-functions/agents.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "39.2s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/agents.md"
+          },
+          "runCount": 2,
+          "history": [
+            {
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "39.2s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PARTIAL",
+              "duration": "47.0s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/crews.md",
+          "planHref": "test-plans/administrative-functions/crews.md",
+          "spec": "test-plans/administrative-functions/crews.spec.ts",
+          "specHref": "test-plans/administrative-functions/crews.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "10.0s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/crews.md"
+          },
+          "runCount": 2,
+          "history": [
+            {
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "10.0s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "7.9s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/administrative-functions/devices.md",
+          "planHref": "test-plans/administrative-functions/devices.md",
+          "spec": "test-plans/administrative-functions/devices.spec.ts",
+          "specHref": "test-plans/administrative-functions/devices.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "9.1s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/devices.md"
+          },
+          "runCount": 2,
+          "history": [
+            {
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "9.1s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "9.4s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
           "plan": "test-plans/administrative-functions/incident-types.md",
           "planHref": "test-plans/administrative-functions/incident-types.md",
           "spec": "test-plans/administrative-functions/incident-types.spec.ts",
@@ -2645,14 +2751,26 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-06-24",
+            "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "12.2s",
+            "duration": "10.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-06-24/incident-types.md"
+            "reportHref": "test-reports/2026-07-08/incident-types.md"
           },
-          "runCount": 3,
+          "runCount": 5,
           "history": [
+            {
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "10.8s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "9.0s",
+              "variant": null
+            },
             {
               "date": "2026-06-24",
               "result": "PASSED",
@@ -2675,79 +2793,36 @@
           "bugs": []
         },
         {
-          "plan": "test-plans/administrative-functions/agents.md",
-          "planHref": "test-plans/administrative-functions/agents.md",
-          "spec": "test-plans/administrative-functions/agents.spec.ts",
-          "specHref": "test-plans/administrative-functions/agents.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "new",
-              "text": "NEW · never run"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
-          "bugs": []
-        },
-        {
-          "plan": "test-plans/administrative-functions/crews.md",
-          "planHref": "test-plans/administrative-functions/crews.md",
-          "spec": "test-plans/administrative-functions/crews.spec.ts",
-          "specHref": "test-plans/administrative-functions/crews.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "new",
-              "text": "NEW · never run"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
-          "bugs": []
-        },
-        {
-          "plan": "test-plans/administrative-functions/devices.md",
-          "planHref": "test-plans/administrative-functions/devices.md",
-          "spec": "test-plans/administrative-functions/devices.spec.ts",
-          "specHref": "test-plans/administrative-functions/devices.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "new",
-              "text": "NEW · never run"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
-          "bugs": []
-        },
-        {
           "plan": "test-plans/administrative-functions/points-of-interest.md",
           "planHref": "test-plans/administrative-functions/points-of-interest.md",
           "spec": "test-plans/administrative-functions/points-of-interest.spec.ts",
           "specHref": "test-plans/administrative-functions/points-of-interest.spec.ts",
           "canRun": true,
-          "badges": [
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "10.4s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/points-of-interest.md"
+          },
+          "runCount": 2,
+          "history": [
             {
-              "kind": "new",
-              "text": "NEW · never run"
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "10.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "39.0s",
+              "variant": null
             }
           ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
           "bugs": []
         },
         {
@@ -2756,17 +2831,31 @@
           "spec": "test-plans/administrative-functions/resources.spec.ts",
           "specHref": "test-plans/administrative-functions/resources.spec.ts",
           "canRun": true,
-          "badges": [
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "10.4s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/resources.md"
+          },
+          "runCount": 2,
+          "history": [
             {
-              "kind": "new",
-              "text": "NEW · never run"
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "10.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PARTIAL",
+              "duration": "8.4s",
+              "variant": null
             }
           ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
           "bugs": []
         },
         {
@@ -2775,17 +2864,31 @@
           "spec": "test-plans/administrative-functions/shift-assignment.spec.ts",
           "specHref": "test-plans/administrative-functions/shift-assignment.spec.ts",
           "canRun": true,
-          "badges": [
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "10.2s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/shift-assignment.md"
+          },
+          "runCount": 2,
+          "history": [
             {
-              "kind": "new",
-              "text": "NEW · never run"
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "10.2s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "9.3s",
+              "variant": null
             }
           ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
           "bugs": []
         },
         {
@@ -2794,17 +2897,31 @@
           "spec": "test-plans/administrative-functions/shifts.spec.ts",
           "specHref": "test-plans/administrative-functions/shifts.spec.ts",
           "canRun": true,
-          "badges": [
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "10.3s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/shifts.md"
+          },
+          "runCount": 2,
+          "history": [
             {
-              "kind": "new",
-              "text": "NEW · never run"
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "10.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "8.1s",
+              "variant": null
             }
           ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
           "bugs": []
         },
         {
@@ -2813,17 +2930,31 @@
           "spec": "test-plans/administrative-functions/site-types.spec.ts",
           "specHref": "test-plans/administrative-functions/site-types.spec.ts",
           "canRun": true,
-          "badges": [
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "11.3s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/site-types.md"
+          },
+          "runCount": 2,
+          "history": [
             {
-              "kind": "new",
-              "text": "NEW · never run"
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "11.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "10.6s",
+              "variant": null
             }
           ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
           "bugs": []
         },
         {
@@ -2832,17 +2963,31 @@
           "spec": "test-plans/administrative-functions/stations.spec.ts",
           "specHref": "test-plans/administrative-functions/stations.spec.ts",
           "canRun": true,
-          "badges": [
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "12.6s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/stations.md"
+          },
+          "runCount": 2,
+          "history": [
             {
-              "kind": "new",
-              "text": "NEW · never run"
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "12.6s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "13.5s",
+              "variant": null
             }
           ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
           "bugs": []
         },
         {
@@ -2851,17 +2996,31 @@
           "spec": "test-plans/administrative-functions/vehicle-types.spec.ts",
           "specHref": "test-plans/administrative-functions/vehicle-types.spec.ts",
           "canRun": true,
-          "badges": [
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "12.2s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/vehicle-types.md"
+          },
+          "runCount": 2,
+          "history": [
             {
-              "kind": "new",
-              "text": "NEW · never run"
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "12.2s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "10.6s",
+              "variant": null
             }
           ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
           "bugs": []
         },
         {
@@ -2870,17 +3029,31 @@
           "spec": "test-plans/administrative-functions/vehicles.spec.ts",
           "specHref": "test-plans/administrative-functions/vehicles.spec.ts",
           "canRun": true,
-          "badges": [
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-07-08",
+            "result": "PASSED",
+            "duration": "12.1s",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-08/vehicles.md"
+          },
+          "runCount": 2,
+          "history": [
             {
-              "kind": "new",
-              "text": "NEW · never run"
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "12.1s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PARTIAL",
+              "duration": "55.9s",
+              "variant": null
             }
           ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
           "bugs": []
         }
       ]
@@ -2900,14 +3073,26 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-06-24",
+            "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "45.7s",
+            "duration": "29.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-06-24/incident-creation.md"
+            "reportHref": "test-reports/2026-07-08/incident-creation.md"
           },
-          "runCount": 1,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-07-08",
+              "result": "PASSED",
+              "duration": "29.9s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "39.6s",
+              "variant": null
+            },
             {
               "date": "2026-06-24",
               "result": "PASSED",
@@ -2944,6 +3129,268 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-07-08",
+      "runs": [
+        {
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md",
+          "planDisplay": "administrative-functions/admin-functions-crud.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "11.7s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/admin-functions-crud.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/agents.md",
+          "planDisplay": "administrative-functions/agents.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "39.2s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/agents.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/crews.md",
+          "planDisplay": "administrative-functions/crews.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "10.0s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/crews.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/devices.md",
+          "planDisplay": "administrative-functions/devices.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "9.1s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/devices.md"
+        },
+        {
+          "plan": "test-plans/operational/incident-creation.md",
+          "planDisplay": "operational/incident-creation.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "29.9s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/incident-creation.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/incident-types.md",
+          "planDisplay": "administrative-functions/incident-types.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "10.8s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/incident-types.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/points-of-interest.md",
+          "planDisplay": "administrative-functions/points-of-interest.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "10.4s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/points-of-interest.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/resources.md",
+          "planDisplay": "administrative-functions/resources.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "10.4s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/resources.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/shift-assignment.md",
+          "planDisplay": "administrative-functions/shift-assignment.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "10.2s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/shift-assignment.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/shifts.md",
+          "planDisplay": "administrative-functions/shifts.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "10.3s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/shifts.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/site-types.md",
+          "planDisplay": "administrative-functions/site-types.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "11.3s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/site-types.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/stations.md",
+          "planDisplay": "administrative-functions/stations.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.6s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/stations.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/vehicle-types.md",
+          "planDisplay": "administrative-functions/vehicle-types.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.2s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/vehicle-types.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/vehicles.md",
+          "planDisplay": "administrative-functions/vehicles.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.1s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-08/vehicles.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "runs": [
+        {
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md",
+          "planDisplay": "administrative-functions/admin-functions-crud.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "10.6s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-07-07/admin-functions-crud.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/agents.md",
+          "planDisplay": "administrative-functions/agents.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "47.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-07-07/agents.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/crews.md",
+          "planDisplay": "administrative-functions/crews.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "7.9s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-07/crews.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/devices.md",
+          "planDisplay": "administrative-functions/devices.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "9.4s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-07/devices.md"
+        },
+        {
+          "plan": "test-plans/operational/incident-creation.md",
+          "planDisplay": "operational/incident-creation.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "39.6s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-07/incident-creation.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/incident-types.md",
+          "planDisplay": "administrative-functions/incident-types.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "9.0s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-07/incident-types.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/points-of-interest.md",
+          "planDisplay": "administrative-functions/points-of-interest.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "39.0s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-07/points-of-interest.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/resources.md",
+          "planDisplay": "administrative-functions/resources.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "8.4s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-07-07/resources.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/shift-assignment.md",
+          "planDisplay": "administrative-functions/shift-assignment.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "9.3s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-07/shift-assignment.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/shifts.md",
+          "planDisplay": "administrative-functions/shifts.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "8.1s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-07/shifts.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/site-types.md",
+          "planDisplay": "administrative-functions/site-types.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "10.6s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-07/site-types.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/stations.md",
+          "planDisplay": "administrative-functions/stations.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "13.5s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-07/stations.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/vehicle-types.md",
+          "planDisplay": "administrative-functions/vehicle-types.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "10.6s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-07/vehicle-types.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/vehicles.md",
+          "planDisplay": "administrative-functions/vehicles.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "55.9s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-07-07/vehicles.md"
+        }
+      ]
+    },
     {
       "date": "2026-06-29",
       "runs": [
@@ -3141,5 +3588,5 @@
       ]
     }
   ],
-  "generated": "2026-06-30T07:22:06.439Z"
+  "generated": "2026-07-08T07:34:58.576Z"
 }

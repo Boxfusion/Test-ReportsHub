@@ -1,0 +1,7 @@
+{
+  "displayName": "PD-Dispatch",
+  "appUrl": "https://pd-dispatcher-v2-adminportal-qa.shesha.app/login",
+  "environment": "QA",
+  "sourceRepo": "https://dev.azure.com/boxfusion/pd-dispatcher-V2",
+  "description": "Hybrid Markdown + Playwright test reports for PD-Dispatch — the Boxfusion master Dispatcher Admin Portal (upstream of NC Dispatch; tested first before promotion to the client site)."
+}

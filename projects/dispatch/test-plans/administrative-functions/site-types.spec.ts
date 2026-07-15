@@ -167,9 +167,10 @@ test.describe('ADMIN-2.7 — Site Types', () => {
     await expect(editing.getByRole('button', { name: 'save' })).toBeVisible({ timeout: 15000 });
     // STEP: MODIFY the Name field (textbox #1 in the editing row)
     const nameBox = editing.getByRole('textbox').first();
-    await nameBox.click();
-    await nameBox.press('End');
-    await nameBox.pressSequentially(' x');
+    // Bounded toggle (not an unbounded append): this always edits the same 'Savana' row, so
+    // appending each run eventually overflows the name length limit. Oscillate a ' x' suffix.
+    const _cur = await nameBox.inputValue();
+    await nameBox.fill(_cur.endsWith(' x') ? _cur.slice(0, -2) : _cur + ' x');
     // STEP: save
     await editing.getByRole('button', { name: 'save' }).click();
     // ASSERT (BLOCKING) the change is saved — row returns to read mode (edit pencil shown, save gone)

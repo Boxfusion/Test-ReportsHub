@@ -165,9 +165,10 @@ test.describe('ADMIN-2.10 — Stations', () => {
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     // STEP: MODIFY the Station Name field
     const name = stationNameField(page);
-    await name.click();
-    await name.press('End');
-    await name.pressSequentially(' x');
+    // Bounded toggle (not an unbounded append): appending each run eventually overflows the
+    // field's server-side length limit → 500. Oscillate a ' x' suffix instead.
+    const _cur = await name.inputValue();
+    await name.fill(_cur.endsWith(' x') ? _cur.slice(0, -2) : _cur + ' x');
     // STEP: CLICK Save
     await toolBtn(page, /^Save$/).click();
     // ASSERT (BLOCKING) saved — returns to view mode (Edit visible again)
@@ -193,9 +194,10 @@ test.describe('ADMIN-2.10 — Stations', () => {
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     // STEP: MODIFY the Station Name field then Save
     const name = stationNameField(page);
-    await name.click();
-    await name.press('End');
-    await name.pressSequentially(' x');
+    // Bounded toggle (not an unbounded append): appending each run eventually overflows the
+    // field's server-side length limit → 500. Oscillate a ' x' suffix instead.
+    const _cur = await name.inputValue();
+    await name.fill(_cur.endsWith(' x') ? _cur.slice(0, -2) : _cur + ' x');
     await toolBtn(page, /^Save$/).click();
     await expect(toolBtn(page, /^Edit$/)).toBeVisible({ timeout: 20000 });
   });

@@ -163,9 +163,10 @@ test.describe('ADMIN-2.11 — Devices', () => {
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     // STEP: MODIFY the Model field
     const model = modelField(page);
-    await model.click();
-    await model.press('End');
-    await model.pressSequentially(' x');
+    // Bounded toggle (not an unbounded append): appending each run eventually overflows the
+    // field's server-side length limit → 500. Oscillate a ' x' suffix instead.
+    const _cur = await model.inputValue();
+    await model.fill(_cur.endsWith(' x') ? _cur.slice(0, -2) : _cur + ' x');
     // STEP: CLICK Save
     await toolBtn(page, /^Save$/).click();
     // ASSERT (BLOCKING) saved — returns to view mode (Edit visible again)
@@ -192,9 +193,10 @@ test.describe('ADMIN-2.11 — Devices', () => {
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     // STEP: MODIFY the Model field then Save
     const model = modelField(page);
-    await model.click();
-    await model.press('End');
-    await model.pressSequentially(' x');
+    // Bounded toggle (not an unbounded append): appending each run eventually overflows the
+    // field's server-side length limit → 500. Oscillate a ' x' suffix instead.
+    const _cur = await model.inputValue();
+    await model.fill(_cur.endsWith(' x') ? _cur.slice(0, -2) : _cur + ' x');
     await toolBtn(page, /^Save$/).click();
     // ASSERT (BLOCKING) saved — returns to view mode (Edit visible)
     await expect(toolBtn(page, /^Edit$/)).toBeVisible({ timeout: 20000 });

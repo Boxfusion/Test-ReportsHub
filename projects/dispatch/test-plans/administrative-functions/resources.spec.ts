@@ -155,9 +155,10 @@ test.describe('ADMIN-2.12 — Resources', () => {
     await toolBtn(page, /^Edit$/).click();
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     const surname = surnameField(page);
-    await surname.click();
-    await surname.press('End');
-    await surname.pressSequentially(' x');
+    // Bounded toggle (not an unbounded append): appending each run eventually overflows the
+    // field's server-side length limit → 500. Oscillate a ' x' suffix instead.
+    const _cur = await surname.inputValue();
+    await surname.fill(_cur.endsWith(' x') ? _cur.slice(0, -2) : _cur + ' x');
     await toolBtn(page, /^Save$/).click();
     await expect(toolBtn(page, /^Edit$/)).toBeVisible({ timeout: 20000 });
   });
@@ -169,12 +170,10 @@ test.describe('ADMIN-2.12 — Resources', () => {
     await gotoGrid(page);
     await page.locator(DETAILS).first().click();
     await expect(page).toHaveURL(/resource-details/);
-    // STEP: CLICK Upload in the User Facial Photos panel → pick an image (file chooser)
-    const [chooser] = await Promise.all([
-      page.waitForEvent('filechooser'),
-      detailView(page).getByRole('button', { name: 'Upload' }).click(),
-    ]);
-    await chooser.setFiles(FACE_IMG);
+    // STEP: supply an image to the User Facial Photos AntD Upload. Its trigger is a hidden
+    // (display:none in view mode) input[type=file]; set files on it directly — there is no
+    // visible "Upload" button and no filechooser event fires from the collapsed upload area.
+    await detailView(page).locator('input[type="file"]').first().setInputFiles(FACE_IMG);
     // STEP: the "Edit image" crop modal opens → confirm with OK
     await expect(page.getByText('Edit image')).toBeVisible({ timeout: 15000 });
     await page.locator('.ant-modal-content').filter({ hasText: 'Edit image' }).getByRole('button', { name: 'OK' }).click();
@@ -200,9 +199,10 @@ test.describe('ADMIN-2.12 — Resources', () => {
     await page.locator(ROW_EDIT).first().click();
     await expect(toolBtn(page, /^Save$/)).toBeVisible({ timeout: 15000 });
     const surname = surnameField(page);
-    await surname.click();
-    await surname.press('End');
-    await surname.pressSequentially(' x');
+    // Bounded toggle (not an unbounded append): appending each run eventually overflows the
+    // field's server-side length limit → 500. Oscillate a ' x' suffix instead.
+    const _cur = await surname.inputValue();
+    await surname.fill(_cur.endsWith(' x') ? _cur.slice(0, -2) : _cur + ' x');
     await toolBtn(page, /^Save$/).click();
     await expect(toolBtn(page, /^Edit$/)).toBeVisible({ timeout: 20000 });
   });
