@@ -1,0 +1,7 @@
+{
+  "displayName": "DHA Invoice Tracking",
+  "appUrl": "https://dha-smartgov-adminportal-qa.shesha.app/",
+  "environment": "QA",
+  "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
+  "description": "Hybrid Markdown + Playwright test reports for the DHA SmartGov Invoice Tracking (ITS) Admin Portal. Same ITS workflows as PD, deployed for Department of Home Affairs."
+}
