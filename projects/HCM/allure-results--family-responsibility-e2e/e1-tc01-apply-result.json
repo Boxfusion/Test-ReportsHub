@@ -1,0 +1,44 @@
+{
+  "uuid": "e1a0592c-7c01-4e01-9e01-08c8a2e8e601",
+  "historyId": "e1a05b8c7e6deffaf8b66b1a12299e01",
+  "name": "TC-01: Apply — Capture Family Responsibility (Death) Leave (Thabo Mthembu, GOV003)",
+  "fullName": "eLeave Family Responsibility E2E > TC-01: Apply — Capture Family Responsibility (Death) Leave (Thabo Mthembu, GOV003)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1781091102000,
+  "stop": 1781091322000,
+  "labels": [
+    { "name": "parentSuite", "value": "HCM" },
+    { "name": "suite", "value": "eLeave — Family Responsibility (Death) Happy Path" },
+    { "name": "subSuite", "value": "Application for leave (#101941)" },
+    { "name": "feature", "value": "eLeave — SaGov Leave Application" },
+    { "name": "story", "value": "Family Responsibility (Death) E2E — LA2026/12814" }
+  ],
+  "parameters": [
+    { "name": "Ref No", "value": "LA2026/12814" },
+    { "name": "ADO Suite", "value": "Application for leave (#101941)" },
+    { "name": "ADO Plan", "value": "eLeave Smoke test (#101528)" }
+  ],
+  "steps": [
+    {
+      "name": "Login as GOV003 (view mode Latest); Workflows → My Items → Create New → SaGov Leave Application (Ref No LA2026/12814)",
+      "status": "passed", "stage": "finished",
+      "start": 1781091102000, "stop": 1781091134000
+    },
+    {
+      "name": "Category = Family Rsponsibility → Sub-Category = Family Responsibility (Death) → Family Relationship = Grandparents and in-laws (3-level cascade)",
+      "status": "passed", "stage": "finished",
+      "start": 1781091134000, "stop": 1781091180000
+    },
+    {
+      "name": "Start 18/06/2026, End 18/06/2026 → app confirmed \"You have selected to take 1 day off\" (99 days available); no Days/Hours radio",
+      "status": "passed", "stage": "finished",
+      "start": 1781091180000, "stop": 1781091240000
+    },
+    {
+      "name": "Address captured + Supporting documents (REQUIRED) attached + certification checkbox ticked → Submit → Delegate modal → Don't Delegate → status In Progress (no backdated dialog — future date)",
+      "status": "passed", "stage": "finished",
+      "start": 1781091240000, "stop": 1781091322000
+    }
+  ]
+}

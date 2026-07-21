@@ -12,7 +12,14 @@ export default defineConfig({
   testMatch: 'projects/**/test-plans/**/*.spec.ts',
   fullyParallel: false,
   workers: 1,
-  retries: 0,
+  // STRICT_CHAIN: for an end-to-end single-tender chain run, retry a failing TC once and then
+  // halt the whole run on the first definitive failure (so a broken chain stops honestly instead
+  // of letting later TCs "pass" off unrelated leftover items). Default runs are unchanged.
+  // RETRIES / MAX_FAILURES env overrides let a "report" run retry flaky TCs without the STRICT_CHAIN
+  // early-stop (e.g. RETRIES=2 MAX_FAILURES=0 runs the whole chain, retrying each TC, so every TC's
+  // steps land in the report). Defaults are unchanged.
+  retries: process.env.RETRIES !== undefined ? Number(process.env.RETRIES) : (process.env.STRICT_CHAIN === '1' ? 1 : 0),
+  maxFailures: process.env.MAX_FAILURES !== undefined ? Number(process.env.MAX_FAILURES) : (process.env.STRICT_CHAIN === '1' ? 1 : 0),
   timeout: 90_000,
   expect: { timeout: 10_000 },
   reporter: [

@@ -1,0 +1,7 @@
+{
+  "displayName": "PMDS",
+  "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
+  "environment": "QA",
+  "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+  "description": "Hybrid Markdown + Playwright test reports for PMDS (Performance Management & Development System) — a module of the HCM Admin Portal (same site as eLeave)."
+}

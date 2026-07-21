@@ -7,3 +7,17 @@ Thumbs.db
 
 # Transient eLeave smoke-test chain state (recorded at runtime by the apply spec)
 .submitted-application.json
+
+# Playwright MCP browser snapshots
+.playwright-mcp/
+
+# Allure raw results (intermediate). NOTE: generated allure-report/ dirs are
+# intentionally tracked — they are the published artefacts served via GitHub Pages.
+allure-results/
+
+# Playwright run output
+playwright-report/
+test-results/
+
+# Loose screenshots dropped in the repo root
+/REF*.png

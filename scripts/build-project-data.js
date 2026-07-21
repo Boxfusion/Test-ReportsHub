@@ -119,6 +119,7 @@ function parseReportText(text, fileRel) {
     duration: meta.duration || '',
     date: reportDate,
     mode: meta['execution mode'] || null,
+    variant: meta.variant || null,
   };
 }
 
@@ -135,6 +136,33 @@ async function collectReports(source) {
     reports.push(parseReportText(text, f.path));
   }
   return reports.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+}
+
+// Per-variant Allure reports: allure-report--<slug>/index.html (+ legacy allure-report/index.html).
+// Variant slugs are mapped back to their human label (e.g. "90-10" → "90/10") via the reports.
+function collectAllure(source, reports) {
+  const have = new Set(
+    source.files
+      .filter((f) => /^allure-report(--[^/]+)?\/index\.html$/.test(f.path))
+      .map((f) => f.path),
+  );
+  const slugLabel = new Map();
+  for (const r of reports) {
+    if (!r.variant) continue;
+    const slug = r.variant.replace(/[^A-Za-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    if (!slugLabel.has(slug)) slugLabel.set(slug, r.variant);
+  }
+  const out = [];
+  for (const pth of have) {
+    const m = pth.match(/^allure-report--([^/]+)\/index\.html$/);
+    if (m) out.push({ slug: m[1], label: slugLabel.get(m[1]) || m[1], href: pth });
+  }
+  out.sort((a, b) => a.label.localeCompare(b.label));
+  // Legacy single unlabelled report — only surfaced when there are no per-variant reports.
+  if (out.length === 0 && have.has('allure-report/index.html')) {
+    out.push({ slug: null, label: null, href: 'allure-report/index.html' });
+  }
+  return out;
 }
 
 function collectBugs(source) {
@@ -252,6 +280,7 @@ function buildPlanEntry(plan, runs, bugs, source) {
     date: r.date,
     result: r.result,
     duration: r.duration,
+    variant: r.variant || null,
   }));
 
   return {
@@ -267,6 +296,7 @@ function buildPlanEntry(plan, runs, bugs, source) {
       date: last.date,
       result: last.result,
       duration: last.duration,
+      variant: last.variant || null,
       reportHref: source.viewerUrl(last.fileRel),
     } : null,
     runCount: runs.length,
@@ -306,7 +336,8 @@ function buildTimeline(reports, source) {
     if (!byDate.has(r.date)) byDate.set(r.date, []);
     byDate.get(r.date).push({
       plan: r.plan,
-      planDisplay: r.plan ? r.plan.replace(/^test-plans\//, '') : pathPosix.basename(r.fileRel),
+      planDisplay: (r.plan ? r.plan.replace(/^test-plans\//, '') : pathPosix.basename(r.fileRel)) + (r.variant ? ` (${r.variant})` : ''),
+      variant: r.variant || null,
       result: r.result,
       duration: r.duration,
       mode: r.mode,
@@ -364,10 +395,10 @@ async function build(projectName) {
     ? await createGithubSource(meta.source)
     : createLocalSource(projectRoot);
 
-  const hasAllure = source.files.some((f) => f.path === 'allure-report/index.html');
-
   const plans = collectPlans(source);
   const reports = await collectReports(source);
+  const allureReports = collectAllure(source, reports);
+  const hasAllure = allureReports.length > 0;
   const bugs = collectBugs(source);
   const byPlan = indexRunsByPlan(plans, reports);
   const heatmap = buildHeatmap(reports);
@@ -399,6 +430,7 @@ async function build(projectName) {
         : { kind: 'local' },
     },
     hasAllure,
+    allureReports,
     workflowUrl: RUN_TEST_WORKFLOW,
     kpis,
     heatmap,

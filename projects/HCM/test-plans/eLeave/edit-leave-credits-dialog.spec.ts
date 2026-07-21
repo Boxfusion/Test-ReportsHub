@@ -41,6 +41,7 @@ function dialog(page: Page) {
 test.describe('ELEAVE-EDIT-CREDITS — Edit Leave Credits Dialog', () => {
 
   test('TC-01: Login as Admin', async ({ page }) => {
+    // STEP 1: NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
     await page.goto(APP_URL);
     await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
     await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);

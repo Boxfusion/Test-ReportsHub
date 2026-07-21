@@ -1,0 +1,336 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e8]:
+    - complementary [ref=e9]:
+      - menu [ref=e13]:
+        - menuitem "calendar Leave Management" [ref=e14] [cursor=pointer]:
+          - img "calendar" [ref=e15]:
+            - img [ref=e16]
+          - generic [ref=e18]: Leave Management
+        - menuitem "calendar SaGov Leave Management" [ref=e19] [cursor=pointer]:
+          - img "calendar" [ref=e20]:
+            - img [ref=e21]
+          - generic [ref=e23]: SaGov Leave Management
+        - menuitem "book SaGov PMDS" [ref=e24] [cursor=pointer]:
+          - img "book" [ref=e25]:
+            - img [ref=e26]
+          - generic [ref=e28]: SaGov PMDS
+        - menuitem "bank Organisational Structure" [ref=e29] [cursor=pointer]:
+          - img "bank" [ref=e30]:
+            - img [ref=e31]
+          - generic [ref=e33]: Organisational Structure
+        - menuitem "apartment Workflows" [ref=e34] [cursor=pointer]:
+          - img "apartment" [ref=e35]:
+            - img [ref=e36]
+          - generic [ref=e38]: Workflows
+        - menuitem "tool Administration" [ref=e39] [cursor=pointer]:
+          - img "tool" [ref=e40]:
+            - img [ref=e41]
+          - generic [ref=e43]: Administration
+        - menuitem "setting Configurations" [ref=e44] [cursor=pointer]:
+          - img "setting" [ref=e45]:
+            - img [ref=e46]
+          - generic [ref=e48]: Configurations
+      - img "menu-unfold" [ref=e51] [cursor=pointer]:
+        - img [ref=e52]
+    - generic [ref=e54]:
+      - banner [ref=e55]:
+        - generic [ref=e61]:
+          - generic [ref=e63]:
+            - button "edit" [ref=e64] [cursor=pointer]:
+              - img "edit" [ref=e65]:
+                - img [ref=e66]
+            - paragraph [ref=e68] [cursor=pointer]: Shesha/header v15
+            - generic [ref=e69]:
+              - generic [ref=e70]: Draft
+              - img "close" [ref=e71] [cursor=pointer]:
+                - img [ref=e72]
+          - generic [ref=e82]:
+            - link [ref=e88] [cursor=pointer]:
+              - /url: /
+              - img [ref=e98]
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - generic [ref=e103]:
+                  - generic [ref=e104]: Live Mode
+                  - switch "Switch to Edit mode" [ref=e106] [cursor=pointer]
+                - generic "Click to change view mode" [ref=e110] [cursor=pointer]:
+                  - img "block" [ref=e111]:
+                    - img [ref=e112]
+                  - generic [ref=e114]: Latest
+              - generic [ref=e116]:
+                - generic [ref=e117] [cursor=pointer]:
+                  - text: Naledi weeeee Khumalo
+                  - img "down" [ref=e118]:
+                    - img [ref=e119]
+                - img "user" [ref=e122]:
+                  - img [ref=e123]
+      - main [ref=e125]:
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - generic [ref=e132]:
+              - generic [ref=e134]:
+                - 'heading "Approve Leave: 1 day Sick Leave Leave by TMV Mthembu from Mon 08 Jun 26 to Mon 08 Jun 26" [level=4] [ref=e136]':
+                  - strong [ref=e137]: "Approve Leave:"
+                  - text: 1 day Sick Leave Leave by TMV Mthembu from Mon 08 Jun 26 to Mon 08 Jun 26
+                - generic [ref=e142]: In Progress
+              - generic [ref=e143]: Received from Kavitha Naidoo a minute ago,Due in 2 days
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - generic [ref=e147]:
+                  - img [ref=e149]
+                  - img [ref=e152]
+                  - img [ref=e155]
+                - button "menu" [ref=e157] [cursor=pointer]:
+                  - img "menu" [ref=e159]:
+                    - img [ref=e160]
+              - generic [ref=e162]: "Ref No: LA2026/12790"
+              - generic [ref=e163]: "Created by: Thabo Musa Victor Mthembu 11 minutes ago"
+              - generic [ref=e164]: "SLA: 2 business days"
+          - generic [ref=e169]:
+            - generic [ref=e171]:
+              - button "edit" [ref=e172] [cursor=pointer]:
+                - img "edit" [ref=e173]:
+                  - img [ref=e174]
+              - paragraph [ref=e176] [cursor=pointer]: SaGov.Leave/sagov-approve-leave-application v67
+              - generic [ref=e177]:
+                - generic [ref=e178]: Draft
+                - img "close" [ref=e179] [cursor=pointer]:
+                  - img [ref=e180]
+            - generic [ref=e192]:
+              - alert [ref=e193]:
+                - generic [ref=e196]: Please download and review all attachments before selecting the confirmation checkbox. The action buttons will remain disabled until the attachments have been downloaded.
+                - button "close" [ref=e197] [cursor=pointer]:
+                  - img "close" [ref=e198]:
+                    - img [ref=e199]
+              - alert [ref=e201]:
+                - generic [ref=e204]: "Hint: Review the leave application and approve or not approve."
+                - button "close" [ref=e205] [cursor=pointer]:
+                  - img "close" [ref=e206]:
+                    - img [ref=e207]
+              - generic [ref=e210]:
+                - generic [ref=e211]:
+                  - img "right" [ref=e213] [cursor=pointer]:
+                    - img [ref=e214]
+                  - generic [ref=e216]: Leave Application Details
+                - generic [ref=e221]:
+                  - generic [ref=e224]:
+                    - generic [ref=e226]:
+                      - generic "Applicant Name" [ref=e228]
+                      - generic [ref=e231]: Thabo Musa Victor Mthembu
+                    - generic [ref=e233]:
+                      - generic "PERSAL Number" [ref=e235]
+                      - generic [ref=e238]: GOV00003
+                    - generic [ref=e240]:
+                      - generic "Category" [ref=e242]
+                      - generic [ref=e245]: Sick Leave
+                    - generic [ref=e247]:
+                      - generic "Sub-Category" [ref=e249]
+                      - generic [ref=e252]: Sick Leave
+                    - generic [ref=e262]:
+                      - generic [ref=e264]:
+                        - button "edit" [ref=e265] [cursor=pointer]:
+                          - img "edit" [ref=e266]:
+                            - img [ref=e267]
+                        - paragraph [ref=e269] [cursor=pointer]: Shesha.Leave/sick-leave-form v21
+                        - generic [ref=e270]:
+                          - generic [ref=e271]: Live
+                          - img "close" [ref=e272] [cursor=pointer]:
+                            - img [ref=e273]
+                      - generic [ref=e280]:
+                        - generic "Type of illness" [ref=e282]:
+                          - text: Type of illness
+                          - generic [ref=e283]: "*"
+                        - generic [ref=e286]: Medical Conditions
+                    - generic [ref=e288]:
+                      - generic "Start Date" [ref=e290]
+                      - generic [ref=e293]: 08/06/2026
+                    - generic [ref=e295]:
+                      - generic "End Date" [ref=e297]
+                      - generic [ref=e300]: 08/06/2026
+                    - generic [ref=e306]:
+                      - alert [ref=e307]:
+                        - img "exclamation-circle" [ref=e308]:
+                          - img [ref=e309]
+                        - generic [ref=e313]: "Available days: Please note that Thabo Musa Victor Mthembu only has *22 day(s)* left for this particular leave type."
+                        - button "close" [ref=e314] [cursor=pointer]:
+                          - img "close" [ref=e315]:
+                            - img [ref=e316]
+                      - alert [ref=e318]:
+                        - img "check-circle" [ref=e319]:
+                          - img [ref=e320]
+                        - generic [ref=e324]: Thabo Musa Victor Mthembu has taken 1 day off
+                        - button "close" [ref=e325] [cursor=pointer]:
+                          - img "close" [ref=e326]:
+                            - img [ref=e327]
+                    - generic [ref=e330]:
+                      - generic "Address" [ref=e332]
+                      - generic [ref=e335]: 12 Infrastructure Avenue, Pretoria, 0001
+                    - generic [ref=e337]:
+                      - generic "Telephone" [ref=e339]
+                      - generic [ref=e342]: "+27761425683"
+                    - generic [ref=e344]:
+                      - generic "Applicant Comments" [ref=e346]
+                      - generic [ref=e349]: Was ill on 08/06/2026 and unable to apply on the day; submitting the sick leave application with supporting medical note.
+                    - generic [ref=e351]:
+                      - generic "Recommender Comments" [ref=e353]
+                      - generic [ref=e356]: Recommended. The sick leave is for a single day (08/06/2026) and is supported by a medical note; backdating is reasonable as the employee was ill.
+                    - generic [ref=e358]:
+                      - generic "Supporting Documents" [ref=e360]
+                      - generic [ref=e364]:
+                        - generic [ref=e370] [cursor=pointer]:
+                          - img "file-text" [ref=e371]:
+                            - img [ref=e372]
+                          - generic "supporting-doc.txt (122 B)" [ref=e375]: supporting-doc.txt
+                        - button "file-zip Download Zip" [ref=e377] [cursor=pointer]:
+                          - img "file-zip" [ref=e378]:
+                            - img [ref=e379]
+                          - generic [ref=e381]: Download Zip
+                    - generic [ref=e383]:
+                      - checkbox [ref=e391] [cursor=pointer]
+                      - generic [ref=e398]: l acknowledge that l have reviewed the leave application along with any accompanying supporting documents.
+                  - generic [ref=e401]:
+                    - generic [ref=e402]:
+                      - generic [ref=e403]:
+                        - generic [ref=e406]: Existing Leave
+                        - generic [ref=e409]: Existing in progress cancellation
+                        - generic [ref=e412]: Public Holidays
+                        - generic [ref=e415]: Colleague Leave
+                      - generic [ref=e416] [cursor=pointer]:
+                        - text: Views
+                        - img "down" [ref=e417]:
+                          - img [ref=e418]
+                    - generic [ref=e420]:
+                      - generic [ref=e421]:
+                        - generic [ref=e422]:
+                          - button "Today" [ref=e423]
+                          - button "Back" [ref=e424]
+                          - button "Next" [ref=e425]
+                        - generic [ref=e426]: June 2026
+                        - generic [ref=e427]:
+                          - button "Month" [ref=e428]
+                          - button "Week" [ref=e429]
+                          - button "Day" [ref=e430]
+                      - table "Month View" [ref=e431]:
+                        - row "Sun Mon Tue Wed Thu Fri Sat" [ref=e432]:
+                          - columnheader "Sun" [ref=e434]
+                          - columnheader "Mon" [ref=e436]
+                          - columnheader "Tue" [ref=e438]
+                          - columnheader "Wed" [ref=e440]
+                          - columnheader "Thu" [ref=e442]
+                          - columnheader "Fri" [ref=e444]
+                          - columnheader "Sat" [ref=e446]
+                        - rowgroup [ref=e447]:
+                          - row "31 01 02 03 04 05 06 Sick Leave Annual Leave Annual Leave" [ref=e456]:
+                            - generic [ref=e457]:
+                              - cell "31" [ref=e458]:
+                                - button "31" [ref=e459] [cursor=pointer]
+                              - cell "01" [ref=e460]:
+                                - button "01" [ref=e461] [cursor=pointer]
+                              - cell "02" [ref=e462]:
+                                - button "02" [ref=e463] [cursor=pointer]
+                              - cell "03" [ref=e464]:
+                                - button "03" [ref=e465] [cursor=pointer]
+                              - cell "04" [ref=e466]:
+                                - button "04" [ref=e467] [cursor=pointer]
+                              - cell "05" [ref=e468]:
+                                - button "05" [ref=e469] [cursor=pointer]
+                              - cell "06" [ref=e470]:
+                                - button "06" [ref=e471] [cursor=pointer]
+                            - generic [ref=e472]:
+                              - generic "Sick Leave" [ref=e476] [cursor=pointer]:
+                                - generic [ref=e478]: Sick Leave
+                              - generic "Annual Leave" [ref=e481] [cursor=pointer]:
+                                - generic [ref=e483]: Annual Leave
+                              - generic "Annual Leave" [ref=e486] [cursor=pointer]:
+                                - generic [ref=e488]: Annual Leave
+                        - rowgroup [ref=e489]:
+                          - row "07 08 09 10 11 12 13 Sick Leave Sick Leave Annual Leave Annual Leave" [ref=e498]:
+                            - generic [ref=e499]:
+                              - cell "07" [ref=e500]:
+                                - button "07" [ref=e501] [cursor=pointer]
+                              - cell "08" [ref=e502]:
+                                - button "08" [ref=e503] [cursor=pointer]
+                              - cell "09" [ref=e504]:
+                                - button "09" [ref=e505] [cursor=pointer]
+                              - cell "10" [ref=e506]:
+                                - button "10" [ref=e507] [cursor=pointer]
+                              - cell "11" [ref=e508]:
+                                - button "11" [ref=e509] [cursor=pointer]
+                              - cell "12" [ref=e510]:
+                                - button "12" [ref=e511] [cursor=pointer]
+                              - cell "13" [ref=e512]:
+                                - button "13" [ref=e513] [cursor=pointer]
+                            - generic [ref=e514]:
+                              - generic "Sick Leave" [ref=e518] [cursor=pointer]:
+                                - generic [ref=e520]: Sick Leave
+                              - generic "Sick Leave" [ref=e523] [cursor=pointer]:
+                                - generic [ref=e525]: Sick Leave
+                              - generic "Annual Leave" [ref=e528] [cursor=pointer]:
+                                - generic [ref=e530]: Annual Leave
+                              - generic "Annual Leave" [ref=e533] [cursor=pointer]:
+                                - generic [ref=e535]: Annual Leave
+                        - rowgroup [ref=e536]:
+                          - row "14 15 16 17 18 19 20 Annual Leave" [ref=e545]:
+                            - generic [ref=e546]:
+                              - cell "14" [ref=e547]:
+                                - button "14" [ref=e548] [cursor=pointer]
+                              - cell "15" [ref=e549]:
+                                - button "15" [ref=e550] [cursor=pointer]
+                              - cell "16" [ref=e551]:
+                                - button "16" [ref=e552] [cursor=pointer]
+                              - cell "17" [ref=e553]:
+                                - button "17" [ref=e554] [cursor=pointer]
+                              - cell "18" [ref=e555]:
+                                - button "18" [ref=e556] [cursor=pointer]
+                              - cell "19" [ref=e557]:
+                                - button "19" [ref=e558] [cursor=pointer]
+                              - cell "20" [ref=e559]:
+                                - button "20" [ref=e560] [cursor=pointer]
+                            - generic "Annual Leave" [ref=e564] [cursor=pointer]:
+                              - generic [ref=e566]: Annual Leave
+                        - rowgroup [ref=e567]:
+                          - row "21 22 23 24 25 26 27" [ref=e576]:
+                            - generic [ref=e577]:
+                              - cell "21" [ref=e578]:
+                                - button "21" [ref=e579] [cursor=pointer]
+                              - cell "22" [ref=e580]:
+                                - button "22" [ref=e581] [cursor=pointer]
+                              - cell "23" [ref=e582]:
+                                - button "23" [ref=e583] [cursor=pointer]
+                              - cell "24" [ref=e584]:
+                                - button "24" [ref=e585] [cursor=pointer]
+                              - cell "25" [ref=e586]:
+                                - button "25" [ref=e587] [cursor=pointer]
+                              - cell "26" [ref=e588]:
+                                - button "26" [ref=e589] [cursor=pointer]
+                              - cell "27" [ref=e590]:
+                                - button "27" [ref=e591] [cursor=pointer]
+                        - rowgroup [ref=e592]:
+                          - row "28 29 30 01 02 03 04" [ref=e601]:
+                            - generic [ref=e602]:
+                              - cell "28" [ref=e603]:
+                                - button "28" [ref=e604] [cursor=pointer]
+                              - cell "29" [ref=e605]:
+                                - button "29" [ref=e606] [cursor=pointer]
+                              - cell "30" [ref=e607]:
+                                - button "30" [ref=e608] [cursor=pointer]
+                              - cell "01" [ref=e609]:
+                                - button "01" [ref=e610] [cursor=pointer]
+                              - cell "02" [ref=e611]:
+                                - button "02" [ref=e612] [cursor=pointer]
+                              - cell "03" [ref=e613]:
+                                - button "03" [ref=e614] [cursor=pointer]
+                              - cell "04" [ref=e615]:
+                                - button "04" [ref=e616] [cursor=pointer]
+              - generic [ref=e618]:
+                - button "Close" [ref=e624] [cursor=pointer]:
+                  - generic [ref=e625]: Close
+                - button "Send Back" [ref=e631] [cursor=pointer]:
+                  - generic [ref=e632]: Send Back
+                - button "Not Approve" [disabled] [ref=e638]:
+                  - generic: Not Approve
+                - button "Approve without Pay" [disabled] [ref=e644]:
+                  - generic: Approve without Pay
+                - button "Approve with Full Pay" [disabled] [ref=e650]:
+                  - generic: Approve with Full Pay
+  - alert [ref=e6]

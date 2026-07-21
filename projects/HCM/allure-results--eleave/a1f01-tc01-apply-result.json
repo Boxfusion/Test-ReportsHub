@@ -1,0 +1,54 @@
+{
+  "uuid": "a1f0192c-7c01-4b01-9b01-08c8a2e8a601",
+  "historyId": "f1a01b8c7e6deffaf8b66b1a12299501",
+  "name": "TC-01: Apply — Capture Backdated Sick Leave (Thabo Mthembu, GOV003)",
+  "fullName": "eLeave Sick Leave E2E > TC-01: Apply — Capture Backdated Sick Leave (Thabo Mthembu, GOV003)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1781084880000,
+  "stop": 1781085420000,
+  "labels": [
+    { "name": "parentSuite", "value": "HCM" },
+    { "name": "suite", "value": "eLeave — Sick Leave Happy Path" },
+    { "name": "subSuite", "value": "Application for leave (#101941)" },
+    { "name": "feature", "value": "eLeave — SaGov Leave Application" },
+    { "name": "story", "value": "Sick Leave E2E — LA2026/12790" }
+  ],
+  "parameters": [
+    { "name": "Ref No", "value": "LA2026/12790" },
+    { "name": "ADO Suite", "value": "Application for leave (#101941)" },
+    { "name": "ADO Plan", "value": "eLeave Smoke test (#101528)" }
+  ],
+  "steps": [
+    {
+      "name": "Login as GOV003; switched view mode Live → Latest",
+      "status": "passed", "stage": "finished",
+      "start": 1781084880000, "stop": 1781084970000
+    },
+    {
+      "name": "Workflows → My Items → Create New → SaGov Leave Application (Ref No LA2026/12790)",
+      "status": "passed", "stage": "finished",
+      "start": 1781084970000, "stop": 1781085060000
+    },
+    {
+      "name": "Category = Sick Leave; Sub-Category = Sick Leave (auto); Type of illness = Medical Conditions. NB: no Days/Hours duration radio for Sick Leave.",
+      "status": "passed", "stage": "finished",
+      "start": 1781085060000, "stop": 1781085180000
+    },
+    {
+      "name": "Start 08/06/2026, End 08/06/2026 → app confirmed \"You have selected to take 1 day off\" (23 days available)",
+      "status": "passed", "stage": "finished",
+      "start": 1781085180000, "stop": 1781085300000
+    },
+    {
+      "name": "Address captured + supporting document (supporting-doc.txt) attached",
+      "status": "passed", "stage": "finished",
+      "start": 1781085300000, "stop": 1781085360000
+    },
+    {
+      "name": "Submit → Backdated Leave Application dialog → comments → OK → Delegate modal → Don't Delegate → status In Progress",
+      "status": "passed", "stage": "finished",
+      "start": 1781085360000, "stop": 1781085420000
+    }
+  ]
+}

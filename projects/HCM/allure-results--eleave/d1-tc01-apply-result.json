@@ -1,0 +1,44 @@
+{
+  "uuid": "d1a0492c-7c01-4d01-9d01-08c8a2e8d601",
+  "historyId": "d1a04b8c7e6deffaf8b66b1a12299d01",
+  "name": "TC-01: Apply — Capture Adoption Leave (Thabo Mthembu, GOV003)",
+  "fullName": "eLeave Adoption Leave E2E > TC-01: Apply — Capture Adoption Leave (Thabo Mthembu, GOV003)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1781087910000,
+  "stop": 1781088200000,
+  "labels": [
+    { "name": "parentSuite", "value": "HCM" },
+    { "name": "suite", "value": "eLeave — Adoption Leave Happy Path" },
+    { "name": "subSuite", "value": "Application for leave (#101941)" },
+    { "name": "feature", "value": "eLeave — SaGov Leave Application" },
+    { "name": "story", "value": "Adoption Leave E2E — LA2026/12806" }
+  ],
+  "parameters": [
+    { "name": "Ref No", "value": "LA2026/12806" },
+    { "name": "ADO Suite", "value": "Application for leave (#101941)" },
+    { "name": "ADO Plan", "value": "eLeave Smoke test (#101528)" }
+  ],
+  "steps": [
+    {
+      "name": "Login as GOV003 (view mode Latest); Workflows → My Items → Create New → SaGov Leave Application (Ref No LA2026/12806)",
+      "status": "passed", "stage": "finished",
+      "start": 1781087910000, "stop": 1781088000000
+    },
+    {
+      "name": "Category = Adoption Leave; Sub-Category = Adoption Leave (auto). NB: no Days/Hours duration radio.",
+      "status": "passed", "stage": "finished",
+      "start": 1781088000000, "stop": 1781088060000
+    },
+    {
+      "name": "Start 17/06/2026, End 17/06/2026 → app confirmed \"You have selected to take 1 day off\" (100 days available)",
+      "status": "passed", "stage": "finished",
+      "start": 1781088060000, "stop": 1781088140000
+    },
+    {
+      "name": "Address captured + supporting document attached → Submit → Delegate modal → Don't Delegate → status In Progress (no backdated dialog — future date)",
+      "status": "passed", "stage": "finished",
+      "start": 1781088140000, "stop": 1781088200000
+    }
+  ]
+}

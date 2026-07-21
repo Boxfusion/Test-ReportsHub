@@ -1,0 +1,44 @@
+{
+  "uuid": "c3f0392c-7c03-4b03-9b03-08c8a2e8a603",
+  "historyId": "c3f03b8c7e6deffaf8b66b1a12299503",
+  "name": "TC-03: Approve with Full Pay (Naledi Khumalo, GOV022 — HOD)",
+  "fullName": "eLeave Sick Leave E2E > TC-03: Approve with Full Pay (Naledi Khumalo, GOV022 — HOD)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1781085721000,
+  "stop": 1781085850000,
+  "labels": [
+    { "name": "parentSuite", "value": "HCM" },
+    { "name": "suite", "value": "eLeave — Sick Leave Happy Path" },
+    { "name": "subSuite", "value": "Approve leave (#101991)" },
+    { "name": "feature", "value": "eLeave — SaGov Leave Application" },
+    { "name": "story", "value": "Sick Leave E2E — LA2026/12790" }
+  ],
+  "parameters": [
+    { "name": "Ref No", "value": "LA2026/12790" },
+    { "name": "ADO Suite", "value": "Approve leave (#101991)" },
+    { "name": "ADO Plan", "value": "eLeave Smoke test (#101528)" }
+  ],
+  "steps": [
+    {
+      "name": "Login as GOV022 (view mode Latest) → Inbox → open LA2026/12790 (Action: Approve Leave; received from Kavitha)",
+      "status": "passed", "stage": "finished",
+      "start": 1781085721000, "stop": 1781085790000
+    },
+    {
+      "name": "Downloaded attachment + ticked acknowledge (offered Not Approve / Approve without Pay / Approve with Full Pay)",
+      "status": "passed", "stage": "finished",
+      "start": 1781085790000, "stop": 1781085825000
+    },
+    {
+      "name": "Approve with Full Pay → Backdated Leave Comments dialog → comments → Ok → item left Naledi's inbox",
+      "status": "passed", "stage": "finished",
+      "start": 1781085825000, "stop": 1781085845000
+    },
+    {
+      "name": "INFO (not a verified test case): system auto-moved item to \"GENERATE PERSALINPUT\"; PERSAL Transactions row Create Transaction 08/06→08/06. No DevOps test case for this step in plan #101528.",
+      "status": "passed", "stage": "finished",
+      "start": 1781085845000, "stop": 1781085850000
+    }
+  ]
+}
