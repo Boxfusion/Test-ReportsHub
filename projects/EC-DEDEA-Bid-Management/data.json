@@ -15,14 +15,14 @@
   "allureReports": [],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 0,
-    "totalRuns": 2,
-    "last7Runs": 2,
+    "totalPlans": 1,
+    "totalRuns": 3,
+    "last7Runs": 3,
     "last7Pass": 2,
-    "last7PassPct": 100,
+    "last7PassPct": 67,
     "failingFlows": 0,
     "passingFlows": 0,
-    "partialFlows": 0,
+    "partialFlows": 1,
     "neverFlows": 0
   },
   "heatmap": {
@@ -2544,10 +2544,10 @@
       },
       {
         "iso": "2026-07-27",
-        "runs": 2,
+        "runs": 3,
         "passed": 2,
         "failed": 0,
-        "partial": 0
+        "partial": 1
       },
       {
         "iso": "2026-07-28",
@@ -2579,7 +2579,42 @@
       }
     ]
   },
-  "sections": [],
+  "sections": [
+    {
+      "key": "tender-process",
+      "title": "Tender Process",
+      "stripPrefix": "test-plans/tender-process/",
+      "plans": [
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planHref": "test-plans/tender-process/ecdedea-tender-process.md",
+          "spec": "test-plans/tender-process/ecdedea-tender-process.spec.ts",
+          "specHref": "test-plans/tender-process/ecdedea-tender-process.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "partial",
+          "status": "PARTIAL",
+          "last": {
+            "date": "2026-07-27",
+            "result": "PARTIAL",
+            "duration": "",
+            "variant": null,
+            "reportHref": "test-reports/2026-07-27/ecdedea-tender-process-recording.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-07-27",
+              "result": "PARTIAL",
+              "duration": "",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        }
+      ]
+    }
+  ],
   "timeline": [
     {
       "date": "2026-07-27",
@@ -2601,9 +2636,18 @@
           "duration": "",
           "mode": "ai-driven (live MCP browser, headed)",
           "reportHref": "test-reports/2026-07-27/ecdedea-bid-management-e2e.md"
+        },
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "",
+          "mode": "ai-driven (live MCP browser) — recording pass, not a pass/fail run",
+          "reportHref": "test-reports/2026-07-27/ecdedea-tender-process-recording.md"
         }
       ]
     }
   ],
-  "generated": "2026-07-27T11:46:56.337Z"
+  "generated": "2026-07-27T12:55:26.436Z"
 }

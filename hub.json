@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-27T11:46:57.145Z",
+  "generated": "2026-07-27T12:55:27.375Z",
   "projects": [
     {
       "name": "dep",
@@ -102,11 +102,11 @@
       "description": "Hybrid Markdown + Playwright test reports for EC DEDEA SmartGov2 — Bid Management (Tender Process). Same Bid Management workflows as PD Supply Chain Management, deployed for the Eastern Cape Department of Economic Development, Environmental Affairs and Tourism.",
       "health": "healthy",
       "summary": {
-        "totalPlans": 0,
-        "totalRuns": 2,
-        "last7Runs": 2,
+        "totalPlans": 1,
+        "totalRuns": 3,
+        "last7Runs": 3,
         "last7Pass": 2,
-        "last7PassPct": 100,
+        "last7PassPct": 67,
         "failingFlows": 0,
         "lastRun": {
           "date": "2026-07-27",
@@ -165,9 +165,9 @@
   ],
   "totals": {
     "totalProjects": 7,
-    "totalPlans": 48,
-    "totalRuns": 137,
-    "last7Runs": 3,
+    "totalPlans": 49,
+    "totalRuns": 138,
+    "last7Runs": 4,
     "failingFlows": 19
   }
 }
