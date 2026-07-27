@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-27T12:55:27.375Z",
+  "generated": "2026-07-27T13:22:08.401Z",
   "projects": [
     {
       "name": "dep",
@@ -103,10 +103,10 @@
       "health": "healthy",
       "summary": {
         "totalPlans": 1,
-        "totalRuns": 3,
-        "last7Runs": 3,
-        "last7Pass": 2,
-        "last7PassPct": 67,
+        "totalRuns": 5,
+        "last7Runs": 5,
+        "last7Pass": 4,
+        "last7PassPct": 80,
         "failingFlows": 0,
         "lastRun": {
           "date": "2026-07-27",
@@ -166,8 +166,8 @@
   "totals": {
     "totalProjects": 7,
     "totalPlans": 49,
-    "totalRuns": 138,
-    "last7Runs": 4,
+    "totalRuns": 140,
+    "last7Runs": 6,
     "failingFlows": 19
   }
 }

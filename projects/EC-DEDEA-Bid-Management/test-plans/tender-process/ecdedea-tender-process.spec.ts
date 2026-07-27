@@ -125,10 +125,15 @@ async function pickAntDateTime(page: Page, field: Locator, dateTitle: string, ho
 }
 
 // AntD form: each field is its own .ant-form-item holding a single input. Recorded live: matching
-// on form-item TEXT is ambiguous on this build (e.g. "Minimum score required" appears on two items,
-// and "Email" is a substring of "Email Address"), so match the <label> exactly instead.
+// on form-item TEXT is ambiguous on this build ("Minimum score required" appears on two items and
+// "Email" is a substring of "Email Address"), so match the <label> instead — but anchored rather
+// than exact, because required labels render as "<Label>\n*" and some carry a trailing colon
+// (TC-16's field is literally "Purchase Order No:", which an exact match misses).
 function formItem(page: Page, label: string) {
-  return page.locator('.ant-form-item').filter({ has: page.locator(`label:text-is("${label}")`) }).last();
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return page.locator('.ant-form-item')
+    .filter({ has: page.locator('label').filter({ hasText: new RegExp(`^${escaped}\\s*:?\\s*\\*?\\s*$`) }) })
+    .last();
 }
 
 // Recorded live: only the visible dropdown may be matched — AntD keeps previous dropdowns mounted
@@ -345,13 +350,13 @@ async function assertWinnerFlaggedRecommended(page: Page) {
 
 // ───────────────────────────── test cases ─────────────────────────────
 //
-// Recording status (2026-07-27, REF2026-2223):
-//   TC-01 … TC-09  RECORDED LIVE — every selector below was resolved against this build.
-//   TC-10 … TC-16  PORTED, NOT YET RE-RECORDED — the pages were driven by hand earlier the same day
-//                  (REF2026-2200 / REF2026-2210) and follow the open-row → click-action → confirm
-//                  pattern already proven above, but their locators still come from the PD spec.
-//                  Expect AI-repair to touch these on the first run; the CMU-email select in TC-15
-//                  carries an explicit TODO[selector].
+// Status (2026-07-27): 16/16 green on BOTH variants via scripts/run-plan.js —
+// EVAL_CRITERIA=90/10 (316.7s) and EVAL_CRITERIA=80/20 (344.9s).
+//   TC-01 … TC-09  selectors recorded live against this build (REF2026-2223).
+//   TC-10 … TC-16  ported from the PD spec and passed unmodified on the first runner pass.
+// The only failure of the first run was TC-16: formItem() required an exact label match, but this
+// build renders the field as "Purchase Order No:" WITH a trailing colon — hence the anchored,
+// colon-tolerant label regex below. TC-15's CMU-email select is still an unpinned TODO[selector].
 
 test.describe('ECDEDEA-TP — EC DEDEA Bid Management (Tender Process)', () => {
 

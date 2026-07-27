@@ -69,14 +69,23 @@ Evaluators resolved live: **Cedrick Maake**, **Bokang Ngoetjane**, **Bonolo Both
    REF2026-1172 finding). Not logged separately; noted in the plan.
 3. Console shows 10–40 non-fatal JS errors per page on this build; none blocked the flow.
 
-## Not done
+## Outcome of the runner passes that followed
 
-- **TC-10 … TC-16 were not re-recorded.** Their locators are still the PD ones. They were driven by
-  hand earlier the same day (REF2026-2200 / REF2026-2210) and follow the open-row → click-action →
-  confirm pattern already proven, but expect AI-repair to touch them on the first automated run.
-- **TC-15's Contract Management Unit Email select** carries an explicit `TODO[selector]` — the option
-  list for this build is unverified, so the spec picks the first option.
-- **REF2026-2223 is parked** at the *BEC: Monitor Evaluation Progress* stage with only Cedrick's
-  A & A score captured. It is not a completed lifecycle and should not be counted as one.
-- No Allure report — this was an MCP recording pass, not a `run-plan.js` run. Allure appears once the
-  spec is executed via the runner.
+This recording pass was immediately followed by three `run-plan.js` executions, which supersede the
+caveats originally listed here:
+
+| Run | Result | Note |
+|---|---|---|
+| 90/10 (13:06 UTC) | PARTIAL 15/16 | TC-16 failed — `formItem()` matched labels exactly, but this build renders the field as **"Purchase Order No:"** with a trailing colon |
+| 80/20 (13:14 UTC) | **PASSED 16/16** | after the label fix; no AI-repair needed |
+| 90/10 (13:20 UTC) | **PASSED 16/16** | re-run after the fix; replaced the PARTIAL report of the same name |
+
+- **TC-10 … TC-16 did NOT need re-recording after all.** They passed first time on the PD locators —
+  the prediction in the earlier draft of this report was wrong. The only failure came from a helper
+  that *had* been recorded (`formItem`), not from the un-recorded stages.
+- **TC-15's Contract Management Unit Email** `TODO[selector]` still stands — the spec picks the first
+  option, which satisfies the happy path but is not pinned to a named contact.
+- **REF2026-2223 (this recording pass) is parked** at *BEC: Monitor Evaluation Progress* with only
+  Cedrick's A & A score captured. Not a completed lifecycle; do not count it as one. The three
+  runner passes each created and completed their own tender.
+- **Allure reports now exist** for both variants: `allure-report--90-10/` and `allure-report--80-20/`.

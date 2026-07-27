@@ -1,6 +1,6 @@
 # Test Plan: ECDEDEA-TP — EC DEDEA Bid Management (Tender Process)
 
-> **Status:** Ready (TC-01–TC-09 recorded live; TC-10–TC-16 ported, pending a recording pass)
+> **Status:** Ready — 16/16 green on both variants (90/10 and 80/20) via `run-plan.js`, 2026-07-27
 > **Owner:** QA
 > **Last Updated:** 2026-07-27
 > **Estimated Duration:** 1200s

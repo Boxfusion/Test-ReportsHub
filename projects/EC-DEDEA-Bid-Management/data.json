@@ -11,18 +11,29 @@
       "kind": "local"
     }
   },
-  "hasAllure": false,
-  "allureReports": [],
+  "hasAllure": true,
+  "allureReports": [
+    {
+      "slug": "80-20",
+      "label": "80/20",
+      "href": "allure-report--80-20/index.html"
+    },
+    {
+      "slug": "90-10",
+      "label": "90/10",
+      "href": "allure-report--90-10/index.html"
+    }
+  ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 1,
-    "totalRuns": 3,
-    "last7Runs": 3,
-    "last7Pass": 2,
-    "last7PassPct": 67,
+    "totalRuns": 5,
+    "last7Runs": 5,
+    "last7Pass": 4,
+    "last7PassPct": 80,
     "failingFlows": 0,
-    "passingFlows": 0,
-    "partialFlows": 1,
+    "passingFlows": 1,
+    "partialFlows": 0,
     "neverFlows": 0
   },
   "heatmap": {
@@ -2544,8 +2555,8 @@
       },
       {
         "iso": "2026-07-27",
-        "runs": 3,
-        "passed": 2,
+        "runs": 5,
+        "passed": 4,
         "failed": 0,
         "partial": 1
       },
@@ -2592,17 +2603,29 @@
           "specHref": "test-plans/tender-process/ecdedea-tender-process.spec.ts",
           "canRun": true,
           "badges": [],
-          "rowStatus": "partial",
-          "status": "PARTIAL",
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
             "date": "2026-07-27",
-            "result": "PARTIAL",
-            "duration": "",
-            "variant": null,
-            "reportHref": "test-reports/2026-07-27/ecdedea-tender-process-recording.md"
+            "result": "PASSED",
+            "duration": "13.5s",
+            "variant": "80/20",
+            "reportHref": "test-reports/2026-07-27/ecdedea-tender-process--80-20.md"
           },
-          "runCount": 1,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-07-27",
+              "result": "PASSED",
+              "duration": "13.5s",
+              "variant": "80/20"
+            },
+            {
+              "date": "2026-07-27",
+              "result": "PASSED",
+              "duration": "14.0s",
+              "variant": "90/10"
+            },
             {
               "date": "2026-07-27",
               "result": "PARTIAL",
@@ -2639,6 +2662,24 @@
         },
         {
           "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md (80/20)",
+          "variant": "80/20",
+          "result": "PASSED",
+          "duration": "13.5s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-27/ecdedea-tender-process--80-20.md"
+        },
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md (90/10)",
+          "variant": "90/10",
+          "result": "PASSED",
+          "duration": "14.0s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-27/ecdedea-tender-process--90-10.md"
+        },
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
           "planDisplay": "tender-process/ecdedea-tender-process.md",
           "variant": null,
           "result": "PARTIAL",
@@ -2649,5 +2690,5 @@
       ]
     }
   ],
-  "generated": "2026-07-27T12:55:26.436Z"
+  "generated": "2026-07-27T13:22:07.426Z"
 }
