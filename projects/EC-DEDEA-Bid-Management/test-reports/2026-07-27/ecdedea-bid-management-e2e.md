@@ -1,10 +1,10 @@
-# EC DEDEA — Bid Management Full Chain E2E (Live MCP)
-
-- **Date:** 2026-07-27
-- **App / Environment:** EC DEDEA SmartGov2 Admin Portal (QA) — https://ecdedea-smartgov2-adminportal-qa.shesha.app/
-- **Driver:** Live, MCP-driven browser (headed), Playwright MCP
-- **Tender created & threaded:** `REF2026-2200` — "EC DEDEA Bid Management E2E - REF2026-2200"
-- **Result:** ✅ **PASS end-to-end** — tender reached **Completed / Awarded** to **A & A Stationers** (R100,000), awarded 27/07/2026.
+# Report: EC DEDEA — Bid Management Full Chain E2E — 90/10
+**Date:** 2026-07-27
+**Variant:** 90/10
+**App:** EC DEDEA SmartGov2 Admin Portal — https://ecdedea-smartgov2-adminportal-qa.shesha.app/ (QA)
+**Execution Mode:** ai-driven (live MCP browser, headed)
+**Result:** PASSED — tender reached **Completed / Awarded** to **A & A Stationers** (R100,000), awarded 27/07/2026
+**Tender:** `REF2026-2200` — "EC DEDEA Bid Management E2E - REF2026-2200"
 
 ## Scope
 
@@ -55,5 +55,5 @@ Login password `123qwe` for all users. View mode switched Live → Latest for ea
 - No application defects encountered; every stage advanced cleanly on first submit.
 - Console shows ~10-30 non-fatal JS errors per page (pre-existing on this Shesha build); none blocked the flow.
 
-## Not done
-- Report not yet committed/pushed to the hub.
+## Publication
+- Published to the Test Reports Hub under the **EC-DEDEA-Bid-Management** project (2026-07-27).
