@@ -1,0 +1,102 @@
+                                                                BAS                                              DATE: 27/01/2025
+20001                                             MP: AGR,RUR DEV,LAND&ENV AFFAIRS                               TIME: 17:22:29
+RP007BS                                                    PAYMENT STUB                                          PAGE     1
+
+ CONTACT PERSON          : MS FA NGOBENI                                           CONTACT TEL NO : 013 7666525
+ INSTALLATION DESCRIPTION: MP: AGR,RUR DEV,LAND&ENV AFFAIRS                        DISBURSEMENT NO: 001153909
+ LOCATION DESCRIPTION    : MP: AGR,RUR DEV,LAND&ENV AFFAIRS                        ACTION DATE    : 20/06/2026
+
+
+ PAYEE NAME     : VODACOM                                                          BANK NAME   : STANDARD BANK OF SOUTH AFRICA
+ PAYMENT ADDRESS: 082 VODACOM BOULEVARD                                            BANK BRANCH : SANDTON CITY
+                  RENAISSANCE PARK, BUSINESS & DAT                                 ACCOUNT TYPE: CURRENT
+                                                                                   ACCOUNT NO  : *****2418
+
+                  1685
+
+
+  SOURCE DOC                        PURCHASE ORDER                    PAYMENT    FUNCTIONAL
+  NUMBER                            NUMBER                            NUMBER     AREA        USER          AMOUNT
+ ---------------------------------------------------------------------------------------------------------------------------------
+  DHA-LOG-3086                      OR-126152                         3086       CL          54166624                     101.50
+  OPL-876                           OR-125694                         9878       CL          15987634                      85.98
+                                                                                                          ------------------------
+                                                                                             TOTAL                     90,085.98
+                                                                                                          ------------------------
+                                                  **** END OF REPORT RP007BS ****
+
+                                                                BAS                                              DATE: 27/01/2025
+20001                                             MP: AGR,RUR DEV,LAND&ENV AFFAIRS                               TIME: 17:22:29
+RP007BS                                                    PAYMENT STUB                                          PAGE     2
+
+ CONTACT PERSON          : MS FA NGOBENI                                           CONTACT TEL NO : 013 7666525
+ INSTALLATION DESCRIPTION: MP: AGR,RUR DEV,LAND&ENV AFFAIRS                        DISBURSEMENT NO: 001153910
+ LOCATION DESCRIPTION    : MP: AGR,RUR DEV,LAND&ENV AFFAIRS                        ACTION DATE    : 30/01/2025
+
+
+ PAYEE NAME     : MPUMALANGA PROVINCIAL TREASURY                                   BANK NAME   : ABSA BANK LIMITED
+ PAYMENT ADDRESS: PRIVATE BAG X 11205                                              BANK BRANCH : ABSA ELECTRONIC SETTLEMENT CNT
+                  NELSPRUIT                                                        ACCOUNT TYPE: CURRENT
+                                                                                   ACCOUNT NO  : ******5761
+
+                  1200
+
+
+  SOURCE DOC                        PURCHASE ORDER                    PAYMENT    FUNCTIONAL
+  NUMBER                            NUMBER                            NUMBER     AREA        USER          AMOUNT
+ ---------------------------------------------------------------------------------------------------------------------------------
+  RP27012025                        NOT APPLIC                        002481330  AP          BU83072845               453,604.62
+                                                                                                          ------------------------
+                                                                                             TOTAL                    453,604.62
+                                                                                                          ------------------------
+                                                  **** END OF REPORT RP007BS ****
+                                                                BAS                                              DATE: 27/01/2025
+20001                                             MP: AGR,RUR DEV,LAND&ENV AFFAIRS                               TIME: 17:22:29
+RP007BS                                                    PAYMENT STUB                                          PAGE     3
+
+ CONTACT PERSON          : MS FA NGOBENI                                           CONTACT TEL NO : 013 7666525
+ INSTALLATION DESCRIPTION: MP: AGR,RUR DEV,LAND&ENV AFFAIRS                        DISBURSEMENT NO: 001153911
+ LOCATION DESCRIPTION    : MP: AGR,RUR DEV,LAND&ENV AFFAIRS                        ACTION DATE    : 30/01/2025
+
+
+ PAYEE NAME     : SIWAHLA-MADIBA                                                   BANK NAME   : STANDARD BANK OF SOUTH AFRICA
+ PAYMENT ADDRESS: 39 JOHANNES MEYER DRIVE                                          BANK BRANCH : KIMBERLEY
+                  BASSONIA                                                         ACCOUNT TYPE: TRANSMIS
+                                                                                   ACCOUNT NO  : *****2889
+
+                  2190
+
+
+  SOURCE DOC                        PURCHASE ORDER                    PAYMENT    FUNCTIONAL
+  NUMBER                            NUMBER                            NUMBER     AREA        USER          AMOUNT
+ ---------------------------------------------------------------------------------------------------------------------------------
+  63092209810872701                 NOT APPLIC                        002481329  AP          BU83283307                40,014.00
+                                                                                                          ------------------------
+                                                                                             TOTAL                     40,014.00
+                                                                                                          ------------------------
+                                                  **** END OF REPORT RP007BS ****
+                                                                BAS                                              DATE: 27/01/2025
+20001                                             MP: AGR,RUR DEV,LAND&ENV AFFAIRS                               TIME: 17:22:29
+RP007BS                                                    PAYMENT STUB                                          PAGE     4
+
+ CONTACT PERSON          : MS FA NGOBENI                                           CONTACT TEL NO : 013 7666525
+ INSTALLATION DESCRIPTION: MP: AGR,RUR DEV,LAND&ENV AFFAIRS                        DISBURSEMENT NO: 001153912
+ LOCATION DESCRIPTION    : MP: AGR,RUR DEV,LAND&ENV AFFAIRS                        ACTION DATE    : 30/01/2025
+
+
+ PAYEE NAME     : AGRIESY                                                          BANK NAME   : FIRST NATIONAL BANK
+ PAYMENT ADDRESS: 66 HEXRIEVIER AERORAND                                           BANK BRANCH : MIDDELBURG MPUMALANGA
+                  MIDDELBURG                                                       ACCOUNT TYPE: CURRENT
+                                                                                   ACCOUNT NO  : *******9489
+
+                  1050
+
+
+  SOURCE DOC                        PURCHASE ORDER                    PAYMENT    FUNCTIONAL
+  NUMBER                            NUMBER                            NUMBER     AREA        USER          AMOUNT
+ ---------------------------------------------------------------------------------------------------------------------------------
+  NK11/2024                         OR-084289                         002481342  CL          83283307                  91,795.38
+                                                                                                          ------------------------
+                                                                                             TOTAL                     91,795.38
+                                                                                                          ------------------------
+                                                  **** END OF REPORT RP007BS ****

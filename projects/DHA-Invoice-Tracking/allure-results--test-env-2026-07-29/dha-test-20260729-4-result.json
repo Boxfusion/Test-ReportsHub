@@ -1,0 +1,121 @@
+{
+  "uuid": "dha-test-20260729-4",
+  "historyId": "LOGIS Request For Payment:LOGIS Negative — Reject Invoice → send-back → Approve Rejection → REJECTED",
+  "name": "LOGIS Negative — Reject Invoice → send-back → Approve Rejection → REJECTED",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Negative — Reject Invoice → send-back → Approve Rejection → REJECTED",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1785306286000,
+  "stop": 1785306764000,
+  "description": "Both sub-branches of the rejection review exercised on one item. Verify Invoice → Reject Invoice (mandatory comment) → Review Invoice Rejection → \"Send for Invoice Verification\" returns it to Verify Invoice → rejected again → \"Approve Rejection\" → terminal REJECTED (status 3, subStatus 13, no active todos). Report: test-reports/2026-07-29/logis-negative-branches.md §2",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Negative branches"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Reject Invoice / Review Invoice Rejection"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3082/2026"
+    },
+    {
+      "name": "Order / Invoice / Amount",
+      "value": "OR-126052 / DHA-LOG-3082 / R78 520"
+    },
+    {
+      "name": "Supplier",
+      "value": "GOVERNMENT PRINTING WORKS (A1960)"
+    },
+    {
+      "name": "Final status",
+      "value": "REJECTED — workflow Completed"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Register + drive to Verify Invoice",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785306286000,
+      "stop": 1785306483000
+    },
+    {
+      "name": "Verify Invoice — outcome \"Reject Invoice\" + 7 × Yes + comment",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785306483000,
+      "stop": 1785306540000
+    },
+    {
+      "name": "Assert routed to Review Invoice Rejection",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785306540000,
+      "stop": 1785306540000
+    },
+    {
+      "name": "Review Invoice Rejection — \"Send for Invoice Verification\" + comment",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785306540000,
+      "stop": 1785306570000
+    },
+    {
+      "name": "Assert returned to Verify Invoice; send-back banner shown",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785306570000,
+      "stop": 1785306651000
+    },
+    {
+      "name": "Assert send-back CLEARED the outcome + 7 answers (re-entry needed)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785306651000,
+      "stop": 1785306671000
+    },
+    {
+      "name": "Re-reject, then \"Approve Rejection\" + comment",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785306695000,
+      "stop": 1785306764000
+    },
+    {
+      "name": "Assert terminal REJECTED (subStatus 13), no onward task",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785306764000,
+      "stop": 1785306764000
+    }
+  ]
+}

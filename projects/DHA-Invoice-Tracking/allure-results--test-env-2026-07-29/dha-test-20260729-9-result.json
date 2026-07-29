@@ -1,0 +1,55 @@
+{
+  "uuid": "dha-test-20260729-9",
+  "historyId": "LOGIS Request For Payment:LOGIS Negative — TC-04 Re-route form (select correct Business Unit/End-User)",
+  "name": "LOGIS Negative — TC-04 Re-route form (select correct Business Unit/End-User)",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Negative — TC-04 Re-route form (select correct Business Unit/End-User)",
+  "status": "skipped",
+  "stage": "finished",
+  "start": 1785306075000,
+  "stop": 1785306075000,
+  "description": "BLOCKED — the re-route task is unassigned, so the form itself (Business Unit/End-User picker, and the documented return to Certify Invoice) could never be opened.",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Negative branches"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "TC-04 Re-route to Correct Business Unit"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Blocked by",
+      "value": "Re-route task has no assignee"
+    }
+  ],
+  "steps": [],
+  "statusDetails": {
+    "message": "Blocked by 2026-07-29-logis-reroute-wrong-person-no-assignee.md"
+  }
+}

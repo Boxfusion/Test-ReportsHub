@@ -1,0 +1,57 @@
+{
+  "uuid": "dha-test-1785259080000-5",
+  "historyId": "LOGIS Request For Payment:LOGIS Full Chain — NOT EXECUTED this session",
+  "name": "LOGIS Full Chain — NOT EXECUTED this session",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Full Chain — NOT EXECUTED this session",
+  "status": "skipped",
+  "stage": "finished",
+  "start": 1785261600000,
+  "stop": 1785261600000,
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Positive chain"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Full LOGIS Request-for-Payment happy path on TEST"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Blocker status",
+      "value": "Activity_117ve9d fix assumed-good but unproven"
+    }
+  ],
+  "steps": [],
+  "statusDetails": {
+    "message": "Not executed — the session ended after the BAS coverage. IMPORTANT: the LOGIS half of the 2026-07-28 blocker (elementId Activity_117ve9d) is therefore still UNVERIFIED on TEST; only the BAS activity (Activity_0e0c34w) has been proven fixed. LOGIS must be retested before the blocker is considered fully closed.",
+    "known": false,
+    "muted": false,
+    "flaky": false
+  }
+}

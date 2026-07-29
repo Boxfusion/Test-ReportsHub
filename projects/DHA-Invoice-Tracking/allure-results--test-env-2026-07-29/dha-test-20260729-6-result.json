@@ -1,0 +1,111 @@
+{
+  "uuid": "dha-test-20260729-6",
+  "historyId": "LOGIS Request For Payment:LOGIS Negative — \"I am the wrong person to confirm the delivery\" re-route (DEAD END)",
+  "name": "LOGIS Negative — \"I am the wrong person to confirm the delivery\" re-route (DEAD END)",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Negative — \"I am the wrong person to confirm the delivery\" re-route (DEAD END)",
+  "status": "failed",
+  "stage": "finished",
+  "start": 1785305608000,
+  "stop": 1785306075000,
+  "description": "Certifying with \"I am the wrong person to confirm the delivery\" records outcome 3 and activates \"Re-route to Correct Business Unit\", but that task has assignedTo: [] and NONE of the eight available logins can see it (checked inbox AND per-user activeTodoItems for each). canReassign is false. PAY3076 is permanently stuck. Bug: test-reports/bugs/2026-07-29-logis-reroute-wrong-person-no-assignee.md",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Defects"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "TC-04 Re-route to Correct Business Unit"
+    },
+    {
+      "name": "severity",
+      "value": "blocker"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3076/2026"
+    },
+    {
+      "name": "Order / Invoice / Amount",
+      "value": "OR-126151 / DHA-LOG-3076 / R207"
+    },
+    {
+      "name": "Logins checked",
+      "value": "8 (all ITS test accounts) — none hold the task"
+    },
+    {
+      "name": "Final status",
+      "value": "STUCK at Re-route to Correct Business Unit"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Register + Certify as ThabisoM",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785305436000,
+      "stop": 1785305608000
+    },
+    {
+      "name": "Choose \"I am the wrong person to confirm the delivery\"",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785305608000,
+      "stop": 1785305608000
+    },
+    {
+      "name": "Assert wrong-person dialog + mandatory comment (Ok disabled until typed)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785305608000,
+      "stop": 1785305640000
+    },
+    {
+      "name": "Submit → outcome 3 recorded, Re-route step activated",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785305640000,
+      "stop": 1785305659000
+    },
+    {
+      "name": "Assert re-route task has an assignee",
+      "status": "failed",
+      "stage": "finished",
+      "start": 1785305659000,
+      "stop": 1785305680000
+    },
+    {
+      "name": "Verify across all 8 logins (inbox + activeTodoItems)",
+      "status": "failed",
+      "stage": "finished",
+      "start": 1785305680000,
+      "stop": 1785306075000
+    }
+  ],
+  "statusDetails": {
+    "message": "Re-route task is active but unassigned — no available user can action it; the invoice is stranded",
+    "trace": "Process/Progress → {\"actionText\":\"Re-route to Correct Business Unit\",\"assignedTo\":[],\"status\":1,\"activatedOn\":\"2026-07-29T08:14:19.737\",\"overdueDate\":\"2026-07-31T08:14:19.717\"}\n\nEvery OTHER active step resolves names in that same field (Certify → [\"Thabiso Maake\"], Capture and Link → its 5 role members, Pre-Authorise → 2 names).\n\nChecked with empty result: Admin, ThabisoM, Mutshutshut, 00000000, H18433740, H19234198, H10226923, H23086050 — inbox and activeTodoItems both empty for all 8. canReassign: false."
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "uuid": "dha-test-20260729-2",
+  "historyId": "LOGIS Request For Payment:LOGIS Full Chain → PAID + Filed (blockers cleared, 11/11)",
+  "name": "LOGIS Full Chain → PAID + Filed (blockers cleared, 11/11)",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Full Chain → PAID + Filed (blockers cleared, 11/11)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1785302220000,
+  "stop": 1785303669000,
+  "description": "First time the LOGIS chain has ever completed on TEST. Resumed the item parked at Certify since 2026-07-28: the SetPaymentApprover silent 500 is FIXED (now 200, routes to Melissa Ndlovu as on QA), and the Capture-and-Link role gap was resolved by login H23086050. Report: test-reports/2026-07-29/logis-full-chain-PAY3055.md",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Happy path"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Full chain to Paid + Filed"
+    },
+    {
+      "name": "severity",
+      "value": "blocker"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3055/2026"
+    },
+    {
+      "name": "Order / Invoice / Amount",
+      "value": "OR-125489 / DHA-LOG-3055 / R92"
+    },
+    {
+      "name": "Payment Number",
+      "value": "3055 (captured by hand)"
+    },
+    {
+      "name": "Final status",
+      "value": "PAID + Filed — workflow Completed"
+    }
+  ],
+  "steps": [
+    {
+      "name": "BLOCKER RETEST — Certify Invoice: SetPaymentApprover now 200",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785302220000,
+      "stop": 1785302232000
+    },
+    {
+      "name": "Assert routed to Approve Invoice → Melissa Ndlovu (as QA)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785302232000,
+      "stop": 1785302232000
+    },
+    {
+      "name": "Approve Invoice (00000000)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785302280000,
+      "stop": 1785302314000
+    },
+    {
+      "name": "Assign Responsible Official (H18433740, self-assign)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785302314000,
+      "stop": 1785302397000
+    },
+    {
+      "name": "Verify Invoice — Verification complete + 7 × Yes",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785302397000,
+      "stop": 1785302422000
+    },
+    {
+      "name": "Capture and Link on LOGIS — Payment No 3055 (H23086050)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785303000000,
+      "stop": 1785303156000
+    },
+    {
+      "name": "Pre-Authorise Payment (H18433740)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785303156000,
+      "stop": 1785303235000
+    },
+    {
+      "name": "Verify Voucher — no batch number on LOGIS (H19234198)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785303235000,
+      "stop": 1785303298000
+    },
+    {
+      "name": "BAS report import — Source Doc Type INV → Payments Authorised 1",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785303298000,
+      "stop": 1785303396000
+    },
+    {
+      "name": "Payment stub import — matched on PO OR-125489 → PAID",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785303396000,
+      "stop": 1785303545000
+    },
+    {
+      "name": "Capture Filing — Batch + Box + File Range (Mutshutshut)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785303545000,
+      "stop": 1785303669000
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "uuid": "dha-test-1785259080000-2",
+  "historyId": "BAS Request For Payment:BAS Negative — Reject Invoice → send-back → Approve Rejection → REJECTED",
+  "name": "BAS Negative — Reject Invoice → send-back → Approve Rejection → REJECTED",
+  "fullName": "DHA Invoice Tracking (TEST) > BAS Request For Payment > BAS Negative — Reject Invoice → send-back → Approve Rejection → REJECTED",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1785260640000,
+  "stop": 1785261360000,
+  "description": "Both sub-branches of the rejection review exercised on one item. Prepare Voucher → Reject Invoice (mandatory comment dialog) → Review Rejected Invoice → \"Send for Invoice Verification\" returns the item to Prepare Voucher → rejected again → \"Approve Rejection\" → terminal REJECTED (status 3, no active todo items). Report: test-reports/2026-07-28/bas-negative-reject-invoice-PAY3047.md",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "BAS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Negative branches"
+    },
+    {
+      "name": "feature",
+      "value": "BAS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Reject Invoice / Review Rejected Invoice"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3047/2026"
+    },
+    {
+      "name": "Invoice / Amount",
+      "value": "DHA-INV-3047 / R3 500"
+    },
+    {
+      "name": "Final status",
+      "value": "REJECTED — workflow Completed"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Register + drive to Prepare Voucher",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785260640000,
+      "stop": 1785261180000
+    },
+    {
+      "name": "Prepare Voucher — Outcome \"Reject Invoice\" + mandatory comment",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785261180000,
+      "stop": 1785261180000
+    },
+    {
+      "name": "Assert routed to Review Rejected Invoice",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785261180000,
+      "stop": 1785261240000
+    },
+    {
+      "name": "Review Rejected Invoice — \"Send for Invoice Verification\" + comment",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785261240000,
+      "stop": 1785261240000
+    },
+    {
+      "name": "Assert item returned to Prepare Voucher (send-back loop)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785261240000,
+      "stop": 1785261300000
+    },
+    {
+      "name": "Re-reject, then \"Approve Rejection\" + comment",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785261300000,
+      "stop": 1785261300000
+    },
+    {
+      "name": "Assert terminal REJECTED, no onward task",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785261300000,
+      "stop": 1785261360000
+    }
+  ]
+}

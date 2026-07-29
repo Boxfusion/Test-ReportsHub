@@ -1,0 +1,55 @@
+{
+  "uuid": "dha-test-20260729-10",
+  "historyId": "LOGIS Request For Payment:LOGIS Registration — over-commitment requires a Motivation upload",
+  "name": "LOGIS Registration — over-commitment requires a Motivation upload",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Registration — over-commitment requires a Motivation upload",
+  "status": "skipped",
+  "stage": "finished",
+  "start": 1785304896000,
+  "stop": 1785304896000,
+  "description": "NOT EXECUTED. The register form warns that if the selected Invoice Amounts exceed the selected Committed Amounts a Motivation must be uploaded. Every run so far had variance ≤ 0, so the rule has not been exercised.",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Validation"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Order line items — over-commitment rule"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Reason",
+      "value": "All runs had variance 0.00"
+    }
+  ],
+  "steps": [],
+  "statusDetails": {
+    "message": "Not executed this session — needs a deliberate over-invoice"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "uuid": "dha-test-20260729-7",
+  "historyId": "LOGIS Request For Payment:LOGIS Negative — Capture & Link \"No / payment should not proceed\" (Submit disabled)",
+  "name": "LOGIS Negative — Capture & Link \"No / payment should not proceed\" (Submit disabled)",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Negative — Capture & Link \"No / payment should not proceed\" (Submit disabled)",
+  "status": "failed",
+  "stage": "finished",
+  "start": 1785307299000,
+  "stop": 1785307380000,
+  "description": "With Payment Number saved, \"Should payment proceed? = No\", \"Send to Business Unit\" selected and the confirmation ticked, the VISIBLE Submit stays disabled and no validation message is rendered — the branch cannot be completed by a user. The only ENABLED Submit is hidden (zero width) and, when clicked programmatically, records outcome 1 (proceed) and routes to Pre-Authorise — the opposite decision. Choosing Yes enables the visible Submit normally, which isolates the fault to the No outcome. Bug: test-reports/bugs/2026-07-29-logis-capture-link-no-branch-submit-disabled.md",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Defects"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "TC-11 Capture and Link — No branch"
+    },
+    {
+      "name": "severity",
+      "value": "blocker"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3086/2026"
+    },
+    {
+      "name": "Actor",
+      "value": "H23086050 (LESETJA JACK BAMBO)"
+    },
+    {
+      "name": "Selected",
+      "value": "No + Send to Business Unit + confirmation ticked"
+    },
+    {
+      "name": "Visible Submit",
+      "value": "disabled (no validation message)"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Capture Payment Number 3086 + inline Save (200)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307299000,
+      "stop": 1785307319000
+    },
+    {
+      "name": "Select \"Should payment proceed? = No\"",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307319000,
+      "stop": 1785307325000
+    },
+    {
+      "name": "Select revealed sub-option \"Send to Business Unit\"",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307325000,
+      "stop": 1785307340000
+    },
+    {
+      "name": "Tick confirmation",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307340000,
+      "stop": 1785307345000
+    },
+    {
+      "name": "Assert visible Submit is enabled",
+      "status": "failed",
+      "stage": "finished",
+      "start": 1785307345000,
+      "stop": 1785307350000
+    },
+    {
+      "name": "Assert a validation message explains what is missing",
+      "status": "failed",
+      "stage": "finished",
+      "start": 1785307350000,
+      "stop": 1785307355000
+    },
+    {
+      "name": "Diagnose: only enabled Submit is hidden and applies outcome 1",
+      "status": "failed",
+      "stage": "finished",
+      "start": 1785307355000,
+      "stop": 1785307380000
+    }
+  ],
+  "statusDetails": {
+    "message": "Visible Submit permanently disabled on the No branch; enabled hidden Submit applies outcome 1 (proceed)",
+    "trace": "Submit button states on Capture and Link with No selected:\n  #1 disabled=false  width=0   (hidden)\n  #2 disabled=true   width=0   (hidden)\n  #3 disabled=true   width=75  (visible)\n\n.ant-form-item-explain is empty — nothing tells the user what is outstanding.\nClicking #1 → outcome 1 recorded, routed to Pre-Authorise Payment, ignoring \"No\".\nCross-check: on a later pass with Yes selected, the visible Submit was enabled and worked first time."
+  }
+}

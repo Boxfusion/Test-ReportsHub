@@ -1,0 +1,52 @@
+{
+  "uuid": "dha-test-1785259080000-7",
+  "historyId": "LOGIS Request For Payment:LOGIS Negative — Business Related Query — NOT EXECUTED this session",
+  "name": "LOGIS Negative — Business Related Query — NOT EXECUTED this session",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Negative — Business Related Query — NOT EXECUTED this session",
+  "status": "skipped",
+  "stage": "finished",
+  "start": 1785261600000,
+  "stop": 1785261600000,
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Negative branches"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Business Related Query"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [],
+  "steps": [],
+  "statusDetails": {
+    "message": "Not executed — the session ended after the BAS coverage. Note: this branch will hit the same blocker as its BAS equivalent — the query-response task routes to HLEKANEI ROSE MATHE, for whom no login is available on TEST.",
+    "known": false,
+    "muted": false,
+    "flaky": false
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "uuid": "dha-test-1785259080000-0",
+  "historyId": "Blocker verification:BLOCKER RETEST — Register & Upload \"Submit\" no longer returns 500",
+  "name": "BLOCKER RETEST — Register & Upload \"Submit\" no longer returns 500",
+  "fullName": "DHA Invoice Tracking (TEST) > Blocker verification > BLOCKER RETEST — Register & Upload \"Submit\" no longer returns 500",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1785259140000,
+  "stop": 1785259320000,
+  "description": "The 2026-07-28 blocker made Submit on \"Register and Upload Invoice\" return HTTP 500 from POST /api/services/SheshaWorkflow/Process/UserTaskComplete (elementId Activity_0e0c34w, TargetInvocationException) on 5/5 attempts across 3 instances. After the team reconfigured the workflow definition on TEST, a FRESH BAS invoice was registered and submitted: the call returned 200, the item routed to \"Assign Branch Finance Admin To Assign Certifier\" and went Draft → RECEIVED. No 500 occurred at any later step of the session. Bug: test-reports/bugs/2026-07-28-bas-logis-test-env-register-upload-submit-500.md",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "Blocker verification"
+    },
+    {
+      "name": "subSuite",
+      "value": "Regression retest"
+    },
+    {
+      "name": "feature",
+      "value": "Blocker verification"
+    },
+    {
+      "name": "story",
+      "value": "UserTaskComplete 500 (Activity_0e0c34w) after workflow reconfiguration"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3035/2026"
+    },
+    {
+      "name": "UserTaskComplete",
+      "value": "HTTP 200 (was 500)"
+    },
+    {
+      "name": "Status transition",
+      "value": "Draft → RECEIVED"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Register a fresh BAS invoice as Admin (supplier KL772, R24 500)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259140000,
+      "stop": 1785259260000
+    },
+    {
+      "name": "Click Submit — capture the XHR response body",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259260000,
+      "stop": 1785259260000
+    },
+    {
+      "name": "Assert UserTaskComplete = 200 and no TargetInvocationException",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259260000,
+      "stop": 1785259320000
+    },
+    {
+      "name": "Assert item routed to Assign Branch Finance Admin + status RECEIVED",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259320000,
+      "stop": 1785259320000
+    }
+  ]
+}

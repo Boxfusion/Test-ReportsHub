@@ -1,0 +1,146 @@
+{
+  "uuid": "dha-test-1785259080000-1",
+  "historyId": "BAS Request For Payment:BAS Full Chain → PAID (11/11 steps)",
+  "name": "BAS Full Chain → PAID (11/11 steps)",
+  "fullName": "DHA Invoice Tracking (TEST) > BAS Request For Payment > BAS Full Chain → PAID (11/11 steps)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1785259140000,
+  "stop": 1785260160000,
+  "description": "Full BAS chain driven live on TEST: Register → Assign BFA → Assign Responsible Person → Certify → Prepare Voucher → Verify Voucher → Authorise → BAS report import (NEW Notepad .txt format) → Payment Stub import → Capture Filing. Final state: workflow Completed (status 3), no active todo items, header badge PAID, filing captured. Report: test-reports/2026-07-28/bas-full-chain-PAY3035.md",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "BAS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Positive chain"
+    },
+    {
+      "name": "feature",
+      "value": "BAS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Full BAS Request-for-Payment happy path on TEST"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3035/2026"
+    },
+    {
+      "name": "Supplier",
+      "value": "ATLANTIS CORPORATE TRAVEL (KL772)"
+    },
+    {
+      "name": "Invoice / Amount",
+      "value": "DHA-INV-3035 / R24 500"
+    },
+    {
+      "name": "Payment Number",
+      "value": "00003035"
+    },
+    {
+      "name": "Final status",
+      "value": "PAID — workflow Completed"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Register and Upload Invoice (Admin) → RECEIVED",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259140000,
+      "stop": 1785259320000
+    },
+    {
+      "name": "Assign Branch Finance Admin = Thabiso Maake",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259320000,
+      "stop": 1785259380000
+    },
+    {
+      "name": "Assign Responsible Person = Thabiso Maake",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259380000,
+      "stop": 1785259440000
+    },
+    {
+      "name": "Certify Invoice — delivered satisfactory → CERTIFIED",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259440000,
+      "stop": 1785259500000
+    },
+    {
+      "name": "Prepare Voucher — Verification complete + 4-item checklist",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259500000,
+      "stop": 1785259560000
+    },
+    {
+      "name": "Verify Voucher (Tshianeo) — Batch Number BATCH-3035 → VERIFIED",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259560000,
+      "stop": 1785259680000
+    },
+    {
+      "name": "Authorise Invoice Voucher (Tshianeo) → APPROVED",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259680000,
+      "stop": 1785259740000
+    },
+    {
+      "name": "BAS Report Import (.txt RP0111BS) — Payments Authorised = 1",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259740000,
+      "stop": 1785259860000
+    },
+    {
+      "name": "Auto: Upload Captured Invoices Report + Final Authorise Payment → AUTHORIZED",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259860000,
+      "stop": 1785259920000
+    },
+    {
+      "name": "Payment Stub Import (RP007BS) — invoicesConfirmedPaid = 1 → PAID",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785259920000,
+      "stop": 1785260100000
+    },
+    {
+      "name": "Capture Filing (Mutshutshut) — BOX-3035 / 3001-3050 → Completed",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785260100000,
+      "stop": 1785260160000
+    }
+  ]
+}
