@@ -14,18 +14,23 @@
   "hasAllure": true,
   "allureReports": [
     {
-      "slug": null,
-      "label": null,
-      "href": "allure-report/index.html"
+      "slug": "test-env-2026-07-28",
+      "label": "test-env-2026-07-28",
+      "href": "allure-report--test-env-2026-07-28/index.html"
+    },
+    {
+      "slug": "test-env-2026-07-29",
+      "label": "test-env-2026-07-29",
+      "href": "allure-report--test-env-2026-07-29/index.html"
     }
   ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 2,
-    "totalRuns": 7,
-    "last7Runs": 7,
-    "last7Pass": 6,
-    "last7PassPct": 86,
+    "totalRuns": 17,
+    "last7Runs": 10,
+    "last7Pass": 5,
+    "last7PassPct": 50,
     "failingFlows": 0,
     "passingFlows": 6,
     "partialFlows": 0,
@@ -33,106 +38,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-07-19",
+    "startDate": "2025-08-02",
     "days": [
-      {
-        "iso": "2025-07-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-08-02",
         "runs": 0,
@@ -2582,6 +2489,104 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-07-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-28",
+        "runs": 6,
+        "passed": 2,
+        "failed": 0,
+        "partial": 3
+      },
+      {
+        "iso": "2026-07-29",
+        "runs": 4,
+        "passed": 3,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2601,14 +2606,50 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-07-16",
+            "date": "2026-07-29",
             "result": "PASSED",
-            "duration": "",
+            "duration": "~12 min (07:56 → 08:08 SAST)",
             "variant": null,
-            "reportHref": "test-reports/2026-07-16/bas-full-chain-PAY3105.md"
+            "reportHref": "test-reports/2026-07-29/bas-full-chain-PAY3061.md"
           },
-          "runCount": 2,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-07-29",
+              "result": "PASSED",
+              "duration": "~12 min (07:56 → 08:08 SAST)",
+              "variant": null
+            },
+            {
+              "date": "2026-07-28",
+              "result": "PASSED",
+              "duration": "~17 min",
+              "variant": null
+            },
+            {
+              "date": "2026-07-28",
+              "result": "PARTIAL",
+              "duration": "~10 min",
+              "variant": null
+            },
+            {
+              "date": "2026-07-28",
+              "result": "PASSED",
+              "duration": "~12 min",
+              "variant": null
+            },
+            {
+              "date": "2026-07-28",
+              "result": "PARTIAL",
+              "duration": "~10 min",
+              "variant": null
+            },
+            {
+              "date": "2026-07-28",
+              "result": "BLOCKED",
+              "duration": "~2 h (investigation)",
+              "variant": null
+            },
             {
               "date": "2026-07-16",
               "result": "PASSED",
@@ -2622,7 +2663,16 @@
               "variant": null
             }
           ],
-          "bugs": []
+          "bugs": [
+            {
+              "name": "2026-07-28-bas-logis-test-env-register-upload-submit-500.md",
+              "href": "test-reports/bugs/2026-07-28-bas-logis-test-env-register-upload-submit-500.md"
+            },
+            {
+              "name": "2026-07-29-bas-register-upload-submit-500-intermittent.md",
+              "href": "test-reports/bugs/2026-07-29-bas-register-upload-submit-500-intermittent.md"
+            }
+          ]
         },
         {
           "plan": "test-plans/invoice-process/logis.md",
@@ -2639,14 +2689,32 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-07-16",
+            "date": "2026-07-29",
             "result": "PASSED",
-            "duration": "",
+            "duration": "~24 min live (registration was done 2026-07-28)",
             "variant": null,
-            "reportHref": "test-reports/2026-07-16/logis-full-chain-PAY3128.md"
+            "reportHref": "test-reports/2026-07-29/logis-full-chain-PAY3055.md"
           },
-          "runCount": 1,
+          "runCount": 4,
           "history": [
+            {
+              "date": "2026-07-29",
+              "result": "PASSED",
+              "duration": "~24 min live (registration was done 2026-07-28)",
+              "variant": null
+            },
+            {
+              "date": "2026-07-29",
+              "result": "PASSED",
+              "duration": "~11 min (07:50 → 08:01 SAST)",
+              "variant": null
+            },
+            {
+              "date": "2026-07-28",
+              "result": "PARTIAL",
+              "duration": "~15 min",
+              "variant": null
+            },
             {
               "date": "2026-07-16",
               "result": "PASSED",
@@ -2654,12 +2722,133 @@
               "variant": null
             }
           ],
-          "bugs": []
+          "bugs": [
+            {
+              "name": "2026-07-28-bas-logis-test-env-register-upload-submit-500.md",
+              "href": "test-reports/bugs/2026-07-28-bas-logis-test-env-register-upload-submit-500.md"
+            },
+            {
+              "name": "2026-07-28-logis-certify-no-supervisor-silent-500.md",
+              "href": "test-reports/bugs/2026-07-28-logis-certify-no-supervisor-silent-500.md"
+            },
+            {
+              "name": "2026-07-29-logis-capture-and-link-no-test-account-in-role.md",
+              "href": "test-reports/bugs/2026-07-29-logis-capture-and-link-no-test-account-in-role.md"
+            },
+            {
+              "name": "2026-07-29-logis-capture-link-no-branch-submit-disabled.md",
+              "href": "test-reports/bugs/2026-07-29-logis-capture-link-no-branch-submit-disabled.md"
+            },
+            {
+              "name": "2026-07-29-logis-reroute-wrong-person-no-assignee.md",
+              "href": "test-reports/bugs/2026-07-29-logis-reroute-wrong-person-no-assignee.md"
+            }
+          ]
         }
       ]
     }
   ],
   "timeline": [
+    {
+      "date": "2026-07-29",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~12 min (07:56 → 08:08 SAST)",
+          "mode": "ai-driven (live MCP browser)",
+          "reportHref": "test-reports/2026-07-29/bas-full-chain-PAY3061.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/logis.md",
+          "planDisplay": "invoice-process/logis.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~24 min live (registration was done 2026-07-28)",
+          "mode": "ai-driven (live MCP browser)",
+          "reportHref": "test-reports/2026-07-29/logis-full-chain-PAY3055.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/logis.md",
+          "planDisplay": "invoice-process/logis.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~11 min (07:50 → 08:01 SAST)",
+          "mode": "ai-driven (live MCP browser)",
+          "reportHref": "test-reports/2026-07-29/logis-full-chain-PAY3072.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/logis.md (TC-04, TC-06, TC-08 branches, TC-11 \"No\", TC-12 send-back)",
+          "planDisplay": "invoice-process/logis.md (TC-04, TC-06, TC-08 branches, TC-11 \"No\", TC-12 send-back)",
+          "variant": null,
+          "result": "⚠️ MIXED — 3 BRANCHES PASS, **2 DEFECTS FOUND** (1 BLOCKER-CLASS, 1 DEAD END)",
+          "duration": "~35 min",
+          "mode": "ai-driven (live MCP browser)",
+          "reportHref": "test-reports/2026-07-29/logis-negative-branches.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~17 min",
+          "mode": "ai-driven (live MCP browser)",
+          "reportHref": "test-reports/2026-07-28/bas-full-chain-PAY3035.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "~10 min",
+          "mode": "ai-driven (live MCP browser)",
+          "reportHref": "test-reports/2026-07-28/bas-negative-business-related-query-PAY3043.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~12 min",
+          "mode": "ai-driven (live MCP browser)",
+          "reportHref": "test-reports/2026-07-28/bas-negative-reject-invoice-PAY3047.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "~10 min",
+          "mode": "ai-driven (live MCP browser)",
+          "reportHref": "test-reports/2026-07-28/bas-negative-supplier-related-query-PAY3039.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/logis.md",
+          "planDisplay": "invoice-process/logis.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "~15 min",
+          "mode": "ai-driven (live MCP browser)",
+          "reportHref": "test-reports/2026-07-28/logis-full-chain-PAY3055.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "BLOCKED",
+          "duration": "~2 h (investigation)",
+          "mode": "ai-driven (live MCP browser)",
+          "reportHref": "test-reports/2026-07-28/test-env-bas-logis-blocked.md"
+        }
+      ]
+    },
     {
       "date": "2026-07-16",
       "runs": [
@@ -2729,5 +2918,5 @@
       ]
     }
   ],
-  "generated": "2026-07-16T21:23:28.968Z"
+  "generated": "2026-07-29T07:01:37.129Z"
 }

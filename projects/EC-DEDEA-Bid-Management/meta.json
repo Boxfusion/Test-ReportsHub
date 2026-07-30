@@ -1,0 +1,7 @@
+{
+  "displayName": "ECDEDEA Bid Management",
+  "appUrl": "https://ecdedea-smartgov2-adminportal-qa.shesha.app/",
+  "environment": "QA",
+  "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
+  "description": "Hybrid Markdown + Playwright test reports for EC DEDEA SmartGov2 — Bid Management (Tender Process). Same Bid Management workflows as PD Supply Chain Management, deployed for the Eastern Cape Department of Economic Development, Environmental Affairs and Tourism."
+}

@@ -1,0 +1,142 @@
+{
+  "uuid": "dha-test-20260729-0",
+  "historyId": "BAS Request For Payment:BAS Full Chain → PAID + Filed (11/11 steps)",
+  "name": "BAS Full Chain → PAID + Filed (11/11 steps)",
+  "fullName": "DHA Invoice Tracking (TEST) > BAS Request For Payment > BAS Full Chain → PAID + Filed (11/11 steps)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1785304560000,
+  "stop": 1785305307000,
+  "description": "Regression re-run of the whole BAS chain on TEST after the 2026-07-28 fixes. Register → Assign BFA → Assign Official → Certify → Prepare Voucher → Verify Voucher (Batch No) → Authorise → BAS .txt report import (completes 2 steps) → payment stub import → PAID → Capture Filing. Report: test-reports/2026-07-29/bas-full-chain-PAY3061.md",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "BAS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Happy path"
+    },
+    {
+      "name": "feature",
+      "value": "BAS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Full chain to Paid + Filed"
+    },
+    {
+      "name": "severity",
+      "value": "blocker"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3061/2026"
+    },
+    {
+      "name": "Invoice / Amount",
+      "value": "DHA-INV-3061 / R24 500"
+    },
+    {
+      "name": "Payment Number",
+      "value": "00003061"
+    },
+    {
+      "name": "Final status",
+      "value": "PAID + Filed — workflow Completed"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Register and Upload Invoice (Admin)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304560000,
+      "stop": 1785304782000
+    },
+    {
+      "name": "Assign Branch Finance Admin (ThabisoM, self-assign)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304782000,
+      "stop": 1785304925000
+    },
+    {
+      "name": "Assign Responsible Person (ThabisoM)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304925000,
+      "stop": 1785304953000
+    },
+    {
+      "name": "Certify Invoice — delivered satisfactory",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304953000,
+      "stop": 1785304976000
+    },
+    {
+      "name": "Prepare Voucher — Verification complete + 4 × Yes",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304976000,
+      "stop": 1785305019000
+    },
+    {
+      "name": "Verify Voucher — Batch Number BATCH-3061 (H19234198)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785305019000,
+      "stop": 1785305091000
+    },
+    {
+      "name": "Authorise Invoice Voucher",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785305091000,
+      "stop": 1785305106000
+    },
+    {
+      "name": "BAS report .txt import — Payments Authorised = 1 (completes 2 steps)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785305106000,
+      "stop": 1785305173000
+    },
+    {
+      "name": "Payment stub .txt import — Payments Confirmed = 1 → PAID",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785305173000,
+      "stop": 1785305218000
+    },
+    {
+      "name": "Capture Filing — Box + File Range (Mutshutshut)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785305218000,
+      "stop": 1785305307000
+    },
+    {
+      "name": "Assert status Completed / subStatus Paid / no active todos",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785305307000,
+      "stop": 1785305307000
+    }
+  ]
+}

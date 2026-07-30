@@ -1,0 +1,149 @@
+{
+  "uuid": "dha-test-20260729-3",
+  "historyId": "LOGIS Request For Payment:LOGIS Full Chain from registration — clean single pass (multi-line-item order)",
+  "name": "LOGIS Full Chain from registration — clean single pass (multi-line-item order)",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Full Chain from registration — clean single pass (multi-line-item order)",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1785304240000,
+  "stop": 1785304896000,
+  "description": "Every step including registration driven in one ~11 min pass, on a 2-line-item order (OR-126120, R3 446) — first LOGIS multi-line-item coverage. Confirms the process is healthy rather than merely recoverable. Report: test-reports/2026-07-29/logis-full-chain-PAY3072.md",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Happy path"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Registration + full chain in one pass"
+    },
+    {
+      "name": "severity",
+      "value": "blocker"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3072/2026"
+    },
+    {
+      "name": "Order / Invoice / Amount",
+      "value": "OR-126120 / DHA-LOG-3072 / R3 446.00 (2 line items)"
+    },
+    {
+      "name": "Payment Number",
+      "value": "3072"
+    },
+    {
+      "name": "Final status",
+      "value": "PAID + Filed — workflow Completed"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Register — order-driven, Business Unit = Thabiso Maake",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304070000,
+      "stop": 1785304240000
+    },
+    {
+      "name": "Assert Order Line Items panel appears only after row commit",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304191000,
+      "stop": 1785304212000
+    },
+    {
+      "name": "Select both line items → Total R3 446.00, variance 0.00",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304212000,
+      "stop": 1785304217000
+    },
+    {
+      "name": "Submit — no confirmation dialog, 200 first attempt",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304234000,
+      "stop": 1785304240000
+    },
+    {
+      "name": "Certify Invoice — SetPaymentApprover 200 on a NEW item",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304318000,
+      "stop": 1785304324000
+    },
+    {
+      "name": "Approve Invoice (00000000)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304324000,
+      "stop": 1785304390000
+    },
+    {
+      "name": "Assign Responsible Official (H18433740)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304390000,
+      "stop": 1785304464000
+    },
+    {
+      "name": "Verify Invoice — 7 × Yes",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304464000,
+      "stop": 1785304486000
+    },
+    {
+      "name": "Capture and Link — Payment No 3072 (H23086050)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304486000,
+      "stop": 1785304590000
+    },
+    {
+      "name": "Pre-Authorise → Verify Voucher",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304590000,
+      "stop": 1785304697000
+    },
+    {
+      "name": "BAS report + payment stub imports → PAID",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304697000,
+      "stop": 1785304797000
+    },
+    {
+      "name": "Capture Filing → Completed",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785304797000,
+      "stop": 1785304896000
+    }
+  ]
+}

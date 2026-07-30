@@ -1,0 +1,124 @@
+{
+  "uuid": "dha-test-1785259080000-4",
+  "historyId": "BAS Request For Payment:BAS Negative — Business Related Query → routed, response step NOT executed",
+  "name": "BAS Negative — Business Related Query → routed, response step NOT executed",
+  "fullName": "DHA Invoice Tracking (TEST) > BAS Request For Payment > BAS Negative — Business Related Query → routed, response step NOT executed",
+  "status": "skipped",
+  "stage": "finished",
+  "start": 1785260520000,
+  "stop": 1785261120000,
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "BAS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Negative branches"
+    },
+    {
+      "name": "feature",
+      "value": "BAS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Send for business related query"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3043/2026"
+    },
+    {
+      "name": "Invoice / Amount",
+      "value": "DHA-INV-3043 / R2 500"
+    },
+    {
+      "name": "Routed to",
+      "value": "Resolve Queries (HLEKANEI ROSE MATHE)"
+    },
+    {
+      "name": "Blocked by",
+      "value": "No query-responder login on TEST"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Register + drive to Prepare Voucher",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785260520000,
+      "stop": 1785261120000
+    },
+    {
+      "name": "Prepare Voucher — Outcome \"Send for business related query\"",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785261120000,
+      "stop": 1785261120000
+    },
+    {
+      "name": "Assert mandatory query dialog + text accepted (200)",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785261120000,
+      "stop": 1785261120000
+    },
+    {
+      "name": "Assert routed to \"Resolve Queries\"",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785261120000,
+      "stop": 1785261120000
+    },
+    {
+      "name": "Respond to the query as the assignee",
+      "status": "skipped",
+      "stage": "finished",
+      "start": 1785261120000,
+      "stop": 1785261120000,
+      "statusDetails": {
+        "message": "Not executed",
+        "known": false,
+        "muted": false,
+        "flaky": false
+      }
+    },
+    {
+      "name": "Assert item returns to Prepare Voucher and completes",
+      "status": "skipped",
+      "stage": "finished",
+      "start": 1785261120000,
+      "stop": 1785261120000,
+      "statusDetails": {
+        "message": "Not executed",
+        "known": false,
+        "muted": false,
+        "flaky": false
+      }
+    }
+  ],
+  "statusDetails": {
+    "message": "PARTIAL: the outbound half passed — the \"Business related query\" dialog appeared, the query text was mandatory, Submit returned 200, Prepare Voucher completed and the item routed to \"Resolve Queries\". The response half could NOT be executed: that task is assigned to HLEKANEI ROSE MATHE alone, whose login is not available on TEST (password unknown and not resettable — her real work email is linked), and the task is not role-visible to ThabisoM or Mutshutshut. Needs a test account in the query-responder role before this branch can be closed.",
+    "known": false,
+    "muted": false,
+    "flaky": false
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-17T10:17:17.170Z",
+  "generated": "2026-07-29T07:01:37.446Z",
   "projects": [
     {
       "name": "dep",
@@ -34,18 +34,41 @@
       "health": "failing",
       "summary": {
         "totalPlans": 24,
-        "totalRuns": 37,
-        "last7Runs": 8,
-        "last7Pass": 2,
-        "last7PassPct": 25,
+        "totalRuns": 39,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
         "failingFlows": 17,
         "lastRun": {
-          "date": "2026-06-15",
-          "result": "UNKNOWN",
-          "plan": null
+          "date": "2026-07-10",
+          "result": "PASSED",
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Recommend/Approve chain)"
         }
       },
       "href": "projects/HCM/index.html"
+    },
+    {
+      "name": "PD-Invoice-Tracking",
+      "displayName": "Invoice Tracking",
+      "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
+      "description": "Hybrid Markdown + Playwright test reports for the Invoice Tracking (ITS) Admin Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 2,
+        "totalRuns": 21,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
+        "failingFlows": 1,
+        "lastRun": {
+          "date": "2026-06-23",
+          "result": "PASSED",
+          "plan": "test-plans/invoice-process/bas.md (TC-01 → TC-14, happy path)"
+        }
+      },
+      "href": "projects/PD-Invoice-Tracking/index.html"
     },
     {
       "name": "bid-management",
@@ -80,18 +103,41 @@
       "health": "healthy",
       "summary": {
         "totalPlans": 2,
-        "totalRuns": 7,
-        "last7Runs": 7,
-        "last7Pass": 6,
-        "last7PassPct": 86,
+        "totalRuns": 17,
+        "last7Runs": 10,
+        "last7Pass": 5,
+        "last7PassPct": 50,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-07-16",
+          "date": "2026-07-29",
           "result": "PASSED",
           "plan": "test-plans/invoice-process/bas.md"
         }
       },
       "href": "projects/DHA-Invoice-Tracking/index.html"
+    },
+    {
+      "name": "EC-DEDEA-Bid-Management",
+      "displayName": "ECDEDEA Bid Management",
+      "appUrl": "https://ecdedea-smartgov2-adminportal-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
+      "description": "Hybrid Markdown + Playwright test reports for EC DEDEA SmartGov2 — Bid Management (Tender Process). Same Bid Management workflows as PD Supply Chain Management, deployed for the Eastern Cape Department of Economic Development, Environmental Affairs and Tourism.",
+      "health": "healthy",
+      "summary": {
+        "totalPlans": 1,
+        "totalRuns": 5,
+        "last7Runs": 5,
+        "last7Pass": 4,
+        "last7PassPct": 80,
+        "failingFlows": 0,
+        "lastRun": {
+          "date": "2026-07-27",
+          "result": "PASSED",
+          "plan": null
+        }
+      },
+      "href": "projects/EC-DEDEA-Bid-Management/index.html"
     },
     {
       "name": "dispatch",
@@ -103,41 +149,18 @@
       "health": "healthy",
       "summary": {
         "totalPlans": 15,
-        "totalRuns": 47,
-        "last7Runs": 28,
-        "last7Pass": 24,
-        "last7PassPct": 86,
+        "totalRuns": 54,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-07-08",
+          "date": "2026-07-21",
           "result": "PASSED",
-          "plan": "test-plans/administrative-functions/admin-functions-crud.md"
+          "plan": null
         }
       },
       "href": "projects/dispatch/index.html"
-    },
-    {
-      "name": "invoice-tracking",
-      "displayName": "Invoice Tracking",
-      "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
-      "description": "Hybrid Markdown + Playwright test reports for the Invoice Tracking (ITS) Admin Portal.",
-      "health": "unknown",
-      "summary": {
-        "totalPlans": 2,
-        "totalRuns": 21,
-        "last7Runs": 21,
-        "last7Pass": 8,
-        "last7PassPct": 38,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-06-23",
-          "result": "PASSED — INVOICE **PAID + FILED**",
-          "plan": "test-plans/invoice-process/bas.md (TC-01 → TC-14, happy path)"
-        }
-      },
-      "href": "projects/invoice-tracking/index.html"
     },
     {
       "name": "PD-Dispatch",
@@ -150,9 +173,9 @@
       "summary": {
         "totalPlans": 0,
         "totalRuns": 18,
-        "last7Runs": 5,
+        "last7Runs": 0,
         "last7Pass": 0,
-        "last7PassPct": 0,
+        "last7PassPct": null,
         "failingFlows": 0,
         "lastRun": {
           "date": "2026-07-13",
@@ -172,14 +195,14 @@
       "health": "unknown",
       "summary": {
         "totalPlans": 0,
-        "totalRuns": 23,
-        "last7Runs": 23,
+        "totalRuns": 45,
+        "last7Runs": 22,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-07-17",
-          "result": "✅ PASS — FULL MID-YEAR HAPPY-PATH CHAIN COMPLETED TO **COMPLETED / AWAITING PERSAL SYNC**.",
+          "date": "2026-07-23",
+          "result": "BLOCKED",
           "plan": null
         }
       },
@@ -187,10 +210,10 @@
     }
   ],
   "totals": {
-    "totalProjects": 8,
-    "totalPlans": 50,
-    "totalRuns": 170,
-    "last7Runs": 92,
-    "failingFlows": 19
+    "totalProjects": 9,
+    "totalPlans": 51,
+    "totalRuns": 216,
+    "last7Runs": 37,
+    "failingFlows": 20
   }
 }

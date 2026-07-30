@@ -1,0 +1,55 @@
+{
+  "uuid": "dha-test-20260729-8",
+  "historyId": "LOGIS Request For Payment:LOGIS Negative — Capture & Link \"No\" destinations (Verify Invoice / Send to Business Unit)",
+  "name": "LOGIS Negative — Capture & Link \"No\" destinations (Verify Invoice / Send to Business Unit)",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Negative — Capture & Link \"No\" destinations (Verify Invoice / Send to Business Unit)",
+  "status": "skipped",
+  "stage": "finished",
+  "start": 1785307380000,
+  "stop": 1785307380000,
+  "description": "BLOCKED — unreachable while the No-branch Submit is disabled. Both destinations and their mandatory-comment dialogs remain untested.",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Negative branches"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "TC-11 Capture and Link — No branch destinations"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Blocked by",
+      "value": "No-branch Submit disabled"
+    }
+  ],
+  "steps": [],
+  "statusDetails": {
+    "message": "Blocked by 2026-07-29-logis-capture-link-no-branch-submit-disabled.md"
+  }
+}

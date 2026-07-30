@@ -1,0 +1,128 @@
+{
+  "uuid": "dha-test-20260729-5",
+  "historyId": "LOGIS Request For Payment:LOGIS Negative — Pre-Authorise \"Send Back to Capture\" → recovered → PAID + Filed",
+  "name": "LOGIS Negative — Pre-Authorise \"Send Back to Capture\" → recovered → PAID + Filed",
+  "fullName": "DHA Invoice Tracking (TEST) > LOGIS Request For Payment > LOGIS Negative — Pre-Authorise \"Send Back to Capture\" → recovered → PAID + Filed",
+  "status": "passed",
+  "stage": "finished",
+  "start": 1785307475000,
+  "stop": 1785308060000,
+  "description": "Send Back from Pre-Authorise Payment opens Shesha.Workflow/user-task-send-back v11 with mandatory Step picker + Comments. Sent back to Capture and Link → Pre-Authorise reverted (status 5) and Capture and Link re-activated to all five role members; the item was then driven forward to completion, proving a send-back leaves it fully recoverable. Report: test-reports/2026-07-29/logis-negative-branches.md §4-§5",
+  "labels": [
+    {
+      "name": "parentSuite",
+      "value": "DHA Invoice Tracking — TEST environment"
+    },
+    {
+      "name": "suite",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "subSuite",
+      "value": "Negative branches"
+    },
+    {
+      "name": "feature",
+      "value": "LOGIS Request For Payment"
+    },
+    {
+      "name": "story",
+      "value": "Pre-Authorise Payment — Send Back"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "framework",
+      "value": "MCP live (ai-driven)"
+    },
+    {
+      "name": "host",
+      "value": "dha-smartgov-adminportal-test.shesha.app"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Ref No",
+      "value": "PAY3086/2026"
+    },
+    {
+      "name": "Order / Invoice / Amount",
+      "value": "OR-126152 / DHA-LOG-3086 / R101.50"
+    },
+    {
+      "name": "Supplier",
+      "value": "MUBVUMO MEDIA SERVICES (HB821)"
+    },
+    {
+      "name": "Final status",
+      "value": "PAID + Filed — workflow Completed"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Pre-Authorise Payment — click Send Back",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307475000,
+      "stop": 1785307475000
+    },
+    {
+      "name": "Assert Step picker + Comments both mandatory",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307475000,
+      "stop": 1785307513000
+    },
+    {
+      "name": "PLAN DEVIATION — picker offers ALL completed steps, not Register/Certify only",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307513000,
+      "stop": 1785307513000
+    },
+    {
+      "name": "Select \"Capture and Link Invoice on LOGIS\" + comment → OK",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307529000,
+      "stop": 1785307544000
+    },
+    {
+      "name": "Assert Pre-Authorise reverted (status 5), Capture and Link active again",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307544000,
+      "stop": 1785307544000
+    },
+    {
+      "name": "Assert Payment Number retained but proceed-choice cleared",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307678000,
+      "stop": 1785307698000
+    },
+    {
+      "name": "Re-capture with Yes → Pre-Authorise → Verify Voucher",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307698000,
+      "stop": 1785307837000
+    },
+    {
+      "name": "BAS report (HB821, INV) + payment stub (PO OR-126152) → PAID",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307837000,
+      "stop": 1785307952000
+    },
+    {
+      "name": "Capture Filing → Completed, PAID + Filed",
+      "status": "passed",
+      "stage": "finished",
+      "start": 1785307952000,
+      "stop": 1785308060000
+    }
+  ]
+}
