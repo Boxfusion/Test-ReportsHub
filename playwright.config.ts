@@ -1,5 +1,20 @@
 import { defineConfig, devices } from '@playwright/test';
+import * as fs from 'fs';
 import * as path from 'path';
+
+// Load the gitignored .env at the hub root (zero-dep). Real env vars / CI secrets always win.
+for (const line of fs.existsSync(path.join(__dirname, '.env'))
+  ? fs.readFileSync(path.join(__dirname, '.env'), 'utf8').split('\n')
+  : []) {
+  const m = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)\s*$/);
+  if (m && process.env[m[1]] === undefined) {
+    process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+  }
+}
+
+// baseURL: an explicit APP_URL wins, else <TEST_ENV>_APP_URL (e.g. TEST_ENV=dev → DEV_APP_URL).
+const TEST_ENV = (process.env.TEST_ENV || '').toUpperCase();
+const BASE_URL = process.env.APP_URL || (TEST_ENV ? process.env[`${TEST_ENV}_APP_URL`] : undefined);
 
 // Multi-project hub. Specs live under projects/<slug>/test-plans/**/*.spec.ts.
 // The runner (scripts/run-plan.js) sets HUB_PROJECT to the slug it's running for
@@ -30,7 +45,7 @@ export default defineConfig({
     ['allure-playwright', { outputFolder: path.join(projectDir, 'allure-results'), detail: true, suiteTitle: false }],
   ],
   use: {
-    baseURL: process.env.APP_URL,
+    baseURL: BASE_URL,
     headless: process.env.HEADED === '1' ? false : true,
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
