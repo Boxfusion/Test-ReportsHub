@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-29T07:01:37.446Z",
+  "generated": "2026-07-30T17:53:53.443Z",
   "projects": [
     {
       "name": "dep",
@@ -15,7 +15,7 @@
         "last7Runs": 0,
         "last7Pass": 0,
         "last7PassPct": null,
-        "failingFlows": 2,
+        "failingFlows": 3,
         "lastRun": {
           "date": "2026-05-28",
           "result": "FAILED",
@@ -73,20 +73,20 @@
     {
       "name": "bid-management",
       "displayName": "Bid Management",
-      "appUrl": "https://linux-supplychainmanagement-adminportal-qa.azurewebsites.net/login",
+      "appUrl": "https://pd-supplychainmanagement-adminportal-qa.shesha.app/login",
       "environment": "QA Site",
       "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
       "description": "Hybrid Markdown + Playwright test reports for the Supply Chain Management (Bid Management) Admin Portal.",
       "health": "healthy",
       "summary": {
         "totalPlans": 1,
-        "totalRuns": 6,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
+        "totalRuns": 15,
+        "last7Runs": 9,
+        "last7Pass": 4,
+        "last7PassPct": 44,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-06-08",
+          "date": "2026-07-30",
           "result": "PASSED",
           "plan": "test-plans/tender-process/bid-supply-chain-management.md"
         }
@@ -196,9 +196,9 @@
       "summary": {
         "totalPlans": 0,
         "totalRuns": 45,
-        "last7Runs": 22,
+        "last7Runs": 0,
         "last7Pass": 0,
-        "last7PassPct": 0,
+        "last7PassPct": null,
         "failingFlows": 0,
         "lastRun": {
           "date": "2026-07-23",
@@ -212,8 +212,8 @@
   "totals": {
     "totalProjects": 9,
     "totalPlans": 51,
-    "totalRuns": 216,
-    "last7Runs": 37,
-    "failingFlows": 20
+    "totalRuns": 225,
+    "last7Runs": 24,
+    "failingFlows": 21
   }
 }

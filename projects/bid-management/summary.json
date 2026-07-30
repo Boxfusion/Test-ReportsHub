@@ -1,12 +1,12 @@
 {
   "totalPlans": 1,
-  "totalRuns": 6,
-  "last7Runs": 0,
-  "last7Pass": 0,
-  "last7PassPct": null,
+  "totalRuns": 15,
+  "last7Runs": 9,
+  "last7Pass": 4,
+  "last7PassPct": 44,
   "failingFlows": 0,
   "lastRun": {
-    "date": "2026-06-08",
+    "date": "2026-07-30",
     "result": "PASSED",
     "plan": "test-plans/tender-process/bid-supply-chain-management.md"
   }

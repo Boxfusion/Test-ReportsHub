@@ -3,7 +3,7 @@
   "displayName": "Bid Management",
   "meta": {
     "displayName": "Bid Management",
-    "appUrl": "https://linux-supplychainmanagement-adminportal-qa.azurewebsites.net/login",
+    "appUrl": "https://pd-supplychainmanagement-adminportal-qa.shesha.app/login",
     "environment": "QA Site",
     "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
     "description": "Hybrid Markdown + Playwright test reports for the Supply Chain Management (Bid Management) Admin Portal.",
@@ -27,12 +27,12 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 1,
-    "totalRuns": 6,
-    "last7Runs": 0,
-    "last7Pass": 0,
-    "last7PassPct": null,
+    "totalRuns": 15,
+    "last7Runs": 9,
+    "last7Pass": 4,
+    "last7PassPct": 44,
     "failingFlows": 0,
-    "passingFlows": 1,
+    "passingFlows": 3,
     "partialFlows": 0,
     "neverFlows": 0
   },
@@ -2569,15 +2569,15 @@
       },
       {
         "iso": "2026-07-29",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
         "failed": 0,
-        "partial": 0
+        "partial": 1
       },
       {
         "iso": "2026-07-30",
-        "runs": 0,
-        "passed": 0,
+        "runs": 8,
+        "passed": 4,
         "failed": 0,
         "partial": 0
       },
@@ -2602,57 +2602,70 @@
           "spec": "test-plans/tender-process/bid-supply-chain-management.spec.ts",
           "specHref": "test-plans/tender-process/bid-supply-chain-management.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-06-08",
+            "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "31.9s",
+            "duration": "453.2s",
             "variant": "80/20",
-            "reportHref": "test-reports/2026-06-08/bid-supply-chain-management--80-20.md"
+            "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--80-20.md"
           },
-          "runCount": 6,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-07-30",
+              "result": "PASSED",
+              "duration": "453.2s",
+              "variant": "80/20"
+            },
+            {
+              "date": "2026-07-30",
+              "result": "PASSED",
+              "duration": "404.1s",
+              "variant": "90/10"
+            },
+            {
+              "date": "2026-07-29",
+              "result": "PARTIAL",
+              "duration": "421.7s",
+              "variant": "90/10"
+            },
             {
               "date": "2026-06-08",
               "result": "PASSED",
-              "duration": "31.9s",
+              "duration": "413.1s",
               "variant": "80/20"
             },
             {
               "date": "2026-06-08",
               "result": "PASSED",
-              "duration": "19.1s",
+              "duration": "399.6s",
               "variant": "90/10"
             },
             {
               "date": "2026-06-05",
               "result": "PARTIAL",
-              "duration": "18.8s",
+              "duration": "420.3s",
               "variant": null
             },
             {
               "date": "2026-06-04",
               "result": "PARTIAL",
-              "duration": "28.3s",
+              "duration": "215.3s",
               "variant": null
             },
             {
               "date": "2026-06-03",
               "result": "FAILED",
-              "duration": "41.1s",
+              "duration": "44.1s",
               "variant": null
             },
             {
               "date": "2026-06-02",
               "result": "PASSED",
-              "duration": "4.7s",
+              "duration": "6.6s",
               "variant": null
             }
           ],
@@ -2672,6 +2685,97 @@
   ],
   "timeline": [
     {
+      "date": "2026-07-30",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
+          "variant": "80/20",
+          "result": "PASSED",
+          "duration": "453.2s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--80-20.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
+          "variant": "90/10",
+          "result": "PASSED",
+          "duration": "404.1s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--90-10.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md (TC-24 extended, TC-25)",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (TC-24 extended, TC-25)",
+          "variant": null,
+          "result": "MIXED — REPLAY DEFENCE **HOLDS**; **2 NEW HIGH BUGS** (NON-PARTICIPANT WRITES, ORDER AMOUNT)",
+          "duration": "",
+          "mode": "live via Playwright MCP",
+          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-authz-replay-order-amount.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md (**TC-26**)",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (**TC-26**) (80/20)",
+          "variant": "80/20",
+          "result": "🔴 **CRITICAL** — A **NON-BIDDER WAS RECOMMENDED AND AWARDED THE TENDER END TO END** (SEE THE ADDENDUM)",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-below-minimum-chain.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md (TC-20)",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (TC-20) (80/20)",
+          "variant": "80/20",
+          "result": "BLOCKED",
+          "duration": "",
+          "mode": "live via Playwright MCP (TC-01 automated to create the test data)",
+          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-disapprove.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md (TC-21, TC-22, TC-23, TC-24)",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (TC-21, TC-22, TC-23, TC-24)",
+          "variant": null,
+          "result": "MIXED — 2 AREAS CORRECT, **1 NEW HIGH BUG**, **1 DESIGN GAP**, **1 EXISTING BLOCKER DOWNGRADED**",
+          "duration": "",
+          "mode": "live via Playwright MCP",
+          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-non-compliant-and-bac.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md (TC-18, TC-19)",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (TC-18, TC-19) (80/20)",
+          "variant": "80/20",
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hybrid — mapped and driven live via Playwright MCP, then encoded as opt-in spec branches and re-run automated",
+          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-send-back-sweep.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md (TC-17)",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (TC-17) (80/20)",
+          "variant": "80/20",
+          "result": "PASSED",
+          "duration": "42.1s",
+          "mode": "hybrid — driven live via Playwright MCP, then encoded as TC-17 and **verified as an automated spec (PASSED in 42.1s)**",
+          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-send-back.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
+          "variant": "90/10",
+          "result": "PARTIAL",
+          "duration": "421.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-07-29/bid-supply-chain-management--90-10.md"
+        }
+      ]
+    },
+    {
       "date": "2026-06-08",
       "runs": [
         {
@@ -2679,7 +2783,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
           "variant": "80/20",
           "result": "PASSED",
-          "duration": "31.9s",
+          "duration": "413.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-06-08/bid-supply-chain-management--80-20.md"
         },
@@ -2688,7 +2792,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
           "variant": "90/10",
           "result": "PASSED",
-          "duration": "19.1s",
+          "duration": "399.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-06-08/bid-supply-chain-management--90-10.md"
         }
@@ -2702,7 +2806,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "18.8s",
+          "duration": "420.3s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-05/bid-supply-chain-management.md"
         }
@@ -2716,7 +2820,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "28.3s",
+          "duration": "215.3s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-04/bid-supply-chain-management.md"
         }
@@ -2730,7 +2834,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "41.1s",
+          "duration": "44.1s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-03/bid-supply-chain-management.md"
         }
@@ -2744,12 +2848,12 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "4.7s",
+          "duration": "6.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-06-02/bid-supply-chain-management.md"
         }
       ]
     }
   ],
-  "generated": "2026-07-27T11:46:56.764Z"
+  "generated": "2026-07-30T17:53:53.087Z"
 }
