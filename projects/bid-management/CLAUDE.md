@@ -36,8 +36,14 @@ Before executing ANY test plan:
 | Key | Value |
 |-----|-------|
 | App | Bid Management (Supply Chain Management Admin Portal) |
-| URL | https://linux-supplychainmanagement-adminportal-qa.azurewebsites.net/login |
+| URL | https://pd-supplychainmanagement-adminportal-qa.shesha.app/login |
 | Environment | QA Site |
+
+> **URL migrated 2026-07-29.** The old host
+> `linux-supplychainmanagement-adminportal-qa.azurewebsites.net` **no longer resolves** (DNS NXDOMAIN) —
+> the app moved to `*.shesha.app`, in line with every other project in this hub. Verified live: the login
+> page identifies as `SupplyChainManagement`, `Maanda-awe` / `123qwe` still works, and the sidebar shows
+> **Bid Management** / **SupplyChain Management**. Runs before 2026-07-29 were against the old host.
 
 ## Credentials
 | Role | Username | Password |
