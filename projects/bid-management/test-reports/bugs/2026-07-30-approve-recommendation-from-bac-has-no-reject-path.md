@@ -6,7 +6,7 @@
 | **Project** | PD Bid Management (`projects/bid-management`) |
 | **App / Env** | Supply Chain Management Admin Portal — **QA** (`https://pd-supplychainmanagement-adminportal-qa.shesha.app`) |
 | **Type** | Workflow / design gap — **needs a BA ruling**, not necessarily a code bug |
-| **Severity** | **Medium-High** — a mandatory approval step with only one possible answer |
+| **Severity** | ~~Medium-High~~ → ⚪ **observation, not a defect** (2026-08-03). **ADO #60843 documents only the approve path** (steps 19–21: confirmation checkbox → Submit → route to Compile and Upload Appointment Letter). It never asks for a reject option, so its absence is not a documented failure |
 | **Stage / Form** | Approve Recommendation from BAC — `tender-wf-approverecommendationfrombac-details v21` |
 | **Role** | Approving authority — **ThulileM / 123qwe** (view mode: **Latest**) |
 | **Tender** | **REF2026-1053** (80/20), todoid `04c018ac…` |

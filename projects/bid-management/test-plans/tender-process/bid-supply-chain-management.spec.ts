@@ -769,6 +769,31 @@ async function loginViaStorage(page: Page, creds: { user: string; password: stri
 // Recorded live: the "Tender Response Evaluation" dialog. Score one supplier on the single
 // criterion: Evaluate -> edit pencil -> type Point Awarded -> save -> Finalise Score.
 async function scoreSupplier(page: Page, supplier: string, score: string) {
+  // Idempotent: a retry re-enters this loop from the FIRST evaluator/supplier, but a supplier whose
+  // score was already finalised no longer offers an "Evaluate" button — its row shows the score and a
+  // "View" link instead. Without this guard one transient failure mid-loop becomes a permanent one on
+  // retry. Observed 2026-08-03 on REF2026-0811 (80/20): attempt 1 died on the TEC-01 edit pencil inside
+  // the dialog, attempt 2 then died hunting an Evaluate button that no longer existed — so a recoverable
+  // blip halted the whole chain. Mirrors the TC-04 addSupplierResponse() guard.
+  // Decide on the VISIBILITY of the row's own controls, never on `filter({ hasText: 'View' })`.
+  // `hasText` is a case-insensitive substring match over textContent and therefore MATCHES HIDDEN TEXT,
+  // and this form family leaves conditionally-hidden controls mounted (cf. the latent duplicate
+  // "Cancel Tender" in TC-19 and the orphaned hidden Motivation textarea in TC-26). An unscored row
+  // still carries a mounted-but-invisible "View" link, so a hasText guard reports every supplier as
+  // already finalised and silently scores nothing — that is exactly how the first version of this guard
+  // failed 3/3 on REF2026-0811 while Thabitha's BOXFUSION row plainly showed "Evaluate".
+  const supRow = page.getByRole('row').filter({ hasText: supplier });
+  await supRow.first().waitFor({ state: 'visible', timeout: 30000 }).catch(() => {});
+  const canEvaluate = await supRow.getByRole('button', { name: 'Evaluate' }).first()
+    .isVisible().catch(() => false);
+  const hasView = await supRow.getByRole('button', { name: 'View' }).first()
+    .isVisible().catch(() => false);
+  if (!canEvaluate && hasView) {
+    // Not a silent skip: the caller asserts the row shows the expected score right after this returns,
+    // so a wrong pre-existing score still fails the test.
+    console.log(`[SCORE] ${supplier}: already finalised — skipping re-score`);
+    return;
+  }
   const row = page.getByRole('row').filter({ hasText: supplier }).filter({ hasText: 'Evaluate' });
   await domClick(row.getByRole('button', { name: 'Evaluate' }));
   const dlg = page.locator('.ant-modal-content');

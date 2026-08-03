@@ -27,68 +27,19 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 1,
-    "totalRuns": 15,
-    "last7Runs": 9,
-    "last7Pass": 4,
-    "last7PassPct": 44,
+    "totalRuns": 24,
+    "last7Runs": 18,
+    "last7Pass": 7,
+    "last7PassPct": 39,
     "failingFlows": 0,
-    "passingFlows": 3,
-    "partialFlows": 0,
+    "passingFlows": 2,
+    "partialFlows": 1,
     "neverFlows": 0
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-08-02",
+    "startDate": "2025-08-09",
     "days": [
-      {
-        "iso": "2025-08-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-08-09",
         "runs": 0,
@@ -2587,6 +2538,55 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-08-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-03",
+        "runs": 9,
+        "passed": 3,
+        "failed": 0,
+        "partial": 2
+      },
+      {
+        "iso": "2026-08-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2603,17 +2603,47 @@
           "specHref": "test-plans/tender-process/bid-supply-chain-management.spec.ts",
           "canRun": true,
           "badges": [],
-          "rowStatus": "passing",
-          "status": "PASSED",
+          "rowStatus": "never",
+          "status": "UNKNOWN",
           "last": {
-            "date": "2026-07-30",
-            "result": "PASSED",
-            "duration": "453.2s",
-            "variant": "80/20",
-            "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--80-20.md"
+            "date": "2026-08-03",
+            "result": "UNKNOWN",
+            "duration": "",
+            "variant": null,
+            "reportHref": "test-reports/2026-08-03/ado-consistency-pass.md"
           },
-          "runCount": 9,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-08-03",
+              "result": "UNKNOWN",
+              "duration": "",
+              "variant": null
+            },
+            {
+              "date": "2026-08-03",
+              "result": "PASSED",
+              "duration": "1766.4s total across all invocations",
+              "variant": "80/20"
+            },
+            {
+              "date": "2026-08-03",
+              "result": "PASSED",
+              "duration": "565.0s",
+              "variant": "80/20"
+            },
+            {
+              "date": "2026-08-03",
+              "result": "PASSED",
+              "duration": "610.6s",
+              "variant": "90/10"
+            },
+            {
+              "date": "2026-08-03",
+              "result": "PARTIAL",
+              "duration": "737.5s",
+              "variant": null
+            },
             {
               "date": "2026-07-30",
               "result": "PASSED",
@@ -2655,18 +2685,6 @@
               "result": "PARTIAL",
               "duration": "215.3s",
               "variant": null
-            },
-            {
-              "date": "2026-06-03",
-              "result": "FAILED",
-              "duration": "44.1s",
-              "variant": null
-            },
-            {
-              "date": "2026-06-02",
-              "result": "PASSED",
-              "duration": "6.6s",
-              "variant": null
             }
           ],
           "bugs": [
@@ -2684,6 +2702,92 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-08-03",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
+          "planDisplay": "tender-process/bid-supply-chain-management.md",
+          "variant": null,
+          "result": "UNKNOWN",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-03/ado-consistency-pass.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
+          "variant": "80/20",
+          "result": "PASSED",
+          "duration": "1766.4s total across all invocations",
+          "mode": "playwright-script (chain resumed across 4 invocations; one spec repair)",
+          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--80-20-resumed.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
+          "variant": "80/20",
+          "result": "PASSED",
+          "duration": "565.0s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--80-20.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
+          "variant": "90/10",
+          "result": "PASSED",
+          "duration": "610.6s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--90-10.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
+          "planDisplay": "tender-process/bid-supply-chain-management.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "737.5s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md (TC-20)",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (TC-20)",
+          "variant": null,
+          "result": "BLOCKED",
+          "duration": "~110s (pass 1) + ~150s (pass 2, incl. fresh-tender creation)",
+          "mode": "ai-driven (MCP browser, headless)",
+          "reportHref": "test-reports/2026-08-03/tc-20-disapprove-retest.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md (TC-26)",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (TC-26) (80/20, `FUNC_SCORE_MODE=below`)",
+          "variant": "80/20, `FUNC_SCORE_MODE=below`",
+          "result": "PARTIAL",
+          "duration": "7.3m chain + ~2m live",
+          "mode": "hybrid (playwright-script chain + ai-driven decision)",
+          "reportHref": "test-reports/2026-08-03/tc-26-bid-non-responsive-committed.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md (**TC-27**)",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (**TC-27**)",
+          "variant": null,
+          "result": "✅ **NO DEFECTS. EVERY GUARD ON THIS FORM IS CORRECTLY ENFORCED.** 11 GUARDS VERIFIED. TWO CLAIMS I",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-03/tc-27-draft-tender-validation.md"
+        },
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md (**TC-33**)",
+          "planDisplay": "tender-process/bid-supply-chain-management.md (**TC-33**)",
+          "variant": null,
+          "result": "✅ THE DECISION WORKS · 🔴 **2 DEFECTS, BOTH AGAINST ADO #60836** · ⚪ **2 OF MY EARLIER CLAIMS",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-03/tc-33-bac-cancel-tender.md"
+        }
+      ]
+    },
     {
       "date": "2026-07-30",
       "runs": [
@@ -2718,7 +2822,7 @@
           "plan": "test-plans/tender-process/bid-supply-chain-management.md (**TC-26**)",
           "planDisplay": "tender-process/bid-supply-chain-management.md (**TC-26**) (80/20)",
           "variant": "80/20",
-          "result": "🔴 **CRITICAL** — A **NON-BIDDER WAS RECOMMENDED AND AWARDED THE TENDER END TO END** (SEE THE ADDENDUM)",
+          "result": "~~🔴 CRITICAL — A NON-BIDDER WAS RECOMMENDED AND AWARDED THE TENDER END TO END~~ → **RETRACTED",
           "duration": "",
           "mode": null,
           "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-below-minimum-chain.md"
@@ -2855,5 +2959,5 @@
       ]
     }
   ],
-  "generated": "2026-07-30T17:53:53.087Z"
+  "generated": "2026-08-03T17:11:49.168Z"
 }

@@ -3,7 +3,11 @@
 **Variant:** 80/20
 **Plan:** test-plans/tender-process/bid-supply-chain-management.md (**TC-26**)
 **Spec:** TC-01→TC-09 automated with the new `FUNC_SCORE_MODE=below` gate; TC-10→TC-12 driven live
-**Result:** 🔴 **CRITICAL** — a **non-bidder was recommended and AWARDED the tender end to end** (see the addendum)
+**Result:** ~~🔴 CRITICAL — a non-bidder was recommended and AWARDED the tender end to end~~ → **RETRACTED
+2026-08-03: the module test lead ruled that recommending a supplier which did not bid is BY DESIGN when no bid
+qualifies.** Re-scoped to **🔴 2 defects** in that picker (each row ×10; already-evaluated bidder → silent 500)
+plus the separately-standing TC-26 defects. See the addendum and
+`bugs/2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md`.
 **Tender:** **REF2026-1122** (purpose-built chain — the one new tender this session, unavoidable for this test)
 
 ## Summary
@@ -135,25 +139,31 @@ scores) as a control:
 | `BOXFUSION` | 0 — below minimum | **BOXFUSION ×10** |
 | `HOLDINGS` | 0 — not a bidder | 🔴 **PHINGOSHE HOLDINGS ×10** |
 
-**On a normal tender the picker is scoped correctly. On a below-minimum tender it returns the ENTIRE supplier
-master, every row ×10** — failed bidders and complete non-bidders alike.
+**On a normal tender the picker offers only this tender's qualifying bidders. On a below-minimum tender it
+returns the entire supplier master, every row ×10** — failed bidders and non-respondents alike.
 
-Selecting the **non-bidder** PHINGOSHE HOLDINGS committed cleanly (`RfxEvaluation/Crud/Update` 200,
-`UserTaskComplete` 200). The tender was then driven to the end — **automated TC-13 → TC-16, 4/4 passed in
-1.2 min** — through BAC approval, approving-authority approval, appointment letter and order capture.
+Selecting PHINGOSHE HOLDINGS committed cleanly (`RfxEvaluation/Crud/Update` 200, `UserTaskComplete` 200). The
+tender was then driven to the end — **automated TC-13 → TC-16, 4/4 passed in 1.2 min** — through BAC approval,
+approving-authority approval, appointment letter and order capture, reaching `AWARDED`.
 
-**REF2026-1133 now reads `AWARDED`, to a company that submitted no bid, on a tender where all three real
-bidders failed functionality. Not one stage objected.**
+> **⚠️ Correction, 2026-08-03 — test lead ruling.** This report originally called that award Critical. **It is
+> intended behaviour:** when no bid qualifies, *Recommend another Supplier* is *meant* to reach beyond the
+> tender's respondents, and the downstream stages were **correct not to object**. The claim *"not one stage
+> objected"* is withdrawn — there was nothing to object to.
+>
+> **What remains a defect in this picker:** every match appears **×10**, and selecting an **already-evaluated**
+> bidder returns a raw silent **500** (`could not execute batch command`) instead of a validation message —
+> A & A **has** an evaluation row on the tender so the write hits a constraint.
+>
+> **Open for the BA:** why is a non-respondent selectable only in the no-qualifier state and not on a normal
+> tender, and should the fallback be the whole master or a category/panel shortlist?
 
-This also explains the earlier 500: A & A **has** an evaluation row on the tender so the write hit a
-constraint, while a non-bidder has none and goes straight through — **backwards from what it should be.**
-
-Logged Critical: `bugs/2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md`.
+Bug doc (re-scoped): `bugs/2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md`.
 
 ## Tender state
 
 | Tender | State | Keep for |
 |---|---|---|
-| **REF2026-1133** | 🔴 **AWARDED to PHINGOSHE HOLDINGS (a non-bidder)** | the Critical demonstration case |
+| **REF2026-1133** | **AWARDED to PHINGOSHE HOLDINGS** — a supplier that did not bid, which per the 2026-08-03 ruling is **correct**. Manually cancelled afterwards by the test lead | no longer a live example |
 | **REF2026-1122** | *Capture outcome from the BAC*, **blank** Recommended Supplier, empty Stage 3 | retest fixture for the `tender-reason for disapproval` fix (its BAC stage still offers *Bid is Non-Responsive*) |
 | **REF2026-1128** | *BEC: Finalise recommendation*, normal scores | the **control** proving the picker is scoped correctly when a bidder qualifies |
