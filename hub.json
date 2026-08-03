@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-31T09:02:52.351Z",
+  "generated": "2026-07-31T13:01:35.536Z",
   "projects": [
     {
       "name": "dep",
@@ -15,7 +15,7 @@
         "last7Runs": 0,
         "last7Pass": 0,
         "last7PassPct": null,
-        "failingFlows": 2,
+        "failingFlows": 3,
         "lastRun": {
           "date": "2026-05-28",
           "result": "FAILED",
@@ -34,18 +34,41 @@
       "health": "failing",
       "summary": {
         "totalPlans": 24,
-        "totalRuns": 37,
-        "last7Runs": 8,
-        "last7Pass": 2,
-        "last7PassPct": 25,
+        "totalRuns": 39,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
         "failingFlows": 17,
         "lastRun": {
-          "date": "2026-06-15",
-          "result": "UNKNOWN",
-          "plan": null
+          "date": "2026-07-10",
+          "result": "PASSED",
+          "plan": "test-plans/eLeave/capture-new-leave-application.md (+ Recommend/Approve chain)"
         }
       },
       "href": "projects/HCM/index.html"
+    },
+    {
+      "name": "PD-Invoice-Tracking",
+      "displayName": "Invoice Tracking",
+      "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
+      "description": "Hybrid Markdown + Playwright test reports for the Invoice Tracking (ITS) Admin Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 2,
+        "totalRuns": 21,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
+        "failingFlows": 1,
+        "lastRun": {
+          "date": "2026-06-23",
+          "result": "PASSED",
+          "plan": "test-plans/invoice-process/bas.md (TC-01 → TC-14, happy path)"
+        }
+      },
+      "href": "projects/PD-Invoice-Tracking/index.html"
     },
     {
       "name": "bid-management",
@@ -80,15 +103,15 @@
       "health": "healthy",
       "summary": {
         "totalPlans": 2,
-        "totalRuns": 17,
-        "last7Runs": 10,
-        "last7Pass": 5,
-        "last7PassPct": 50,
+        "totalRuns": 23,
+        "last7Runs": 16,
+        "last7Pass": 9,
+        "last7PassPct": 56,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-07-29",
+          "date": "2026-07-31",
           "result": "PASSED",
-          "plan": "test-plans/invoice-process/bas.md"
+          "plan": "test-plans/invoice-process/bas.md — TC-06 (ADO #102378), reject branch off TC-07 Prepare Voucher"
         }
       },
       "href": "projects/DHA-Invoice-Tracking/index.html"
@@ -117,29 +140,6 @@
       "href": "projects/EC-DEDEA-Bid-Management/index.html"
     },
     {
-      "name": "land-bank",
-      "displayName": "land-bank",
-      "appUrl": null,
-      "environment": null,
-      "sourceRepo": null,
-      "description": null,
-      "health": "healthy",
-      "summary": {
-        "totalPlans": 1,
-        "totalRuns": 1,
-        "last7Runs": 1,
-        "last7Pass": 1,
-        "last7PassPct": 100,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-07-30",
-          "result": "PASSED",
-          "plan": "test-plans/auth/login-navigate-to-leads.md"
-        }
-      },
-      "href": "projects/land-bank/index.html"
-    },
-    {
       "name": "dispatch",
       "displayName": "NC Dispatch",
       "appUrl": "https://ncdoh-dispatcher-adminportal-qa.shesha.app/login",
@@ -149,41 +149,18 @@
       "health": "healthy",
       "summary": {
         "totalPlans": 15,
-        "totalRuns": 47,
-        "last7Runs": 28,
-        "last7Pass": 24,
-        "last7PassPct": 86,
+        "totalRuns": 54,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-07-08",
+          "date": "2026-07-21",
           "result": "PASSED",
-          "plan": "test-plans/administrative-functions/admin-functions-crud.md"
+          "plan": null
         }
       },
       "href": "projects/dispatch/index.html"
-    },
-    {
-      "name": "invoice-tracking",
-      "displayName": "Invoice Tracking",
-      "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
-      "description": "Hybrid Markdown + Playwright test reports for the Invoice Tracking (ITS) Admin Portal.",
-      "health": "unknown",
-      "summary": {
-        "totalPlans": 2,
-        "totalRuns": 21,
-        "last7Runs": 21,
-        "last7Pass": 8,
-        "last7PassPct": 38,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-06-23",
-          "result": "PASSED — INVOICE **PAID + FILED**",
-          "plan": "test-plans/invoice-process/bas.md (TC-01 → TC-14, happy path)"
-        }
-      },
-      "href": "projects/invoice-tracking/index.html"
     },
     {
       "name": "PD-Dispatch",
@@ -196,9 +173,9 @@
       "summary": {
         "totalPlans": 0,
         "totalRuns": 18,
-        "last7Runs": 5,
+        "last7Runs": 0,
         "last7Pass": 0,
-        "last7PassPct": 0,
+        "last7PassPct": null,
         "failingFlows": 0,
         "lastRun": {
           "date": "2026-07-13",
@@ -218,14 +195,14 @@
       "health": "unknown",
       "summary": {
         "totalPlans": 0,
-        "totalRuns": 23,
-        "last7Runs": 23,
+        "totalRuns": 45,
+        "last7Runs": 0,
         "last7Pass": 0,
-        "last7PassPct": 0,
+        "last7PassPct": null,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-07-17",
-          "result": "✅ PASS — FULL MID-YEAR HAPPY-PATH CHAIN COMPLETED TO **COMPLETED / AWAITING PERSAL SYNC**.",
+          "date": "2026-07-23",
+          "result": "BLOCKED",
           "plan": null
         }
       },
@@ -233,10 +210,10 @@
     }
   ],
   "totals": {
-    "totalProjects": 10,
-    "totalPlans": 52,
-    "totalRuns": 195,
-    "last7Runs": 110,
-    "failingFlows": 19
+    "totalProjects": 9,
+    "totalPlans": 51,
+    "totalRuns": 231,
+    "last7Runs": 30,
+    "failingFlows": 21
   }
 }

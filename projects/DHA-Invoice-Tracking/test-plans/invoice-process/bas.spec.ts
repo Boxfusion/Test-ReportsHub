@@ -30,12 +30,30 @@ const INVOICE_PDF = path.join(__dirname, '..', '..', '..', '..', 'test-data', 'p
 // Module-scoped: the Ref No created in TC-02, reused by the downstream chain (workers=1, serial).
 let createdRef = '';
 
+// Switch the config-item view mode Live -> Latest (per CLAUDE.md). The mode resets to Live on every
+// fresh login, so this runs after each one. Only the Admin header renders the toggle — non-admin
+// users have no view-mode control, so a missing toggle is a no-op, not a failure.
+async function switchToLatest(page: Page) {
+  const toggle = page.locator('span.sha-config-item-mode-toggler');
+  await toggle.first().waitFor({ state: 'visible', timeout: 5_000 }).catch(() => {});
+  if (await toggle.count() === 0) return;
+  if ((await toggle.first().innerText()).trim() === 'Latest') return;
+  await toggle.first().click();
+  await page.getByRole('menuitem', { name: /^Latest/ }).click();
+  await expect(toggle.first()).toHaveText('Latest');
+  await page.waitForLoadState('networkidle');
+}
+
 async function login(page: Page, user: string, password: string) {
   await page.goto(LOGIN_URL);
   await page.getByRole('textbox', { name: 'Username' }).fill(user);
   await page.getByRole('textbox', { name: 'Password' }).fill(password);
   await page.getByRole('button', { name: 'Sign In' }).click();
+  // Wait until we are actually off /login before returning. networkidle on its own can resolve
+  // before the session token is persisted, and a following goto() then bounces back to /login.
+  await page.waitForURL(url => !/\/login/.test(url.pathname), { timeout: 30_000 });
   await page.waitForLoadState('networkidle');
+  await switchToLatest(page);
 }
 
 // Open the invoice (by Ref No, or by step text as a fallback) from the Incoming Items inbox.
@@ -95,8 +113,12 @@ test.describe('BAS — DHA Invoice Tracking Process', () => {
     await serviceDate.press('Enter');
 
     const invoiceNo = `DHA-INV-${Date.now()}`;
-    await page.getByRole('row').filter({ has: page.getByRole('button', { name: 'plus-circle' }) })
-      .getByRole('textbox').first().fill(invoiceNo);
+    // Invoice No is the row's affix-wrapped text input. NOT the row's first textbox — that is the
+    // Invoice Date picker, which silently reverts a non-date value and leaves Invoice No empty.
+    const invoiceNoCell = page.locator('[role=table] .ant-input-affix-wrapper input.ant-input').first();
+    await invoiceNoCell.fill(invoiceNo);
+    // ASSERT the populated invoice number is displayed (plan step 27)
+    await expect(invoiceNoCell).toHaveValue(invoiceNo);
     await page.getByRole('spinbutton').first().fill('1500');
 
     const fileChooserPromise = page.waitForEvent('filechooser');
@@ -107,13 +129,17 @@ test.describe('BAS — DHA Invoice Tracking Process', () => {
 
     // STEP: commit the invoice row (plus-circle), then Submit
     await page.getByRole('button', { name: 'plus-circle' }).click();
-    // ASSERT the row committed — the attachment moves into the committed invoices table row
-    await expect(page.getByText('pdf-test.pdf', { exact: false }).first()).toBeVisible({ timeout: 10000 });
+    // ASSERT the invoice row is added and the Total sums all invoice amounts (plan step 32).
+    // Assert on the Total, not on the attachment filename — the filename is already visible in the
+    // UNcommitted row, so it passes even when the commit failed.
+    await expect(page.getByText(/Total Amount:\s*R\s*1\s?500/).first()).toBeVisible({ timeout: 10000 });
     await expect(page.getByRole('button', { name: 'Submit' })).toBeEnabled();
     await page.getByRole('button', { name: 'Submit' }).click();
 
-    // ASSERT (BLOCKING) routed out (to Assign Branch Finance Admin, received by Finance Unit)
-    await page.waitForURL('**/workflows-my-items', { timeout: 20000 });
+    // ASSERT (BLOCKING) routed out of the action form (to Assign Branch Finance Admin, received by
+    // the Finance Unit). This build redirects to the read-only workflow view; older builds went
+    // back to My Items — accept either.
+    await page.waitForURL(/\/shesha\/workflow\?id=|\/workflows-my-items/, { timeout: 20000 });
   });
 
   test('TC-03: Assign Branch Finance Admin to Assign Certifier (ADO #102369)', async ({ page }) => {
