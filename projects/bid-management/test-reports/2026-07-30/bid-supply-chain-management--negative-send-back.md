@@ -1,7 +1,8 @@
 # Report: BID-SCM — Review and Approve: Send Back for rework (NEGATIVE, 80/20)
 **Date:** 2026-07-30 11:58 UTC
 **Variant:** 80/20
-**Plan:** test-plans/tender-process/bid-supply-chain-management.md (TC-17)
+**Plan:** test-plans/tender-process/bid-supply-chain-management.md
+**Cases:** TC-17
 **Spec:** test-plans/tender-process/bid-supply-chain-management.spec.ts (TC-17)
 **Execution Mode:** hybrid — driven live via Playwright MCP, then encoded as TC-17 and **verified as an automated spec (PASSED in 42.1s)**
 **Result:** PASSED

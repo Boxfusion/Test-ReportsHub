@@ -21,7 +21,7 @@ This project uses **markdown plans as the source of truth** and **Playwright `.s
 3. If the spec passes → write the markdown report from Playwright's JSON output.
 4. If a step fails → AI fallback patches the failing line in the .spec.ts and re-runs.
 5. If AI fallback fails twice → auto-classify (stale-plan vs business-logic) and either fix the plan or log a bug.
-6. Regenerate the project dashboard (the hub's `scripts/build-project-dashboard.js --project=bid-management`) and the per-project Allure report.
+6. Regenerate the project dashboard (the hub's `scripts/build-project-data.js --project=bid-management`) and the per-project Allure report.
 7. `/submit-test-results` publishes to the central hub (this **is** the hub — that step is a no-op here, just a `git push`).
 
 ## Mandatory Pre-Flight
@@ -37,7 +37,7 @@ Before executing ANY test plan:
 |-----|-------|
 | App | Bid Management (Supply Chain Management Admin Portal) |
 | URL | https://pd-supplychainmanagement-adminportal-qa.shesha.app/login |
-| Environment | QA Site |
+| Environment | QA |
 
 > **URL migrated 2026-07-29.** The old host
 > `linux-supplychainmanagement-adminportal-qa.azurewebsites.net` **no longer resolves** (DNS NXDOMAIN) —

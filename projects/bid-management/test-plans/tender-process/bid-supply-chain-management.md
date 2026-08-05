@@ -48,7 +48,10 @@
   10. CLICK the **Hybrid** radio on Briefing Method (Meeting link + Briefing Session Venue become mandatory)
   11. TYPE the Meeting link, Briefing Session Venue, Contact person name, Telephone and Email
   12. SELECT a **date + time** for Briefing Session Start Time, Bid publication Date and Bid closing Date (via the picker panel + OK). **All three must be FUTURE dates, computed relative to today — never hardcoded.** The AntD picker renders past days as `.ant-picker-cell-disabled` and a disabled cell silently swallows the click, so a hardcoded date rots into a 15 s click timeout (this broke the 2026-07-29 run). Keep the ordering briefing < publication < closing; the spec uses today +3 / +4 / +30.
-  13. ATTACH the mandatory Supporting Document from `test-data/`
+  13. ATTACH the **mandatory** Supporting Document from `test-data/` — per **ADO #57475** (*"A user should be able
+      to attach a **mandatory** 'Supporting Document'"*). **It is enforced: Next stays disabled until the
+      attachment is added** (confirmed by the test lead, manual verification, 2026-08-03). A TC-27 note briefly claimed otherwise —
+      that was a sequencing error on my part and is retracted.
   14. ASSERT the Next button is enabled once all mandatory fields are populated; CLICK Next
   15. STEP 2 (Tender Documents): ATTACH the mandatory Bid document from `test-data/`; CLICK Next
   16. STEP 3 (Response Documents): the required-documents list is pre-populated; CLICK Next
@@ -220,6 +223,8 @@
   - [x] ASSERT (BLOCKING) the item opens on the "Calculate Specific Goal Points" page
   - [x] ASSERT each supplier response is given a Specific Goal Points score
   - [x] ASSERT (BLOCKING) the scoring submits and advances out of the stage
+  - [ ] ASSERT (ADO #60812) **Specific Goal Points is bounded by the evaluation framework** — *"should be equal or less than **10** if a user selected 90/10 … or equal or less than **20** if a user selected 80/20"* — **NEVER TESTED.** Found by the 2026-08-03 consistency pass; the happy path only ever captures in-range values (8 / 10 / 6). Probe 11 on a 90/10 tender and 21 on an 80/20 one
+  - [x] ASSERT (ADO #60812) only **compliant** responses are listed (*"should only list the responses which were complaint from the 'Review Compliance' step"*) — **consistent with TC-21**, where a Non-Compliant supplier was correctly excluded from this stage
 
 ---
 
@@ -237,16 +242,38 @@
   4. CLICK the magnifying-glass icon on the target tender at the **Invite BEC members** stage (a "TC-01 Automated Draft Tender" item)
   5. ASSERT (BLOCKING) the item opens on the "Invite BEC members" page
   6. CAPTURE the Meeting Details: Meeting date and time, Meeting Link, Venue
-  7. For each evaluator (Nathi, Nelly, Thabitha): search the Name dropdown, select the matching user (Job Title + Email auto-fill), and CLICK the add (plus) button
-  8. ASSERT the three evaluators appear in the Attendees/Evaluators table
-  9. CHECK the confirmation ("I confirm that I have invited all the relevant attendees ...")
-  10. CLICK Submit
-  11. ASSERT (BLOCKING) the invite submits and the tender advances out of the Invite BEC members stage
-- **Expected result:** The BEC chair can capture meeting details, invite multiple evaluators, confirm and submit; the tender advances to Confirm Attendance & Open Evaluation.
+  7. **(ADO step 16 — negative)** With **nothing selected** in the add-row, CLICK the add (plus) icon →
+     ASSERT the prescribed message *"Create failed, Please add the attendees before you click add button"*
+  8. For each evaluator (Nathi, Nelly, Thabitha): search the Name dropdown, select the matching user (Job Title + Email auto-fill), and CLICK the add (plus) button
+  9. ASSERT the three evaluators appear in the Attendees/Evaluators table
+  10. **(ADO step 30 — negative)** ADD one of the same evaluators a **second time** → ASSERT the prescribed
+      message *"Attendee/Evaluator already exist"*
+  11. **(ADO step 24 — negative)** CLICK a row's delete icon → ASSERT the prescribed confirmation
+      *"Are you sure, you want to delete this item"*, then CLICK **Close** and ASSERT the row is **not** deleted
+  12. CHECK the confirmation — the app renders it with a lowercase `l`: **"l confirm that l have invited all the
+      relevant attendees…"** (quoted verbatim; see the copy note below — do **not** match on `I confirm`)
+  13. CLICK Submit
+  14. ASSERT (BLOCKING) the invite submits and the tender advances out of the Invite BEC members stage
+> **Note (2026-08-03) — this TC was happy-path only; ADO prescribes three exact messages it never checked.**
+> ADO #60813 quotes the expected text verbatim in steps **16**, **24** and **30**, so unlike the confirmation
+> labels (where ADO specifies **no** wording at all — see TC-14) these *are* documented expectations and are now
+> asserted above. ⚠️ **The ADO strings are themselves ungrammatical** ("already exist", "Are you sure, you want
+> to delete this item"). Matching them exactly preserves awkward copy, so the **BA must settle the wording in
+> both the app and the test case** — raised as part of the consolidated copy review.
+>
+> **Copy note — quote the app, not the tidy version.** This plan previously wrote the confirmation as
+> "**I** confirm that **I** have invited…". The app renders a lowercase **`l`**. That silent tidy-up cost a
+> false automation failure (a `hasText` guard found no checkbox at all). Always quote the app verbatim and
+> flag the typo separately.
+
+- **Expected result:** The BEC chair can capture meeting details, invite multiple evaluators, confirm and submit; the tender advances to Confirm Attendance & Open Evaluation. The three ADO-prescribed validation messages appear on their triggers.
 - **Assertions:**
   - [x] ASSERT Inbox list and Export button are shown
   - [x] ASSERT (BLOCKING) the item opens on the "Invite BEC members" page
   - [x] ASSERT three evaluators are invited
+  - [ ] ASSERT the empty add (+) gives *"Create failed, Please add the attendees before you click add button"* (ADO step 16) — **untested until 2026-08-03**
+  - [ ] ASSERT a duplicate attendee gives *"Attendee/Evaluator already exist"* (ADO step 30) — **untested until 2026-08-03**
+  - [ ] ASSERT delete prompts *"Are you sure, you want to delete this item"* and Close cancels it (ADO step 24) — **untested until 2026-08-03**
   - [x] ASSERT (BLOCKING) the invite submits and advances out of the stage
 
 ---
@@ -517,7 +544,7 @@
 
 ---
 
-### TC-17 — Review and Approve: Send Back for rework (NEGATIVE) — no ADO case
+### TC-17 — Review and Approve: Send Back for rework (NEGATIVE) — **ADO shared step #57552 "Send Back"**
 
 *As the reviewer, instead of approving a submitted tender, send it back to the initiator with mandatory comments; the initiator corrects the draft and re-submits, and the tender returns to the reviewer's Review-and-Approve queue.*
 
@@ -578,7 +605,7 @@
 
 ---
 
-### TC-18 — Send Back rework loop at every stage that offers it (NEGATIVE) — no ADO case
+### TC-18 — Send Back rework loop at every stage that offers it (NEGATIVE) — **ADO shared step #57552**
 
 *For each workflow stage that exposes a footer **Send Back**, send the tender back to its immediately preceding step, have that actor re-action the step, and confirm the tender returns to the sending stage so the happy path can continue — one run therefore exercises both the rework loop and the forward chain.*
 
@@ -646,7 +673,7 @@
 
 ---
 
-### TC-19 — Capture Outcome of the BAC: Send back for re-evaluation (NEGATIVE) — no ADO case
+### TC-19 — Capture Outcome of the BAC: Send back for re-evaluation (NEGATIVE) — no case of its own; **ADO shared step #57552** governs send-back behaviour
 
 *As the BAC adjudicator, instead of approving the BEC recommendation, choose **Send back for re-evaluation**, pick a re-evaluation step, and confirm the tender lands in that actor's inbox properly assigned, is workable, and returns to the BAC once re-actioned.*
 
@@ -680,12 +707,15 @@
 > controls mounted (cf. the orphaned hidden *Motivation* textarea in TC-26). **A user does not see two buttons**,
 > so the original "rendered TWICE" wording remains unconfirmed as a visible defect. **"Hold In abeyance" was
 > still absent** from the whole page.
-> - **Finding (open, from TC-08's machinery):** a **backup evaluator blocks calibration.** Because an
->   attendee can only be added when *Is Present?* is ticked, a backup becomes a full evaluator — a fourth
->   column in Evaluation Scores with its own scorecard — and **"Begin Calibration" stays DISABLED with no
->   on-screen reason until they score.** Proven both ways on REF2026-1047 and REF2026-1053: disabled at
->   3-of-4 scored, passing ~12s after the fourth scored. **The "add a backup, leave them absent as a
->   stand-in" intent is no longer achievable — needs a BA ruling.**
+> - **✅ CLOSED 2026-08-03 by the consistency pass — "a backup evaluator blocks calibration" is BY DESIGN.**
+>   **ADO #60815** states it twice: *"If all evaluators have not evaluated all the suppliers → **The Begin
+>   Calibration button should be inactive/Hidden**"* and *"**A user should not be able to begin calibration if all
+>   evaluators have not evaluated all suppliers**."* So the observed behaviour — a backup becomes a full evaluator
+>   (an attendee only commits with *Is Present?* ticked) and Begin Calibration stays disabled until they score
+>   (proven on REF2026-1047 and REF2026-1053: disabled at 3-of-4, passing ~12s after the fourth) — **is exactly
+>   what the case requires. No BA ruling needed; the "inactive/Hidden with no reason" mechanism is documented too.**
+>   The only residual is a product question, not a defect: the *"add a backup, leave them absent as a stand-in"*
+>   intent is unreachable, because the attendee grid requires *Is Present?* to commit.
 
 - **Type:** Negative / re-evaluation loop
 - **Preconditions:** a tender pinned via `RUN_REF` sitting at **Capture outcome from the BAC**
@@ -720,9 +750,59 @@
 
 ---
 
-### TC-20 — Review and Approve: Disapprove (NEGATIVE) — no ADO case — 🔴 BLOCKED BY DEFECT
+### TC-20 — Review and Approve: Disapprove (NEGATIVE) — no ADO case — ✅ PASSES in Live AND Latest (2026-08-03) · earlier hang not reproducible
 
 *As the reviewer, take the third decision — **Disapprove** — instead of Approve or Send Back, and establish what it does: terminal rejection or a rework loop.*
+
+> ## ✅ RESOLVED 2026-08-03 — no longer blocked. Disapprove WORKS. **Cause of the earlier hang: unknown.**
+> Confirmed working in **both** view modes: **Latest** (fresh REF2026-0855 → Declined) and **Live**
+> (REF2026-1106 → Declined). It had hung reproducibly 5/5 up to ~09:29 the same morning.
+>
+> ⚠️ **An intermediate conclusion that it was a "Live vs Latest" problem was WRONG and is retracted.**
+> Latest works too. The decisive evidence: the dialog's form-config request carries the **identical**
+> `md5=53F860F0DC3722155BE873A894ED4D63` (304) in both a hanging run (09:29, Latest) and a working run (09:53,
+> Latest) — same form content, same view mode, opposite outcomes, so **the form version is not the variable**.
+> Also retracted: that the `Metadata/Get?container=Boxfusion.BidManagement.Domain.Tenders.Tender` 404 caused it
+> — that 404 fires in the successful runs too.
+> **Leading unproven hypothesis is degraded network** (a `page.goto` to `/login` timed out at 30 s in the same
+> window). See the bug doc; it is deliberately left OPEN as *not reproducible*.
+>
+> **What Disapprove actually does (observed live, REF2026-1106):**
+> - **TERMINAL, not a rework loop.** Dialog text: *"After clicking 'Submit', this Tender Request will be
+>   terminated. A notification will be sent to the Initiator with the disapproval message attached."*
+> - Status becomes **Declined**; the item leaves the reviewer's Inbox and does **not** return to the initiator
+>   as an actionable task. (Contrast **Send Back**, TC-17, which is the rework route.)
+> - **The reason IS mandatory**, enforced by **hiding** the dialog's Submit while the field is empty — not by
+>   disabling it and not with a validation message. The textarea carries neither `required` nor `aria-required`.
+>   Verified both ways: cleared → Submit disappears; retyped → Submit returns.
+> - The **dialog's** Submit is the commit (`POST Process/UserTaskComplete` → 200); the page footer's Submit
+>   stays disabled throughout — same pattern as Send Back.
+> - 🔴 **The reason is NOT shown on the initiator's tender view** (`tender-wf-details-view v27`: status
+>   DECLINED, no reason text). Whether the promised notification carries it is **untested** — no access to the
+>   notification channel.
+>
+> **⚠️ Two corrections to the earlier write-up, both retracted:**
+> 1. *"The `Metadata/Get?container=Boxfusion.BidManagement.Domain.Tenders.Tender` 404 causes the hang."*
+>    **False** — the identical 404 fires in the **successful** Live run, right before the successful commit.
+>    v8 tolerates the missing metadata; the draft does not. The 404 is a separate, real config wart (it also
+>    fires ×3 on the healthy Capture-Functionality-Scores page) but it is **not the cause**.
+> 2. *"The md5/304 proves the server-authoritative version is broken."* **False** — a 304 only says the cached
+>    copy of *the version that view mode asked for* is current. Both sessions were in Latest.
+>
+> **The one residual defect that is definitely real:** a form-initialisation failure **surfaces nothing to the
+> user and never resets the button** — permanent spinner, no message, no timeout. That failure mode is why this
+> was mis-diagnosed three ways over five days. Worth fixing regardless of the root cause.
+>
+> **✅ "Bid is non-responsive" also re-verified 2026-08-03** on REF2026-1128 at *BEC: Finalise recommendation*
+> (inspected, **not** committed, so the tender is still parked): the **"Reason for Non-responsiveness"** dialog
+> opens normally on the same `tender-reason for disapproval v8`. **The earlier "one mis-bound form kills two
+> decisions" claim is retracted** — it was the same transient failure, not a second dead decision.
+> Two observations from that check:
+> - **Copy defect:** the non-responsiveness dialog still says *"…with the **disapproval** message attached"*.
+>   Same family as `recommmendation` / `Commitee`.
+> - **Possible inconsistency, NOT confirmed:** on the *Disapprove* dialog an empty reason **hides** Submit; on
+>   the *non-responsiveness* dialog Submit was **present with the field empty**. Resolving it means clicking
+>   Submit, which would consume a tender — needs a dedicated test on a disposable one.
 
 > **Driven live 2026-07-30 against REF2026-1106 and REF2026-1110 (both 80/20).**
 > **RESULT: BLOCKED — Disapprove is completely non-functional.** Clicking it puts the button into a
@@ -741,36 +821,55 @@
 > the same page are unaffected. Full write-up:
 > [`test-reports/bugs/2026-07-30-disapprove-hangs-metadata-404.md`](../../test-reports/bugs/2026-07-30-disapprove-hangs-metadata-404.md).
 >
+> **🔴 RETESTED 2026-08-03 — STILL BROKEN, nothing changed. Reproduction now 4/4.** Re-driven on the parked
+> **REF2026-1106** (still at Review and Approve, *Submitted*, same todoid — and still untouched, so it stays
+> available for the next retest). Same spinner (45+ s), same two requests ending in the same 404, **no
+> workflow POST at all**, same `applyFormSettingsAsync` throw chain.
+> **Scope widened again:** the same `Metadata/Get?container=Boxfusion.BidManagement.Domain.Tenders.Tender`
+> **404 fires ×3 on the Capture-Functionality-Scores page (TC-09)** — which still renders fine, so it is not a
+> third dead decision, but it proves the stale namespace is **referenced from healthy form configurations
+> too**, not just this one broken form. Dev should grep all form configs for
+> `Boxfusion.BidManagement.Domain.*`.
+> **"Bid is non-responsive" was NOT re-driven today** (no tender parked in the no-qualifying-bid state); it
+> shares this form so it is almost certainly still dead, but that is an inference, not an observation.
+>
 > **Consequence for this TC:** the *expected* behaviour of Disapprove — terminal rejection vs a rework loop
 > — **cannot be established until the form loads.** Steps 6 onward below are therefore provisional, and
 > this TC is deliberately **NOT encoded in the spec** so it cannot turn the demo-ready happy-path suite red.
 > Re-verify with the parked retest data (**REF2026-1106**, **REF2026-1110**) once dev has repointed the form.
 
-- **Type:** Negative / terminal decision — **currently blocked**
+- **Type:** Negative / terminal decision
 - **Preconditions:** a tender submitted by TC-01 sitting at **Review and Approve Tender Details**.
-  **Retest data already parked:** REF2026-1106 and REF2026-1110, both in MhlotiM's Inbox, untouched.
+  **⚠️ This TC must be driven in `Live` view mode**, NOT Latest — see the resolution note above. This is the
+  one case in this plan that deliberately departs from the Live→Latest convention.
+  **Parked data:** REF2026-1110 (untouched). REF2026-1106 and REF2026-0843 were consumed on 2026-08-03 and are
+  now *Declined*.
 - **Steps:**
-  1. NAVIGATE to the login page and sign in as the reviewer **MhlotiM / 123qwe**; switch view mode to **Latest**
+  1. NAVIGATE to the login page and sign in as the reviewer **MhlotiM / 123qwe**; ensure view mode is **Live**
+     (it persists per user — if a previous session left it on Latest, switch it back, or Disapprove will hang)
   2. OPEN Workflows → Inbox and open the target tender at **Review and Approve Tender Details**
   3. ASSERT (BLOCKING) three decisions are offered: **Approve**, **Disapprove**, and footer **Send Back**
   4. CLICK **Disapprove**
-  5. ASSERT (BLOCKING) the reason-for-disapproval form opens — **🔴 FAILS TODAY: permanent loading spinner,
-     `Metadata/Get?container=Boxfusion.BidManagement.Domain.Tenders.Tender` → 404**
-  6. *(provisional)* CAPTURE the mandatory disapproval reason and COMMIT the decision
-  7. *(provisional)* ASSERT the tender leaves the reviewer's Inbox
-  8. *(provisional)* ASSERT the resulting state — establish whether Disapprove is **terminal** (e.g. a
-     Rejected/Declined status with no onward task, as in eLeave's Not Approve) or routes back to the
-     initiator like Send Back, and whether the reason is visible to the initiator
-  9. *(provisional)* ASSERT the status reflects the outcome (note: every other branch so far leaves the
-     status at *Submitted* — see TC-17/TC-18)
-- **Expected result:** *Undetermined — blocked.* Once the form loads, Disapprove is expected to be a
-  **terminal** rejection distinct from Send Back's rework loop, with a mandatory captured reason. This must
-  be confirmed against the BA rather than assumed.
+  5. ASSERT (BLOCKING) the **Reason for Disapproval** dialog opens (`tender-reason for disapproval v8`) and
+     states that the request will be **terminated** and the initiator notified
+  6. ASSERT the reason is mandatory — with the field EMPTY the dialog's **Submit is not rendered at all**;
+     it appears once text is entered
+  7. TYPE the disapproval reason and CLICK the **dialog's** Submit (the page footer Submit stays disabled)
+  8. ASSERT (BLOCKING) the decision commits (`Process/UserTaskComplete` → 200) and redirects to a workflow list
+  9. ASSERT (BLOCKING) the tender leaves the reviewer's Inbox and its status is **Declined**
+  10. ASSERT it is **terminal** — no onward task for the initiator (contrast Send Back, TC-17)
+  11. ASSERT whether the reason is visible to the initiator — **🔴 it is NOT on the tender view; the promised
+      notification is untested**
+- **Expected result:** The reviewer can terminate a tender via Disapprove with a mandatory captured reason; the
+  tender ends as **Declined** with no onward task, and the initiator is notified with the reason attached.
+  Confirmed for everything except the notification content.
 - **Assertions:**
   - [x] ASSERT (BLOCKING) all three decisions are offered on the page
-  - [ ] 🔴 ASSERT (BLOCKING) clicking Disapprove opens the reason-for-disapproval form — **FAILED, see bug**
-  - [ ] ASSERT the reason is mandatory — *blocked*
-  - [ ] ASSERT the resulting state and whether it is terminal — *blocked*
+  - [x] ✅ ASSERT (BLOCKING) clicking Disapprove opens the reason-for-disapproval form — **PASSES in Live**
+        (🔴 still hangs in **Latest** — draft form version, see the bug doc)
+  - [x] ASSERT the reason is mandatory — **confirmed**, enforced by hiding Submit (not disabling it)
+  - [x] ASSERT the resulting state is terminal — **confirmed: status Declined, leaves the inbox, no onward task**
+  - [ ] 🔴 ASSERT the initiator can see the reason — **FAILS on the tender view; notification channel untested**
 
 ---
 
@@ -822,10 +921,23 @@
 
 ---
 
-### TC-22 — Capture Outcome of the BAC: Change Recommendation (NEGATIVE) — no ADO case — 🔴 DEFECTS FOUND
+### TC-22 — Capture Outcome of the BAC: Change Recommendation (NEGATIVE) — **ADO #60836 steps 19–23** — 🔴 DEFECTS FOUND
 
 *As the BAC adjudicator, override the BEC's recommended supplier via **Change Recommendation** with a mandatory motivation, and confirm the override is recorded as the BAC's decision and the tender advances.*
 
+> **⚠️ Checked against ADO #60836 steps 19–23 (consistency pass, 2026-08-03) — this TC is documented after all,
+> and one of its three defects may be intended:**
+> - Step 19: *"should Bring two extra mandatory fields called New Recommended Supplier and Motivation"* → matches.
+> - Step 20: *"New Recommended Supplier should be a dropdown list of **Suppliers that reached the Capture
+>   Functionality Score step**. N.B **The Supplier that is previously recommended should not be part of this
+>   list.**"* → an assertable scoping rule. (My earlier claim that the picker "excludes below-minimum suppliers"
+>   was retracted; the spec's actual bar is *reached functionality scoring*, which is not the same thing.)
+> - Step 23: *"Upon submitting, system flag the newly recommended supplier as recommended and **display the
+>   captured motivation on the upcoming steps**"* → 🔴 **defect (a) below violates this** (it saves but never
+>   completes the task). ⚠️ **But defect (b) — "the override overwrites the BEC's Recommended Supplier field" —
+>   may be exactly what "flag the newly recommended supplier as recommended" means.** The legitimate concern is
+>   narrower: that the BEC's *original* recommendation is left with no trace. **BA question, not a proven defect.**
+>
 > **Driven live 2026-07-30** on **REF2026-1053** (80/20), twice (the second pass restored the original
 > recommendation). **The override saves, but three things are wrong** — full write-up in
 > [`bugs/2026-07-30-bac-change-recommendation-silent-no-advance.md`](../../test-reports/bugs/2026-07-30-bac-change-recommendation-silent-no-advance.md):
@@ -998,7 +1110,7 @@
 
 ---
 
-### TC-26 — No supplier meets the functionality minimum (NEGATIVE) — no ADO case — 🔴 DEAD END FOUND
+### TC-26 — No supplier meets the functionality minimum (NEGATIVE) — **decisions documented in ADO #60835** — ✅ all 3 outcomes reach a conclusion · 🔴 5 defects in HOW
 
 *Score every bidder below the functionality minimum and establish what the app does when no bid qualifies technically.*
 
@@ -1020,27 +1132,50 @@
 > - **TC-11 Finalise Scoring — enabled, no warning**, even with all three flagged No. Advanced normally.
 > - **TC-12** — Final Evaluation table **empty ("No Data")**, Recommended Supplier **blank** (both correct),
 >   but every decision is broken:
->   - 🔴 **Bid is non-responsive** (the correct outcome) — **DEAD**: permanent spinner, and the network trace
->     shows it loads the **same `tender-reason for disapproval` form whose metadata 404s** as *Disapprove*
->     (TC-20). One mis-bound form, two dead decisions.
+>   - ~~🔴 **Bid is non-responsive** (the correct outcome) — **DEAD**: permanent spinner… One mis-bound form,
+>     two dead decisions.~~ **⚠️ RETRACTED 2026-08-03.** Re-checked on REF2026-1128 at this stage: the
+>     **"Reason for Non-responsiveness"** dialog opens normally on `tender-reason for disapproval v8`. This was
+>     the same **transient** failure as TC-20, whose cause was never identified and which stopped reproducing at
+>     ~09:35 on 2026-08-03 — **not** a mis-bound form. See TC-20's resolution note and the bug doc.
+>     ✅ **COMMITTED AND VERIFIED 2026-08-03** on a purpose-built below-minimum chain **REF2026-0872**
+>     (A & A 50.25 · Telkom 44.5 · BOXFUSION 37.75, all *Above Minimum = No*; Final Evaluation "No Data";
+>     Recommended Supplier blank). **It DOES terminate the tender** — `POST Tender/CaptureCancellationOutcome`
+>     → 200, `UserTaskComplete` → 200, item leaves the inbox. **The "dead end" framing is fully retired.**
+>     🔴 **But three things are wrong** — see
+>     [`bugs/2026-08-03-bid-non-responsive-unenforced-and-indistinguishable-from-cancel.md`](../../test-reports/bugs/2026-08-03-bid-non-responsive-unenforced-and-indistinguishable-from-cancel.md):
+>     1. **Terminal status is `CANCELLED`** — no distinct non-responsive status, so a tender that failed
+>        technical evaluation is **indistinguishable from an administratively cancelled one**. (Disapprove, by
+>        contrast, produces its own `Declined`.) Audit-trail defect; highest value of the three.
+>     2. **The reason is NOT enforced — it committed completely empty.** Inconsistent with Disapprove, which
+>        uses the *same* form and hides Submit until text is entered.
+>     3. **The mandatory BEC Report (`*`) is bypassed** — the page's Submit Recommendation stayed disabled, yet
+>        the dialog's Submit committed the decision anyway, skipping page validation.
 >   - 🔴 **Approve Recommendation** — with the BEC Report filled, **Submit Recommendation becomes ENABLED with
 >     a blank Recommended Supplier**. (Not committed — see the bug's limitations.)
->   - 🔴 **Recommend another Supplier — the picker falls back to the ENTIRE SUPPLIER MASTER, and a non-bidder
->     can be recommended.** Retested properly on a second below-minimum chain (**REF2026-1133**) by **typing to
->     search**, with **REF2026-1128** (normal scores) as the control:
+>   - ⚪ **Recommend another Supplier — reaching outside the tender's bidders is BY DESIGN (test lead,
+>     2026-08-03).** The earlier Critical claim that *"a non-bidder can be recommended and AWARDED"* is
+>     **RETRACTED** — when no bid qualifies, this decision is *meant* to offer suppliers that did not respond,
+>     and the downstream stages are correct not to object. **Two defects survive:** every row appears **×10**,
+>     and an **already-evaluated** bidder gives a raw silent **500** instead of a validation message.
+>     Retested on a second below-minimum chain (**REF2026-1133**) by **typing to search**, with
+>     **REF2026-1128** (normal scores) as the control:
 >
 >     | Search | REF2026-1128 (normal) | REF2026-1133 (all below minimum) |
 >     |---|---|---|
 >     | `Stationers` | 0 — is the current recommendation | **A & A ×10** |
 >     | `Telkom` | **1** — qualifying, not recommended | **Telkom ×10** |
 >     | `BOXFUSION` | 0 — below minimum | **BOXFUSION ×10** |
->     | `HOLDINGS` | 0 — not a bidder | 🔴 **PHINGOSHE HOLDINGS ×10** |
+>     | `HOLDINGS` | 0 — not a bidder | PHINGOSHE HOLDINGS ×10 |
 >
->     Selecting the **non-bidder** PHINGOSHE HOLDINGS **committed** (`RfxEvaluation/Crud/Update` 200,
->     `UserTaskComplete` 200) and advanced the tender to the BAC, which now shows **Recommended Supplier =
->     PHINGOSHE HOLDINGS** above an empty Stage 3. **Logged Critical:**
+>     Selecting PHINGOSHE HOLDINGS **committed** (`RfxEvaluation/Crud/Update` 200, `UserTaskComplete` 200) and
+>     advanced the tender to the BAC, which showed **Recommended Supplier = PHINGOSHE HOLDINGS** above an empty
+>     Stage 3; TC-13→TC-16 then drove it to `AWARDED`. **Per the ruling that whole chain is correct behaviour.**
+>     Bug doc (re-scoped to the ×10 duplication + the silent 500):
 >     [`bugs/2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md`](../../test-reports/bugs/2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md).
->     On a normal tender the same picker is scoped correctly, so this is specific to the no-qualifier state.
+>     **Open question for the BA:** the same picker offers only this tender's qualifying bidders on a *normal*
+>     tender — so why is a non-respondent selectable only in the no-qualifier state, and should the fallback be
+>     the entire master or a category/panel shortlist? Also for the BA: should the BAC page *state* that no bid
+>     met the minimum rather than showing a bare "No Data" Stage 3?
 > - Page also throws `Cannot read properties of undefined` for `technicalEvaluation` ×14, `tableData` ×11,
 >   `some` ×9 — the scripts don't expect an empty evaluation set.
 > - A second stale namespace 404s on page load:
@@ -1065,18 +1200,23 @@
   6. CLICK **Bid is non-responsive** — ASSERT (BLOCKING) the tender terminates as non-responsive
      — **🔴 FAILS: permanent spinner, metadata 404**
   7. ASSERT **Approve Recommendation** cannot be submitted with no supplier — **🔴 FAILS: Submit enables**
-  8. ASSERT **Recommend another Supplier** offers only functionality-compliant suppliers — **🔴 FAILS**
+  8. INSPECT **Recommend another Supplier** by **typing to search** — it offers suppliers beyond the tender's
+     respondents (**by design**, test lead 2026-08-03). ASSERT each match appears **once** — **🔴 FAILS: ×10**;
+     ASSERT an already-evaluated bidder gives a validation message — **🔴 FAILS: raw silent 500**
 - **Expected result:** A tender in which no bid meets the functionality minimum can be closed out as
   non-responsive, and the app should say so before the secretariat clicks through two more stages.
 - **Assertions:**
   - [x] ASSERT the functionality minimum is 60 and inclusive (60 passes, 59.5 fails)
   - [x] ASSERT Above Minimum = No is computed correctly for every below-minimum supplier
   - [x] ASSERT the Final Evaluation table is empty and no supplier is pre-recommended
-  - [ ] 🔴 ASSERT (BLOCKING) **Bid is non-responsive** terminates the tender — **FAILED: dead (metadata 404)**
+  - [x] ✅ ASSERT (BLOCKING) **Bid is non-responsive** terminates the tender — ~~FAILED: dead (metadata 404)~~ **PASSES. Committed on REF2026-0872 2026-08-03: `CaptureCancellationOutcome` 200 → `UserTaskComplete` 200, tender terminated, leaves the inbox.**
+  - [ ] 🔴 ASSERT the terminal status distinguishes non-responsiveness from cancellation — **FAILED: status is `CANCELLED`, identical to Cancel Tender. Audit-trail defect.**
+  - [ ] 🔴 ASSERT the non-responsiveness reason is mandatory — **FAILED: committed with an EMPTY reason (Disapprove, same form, enforces it).**
+  - [ ] 🔴 ASSERT the mandatory BEC Report is enforced before the decision commits — **FAILED: dialog Submit bypasses the page's disabled Submit Recommendation.**
   - [ ] 🔴 ASSERT **Recommend another Supplier** lists each supplier once — **FAILED: every match appears ×10**
-  - [ ] 🔴 ASSERT the picker is scoped to this tender's qualifying bidders — **FAILED on a below-minimum tender: it returns the ENTIRE supplier master (failed bidders AND non-bidders). Correct on a normal tender.**
-  - [ ] 🔴 ASSERT a **non-bidder** cannot be recommended — **FAILED: PHINGOSHE HOLDINGS committed and advanced**
-  - [ ] 🔴 ASSERT a non-bidder cannot be **AWARDED** — **FAILED: driven TC-13→TC-16 (4/4 passed); REF2026-1133 is `AWARDED` to a company that never bid, with every real bidder below the minimum. No stage objected.**
+  - [x] ⚪ ~~ASSERT the picker is scoped to this tender's qualifying bidders~~ — **WITHDRAWN (test lead, manual verification, 2026-08-03): on a below-minimum tender the picker is *meant* to offer suppliers beyond the respondents.** It returns the entire supplier master (failed bidders and non-respondents); on a normal tender it is scoped to qualifying bidders. The difference is an open BA question, not a defect.
+  - [x] ⚪ ~~ASSERT a **non-bidder** cannot be recommended~~ — **WITHDRAWN: by design.** PHINGOSHE HOLDINGS committed and advanced — correct behaviour.
+  - [x] ⚪ ~~ASSERT a non-bidder cannot be **AWARDED**~~ — **WITHDRAWN: by design.** REF2026-1133 was driven TC-13→TC-16 (4/4) to `AWARDED` with every real bidder below the minimum; **the stages were correct not to object.**
   - [ ] 🔴 ASSERT an invalid selection gives a validation message — **FAILED: an already-evaluated bidder gives a raw silent 500**
   - [ ] 🔴 ASSERT **Approve Recommendation** cannot submit a blank recommendation — **FAILED: it COMMITS and advances an empty recommendation to the BAC**
   - [ ] 🔴 ASSERT the BAC is not asked to adjudicate an empty recommendation — **FAILED: Stage 3 "No Data", Recommended Supplier blank, no warning**
@@ -1087,6 +1227,442 @@
 > where the adjudicator is shown an **empty Stage 3 ("No Data")** and a **blank Recommended Supplier**. So the
 > defect is not a dead end but the reverse — **the only working route is the wrong one, taken silently.**
 > *Recommend another Supplier* fails with a **500** (`could not execute batch command`) and no UI message at all.
+
+---
+
+### TC-27 — Draft Tender: field and business-rule validation (NEGATIVE) — **ADO #57475** (validation steps never previously read)
+
+*Probe every guard on the Draft Tender wizard that TC-01 only ever satisfies: required fields, contact-detail
+formats, the publication/closing date ordering, and the Technical Evaluation score ranges.*
+
+> **⚠️ Note CORRECTED 2026-08-03 (consistency pass).** An earlier draft of this TC claimed ADO #57475 "documents
+> no validation expectation". **That was wrong — I had not read the case.** #57475 is long and prescriptive:
+> - *"The Next button should be **inactive** until a user completes all the mandatory fields… If a certain
+>   mandatory field is missed the next button will remain inactive"* → **a disabled Next is the documented
+>   mechanism**, so that half of Defect 2 is by design; only the missing asterisks are a gap.
+> - *"On Bid Publication Date & Bid Closing Date fields → **The date picker should only allow a user to select
+>   future dates**"* → ✅ **satisfied**, and the app goes further than the case requires: the closing picker also
+>   greys out everything up to the publication date, and changing the publication date clears an invalid closing
+>   date. **No defect here** — my earlier claim came from typing instead of using the picker.
+> - *"A user should be able to attach a **mandatory** 'Supporting Document'"* → ✅ **enforced. Next stays disabled
+>   until the attachment is added** (test lead, manual verification, 2026-08-03). ⚠️ I twice recorded the opposite today — first as
+>   "optional", then as an app-vs-spec deviation. **Both were wrong:** two supporting documents had already been
+>   uploaded (`StoredFile/Upload` 200 ×2) before I observed Next enable, so I never actually tested the
+>   without-attachment case. Retracted.
+> - *"The system should **not allow user to proceed** to the next step without adding at least one evaluation
+>   criteria **that amount to 100 points** and specify 'Minimum score required'"* → **the total-must-be-100 rule
+>   IS documented.** The rule is correct; only its invisible enforcement is a defect.
+> - Documented and **still untested here:** the Step-1c response-document row edit / save / cancel-edit / delete /
+>   add, and *"if there were no predefined response document the next button will remain inactive until a user
+>   adds at least one"*.
+>
+> **Naming mismatches for the copy review:** the case says **"Evaluation Framework"** where the app says
+> *Evaluation Criteria*, and **"Points Awarded"** where the criteria table header says *Max Points*.
+>
+> Driven live as **Maanda-awe**, view mode **Latest**, form `capture-tender-details v46`, on a throwaway draft
+> (**REF2026-0890**, left at Draft — Step 1 only persists on Next, so this TC consumes no tender).
+>
+> **Required (`*`) on Step 1:** Tender Number (system), Tender Name, Description, Bid publication Date, Bid
+> closing Date, Contact person name, Telephone, Email. **NOT** required: Evaluation Criteria, Briefing Session
+> Requirement, Supporting documents — ⚠️ **TC-01 step 13 calls the Supporting Document "mandatory"; the form
+> shows no asterisk.** One of the two is wrong.
+>
+> **Harness gotchas (cost two invalid probes):** `pressSequentially` **appends** into these AntD date inputs
+> (a field ended up `10/08/2026 09:0005/08/2026 09:00`) — **clear with `fill('')` first**. **Ctrl+A navigates the
+> whole page away** and loses the unsaved form. The date inputs' `id`s are **regenerated per page load** — locate
+> by label, never by id.
+
+- **Type:** Negative / validation
+- **Preconditions:** none — reuses or creates a throwaway draft; nothing is submitted.
+- **Steps:**
+  1. OPEN Create New → Tender Process and ASSERT **Next is disabled** on the untouched form
+  2. TYPE a non-numeric **Telephone** → ASSERT the inline format error
+  3. TYPE a malformed **Email** → ASSERT the inline format error
+  4. TYPE a **past** Bid publication Date → ASSERT it is refused
+  5. TYPE a **Bid closing Date earlier than the publication date** → ASSERT it is refused
+  6. Set closing **after** publication → ASSERT both commit (confirms the guard is the ordering rule, not a
+     minimum lead time)
+  7. With both dates set, MOVE the **publication date past the closing date** → ASSERT the inconsistent pair is
+     refused
+  8. On **Step 4 (Technical Evaluation)** enter **Max Points** that are negative, zero and > 100 →
+     ASSERT each is refused
+  9. Set the **Minimum score required above the total available Max Points** → ASSERT it is refused
+     (an unwinnable tender is not a valid tender)
+- **Expected result:** Every mandatory field, contact-detail format, date-ordering rule and score range is
+  enforced *with a visible message*, and the wizard cannot advance while any is violated.
+- **Assertions:**
+  - [x] ASSERT Next is disabled on the empty form — **PASSES**
+  - [x] ASSERT Telephone format is enforced — **PASSES**: *"Invalid phone number format. Enter a valid phone number (10-15 digits)"*
+  - [x] ASSERT Email format is enforced — **PASSES**: *"Invalid email format. Enter a valid email address"*
+  - [x] ASSERT a past publication date cannot be selected — **PASSES**: past day cells are `.ant-picker-cell-disabled` (01–02 Aug greyed on 03 Aug)
+  - [x] ASSERT closing-before-publication cannot be selected — **PASSES**: the closing picker greys out **every day up to and including the publication date** (with publication 12/08, days 03–12 disabled, 13+ selectable)
+  - [x] ASSERT moving publication past an existing closing date is handled — **PASSES.** Setting publication to 12/08 via the picker **auto-clears the now-invalid closing date**, marks it *"This field is required"* and **disables Next**. The rule is enforced in **both** directions
+  - [x] ASSERT the date pickers require the **OK** button to commit — **PASSES** (`showTime` pickers: day cell → hour → OK)
+  - [x] ASSERT Max Points out of range is refused — **PASSES**: `-10` and `0` both give *"maxPoints must be minimum 1"* and the row is not added
+  - [x] ASSERT a Minimum score above the total is refused — **PASSES, but only as a side-effect**: the minimum is bounded to a fixed **10–100** (both messages visible) while the total is forced to 100, so the unwinnable case is unreachable. No rule actually relates the two fields — see Defect 5.
+  - [x] ASSERT (ADO #57475) the criteria must total 100 before Next activates — **PASSES, the rule is per spec.** Below 100 → Next disabled; above → row rejected
+  - [ ] 🟠 ASSERT the total-100 rule is *communicated* — **FAILED (undocumented expectation): nothing on screen states it.** The app's own message *"Total score cannot exceed 100. You can only add a maximum of 0 more points"* goes to the browser **CONSOLE** only. The spec doesn't require a message, so this is a UX defect rather than a violation
+  - [x] ASSERT (ADO #57475) a missing mandatory field leaves Next inactive — **PASSES, documented mechanism** (*"the next button will remain inactive"*)
+  - [x] ASSERT (ADO #57475) the **Supporting Document is mandatory** — **PASSES: Next stays disabled until it is attached.** ⚠️ Recorded as a failure earlier today in error — the attachment was already present when Next was observed to enable (see the note above)
+  - [ ] ASSERT which remaining field gates Next once everything else is captured — **Briefing Session Requirement** was the last blocker in this run, and it carries no `*`. Not covered by #57475 → minor UI observation, not a defect
+  - [ ] ASSERT (ADO #57475) Step-1c response-document rows can be edited / saved / cancelled / deleted / added, and that Next stays inactive with no response documents — **NOT TESTED** (TC-01 just clicks Next through Step 1c)
+
+> **✅ OUTCOME: no defects. Every guard on this form is correctly enforced.** The bug doc that briefly existed for
+> this TC has been deleted — every item in it was either documented behaviour or my own testing error.
+>
+> 🔑 **The one thing to carry forward is a harness rule.** I reported a "tender that closes before it opens".
+> **The app is correct in every direction** — verified live and reproduced manually by the test lead twice:
+> the closing picker greys out every day up to the publication date; changing the publication date auto-clears an
+> invalid closing date, marks it required and disables Next; and **typing with Enter is refused too**.
+>
+> The invalid pair came from **clearing the field with Playwright's `fill('')`** (which writes the value directly
+> and leaves AntD's React state stale) and then typing into it. **Never set these date fields programmatically —
+> no `.fill()`, no `.fill('')`, no `pressSequentially`.** Drive the panel: **day cell → hour → OK**, as
+> `pickAntDateTime` does. To change a date, reopen the picker rather than emptying the input.
+> Evidence: `assets/tc-27-date-order-correctly-enforced.png`.
+
+---
+
+### TC-28 — Zero and late supplier responses (NEGATIVE) — no ADO case
+
+*Establish what Consolidate Supplier Responses does when a tender closes with **no** responses, and whether a
+response can be captured **after** the closing date.*
+
+- **Type:** Negative / business rule
+- **Preconditions:** **REF2026-0999** is parked at *Consolidate* for exactly this.
+- **Steps:**
+  1. OPEN the tender at **Consolidate Supplier Responses** with no responses captured
+  2. ASSERT the app states that no responses were received rather than showing an empty table with no explanation
+  3. ASSERT the stage cannot be advanced into an evaluation that has nothing to evaluate — or, if it can,
+     record where the empty set surfaces downstream (cf. TC-26's empty Stage 3)
+  4. ATTEMPT to capture a response **after** the Bid closing Date → ASSERT it is refused or clearly flagged late
+- **Expected result:** A tender with no responses is closed out explicitly, not advanced silently into
+  evaluation; late responses are refused or marked late.
+- **Assertions:**
+  - [ ] ASSERT a no-response tender is identified as such
+  - [ ] ASSERT the empty set cannot silently reach evaluation
+  - [ ] ASSERT a post-closing-date response is refused or flagged
+
+---
+
+### TC-29 — Functionality score out of range (NEGATIVE) — **ADO #60821** (its validation steps were never asserted)
+
+*Two untested edges of the scoring machinery: whether an evaluator can score outside the criterion's Max Points,
+and whether calibration can actually **change** a score (every run so far has only passed through it).*
+
+> **Note:** TC-09 → TC-11 have only ever been driven with in-range scores and pass-through calibration, so
+> neither guard has been exercised. The functionality minimum is known to be **60 and inclusive**
+> (60 = COMPLIANT on 0944, 59.5 = NON COMPLIANT on 1053).
+
+> **⚠️ Updated by the 2026-08-03 consistency pass — this IS documented.** **ADO #60821** prescribes the exact
+> message: *"Populate the points awarded that are above the Max Points → The system should display an error
+> message that state, **\"Score must be maximum of 'Max Points'\"**"*. It also requires that *"the system should
+> **not display the finalise scoring button** until the scores have been populated for all criteria"*. Both are
+> assertable expectations that no TC has ever checked.
+> **Calibration override:** now split out into its own **TC-35** (ADO #60824), which documents the *Edit My Score*
+> path properly. Keep this TC focused on the score-range guards at capture time.
+
+- **Type:** Negative / business rule
+- **Preconditions:** a tender at **Capture Functionality Score** (build with automated TC-01 → TC-08).
+- **Steps:**
+  1. As an evaluator at **Capture Functionality Score**, enter a score **above the criterion's Max Points**
+     → ASSERT the prescribed message *"Score must be maximum of 'Max Points'"* (ADO #60821)
+  2. Enter a **negative** score → ASSERT it is refused
+  3. Enter a **non-numeric** score → ASSERT it is refused
+  4. Advance to **Monitor calibration and finalise scoring** and ATTEMPT to **edit an evaluator's score**
+     → RECORD whether calibration permits an override at all, and if so whether the change is attributed and
+     audited
+  5. ASSERT any override recomputes the Average and the Above-Minimum flag
+- **Expected result:** Scores are bounded by the criterion's Max Points; calibration either supports an
+  attributed, audited override or offers none at all — not a silent unattributed edit.
+- **Assertions:**
+  - [ ] ASSERT (ADO #60821) a score above Max Points gives *"Score must be maximum of 'Max Points'"*
+  - [ ] ASSERT a negative score is refused *(not in the case)*
+  - [ ] ASSERT a non-numeric score is refused *(not in the case)*
+  - [ ] ASSERT (ADO #60821) the **Finalise Scoring button is not displayed** until every criterion is scored
+  - [ ] ASSERT (ADO #60821) the Total field is the cumulative sum of points awarded
+  - → calibration override moved to **TC-35** (ADO #60824)
+
+---
+
+### TC-30 — Ranking tie-break (NEGATIVE) — no ADO case
+
+*Score two suppliers to an identical overall score and establish how the Final Evaluation ranks them.*
+
+- **Type:** Negative / business rule
+- **Preconditions:** a chain where two suppliers can be driven to an equal overall score (functionality +
+  pricing + specific goals). Easiest via equal functionality scores and equal pricing.
+- **Steps:**
+  1. Drive TC-01 → TC-11 with two suppliers scored identically
+  2. At **BEC: Finalise recommendation** ASSERT the Final Evaluation table ranks them deterministically
+  3. ASSERT the pre-populated **Recommended Supplier** is one of the tied pair and is not blank
+  4. RECORD the tie-break rule actually applied (price, B-BBEE, capture order, or none)
+- **Expected result:** A tie resolves by a stated rule, or the app requires the BEC to choose — it must not
+  produce a blank recommendation or an arbitrary silent pick.
+- **Assertions:**
+  - [ ] ASSERT tied suppliers are ranked deterministically
+  - [ ] ASSERT the recommendation is not blank on a tie
+  - [ ] ASSERT the applied tie-break rule is discoverable
+
+---
+
+### TC-31 — BAC quorum (NEGATIVE) — no ADO case
+
+*Establish whether the BAC/BEC enforces a minimum number of members before an evaluation or adjudication can
+proceed.*
+
+> **Related open finding (TC-19):** a **backup evaluator blocks calibration** — because an attendee only commits
+> with *Is Present?* ticked, a backup becomes a fourth full evaluator and **Begin Calibration stays disabled with
+> no on-screen reason** until they score. That is the closest thing to a quorum rule found so far, and it needs
+> a BA ruling.
+
+- **Type:** Negative / business rule
+- **Preconditions:** a tender at **Invite BEC Members**.
+- **Steps:**
+  1. Invite a **single** evaluator and open the evaluation → ASSERT whether a minimum panel size is enforced
+  2. Mark only **one of several** invited evaluators present at Confirm Attendance → ASSERT whether the
+     evaluation can still be opened
+  3. RECORD whether any stage states a required quorum
+- **Expected result:** Either a quorum is enforced with a clear message, or the absence of one is confirmed as
+  intended and documented.
+- **Assertions:**
+  - [ ] ASSERT whether a minimum evaluator count is enforced at Open Evaluation
+  - [ ] ASSERT whether partial attendance blocks the evaluation
+  - [ ] ASSERT the rule (or its absence) is stated somewhere in the UI
+
+---
+
+### TC-32 — Compliance-row write access for a non-participant (NEGATIVE) — no ADO case — ✅ UI level PASSES (2026-08-03)
+
+*Extend TC-24's authorisation finding: attachments proved writable by a user with no task on the tender — check
+whether the compliance rows are too.*
+
+> **Why:** TC-24 established that decisions are protected (`workflow-action` returns "Requested action is not
+> available") but **documents are not** — `PUT /api/StoredFile` and `DELETE /api/StoredFile/Delete` both returned
+> **200** for a non-participant. If the same gap exists on compliance data, a non-participant could alter an
+> evaluation outcome rather than just a file.
+
+> **✅ RUN 2026-08-03 (UI only) on REF2026-2561 — compliance data IS protected in the UI.** As **MoshadiM** (no task
+> on the tender), the fallback serves the read-only **`tender-wf-details-view v27`**, not the Verify Compliance
+> form. Rows offer a magnifier only; the *Supplier compliance* dialog
+> (`response-wf-reviewsuppliercompliance-dialog-details v14`) renders with **every control `disabled`** — 5 file
+> inputs and both status radios — and **Close as its only button**. Nothing was modified.
+>
+> 🔴 **The TC-24 document gap is still on the same page:** the Procurement Plan **"(press to upload)"** button is
+> live and clickable. So the fallback applies read-only treatment to compliance components and **not** to document
+> components — a narrow, actionable pointer for dev.
+>
+> ⚠️ **Step 3 (direct CRUD write) NOT RUN** — deferred to keep the run UI-only. So *"the UI does
+> not expose the write"* is proven; *"the server would refuse it"* is **not**. TC-24's attachment hole only showed
+> up at the API level, so do not report this as "compliance is secure" until step 3 is done.
+> Report: `test-reports/2026-08-03/bid-supply-chain-management--tc-32-compliance-row-write-access.md`
+>
+> **Fixture verified 2026-08-03:** REF2026-2561 is still at *Verify Compliance* in **TumisangM's** inbox —
+> `workflow-action?id=2cadb802-9005-49b1-abbd-9fdc15404c2c&todoid=66f9d5e0-67ec-4c06-be24-2fff3a5a48a0`.
+> ⚠️ **REF numbers are reused** — two different tenders share REF2026-0890. **Pin by workflow instance GUID.**
+
+- **Type:** Negative / authorisation
+- **Preconditions:** **REF2026-2561** is parked at *Verify Compliance* (verified 2026-08-03).
+- **Steps:**
+  1. As a user with **no task** on the tender, open its `workflow-action?id=…&todoid=…` (the read-only fallback)
+  2. ATTEMPT to change a supplier's **Is Compliant?** value and save → RECORD the HTTP result
+  3. ATTEMPT the equivalent write directly against the compliance CRUD endpoint → RECORD the HTTP result
+  4. RELOAD as the legitimate assignee and ASSERT whether any change persisted
+- **Expected result:** Compliance rows are writable only by the assignee; a non-participant's write is rejected
+  server-side, not merely hidden in the UI.
+- **Assertions:**
+  - [x] ASSERT a non-participant cannot change Is Compliant? via the UI — **PASSES**: every control in the compliance dialog is `disabled`, and Close is the only button
+  - [ ] ASSERT the server rejects the write directly — **NOT TESTED** (direct-endpoint probe deferred 2026-08-03)
+  - [x] ASSERT nothing persists for the legitimate assignee — **PASSES trivially** (nothing could be changed)
+  - [x] ASSERT the TC-24 document gap on the same fallback — **CONFIRMED still present**: the Procurement Plan upload control is live for a non-participant
+
+---
+
+### TC-33 — BAC Cancel Tender (NEGATIVE) — **ADO #60836 steps 30–33** — 🔴 status violates the spec
+
+*Drive the BAC's **Cancel Tender** decision to a conclusion and compare its terminal state with the
+non-responsive outcome.*
+
+> **Why it matters:** TC-26 established that *Bid is non-responsive* terminates as **`CANCELLED`** — the **same**
+> status as an administrative cancellation — so a technically-failed tender is indistinguishable from a cancelled
+> one. Driving Cancel Tender confirms that collision from the other side.
+>
+> ⚠️ **Terminal — consumes a tender.** ~~REF2026-1122~~ **had already left the BAC inbox by 2026-08-03** — do
+> not rely on it. Any abandoned tender of ours at *Capture outcome from the BAC* works; **REF2026-2395** was used
+> and is now consumed. **Confirm the Ref No on the page header before acting** — the inbox table is div-based, so
+> magnifier links must be mapped positionally and that mapping is an assumption, not a fact.
+> Also note the **latent duplicate**: two DOM buttons read exactly "Cancel Tender" but only one has non-zero
+> size, so a user sees one.
+
+- **Type:** Negative / terminal decision
+- **Preconditions:** a tender at **Capture outcome from the BAC** (REF2026-1122), as **MoshadiM**.
+- **Steps:**
+  1. OPEN the tender at *Capture outcome from the BAC*
+  2. CLICK **Cancel Tender** → ASSERT a reason is required and enforced *visibly*
+  3. SUBMIT and ASSERT (BLOCKING) the tender terminates
+  4. ASSERT the terminal status and compare it with the non-responsive outcome's `CANCELLED`
+  5. ASSERT the cancellation reason is visible on the tender afterwards
+> **✅ DRIVEN 2026-08-03 on REF2026-2395** (not 1122 — **1122 had already left the BAC inbox**; 2395 was an
+> abandoned June automated run of ours at the same stage, identity confirmed on the page header before any
+> action). Report: `test-reports/2026-08-03/bid-supply-chain-management--tc-33-bac-cancel-tender.md`.
+>
+> **⚠️ This TC is documented in ADO after all** — #60836 steps **30–33** specify the dialog, that
+> *"the submit button should be **inactive** until the reason has been captured"*, that the reason be displayed,
+> and that submitting *"end the workflow and **mark the item as cancelled**"*. Steps 26–29 say the same for
+> *Bid is non-responsive*. **The spec therefore WANTS both decisions to land on "cancelled"** — it does not ask
+> for distinct statuses.
+>
+> 🔴 **The headline, against that spec:** Cancel Tender leaves the tender at **`DECLINED`**, not cancelled —
+> **a violation of step 33**, and it collides with Disapprove. Non-responsiveness (`CANCELLED`) is correct.
+> Both call the same endpoint `Tender/CaptureCancellationOutcome`, so the status is selected downstream of a
+> shared operation.
+>
+> ⚪ **Two of my own earlier claims are WITHDRAWN as contrary to the spec:** (1) that non-responsiveness being
+> indistinguishable from a cancellation is a defect — the spec *intends* both to read cancelled; (2) that the
+> dialog's *"disapproval message"* wording is a copy defect — **step 33 uses that exact phrase.** Both are now
+> BA questions (and the *test case* is what would need changing), not dev bugs.
+> See [[bid-management-business-rules-come-from-test-lead]] — third and fourth time this has caught me.
+
+- **Expected result:** Cancel Tender terminates the tender with a mandatory, retrievable reason, and its status
+  is distinguishable from a technical non-responsiveness outcome.
+- **Assertions:**
+  - [x] ASSERT (ADO step 30) the Cancel Tender dialog opens — **PASSES** (it is `tender-reason for disapproval v8`, shared with Disapprove and Bid-is-non-responsive)
+  - [ ] 🔴 ASSERT (ADO step 31) **the Submit button is INACTIVE until the reason is captured** — **FAILED on mechanism: Submit is not rendered at all while empty**, then appears once text is entered. The rule holds (nothing commits without a reason) but the spec asks for a *disabled* control, not an absent one
+  - [x] ASSERT (ADO step 32) the reason is displayed — **PASSES** in the dialog as typed
+  - [x] ASSERT (BLOCKING) the tender terminates — **PASSES**: `CaptureCancellationOutcome` 200 → `UserTaskComplete` 200, leaves the inbox, redirects to My Items
+  - [ ] 🔴 ASSERT (ADO step 33) the item is **marked as cancelled** — **FAILED: the terminal status is `DECLINED`**, colliding with Disapprove. The one decision named "Cancel Tender" is the only one that does not reach a cancelled state
+  - [ ] ⚪ ~~ASSERT the terminal status is distinguishable from the non-responsive outcome~~ — **WITHDRAWN: contrary to the spec**, which asks for both to be marked cancelled (steps 29 and 33). Distinguishability is a BA question about the *spec*
+  - [ ] ⚪ ~~ASSERT the dialog copy matches the decision~~ — **WITHDRAWN: ADO step 33 itself says "sent a notification to the initiator with *disapproval* message"**, so the app matches its case. Goes to the copy review, where the test case needs fixing too
+  - [ ] 🟠 ASSERT the reason is retrievable afterwards — **FAILS in practice** (no Reason label, no tab, submitted text absent from the terminated tender) — but **not documented anywhere**, so a BA question rather than a proven violation
+  - [x] ASSERT the undocumented extras are invisible to a user — **CONFIRMED by measurement: 5 visible decisions.** "Hold In abeyance pending further due dilligence" and a second "Cancel Tender" are in the DOM at **0 × 0** (note the typo *dilligence*). The 2026-07-30 "rendered twice" retraction **stands**
+
+---
+
+### TC-34 — Recommend another Supplier on a qualifying tender — **ADO #60835 steps 18–21** — 🔴 RUN 2026-08-03: silent 500 on a VALID override
+
+*Re-run the picker properly on a tender where a bidder **did** qualify — the one variant never validly tested.*
+
+> **Why it is still open:** the 2026-07-30 attempt used an **already-evaluated** bidder (invalid input → silent
+> 500), and the below-minimum run is now known to be **by design** (test lead, manual verification, 2026-08-03). What has never been
+> tested is a **valid** alternative recommendation on a **normal** tender.
+>
+> **Fixture:** ⚠️ ~~REF2026-1128~~ was **CONSUMED on 2026-08-03** (spent on the manual non-responsive
+> reason-enforcement defect; now `CANCELLED`). **Use REF2026-0901** instead — a fresh 80/20 chain built the same
+> day (TC-01→TC-11, 11/11 passed), parked **unactioned** at *BEC: Finalise recommendation* with three qualifying
+> suppliers. On 1128 the picker returned exactly **1** result for `Telkom`, so type-to-search for a qualifying
+> bidder that is not the current recommendation.
+
+> **✅🔴 RUN 2026-08-03 on REF2026-0901 — the decision WORKS; the defect is a silent failure on the way there.**
+> The picker is correct on every count (steps 18–20, 25 all pass). **My submit hit
+> `PUT RfxEvaluation/Crud/Update` → 500 with NOTHING shown on screen**; a manual resubmit was then made and it
+> **committed** — REF2026-0901 advanced to *Capture outcome from the BAC* with **Telkom** recorded, Motivation and
+> BEC Report displayed and **Stage 3 populated** (verified read-only as MoshadiM).
+>
+> ⚠️ **Two claims of mine retracted the same day:** *"this decision cannot be used at all"* and *"the only input
+> that succeeds is an invalid one"* — both wrong, disproved by the successful retry.
+>
+> 🔑 **ROOT CAUSE ISOLATED — it is the free-text LENGTH, not intermittency.** Controlled 3-attempt experiment on
+> **REF2026-0879**, same supplier, only the text length varied: **286-char BEC Report → 500**; **identical retry →
+> 500 again** (so not intermittent); **6-char BEC Report → committed and advanced**. Deterministic **4/4** long
+> failures, **2/2** short successes. **Probable limit: 255 chars on the BEC Report**
+> (`recommendationSupportingComments`) — it exceeded 255 in every failure while Motivation (235–236) did not.
+> **Standing rule: keep automated free text ≤ 100 chars in this form.**
+> Cf. [[dispatch-crud-append-accumulation]] — identical signature in Dispatch.
+> Bug: [`bugs/2026-08-03-recommend-another-supplier-500-on-valid-input.md`](../../test-reports/bugs/2026-08-03-recommend-another-supplier-500-on-valid-input.md)
+
+- **Type:** Negative / business rule (ADO-documented)
+- **Preconditions:** a tender at *BEC: Finalise recommendation* with qualifying bidders, as **ThabisoM**.
+  **REF2026-0901** — the submit failed, so it never advanced and is reusable.
+- **Steps:**
+  1. CLICK **Recommend another Supplier** → ASSERT (step 18) **New Recommended Supplier** + **Motivation** appear
+  2. **Type to search** the current recommendation (`Stationers`) → ASSERT (step 19) **no results**
+  3. **Type to search** a qualifying bidder (`Telkom`) → ASSERT exactly **1** result, no duplication
+  4. **Type to search** a non-bidder (`Vodacom`) → ASSERT **no results**
+  5. SELECT the qualifying bidder, fill the mandatory **Motivation** and **BEC Report**, and SUBMIT
+  6. ASSERT (BLOCKING, step 21) the recommendation commits and advances with the new supplier
+  7. ASSERT the BAC then shows a populated Stage 3 and the overridden supplier
+- **Expected result:** On a normal tender the BEC can override the pre-populated recommendation to another
+  qualifying bidder, and it commits cleanly.
+- **Assertions:**
+  - [x] ASSERT (step 18) both extra mandatory fields appear — **PASSES**
+  - [x] ASSERT (step 19) the current recommendation is excluded — **PASSES**: `Stationers` → "No data"
+  - [x] ASSERT (step 19) only suppliers that reached functionality scoring are listed — **PASSES**: `Vodacom` (non-bidder) → "No data" (manual verification). Datasource is `FlattenedCompliantResponse` filtered on `technicalEvaluationStatus == 1`, excluding the current supplier
+  - [x] ASSERT each match appears exactly once — **PASSES**: `Telkom` → 1 result. **The ×10 duplication does NOT occur on a qualifying tender** — it is specific to the below-minimum state
+  - [x] ASSERT Submit stays disabled until Motivation + BEC Report are filled — **PASSES**
+  - [x] ASSERT (BLOCKING, step 21) a valid alternative recommendation commits — **PASSES on retry.** First attempt returned `PUT RfxEvaluation/Crud/Update` → **500**; the resubmit committed and advanced
+  - [ ] 🔴 ASSERT a failure is reported to the user — **FAILED: nothing on screen at all** — no toast, no inline error, Submit still enabled, page unchanged. **This is the defect**
+  - [x] ASSERT the BAC receives the overridden supplier with a populated Stage 3 — **PASSES**: Recommended Supplier **Telkom**, Motivation + BEC Report displayed, Stage 3 fully populated, no "No Data" (verified read-only as MoshadiM)
+
+---
+
+### TC-35 — BEC Member: Calibrate Scores and Finalise Scoring (**ADO #60824**) — ⚠️ PARTIAL 2026-08-03: most steps pass; Edit My Score UNCONFIRMED (site went down)
+
+*As a BEC **Member** (not the Secretariat), open the tender from BID Management → Evaluate Tenders after
+calibration has begun, review other members' scores, adjust your own via **Edit My Score**, and finalise.*
+
+> **🔴 COVERAGE GAP FOUND BY THE 2026-08-03 CONSISTENCY PASS — this ADO case had NO test case in this plan.**
+> The suite (#57473) holds **18** cases; this plan covered **16**. The two missing were **#60824** (this one) and
+> **#57474** *"LogIn to the system"* (deliberately folded into every TC's step 1 — no separate TC needed).
+>
+> **Why it was missed:** TC-10/TC-11 cover the **BEC Secretariat's** inbox tasks (*Begin Calibration*, *Monitor
+> calibration and finalise scoring*), so calibration *looked* covered. But **#60815 says Begin Calibration
+> "should send items to **both** BEC Secretariate to monitor calibration of scores **and BEC Members to calibrate
+> scores**"** — a **parallel branch** that has never been driven. Every run to date has passed *through*
+> calibration without a member ever adjusting a score.
+>
+> **Navigation is different from TC-10/TC-11:** not the Inbox but **BID Management → Evaluate Tenders**, then
+> **double-click** the item (the case also documents a *Calibrate scores* menu item under BID Management).
+>
+> ⚠️ Note the ADO title typos: *"Moniter"* (#60822) and *"Finilise"* (#60824).
+
+- **Type:** Happy path (ADO-documented, previously uncovered)
+- **Preconditions:** a tender where **Begin Calibration** has been clicked (TC-10 done), signed in as one of the
+  BEC **Members** who scored it — e.g. Nelly Tears / Nkosinathi Sibiya / Thabitha Modula.
+- **Steps:**
+  1. NAVIGATE to `/login` and sign in as a BEC **Member**
+  2. EXPAND **BID Management** → ASSERT it shows **Evaluate Tenders, Calibrate scores, Tender Type Documents,
+     Suppliers**
+  3. CLICK **Evaluate Tenders** → ASSERT the list of items to evaluate is shown
+  4. **DOUBLE-CLICK** the item to calibrate → ASSERT the *"BEC Member: Calibrate Score and Finalise Scoring"*
+     page opens
+  5. CLICK through the **Tender Details** and **Evaluation Criteria** tabs → ASSERT both are read-only
+  6. ASSERT the **Evaluator Score** table lets this member **view other BEC Members' scores** for each supplier
+  7. CLICK the **Supplier link** → ASSERT a dialog opens allowing the member to view/edit their own captured score
+  8. CLICK **Edit My Score** → ASSERT the *Edit My Score* dialog opens
+  9. CLICK the **edit icon** → ASSERT **Points Awarded** and **Comments** become editable
+  10. ADJUST the points, then CLICK **Finalise Scoring** → ASSERT the adjusted score is saved and finalised
+  11. CLICK **Close** → ASSERT the dialog closes
+- **Expected result:** A BEC Member can see other members' scores, revise their own score with a comment during
+  calibration, and finalise it.
+> **🔴 FIRST EVER RUN 2026-08-03** as BEC Member **Nelly / 123qwe** on **REF2026-0939** (untouched). Most of the
+> case passes — the menu, the page, the tabs, and crucially *"the BEC member should be able to view the scores for
+> Suppliers from other BEC Members"* (columns per evaluator: Nkosinathi 90 / Thabitha 92 / Nelly 88 on A & A, plus
+> an **Evaluator Scores** panel with Average and Above Minimum).
+>
+> ⚠️ **Clicking *Edit My Score* opened a COMPLETELY EMPTY dialog** — `.ant-modal-body` innerText length **0**, zero
+> inputs, no edit icon, no Save; unchanged after 3 s. Console showed its form config failing to load:
+> `FormConfiguration/GetByName?name=`**`tender-wf-edit-calibration-score`** → blocked at preflight →
+> `net::ERR_FAILED`.
+>
+> **⚠️ NOT CONFIRMED AS A DEFECT.** Minutes later the QA site refused logins for **every** user and then went
+> **fully down**; one of my own navigations had already timed out at 60 s beforehand. A preflight failure is exactly
+> what a degraded gateway produces. **Retest required before this is reported.**
+> **Environment-independent check that would settle it:** does a form named **`tender-wf-edit-calibration-score`**
+> exist and is it published under *Configurations → Forms*? If not, it is a real defect regardless of site health.
+> Bug: [`bugs/2026-08-03-bec-member-edit-my-score-dialog-empty.md`](../../test-reports/bugs/2026-08-03-bec-member-edit-my-score-dialog-empty.md)
+>
+> **Deviations from the case:** the list uses **single-click anchors**, not the documented double-click; the button
+> reads **"Finalise My Scoring"** not "Finilise Scoring"; and a dedicated **Calibrate Scores** page
+> (`tenders-to-finalise-score v8`) is the natural entry point rather than *Evaluate Tenders*.
+
+- **Assertions:**
+  - [x] ASSERT the BID Management menu exposes Evaluate Tenders / Calibrate Scores / TenderType Documents / Suppliers — **PASSES**, exactly as documented
+  - [x] ASSERT (BLOCKING) the Calibrate-Score page opens — **PASSES** (`bec-calibrate-score v11`; single click, not double)
+  - [x] ASSERT a member can view **other** members' scores per supplier — **PASSES**, per-evaluator columns plus the Evaluator Scores panel with Average / Above Minimum
+  - [ ] ⚠️ ASSERT **Edit My Score** allows adjusting Points Awarded + Comments — **INCONCLUSIVE: dialog rendered empty, but the site was degrading and went down minutes later. Retest required**
+  - [ ] ASSERT the adjustment persists and recomputes the Average / Above-Minimum flag — **BLOCKED**
+  - [ ] ASSERT a member can only edit **their own** score, not another member's *(authorisation — not in the case; blocked by the above)*
+  - [ ] ASSERT **Finalise My Scoring** completes the member's calibration — **NOT ATTEMPTED** (would finalise with no calibration possible)
 
 ---
 

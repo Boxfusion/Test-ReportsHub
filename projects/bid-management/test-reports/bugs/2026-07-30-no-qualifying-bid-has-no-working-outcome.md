@@ -1,4 +1,17 @@
-# BUG: When NO supplier meets the functionality minimum, the only procedurally correct outcome ("Bid is non-responsive") is dead
+# ⚪ CLOSED: "Bid is non-responsive" is NOT dead — it works and terminates the tender
+
+> **⚠️ TITLE CORRECTED 2026-08-03.** This bug was filed as *"the only procedurally correct outcome (Bid is
+> non-responsive) is **dead**"* and rated **High**. **That premise is false and was disproved on 2026-08-03**
+> (TC-26, REF2026-0872): the decision commits — `Tender/CaptureCancellationOutcome` 200 →
+> `UserTaskComplete` 200 — and terminates the tender to `CANCELLED`. The test lead re-confirmed it manually on
+> REF2026-1128 the same day.
+>
+> **Closed. What survives has moved to its own docs:** the reason is not enforced
+> (`2026-08-03-bid-non-responsive-unenforced-and-indistinguishable-from-cancel.md`, violates ADO #60835 step 24),
+> and the picker's ×10 duplication plus the silent 500
+> (`2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md`).
+>
+> Kept for the investigation trail only — **do not report this as an open defect.**
 
 > **Scope correction 2026-07-30, then FULLY RESOLVED the same evening.** An earlier version said the tender was
 > "stuck with no working way out". **That overstated it** — and all three decisions have now been driven to a
@@ -19,7 +32,7 @@
 | **Logged** | 2026-07-30 |
 | **Project** | PD Bid Management (`projects/bid-management`) |
 | **App / Env** | Supply Chain Management Admin Portal — **QA** (`https://pd-supplychainmanagement-adminportal-qa.shesha.app`) |
-| **Severity** | **High** — the appropriate outcome for a non-responsive tender cannot be taken; the remaining routes are improper ones |
+| **Severity** | ~~High~~ → ⚪ **CLOSED, not a defect** (2026-08-03). The premise — that the correct outcome was unavailable — is disproved |
 | **Reproducibility** | 1 chain, driven end to end (TC-01 → TC-12 stage) |
 | **Stage / Form** | BEC: Finalise recommendation — `tender-wf-finaliserecommendation-details` |
 | **Role** | BEC Secretariat — **ThabisoM / 123qwe** |
@@ -141,15 +154,21 @@ dropdown offers a failed supplier ten times; *Approve Recommendation* enables Su
    **The defect that survives is narrower but real: it fails with a raw 500 and tells the user nothing.**
    Invalid input should produce a validation message, not a silent server error.
 
-**✅ RETEST DONE the same evening on a fresh below-minimum chain (REF2026-1133) — and it found something worse.**
-Typing to search revealed that when no bidder qualifies, the picker **falls back to the entire supplier master
-list** (every row ×10): `Telkom`, `BOXFUSION` **and** `HOLDINGS` → *PHINGOSHE HOLDINGS*, a company that never
-bid, all offered. Selecting the non-bidder **committed successfully** (`RfxEvaluation/Crud/Update` 200,
-`UserTaskComplete` 200) and advanced the tender to the BAC recommending it.
-**Logged separately as Critical:**
-[`bugs/2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md`](2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md).
-That also explains the 500 here: A & A **has** an evaluation row on the tender so the write hit a constraint,
-whereas a non-bidder has none and goes through — **backwards from what it should be.**
+**✅ RETEST DONE the same evening on a fresh below-minimum chain (REF2026-1133).** Typing to search revealed that
+when no bidder qualifies, the picker offers **the entire supplier master list** (every row ×10): `Telkom`,
+`BOXFUSION` **and** `HOLDINGS` → *PHINGOSHE HOLDINGS*, a company that did not bid, all offered. Selecting it
+**committed successfully** (`RfxEvaluation/Crud/Update` 200, `UserTaskComplete` 200) and advanced the tender to
+the BAC recommending it; TC-13→TC-16 then drove it to `AWARDED`.
+
+> **⚠️ Re-scoped 2026-08-03 — test lead ruling.** That was first logged Critical. **Reaching beyond the
+> tender's respondents when no bid qualifies is BY DESIGN**, so the award was correct and the Critical claim is
+> **withdrawn**. Two defects survive in that picker: the **×10** duplication, and the **silent 500** on an
+> already-evaluated bidder — see
+> [`bugs/2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md`](2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md).
+
+That also explains the 500 here: A & A **has** an evaluation row on the tender so the write hits a constraint,
+whereas a supplier with no response on the tender has none and goes through. Under the ruling the pass-through
+is expected; **the defect is that the constraint surfaces as a raw silent 500 instead of a validation message.**
 
 **Established (2026-07-30 evening):** *Approve Recommendation* commits and advances a blank recommendation to
 the BAC; *Bid is non-responsive* is dead on the metadata 404.

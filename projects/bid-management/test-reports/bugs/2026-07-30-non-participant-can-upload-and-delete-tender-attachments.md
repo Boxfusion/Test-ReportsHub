@@ -1,5 +1,16 @@
 # BUG: The "Requested action is not available" read-only view still lets ANY authenticated user upload and delete tender attachments
 
+> **⚠️ Checked against the test cases, 2026-08-03 — and deliberately KEPT at High.** No ADO case in suite #57473
+> covers direct-URL authorisation, so there is no documented expectation to cite. **This one is still reported as a
+> defect**, because an unauthorised, unaudited write to procurement evidence is a **security property**, not a
+> business-rule interpretation: `PUT /api/StoredFile` → **200** and `DELETE /api/StoredFile/Delete` → **200** for a
+> user with **no task on the tender**, persisting across reload. That is wrong whether or not a case mentions it.
+>
+> Flagged for the test lead: if the standing rule (nothing outside the test cases) is meant to apply here too, say
+> so and it will be demoted — but the recommendation is to keep it **and add a case**.
+>
+> ⚠️ **Not re-verified since 2026-07-30** (2/2 then: upload, then delete, as MoshadiM on REF2026-2561).
+
 | Field | Value |
 |---|---|
 | **Logged** | 2026-07-30 |

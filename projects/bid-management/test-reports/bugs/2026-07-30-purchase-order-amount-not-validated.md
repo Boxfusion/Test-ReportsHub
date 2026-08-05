@@ -1,11 +1,24 @@
-# BUG: Purchase Order Amount is completely unvalidated — a negative amount and a 10× over-commitment both award the tender
+# BUG: A NEGATIVE Purchase Order Amount awards the tender (over-commitment split out as an undocumented rule)
+
+> **⚠️ Re-based against the test case, 2026-08-03.** **ADO #60848 (Capture Order Details) specifies no validation
+> of the amount** — its only relevant expectation is *"If the mandatory field under order details panel are not
+> completed → The submit button should be inactive"*. So this bug has been split:
+>
+> - 🔴 **A negative amount (−5 000) accepted → `AWARDED`** — kept as a defect at **Medium**. A negative monetary
+>   value is invalid under any specification, documented or not; this needs no requirement to justify it.
+> - ⚪ **300 000 against a R 30 000 tender (10×) accepted → `AWARDED`** — **an over-commitment tolerance is a
+>   business rule that is not documented anywhere.** Recorded as an observation for the BA, **not reported as a
+>   defect**, per the standing rule that anything absent from the test cases is absent from the requirements.
+>
+> ⚠️ **Not re-verified since 2026-07-30** — both observations are from that date (2 tenders, 2 values). The tenders
+> involved were deliberately consumed, so a retest needs a fresh chain to TC-16.
 
 | Field | Value |
 |---|---|
 | **Logged** | 2026-07-30 |
 | **Project** | PD Bid Management (`projects/bid-management`) |
 | **App / Env** | Supply Chain Management Admin Portal — **QA** (`https://pd-supplychainmanagement-adminportal-qa.shesha.app`) |
-| **Severity** | **High** — the final financial commitment of the tender is not checked against anything |
+| **Severity** | ~~High~~ → **split 2026-08-03 after checking ADO #60848** (see banner): a **negative** amount is objectively invalid → **Medium**; the 10× over-commitment is an **undocumented business rule** → observation, not a defect |
 | **Reproducibility** | **2/2 — two different invalid values, two different tenders, both accepted** |
 | **Stage / Form** | Capture Order Details — `Shesha.SupplyChainManagement/tender-wf-captureorder-details v20` |
 | **Role** | **TumisangM / 123qwe** |

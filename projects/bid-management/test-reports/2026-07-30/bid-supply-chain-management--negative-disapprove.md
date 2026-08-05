@@ -1,10 +1,13 @@
 # Report: BID-SCM — Review and Approve: Disapprove (NEGATIVE, 80/20)
 **Date:** 2026-07-30 16:45 SAST
 **Variant:** 80/20
-**Plan:** test-plans/tender-process/bid-supply-chain-management.md (TC-20)
+**Plan:** test-plans/tender-process/bid-supply-chain-management.md
+**Cases:** TC-20
 **Spec:** not encoded — see *Automation* below
 **Execution Mode:** live via Playwright MCP (TC-01 automated to create the test data)
-**Result:** 🔴 **BLOCKED — defect found**
+**Result:** BLOCKED — 🔴 **defect found.** ⚠️ Superseded by the 2026-08-03 retest
+(`bid-supply-chain-management--tc-20-disapprove-retest.md`): Disapprove **works**, and the hang recorded here was
+never reproduced. Kept as the historical record of this run.
 **Tenders:** **REF2026-1106** and **REF2026-1110** (both created by automated TC-01 runs, 80/20)
 
 ## Summary
