@@ -81,7 +81,17 @@ worth checking the datasource expression on the *New Recommended Supplier* compo
 
 **Expected:** each supplier appears exactly once.
 
-### 2. 🔴 An already-evaluated bidder gives a silent 500, not a validation message (OPEN — Medium)
+### 2. 🔴 The 500 is WIDER than described here — see the dedicated bug (OPEN — **High**)
+
+> **⚠️ Superseded 2026-08-03 by TC-34.** The explanation below — that the 500 happens because an
+> *already-evaluated* supplier hits a constraint — **is wrong**. **Telkom**, a qualifying bidder that was *not*
+> the current recommendation (i.e. exactly what ADO #60835 step 19 says the picker should offer), **also 500s** on
+> REF2026-0901. So the write fails for **every supplier the picker legitimately offers**, and the only input ever
+> observed to succeed was the non-bidder.
+>
+> **Re-filed at High:** `2026-08-03-recommend-another-supplier-500-on-valid-input.md`. Read that one instead.
+
+### 2b. Original (superseded) framing — an already-evaluated bidder gives a silent 500
 
 Selecting **A & A Stationers** — a supplier that already has a response/evaluation row on the tender — and
 submitting produced:

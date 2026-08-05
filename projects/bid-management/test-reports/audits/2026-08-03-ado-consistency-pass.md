@@ -79,7 +79,7 @@ outright violation.
 
 > ⚪ **A second "deviation" listed here was withdrawn the same day.** I had reported that the **Supporting
 > Document** was not enforced despite #57475 calling it mandatory. **It is enforced** — Next stays disabled until
-> the attachment is added (test lead). My network log agrees: two documents were already uploaded before I observed
+> the attachment is added (manual verification). My network log agrees: two documents were already uploaded before I observed
 > Next enable, so the without-attachment case was never tested. **When a button changes state, only the last thing
 > changed is evidenced.** That makes five findings withdrawn today, four of them for the same root cause:
 > asserting a rule without a control.

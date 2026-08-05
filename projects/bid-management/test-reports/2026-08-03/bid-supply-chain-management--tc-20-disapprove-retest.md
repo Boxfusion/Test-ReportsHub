@@ -16,11 +16,15 @@
 > successful runs too), tender data/age, form version, and view mode. Leading unproven hypothesis: the degraded
 > network in that window. The bug doc stays **OPEN as not-reproducible**.
 **Date:** 2026-08-03 09:24 UTC
-**Plan:** test-plans/tender-process/bid-supply-chain-management.md (TC-20)
+**Plan:** test-plans/tender-process/bid-supply-chain-management.md
+**Cases:** TC-20
 **Spec:** *not encoded* — TC-20 is deliberately kept out of the spec so a blocked decision cannot turn the
 demo-ready happy-path suite red. Driven live via Playwright MCP.
 **Execution Mode:** ai-driven (MCP browser, headless)
-**Result:** BLOCKED
+**Result:** PARTIAL — **Disapprove WORKS** (see the outcome-reversal banner above; passes 1–2 concluded BLOCKED and
+are superseded by passes 3–4, verified in **both** view modes). One sub-assertion still fails: the initiator
+cannot see the disapproval reason. The original 5/5 hang was never reproduced and its bug doc stays **OPEN as
+not-reproducible**.
 **Duration:** ~110s (pass 1) + ~150s (pass 2, incl. fresh-tender creation)
 **Tenders:** **REF2026-1106** (parked 2026-07-30) and **REF2026-0843** (created fresh 2026-08-03)
 **Role:** Reviewer — MhlotiM / 123qwe, view mode **Latest**

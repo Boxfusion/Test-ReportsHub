@@ -1,10 +1,12 @@
 # Report: BID-SCM — Non-Compliant, BAC override, final-approval gap, authorisation (NEGATIVE)
 **Date:** 2026-07-30 17:15 SAST
 **Variants:** 90/10 (REF2026-0890) · 80/20 (REF2026-1053, REF2026-1110)
-**Plan:** test-plans/tender-process/bid-supply-chain-management.md (TC-21, TC-22, TC-23, TC-24)
+**Plan:** test-plans/tender-process/bid-supply-chain-management.md
+**Cases:** TC-21, TC-22, TC-23, TC-24
 **Spec:** not encoded — see *Automation*
 **Execution Mode:** live via Playwright MCP
-**Result:** MIXED — 2 areas correct, **1 new High bug**, **1 design gap**, **1 existing blocker downgraded**
+**Result:** PARTIAL — MIXED: 2 areas correct, **1 new High bug**, **1 design gap**, **1 existing blocker
+downgraded**
 **Tenders:** all **reused** — no new tenders created for this session
 
 ## Summary

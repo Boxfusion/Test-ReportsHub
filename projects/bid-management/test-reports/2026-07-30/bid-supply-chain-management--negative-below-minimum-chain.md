@@ -1,11 +1,13 @@
 # Report: BID-SCM — no supplier meets the functionality minimum (NEGATIVE, 80/20)
 **Date:** 2026-07-30 18:05 SAST
 **Variant:** 80/20
-**Plan:** test-plans/tender-process/bid-supply-chain-management.md (**TC-26**)
+**Plan:** test-plans/tender-process/bid-supply-chain-management.md
+**Cases:** TC-26
 **Spec:** TC-01→TC-09 automated with the new `FUNC_SCORE_MODE=below` gate; TC-10→TC-12 driven live
-**Result:** ~~🔴 CRITICAL — a non-bidder was recommended and AWARDED the tender end to end~~ → **RETRACTED
-2026-08-03: the module test lead ruled that recommending a supplier which did not bid is BY DESIGN when no bid
-qualifies.** Re-scoped to **🔴 2 defects** in that picker (each row ×10; already-evaluated bidder → silent 500)
+**Result:** PARTIAL — ~~🔴 CRITICAL — a non-bidder was recommended and AWARDED the tender end to end~~ →
+**RETRACTED 2026-08-03: the module test lead ruled that recommending a supplier which did not bid is BY DESIGN
+when no bid qualifies.** Re-scoped to **🔴 2 defects** in that picker (each row ×10; already-evaluated bidder →
+silent 500)
 plus the separately-standing TC-26 defects. See the addendum and
 `bugs/2026-07-30-non-bidder-can-be-recommended-when-no-bid-qualifies.md`.
 **Tender:** **REF2026-1122** (purpose-built chain — the one new tender this session, unavoidable for this test)

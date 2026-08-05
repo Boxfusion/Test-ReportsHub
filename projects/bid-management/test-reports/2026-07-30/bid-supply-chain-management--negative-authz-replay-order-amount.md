@@ -1,10 +1,11 @@
 # Report: BID-SCM — replay, non-participant writes, order-amount validation (NEGATIVE)
 **Date:** 2026-07-30 17:45 SAST
 **Variants:** 80/20 (REF2026-1053, 2573) · 90/10 (REF2026-0890→2561, 0944)
-**Plan:** test-plans/tender-process/bid-supply-chain-management.md (TC-24 extended, TC-25)
+**Plan:** test-plans/tender-process/bid-supply-chain-management.md
+**Cases:** TC-24 extended, TC-25
 **Spec:** not encoded
 **Execution Mode:** live via Playwright MCP
-**Result:** MIXED — replay defence **holds**; **2 new High bugs** (non-participant writes, order amount)
+**Result:** PARTIAL — MIXED: replay defence **holds**; **2 new High bugs** (non-participant writes, order amount)
 **Tenders:** all **reused** — no new tenders created
 
 ## Summary

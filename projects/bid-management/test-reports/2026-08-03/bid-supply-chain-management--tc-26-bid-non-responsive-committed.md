@@ -1,7 +1,8 @@
 # Report: TC-26 — "Bid is non-responsive" committed on a no-qualifying-bid tender
 **Date:** 2026-08-03 12:26 UTC
 **Variant:** 80/20, `FUNC_SCORE_MODE=below`
-**Plan:** test-plans/tender-process/bid-supply-chain-management.md (TC-26)
+**Plan:** test-plans/tender-process/bid-supply-chain-management.md
+**Cases:** TC-26
 **Spec:** chain built by the spec (TC-01 → TC-11); the decision itself driven live via Playwright MCP
 **Execution Mode:** hybrid (playwright-script chain + ai-driven decision)
 **Result:** PARTIAL — the decision **works**; 3 defects in how it works

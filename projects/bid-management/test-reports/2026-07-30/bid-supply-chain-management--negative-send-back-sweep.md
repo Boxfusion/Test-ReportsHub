@@ -1,7 +1,8 @@
 # Report: BID-SCM — Send-back sweep + BAC re-evaluation loop (NEGATIVE, 80/20)
 **Date:** 2026-07-30 16:35 SAST
 **Variant:** 80/20
-**Plan:** test-plans/tender-process/bid-supply-chain-management.md (TC-18, TC-19)
+**Plan:** test-plans/tender-process/bid-supply-chain-management.md
+**Cases:** TC-18, TC-19
 **Spec:** test-plans/tender-process/bid-supply-chain-management.spec.ts (`SEND_BACKS=` branches)
 **Execution Mode:** hybrid — mapped and driven live via Playwright MCP, then encoded as opt-in spec branches and re-run automated
 **Result:** PASSED

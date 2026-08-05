@@ -1,7 +1,7 @@
 {
   "displayName": "Bid Management",
   "appUrl": "https://pd-supplychainmanagement-adminportal-qa.shesha.app/login",
-  "environment": "QA Site",
+  "environment": "QA",
   "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
   "description": "Hybrid Markdown + Playwright test reports for the Supply Chain Management (Bid Management) Admin Portal."
 }

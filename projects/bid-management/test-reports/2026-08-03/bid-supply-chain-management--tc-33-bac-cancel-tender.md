@@ -1,15 +1,16 @@
 # Report: BID-SCM — TC-33 BAC Cancel Tender (NEGATIVE, terminal)
 
 **Date:** 2026-08-03
-**Plan:** test-plans/tender-process/bid-supply-chain-management.md (**TC-33**)
+**Plan:** test-plans/tender-process/bid-supply-chain-management.md
+**Cases:** TC-33
 **Method:** driven live via Playwright MCP
 **Environment:** QA — `https://pd-supplychainmanagement-adminportal-qa.shesha.app`
 **Login:** MoshadiM / 123qwe (BAC adjudicator) · view mode **Latest**
 **Forms:** `tender-wf-captureoutcomeofthebac-finalrecommendation v27` → dialog `tender-reason for disapproval v8`
 **Tender:** **REF2026-2395** — CONSUMED, now terminal
 **ADO:** **#60836** *Capture Outcome of the BAC*, steps **30–33** (the plan wrongly said "no ADO case")
-**Result:** ✅ the decision works · 🔴 **2 defects, both against ADO #60836** · ⚪ **2 of my earlier claims
-withdrawn as contrary to the spec**
+**Result:** PARTIAL — ✅ the decision works · 🔴 **2 defects, both against ADO #60836** · ⚪ **2 of my earlier
+claims withdrawn as contrary to the spec**
 
 ## Fixture change — REF2026-1122 was gone
 

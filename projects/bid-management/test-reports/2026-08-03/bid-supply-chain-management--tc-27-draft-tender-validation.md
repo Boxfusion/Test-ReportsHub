@@ -1,14 +1,18 @@
 # Report: BID-SCM — TC-27 Draft Tender field and business-rule validation (NEGATIVE)
 
 **Date:** 2026-08-03
-**Plan:** test-plans/tender-process/bid-supply-chain-management.md (**TC-27**)
+**Plan:** test-plans/tender-process/bid-supply-chain-management.md
+**Cases:** TC-27
 **Method:** driven live via Playwright MCP (no spec — this is a first-pass exploration)
 **Environment:** QA — `https://pd-supplychainmanagement-adminportal-qa.shesha.app`
 **Login:** Maanda-awe / 123qwe · view mode **Latest**
 **Form:** `Shesha.SupplyChainManagement/capture-tender-details v46`
 **Tender:** **REF2026-0890** — throwaway draft, never submitted, left with a valid date pair
-**Result:** ✅ **NO DEFECTS. Every guard on this form is correctly enforced.** 11 guards verified. Two claims I
-raised during this TC were withdrawn the same day — both were my testing errors, not app faults.
+**Result:** PARTIAL — **11 of 14 probes correctly enforced, 3 defects.** Every *date and format* guard on this
+form is correctly enforced; the defects are in validation *feedback*: probe 11 (Next silently disabled on a valid
+form), probe 12 (row silently rejected, the real message went only to the console) and probe 13 (Evaluation
+Criteria + Briefing Session Requirement gate Next but are not marked `*`). Two claims I raised during this TC
+were withdrawn the same day — both were my testing errors, not app faults.
 
 ## Why this TC exists
 
@@ -41,14 +45,14 @@ here derives from the form's own `*` markers and ordinary business sense.
 (`PUT Rfx/Crud/Update` → 200) and surviving a reload. It is withdrawn — the app is correct and the fault was in
 how I drove it.**
 
-**The precise cause (narrowed by two rounds of the test lead reproducing it manually):**
+**The precise cause (narrowed by two rounds of the manual re-testing):**
 
 1. I first set a **valid** pair by typing — publication 05/08, closing 06/08.
 2. I then **cleared the publication field with Playwright's `fill('')`**, which writes the input value directly and
    leaves AntD's React state stale.
 3. Only then did I type 10/08 into the emptied field.
 
-**It is step 2 that manufactured the invalid state, not the typing.** The test lead re-tested *typing with Enter*
+**It is step 2 that manufactured the invalid state, not the typing.** A manual re-test of *typing with Enter*
 using the same dates and times and the app **correctly refused**: the closing date does not save and Next stays
 greyed out. So neither the picker path nor the typing path allows this — it took a programmatic field clear.
 
@@ -62,7 +66,7 @@ greyed out. So neither the picker path nor the typing path allows this — it to
 
 ![Publication 12/08/2026 with closing 20/08/2026 — valid pair accepted](assets/tc-27-date-order-correctly-enforced.png)
 
-The test lead reproduced the correct behaviour manually — *"the next button is disabled and the dates before the
+Manual verification reproduced the correct behaviour — *"the next button is disabled and the dates before the
 publication date are greyed out"* — and asked the question that found my error: **did I click OK after selecting
 the date and time?** I had not. A second manual round then ruled out typing as the cause too.
 

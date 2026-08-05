@@ -72,7 +72,7 @@ requirement anywhere, and the test cases explicitly ask for the opposite. Closed
 
 So the decision named *Cancel Tender* is the only one that fails to reach a cancelled state. Both call the same
 endpoint (`CaptureCancellationOutcome`) yet land on different statuses. **That** is the bug — see
-`test-reports/2026-08-03/tc-33-bac-cancel-tender.md`.
+`test-reports/2026-08-03/bid-supply-chain-management--tc-33-bac-cancel-tender.md`.
 
 **Expected:** a distinct terminal status (e.g. `Non-Responsive`), or at minimum a recorded, readable
 cancellation reason category that distinguishes the two paths.

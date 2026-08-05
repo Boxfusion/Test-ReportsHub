@@ -50,7 +50,7 @@
   12. SELECT a **date + time** for Briefing Session Start Time, Bid publication Date and Bid closing Date (via the picker panel + OK). **All three must be FUTURE dates, computed relative to today — never hardcoded.** The AntD picker renders past days as `.ant-picker-cell-disabled` and a disabled cell silently swallows the click, so a hardcoded date rots into a 15 s click timeout (this broke the 2026-07-29 run). Keep the ordering briefing < publication < closing; the spec uses today +3 / +4 / +30.
   13. ATTACH the **mandatory** Supporting Document from `test-data/` — per **ADO #57475** (*"A user should be able
       to attach a **mandatory** 'Supporting Document'"*). **It is enforced: Next stays disabled until the
-      attachment is added** (confirmed by the test lead 2026-08-03). A TC-27 note briefly claimed otherwise —
+      attachment is added** (confirmed by the test lead, manual verification, 2026-08-03). A TC-27 note briefly claimed otherwise —
       that was a sequencing error on my part and is retracted.
   14. ASSERT the Next button is enabled once all mandatory fields are populated; CLICK Next
   15. STEP 2 (Tender Documents): ATTACH the mandatory Bid document from `test-data/`; CLICK Next
@@ -1214,7 +1214,7 @@
   - [ ] 🔴 ASSERT the non-responsiveness reason is mandatory — **FAILED: committed with an EMPTY reason (Disapprove, same form, enforces it).**
   - [ ] 🔴 ASSERT the mandatory BEC Report is enforced before the decision commits — **FAILED: dialog Submit bypasses the page's disabled Submit Recommendation.**
   - [ ] 🔴 ASSERT **Recommend another Supplier** lists each supplier once — **FAILED: every match appears ×10**
-  - [x] ⚪ ~~ASSERT the picker is scoped to this tender's qualifying bidders~~ — **WITHDRAWN (test lead, 2026-08-03): on a below-minimum tender the picker is *meant* to offer suppliers beyond the respondents.** It returns the entire supplier master (failed bidders and non-respondents); on a normal tender it is scoped to qualifying bidders. The difference is an open BA question, not a defect.
+  - [x] ⚪ ~~ASSERT the picker is scoped to this tender's qualifying bidders~~ — **WITHDRAWN (test lead, manual verification, 2026-08-03): on a below-minimum tender the picker is *meant* to offer suppliers beyond the respondents.** It returns the entire supplier master (failed bidders and non-respondents); on a normal tender it is scoped to qualifying bidders. The difference is an open BA question, not a defect.
   - [x] ⚪ ~~ASSERT a **non-bidder** cannot be recommended~~ — **WITHDRAWN: by design.** PHINGOSHE HOLDINGS committed and advanced — correct behaviour.
   - [x] ⚪ ~~ASSERT a non-bidder cannot be **AWARDED**~~ — **WITHDRAWN: by design.** REF2026-1133 was driven TC-13→TC-16 (4/4) to `AWARDED` with every real bidder below the minimum; **the stages were correct not to object.**
   - [ ] 🔴 ASSERT an invalid selection gives a validation message — **FAILED: an already-evaluated bidder gives a raw silent 500**
@@ -1245,7 +1245,7 @@ formats, the publication/closing date ordering, and the Technical Evaluation sco
 >   greys out everything up to the publication date, and changing the publication date clears an invalid closing
 >   date. **No defect here** — my earlier claim came from typing instead of using the picker.
 > - *"A user should be able to attach a **mandatory** 'Supporting Document'"* → ✅ **enforced. Next stays disabled
->   until the attachment is added** (test lead, 2026-08-03). ⚠️ I twice recorded the opposite today — first as
+>   until the attachment is added** (test lead, manual verification, 2026-08-03). ⚠️ I twice recorded the opposite today — first as
 >   "optional", then as an app-vs-spec deviation. **Both were wrong:** two supporting documents had already been
 >   uploaded (`StoredFile/Upload` 200 ×2) before I observed Next enable, so I never actually tested the
 >   without-attachment case. Retracted.
@@ -1432,7 +1432,7 @@ proceed.*
 
 ---
 
-### TC-32 — Compliance-row write access for a non-participant (NEGATIVE) — no ADO case
+### TC-32 — Compliance-row write access for a non-participant (NEGATIVE) — no ADO case — ✅ UI level PASSES (2026-08-03)
 
 *Extend TC-24's authorisation finding: attachments proved writable by a user with no task on the tender — check
 whether the compliance rows are too.*
@@ -1442,8 +1442,27 @@ whether the compliance rows are too.*
 > **200** for a non-participant. If the same gap exists on compliance data, a non-participant could alter an
 > evaluation outcome rather than just a file.
 
+> **✅ RUN 2026-08-03 (UI only) on REF2026-2561 — compliance data IS protected in the UI.** As **MoshadiM** (no task
+> on the tender), the fallback serves the read-only **`tender-wf-details-view v27`**, not the Verify Compliance
+> form. Rows offer a magnifier only; the *Supplier compliance* dialog
+> (`response-wf-reviewsuppliercompliance-dialog-details v14`) renders with **every control `disabled`** — 5 file
+> inputs and both status radios — and **Close as its only button**. Nothing was modified.
+>
+> 🔴 **The TC-24 document gap is still on the same page:** the Procurement Plan **"(press to upload)"** button is
+> live and clickable. So the fallback applies read-only treatment to compliance components and **not** to document
+> components — a narrow, actionable pointer for dev.
+>
+> ⚠️ **Step 3 (direct CRUD write) NOT RUN** — deferred to keep the run UI-only. So *"the UI does
+> not expose the write"* is proven; *"the server would refuse it"* is **not**. TC-24's attachment hole only showed
+> up at the API level, so do not report this as "compliance is secure" until step 3 is done.
+> Report: `test-reports/2026-08-03/bid-supply-chain-management--tc-32-compliance-row-write-access.md`
+>
+> **Fixture verified 2026-08-03:** REF2026-2561 is still at *Verify Compliance* in **TumisangM's** inbox —
+> `workflow-action?id=2cadb802-9005-49b1-abbd-9fdc15404c2c&todoid=66f9d5e0-67ec-4c06-be24-2fff3a5a48a0`.
+> ⚠️ **REF numbers are reused** — two different tenders share REF2026-0890. **Pin by workflow instance GUID.**
+
 - **Type:** Negative / authorisation
-- **Preconditions:** **REF2026-2561** is parked at *Verify Compliance*.
+- **Preconditions:** **REF2026-2561** is parked at *Verify Compliance* (verified 2026-08-03).
 - **Steps:**
   1. As a user with **no task** on the tender, open its `workflow-action?id=…&todoid=…` (the read-only fallback)
   2. ATTEMPT to change a supplier's **Is Compliant?** value and save → RECORD the HTTP result
@@ -1452,9 +1471,10 @@ whether the compliance rows are too.*
 - **Expected result:** Compliance rows are writable only by the assignee; a non-participant's write is rejected
   server-side, not merely hidden in the UI.
 - **Assertions:**
-  - [ ] ASSERT a non-participant cannot change Is Compliant? via the UI
-  - [ ] ASSERT the server rejects the write directly
-  - [ ] ASSERT nothing persists for the legitimate assignee
+  - [x] ASSERT a non-participant cannot change Is Compliant? via the UI — **PASSES**: every control in the compliance dialog is `disabled`, and Close is the only button
+  - [ ] ASSERT the server rejects the write directly — **NOT TESTED** (direct-endpoint probe deferred 2026-08-03)
+  - [x] ASSERT nothing persists for the legitimate assignee — **PASSES trivially** (nothing could be changed)
+  - [x] ASSERT the TC-24 document gap on the same fallback — **CONFIRMED still present**: the Procurement Plan upload control is live for a non-participant
 
 ---
 
@@ -1484,7 +1504,7 @@ non-responsive outcome.*
   5. ASSERT the cancellation reason is visible on the tender afterwards
 > **✅ DRIVEN 2026-08-03 on REF2026-2395** (not 1122 — **1122 had already left the BAC inbox**; 2395 was an
 > abandoned June automated run of ours at the same stage, identity confirmed on the page header before any
-> action). Report: `test-reports/2026-08-03/tc-33-bac-cancel-tender.md`.
+> action). Report: `test-reports/2026-08-03/bid-supply-chain-management--tc-33-bac-cancel-tender.md`.
 >
 > **⚠️ This TC is documented in ADO after all** — #60836 steps **30–33** specify the dialog, that
 > *"the submit button should be **inactive** until the reason has been captured"*, that the reason be displayed,
@@ -1518,39 +1538,64 @@ non-responsive outcome.*
 
 ---
 
-### TC-34 — Recommend another Supplier on a qualifying tender (NEGATIVE) — no ADO case
+### TC-34 — Recommend another Supplier on a qualifying tender — **ADO #60835 steps 18–21** — 🔴 RUN 2026-08-03: silent 500 on a VALID override
 
 *Re-run the picker properly on a tender where a bidder **did** qualify — the one variant never validly tested.*
 
 > **Why it is still open:** the 2026-07-30 attempt used an **already-evaluated** bidder (invalid input → silent
-> 500), and the below-minimum run is now known to be **by design** (test lead, 2026-08-03). What has never been
+> 500), and the below-minimum run is now known to be **by design** (test lead, manual verification, 2026-08-03). What has never been
 > tested is a **valid** alternative recommendation on a **normal** tender.
 >
-> **Fixture:** ⚠️ ~~REF2026-1128~~ was **CONSUMED on 2026-08-03** (spent confirming the non-responsive
+> **Fixture:** ⚠️ ~~REF2026-1128~~ was **CONSUMED on 2026-08-03** (spent on the manual non-responsive
 > reason-enforcement defect; now `CANCELLED`). **Use REF2026-0901** instead — a fresh 80/20 chain built the same
 > day (TC-01→TC-11, 11/11 passed), parked **unactioned** at *BEC: Finalise recommendation* with three qualifying
 > suppliers. On 1128 the picker returned exactly **1** result for `Telkom`, so type-to-search for a qualifying
 > bidder that is not the current recommendation.
 
-- **Type:** Negative / business rule
-- **Preconditions:** REF2026-1128 at *BEC: Finalise recommendation*, as **ThabisoM**.
+> **✅🔴 RUN 2026-08-03 on REF2026-0901 — the decision WORKS; the defect is a silent failure on the way there.**
+> The picker is correct on every count (steps 18–20, 25 all pass). **My submit hit
+> `PUT RfxEvaluation/Crud/Update` → 500 with NOTHING shown on screen**; a manual resubmit was then made and it
+> **committed** — REF2026-0901 advanced to *Capture outcome from the BAC* with **Telkom** recorded, Motivation and
+> BEC Report displayed and **Stage 3 populated** (verified read-only as MoshadiM).
+>
+> ⚠️ **Two claims of mine retracted the same day:** *"this decision cannot be used at all"* and *"the only input
+> that succeeds is an invalid one"* — both wrong, disproved by the successful retry.
+>
+> 🔑 **ROOT CAUSE ISOLATED — it is the free-text LENGTH, not intermittency.** Controlled 3-attempt experiment on
+> **REF2026-0879**, same supplier, only the text length varied: **286-char BEC Report → 500**; **identical retry →
+> 500 again** (so not intermittent); **6-char BEC Report → committed and advanced**. Deterministic **4/4** long
+> failures, **2/2** short successes. **Probable limit: 255 chars on the BEC Report**
+> (`recommendationSupportingComments`) — it exceeded 255 in every failure while Motivation (235–236) did not.
+> **Standing rule: keep automated free text ≤ 100 chars in this form.**
+> Cf. [[dispatch-crud-append-accumulation]] — identical signature in Dispatch.
+> Bug: [`bugs/2026-08-03-recommend-another-supplier-500-on-valid-input.md`](../../test-reports/bugs/2026-08-03-recommend-another-supplier-500-on-valid-input.md)
+
+- **Type:** Negative / business rule (ADO-documented)
+- **Preconditions:** a tender at *BEC: Finalise recommendation* with qualifying bidders, as **ThabisoM**.
+  **REF2026-0901** — the submit failed, so it never advanced and is reusable.
 - **Steps:**
-  1. CLICK **Recommend another Supplier** and **type to search** `Telkom` (the picker is a server-filtered
-     search — never read the rendered list)
-  2. ASSERT Telkom appears **once**, not ×10
-  3. SELECT it, fill the mandatory **Motivation** and **BEC Report**, and SUBMIT
-  4. ASSERT (BLOCKING) the recommendation commits and advances, with **Telkom** as the recommended supplier
-  5. ASSERT the BAC then shows a populated Stage 3 and Telkom as the recommendation
+  1. CLICK **Recommend another Supplier** → ASSERT (step 18) **New Recommended Supplier** + **Motivation** appear
+  2. **Type to search** the current recommendation (`Stationers`) → ASSERT (step 19) **no results**
+  3. **Type to search** a qualifying bidder (`Telkom`) → ASSERT exactly **1** result, no duplication
+  4. **Type to search** a non-bidder (`Vodacom`) → ASSERT **no results**
+  5. SELECT the qualifying bidder, fill the mandatory **Motivation** and **BEC Report**, and SUBMIT
+  6. ASSERT (BLOCKING, step 21) the recommendation commits and advances with the new supplier
+  7. ASSERT the BAC then shows a populated Stage 3 and the overridden supplier
 - **Expected result:** On a normal tender the BEC can override the pre-populated recommendation to another
-  qualifying bidder, and it commits cleanly with each supplier listed once.
+  qualifying bidder, and it commits cleanly.
 - **Assertions:**
-  - [ ] ASSERT each match appears exactly once (the ×10 duplication is a known defect on below-minimum tenders)
-  - [ ] ASSERT (BLOCKING) a valid alternative recommendation commits
-  - [ ] ASSERT the BAC receives the overridden supplier with a populated Stage 3
+  - [x] ASSERT (step 18) both extra mandatory fields appear — **PASSES**
+  - [x] ASSERT (step 19) the current recommendation is excluded — **PASSES**: `Stationers` → "No data"
+  - [x] ASSERT (step 19) only suppliers that reached functionality scoring are listed — **PASSES**: `Vodacom` (non-bidder) → "No data" (manual verification). Datasource is `FlattenedCompliantResponse` filtered on `technicalEvaluationStatus == 1`, excluding the current supplier
+  - [x] ASSERT each match appears exactly once — **PASSES**: `Telkom` → 1 result. **The ×10 duplication does NOT occur on a qualifying tender** — it is specific to the below-minimum state
+  - [x] ASSERT Submit stays disabled until Motivation + BEC Report are filled — **PASSES**
+  - [x] ASSERT (BLOCKING, step 21) a valid alternative recommendation commits — **PASSES on retry.** First attempt returned `PUT RfxEvaluation/Crud/Update` → **500**; the resubmit committed and advanced
+  - [ ] 🔴 ASSERT a failure is reported to the user — **FAILED: nothing on screen at all** — no toast, no inline error, Submit still enabled, page unchanged. **This is the defect**
+  - [x] ASSERT the BAC receives the overridden supplier with a populated Stage 3 — **PASSES**: Recommended Supplier **Telkom**, Motivation + BEC Report displayed, Stage 3 fully populated, no "No Data" (verified read-only as MoshadiM)
 
 ---
 
-### TC-35 — BEC Member: Calibrate Scores and Finalise Scoring (**ADO #60824**) — ⬜ NEVER TESTED
+### TC-35 — BEC Member: Calibrate Scores and Finalise Scoring (**ADO #60824**) — ⚠️ PARTIAL 2026-08-03: most steps pass; Edit My Score UNCONFIRMED (site went down)
 
 *As a BEC **Member** (not the Secretariat), open the tender from BID Management → Evaluate Tenders after
 calibration has begun, review other members' scores, adjust your own via **Edit My Score**, and finalise.*
@@ -1589,14 +1634,35 @@ calibration has begun, review other members' scores, adjust your own via **Edit 
   11. CLICK **Close** → ASSERT the dialog closes
 - **Expected result:** A BEC Member can see other members' scores, revise their own score with a comment during
   calibration, and finalise it.
+> **🔴 FIRST EVER RUN 2026-08-03** as BEC Member **Nelly / 123qwe** on **REF2026-0939** (untouched). Most of the
+> case passes — the menu, the page, the tabs, and crucially *"the BEC member should be able to view the scores for
+> Suppliers from other BEC Members"* (columns per evaluator: Nkosinathi 90 / Thabitha 92 / Nelly 88 on A & A, plus
+> an **Evaluator Scores** panel with Average and Above Minimum).
+>
+> ⚠️ **Clicking *Edit My Score* opened a COMPLETELY EMPTY dialog** — `.ant-modal-body` innerText length **0**, zero
+> inputs, no edit icon, no Save; unchanged after 3 s. Console showed its form config failing to load:
+> `FormConfiguration/GetByName?name=`**`tender-wf-edit-calibration-score`** → blocked at preflight →
+> `net::ERR_FAILED`.
+>
+> **⚠️ NOT CONFIRMED AS A DEFECT.** Minutes later the QA site refused logins for **every** user and then went
+> **fully down**; one of my own navigations had already timed out at 60 s beforehand. A preflight failure is exactly
+> what a degraded gateway produces. **Retest required before this is reported.**
+> **Environment-independent check that would settle it:** does a form named **`tender-wf-edit-calibration-score`**
+> exist and is it published under *Configurations → Forms*? If not, it is a real defect regardless of site health.
+> Bug: [`bugs/2026-08-03-bec-member-edit-my-score-dialog-empty.md`](../../test-reports/bugs/2026-08-03-bec-member-edit-my-score-dialog-empty.md)
+>
+> **Deviations from the case:** the list uses **single-click anchors**, not the documented double-click; the button
+> reads **"Finalise My Scoring"** not "Finilise Scoring"; and a dedicated **Calibrate Scores** page
+> (`tenders-to-finalise-score v8`) is the natural entry point rather than *Evaluate Tenders*.
+
 - **Assertions:**
-  - [ ] ASSERT the BID Management menu exposes Evaluate Tenders / Calibrate scores / Tender Type Documents / Suppliers
-  - [ ] ASSERT (BLOCKING) the Calibrate-Score page opens on double-click
-  - [ ] ASSERT a member can view **other** members' scores per supplier
-  - [ ] ASSERT **Edit My Score** allows adjusting Points Awarded + Comments
-  - [ ] ASSERT the adjustment persists and recomputes the Average / Above-Minimum flag
-  - [ ] ASSERT a member can only edit **their own** score, not another member's *(authorisation — not in the case,
-        worth checking alongside TC-24)*
+  - [x] ASSERT the BID Management menu exposes Evaluate Tenders / Calibrate Scores / TenderType Documents / Suppliers — **PASSES**, exactly as documented
+  - [x] ASSERT (BLOCKING) the Calibrate-Score page opens — **PASSES** (`bec-calibrate-score v11`; single click, not double)
+  - [x] ASSERT a member can view **other** members' scores per supplier — **PASSES**, per-evaluator columns plus the Evaluator Scores panel with Average / Above Minimum
+  - [ ] ⚠️ ASSERT **Edit My Score** allows adjusting Points Awarded + Comments — **INCONCLUSIVE: dialog rendered empty, but the site was degrading and went down minutes later. Retest required**
+  - [ ] ASSERT the adjustment persists and recomputes the Average / Above-Minimum flag — **BLOCKED**
+  - [ ] ASSERT a member can only edit **their own** score, not another member's *(authorisation — not in the case; blocked by the above)*
+  - [ ] ASSERT **Finalise My Scoring** completes the member's calibration — **NOT ATTEMPTED** (would finalise with no calibration possible)
 
 ---
 
