@@ -40,11 +40,12 @@ Site URLs are **not** stored here — only the registry of which env var holds e
 ## Credentials
 Credential **values are never committed** — they live in the gitignored `.env` at the hub root (see `.env.example`). This table is only the registry of roles and the env vars that carry them.
 
-| Role | Username env var | Password env var |
-|------|------------------|------------------|
-| ADMIN | `ADMIN_USERNAME` | `ADMIN_PASSWORD` |
+| Role | Username env var | Password env var | Notes |
+|------|------------------|------------------|-------|
+| ADMIN | `ADMIN_USERNAME` | `ADMIN_PASSWORD` | Admin portal super user |
+| RM | `RM_USERNAME` | `RM_PASSWORD` | Relationship Manager — drives the Leads → Opportunity → Inbox → Opportunity flow |
 
-Specs resolve these at run time via `credsFor(role)` / `loginAs(page, 'ADMIN')`.
+Specs resolve these at run time via `credsFor(role)` / `loginAs(page, 'ADMIN')` / `loginAs(page, 'RM')`.
 
 ## Test Artifacts (per-project)
 
