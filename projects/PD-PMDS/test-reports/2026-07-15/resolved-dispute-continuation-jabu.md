@@ -1,10 +1,10 @@
 # Test Report — Resolved-Dispute Continuation to Completion (Jabu Hadebe PA) (PMDS)
 
-- **Date:** 2026-07-15
-- **App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
-- **Cycle:** SL 1-12 Performance Agreement — FY2026/27
-- **Workflow ref:** PA2026/5905 (continues from `refer-for-dispute-performance-agreement-jabu.md`)
-- **Result:** ✅ PASS — the post-resolution tail of the dispute path was completed; PA advanced to **Generate PERSAL Input**
+**Date:** 2026-07-15
+**App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
+**Cycle:** SL 1-12 Performance Agreement — FY2026/27
+**Workflow ref:** PA2026/5905 (continues from `refer-for-dispute-performance-agreement-jabu.md`)
+**Result:** PASSED — the post-resolution tail of the dispute path was completed; PA advanced to **Generate PERSAL Input**
 
 ## Context
 Jabu Hadebe's PA had gone: employee Submit → supervisor **Refer for Dispute** → mediator **Resolved** → back to the **employee** as "Update Performance Agreement" (status Review). That hand-back had never been actioned. This run finishes it.

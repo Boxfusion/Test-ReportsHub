@@ -1,13 +1,13 @@
 # Test Report — Supervisor Review Performance Agreement (Simmy Mthalane) (PMDS)
 
-- **Date:** 2026-07-15
-- **App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
-- **Cycle:** SL 1-12 Performance Agreement — FY2026/27
-- **Workflow ref:** PA2026/5947 (continues from 2026-07-14 `employee-draft-performance-agreement-simmy.md`)
-- **Employee:** Simmy Mthalane (`Simmy`) — Intern 1, Salary Level 6, PERSAL 78456320
-- **Supervisor:** Lungile Nhleko (`LungileN`) — Position HOD SALES, Salary Level 10
+**Date:** 2026-07-15
+**App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
+**Cycle:** SL 1-12 Performance Agreement — FY2026/27
+**Workflow ref:** PA2026/5947 (continues from 2026-07-14 `employee-draft-performance-agreement-simmy.md`)
+**Employee:** Simmy Mthalane (`Simmy`) — Intern 1, Salary Level 6, PERSAL 78456320
+**Supervisor:** Lungile Nhleko (`LungileN`) — Position HOD SALES, Salary Level 10
 - **Mediator (default):** Tania Smith — MEC, Salary Level 13
-- **Result:** ✅ PASS — reviewed and signed; status advanced **Review → HR Review**
+**Result:** PASSED — reviewed and signed; status advanced **Review → HR Review**
 
 ## Steps executed
 1. **Login as supervisor** — cleared the stale prefilled username (`Simmy`) and signed in as `LungileN` / `123qwe`.

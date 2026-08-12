@@ -3,7 +3,7 @@
 **Date:** 2026-07-16
 **Cycle:** SL 1-12 Performance Agreement, FY2026/27 — **Mid Year Assessment** stage
 **Employee:** Lungile Nhleko (`LungileN`), **Ref PR2026/7331**
-**Result:** ✅ PASS — full Mid-Year happy-path chain completed; assessment now parks at **AWAITING PERSAL SYNC**.
+**Result:** PASSED — full Mid-Year happy-path chain completed; assessment now parks at **AWAITING PERSAL SYNC**.
 **Purpose:** run Lungile's Mid-Year exactly like Simmy's (positive, no dispute) and observe the resulting stage status while it awaits PERSAL.
 
 ## Headline finding

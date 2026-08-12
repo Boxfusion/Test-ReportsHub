@@ -1,11 +1,11 @@
 # Test Report — Refer for Dispute / Mediation (Jabu Hadebe PA) (PMDS)
 
-- **Date:** 2026-07-15
-- **App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
-- **Cycle:** SL 1-12 Performance Agreement — FY2026/27
-- **Workflow ref:** PA2026/5905
-- **ADO plan:** #101517 — suites 101920, 102051, 102065, 102088, 102091, 102094 (see Notes on ADO access)
-- **Result:** ✅ PASS — full **Refer for Dispute → Mediation → resolution** path exercised end-to-end across 3 roles
+**Date:** 2026-07-15
+**App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
+**Cycle:** SL 1-12 Performance Agreement — FY2026/27
+**Workflow ref:** PA2026/5905
+**ADO plan:** #101517 — suites 101920, 102051, 102065, 102088, 102091, 102094 (see Notes on ADO access)
+**Result:** PASSED — full **Refer for Dispute → Mediation → resolution** path exercised end-to-end across 3 roles
 
 ## Roles / routing
 - **Employee:** Jabu Hadebe (`JabuH`) — Intern 2, Salary Level 5, PERSAL 35789564

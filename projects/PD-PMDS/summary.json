@@ -1,13 +1,13 @@
 {
   "totalPlans": 0,
-  "totalRuns": 23,
-  "last7Runs": 23,
-  "last7Pass": 0,
-  "last7PassPct": 0,
+  "totalRuns": 57,
+  "last7Runs": 12,
+  "last7Pass": 12,
+  "last7PassPct": 100,
   "failingFlows": 0,
   "lastRun": {
-    "date": "2026-07-17",
-    "result": "✅ PASS — FULL MID-YEAR HAPPY-PATH CHAIN COMPLETED TO **COMPLETED / AWAITING PERSAL SYNC**.",
+    "date": "2026-08-11",
+    "result": "PASSED",
     "plan": null
   }
 }
