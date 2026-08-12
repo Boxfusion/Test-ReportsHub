@@ -3,7 +3,7 @@
 **Date:** 2026-07-16
 **Cycle:** SL 1-12 Performance Agreement, FY2026/27 — **Mid Year Assessment** stage
 **Employee:** Sanele Sithole (`SaneleS`), **Ref PR2026/7333**
-**Result:** ✅ PASS — full Mid-Year **resolved-dispute** chain completed to **Completed**.
+**Result:** PASSED — full Mid-Year **resolved-dispute** chain completed to **Completed**.
 **Purpose:** deliberately create a supervisor/employee score disagreement on the Mid-Year assessment to check whether the resolved-dispute "Update … with Outcomes" **Submit** breaks the way Contracting's does.
 
 ## Headline finding

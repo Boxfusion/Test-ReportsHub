@@ -3,7 +3,7 @@
 **Date:** 2026-07-17
 **Cycle:** SL 1-12 Performance Agreement, FY2026/27 — **Mid Year Assessment** stage
 **Employee:** Lungile Nhleko (`LungileN`), **Ref PR2026/7341**
-**Result:** ✅ PASS — full Mid-Year happy-path chain completed to **Completed / Awaiting PERSAL Sync**.
+**Result:** PASSED — full Mid-Year happy-path chain completed to **Completed / Awaiting PERSAL Sync**.
 **App:** HCM Admin Portal (PMDS module), https://pd-hcm-adminportal-qa.shesha.app/ (QA)
 
 ## Purpose

@@ -99,11 +99,27 @@ function collectPlans(source) {
   });
 }
 
+// Result lines are sometimes decorated, e.g. "PASSED — invoice Paid + Filed".
+// The hub health classifier matches the status token exactly (=== 'PASSED'), so a
+// decorated line falls through to 'unknown' (grey) even though the run passed.
+// Reduce a decorated line to its leading status keyword; plain values pass through.
+function normStatus(raw) {
+  const u = String(raw || 'UNKNOWN').toUpperCase();
+  const m = u.match(/PASSED|FAILED|PARTIAL|SKIPPED|BLOCKED/);
+  return m ? m[0] : u;
+}
+
 function parseReportText(text, fileRel) {
   const meta = {};
+  // FIRST occurrence wins. The per-TC step blocks repeat `**Duration:**` (and `**Mode:**`), and on a
+  // report whose header is followed by short TC blocks those repeats fall inside this 30-line window —
+  // overwriting the header value. That is why the 2026-07-30 80/20 run (453.2s total) was displayed on
+  // the dashboard as "13.5s", the duration of its third test case.
   for (const line of text.split(/\r?\n/).slice(0, 30)) {
     const m = line.match(/^\*\*([A-Za-z ]+):\*\*\s*(.+?)\s*$/);
-    if (m) meta[m[1].trim().toLowerCase()] = m[2].trim();
+    if (!m) continue;
+    const key = m[1].trim().toLowerCase();
+    if (!(key in meta)) meta[key] = m[2].trim();
   }
   const titleLine = text.match(/^#\s+(.+)$/m);
   const planRel = meta.plan ? meta.plan.replace(/\\/g, '/') : null;
@@ -115,7 +131,7 @@ function parseReportText(text, fileRel) {
     title: titleLine ? titleLine[1].trim().replace(/^Report:\s*/i, '') : pathPosix.basename(fileRel, '.md'),
     plan: planRel,
     spec: meta.spec ? meta.spec.replace(/\\/g, '/') : null,
-    result: (meta.result || 'UNKNOWN').toUpperCase(),
+    result: normStatus(meta.result),
     duration: meta.duration || '',
     date: reportDate,
     mode: meta['execution mode'] || null,

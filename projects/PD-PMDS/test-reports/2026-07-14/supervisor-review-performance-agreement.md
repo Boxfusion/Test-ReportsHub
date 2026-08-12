@@ -1,11 +1,11 @@
 # Test Report — Supervisor Review Performance Agreement (PMDS)
 
-- **Date:** 2026-07-14
-- **App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
-- **Cycle:** SL 1-12 Performance Agreement — FY2026/27
-- **Workflow ref:** PA2026/5901 (continues from `employee-draft-performance-agreement.md`)
-- **Supervisor:** Tania Smith (`Tester97`) — Position MEC, Salary Level 13
-- **Result:** ✅ PASS — reviewed and signed; status advanced **Review → HR Review**
+**Date:** 2026-07-14
+**App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
+**Cycle:** SL 1-12 Performance Agreement — FY2026/27
+**Workflow ref:** PA2026/5901 (continues from `employee-draft-performance-agreement.md`)
+**Supervisor:** Tania Smith (`Tester97`) — Position MEC, Salary Level 13
+**Result:** PASSED — reviewed and signed; status advanced **Review → HR Review**
 
 ## Steps executed
 1. **Login as supervisor** — `Tester97` / `123qwe`; switched view mode Live → Latest.

@@ -1,11 +1,11 @@
 # Test Report — Refer for Dispute / Mediation UNSUCCESSFUL (Adam Apple PA) (PMDS)
 
-- **Date:** 2026-07-15
-- **App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
-- **Cycle:** SL 1-12 Performance Agreement — FY2026/27
-- **Workflow ref:** PA2026/5891
-- **ADO plan:** #101517 — suites 101920, 102065, 102112, 102090, 102091, 102094, 102051 (see Notes on ADO access)
-- **Result:** ✅ PASS — full **Refer for Dispute → Mediation → UNSUCCESSFUL resolution** path exercised end-to-end; the unresolved branch (extra mandatory Comments + Attachments) was driven and its routing verified
+**Date:** 2026-07-15
+**App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
+**Cycle:** SL 1-12 Performance Agreement — FY2026/27
+**Workflow ref:** PA2026/5891
+**ADO plan:** #101517 — suites 101920, 102065, 102112, 102090, 102091, 102094, 102051 (see Notes on ADO access)
+**Result:** PASSED — full **Refer for Dispute → Mediation → UNSUCCESSFUL resolution** path exercised end-to-end; the unresolved branch (extra mandatory Comments + Attachments) was driven and its routing verified
 
 ## Roles / routing
 - **Employee:** Adam Apple (`adam`) — Intern 4, Salary Level 7, PERSAL 89651234

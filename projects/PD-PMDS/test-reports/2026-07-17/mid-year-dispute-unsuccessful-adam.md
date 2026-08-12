@@ -3,7 +3,7 @@
 **Date:** 2026-07-17
 **Cycle:** SL 1-12 Performance Agreement, FY2026/27 — **Mid Year Assessment** stage
 **Employee:** Adam Apple (`adam`), **Ref PR2026/7339**
-**Result:** ✅ PASS (scenario driven end-to-end) — the dispute was **not resolved** at either mediation level; the assessment terminates at status **NOT REQUIRED** (not Completed).
+**Result:** PASSED (scenario driven end-to-end) — the dispute was **not resolved** at either mediation level; the assessment terminates at status **NOT REQUIRED** (not Completed).
 **App:** HCM Admin Portal (PMDS module), https://pd-hcm-adminportal-qa.shesha.app/ (QA)
 
 ## Purpose

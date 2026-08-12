@@ -1,12 +1,12 @@
 # Test Report — Employee Draft Performance Agreement (PMDS)
 
-- **Date:** 2026-07-14
-- **App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
-- **Cycle:** SL 1-12 Performance Agreement — FY2026/27
-- **Employee:** Lungile Nhleko (`LungileN`) — Position HOD SALES, Salary Level 10, PERSAL 25897642
-- **Workflow ref:** PA2026/5901 — *SaGov Performance Agreement Workflow Definition*
-- **ADO source:** Plan #101517 / Suite #101920 — "Employee Draft Performance Agreement"
-- **Result:** ✅ PASS — drafted and submitted end-to-end; status moved Draft → **Review** (14/07/2026 14:33)
+**Date:** 2026-07-14
+**App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
+**Cycle:** SL 1-12 Performance Agreement — FY2026/27
+**Employee:** Lungile Nhleko (`LungileN`) — Position HOD SALES, Salary Level 10, PERSAL 25897642
+**Workflow ref:** PA2026/5901 — *SaGov Performance Agreement Workflow Definition*
+**ADO source:** Plan #101517 / Suite #101920 — "Employee Draft Performance Agreement"
+**Result:** PASSED — drafted and submitted end-to-end; status moved Draft → **Review** (14/07/2026 14:33)
 
 ## Preconditions
 - Contracting process for the SL 1-12 cycle was opened by admin earlier the same day with "Initiate the workflows immediately", so Lungile's Draft Performance Agreement task was waiting in her Workflows → Inbox.

@@ -4,7 +4,7 @@
 **Cycle:** SL 1-12 Performance Agreement, FY2026/27
 **App:** HCM Admin Portal (PMDS module) — https://pd-hcm-adminportal-qa.shesha.app/
 **Ref:** PA2026/6029
-**Result:** ✅ PASS — full happy-path chain completed end-to-end
+**Result:** PASSED — full happy-path chain completed end-to-end
 
 ## Context — new reporting hierarchy
 The PMDS data was reset/re-seeded before this run (Contracting started at 41 Not Started / 0 In Progress). The org reporting chain was changed to insert a layer between the interns and Tania:

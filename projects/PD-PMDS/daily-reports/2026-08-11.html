@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QA Report — PD-PMDS — 2026-08-11</title>
+<style>
+  :root { --ink:#16232B; --soft:#3D4E56; --muted:#6B7A7D; --rule:#DDE3E2;
+          --accent:#1F5F63; --accentbg:#E4EDEC; --paper:#F7F8F7; --surface:#fff;
+          --totalbg:#EFF4F3; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#E8EDEC; --soft:#B4C0C0; --muted:#8A9A9B; --rule:#2A383E;
+            --accent:#6FBDB8; --accentbg:#1B3436; --paper:#10181C; --surface:#172127;
+            --totalbg:#1E2C31; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:2.5rem 1.25rem 5rem; background:var(--paper); color:var(--ink);
+         font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; }
+  main { max-width: 66rem; margin: 0 auto; }
+  h1 { font:400 2.1rem/1.15 Georgia,"Times New Roman",serif; margin:0 0 1.4rem;
+       padding-bottom:1rem; border-bottom:2px solid var(--ink); }
+  h2 { font:400 1.45rem/1.2 Georgia,"Times New Roman",serif; margin:2.6rem 0 .8rem; }
+  p { margin:0 0 1rem; max-width:52rem; }
+  code { font:.85em ui-monospace,Consolas,monospace; background:var(--accentbg);
+         padding:.1em .35em; border-radius:2px; }
+  .lede { font-size:1.05rem; border-left:3px solid var(--accent); padding-left:1rem; }
+  .note { font-size:.84rem; color:var(--muted); max-width:52rem; }
+  .tscroll { overflow-x:auto; border:1px solid var(--rule); background:var(--surface); margin:0 0 1.6rem; }
+  table { border-collapse:collapse; width:100%; font-size:.88rem; min-width:38rem; }
+  th,td { text-align:left; padding:.6rem .8rem; border-bottom:1px solid var(--rule); vertical-align:top; }
+  th { font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
+       background:var(--accentbg); font-weight:700; }
+  tbody tr:last-child td { border-bottom:0; }
+  tr.total td { background:var(--totalbg); font-weight:700; border-top:2px solid var(--ink); }
+  tr.headline td { background:var(--totalbg); font-weight:700; }
+  .num { text-align:right; font-variant-numeric:tabular-nums; }
+  strong { font-weight:650; }
+  hr { border:0; border-top:1px solid var(--rule); margin:2.4rem 0; }
+  @media print { body { padding:0; background:#fff; } .tscroll { overflow:visible; } }
+</style></head><body><main>
+<h1>QA Report — Tuesday 2026-08-11</h1>
+<p><strong>Module:</strong> PD-PMDS (Performance Management &amp; Development System, HCM Admin Portal) — QA environment</p>
+<p class="lede"><strong>Headline:</strong> 22 new scripts created · 29 workflows driven end to end · <strong>100% pass, 0 defects</strong> · overall progress <strong>67%</strong>.</p>
+
+<h2>1. Module progress</h2>
+<div class="tscroll"><table>
+<thead><tr><th>Module</th><th class="num">New scripts</th><th class="num">Re-run</th><th class="num">Total run</th><th>Result</th><th>Overall progress</th></tr></thead>
+<tbody>
+<tr class="headline"><td>PD-PMDS</td><td class="num">22</td><td class="num">7</td><td class="num">29</td><td>✅ 29/29 (100%)</td><td>67% — 6 of 9 cycle-stages covered</td></tr>
+</tbody></table></div>
+<p><strong>Overall progress</strong> is measured against the full delivery matrix for this module: <strong>3 performance cycles × 3 assessment stages = 9 cycle-stages.</strong> Contracting and Mid-Year are now covered on every cycle (6); the three Annual cycle-stages are the outstanding third.</p>
+<p class="note"><em>"New scripts" = test scenarios authored and driven for the first time. PD-PMDS coverage is driven live against the application and written up as run reports — this module has no automated spec suite yet, unlike PD Bid Management and NC Dispatch.</em></p>
+
+<h2>2. Progress by cycle and stage</h2>
+<div class="tscroll"><table>
+<thead><tr><th>#</th><th>Cycle</th><th>Stage</th><th class="num">New scripts</th><th class="num">Re-run</th><th class="num">Total run</th><th>Result</th><th class="num">Employees completed</th><th>Progress</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>SL 1-12</td><td>Contracting</td><td class="num">0</td><td class="num">7</td><td class="num">7</td><td>✅ 7/7</td><td class="num">43/43</td><td>✅ <strong>COMPLETE</strong> — stage closed</td></tr>
+<tr><td>2</td><td>SL 1-12</td><td>Mid-Year</td><td class="num">6</td><td class="num">0</td><td class="num">6</td><td>✅ 6/6</td><td class="num">5/43</td><td>🟡 <strong>IN PROGRESS</strong></td></tr>
+<tr><td>3</td><td>DDG</td><td>Contracting</td><td class="num">4</td><td class="num">0</td><td class="num">4</td><td>✅ 4/4</td><td class="num">6/6</td><td>✅ <strong>COMPLETE</strong> — stage closed</td></tr>
+<tr><td>4</td><td>DDG</td><td>Mid-Year</td><td class="num">4</td><td class="num">0</td><td class="num">4</td><td>✅ 4/4</td><td class="num">4/6</td><td>🟡 <strong>IN PROGRESS</strong></td></tr>
+<tr><td>5</td><td>CD/D</td><td>Contracting</td><td class="num">4</td><td class="num">0</td><td class="num">4</td><td>✅ 4/4</td><td class="num">11/11</td><td>✅ <strong>COMPLETE</strong> — stage closed</td></tr>
+<tr><td>6</td><td>CD/D</td><td>Mid-Year</td><td class="num">4</td><td class="num">0</td><td class="num">4</td><td>✅ 4/4</td><td class="num">4/11</td><td>🟡 <strong>IN PROGRESS</strong></td></tr>
+<tr><td>7</td><td>All 3</td><td>Annual</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td>—</td><td class="num">0/60</td><td>🔴 <strong>BLOCKED</strong> — 2 blockers from July</td></tr>
+<tr class="total"><td></td><td></td><td>TOTAL</td><td class="num">22</td><td class="num">7</td><td class="num">29</td><td>✅ 29/29</td><td class="num">60 in scope</td><td>6 of 9 (67%)</td></tr>
+</tbody></table></div>
+<p class="note"><em>Cycles: <strong>SL 1-12</strong> = salary levels 1–12 (43 employees) · <strong>DDG</strong> = Deputy Director-General (6) · <strong>CD/D</strong> = Chief Director / Director (11).</em></p>
+
+<h2>3. Stage coverage by cycle</h2>
+<div class="tscroll"><table>
+<thead><tr><th>Cycle</th><th class="num">Employees</th><th>Contracting</th><th>Mid-Year</th><th>Annual</th><th>Stages covered</th></tr></thead>
+<tbody>
+<tr><td>SL 1-12</td><td class="num">43</td><td>✅ COMPLETED (43/43)</td><td>🟡 IN PROGRESS (5/43)</td><td>🔴 Blocked</td><td>2 of 3</td></tr>
+<tr><td>DDG</td><td class="num">6</td><td>✅ COMPLETED (6/6)</td><td>🟡 IN PROGRESS (4/6)</td><td>⬜ Not started</td><td>2 of 3</td></tr>
+<tr><td>CD/D</td><td class="num">11</td><td>✅ COMPLETED (11/11)</td><td>🟡 IN PROGRESS (4/11)</td><td>⬜ Not started</td><td>2 of 3</td></tr>
+</tbody></table></div>
+<p><strong>Both assessment forms are now covered at Mid-Year for the first time.</strong> The DDG and CD/D cycles use the <strong>Core Management Competencies</strong> table where SL 1-12 uses the older GAF list — the SMS / non-SMS split carries through from Contracting exactly as it should.</p>
+
+<h2>4. The 29 workflows behind those numbers</h2>
+<div class="tscroll"><table>
+<thead><tr><th>Cycle</th><th>Stage</th><th>Scenario</th><th>New</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>SL 1-12</td><td>Contracting</td><td>Happy path — Simmy + Jabu</td><td>—</td><td>✅ 2/2 → Generate PERSAL Input</td></tr>
+<tr><td>SL 1-12</td><td>Contracting</td><td>Happy path — Tony</td><td>—</td><td>✅ PASSED</td></tr>
+<tr><td>SL 1-12</td><td>Contracting</td><td>Manager path — Lungile</td><td>—</td><td>✅ PASSED</td></tr>
+<tr><td>SL 1-12</td><td>Contracting</td><td>Resolved dispute — Adam</td><td>—</td><td>✅ PASSED · 16 Jul Submit issue did <strong>not</strong> recur</td></tr>
+<tr><td>SL 1-12</td><td>Contracting</td><td>Escalated, resolved at tier 2 — Sanele</td><td>—</td><td>✅ PASSED (two-level escalation)</td></tr>
+<tr><td>SL 1-12</td><td>Contracting</td><td>Escalated, unresolved — Thato</td><td>—</td><td>✅ terminates at <em>Dispute Unresolved</em></td></tr>
+<tr><td>SL 1-12</td><td>Mid-Year</td><td>Contracting closed → Mid-Year opened 43/43</td><td>✅</td><td>✅ all 43 completions preserved</td></tr>
+<tr><td>SL 1-12</td><td>Mid-Year</td><td>Full 6-employee assessment suite</td><td>✅</td><td>✅ 5 to <em>Awaiting PERSAL Sync</em>, 1 terminal <em>Not Required</em></td></tr>
+<tr><td>DDG</td><td>Contracting</td><td>Cycle opened + 4 workflows</td><td>✅</td><td>✅ 4/4</td></tr>
+<tr><td>DDG</td><td>Mid-Year</td><td>4 workflows — <strong>first ever on this cycle</strong></td><td>✅</td><td>✅ 4/4, no defects</td></tr>
+<tr><td>CD/D</td><td>Contracting</td><td>Cycle opened + 4 workflows</td><td>✅</td><td>✅ 4/4</td></tr>
+<tr><td>CD/D</td><td>Mid-Year</td><td>4 workflows — <strong>first ever on this cycle</strong></td><td>✅</td><td>✅ 4/4 (1 manual reassignment)</td></tr>
+</tbody></table></div>
+<p>Reports: <code>projects/PD-PMDS/test-reports/2026-08-11/</code> — 12 run reports.</p>
+<p><strong>Environment:</strong> stable all day. No outage, no 500s, no stuck tasks across 29 workflows. Every Submit, Sign and Verify processed on first click.</p>
+
+<h2>5. Test data</h2>
+<p><strong>All three cycles now stand at: Contracting <code>COMPLETED</code> · Mid-Year <code>IN PROGRESS</code> · Annual <code>NOT STARTED</code>.</strong></p>
+<div class="tscroll"><table>
+<thead><tr><th>Cycle</th><th>Contracting refs</th><th>Mid-Year refs</th></tr></thead>
+<tbody>
+<tr><td>SL 1-12</td><td>PA2026/6597 Simmy · 6553 Jabu · 6585 Tony · 6549 Lungile · 6539 Adam · 6595 Sanele · <strong>6557 Thato</strong> <em>(Dispute Unresolved, since amended to Completed by the team)</em></td><td>PR2026/7492 Simmy · 7480 Tony · 7444 Lungile · 7448 Jabu · 7490 Sanele · <strong>7434 Adam</strong> <em>(terminal — Not Required)</em></td></tr>
+<tr><td>DDG</td><td>PA2026/6619 Kabelo · 6615 Gail · 6617 Thando · 6609 Hennie</td><td>PR2026/7514 Kabelo · 7510 Gail · 7512 Thando · 7504 Hennie</td></tr>
+<tr><td>CD/D</td><td>PA2026/6623 Tania · 6625 Babalwa · 6631 Sampha · 6627 Kavitha</td><td>PR2026/7518 Tania · 7520 Babalwa · 7526 Sampha · <strong>7522 Kavitha</strong> <em>(needed manual reassignment)</em></td></tr>
+</tbody></table></div>
+<p><strong>Cycle counts at close of day:</strong> SL 1-12 <code>43 Total · 5 Completed</code> · DDG <code>6 Total · 4 Completed</code> · CD/D <code>11 Total · 4 Completed</code>.</p>
+<p><strong>Actors confirmed this run:</strong> escalation tier 2 is <code>Sampha</code> on SL 1-12 and CD/D, <code>Tester97</code> (Tania) on DDG. HR verification is <code>SalesHR</code> on SL 1-12 and DDG; CD/D splits between <code>SalesHR</code> (Babalwa, Sampha) and <code>MaletshaN</code> (Tania) — that split is stable per employee across both stages.</p>
+</main></body></html>
