@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-05T05:50:45.996Z",
+  "generated": "2026-08-14T09:41:37.711Z",
   "projects": [
     {
       "name": "dep",
@@ -23,6 +23,29 @@
         }
       },
       "href": "projects/dep/index.html"
+    },
+    {
+      "name": "DSD-NPO",
+      "displayName": "DSD NPO",
+      "appUrl": "https://dsd-npo-publicportal-1-qa.shesha.app/login",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans",
+      "description": "Hybrid Markdown + Playwright test reports for the Department of Social Development NPO registration and compliance portal (public applicant portal + DSD admin portal).",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 23,
+        "totalRuns": 22,
+        "last7Runs": 22,
+        "last7Pass": 5,
+        "last7PassPct": 23,
+        "failingFlows": 3,
+        "lastRun": {
+          "date": "2026-08-14",
+          "result": "PASSED",
+          "plan": "test-plans/npo-registration/03-wizard-org-details-objectives.md"
+        }
+      },
+      "href": "projects/DSD-NPO/index.html"
     },
     {
       "name": "HCM",
@@ -163,6 +186,29 @@
       "href": "projects/dispatch/index.html"
     },
     {
+      "name": "PD-PMDS",
+      "displayName": "PMDS",
+      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+      "description": "Hybrid Markdown + Playwright test reports for PMDS (Performance Management & Development System) — a module of the HCM Admin Portal (same site as eLeave).",
+      "health": "healthy",
+      "summary": {
+        "totalPlans": 0,
+        "totalRuns": 57,
+        "last7Runs": 12,
+        "last7Pass": 12,
+        "last7PassPct": 100,
+        "failingFlows": 0,
+        "lastRun": {
+          "date": "2026-08-11",
+          "result": "PASSED",
+          "plan": null
+        }
+      },
+      "href": "projects/PD-PMDS/index.html"
+    },
+    {
       "name": "invoice-tracking",
       "displayName": "Invoice Tracking",
       "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
@@ -207,36 +253,13 @@
         }
       },
       "href": "projects/PD-Dispatch/index.html"
-    },
-    {
-      "name": "PD-PMDS",
-      "displayName": "PMDS",
-      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
-      "description": "Hybrid Markdown + Playwright test reports for PMDS (Performance Management & Development System) — a module of the HCM Admin Portal (same site as eLeave).",
-      "health": "unknown",
-      "summary": {
-        "totalPlans": 0,
-        "totalRuns": 23,
-        "last7Runs": 23,
-        "last7Pass": 0,
-        "last7PassPct": 0,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-07-17",
-          "result": "✅ PASS — FULL MID-YEAR HAPPY-PATH CHAIN COMPLETED TO **COMPLETED / AWAITING PERSAL SYNC**.",
-          "plan": null
-        }
-      },
-      "href": "projects/PD-PMDS/index.html"
     }
   ],
   "totals": {
-    "totalProjects": 10,
-    "totalPlans": 52,
-    "totalRuns": 210,
-    "last7Runs": 124,
-    "failingFlows": 19
+    "totalProjects": 11,
+    "totalPlans": 75,
+    "totalRuns": 266,
+    "last7Runs": 135,
+    "failingFlows": 22
   }
 }
