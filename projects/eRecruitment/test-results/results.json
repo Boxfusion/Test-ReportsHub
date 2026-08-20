@@ -1,0 +1,325 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Reuben\\IdeaProjects\\eRecruitment Public Portal Claude Automation\\Test-ReportsHub\\playwright.config.ts",
+    "rootDir": "C:/Users/Reuben/IdeaProjects/eRecruitment Public Portal Claude Automation/Test-ReportsHub",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Reuben/IdeaProjects/eRecruitment Public Portal Claude Automation/Test-ReportsHub/projects/eRecruitment/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Reuben/IdeaProjects/eRecruitment Public Portal Claude Automation/Test-ReportsHub",
+        "testIgnore": [],
+        "testMatch": [
+          "projects/**/test-plans/**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ],
+      [
+        "list"
+      ],
+      [
+        "C:\\Users\\Reuben\\IdeaProjects\\eRecruitment Public Portal Claude Automation\\Test-ReportsHub\\node_modules\\allure-playwright\\dist\\index.js"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "projects\\eRecruitment\\test-plans\\AdminPortal\\verify-send-message-public-portal-completeflow.spec.ts",
+      "file": "projects/eRecruitment/test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "ADMINPORTAL-106402 — Verify send messages to public portal",
+          "file": "projects/eRecruitment/test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
+          "line": 94,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-01: Login as Kwena",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6210,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-06T13:07:43.951Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2a80f6c1d037023059a1-eee40bb238eac29e7c0e",
+              "file": "projects/eRecruitment/test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "TC-02: Click on the Recruitment dropdown",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6125,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-06T13:07:50.551Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2a80f6c1d037023059a1-d0e5deb80ade9c832fa5",
+              "file": "projects/eRecruitment/test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
+              "line": 102,
+              "column": 7
+            },
+            {
+              "title": "TC-03: Click on Job Posting dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9674,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-06T13:07:56.732Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2a80f6c1d037023059a1-e505535472623ea996a5",
+              "file": "projects/eRecruitment/test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "TC-04: Search for a job with Ref HRMC 23/26/5, open in details view",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12811,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-06T13:08:06.434Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2a80f6c1d037023059a1-f1f91692ad4409f82952",
+              "file": "projects/eRecruitment/test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
+              "line": 119,
+              "column": 7
+            },
+            {
+              "title": "TC-05: Scroll to Applications panel and open Victor Gyokeres's application",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 22386,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-06T13:08:19.274Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2a80f6c1d037023059a1-2eb6cab8cae0917c2d0a",
+              "file": "projects/eRecruitment/test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
+              "line": 127,
+              "column": 7
+            },
+            {
+              "title": "TC-06: Navigate to Inbox panel and populate a message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 22920,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-06T13:08:41.697Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2a80f6c1d037023059a1-960f92a01962ec28e168",
+              "file": "projects/eRecruitment/test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
+              "line": 136,
+              "column": 7
+            },
+            {
+              "title": "TC-07: Click on Send button",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 40489,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-06T13:09:04.661Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2a80f6c1d037023059a1-5b64e5522840c1f8e873",
+              "file": "projects/eRecruitment/test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
+              "line": 147,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-06T13:07:43.124Z",
+    "duration": 124459.13100000001,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

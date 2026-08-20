@@ -1,0 +1,13 @@
+{
+  "totalPlans": 121,
+  "totalRuns": 127,
+  "last7Runs": 86,
+  "last7Pass": 72,
+  "last7PassPct": 84,
+  "failingFlows": 3,
+  "lastRun": {
+    "date": "2026-08-06",
+    "result": "PASSED",
+    "plan": "test-plans/AdminPortal/verify-appointed-ref43-completeflow.md"
+  }
+}
