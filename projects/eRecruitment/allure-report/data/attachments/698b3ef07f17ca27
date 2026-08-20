@@ -1,0 +1,268 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\eRecruitment\test-plans\AdminPortal\create-job-posting-output-competencies.spec.ts >> ADMINPORTAL-102822 — Create Job Post (Valid) — Output and Competencies >> TC-03: Navigate to My Items submenu
+- Location: projects\eRecruitment\test-plans\AdminPortal\create-job-posting-output-competencies.spec.ts:302:7
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for getByText('My Items', { exact: true }).first()
+    - locator resolved to <a class="nav-links-renderer" href="/dynamic/Shesha.Workflow/workflows-my-items">My Items</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not stable
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is not stable
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is not visible
+  27 × retrying click action
+       - waiting 500ms
+       - waiting for element to be visible, enabled and stable
+       - element is not visible
+  - retrying click action
+    - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - menu [ref=e9]:
+        - menuitem "bank Organisational Structure" [ref=e10] [cursor=pointer]:
+          - img "bank" [ref=e11]:
+            - img [ref=e12]
+          - generic [ref=e14]: Organisational Structure
+        - menuitem "apartment Workflows" [active] [ref=e15] [cursor=pointer]:
+          - img "apartment" [ref=e16]:
+            - img [ref=e17]
+          - generic [ref=e19]: Workflows
+        - menuitem "Entity" [ref=e20] [cursor=pointer]:
+          - link "Entity" [ref=e22]:
+            - /url: /dynamic/Shesha/entity-configs-v2
+      - img "menu-unfold" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+    - generic [ref=e28]:
+      - banner [ref=e29]:
+        - generic [ref=e35]:
+          - generic [ref=e37]:
+            - button "edit" [ref=e38] [cursor=pointer]:
+              - img "edit" [ref=e39]:
+                - img [ref=e40]
+            - paragraph [ref=e42] [cursor=pointer]: Shesha/header v17
+            - generic [ref=e43]:
+              - generic [ref=e44]: Live
+              - img "close" [ref=e45] [cursor=pointer]:
+                - img [ref=e46]
+          - generic [ref=e56]:
+            - link [ref=e62] [cursor=pointer]:
+              - /url: /
+              - img [ref=e72]
+            - generic [ref=e76]:
+              - generic [ref=e77] [cursor=pointer]:
+                - text: Kamogelo Shabangu
+                - img "down" [ref=e78]:
+                  - img [ref=e79]
+              - img "user" [ref=e82]:
+                - img [ref=e83]
+      - main [ref=e85]:
+        - generic [ref=e87]:
+          - img "Clickable Image" [ref=e89] [cursor=pointer]
+          - generic [ref=e90]:
+            - generic [ref=e92]:
+              - img "arrow-right" [ref=e93]:
+                - img [ref=e94]
+              - link "Build your first app" [ref=e96] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/get-started/tutorial/the-basics/
+                - heading "Build your first app" [level=4] [ref=e97]
+              - paragraph [ref=e98]: A quickstart guide to help you build an app using Shesha
+            - generic [ref=e100]:
+              - img "arrow-right" [ref=e101]:
+                - img [ref=e102]
+              - link "Documentation" [ref=e104] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/get-started/Introduction
+                - heading "Documentation" [level=4] [ref=e105]
+              - paragraph [ref=e106]: A deeper dive into core Shesha functionality
+            - generic [ref=e108]:
+              - img "arrow-right" [ref=e109]:
+                - img [ref=e110]
+              - link "How to change landing page" [ref=e112] [cursor=pointer]:
+                - /url: https://docs.shesha.io/docs/fundamentals/how-to-change-home-page/
+                - heading "How to change landing page" [level=4] [ref=e113]
+              - paragraph [ref=e114]: Change your landing page to a custom page
+  - alert [ref=e115]
+```
+
+# Test source
+
+```ts
+  1   | // AUTO-RECORDED from test-plans/AdminPortal/create-job-posting-output-competencies.md
+  2   | // Source: Azure DevOps test plan #99438, suite #102821, test case #102822
+  3   | // The .md plan is canonical. AI-repair will patch failing lines in this file.
+  4   | // Do not hand-edit unless you are also updating the .md plan.
+  5   | //
+  6   | // Steps 1-11 (ADO steps 3-12) are identical to create-job-posting-valid.spec.ts
+  7   | // (#102820) — see that file's header comment for the wizard step 1 DOM notes
+  8   | // (Create New dropdown, JobPosting menu item, Salary Range adaptive handling,
+  9   | // date-picker blur fix, etc).
+  10  | //
+  11  | // Wizard step 2 ("Output and Competencies") discovered live 2026-07-30:
+  12  | // - Collapse panel is labelled "Competency Profile", not "Output and
+  13  | //   Competencies" (that text is only the wizard step title).
+  14  | // - Requirements: label[for="model_educationAndExperience"] + <textarea>.
+  15  | //   The SAME label[for] id is reused by a separate hidden "Experience" text
+  16  | //   input further down the form — formItemByLabel's .first() naturally
+  17  | //   picks the visible Requirements textarea since it comes first in DOM.
+  18  | // - Required Skills and Competencies: label[for="model_skillsAndCompentencies"]
+  19  | //   (note the misspelling — "Compentencies") + <textarea>.
+  20  | // - Duties: label[for="model_duties"] + <textarea>.
+  21  | // - Footer buttons: Back, Close, Next.
+  22  | 
+  23  | import { test, expect, Page, Locator } from '@playwright/test';
+  24  | 
+  25  | const APP_URL = 'https://pd-recruitment-adminportal-qa.shesha.app/';
+  26  | const ADMIN = { user: 'kamogelos', password: '123qwe' };
+  27  | const JOB_REF_NUMBER = `QA-JobRef-OC-${Date.now()}`;
+  28  | const PROVINCE_BRANCH = 'Gauteng Branch';
+  29  | const POST_NAME = 'QA Playwright Test Post';
+  30  | const REQUIREMENTS_TEXT = 'Bachelor degree in a relevant field with 3+ years experience.';
+  31  | const SKILLS_TEXT = 'Communication, MS Office, Project Management, Attention to detail.';
+  32  | const DUTIES_TEXT = 'Coordinate recruitment activities and support hiring managers with candidate screening.';
+  33  | 
+  34  | async function loginAsAdmin(page: Page) {
+  35  |   await page.goto(`${APP_URL}login`);
+  36  |   await page.locator('input[type="text"]').first().fill(ADMIN.user);
+  37  |   await page.locator('input[type="password"]').first().fill(ADMIN.password);
+  38  |   await page.getByRole('button', { name: /sign in/i }).click();
+  39  |   await page.waitForURL(url => !url.href.includes('/login'), { timeout: 30000 });
+  40  |   await page.waitForLoadState('networkidle');
+  41  |   await page.waitForTimeout(1000);
+  42  | }
+  43  | 
+  44  | async function expandWorkflowsMenu(page: Page) {
+  45  |   await page.getByText('Workflows', { exact: true }).first().click();
+  46  |   await page.waitForTimeout(800);
+  47  | }
+  48  | 
+  49  | function myItemsMenuItem(page: Page): Locator {
+  50  |   return page.getByText('My Items', { exact: true }).first();
+  51  | }
+  52  | 
+  53  | async function goToMyItems(page: Page) {
+> 54  |   await myItemsMenuItem(page).click();
+      |                               ^ TimeoutError: locator.click: Timeout 15000ms exceeded.
+  55  |   await page.waitForLoadState('networkidle');
+  56  |   await page.waitForTimeout(1200);
+  57  | }
+  58  | 
+  59  | function createNewButton(page: Page): Locator {
+  60  |   return page.getByRole('button', { name: /Create New/i }).first();
+  61  | }
+  62  | 
+  63  | async function clickCreateNew(page: Page) {
+  64  |   await page.mouse.move(700, 450);
+  65  |   await createNewButton(page).scrollIntoViewIfNeeded();
+  66  |   await page.mouse.move(700, 450);
+  67  |   await createNewButton(page).click({ force: true });
+  68  |   await page.waitForTimeout(800);
+  69  | }
+  70  | 
+  71  | function jobPostingMenuItem(page: Page): Locator {
+  72  |   return page.getByText(/^Job\s*Posting$/i).last();
+  73  | }
+  74  | 
+  75  | async function waitForFormReady(page: Page) {
+  76  |   await page.waitForLoadState('networkidle');
+  77  |   await expect(page.locator('.ant-spin-spinning')).toHaveCount(0, { timeout: 30000 }).catch(() => {});
+  78  |   await page.waitForTimeout(1200);
+  79  |   await expect(page.getByText('Capture Job Posting')).toBeVisible({ timeout: 15000 });
+  80  | }
+  81  | 
+  82  | async function openNewJobPostingForm(page: Page) {
+  83  |   await loginAsAdmin(page);
+  84  |   await expandWorkflowsMenu(page);
+  85  |   await goToMyItems(page);
+  86  |   await clickCreateNew(page);
+  87  |   await jobPostingMenuItem(page).click();
+  88  |   await waitForFormReady(page);
+  89  | }
+  90  | 
+  91  | function formItemByLabel(page: Page, forId: string): Locator {
+  92  |   return page.locator('.ant-form-item').filter({ has: page.locator(`label[for="${forId}"]`) }).first();
+  93  | }
+  94  | 
+  95  | function textInputFor(page: Page, forId: string): Locator {
+  96  |   return formItemByLabel(page, forId).locator('input[type="text"]').first();
+  97  | }
+  98  | 
+  99  | function textAreaFor(page: Page, forId: string): Locator {
+  100 |   return formItemByLabel(page, forId).locator('textarea').first();
+  101 | }
+  102 | 
+  103 | function selectFor(page: Page, forId: string): Locator {
+  104 |   return formItemByLabel(page, forId).locator('.ant-select').first();
+  105 | }
+  106 | 
+  107 | function recruiterSelect(page: Page): Locator { return selectFor(page, 'model_recruiter_id'); }
+  108 | function jobReferenceNumberField(page: Page): Locator { return textInputFor(page, 'model_referenceNo'); }
+  109 | function provinceBranchField(page: Page): Locator { return textInputFor(page, 'model_core'); }
+  110 | function postNameField(page: Page): Locator { return textInputFor(page, 'model_jobTitle'); }
+  111 | function centreOfficeNameSelect(page: Page): Locator { return selectFor(page, 'model_recruitmentArea_id'); }
+  112 | function salaryLevelSelect(page: Page): Locator { return selectFor(page, 'model_salaryLevel_id'); }
+  113 | function salaryRangeFormItem(page: Page): Locator { return formItemByLabel(page, 'subForm6_salaryRange'); }
+  114 | function salaryRangeSelect(page: Page): Locator { return salaryRangeFormItem(page).locator('.ant-select').first(); }
+  115 | 
+  116 | function requirementsField(page: Page): Locator { return textAreaFor(page, 'model_educationAndExperience'); }
+  117 | function skillsField(page: Page): Locator { return textAreaFor(page, 'model_skillsAndCompentencies'); }
+  118 | function dutiesField(page: Page): Locator { return textAreaFor(page, 'model_duties'); }
+  119 | 
+  120 | // Optional Job Information Summary fields, not marked required (*) in the
+  121 | // UI but filled anyway to rule out an undocumented hidden validation
+  122 | // dependency. Post Reports To, Notch, and Promotion To Next Higher Post
+  123 | // only render in the DOM after Centre/Office Name and Salary Level are
+  124 | // selected (same conditional-disclosure pattern as Salary Range).
+  125 | function chiefDirectorateField(page: Page): Locator { return textInputFor(page, 'model_chiefDirectorate'); }
+  126 | function jobPurposeField(page: Page): Locator { return textInputFor(page, 'model_jobPurpose'); }
+  127 | function directorateField(page: Page): Locator { return textInputFor(page, 'model_directorate'); }
+  128 | function subDirectorateField(page: Page): Locator { return textInputFor(page, 'model_subDirectorate'); }
+  129 | function postReportsToField(page: Page): Locator { return textInputFor(page, 'model_postReportsTo'); }
+  130 | function notchField(page: Page): Locator { return formItemByLabel(page, 'model_notch').locator('input[role="spinbutton"]').first(); }
+  131 | function promotionToNextHigherPostField(page: Page): Locator { return textInputFor(page, 'model_promotionToNextHigherPost'); }
+  132 | 
+  133 | async function handleSalaryRange(page: Page) {
+  134 |   await page.waitForTimeout(1200);
+  135 |   const select = salaryRangeSelect(page);
+  136 |   if ((await select.count()) > 0) {
+  137 |     await selectFirstAvailableOption(page, select);
+  138 |   } else {
+  139 |     await expect(salaryRangeFormItem(page).locator('.read-only-display-form-item')).not.toHaveText('', { timeout: 15000 });
+  140 |   }
+  141 | }
+  142 | 
+  143 | function closingDateInput(page: Page): Locator {
+  144 |   return formItemByLabel(page, 'model_closingDate').locator('.ant-picker input').first();
+  145 | }
+  146 | 
+  147 | function nextButton(page: Page): Locator {
+  148 |   return page.getByRole('button', { name: 'Next', exact: true });
+  149 | }
+  150 | 
+  151 | function dropdownList(page: Page): Locator {
+  152 |   return page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden)').first();
+  153 | }
+  154 | 
+```
