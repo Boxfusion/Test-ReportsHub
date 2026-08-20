@@ -1,0 +1,13 @@
+{
+  "totalPlans": 33,
+  "totalRuns": 33,
+  "last7Runs": 10,
+  "last7Pass": 9,
+  "last7PassPct": 90,
+  "failingFlows": 3,
+  "lastRun": {
+    "date": "2026-07-17",
+    "result": "PASSED",
+    "plan": "test-plans/Memo/verify-reassign-function.md"
+  }
+}

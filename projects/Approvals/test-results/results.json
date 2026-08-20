@@ -1,0 +1,112 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Reuben\\IdeaProjects\\eSubmissions Claude Automation\\Test-ReportsHub\\playwright.config.ts",
+    "rootDir": "C:/Users/Reuben/IdeaProjects/eSubmissions Claude Automation/Test-ReportsHub",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Reuben/IdeaProjects/eSubmissions Claude Automation/Test-ReportsHub/projects/Approvals/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Reuben/IdeaProjects/eSubmissions Claude Automation/Test-ReportsHub",
+        "testIgnore": [],
+        "testMatch": [
+          "projects/**/test-plans/**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ],
+      [
+        "list"
+      ],
+      [
+        "C:\\Users\\Reuben\\IdeaProjects\\eSubmissions Claude Automation\\Test-ReportsHub\\node_modules\\allure-playwright\\dist\\index.js"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "projects\\Approvals\\test-plans\\Memo\\verify-reassign-function.spec.ts",
+      "file": "projects/Approvals/test-plans/Memo/verify-reassign-function.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-01 — Verify Reassign Function",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32440,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-17T07:07:14.406Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b2bf345f3d60037917c3-b4ab438fa2e7d27099aa",
+          "file": "projects/Approvals/test-plans/Memo/verify-reassign-function.spec.ts",
+          "line": 121,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-17T07:07:13.550Z",
+    "duration": 34994.875,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
