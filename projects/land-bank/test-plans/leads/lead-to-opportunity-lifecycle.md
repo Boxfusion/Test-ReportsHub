@@ -42,6 +42,12 @@
 
 > **Naming note (recorded live 2026-07-31):** the Lead Channel reflist renders the branch option as **`Landbank Branch`** (one word, no space) — not "Land Bank Branch". Available options are *Landbank Branch, Online Digital Channel, Landbank Partnerships, Call Centre*.
 
+> **Regression noted 2026-08-20 — `Sole Proprietor (Individual)` is no longer selectable.** When this plan was recorded on
+> 2026-07-31 the Client Type dropdown offered **9** options, including `Sole Proprietor (Individual)`. As of 2026-08-20 it offers
+> only **8** — Sole Proprietor is filtered out by the form even though it remains in the `LandBank.Crm/ClientType` reference list
+> (item value 3). Tracked as **BUG-LB-007** in [branch-manual-document-upload.md](branch-manual-document-upload.md). No test case
+> in *this* plan uses Sole Proprietor, so none of its coverage is affected; only the recorded option list is stale for that entry.
+
 ## Preconditions
 - [ ] App is reachable at the Dev URL (`DEV_APP_URL`)
 - [ ] Valid RM credentials are present in `.env` (`RM_USERNAME` / `RM_PASSWORD`)

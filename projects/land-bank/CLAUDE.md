@@ -59,6 +59,32 @@ Specs resolve these at run time via `credsFor(role)` / `loginAs(page, 'ADMIN')` 
 | **Bug log** | `test-reports/bugs/<name>.md` |
 | **Screenshots / traces / videos** | `test-results/artifacts/` |
 
+## Prerequisite — Java on PATH for Allure
+
+`/RunTest` renders an Allure report on every run, and `npx allure generate` needs a JDK. On this machine
+the JDK **is** installed via Homebrew (`brew list` → `openjdk`, OpenJDK 26) but Homebrew keeps it
+**keg-only**: it is never symlinked into `/Library/Java/JavaVirtualMachines/`, which is the only place
+the macOS `/usr/bin/java` stub and `/usr/libexec/java_home` look. The result is a misleading
+*"Unable to locate a Java Runtime"* even though a working JDK is present at
+`/opt/homebrew/opt/openjdk/bin/java`.
+
+Either prefix the Allure command:
+```bash
+PATH="/opt/homebrew/opt/openjdk/bin:$PATH" npx allure generate projects/land-bank/allure-results \
+  --clean --single-file -o projects/land-bank/allure-report
+```
+…or fix it once, so every shell picks it up:
+```bash
+sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+# or add to ~/.zshrc:  export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+```
+
+> **Report size warning.** `--single-file` inlines every attachment. A run with many failures embeds
+> each trace (~13 MB) and video, which produced a **157 MB** `allure-report/index.html` on
+> 2026-08-20. `allure-report/` is **not** gitignored, so check the size before committing or running
+> `/submit-test-results`. Consider gitignoring it, dropping `--single-file`, or trimming
+> `trace`/`video` retention in `playwright.config.ts`.
+
 ## Core Constraints
 - **Plans are markdown.** `.md` files in [test-plans/](test-plans/) are canonical.
 - **Specs are derived.** Don't hand-edit `.spec.ts` outside of AI-repair flow.
