@@ -4,7 +4,7 @@
 **Severity:** **Blocker** — unrecoverable loss of user-entered data, with no warning and no feedback
 **Environment:** QA · public portal · form `boxfusion.dsdnpo/create-npo v61`
 **Affects:** the NPO registration wizard (Tab 2 *Organisation Details* ↔ Tab 4 *Office Bearer*)
-**Status:** Cause proven at payload level. Not yet raised with the test lead.
+**Status:** ⚠️ **NOT REPRODUCING as of 2026-08-18** — retested deliberately on two applications and the office bearers survived; see *Retest 2026-08-18* at the foot of this file. Do **not** close until Thabiso confirms a fix went in.
 
 ## Summary
 
@@ -100,3 +100,44 @@ child collection the payload omits (objectives and area-of-operations survive to
 1. Is `CreateAndUpdateApplicationAsync` intended to replace child collections? If so, the wizard must send them.
 2. Are any **other** child collections at risk from the same endpoint? Objectives and province operations survived
    this test, but I have not proven they always will.
+
+---
+
+## ⚠️ Retest 2026-08-18 — DOES NOT REPRODUCE
+
+Retested explicitly because the "never revisit Tab 2" workaround shapes the sequencing of every run. Measured against
+the database **immediately before and immediately after the single action**, per the method lesson from the original
+diagnosis, on two different applications and two different legal forms:
+
+| Application | Legal form | OBs before | Action | OBs after |
+|---|---|---|---|---|
+| APPL26-00793 | Voluntary Association | **1** | `Next` on Organisation Details, **nothing changed** | **1** — same row id `1be56de2-…`, `isOfficeBearerDeleted:false` |
+| APPL26-01270 | Trust | **3** | `Next` on Organisation Details, ×2 during the run | **3** — same three row ids |
+
+The VA case is *exactly* the original recipe (1 OB saved → `Next` with nothing changed → 0). It now returns 1.
+Counting the incidental Trust observation on 2026-08-17, that is **three non-reproductions**.
+
+### The payload has NOT changed — so the fix is server-side
+Captured from the live `CreateAndUpdateApplicationAsync` request during the retest. The body still carries **no
+office-bearer collection**, only the scalar `officeBearerTerm` — i.e. the condition originally blamed for the wipe is
+still present:
+
+```
+name, shortName, contactMobileNo, emailAddress, whatsappNumber, telephone, incomeTaxNumber,
+financialPeriod, physicalAddress, postalAddress, operationProvinces, operationCountries,
+isCipcRegNumberVerified, type, itRegistrationNo, npcRegistrationNo, membership,
+approvedConstitutionalDate, officeBearerTerm
+```
+
+So the server no longer empties the absent collection. Something changed **behind** the endpoint between 08-14 and
+08-17/18.
+
+### What this does and does not establish
+- The original finding was **DB-measured** and reproduced at the time, so this is not a retraction of the 08-14 result.
+- Three clean non-reproductions across VA and Trust is strong evidence the defect is **fixed**, not merely dormant.
+- It has **not** been re-tested on an **NPC**, which is the form involved in the separate "resumed draft cannot leave
+  Tab 2" blocker. Worth one more pass there before declaring it closed.
+
+▶ **Action: ask Thabiso whether a fix was deployed.** If yes, close this and retire the "never revisit Tab 2" rule that
+currently constrains every test run. If no, treat the wipe as **intermittent**, which would make it harder to trust,
+not easier.

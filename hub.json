@@ -1,6 +1,29 @@
 {
-  "generated": "2026-08-14T09:41:37.711Z",
+  "generated": "2026-08-21T07:58:09.389Z",
   "projects": [
+    {
+      "name": "Approvals",
+      "displayName": "Approvals",
+      "appUrl": null,
+      "environment": null,
+      "sourceRepo": null,
+      "description": null,
+      "health": "failing",
+      "summary": {
+        "totalPlans": 33,
+        "totalRuns": 33,
+        "last7Runs": 10,
+        "last7Pass": 9,
+        "last7PassPct": 90,
+        "failingFlows": 3,
+        "lastRun": {
+          "date": "2026-07-17",
+          "result": "PASSED",
+          "plan": "test-plans/Memo/verify-reassign-function.md"
+        }
+      },
+      "href": "projects/Approvals/index.html"
+    },
     {
       "name": "dep",
       "displayName": "Dep Admin Portal",
@@ -33,19 +56,42 @@
       "description": "Hybrid Markdown + Playwright test reports for the Department of Social Development NPO registration and compliance portal (public applicant portal + DSD admin portal).",
       "health": "failing",
       "summary": {
-        "totalPlans": 23,
-        "totalRuns": 22,
-        "last7Runs": 22,
-        "last7Pass": 5,
-        "last7PassPct": 23,
-        "failingFlows": 3,
+        "totalPlans": 46,
+        "totalRuns": 52,
+        "last7Runs": 30,
+        "last7Pass": 3,
+        "last7PassPct": 10,
+        "failingFlows": 21,
         "lastRun": {
-          "date": "2026-08-14",
-          "result": "PASSED",
+          "date": "2026-08-21",
+          "result": "PARTIAL",
           "plan": "test-plans/npo-registration/03-wizard-org-details-objectives.md"
         }
       },
       "href": "projects/DSD-NPO/index.html"
+    },
+    {
+      "name": "eRecruitment",
+      "displayName": "eRecruitment Public Portal",
+      "appUrl": "https://pd-recruitment-publicportal-1-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-recruitment",
+      "description": "Hybrid Markdown + Playwright test reports for the eRecruitment Public Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 121,
+        "totalRuns": 127,
+        "last7Runs": 86,
+        "last7Pass": 72,
+        "last7PassPct": 84,
+        "failingFlows": 3,
+        "lastRun": {
+          "date": "2026-08-06",
+          "result": "PASSED",
+          "plan": "test-plans/AdminPortal/verify-appointed-ref43-completeflow.md"
+        }
+      },
+      "href": "projects/eRecruitment/index.html"
     },
     {
       "name": "HCM",
@@ -194,14 +240,14 @@
       "description": "Hybrid Markdown + Playwright test reports for PMDS (Performance Management & Development System) — a module of the HCM Admin Portal (same site as eLeave).",
       "health": "healthy",
       "summary": {
-        "totalPlans": 0,
-        "totalRuns": 57,
-        "last7Runs": 12,
-        "last7Pass": 12,
+        "totalPlans": 2,
+        "totalRuns": 70,
+        "last7Runs": 24,
+        "last7Pass": 24,
         "last7PassPct": 100,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-08-11",
+          "date": "2026-08-17",
           "result": "PASSED",
           "plan": null
         }
@@ -232,6 +278,25 @@
       "href": "projects/invoice-tracking/index.html"
     },
     {
+      "name": "ITS",
+      "displayName": "ITS",
+      "appUrl": null,
+      "environment": null,
+      "sourceRepo": null,
+      "description": null,
+      "health": "unknown",
+      "summary": {
+        "totalPlans": 0,
+        "totalRuns": 0,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
+        "failingFlows": 0,
+        "lastRun": null
+      },
+      "href": "projects/ITS/index.html"
+    },
+    {
       "name": "PD-Dispatch",
       "displayName": "PD-Dispatch",
       "appUrl": "https://pd-dispatcher-v2-adminportal-qa.shesha.app/login",
@@ -256,10 +321,10 @@
     }
   ],
   "totals": {
-    "totalProjects": 11,
-    "totalPlans": 75,
-    "totalRuns": 266,
-    "last7Runs": 135,
-    "failingFlows": 22
+    "totalProjects": 14,
+    "totalPlans": 254,
+    "totalRuns": 469,
+    "last7Runs": 251,
+    "failingFlows": 46
   }
 }
