@@ -1,12 +1,12 @@
 {
   "project": "land-bank",
-  "displayName": "land-bank",
+  "displayName": "Land Bank CRM",
   "meta": {
-    "displayName": "land-bank",
-    "appUrl": null,
-    "environment": null,
+    "displayName": "Land Bank CRM",
+    "appUrl": "https://landbankcrm-adminportal-landbankcrmdev.shesha.app",
+    "environment": "Dev",
     "sourceRepo": null,
-    "description": null,
+    "description": "Hybrid Markdown + Playwright test reports for the Land Bank CRM Admin Portal.",
     "source": {
       "kind": "local"
     }
@@ -2812,5 +2812,5 @@
       ]
     }
   ],
-  "generated": "2026-08-21T12:37:22.691Z"
+  "generated": "2026-08-21T13:10:06.838Z"
 }
