@@ -34,8 +34,16 @@ function readJsonSafe(file) {
 function healthOf(summary) {
   if (!summary || !summary.lastRun) return 'unknown';
   if (summary.failingFlows > 0) return 'failing';
-  if (summary.lastRun.result === 'PARTIAL') return 'partial';
-  if (summary.lastRun.result === 'PASSED') return 'healthy';
+  // Match the result KEYWORD rather than the whole string. A run report's `**Result:**` line is
+  // free text and several projects decorate it, e.g.
+  //   "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED** (11/11 STEPS)"
+  //   "PASSED — TENDER REACHED **AWARDED → COMPLETED** …"
+  // An exact `=== 'PASSED'` comparison silently fell through to 'unknown' for those, so genuinely
+  // passing projects were shown as unknown on the landing page.
+  const result = String(summary.lastRun.result || '').toUpperCase();
+  if (/\bFAILED\b/.test(result)) return 'failing';
+  if (/\bPARTIAL\b/.test(result)) return 'partial';
+  if (/\bPASSED\b/.test(result)) return 'healthy';
   return 'unknown';
 }
 
