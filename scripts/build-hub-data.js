@@ -34,9 +34,23 @@ function readJsonSafe(file) {
 function healthOf(summary) {
   if (!summary || !summary.lastRun) return 'unknown';
   if (summary.failingFlows > 0) return 'failing';
-  if (summary.lastRun.result === 'PARTIAL') return 'partial';
-  if (summary.lastRun.result === 'PASSED') return 'healthy';
-  return 'unknown';
+  // Match the result KEYWORD rather than the whole string. A run report's `**Result:**` line is
+  // free text and projects decorate it, so `lastRun.result` is not always a bare token:
+  //   "PASSED — INVOICE **PAID + FILED**"
+  //   "✅ PASSED — FULL CHAIN COMPLETE (11/11 STEPS)"
+  // An exact `=== 'PASSED'` comparison silently fell through to 'unknown' for those, so genuinely
+  // passing projects were shown as unknown on the landing page.
+  //
+  // Take whichever keyword appears EARLIEST, not the first one we happen to test for. A summary
+  // line routinely mentions the other outcomes in its prose — "PARTIAL — 12 passed / 1 failed"
+  // contains all three words — so testing in a fixed order misclassifies it. The status is the
+  // leading token, so earliest-wins reads it correctly.
+  const result = String(summary.lastRun.result || '').toUpperCase();
+  const hit = [['FAILED', 'failing'], ['PARTIAL', 'partial'], ['PASSED', 'healthy']]
+    .map(([keyword, health]) => [result.search(new RegExp(`\\b${keyword}\\b`)), health])
+    .filter(([at]) => at >= 0)
+    .sort((a, b) => a[0] - b[0])[0];
+  return hit ? hit[1] : 'unknown';
 }
 
 function build() {
