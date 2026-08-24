@@ -231,6 +231,12 @@
     const meta = data.meta || {};
     const kpis = data.kpis || {};
     const displayName = data.displayName || meta.displayName || data.project;
+
+    // The shell's static <title> is generic ("Test Reports Hub · Boxfusion") because one template
+    // serves every project. Restore the per-project title here so browser tabs, bookmarks and
+    // history are distinguishable — the old pre-rendered dashboards did this server-side.
+    document.title = `${displayName} · Test Reports Hub`;
+
     const envChip = meta.environment ? `<span class="env-chip">${esc(meta.environment)}</span>` : '';
     const appUrlLink = meta.appUrl
       ? `<a href="${esc(meta.appUrl)}" target="_blank" rel="noreferrer">${esc(meta.appUrl)}</a>`

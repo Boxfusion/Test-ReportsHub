@@ -1,12 +1,12 @@
 {
-  "project": "invoice-tracking",
-  "displayName": "Invoice Tracking",
+  "project": "PD-Dispatch",
+  "displayName": "PD-Dispatch",
   "meta": {
-    "displayName": "Invoice Tracking",
-    "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
+    "displayName": "PD-Dispatch",
+    "appUrl": "https://pd-dispatcher-v2-adminportal-qa.shesha.app/login",
     "environment": "QA",
-    "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
-    "description": "Hybrid Markdown + Playwright test reports for the Invoice Tracking (ITS) Admin Portal.",
+    "sourceRepo": "https://dev.azure.com/boxfusion/pd-dispatcher-V2",
+    "description": "Hybrid Markdown + Playwright test reports for PD-Dispatch — the Boxfusion master Dispatcher Admin Portal (upstream of NC Dispatch; tested first before promotion to the client site).",
     "source": {
       "kind": "local"
     }
@@ -21,15 +21,15 @@
   ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 2,
-    "totalRuns": 21,
+    "totalPlans": 0,
+    "totalRuns": 18,
     "last7Runs": 0,
     "last7Pass": 0,
     "last7PassPct": null,
     "failingFlows": 0,
-    "passingFlows": 8,
+    "passingFlows": 11,
     "partialFlows": 0,
-    "neverFlows": 1
+    "neverFlows": 0
   },
   "heatmap": {
     "weeks": 52,
@@ -2130,15 +2130,15 @@
       },
       {
         "iso": "2026-06-18",
-        "runs": 10,
-        "passed": 6,
+        "runs": 0,
+        "passed": 0,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-06-19",
-        "runs": 2,
-        "passed": 1,
+        "runs": 0,
+        "passed": 0,
         "failed": 0,
         "partial": 0
       },
@@ -2158,14 +2158,14 @@
       },
       {
         "iso": "2026-06-22",
-        "runs": 7,
-        "passed": 1,
+        "runs": 0,
+        "passed": 0,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-06-23",
-        "runs": 2,
+        "runs": 0,
         "passed": 0,
         "failed": 0,
         "partial": 0
@@ -2256,8 +2256,8 @@
       },
       {
         "iso": "2026-07-06",
-        "runs": 0,
-        "passed": 0,
+        "runs": 13,
+        "passed": 11,
         "failed": 0,
         "partial": 0
       },
@@ -2305,7 +2305,7 @@
       },
       {
         "iso": "2026-07-13",
-        "runs": 0,
+        "runs": 5,
         "passed": 0,
         "failed": 0,
         "partial": 0
@@ -2585,286 +2585,180 @@
       }
     ]
   },
-  "sections": [
-    {
-      "key": "invoice-process",
-      "title": "Invoice Process",
-      "stripPrefix": "test-plans/invoice-process/",
-      "plans": [
-        {
-          "plan": "test-plans/invoice-process/bas.md",
-          "planHref": "test-plans/invoice-process/bas.md",
-          "spec": "test-plans/invoice-process/bas.spec.ts",
-          "specHref": "test-plans/invoice-process/bas.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "passing",
-          "status": "PASSED",
-          "last": {
-            "date": "2026-06-19",
-            "result": "PASSED",
-            "duration": "~24 min (07:57–08:20 local)",
-            "variant": null,
-            "reportHref": "test-reports/2026-06-19/bas-full-chain-PAY10087.md"
-          },
-          "runCount": 2,
-          "history": [
-            {
-              "date": "2026-06-19",
-              "result": "PASSED",
-              "duration": "~24 min (07:57–08:20 local)",
-              "variant": null
-            },
-            {
-              "date": "2026-06-18",
-              "result": "PASSED (TC-01, TC-02)",
-              "duration": "~3 min",
-              "variant": null
-            }
-          ],
-          "bugs": []
-        },
-        {
-          "plan": "test-plans/invoice-process/logis.md",
-          "planHref": "test-plans/invoice-process/logis.md",
-          "spec": null,
-          "specHref": null,
-          "canRun": false,
-          "badges": [
-            {
-              "kind": "new",
-              "text": "NEW · never run"
-            },
-            {
-              "kind": "no-spec",
-              "text": "no .spec.ts yet"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
-          "bugs": []
-        }
-      ]
-    }
-  ],
+  "sections": [],
   "timeline": [
     {
-      "date": "2026-06-23",
+      "date": "2026-07-13",
       "runs": [
-        {
-          "plan": "test-plans/invoice-process/bas.md (TC-01 → TC-14, happy path)",
-          "planDisplay": "invoice-process/bas.md (TC-01 → TC-14, happy path)",
-          "variant": null,
-          "result": "PASSED — INVOICE **PAID + FILED**",
-          "duration": "~15 min",
-          "mode": "ai-driven (live MCP)",
-          "reportHref": "test-reports/2026-06-23/bas-full-chain-PAY10301.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/logis.md (TC-01 → TC-16, happy path)",
-          "planDisplay": "invoice-process/logis.md (TC-01 → TC-16, happy path)",
-          "variant": null,
-          "result": "PASSED — INVOICE **PAID + FILED**",
-          "duration": "~19 min",
-          "mode": "ai-driven (live MCP)",
-          "reportHref": "test-reports/2026-06-23/logis-full-chain-PAY10307.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-22",
-      "runs": [
-        {
-          "plan": "test-plans/invoice-process/bas.md (TC-02 → TC-14, plus TC-09 supplier-query branch ×2)",
-          "planDisplay": "invoice-process/bas.md (TC-02 → TC-14, plus TC-09 supplier-query branch ×2)",
-          "variant": null,
-          "result": "PASSED — INVOICE **PAID + FILED**",
-          "duration": "~35 min (incl. role switches + file-import prep)",
-          "mode": "ai-driven (live MCP)",
-          "reportHref": "test-reports/2026-06-22/bas-full-chain-PAY10259.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/bas.md (TC-02 → TC-14, plus TC-08 business-query branch)",
-          "planDisplay": "invoice-process/bas.md (TC-02 → TC-14, plus TC-08 business-query branch)",
-          "variant": null,
-          "result": "PASSED — INVOICE **PAID + FILED**",
-          "duration": "~14 min",
-          "mode": "ai-driven (live MCP)",
-          "reportHref": "test-reports/2026-06-22/bas-full-chain-PAY10268.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/bas.md (TC-05 neg, TC-06, TC-08, TC-09)",
-          "planDisplay": "invoice-process/bas.md (TC-05 neg, TC-06, TC-08, TC-09)",
-          "variant": null,
-          "result": "PASSED",
-          "duration": "~30 min (incl. role switches)",
-          "mode": "ai-driven (live MCP)",
-          "reportHref": "test-reports/2026-06-22/bas-negative-paths.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/bas.md (TC-02→05, TC-07 \"Reject Invoice\" branch, TC-06 Approve Rejection)",
-          "planDisplay": "invoice-process/bas.md (TC-02→05, TC-07 \"Reject Invoice\" branch, TC-06 Approve Rejection)",
-          "variant": null,
-          "result": "PASSED — WORKFLOW TERMINAL **REJECTED**",
-          "duration": "~10 min",
-          "mode": "ai-driven (live MCP)",
-          "reportHref": "test-reports/2026-06-22/bas-reject-invoice-PAY10275.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/logis.md (TC-06 Review Invoice Rejection, TC-09 Business Related Query, TC-10 Supplier Related Query)",
-          "planDisplay": "invoice-process/logis.md (TC-06 Review Invoice Rejection, TC-09 Business Related Query, TC-10 Supplier Related Query)",
-          "variant": null,
-          "result": "PASSED — ALL THREE LOGIS NEGATIVE BRANCHES EXERCISED ON OUR OWN INVOICES",
-          "duration": "~17 min",
-          "mode": "ai-driven (live MCP)",
-          "reportHref": "test-reports/2026-06-22/logis-negative-paths.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/logis.md (LOGIS-TC-04 — Re-route to Correct Business Unit/End-User)",
-          "planDisplay": "invoice-process/logis.md (LOGIS-TC-04 — Re-route to Correct Business Unit/End-User)",
-          "variant": null,
-          "result": "PASSED — INVOICE RE-ROUTED TO THE CORRECT BUSINESS UNIT AND RETURNED TO CERTIFY INVOICE UNDER THE NEW BU",
-          "duration": "~10 min",
-          "mode": "ai-driven (live MCP)",
-          "reportHref": "test-reports/2026-06-22/logis-reroute-correct-business-unit-PAY10280.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/logis.md (branch notes under TC-03/05/06/08/11/12) + registration validation",
-          "planDisplay": "invoice-process/logis.md (branch notes under TC-03/05/06/08/11/12) + registration validation",
-          "variant": null,
-          "result": "PASSED — ALL TARGETED SUB-BRANCHES EXERCISED ON OUR OWN INVOICES",
-          "duration": "~30 min",
-          "mode": null,
-          "reportHref": "test-reports/2026-06-22/logis-subbranch-variants.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-19",
-      "runs": [
-        {
-          "plan": "test-plans/invoice-process/bas.md",
-          "planDisplay": "invoice-process/bas.md",
-          "variant": null,
-          "result": "PASSED",
-          "duration": "~24 min (07:57–08:20 local)",
-          "mode": "ai-driven (live MCP browser, multi-role)",
-          "reportHref": "test-reports/2026-06-19/bas-full-chain-PAY10087.md"
-        },
         {
           "plan": null,
-          "planDisplay": "logis-full-chain-PAY10093.md",
+          "planDisplay": "admin-functions-crud.md",
           "variant": null,
           "result": "UNKNOWN",
           "duration": "",
           "mode": null,
-          "reportHref": "test-reports/2026-06-19/logis-full-chain-PAY10093.md"
+          "reportHref": "test-reports/2026-07-13/admin-functions-crud.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "admin-functions-smoke.md",
+          "variant": null,
+          "result": "UNKNOWN",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-13/admin-functions-smoke.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "incident-actions.md",
+          "variant": null,
+          "result": "PASSED (6/6) — EVERY ACTION CONFIRMED AT THE API LAYER (ENDPOINT + HTTP STATUS) AND IN THE UI.",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-13/incident-actions.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "incident-lifecycle-rerun.md",
+          "variant": null,
+          "result": "UNKNOWN",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-13/incident-lifecycle-rerun.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "scheduled-transfer-rerun.md",
+          "variant": null,
+          "result": "UNKNOWN",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-13/scheduled-transfer-rerun.md"
         }
       ]
     },
     {
-      "date": "2026-06-18",
+      "date": "2026-07-06",
       "runs": [
         {
-          "plan": "test-plans/invoice-process/bas.md (TC-02 … TC-14, all happy-path steps)",
-          "planDisplay": "invoice-process/bas.md (TC-02 … TC-14, all happy-path steps)",
+          "plan": "(ad-hoc live run — no paired plan yet) Management → each entity → View (details) · Edit (change grid-visible field + Save + verify) · Cancel (dismiss without persisting)",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → each entity → View (details) · Edit (change grid-visible field + Save + verify) · Cancel (dismiss without persisting)",
           "variant": null,
-          "result": "✅ PASSED END-TO-END — INVOICE **PAID** AND **FILED**",
-          "duration": "",
-          "mode": "live MCP-driven, headed",
-          "reportHref": "test-reports/2026-06-18/bas-FULL-CHAIN-COMPLETE-PAY10051.md"
+          "result": "PASSED (11/12 ENTITIES FULLY PASS VIEW+EDIT; INCIDENT TYPES = VIEW-ONLY BY DESIGN — EDIT NOT A SUPPORTED ACTION, AND ITS KNOWN-EMPTY VIEW IS AN ALREADY-LOGGED ISSUE, SO IT IS OUT OF SCOPE, NOT A FAILURE)",
+          "duration": "~20 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/admin-functions-crud.md"
         },
         {
-          "plan": "test-plans/invoice-process/bas.md (TC-03)",
-          "planDisplay": "invoice-process/bas.md (TC-03)",
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Agents → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Agents → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~3 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/agents-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Crews → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Crews → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/crews-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Devices → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Devices → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/devices-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Incident Types → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Incident Types → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~6 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/incident-types-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Points of Interest → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Points of Interest → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~3 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/points-of-interest-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Resources → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Resources → Add New",
+          "variant": null,
+          "result": "PASSED (WITH 1 OBSERVATION TO INVESTIGATE)",
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/resources-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Shift Assignments → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Shift Assignments → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~2.5 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/shift-assignments-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Shifts → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Shifts → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/shifts-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Site Types → inline add row",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Site Types → inline add row",
           "variant": null,
           "result": "PASSED",
           "duration": "~1.5 min",
-          "mode": "ai-repair (live MCP-driven, headed)",
-          "reportHref": "test-reports/2026-06-18/bas-assign-branch-finance-admin.md"
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/site-types-create.md"
         },
         {
-          "plan": "test-plans/invoice-process/bas.md (TC-04)",
-          "planDisplay": "invoice-process/bas.md (TC-04)",
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Stations → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Stations → Add New",
           "variant": null,
           "result": "PASSED",
-          "duration": "",
-          "mode": "ai-repair (live MCP-driven, headed)",
-          "reportHref": "test-reports/2026-06-18/bas-assign-responsible-person.md"
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/stations-create.md"
         },
         {
-          "plan": "test-plans/invoice-process/bas.md (TC-11)",
-          "planDisplay": "invoice-process/bas.md (TC-11)",
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Vehicle Types → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Vehicle Types → Add New",
           "variant": null,
           "result": "PASSED",
-          "duration": "",
-          "mode": "ai-repair (live MCP-driven, headed)",
-          "reportHref": "test-reports/2026-06-18/bas-authorise-invoice-voucher.md"
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/vehicle-types-create.md"
         },
         {
-          "plan": "test-plans/invoice-process/bas.md (TC-05)",
-          "planDisplay": "invoice-process/bas.md (TC-05)",
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Vehicles → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Vehicles → Add New",
           "variant": null,
           "result": "PASSED",
-          "duration": "",
-          "mode": "ai-repair (live MCP-driven, headed)",
-          "reportHref": "test-reports/2026-06-18/bas-certify-invoice.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/bas.md (TC-12, ADO #102360)",
-          "planDisplay": "invoice-process/bas.md (TC-12, ADO #102360)",
-          "variant": null,
-          "result": "FAILED — IMPORT ERRORED, PAYMENT NOT AUTHORISED",
-          "duration": "",
-          "mode": "live MCP-driven, headed",
-          "reportHref": "test-reports/2026-06-18/bas-final-authorise-payment-IMPORT-FAILED.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/bas.md (TC-07)",
-          "planDisplay": "invoice-process/bas.md (TC-07)",
-          "variant": null,
-          "result": "PASSED",
-          "duration": "",
-          "mode": "ai-repair (live MCP-driven, headed)",
-          "reportHref": "test-reports/2026-06-18/bas-prepare-voucher.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "bas-register-maake-payment-no-check.md",
-          "variant": null,
-          "result": "REGISTERED & SUBMITTED → ROUTED TO \"ASSIGN BRANCH FINANCE ADMIN TO ASSIGN CERTIFIER\" (RECEIVED)",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-06-18/bas-register-maake-payment-no-check.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/bas.md (TC-10)",
-          "planDisplay": "invoice-process/bas.md (TC-10)",
-          "variant": null,
-          "result": "PASSED",
-          "duration": "",
-          "mode": "ai-repair (live MCP-driven, headed)",
-          "reportHref": "test-reports/2026-06-18/bas-verify-voucher.md"
-        },
-        {
-          "plan": "test-plans/invoice-process/bas.md",
-          "planDisplay": "invoice-process/bas.md",
-          "variant": null,
-          "result": "PASSED (TC-01, TC-02)",
           "duration": "~3 min",
-          "mode": "ai-repair (live MCP-driven recording walk-through, headed)",
-          "reportHref": "test-reports/2026-06-18/bas.md"
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/vehicles-create.md"
         }
       ]
     }
   ],
-  "generated": "2026-08-21T13:36:47.393Z"
+  "generated": "2026-08-21T13:36:47.169Z"
 }
