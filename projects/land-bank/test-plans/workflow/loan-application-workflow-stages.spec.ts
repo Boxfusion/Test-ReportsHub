@@ -269,18 +269,195 @@ async function selectOption(scope: Page | Locator, page: Page, name: string, opt
 }
 
 /** Read the Inbox (or Opportunities) grid as rows of cell strings. */
-async function readGrid(page: Page): Promise<string[][]> {
-  return main(page).locator('div[role="row"]').evaluateAll((rows) =>
-    rows
-      .map((r) => Array.from(r.querySelectorAll('[role="cell"]')).map((c) => (c.textContent || '').trim()))
-      .filter((cells) => cells.length > 0)
+/**
+ * Raise the grid's page size until every row is on one page, so a single read covers the whole
+ * result set. Options offered are 5/10/20/30/40/50/100 per page; the default is 10.
+ *
+ * Throws rather than truncating if even the largest option cannot fit the result set — a silently
+ * capped read is what produced the false negatives this exists to prevent.
+ */
+async function expandPageSize(page: Page, scope: Locator, pagination: Locator): Promise<void> {
+  const parseRange = async () => {
+    const text = (await pagination.innerText()).replace(/\s+/g, ' ');
+    const m = text.match(/(\d+)\s*-\s*(\d+)\s+of\s+(\d+)/i);
+    return m ? { shownTo: Number(m[2]), total: Number(m[3]) } : null;
+  };
+
+  const range = await parseRange();
+  // No "a-b of c" range means an empty result set ("0 items found") or an unpaginated grid.
+  if (!range || range.shownTo >= range.total) return;
+
+  const sizeTrigger = pagination.locator('.ant-pagination-options .ant-select-selector');
+  if ((await sizeTrigger.count()) === 0) return; // no size changer to work with
+  await sizeTrigger.click();
+
+  // Scope option reads to THIS select's own listbox via aria-controls. An unscoped
+  // `.ant-select-dropdown` read can pick up a stale dropdown that has not yet gained `-hidden`.
+  const listId = await pagination
+    .locator('.ant-pagination-options input[role="combobox"]')
+    .getAttribute('aria-controls');
+  const dropdown = listId
+    ? page.locator('.ant-select-dropdown').filter({ has: page.locator(`#${listId}`) })
+    : page.locator('.ant-select-dropdown').last();
+  const options = dropdown.locator('.ant-select-item-option');
+  await expect(options.first()).toBeVisible({ timeout: LONG });
+
+  const labels = await options.evaluateAll((els) =>
+    els.map((e) => e.getAttribute('title') || e.textContent || '')
   );
+  const largest = labels
+    .map((l, i) => ({ size: Number((l.match(/\d+/) ?? ['0'])[0]), i }))
+    .sort((a, b) => b.size - a.size)[0];
+  expect(largest, 'the page-size selector offered no numeric options').toBeTruthy();
+
+  await options.nth(largest.i).click();
+  await expect(pagination).toContainText(new RegExp(`${largest.size}\\s*/\\s*page`), { timeout: LONG });
+
+  const after = await parseRange();
+  if (after && after.shownTo < after.total) {
+    throw new Error(
+      `grid has ${after.total} rows but the largest page size (${largest.size}) shows only ` +
+        `${after.shownTo}; readGrid would silently truncate. Filter the grid or add paging support.`
+    );
+  }
 }
 
-/** Inbox columns recorded live. */
-const INBOX = { refNo: 1, initiator: 2, type: 3, name: 4, action: 5, received: 6 } as const;
-/** Opportunities grid columns recorded live. */
-const OPP = { appNo: 4, status: 6 } as const;
+async function readGrid(page: Page): Promise<string[][]> {
+  const scope = main(page);
+
+  // WAIT for the grid's fetch to have resolved before snapshotting.
+  //
+  // `evaluateAll` takes an INSTANTANEOUS snapshot with no auto-waiting, so calling this straight
+  // after a navigation returns `[]` — which a caller cannot distinguish from a genuinely empty
+  // grid. That is not theoretical: the same mistake in both lead plans' TC-12 made those tests
+  // `test.skip` themselves with a plausible-sounding reason on every single run, so they never
+  // executed once and hid a real defect (BUG-LB-014) for an entire session.
+  //
+  // We must NOT simply wait for a row to appear: two callers legitimately expect zero rows —
+  // the terminated-application check asserts no outstanding Inbox action remains, and the
+  // cross-check of captured parties tolerates an empty result set.
+  //
+  // The pagination summary is the correct signal because it renders in BOTH states. Verified live
+  // on the Inbox grid, 2026-08-24:
+  //   populated → "1-10 of 13 items"
+  //   empty     → "0 items found"      (no `.ant-empty`, no placeholder row)
+  //
+  // NOTE: no trailing `\b` on the pattern. The pagination's rendered text runs the summary straight
+  // into the page-number buttons with no separator — "1-10 of 13 items1210 / page" — so `items\b`
+  // never matches, because "s" and "1" are both word characters. Same trap as the lead-details
+  // assertions; see the Recording Notes in ../leads/online-digital-channel-lead-capture.md.
+  const pagination = scope.locator('.ant-pagination').first();
+  await expect(pagination, 'the grid never finished loading').toBeVisible({ timeout: LONG });
+  await expect(pagination, 'the grid never reported a row total').toContainText(/\d+\s*items?/i, {
+    timeout: LONG,
+  });
+
+  // Make sure we are reading the WHOLE grid, not just page 1.
+  //
+  // These grids paginate at 10 rows. Every caller that looks up a row by Ref No or Application
+  // Number was therefore searching one page and concluding "not present" — a false negative that
+  // looks exactly like missing data. TC-03 surfaced it: the Inbox listed outstanding actions whose
+  // matching Opportunity statuses sat on pages 2-4, so the cross-check compared incomplete sets.
+  await expandPageSize(page, scope, pagination);
+
+  // Re-resolve the column positions for whichever grid is on screen. Doing it here — rather than
+  // from hardcoded ordinals — means every `r[INBOX.action]` / `r[OPP.status]` in the tests below
+  // reads the right column even when a grid gains or loses one. See resolveColumns().
+  const resolved = resolveColumns(
+    await scope.locator('[role="columnheader"]').evaluateAll((hs) => hs.map((h) => (h.textContent || '').trim()))
+  );
+
+  const rows = () =>
+    scope.locator('div[role="row"]').evaluateAll((rs) =>
+      rs
+        .map((r) => Array.from(r.querySelectorAll('[role="cell"]')).map((c) => (c.textContent || '').trim()))
+        .filter((cells) => cells.length > 0)
+    );
+
+  // WAIT for the reference-list columns to HYDRATE.
+  //
+  // Pagination resolving proves the row fetch returned, but not that the rows are readable yet:
+  // `Application Status`, `Application Type` and `Action Required` render from reference lists that
+  // are fetched separately, so those cells are '' for a moment after the row appears. A browser
+  // session that has already cached the reference lists shows them instantly, which is why this is
+  // invisible when reproducing by hand and only bites a clean context — verified 2026-08-24, where
+  // a fresh context read `["…","OPP-2026-001396","LA-2026-001396","",""]` with Application Status
+  // blank while an already-warm session read "Draft" in the same column.
+  //
+  // Reading one cell too early does not fail loudly, it yields '' — which a status assertion
+  // reports as an unknown status, sending you looking for a data problem that does not exist.
+  if (resolved) {
+    await expect
+      .poll(async () => {
+        const current = await rows();
+        if (current.length === 0) return true; // legitimately empty grid — nothing to hydrate
+        return current.every((r) => (r[resolved.hydrationColumn] ?? '') !== '');
+      }, { timeout: LONG, message: 'grid reference-list columns never hydrated' })
+      .toBe(true);
+  }
+
+  return rows();
+}
+
+/**
+ * Grid column positions, resolved from the rendered header row at run time.
+ *
+ * These used to be hardcoded ordinals recorded live. That drifted: the Opportunities grid gained
+ * two columns, so `appNo: 4` silently began reading **Application Type** ("Entity") and `status: 6`
+ * read the application number. Nothing failed loudly — the values were simply the wrong column, and
+ * a regex filter on them quietly matched nothing. Resolving by header text is immune to columns
+ * being added, removed or reordered, which this suite has now been bitten by twice.
+ *
+ * Verified live 2026-08-24 —
+ *   Inbox:         Ref No · Initiator · Type · Name · Action Required · Received Date ·
+ *                  Period In Possession · Target Date · Status
+ *   Opportunities: Date Created · Account · Application Type · Reference No ·
+ *                  Application Number · Loan Amount · Application Status · …
+ * Both grids lead with unlabelled control columns, so the first data column is never index 0.
+ */
+const INBOX_HEADERS = {
+  refNo: 'Ref No',
+  initiator: 'Initiator',
+  type: 'Type',
+  name: 'Name',
+  action: 'Action Required',
+  received: 'Received Date',
+} as const;
+
+const OPP_HEADERS = {
+  appNo: 'Application Number',
+  status: 'Application Status',
+} as const;
+
+/**
+ * Live column positions. Populated by `readGrid` from the header row on every read, so they always
+ * describe the grid currently on screen. `-1` means "not resolved yet"; indexing a row with -1
+ * yields undefined rather than silently returning a neighbouring column's value.
+ */
+const INBOX = { refNo: -1, initiator: -1, type: -1, name: -1, action: -1, received: -1 };
+const OPP = { appNo: -1, status: -1 };
+
+/**
+ * Resolve whichever of the two column maps matches the headers currently rendered, and report the
+ * column that proves the row data has finished hydrating (see readGrid).
+ */
+function resolveColumns(headers: string[]): { hydrationColumn: number } | null {
+  const at = (text: string) => headers.findIndex((h) => h.toLowerCase() === text.toLowerCase());
+  let hydrationColumn: number | null = null;
+  for (const [map, spec, hydrationKey] of [
+    [INBOX, INBOX_HEADERS, 'action'],
+    [OPP, OPP_HEADERS, 'status'],
+  ] as const) {
+    const resolved = Object.entries(spec).map(([key, text]) => [key, at(text)] as const);
+    // Only adopt a map when EVERY one of its columns is present — otherwise the Inbox grid would
+    // half-populate OPP (and vice versa) and leave stale indices mixed with fresh ones.
+    if (resolved.every(([, i]) => i >= 0)) {
+      for (const [key, i] of resolved) (map as Record<string, number>)[key] = i;
+      hydrationColumn = (map as Record<string, number>)[hydrationKey];
+    }
+  }
+  return hydrationColumn === null ? null : { hydrationColumn };
+}
 
 async function openInbox(page: Page) {
   await page.getByRole('link', { name: 'Inbox', exact: true }).click();

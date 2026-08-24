@@ -217,7 +217,33 @@ Form `complete-pre-onboarding-checklist v16` (embedded in `loan-application-wf-p
 >
 > *Withdrawn: BUG-LB-004* previously claimed "Marital Status does not persist / no update request is ever issued". The observation was right but the **cause was misdiagnosed** — it was this Vat Number validation, not a broken save path. Marital Status persists correctly.
 
-## Recording Notes (2026-08-05)
+## Recording Notes (2026-08-05, extended 2026-08-24)
+
+### Reading these grids reliably — four separate traps, all fixed in `readGrid`
+
+`readGrid` was a bare `evaluateAll` snapshot with no waiting. Each of the following produced a
+**silent wrong answer** rather than a failure, which is the dangerous kind:
+
+1. **No load wait.** Called straight after a navigation it returned `[]`, indistinguishable from an
+   empty grid. Two callers `test.skip`'d themselves on that basis and therefore never ran. The fix
+   waits on the **pagination summary**, which renders in *both* states — `"1-10 of 13 items"` when
+   populated and `"0 items found"` when empty — so it works for the callers that legitimately expect
+   zero rows. Note the matcher has **no trailing `\b`**: the text runs into the page buttons
+   (`"1-10 of 13 items1210 / page"`), so `items\b` never matches.
+2. **Hardcoded column ordinals had drifted.** The Opportunities grid gained two columns, so
+   `appNo: 4` had silently become *Application Type* and `status: 6` the application number. Columns
+   are now resolved from the **header row text** on every read.
+3. **Reference-list columns hydrate late.** *Application Status*, *Application Type* and *Action
+   Required* render from separately-fetched reference lists, so they are `''` for a moment after the
+   row appears. **A warm browser session shows them instantly, so this is invisible when reproducing
+   by hand** — it only bites a clean context. `readGrid` now waits for the key column to be non-empty
+   on every row.
+4. **Only page 1 was ever read.** These grids paginate at 10. Any caller looking up a row by Ref No
+   or Application Number was searching one page and concluding "not present". `readGrid` now raises
+   the page size to the largest option (100) and **throws rather than truncating** if even that
+   cannot fit the result set. This alone made TC-12 start executing — the terminated applications it
+   looks for were sitting on page 2.
+
 
 - **Inbox** (`workflows-inbox`, heading **Incoming Items**) columns: *Ref No, Initiator, Type, Name, Action Required, Received Date, Period In Possession, Target Date, Status*. Div-based `role=row` / `role=cell` grid; the row's **first cell** holds `a.sha-link` → `/shesha/workflow-action?id=<instanceId>&todoid=<todoId>`. Rows are ordered **newest Received Date first**, so a freshly initiated application is the top row. The Inbox shows only the **current** outstanding action per instance.
 - Ref No format `LA<yyyy>/<nnnnn>` (e.g. `LA2026/14392`) — distinct from `OPP-2026-######` and the application number `LA-2026-######`. **The `todoid` changes at every stage transition while the `id` (instance) stays the same** — so a stage must be re-opened from the Inbox after each advance, never from a stored URL.
@@ -275,7 +301,31 @@ Form `complete-pre-onboarding-checklist v16` (embedded in `loan-application-wf-p
 
 ### TC-03 — Application status corresponds to the outstanding workflow action
 - **Type:** Happy path — cross-check
+- **Status: ⚠️ NOT EXECUTABLE AS WRITTEN — the two grids cannot be correlated (see below)**
 - **Depends on:** TC-01
+
+> **Blocked by an identifier mismatch, discovered 2026-08-24.** This TC correlates an Inbox row to
+> an Opportunity by matching the Inbox **Ref No** against the Opportunities **Application Number**.
+> Those two columns use different formats, and in the Dev data they do not overlap at all:
+>
+> | Grid | Column | Format | Example |
+> |---|---|---|---|
+> | Inbox | `Ref No` | `LA2026/#####` | `LA2026/14657` |
+> | Opportunities | `Application Number` | `LA-2026-######` | `LA-2026-001396` |
+>
+> Checked against the full result set of both grids (13 Inbox rows, all 32 Opportunities): **none of
+> the 13 Inbox refs appears in the Opportunities grid**, directly or with separators normalised. The
+> sequence numbers are not even in the same range (14657 vs 001396).
+>
+> So the correlation this TC is built on cannot be made from the two listings alone. Either the
+> Inbox is showing workflow instances for applications outside this RM's Opportunities list, or the
+> two identifiers are genuinely unrelated and the Application Number must be read from each
+> workflow item / Opportunity detail page instead of the grid.
+>
+> **This needs a product answer before the TC can be rewritten** — worth confirming with the team
+> whether an operator is expected to be able to tie an Inbox item to an Opportunity by eye. If not,
+> that is itself a usability finding. Until then the remaining assertions in this TC are unverifiable
+> and it is expected to FAIL.
 - **Steps:**
   - NAVIGATE to the Opportunities listing
   - SNAPSHOT — confirm the Application Status column
