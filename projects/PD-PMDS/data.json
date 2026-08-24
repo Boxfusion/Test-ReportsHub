@@ -1,5 +1,5 @@
 {
-  "project": "PD-PMDS",
+  "project": "PMDS",
   "displayName": "PMDS",
   "meta": {
     "displayName": "PMDS",
@@ -11,18 +11,12 @@
       "kind": "local"
     }
   },
-  "hasAllure": true,
-  "allureReports": [
-    {
-      "slug": null,
-      "label": null,
-      "href": "allure-report/index.html"
-    }
-  ],
+  "hasAllure": false,
+  "allureReports": [],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 0,
-    "totalRuns": 23,
+    "totalRuns": 0,
     "last7Runs": 0,
     "last7Pass": 0,
     "last7PassPct": null,
@@ -33,8 +27,253 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-08-23",
+    "startDate": "2025-07-19",
     "days": [
+      {
+        "iso": "2025-07-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-07-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
       {
         "iso": "2025-08-23",
         "runs": 0,
@@ -2312,272 +2551,27 @@
       },
       {
         "iso": "2026-07-14",
-        "runs": 4,
+        "runs": 0,
         "passed": 0,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-07-15",
-        "runs": 6,
+        "runs": 0,
         "passed": 0,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-07-16",
-        "runs": 8,
+        "runs": 0,
         "passed": 0,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-07-17",
-        "runs": 5,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-07-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-21",
         "runs": 0,
         "passed": 0,
         "failed": 0,
@@ -2586,234 +2580,6 @@
     ]
   },
   "sections": [],
-  "timeline": [
-    {
-      "date": "2026-07-17",
-      "runs": [
-        {
-          "plan": null,
-          "planDisplay": "mid-year-assessment-jabu.md",
-          "variant": null,
-          "result": "✅ PASS — FULL MID-YEAR HAPPY-PATH CHAIN COMPLETED TO **COMPLETED / AWAITING PERSAL SYNC**.",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-17/mid-year-assessment-jabu.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "mid-year-assessment-lungile.md",
-          "variant": null,
-          "result": "✅ PASS — FULL MID-YEAR HAPPY-PATH CHAIN COMPLETED TO **COMPLETED / AWAITING PERSAL SYNC**.",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-17/mid-year-assessment-lungile.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "mid-year-assessment-simmy.md",
-          "variant": null,
-          "result": "✅ PASS — FULL MID-YEAR HAPPY-PATH CHAIN COMPLETED; ASSESSMENT TERMINATES AT **AWAITING PERSAL SYNC** (COMPLETED ROLLUP).",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-17/mid-year-assessment-simmy.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "mid-year-dispute-sanele.md",
-          "variant": null,
-          "result": "✅ PASS — FULL MID-YEAR **RESOLVED-DISPUTE** CHAIN COMPLETED TO **COMPLETED**. NO UPDATE-SUBMIT BUG ENCOUNTERED (AS EXPECTED ON MID-YEAR).",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-17/mid-year-dispute-sanele.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "mid-year-dispute-unsuccessful-adam.md",
-          "variant": null,
-          "result": "✅ PASS (SCENARIO DRIVEN END-TO-END) — THE DISPUTE WAS **NOT RESOLVED** AT EITHER MEDIATION LEVEL; THE ASSESSMENT TERMINATES AT STATUS **NOT REQUIRED** (NOT COMPLETED).",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-17/mid-year-dispute-unsuccessful-adam.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-07-16",
-      "runs": [
-        {
-          "plan": null,
-          "planDisplay": "contracting-positive-batch-6-users.md",
-          "variant": null,
-          "result": "✅ PASS — ALL SIX USERS DRIVEN END-TO-END TO **COMPLETED** (GENERATE PERSAL INPUT). CONTRACTING DASHBOARD COMPLETED **0 → 6**.",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-16/contracting-positive-batch-6-users.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "happy-path-performance-agreement-sanele.md",
-          "variant": null,
-          "result": "✅ PASS — FULL HAPPY-PATH CHAIN COMPLETED (POSITIVE REVIEW, NO DISPUTE).",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-16/happy-path-performance-agreement-sanele.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "happy-path-performance-agreement-simmy.md",
-          "variant": null,
-          "result": "✅ PASS — FULL HAPPY-PATH CHAIN COMPLETED END-TO-END",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-16/happy-path-performance-agreement-simmy.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "mid-year-assessment-lungile.md",
-          "variant": null,
-          "result": "✅ PASS — FULL MID-YEAR HAPPY-PATH CHAIN COMPLETED; ASSESSMENT NOW PARKS AT **AWAITING PERSAL SYNC**.",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-16/mid-year-assessment-lungile.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "mid-year-assessment-simmy.md",
-          "variant": null,
-          "result": "✅ PASS — FULL MID-YEAR CHAIN COMPLETED TO **COMPLETED**.",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-16/mid-year-assessment-simmy.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "mid-year-dispute-sanele.md",
-          "variant": null,
-          "result": "✅ PASS — FULL MID-YEAR **RESOLVED-DISPUTE** CHAIN COMPLETED TO **COMPLETED**.",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-16/mid-year-dispute-sanele.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "refer-for-dispute-jabu.md",
-          "variant": null,
-          "result": "⚠️ PARTIAL — DISPUTE PATH DRIVEN UP TO THE MEDIATOR RESOLVED STEP; THE EMPLOYEE **\"UPDATE PERFORMANCE AGREEMENT WITH OUTCOMES\" SUBMIT IS BLOCKED BY AN APP DEFECT** (SEE BUG BELOW).",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-16/refer-for-dispute-jabu.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "refer-for-dispute-unsuccessful-adam.md",
-          "variant": null,
-          "result": "✅ PASS — UNSUCCESSFUL-MEDIATION PATH DRIVEN END-TO-END; PA PARKS AT \"UNDER APPEAL\" WITH NO DOWNSTREAM TASK.",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-16/refer-for-dispute-unsuccessful-adam.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-07-15",
-      "runs": [
-        {
-          "plan": null,
-          "planDisplay": "hr-verify-performance-agreement-simmy.md",
-          "variant": null,
-          "result": "UNKNOWN",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-15/hr-verify-performance-agreement-simmy.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "refer-for-dispute-performance-agreement-jabu.md",
-          "variant": null,
-          "result": "UNKNOWN",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-15/refer-for-dispute-performance-agreement-jabu.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "refer-for-dispute-unsuccessful-adam.md",
-          "variant": null,
-          "result": "UNKNOWN",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-15/refer-for-dispute-unsuccessful-adam.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "refer-for-dispute-unsuccessful-sanele.md",
-          "variant": null,
-          "result": "UNKNOWN",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-15/refer-for-dispute-unsuccessful-sanele.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "resolved-dispute-continuation-jabu.md",
-          "variant": null,
-          "result": "UNKNOWN",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-15/resolved-dispute-continuation-jabu.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "supervisor-review-performance-agreement-simmy.md",
-          "variant": null,
-          "result": "UNKNOWN",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-15/supervisor-review-performance-agreement-simmy.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-07-14",
-      "runs": [
-        {
-          "plan": null,
-          "planDisplay": "employee-draft-performance-agreement-simmy.md",
-          "variant": null,
-          "result": "UNKNOWN",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-14/employee-draft-performance-agreement-simmy.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "employee-draft-performance-agreement.md",
-          "variant": null,
-          "result": "UNKNOWN",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-14/employee-draft-performance-agreement.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "hr-verify-performance-agreement.md",
-          "variant": null,
-          "result": "UNKNOWN",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-14/hr-verify-performance-agreement.md"
-        },
-        {
-          "plan": null,
-          "planDisplay": "supervisor-review-performance-agreement.md",
-          "variant": null,
-          "result": "UNKNOWN",
-          "duration": "",
-          "mode": null,
-          "reportHref": "test-reports/2026-07-14/supervisor-review-performance-agreement.md"
-        }
-      ]
-    }
-  ],
-  "generated": "2026-08-21T13:36:47.203Z"
+  "timeline": [],
+  "generated": "2026-07-14T08:13:16.134Z"
 }

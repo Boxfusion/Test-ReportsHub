@@ -1,13 +1,13 @@
 {
   "totalPlans": 2,
   "totalRuns": 17,
-  "last7Runs": 0,
-  "last7Pass": 0,
-  "last7PassPct": null,
+  "last7Runs": 10,
+  "last7Pass": 5,
+  "last7PassPct": 50,
   "failingFlows": 0,
   "lastRun": {
     "date": "2026-07-29",
-    "result": "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED** (11/11 STEPS)",
+    "result": "PASSED",
     "plan": "test-plans/invoice-process/bas.md"
   }
 }

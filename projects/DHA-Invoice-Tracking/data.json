@@ -28,18 +28,165 @@
   "kpis": {
     "totalPlans": 2,
     "totalRuns": 17,
-    "last7Runs": 0,
-    "last7Pass": 0,
-    "last7PassPct": null,
+    "last7Runs": 10,
+    "last7Pass": 5,
+    "last7PassPct": 50,
     "failingFlows": 0,
-    "passingFlows": 0,
+    "passingFlows": 6,
     "partialFlows": 0,
     "neverFlows": 0
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-08-23",
+    "startDate": "2025-08-02",
     "days": [
+      {
+        "iso": "2025-08-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
       {
         "iso": "2025-08-23",
         "runs": 0,
@@ -2332,7 +2479,7 @@
       {
         "iso": "2026-07-16",
         "runs": 7,
-        "passed": 0,
+        "passed": 6,
         "failed": 1,
         "partial": 0
       },
@@ -2416,14 +2563,14 @@
       {
         "iso": "2026-07-28",
         "runs": 6,
-        "passed": 0,
+        "passed": 2,
         "failed": 0,
-        "partial": 0
+        "partial": 3
       },
       {
         "iso": "2026-07-29",
         "runs": 4,
-        "passed": 0,
+        "passed": 3,
         "failed": 0,
         "partial": 0
       },
@@ -2436,153 +2583,6 @@
       },
       {
         "iso": "2026-07-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-21",
         "runs": 0,
         "passed": 0,
         "failed": 0,
@@ -2602,17 +2602,12 @@
           "spec": "test-plans/invoice-process/bas.spec.ts",
           "specHref": "test-plans/invoice-process/bas.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED** (11/11 STEPS)",
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
             "date": "2026-07-29",
-            "result": "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED** (11/11 STEPS)",
+            "result": "PASSED",
             "duration": "~12 min (07:56 → 08:08 SAST)",
             "variant": null,
             "reportHref": "test-reports/2026-07-29/bas-full-chain-PAY3061.md"
@@ -2621,43 +2616,43 @@
           "history": [
             {
               "date": "2026-07-29",
-              "result": "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED** (11/11 STEPS)",
+              "result": "PASSED",
               "duration": "~12 min (07:56 → 08:08 SAST)",
               "variant": null
             },
             {
               "date": "2026-07-28",
-              "result": "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED** (11/11 STEPS)",
+              "result": "PASSED",
               "duration": "~17 min",
               "variant": null
             },
             {
               "date": "2026-07-28",
-              "result": "⚠️ PARTIAL — QUERY RAISED AT PREPARE VOUCHER AND ROUTED CORRECTLY TO \"RESOLVE QUERIES\"; THE **RESPONSE STEP COULD NOT BE EXECUTED — NO LOGIN FOR THE ASSIGNEE**",
+              "result": "PARTIAL",
               "duration": "~10 min",
               "variant": null
             },
             {
               "date": "2026-07-28",
-              "result": "✅ PASSED — REJECT RAISED AT PREPARE VOUCHER → REVIEW REJECTED INVOICE → SEND-BACK TO PREPARE VOUCHER → RE-REJECTED → **APPROVE REJECTION** → TERMINAL **REJECTED**",
+              "result": "PASSED",
               "duration": "~12 min",
               "variant": null
             },
             {
               "date": "2026-07-28",
-              "result": "⚠️ PARTIAL — QUERY RAISED AT PREPARE VOUCHER AND ROUTED CORRECTLY TO \"MANAGE SUPPLIER RELATED QUERIES\"; THE **RESPONSE STEP COULD NOT BE EXECUTED — NO LOGIN FOR THE ASSIGNEE**",
+              "result": "PARTIAL",
               "duration": "~10 min",
               "variant": null
             },
             {
               "date": "2026-07-28",
-              "result": "🔴 BLOCKED — `SUBMIT` ON REGISTER AND UPLOAD INVOICE RETURNS 500 ON BOTH BAS AND LOGIS; 0 OF 8 PLANNED CHAINS EXECUTABLE",
+              "result": "BLOCKED",
               "duration": "~2 h (investigation)",
               "variant": null
             },
             {
               "date": "2026-07-16",
-              "result": "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED**",
+              "result": "PASSED",
               "duration": "",
               "variant": null
             },
@@ -2687,19 +2682,15 @@
           "canRun": false,
           "badges": [
             {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            },
-            {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
             }
           ],
-          "rowStatus": "never",
-          "status": "✅ PASSED — **FULL LOGIS CHAIN COMPLETE ON TEST, INVOICE PAID + FILED (11/11 STEPS)**",
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
             "date": "2026-07-29",
-            "result": "✅ PASSED — **FULL LOGIS CHAIN COMPLETE ON TEST, INVOICE PAID + FILED (11/11 STEPS)**",
+            "result": "PASSED",
             "duration": "~24 min live (registration was done 2026-07-28)",
             "variant": null,
             "reportHref": "test-reports/2026-07-29/logis-full-chain-PAY3055.md"
@@ -2708,25 +2699,25 @@
           "history": [
             {
               "date": "2026-07-29",
-              "result": "✅ PASSED — **FULL LOGIS CHAIN COMPLETE ON TEST, INVOICE PAID + FILED (11/11 STEPS)**",
+              "result": "PASSED",
               "duration": "~24 min live (registration was done 2026-07-28)",
               "variant": null
             },
             {
               "date": "2026-07-29",
-              "result": "✅ PASSED — FULL LOGIS CHAIN **REGISTERED AND COMPLETED IN ONE RUN**, INVOICE **PAID + FILED** (11/11 STEPS)",
+              "result": "PASSED",
               "duration": "~11 min (07:50 → 08:01 SAST)",
               "variant": null
             },
             {
               "date": "2026-07-28",
-              "result": "⚠️ PARTIAL — THE LOGIS REGISTER 500 (`ACTIVITY_117VE9D`) IS **FIXED** AND REGISTRATION ROUTES CORRECTLY, BUT THE CHAIN IS **BLOCKED AT STEP 2 (CERTIFY INVOICE)** BY A SILENT 500: NO SUPERVISOR IN THE TEST ORG STRUCTURE",
+              "result": "PARTIAL",
               "duration": "~15 min",
               "variant": null
             },
             {
               "date": "2026-07-16",
-              "result": "✅ PASSED — FULL LOGIS CHAIN COMPLETE, INVOICE **PAID + FILED**",
+              "result": "PASSED",
               "duration": "",
               "variant": null
             }
@@ -2765,7 +2756,7 @@
           "plan": "test-plans/invoice-process/bas.md",
           "planDisplay": "invoice-process/bas.md",
           "variant": null,
-          "result": "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED** (11/11 STEPS)",
+          "result": "PASSED",
           "duration": "~12 min (07:56 → 08:08 SAST)",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-29/bas-full-chain-PAY3061.md"
@@ -2774,7 +2765,7 @@
           "plan": "test-plans/invoice-process/logis.md",
           "planDisplay": "invoice-process/logis.md",
           "variant": null,
-          "result": "✅ PASSED — **FULL LOGIS CHAIN COMPLETE ON TEST, INVOICE PAID + FILED (11/11 STEPS)**",
+          "result": "PASSED",
           "duration": "~24 min live (registration was done 2026-07-28)",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-29/logis-full-chain-PAY3055.md"
@@ -2783,7 +2774,7 @@
           "plan": "test-plans/invoice-process/logis.md",
           "planDisplay": "invoice-process/logis.md",
           "variant": null,
-          "result": "✅ PASSED — FULL LOGIS CHAIN **REGISTERED AND COMPLETED IN ONE RUN**, INVOICE **PAID + FILED** (11/11 STEPS)",
+          "result": "PASSED",
           "duration": "~11 min (07:50 → 08:01 SAST)",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-29/logis-full-chain-PAY3072.md"
@@ -2806,7 +2797,7 @@
           "plan": "test-plans/invoice-process/bas.md",
           "planDisplay": "invoice-process/bas.md",
           "variant": null,
-          "result": "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED** (11/11 STEPS)",
+          "result": "PASSED",
           "duration": "~17 min",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-28/bas-full-chain-PAY3035.md"
@@ -2815,7 +2806,7 @@
           "plan": "test-plans/invoice-process/bas.md",
           "planDisplay": "invoice-process/bas.md",
           "variant": null,
-          "result": "⚠️ PARTIAL — QUERY RAISED AT PREPARE VOUCHER AND ROUTED CORRECTLY TO \"RESOLVE QUERIES\"; THE **RESPONSE STEP COULD NOT BE EXECUTED — NO LOGIN FOR THE ASSIGNEE**",
+          "result": "PARTIAL",
           "duration": "~10 min",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-28/bas-negative-business-related-query-PAY3043.md"
@@ -2824,7 +2815,7 @@
           "plan": "test-plans/invoice-process/bas.md",
           "planDisplay": "invoice-process/bas.md",
           "variant": null,
-          "result": "✅ PASSED — REJECT RAISED AT PREPARE VOUCHER → REVIEW REJECTED INVOICE → SEND-BACK TO PREPARE VOUCHER → RE-REJECTED → **APPROVE REJECTION** → TERMINAL **REJECTED**",
+          "result": "PASSED",
           "duration": "~12 min",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-28/bas-negative-reject-invoice-PAY3047.md"
@@ -2833,7 +2824,7 @@
           "plan": "test-plans/invoice-process/bas.md",
           "planDisplay": "invoice-process/bas.md",
           "variant": null,
-          "result": "⚠️ PARTIAL — QUERY RAISED AT PREPARE VOUCHER AND ROUTED CORRECTLY TO \"MANAGE SUPPLIER RELATED QUERIES\"; THE **RESPONSE STEP COULD NOT BE EXECUTED — NO LOGIN FOR THE ASSIGNEE**",
+          "result": "PARTIAL",
           "duration": "~10 min",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-28/bas-negative-supplier-related-query-PAY3039.md"
@@ -2842,7 +2833,7 @@
           "plan": "test-plans/invoice-process/logis.md",
           "planDisplay": "invoice-process/logis.md",
           "variant": null,
-          "result": "⚠️ PARTIAL — THE LOGIS REGISTER 500 (`ACTIVITY_117VE9D`) IS **FIXED** AND REGISTRATION ROUTES CORRECTLY, BUT THE CHAIN IS **BLOCKED AT STEP 2 (CERTIFY INVOICE)** BY A SILENT 500: NO SUPERVISOR IN THE TEST ORG STRUCTURE",
+          "result": "PARTIAL",
           "duration": "~15 min",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-28/logis-full-chain-PAY3055.md"
@@ -2851,7 +2842,7 @@
           "plan": "test-plans/invoice-process/bas.md",
           "planDisplay": "invoice-process/bas.md",
           "variant": null,
-          "result": "🔴 BLOCKED — `SUBMIT` ON REGISTER AND UPLOAD INVOICE RETURNS 500 ON BOTH BAS AND LOGIS; 0 OF 8 PLANNED CHAINS EXECUTABLE",
+          "result": "BLOCKED",
           "duration": "~2 h (investigation)",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-28/test-env-bas-logis-blocked.md"
@@ -2865,7 +2856,7 @@
           "plan": "test-plans/invoice-process/bas.md",
           "planDisplay": "invoice-process/bas.md",
           "variant": null,
-          "result": "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED**",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-16/bas-full-chain-PAY3105.md"
@@ -2874,7 +2865,7 @@
           "plan": "test-plans/invoice-process/bas.md (TC-07 query branch → TC-08 Respond to Queries)",
           "planDisplay": "invoice-process/bas.md (TC-07 query branch → TC-08 Respond to Queries)",
           "variant": null,
-          "result": "✅ PASSED — QUERY RAISED AT PREPARE VOUCHER, RESOLVED BY BUSINESS UNIT, ROUTED BACK TO PREPARE VOUCHER",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-16/bas-negative-business-related-query-PAY3159.md"
@@ -2883,7 +2874,7 @@
           "plan": "test-plans/invoice-process/bas.md (TC-07 reject branch → Review Invoice Rejection)",
           "planDisplay": "invoice-process/bas.md (TC-07 reject branch → Review Invoice Rejection)",
           "variant": null,
-          "result": "✅ PASSED — REJECT RAISED AT PREPARE VOUCHER, ROUTED TO REVIEW REJECTED INVOICE; REJECTION OVERTURNED (\"SEND FOR INVOICE VERIFICATION\") → BACK TO PREPARE VOUCHER → COMPLETED TO **PAID + FILED**",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-16/bas-negative-reject-invoice-PAY3173.md"
@@ -2892,7 +2883,7 @@
           "plan": "test-plans/invoice-process/bas.md (TC-07 query branch → Manage Supplier Related Queries)",
           "planDisplay": "invoice-process/bas.md (TC-07 query branch → Manage Supplier Related Queries)",
           "variant": null,
-          "result": "✅ PASSED — SUPPLIER QUERY RAISED AT PREPARE VOUCHER, RESOLVED BY BUSINESS UNIT, ROUTED BACK TO PREPARE VOUCHER, THEN COMPLETED TO **PAID + FILED**",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-16/bas-negative-supplier-related-query-PAY3167.md"
@@ -2910,7 +2901,7 @@
           "plan": "test-plans/invoice-process/logis.md",
           "planDisplay": "invoice-process/logis.md",
           "variant": null,
-          "result": "✅ PASSED — FULL LOGIS CHAIN COMPLETE, INVOICE **PAID + FILED**",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-16/logis-full-chain-PAY3128.md"
@@ -2919,7 +2910,7 @@
           "plan": "test-plans/invoice-process/logis.md (negative branches)",
           "planDisplay": "invoice-process/logis.md (negative branches)",
           "variant": null,
-          "result": "✅ ALL THREE PASSED — BUSINESS RELATED QUERY, SUPPLIER RELATED QUERY, AND REJECT INVOICE EACH DEMONSTRATED AND THEN COMPLETED TO **PAID + FILED**",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP browser)",
           "reportHref": "test-reports/2026-07-16/logis-negative-scenarios.md"
@@ -2927,5 +2918,5 @@
       ]
     }
   ],
-  "generated": "2026-08-21T13:36:47.067Z"
+  "generated": "2026-07-29T07:01:37.129Z"
 }

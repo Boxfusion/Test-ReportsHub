@@ -28,9 +28,9 @@
   "kpis": {
     "totalPlans": 1,
     "totalRuns": 5,
-    "last7Runs": 0,
-    "last7Pass": 0,
-    "last7PassPct": null,
+    "last7Runs": 5,
+    "last7Pass": 4,
+    "last7PassPct": 80,
     "failingFlows": 0,
     "passingFlows": 1,
     "partialFlows": 0,
@@ -38,8 +38,155 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-08-23",
+    "startDate": "2025-08-02",
     "days": [
+      {
+        "iso": "2025-08-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2025-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
       {
         "iso": "2025-08-23",
         "runs": 0,
@@ -2409,9 +2556,9 @@
       {
         "iso": "2026-07-27",
         "runs": 5,
-        "passed": 2,
+        "passed": 4,
         "failed": 0,
-        "partial": 0
+        "partial": 1
       },
       {
         "iso": "2026-07-28",
@@ -2440,153 +2587,6 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
-      },
-      {
-        "iso": "2026-08-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2026-08-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
       }
     ]
   },
@@ -2602,12 +2602,7 @@
           "spec": "test-plans/tender-process/ecdedea-tender-process.spec.ts",
           "specHref": "test-plans/tender-process/ecdedea-tender-process.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -2633,7 +2628,7 @@
             },
             {
               "date": "2026-07-27",
-              "result": "PARTIAL — TC-01…TC-09 RECORDED LIVE AND GREEN; TC-10…TC-16 PORTED BUT NOT YET RE-RECORDED",
+              "result": "PARTIAL",
               "duration": "",
               "variant": null
             }
@@ -2651,7 +2646,7 @@
           "plan": null,
           "planDisplay": "ecdedea-bid-management-e2e-8020.md (80/20)",
           "variant": "80/20",
-          "result": "PASSED — TENDER REACHED **AWARDED → COMPLETED**, AWARDED TO **A & A STATIONERS** (R100,000), 27/07/2026",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP browser, headed)",
           "reportHref": "test-reports/2026-07-27/ecdedea-bid-management-e2e-8020.md"
@@ -2660,7 +2655,7 @@
           "plan": null,
           "planDisplay": "ecdedea-bid-management-e2e.md (90/10)",
           "variant": "90/10",
-          "result": "PASSED — TENDER REACHED **COMPLETED / AWARDED** TO **A & A STATIONERS** (R100,000), AWARDED 27/07/2026",
+          "result": "PASSED",
           "duration": "",
           "mode": "ai-driven (live MCP browser, headed)",
           "reportHref": "test-reports/2026-07-27/ecdedea-bid-management-e2e.md"
@@ -2687,7 +2682,7 @@
           "plan": "test-plans/tender-process/ecdedea-tender-process.md",
           "planDisplay": "tender-process/ecdedea-tender-process.md",
           "variant": null,
-          "result": "PARTIAL — TC-01…TC-09 RECORDED LIVE AND GREEN; TC-10…TC-16 PORTED BUT NOT YET RE-RECORDED",
+          "result": "PARTIAL",
           "duration": "",
           "mode": "ai-driven (live MCP browser) — recording pass, not a pass/fail run",
           "reportHref": "test-reports/2026-07-27/ecdedea-tender-process-recording.md"
@@ -2695,5 +2690,5 @@
       ]
     }
   ],
-  "generated": "2026-08-21T13:36:47.098Z"
+  "generated": "2026-07-27T13:27:54.555Z"
 }
