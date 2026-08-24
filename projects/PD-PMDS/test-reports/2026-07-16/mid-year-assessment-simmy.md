@@ -3,7 +3,7 @@
 **Date:** 2026-07-16
 **Cycle:** SL 1-12 Performance Agreement, FY2026/27 — **Mid Year Assessment** stage
 **Employee:** Simmy Mthalane (`Simmy`), **Ref PR2026/7335**
-**Result:** ✅ PASS — full Mid-Year chain completed to **Completed**.
+**Result:** PASSED — full Mid-Year chain completed to **Completed**.
 
 ## Context
 The team **closed Contracting** and **opened the Mid-Year Assessment** stage (so the Open Process step was already done — like Contracting, but pre-opened). Each employee who completed Contracting received a Mid-Year **self-assessment** task. Drove Simmy's end-to-end, mirroring the Contracting employee chain.

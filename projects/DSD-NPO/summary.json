@@ -1,0 +1,13 @@
+{
+  "totalPlans": 46,
+  "totalRuns": 52,
+  "last7Runs": 30,
+  "last7Pass": 3,
+  "last7PassPct": 10,
+  "failingFlows": 21,
+  "lastRun": {
+    "date": "2026-08-21",
+    "result": "PARTIAL",
+    "plan": "test-plans/npo-registration/03-wizard-org-details-objectives.md"
+  }
+}

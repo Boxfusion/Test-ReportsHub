@@ -1,6 +1,29 @@
 {
-  "generated": "2026-08-21T13:36:47.489Z",
+  "generated": "2026-08-24T04:19:08.376Z",
   "projects": [
+    {
+      "name": "Approvals",
+      "displayName": "Approvals",
+      "appUrl": null,
+      "environment": null,
+      "sourceRepo": null,
+      "description": null,
+      "health": "failing",
+      "summary": {
+        "totalPlans": 33,
+        "totalRuns": 33,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
+        "failingFlows": 3,
+        "lastRun": {
+          "date": "2026-07-17",
+          "result": "PASSED",
+          "plan": "test-plans/Memo/verify-reassign-function.md"
+        }
+      },
+      "href": "projects/Approvals/index.html"
+    },
     {
       "name": "dep",
       "displayName": "Dep Admin Portal",
@@ -15,7 +38,7 @@
         "last7Runs": 0,
         "last7Pass": 0,
         "last7PassPct": null,
-        "failingFlows": 2,
+        "failingFlows": 3,
         "lastRun": {
           "date": "2026-05-28",
           "result": "FAILED",
@@ -23,6 +46,52 @@
         }
       },
       "href": "projects/dep/index.html"
+    },
+    {
+      "name": "DSD-NPO",
+      "displayName": "DSD NPO",
+      "appUrl": "https://dsd-npo-publicportal-1-qa.shesha.app/login",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans",
+      "description": "Hybrid Markdown + Playwright test reports for the Department of Social Development NPO registration and compliance portal (public applicant portal + DSD admin portal).",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 46,
+        "totalRuns": 52,
+        "last7Runs": 25,
+        "last7Pass": 3,
+        "last7PassPct": 12,
+        "failingFlows": 21,
+        "lastRun": {
+          "date": "2026-08-21",
+          "result": "PARTIAL",
+          "plan": "test-plans/npo-registration/03-wizard-org-details-objectives.md"
+        }
+      },
+      "href": "projects/DSD-NPO/index.html"
+    },
+    {
+      "name": "eRecruitment",
+      "displayName": "eRecruitment Public Portal",
+      "appUrl": "https://pd-recruitment-publicportal-1-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-recruitment",
+      "description": "Hybrid Markdown + Playwright test reports for the eRecruitment Public Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 121,
+        "totalRuns": 127,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
+        "failingFlows": 4,
+        "lastRun": {
+          "date": "2026-08-06",
+          "result": "PASSED",
+          "plan": "test-plans/AdminPortal/verify-appointed-ref43-completeflow.md"
+        }
+      },
+      "href": "projects/eRecruitment/index.html"
     },
     {
       "name": "HCM",
@@ -46,6 +115,29 @@
         }
       },
       "href": "projects/HCM/index.html"
+    },
+    {
+      "name": "invoice-tracking",
+      "displayName": "Invoice Tracking",
+      "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
+      "description": "Hybrid Markdown + Playwright test reports for the Invoice Tracking (ITS) Admin Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 2,
+        "totalRuns": 21,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
+        "failingFlows": 1,
+        "lastRun": {
+          "date": "2026-06-23",
+          "result": "PASSED",
+          "plan": "test-plans/invoice-process/bas.md (TC-01 → TC-14, happy path)"
+        }
+      },
+      "href": "projects/invoice-tracking/index.html"
     },
     {
       "name": "land-bank",
@@ -73,20 +165,20 @@
     {
       "name": "bid-management",
       "displayName": "Bid Management",
-      "appUrl": "https://linux-supplychainmanagement-adminportal-qa.azurewebsites.net/login",
-      "environment": "QA Site",
+      "appUrl": "https://pd-supplychainmanagement-adminportal-qa.shesha.app/login",
+      "environment": "QA",
       "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
       "description": "Hybrid Markdown + Playwright test reports for the Supply Chain Management (Bid Management) Admin Portal.",
       "health": "healthy",
       "summary": {
         "totalPlans": 1,
-        "totalRuns": 6,
+        "totalRuns": 24,
         "last7Runs": 0,
         "last7Pass": 0,
         "last7PassPct": null,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-06-08",
+          "date": "2026-08-03",
           "result": "PASSED",
           "plan": "test-plans/tender-process/bid-supply-chain-management.md"
         }
@@ -103,15 +195,15 @@
       "health": "healthy",
       "summary": {
         "totalPlans": 2,
-        "totalRuns": 17,
+        "totalRuns": 23,
         "last7Runs": 0,
         "last7Pass": 0,
         "last7PassPct": null,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-07-29",
-          "result": "✅ PASSED — FULL CHAIN COMPLETE, INVOICE **PAID + FILED** (11/11 STEPS)",
-          "plan": "test-plans/invoice-process/bas.md"
+          "date": "2026-07-31",
+          "result": "PASSED",
+          "plan": "test-plans/invoice-process/bas.md — TC-06 (ADO #102378), reject branch off TC-07 Prepare Voucher"
         }
       },
       "href": "projects/DHA-Invoice-Tracking/index.html"
@@ -133,34 +225,11 @@
         "failingFlows": 0,
         "lastRun": {
           "date": "2026-07-27",
-          "result": "PASSED — TENDER REACHED **AWARDED → COMPLETED**, AWARDED TO **A & A STATIONERS** (R100,000), 27/07/2026",
+          "result": "PASSED",
           "plan": null
         }
       },
       "href": "projects/EC-DEDEA-Bid-Management/index.html"
-    },
-    {
-      "name": "invoice-tracking",
-      "displayName": "Invoice Tracking",
-      "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
-      "description": "Hybrid Markdown + Playwright test reports for the Invoice Tracking (ITS) Admin Portal.",
-      "health": "healthy",
-      "summary": {
-        "totalPlans": 2,
-        "totalRuns": 21,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-06-23",
-          "result": "PASSED — INVOICE **PAID + FILED**",
-          "plan": "test-plans/invoice-process/bas.md (TC-01 → TC-14, happy path)"
-        }
-      },
-      "href": "projects/invoice-tracking/index.html"
     },
     {
       "name": "dispatch",
@@ -186,6 +255,48 @@
       "href": "projects/dispatch/index.html"
     },
     {
+      "name": "PD-PMDS",
+      "displayName": "PMDS",
+      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+      "description": "Hybrid Markdown + Playwright test reports for PMDS (Performance Management & Development System) — a module of the HCM Admin Portal (same site as eLeave).",
+      "health": "healthy",
+      "summary": {
+        "totalPlans": 2,
+        "totalRuns": 70,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
+        "failingFlows": 0,
+        "lastRun": {
+          "date": "2026-08-17",
+          "result": "PASSED",
+          "plan": null
+        }
+      },
+      "href": "projects/PD-PMDS/index.html"
+    },
+    {
+      "name": "ITS",
+      "displayName": "ITS",
+      "appUrl": null,
+      "environment": null,
+      "sourceRepo": null,
+      "description": null,
+      "health": "unknown",
+      "summary": {
+        "totalPlans": 3,
+        "totalRuns": 0,
+        "last7Runs": 0,
+        "last7Pass": 0,
+        "last7PassPct": null,
+        "failingFlows": 0,
+        "lastRun": null
+      },
+      "href": "projects/ITS/index.html"
+    },
+    {
       "name": "PD-Dispatch",
       "displayName": "PD-Dispatch",
       "appUrl": "https://pd-dispatcher-v2-adminportal-qa.shesha.app/login",
@@ -207,36 +318,13 @@
         }
       },
       "href": "projects/PD-Dispatch/index.html"
-    },
-    {
-      "name": "PD-PMDS",
-      "displayName": "PMDS",
-      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
-      "description": "Hybrid Markdown + Playwright test reports for PMDS (Performance Management & Development System) — a module of the HCM Admin Portal (same site as eLeave).",
-      "health": "unknown",
-      "summary": {
-        "totalPlans": 0,
-        "totalRuns": 23,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-07-17",
-          "result": "✅ PASS — FULL MID-YEAR HAPPY-PATH CHAIN COMPLETED TO **COMPLETED / AWAITING PERSAL SYNC**.",
-          "plan": null
-        }
-      },
-      "href": "projects/PD-PMDS/index.html"
     }
   ],
   "totals": {
-    "totalProjects": 10,
-    "totalPlans": 57,
-    "totalRuns": 189,
-    "last7Runs": 3,
-    "failingFlows": 19
+    "totalProjects": 14,
+    "totalPlans": 262,
+    "totalRuns": 472,
+    "last7Runs": 28,
+    "failingFlows": 49
   }
 }

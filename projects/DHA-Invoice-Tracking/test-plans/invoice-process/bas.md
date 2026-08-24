@@ -1,8 +1,9 @@
 # BAS — Invoice Tracking Process
 
 > **Source:** Azure DevOps test plan #102133 "ITS Automation Test Cases", suite #102355 "BAS".
-> **App:** Invoice Tracking (ITS) Admin Portal — https://pd-invtracking-adminportal-qa.azurewebsites.net/login (QA)
-> **Login:** ThulileM / 123qwe (see CLAUDE.md).
+> **App:** DHA SmartGov Invoice Tracking (ITS) Admin Portal — https://dha-smartgov-adminportal-qa.shesha.app/login (QA)
+> **Login:** `Admin` (initiator) then `ThabisoM` for the Finance Unit hand-offs — see CLAUDE.md for the full actor map.
+> **View mode:** switch Live → **Latest** immediately after every login (it resets to Live each time; Admin only).
 
 This plan covers the full **BAS Request for Payment** invoice lifecycle as one chain. In production each step is actioned by a different role (Invoice Capturer → Branch Finance Admin → Responsible Person → Certifier → Voucher Preparer → Verifier → Authoriser → Payments). Only the `ThulileM` account is confirmed so far; additional role logins are discovered live as steps hand off and recorded in CLAUDE.md. The downstream TCs (TC-03 onward) each assume the invoice from TC-02 has been routed to that step — they are **not** independently runnable until the preceding step completes.
 
@@ -23,6 +24,9 @@ This plan covers the full **BAS Request for Payment** invoice lifecycle as one c
 7. CLICK Sign In button
 8. WAIT for the Homepage to load
    - ASSERT (BLOCKING) the Homepage is displayed after sign-in
+9. SNAPSHOT — locate the view-mode toggle in the header (reads "Live")
+10. CLICK the view-mode toggle and SELECT "Latest"
+    - ASSERT the toggle reads "Latest" (skip for non-admin users — their header has no toggle)
 
 ---
 
@@ -84,7 +88,9 @@ This plan covers the full **BAS Request for Payment** invoice lifecycle as one c
 33. CLICK the supporting-documents upload control and attach a supporting document
 34. SNAPSHOT — locate the Submit button
 35. CLICK Submit button
-    - ASSERT (BLOCKING) the system redirects to the homepage and the item is routed to the "Assign Branch Finance Admin to Assign Certifier" step
+    - ASSERT (BLOCKING) the system redirects away from the action form — on the current build it lands
+      on the read-only workflow view (`/shesha/workflow?id=<instanceId>`); older builds returned to
+      My Items — and the item is routed to the "Assign Branch Finance Admin to Assign Certifier" step
 
 ---
 

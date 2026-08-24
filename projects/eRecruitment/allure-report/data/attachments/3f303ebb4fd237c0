@@ -1,0 +1,478 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: projects\eRecruitment\test-plans\AdminPortal\create-job-posting-output-competencies.spec.ts >> ADMINPORTAL-102822 — Create Job Post (Valid) — Output and Competencies >> TC-12: Type into the Requirements text area
+- Location: projects\eRecruitment\test-plans\AdminPortal\create-job-posting-output-competencies.spec.ts:378:7
+
+# Error details
+
+```
+Test timeout of 180000ms exceeded.
+```
+
+```
+Error: page.waitForTimeout: Test timeout of 180000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - menu [ref=e9]:
+        - menuitem "bank Organisational Structure" [ref=e10] [cursor=pointer]:
+          - img "bank" [ref=e11]:
+            - img [ref=e12]
+          - generic [ref=e14]: Organisational Structure
+        - menuitem "apartment Workflows" [expanded] [ref=e15] [cursor=pointer]:
+          - img "apartment" [ref=e16]:
+            - img [ref=e17]
+          - generic [ref=e19]: Workflows
+        - menu [ref=e20]:
+          - menuitem "Inbox" [ref=e21] [cursor=pointer]:
+            - link "Inbox" [ref=e23]:
+              - /url: /dynamic/Shesha.Workflow/workflows-inbox
+          - menuitem "Sent Items" [ref=e24] [cursor=pointer]:
+            - link "Sent Items" [ref=e26]:
+              - /url: /dynamic/Shesha.Workflow/workflows-sent
+          - menuitem "My Items" [ref=e27] [cursor=pointer]:
+            - link "My Items" [ref=e29]:
+              - /url: /dynamic/Shesha.Workflow/workflows-my-items
+          - menuitem "Draft" [ref=e30] [cursor=pointer]:
+            - link "Draft" [ref=e32]:
+              - /url: /dynamic/Shesha.Workflow/workflows-drafts
+        - menuitem "Entity" [ref=e33] [cursor=pointer]:
+          - link "Entity" [ref=e35]:
+            - /url: /dynamic/Shesha/entity-configs-v2
+      - img "menu-fold" [ref=e38] [cursor=pointer]:
+        - img [ref=e39]
+    - generic [ref=e41]:
+      - banner [ref=e42]:
+        - generic [ref=e48]:
+          - generic [ref=e50]:
+            - button "edit" [ref=e51] [cursor=pointer]:
+              - img "edit" [ref=e52]:
+                - img [ref=e53]
+            - paragraph [ref=e55] [cursor=pointer]: Shesha/header v17
+            - generic [ref=e56]:
+              - generic [ref=e57]: Live
+              - img "close" [ref=e58] [cursor=pointer]:
+                - img [ref=e59]
+          - generic [ref=e69]:
+            - link [ref=e75] [cursor=pointer]:
+              - /url: /
+              - img [ref=e85]
+            - generic [ref=e89]:
+              - generic [ref=e90] [cursor=pointer]:
+                - text: Kamogelo Shabangu
+                - img "down" [ref=e91]:
+                  - img [ref=e92]
+              - img "user" [ref=e95]:
+                - img [ref=e96]
+      - main [ref=e98]:
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e107]:
+              - heading "Create Job Posting:" [level=4] [ref=e109]:
+                - strong [ref=e110]: "Create Job Posting:"
+              - generic [ref=e114]: Draft
+            - generic [ref=e115]:
+              - generic [ref=e116]: "Ref No: JP2026/4829"
+              - generic [ref=e117]: "Created by: Kamogelo Shabangu 2 hours ago"
+          - generic [ref=e122]:
+            - generic [ref=e124]:
+              - button "edit" [ref=e125] [cursor=pointer]:
+                - img "edit" [ref=e126]:
+                  - img [ref=e127]
+              - paragraph [ref=e129] [cursor=pointer]: Shesha.Recruitment/wf-capture-job-posting v50
+              - generic [ref=e130]:
+                - generic [ref=e131]: Live
+                - img "close" [ref=e132] [cursor=pointer]:
+                  - img [ref=e133]
+            - generic [ref=e143]:
+              - generic [ref=e153]: Capture Job Posting
+              - generic [ref=e155]:
+                - generic [ref=e156]:
+                  - generic [ref=e157]:
+                    - generic [ref=e159]:
+                      - generic [ref=e160]: "1"
+                      - generic [ref=e162]: Job Information Summary
+                    - generic [ref=e164]:
+                      - generic [ref=e165]: "2"
+                      - generic [ref=e167]: Output and Competencies
+                    - generic [ref=e169]:
+                      - generic [ref=e170]: "3"
+                      - generic [ref=e172]: Documentation
+                    - generic [ref=e174]:
+                      - generic [ref=e175]: "4"
+                      - generic [ref=e177]: Confirmation
+                  - generic [ref=e180]:
+                    - generic [ref=e182]:
+                      - generic [ref=e183]:
+                        - img "right" [ref=e185] [cursor=pointer]:
+                          - img [ref=e186]
+                        - generic [ref=e188]: Recruiter Details
+                      - generic [ref=e196]:
+                        - generic [ref=e198]:
+                          - generic "Name and Surname" [ref=e200]:
+                            - text: Name and Surname
+                            - generic [ref=e201]: "*"
+                          - generic [ref=e205] [cursor=pointer]:
+                            - generic [ref=e206]:
+                              - combobox [ref=e208]
+                              - generic "Audrey Muvhango" [ref=e209]
+                            - generic:
+                              - img:
+                                - img
+                            - img [ref=e211]:
+                              - img [ref=e212]
+                        - generic [ref=e221]:
+                          - generic [ref=e223]:
+                            - button "edit" [ref=e224] [cursor=pointer]:
+                              - img "edit" [ref=e225]:
+                                - img [ref=e226]
+                            - paragraph [ref=e228] [cursor=pointer]: Shesha.Recruitment/recruiter-details-subform v26
+                            - generic [ref=e229]:
+                              - generic [ref=e230]: Live
+                              - img "close" [ref=e231] [cursor=pointer]:
+                                - img [ref=e232]
+                          - generic [ref=e237]:
+                            - generic [ref=e239]:
+                              - generic "Email Address" [ref=e241]
+                              - generic [ref=e244]: audrey.muvhango@gmail.com
+                            - generic [ref=e246]:
+                              - generic "Contact No" [ref=e248]
+                              - generic [ref=e251]: "0664872141"
+                    - generic [ref=e255]:
+                      - generic [ref=e256]:
+                        - img "right" [ref=e258] [cursor=pointer]:
+                          - img [ref=e259]
+                        - generic [ref=e261]: Job Information Summary
+                      - generic [ref=e266]:
+                        - generic [ref=e269]:
+                          - generic [ref=e271]:
+                            - generic "Job Reference Number" [ref=e273]:
+                              - text: Job Reference Number
+                              - generic [ref=e274]: "*"
+                            - textbox [ref=e279]: QA-JobRef-OC-1785848295535
+                          - generic [ref=e281]:
+                            - generic "Chief Directorate" [ref=e283]
+                            - textbox [ref=e288]: Corporate Services
+                          - generic [ref=e290]:
+                            - generic "Province / Branch" [ref=e292]:
+                              - text: Province / Branch
+                              - generic [ref=e293]: "*"
+                            - textbox [ref=e298]: Gauteng Branch
+                          - generic [ref=e302]:
+                            - generic "Is Osd?" [ref=e304]
+                            - checkbox [ref=e310] [cursor=pointer]
+                          - generic [ref=e319]:
+                            - generic [ref=e321]:
+                              - button "edit" [ref=e322] [cursor=pointer]:
+                                - img "edit" [ref=e323]:
+                                  - img [ref=e324]
+                              - paragraph [ref=e326] [cursor=pointer]: Shesha.Recruitment/salary-level-subform v25
+                              - generic [ref=e327]:
+                                - generic [ref=e328]: Live
+                                - img "close" [ref=e329] [cursor=pointer]:
+                                  - img [ref=e330]
+                            - generic [ref=e338]:
+                              - generic "Salary Range" [ref=e340]
+                              - generic [ref=e343]: R122958 - R130503
+                          - generic [ref=e345]:
+                            - generic "Centre / Office Name" [ref=e347]:
+                              - text: Centre / Office Name
+                              - generic [ref=e348]: "*"
+                            - generic [ref=e352] [cursor=pointer]:
+                              - generic [ref=e353]:
+                                - combobox [ref=e355]
+                                - generic "Boxfusion Pty/Ltd" [ref=e356]
+                              - generic:
+                                - img:
+                                  - img
+                              - img [ref=e358]:
+                                - img [ref=e359]
+                          - generic [ref=e362]:
+                            - generic "Closing Date" [ref=e364]:
+                              - text: Closing Date
+                              - generic [ref=e365]: "*"
+                            - generic [ref=e370]:
+                              - textbox "Select date" [ref=e371]: 01/09/2026
+                              - generic:
+                                - img "calendar":
+                                  - img
+                              - button "close-circle" [ref=e372] [cursor=pointer]:
+                                - img "close-circle" [ref=e373]:
+                                  - img [ref=e374]
+                        - generic [ref=e378]:
+                          - generic [ref=e380]:
+                            - generic "Post Name" [ref=e382]:
+                              - text: Post Name
+                              - generic [ref=e383]: "*"
+                            - textbox [ref=e388]: QA Playwright Test Post
+                          - generic [ref=e390]:
+                            - generic "Directorate" [ref=e392]
+                            - textbox [ref=e397]: Human Resources
+                          - generic [ref=e399]:
+                            - generic "Sub Directorate" [ref=e401]
+                            - textbox [ref=e406]: Recruitment
+                          - generic [ref=e408]:
+                            - generic "Salary Level" [ref=e410]:
+                              - text: Salary Level
+                              - generic [ref=e411]: "*"
+                            - generic [ref=e415] [cursor=pointer]:
+                              - generic [ref=e416]:
+                                - combobox [ref=e418]
+                                - generic "1" [ref=e419]
+                              - generic:
+                                - img:
+                                  - img
+                              - img [ref=e421]:
+                                - img [ref=e422]
+                          - generic [ref=e425]:
+                            - generic "Post Reports To" [ref=e427]
+                            - textbox [ref=e432]: HR Manager
+                          - generic [ref=e434]:
+                            - generic "Notch" [ref=e436]
+                            - generic [ref=e440]:
+                              - generic [ref=e441]:
+                                - button "Increase Value" [ref=e442] [cursor=pointer]:
+                                  - img "up" [ref=e443]:
+                                    - img [ref=e444]
+                                - button "Decrease Value" [ref=e446] [cursor=pointer]:
+                                  - img "down" [ref=e447]:
+                                    - img [ref=e448]
+                              - spinbutton [ref=e451]: "122958"
+                          - generic [ref=e459]:
+                            - generic [ref=e461]:
+                              - button "edit" [ref=e462] [cursor=pointer]:
+                                - img "edit" [ref=e463]:
+                                  - img [ref=e464]
+                              - paragraph [ref=e466] [cursor=pointer]: Shesha.Recruitment/address-subform v18
+                              - generic [ref=e467]:
+                                - generic [ref=e468]: Live
+                                - img "close" [ref=e469] [cursor=pointer]:
+                                  - img [ref=e470]
+                            - generic [ref=e477]:
+                              - generic "Address" [ref=e479]
+                              - generic [ref=e482]: 265 West Avenue, Centurion, Gauteng
+                - generic [ref=e483]:
+                  - button "Close" [ref=e484] [cursor=pointer]:
+                    - generic [ref=e485]: Close
+                  - button "Next" [disabled] [ref=e486]:
+                    - generic: Next
+  - alert [ref=e487]
+```
+
+# Test source
+
+```ts
+  135 | // Optional Job Information Summary fields, not marked required (*) in the
+  136 | // UI but filled anyway to rule out an undocumented hidden validation
+  137 | // dependency. Post Reports To, Notch, and Promotion To Next Higher Post
+  138 | // only render in the DOM after Centre/Office Name and Salary Level are
+  139 | // selected (same conditional-disclosure pattern as Salary Range).
+  140 | function chiefDirectorateField(page: Page): Locator { return textInputFor(page, 'model_chiefDirectorate'); }
+  141 | function jobPurposeField(page: Page): Locator { return textInputFor(page, 'model_jobPurpose'); }
+  142 | function directorateField(page: Page): Locator { return textInputFor(page, 'model_directorate'); }
+  143 | function subDirectorateField(page: Page): Locator { return textInputFor(page, 'model_subDirectorate'); }
+  144 | function postReportsToField(page: Page): Locator { return textInputFor(page, 'model_postReportsTo'); }
+  145 | function notchField(page: Page): Locator { return formItemByLabel(page, 'model_notch').locator('input[role="spinbutton"]').first(); }
+  146 | function promotionToNextHigherPostField(page: Page): Locator { return textInputFor(page, 'model_promotionToNextHigherPost'); }
+  147 | 
+  148 | async function handleSalaryRange(page: Page) {
+  149 |   await page.waitForTimeout(1200);
+  150 |   const select = salaryRangeSelect(page);
+  151 |   if ((await select.count()) > 0) {
+  152 |     await selectFirstAvailableOption(page, select);
+  153 |   } else {
+  154 |     await expect(salaryRangeFormItem(page).locator('.read-only-display-form-item')).not.toHaveText('', { timeout: 15000 });
+  155 |   }
+  156 | }
+  157 | 
+  158 | function closingDateInput(page: Page): Locator {
+  159 |   return formItemByLabel(page, 'model_closingDate').locator('.ant-picker input').first();
+  160 | }
+  161 | 
+  162 | function nextButton(page: Page): Locator {
+  163 |   return page.getByRole('button', { name: 'Next', exact: true });
+  164 | }
+  165 | 
+  166 | function dropdownList(page: Page): Locator {
+  167 |   return page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden)').first();
+  168 | }
+  169 | 
+  170 | async function selectFirstAvailableOption(page: Page, select: Locator): Promise<string> {
+  171 |   await select.click();
+  172 |   const dropdown = dropdownList(page);
+  173 |   await expect(dropdown).toBeVisible({ timeout: 10000 });
+  174 |   const options = dropdown.locator('.ant-select-item-option:not(.ant-select-item-option-disabled)');
+  175 |   const searchInput = select.locator('input').first();
+  176 |   for (const letter of ['', 'a', 'e', 'h', 'c', 'p', 's', 't', 'o', 'r', 'm', 'd']) {
+  177 |     if ((await options.count()) > 0) break;
+  178 |     await searchInput.fill(letter);
+  179 |     await page.waitForTimeout(1800);
+  180 |   }
+  181 |   await expect(options.first()).toBeVisible({ timeout: 15000 });
+  182 |   const count = await options.count();
+  183 |   for (let i = 0; i < count; i++) {
+  184 |     const candidate = options.nth(i);
+  185 |     const label = ((await candidate.textContent()) ?? '').trim();
+  186 |     if (!label) continue;
+  187 |     await candidate.click();
+  188 |     await page.waitForTimeout(600);
+  189 |     const selectionText = ((await select.locator('.ant-select-selection-item').textContent().catch(() => '')) ?? '').trim();
+  190 |     if (selectionText) return selectionText;
+  191 |     await select.click();
+  192 |     await expect(dropdown).toBeVisible({ timeout: 10000 });
+  193 |   }
+  194 |   throw new Error('selectFirstAvailableOption: no candidate option produced a non-empty selection');
+  195 | }
+  196 | 
+  197 | async function pickFutureClosingDate(page: Page) {
+  198 |   const input = closingDateInput(page);
+  199 |   await input.click();
+  200 |   const panel = page.locator('.ant-picker-dropdown:not(.ant-picker-dropdown-hidden)').first();
+  201 |   await expect(panel).toBeVisible({ timeout: 10000 });
+  202 |   await panel.locator('.ant-picker-header-next-btn').click();
+  203 |   await page.waitForTimeout(300);
+  204 |   const cell = panel.locator('.ant-picker-cell-in-view:not(.ant-picker-cell-disabled)').first();
+  205 |   await expect(cell).toBeVisible({ timeout: 10000 });
+  206 |   await cell.click();
+  207 |   await page.waitForTimeout(500);
+  208 |   await expect(input).not.toHaveValue('', { timeout: 10000 });
+  209 |   await page.keyboard.press('Escape').catch(() => {});
+  210 |   await page.locator('.sha-page-heading').first().click({ force: true }).catch(() => {});
+  211 |   await page.waitForTimeout(1500);
+  212 | }
+  213 | 
+  214 | // The Next button's enabled state flickers rather than being stably stuck:
+  215 | // a toBeEnabled() assertion can pass at one instant and a click() moments
+  216 | // later can still find it disabled again (confirmed live — an assertion
+  217 | // passed then the very next click() timed out on "not enabled"). So rather
+  218 | // than wait-once-then-click-once, retry the click itself so it can land
+  219 | // during any enabled window, nudging with a blur click between attempts to
+  220 | // encourage re-validation.
+  221 | //
+  222 | // IMPORTANT: do NOT reload the page as a "recovery" step here — a
+  223 | // screenshot from a failed run proved reload wipes all entered field
+  224 | // values back to blank (they are NOT persisted server-side as previously
+  225 | // assumed), which permanently keeps Next disabled from that point on. A
+  226 | // reload in this loop is actively harmful, not a recovery.
+  227 | async function clickNextWhenEnabled(page: Page, maxAttempts = 20) {
+  228 |   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+  229 |     try {
+  230 |       await nextButton(page).click({ timeout: 4000 });
+  231 |       return;
+  232 |     } catch {
+  233 |       if (attempt === maxAttempts) throw new Error('clickNextWhenEnabled: Next button never stayed enabled long enough to click');
+  234 |       await page.locator('.sha-page-heading').first().click({ force: true }).catch(() => {});
+> 235 |       await page.waitForTimeout(2500);
+      |                  ^ Error: page.waitForTimeout: Test timeout of 180000ms exceeded.
+  236 |     }
+  237 |   }
+  238 | }
+  239 | 
+  240 | // For assertion-only steps (no click) — poll for an enabled moment rather
+  241 | // than a single fixed-timeout check, since the state flickers.
+  242 | async function expectNextEventuallyEnabled(page: Page, maxAttempts = 20) {
+  243 |   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+  244 |     if (!(await nextButton(page).isDisabled().catch(() => true))) return;
+  245 |     await page.locator('.sha-page-heading').first().click({ force: true }).catch(() => {});
+  246 |     await page.waitForTimeout(2500);
+  247 |   }
+  248 |   await expect(nextButton(page)).toBeEnabled({ timeout: 5000 });
+  249 | }
+  250 | 
+  251 | async function advanceToStep2(page: Page) {
+  252 |   await clickNextWhenEnabled(page);
+  253 |   await page.waitForLoadState('networkidle');
+  254 |   await expect(page.locator('.ant-spin-spinning')).toHaveCount(0, { timeout: 20000 }).catch(() => {});
+  255 |   await page.waitForTimeout(1500);
+  256 |   await expect(page.getByText('Competency Profile')).toBeVisible({ timeout: 15000 });
+  257 |   // The panel header can render before its fields are actually interactive
+  258 |   // (the subform loads its own inputs asynchronously) — wait for the
+  259 |   // Requirements textarea itself to be visible and enabled before returning.
+  260 |   await expect(requirementsField(page)).toBeVisible({ timeout: 15000 });
+  261 |   await expect(requirementsField(page)).toBeEditable({ timeout: 10000 });
+  262 | }
+  263 | 
+  264 | async function fillFormThroughStep(page: Page, upTo: number) {
+  265 |   await openNewJobPostingForm(page);
+  266 |   if (upTo < 6) return;
+  267 |   await recruiterSelect(page).click();
+  268 |   await expect(dropdownList(page)).toBeVisible({ timeout: 10000 });
+  269 |   if (upTo < 7) return;
+  270 |   await recruiterSelect(page).click();
+  271 |   await selectFirstAvailableOption(page, recruiterSelect(page));
+  272 |   if (upTo < 8) return;
+  273 |   await jobReferenceNumberField(page).fill(JOB_REF_NUMBER);
+  274 |   await provinceBranchField(page).fill(PROVINCE_BRANCH);
+  275 |   await postNameField(page).fill(POST_NAME);
+  276 |   await chiefDirectorateField(page).fill('Corporate Services').catch(() => {});
+  277 |   await jobPurposeField(page).fill('Support the recruitment and onboarding process.').catch(() => {});
+  278 |   await directorateField(page).fill('Human Resources').catch(() => {});
+  279 |   await subDirectorateField(page).fill('Recruitment').catch(() => {});
+  280 |   if (upTo < 9) return;
+  281 |   await selectFirstAvailableOption(page, centreOfficeNameSelect(page));
+  282 |   await selectFirstAvailableOption(page, salaryLevelSelect(page));
+  283 |   await handleSalaryRange(page);
+  284 |   // Post Reports To, Notch, and Promotion To Next Higher Post only render
+  285 |   // once Salary Level is selected — fill them here to rule out an
+  286 |   // undocumented hidden validation dependency on the Next button.
+  287 |   await postReportsToField(page).fill('HR Manager').catch(() => {});
+  288 |   await notchField(page).fill('122958').catch(() => {});
+  289 |   await promotionToNextHigherPostField(page).fill('N/A').catch(() => {});
+  290 |   if (upTo < 10) return;
+  291 |   await pickFutureClosingDate(page);
+  292 |   if (upTo < 11) return;
+  293 |   await advanceToStep2(page);
+  294 |   if (upTo < 12) return;
+  295 |   await requirementsField(page).fill(REQUIREMENTS_TEXT);
+  296 |   if (upTo < 13) return;
+  297 |   await skillsField(page).fill(SKILLS_TEXT);
+  298 |   if (upTo < 14) return;
+  299 |   await dutiesField(page).fill(DUTIES_TEXT);
+  300 | }
+  301 | 
+  302 | test.describe('ADMINPORTAL-102822 — Create Job Post (Valid) — Output and Competencies', () => {
+  303 |   test.describe.configure({ mode: 'serial' });
+  304 |   test.setTimeout(180_000);
+  305 | 
+  306 |   test('TC-01: Login as kamogelos', async ({ page }) => {
+  307 |     await loginAsAdmin(page);
+  308 |     await expect(page).not.toHaveURL(/login/i);
+  309 |   });
+  310 | 
+  311 |   test('TC-02: Expand the Workflows menu', async ({ page }) => {
+  312 |     await loginAsAdmin(page);
+  313 |     await expandWorkflowsMenu(page);
+  314 |     await expect(myItemsMenuItem(page)).toBeVisible({ timeout: 10000 });
+  315 |   });
+  316 | 
+  317 |   test('TC-03: Navigate to My Items submenu', async ({ page }) => {
+  318 |     await loginAsAdmin(page);
+  319 |     await expandWorkflowsMenu(page);
+  320 |     await goToMyItems(page);
+  321 |     await expect(createNewButton(page)).toBeVisible({ timeout: 15000 });
+  322 |   });
+  323 | 
+  324 |   test('TC-04: Click the Create New button', async ({ page }) => {
+  325 |     await loginAsAdmin(page);
+  326 |     await expandWorkflowsMenu(page);
+  327 |     await goToMyItems(page);
+  328 |     await clickCreateNew(page);
+  329 |     await expect(jobPostingMenuItem(page)).toBeVisible({ timeout: 10000 });
+  330 |   });
+  331 | 
+  332 |   test('TC-05: Click the Job posting item', async ({ page }) => {
+  333 |     await fillFormThroughStep(page, 5);
+  334 |     await expect(page.getByText('Recruiter Details')).toBeVisible();
+  335 |     await expect(page.getByText('Job Information Summary').first()).toBeVisible();
+```

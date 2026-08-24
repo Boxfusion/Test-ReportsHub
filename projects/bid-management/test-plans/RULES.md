@@ -1,10 +1,15 @@
 # Test Execution Rules
 
-> **Multi-project hub note.** All `scripts/...` commands in this file refer to scripts at the **hub root** (two levels up from this file). The hub already provides `scripts/build-project-dashboard.js` (project-aware). Run commands from the hub root, passing this project's plan path explicitly, e.g.:
+> **Multi-project hub note.** All `scripts/...` commands in this file refer to scripts at the **hub root** (two levels up from this file). The hub already provides `scripts/build-project-data.js` (project-aware). Run commands from the hub root, passing this project's plan path explicitly, e.g.:
 > ```
 > node scripts/run-plan.js projects/bid-management/test-plans/<folder>/<plan>.md
-> node scripts/build-project-dashboard.js --project=bid-management
+> node scripts/build-project-data.js --project=bid-management
 > ```
+>
+> ⚠️ **Do not use `scripts/build-project-dashboard.js`.** It is the retired generator: it pre-renders a ~78 KB
+> static `index.html` that overwrites the thin data-driven shell every project now uses, and it silently drifts
+> out of date. The canonical pipeline is `build-project-data.js` (per project) → `build-hub-data.js`, or
+> `node scripts/build-all.js` for everything at once.
 
 ## 1. Step Execution Model
 
@@ -54,13 +59,33 @@ Reports saved to `test-reports/YYYY-MM-DD/<plan-name>.md` (relative to the proje
 - **PASSED** — all assertions pass
 - **FAILED** — one or more `(BLOCKING)` assertions fail, OR >50% fail
 - **PARTIAL** — some non-blocking assertions fail but majority pass
+- **BLOCKED** — the flow could not be driven to a conclusion
+
+### 5.1 Report front-matter is machine-read — two rules
+The dashboard parses each report's front-matter. Break either rule and the run silently vanishes from the
+dashboard instead of erroring.
+
+1. **`**Result:**` MUST begin with one bare status token** from the list above. The builder's `normStatus()`
+   matches `/PASSED|FAILED|PARTIAL|SKIPPED|BLOCKED/`; anything else (`MIXED`, `✅ NO DEFECTS`, a leading emoji
+   or `~~strikethrough~~`) falls through to `UNKNOWN`, renders grey and **counts as a non-pass**. Put the prose
+   after the token: `**Result:** PARTIAL — MIXED: replay defence holds; 2 new High bugs`.
+2. **`**Plan:**` MUST be the bare plan path, nothing else.** Runs are indexed by that exact string, so
+   `…/bid-supply-chain-management.md (TC-20)` creates a *phantom flow* — the run detaches from its real plan and
+   inflates the flow counts. Put the case list on a separate **`**Cases:**`** line instead.
+
+Report filenames follow the same convention `run-plan.js` generates:
+`test-reports/<YYYY-MM-DD>/<plan-basename>--<label>.md`. A document that is **not a test run** (an audit, a
+consistency pass) does **not** belong in a dated folder — it will be counted as a run with an `UNKNOWN` result
+and, if it is the newest file, it will define the whole flow's status. Put those under `test-reports/audits/`.
 
 ## 6. Dashboard Update
 After every test run, regenerate the project dashboard (from hub root):
 ```bash
-node scripts/build-project-dashboard.js --project=bid-management
+node scripts/build-project-data.js --project=bid-management
 ```
-The dashboard (`projects/bid-management/index.html`) is auto-generated from every plan in this project's `test-plans/` and every report under `test-reports/`. **Never hand-edit it.**
+The dashboard reads `projects/bid-management/data.js`; `index.html` is only a thin shell that renders it.
+Both are auto-generated from every plan in this project's `test-plans/` and every report under `test-reports/`.
+**Never hand-edit either.**
 
 ## 7. Allure Report Generation
 After every test run, regenerate the per-project Allure report (from hub root):

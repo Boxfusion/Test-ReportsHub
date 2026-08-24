@@ -6,6 +6,21 @@
 **Severity:** High — blocks the resolved-dispute tail (employee update → supervisor re-review → HR verify → Generate PERSAL Input).
 **Reproduced:** Employee Jabu Hadebe (`JabuH`), PA2026/5987, after a mediator (Babalwa M) marked the dispute **resolved**.
 
+> **✅ RESOLVED — retested 2026-07-22, cannot reproduce.** After a data clear + dev fix, the full Contracting resolved-dispute chain was driven again with Jabu Hadebe (**PA2026/6241**): the employee "Update Performance Agreement with Outcomes" Submit now **processes on first click**, advances the workflow to the supervisor, and clears the task from the employee inbox. The `Action name is mandatory` / `Cannot read private member #L … Proxy.post` console errors no longer fire on Submit. Chain completed to **Generate PERSAL Input** (Contracting Completed rollup 1 → 2). See `test-reports/2026-07-22/resolved-dispute-jabu.md`.
+>
+> ## ✅ Status: RESOLVED — re-verified 2026-08-02
+>
+> Re-tested by `test-plans/contracting/contracting-lifecycle.md` **TC-24** (Jabu Hadebe, PA2026/6421)
+> against the same workflow step. The step now completes first time:
+> Submit enabled after the tabs hydrated, the POST processed, the task left the employee's inbox and
+> the supervisor received **"Review Updated Performance Agreement with Outcomes"**. The chain then ran
+> on to supervisor approval and HR **Verify** → *Generate PERSAL Input*. No `Action name is mandatory`
+> or `Cannot read private member #L` console errors were raised on Submit.
+>
+> The tab-hydration precondition described below still applies — Submit stays disabled until every
+> sub-tab (Details / Scoring / Workplan / PDP) has been visited — so TC-24 visits all tabs before
+> submitting. See `test-reports/2026-08-02/contracting-lifecycle.md`.
+
 ## Summary
 After a Refer-for-Dispute is **resolved** by the mediator, the PA routes back to the employee with action **"Update Performance Agreement with Outcomes"**. On this screen the **Submit does not process** — the workflow does not advance and the task remains in the employee's inbox.
 

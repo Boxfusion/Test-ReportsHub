@@ -1,10 +1,15 @@
 # Test Execution Rules
 
-> **Multi-project hub note.** All `scripts/...` commands in this file refer to scripts at the **hub root** (two levels up from this file). The hub already provides `scripts/build-project-dashboard.js` (project-aware). Run commands from the hub root, passing this project's plan path explicitly, e.g.:
+> **Multi-project hub note.** All `scripts/...` commands in this file refer to scripts at the **hub root** (two levels up from this file). The hub already provides `scripts/build-project-data.js` (project-aware). Run commands from the hub root, passing this project's plan path explicitly, e.g.:
 > ```
-> node scripts/run-plan.js projects/PMDS/test-plans/<folder>/<plan>.md
-> node scripts/build-project-dashboard.js --project=PMDS
+> node scripts/run-plan.js projects/PD-PMDS/test-plans/<folder>/<plan>.md
+> node scripts/build-project-data.js --project=PD-PMDS
 > ```
+> ⚠️ **`build-project-dashboard.js` is RETIRED — do not run it.** It pre-renders a ~63 KB static `index.html`
+> that overwrites the thin shell, and because `build-project-data.js` only writes the shell **if missing**, a
+> stale pre-rendered page never heals. The canonical pipeline is `build-project-data.js` (per project) →
+> `build-hub-data.js`, or `node scripts/build-all.js` for everything at once, **plus
+> `node scripts/build-landing.js`** — `build-all.js` does not regenerate the root landing page.
 
 ## 1. Step Execution Model
 
@@ -29,7 +34,7 @@ Before every CLICK or TYPE, take a snapshot to confirm the element exists. If no
 - A `(BLOCKING)` assertion failure stops the entire test
 
 ## 4. Report Format
-Reports saved to `test-reports/YYYY-MM-DD/<plan-name>.md` (relative to the project root, i.e. `projects/PMDS/test-reports/...`):
+Reports saved to `test-reports/YYYY-MM-DD/<plan-name>.md` (relative to the project root, i.e. `projects/PD-PMDS/test-reports/...`):
 ```
 # Report: <Plan Title>
 **Date:** YYYY-MM-DD HH:MM UTC
@@ -54,20 +59,46 @@ Reports saved to `test-reports/YYYY-MM-DD/<plan-name>.md` (relative to the proje
 - **PASSED** — all assertions pass
 - **FAILED** — one or more `(BLOCKING)` assertions fail, OR >50% fail
 - **PARTIAL** — some non-blocking assertions fail but majority pass
+- **BLOCKED** — the flow could not be driven to a conclusion
+
+### 5.1 Report front-matter is machine-read — two rules
+The dashboard parses each report's front-matter. Break either rule and the run silently vanishes from the
+dashboard instead of erroring.
+
+1. **`**Result:**` MUST begin with one bare status token** from the list above. The builder's `normStatus()`
+   matches `/PASSED|FAILED|PARTIAL|SKIPPED|BLOCKED/`; anything else (`PASS`, `MIXED`, `✅ NO DEFECTS`, a leading
+   emoji or `~~strikethrough~~`) falls through to `UNKNOWN`, renders grey and **counts as a non-pass**. Put the
+   prose after the token: `**Result:** PARTIAL — happy path proven except the final step, blocked by a 500`.
+   ⚠️ **`PASS` is not `PASSED`** — the regex needs the full token. 20 PD-PMDS reports were written as
+   `✅ PASS` and every one of them rendered grey until they were normalised on 2026-08-12.
+2. **`**Plan:**` MUST be the bare plan path, nothing else.** Runs are indexed by that exact string, so
+   `…/<plan>.md (TC-20)` creates a *phantom flow* — the run detaches from its real plan and inflates the flow
+   counts. Put the case list on a separate **`**Cases:**`** line instead.
+
+⚠️ **PD-PMDS currently has no test plans**, so its reports carry no `**Plan:**` line and every run is
+report-only: the runs are counted, but they attach to no flow. Authoring plans for the driven scenarios is the
+outstanding structural fix for this project.
+
+Report filenames follow the same convention `run-plan.js` generates:
+`test-reports/<YYYY-MM-DD>/<plan-basename>--<label>.md`. A document that is **not a test run** (an audit, a
+consistency pass) does **not** belong in a dated folder — it will be counted as a run with an `UNKNOWN` result
+and, if it is the newest file, it will define the whole flow's status. Put those under `test-reports/audits/`.
+Narrative documents belong outside `test-reports/` entirely — this project keeps them in `observations/` and
+`daily-reports/`.
 
 ## 6. Dashboard Update
 After every test run, regenerate the project dashboard (from hub root):
 ```bash
-node scripts/build-project-dashboard.js --project=PMDS
+node scripts/build-project-data.js --project=PD-PMDS
 ```
-The dashboard (`projects/PMDS/index.html`) is auto-generated from every plan in this project's `test-plans/` and every report under `test-reports/`. **Never hand-edit it.**
+The dashboard (`projects/PD-PMDS/index.html`) is auto-generated from every plan in this project's `test-plans/` and every report under `test-reports/`. **Never hand-edit it.**
 
 ## 7. Allure Report Generation
 After every test run, regenerate the per-project Allure report (from hub root):
 ```bash
-rm -rf projects/PMDS/allure-results
-node scripts/generate-allure-results.js --project=PMDS
-npx allure generate projects/PMDS/allure-results --clean -o projects/PMDS/allure-report
+rm -rf projects/PD-PMDS/allure-results
+node scripts/generate-allure-results.js --project=PD-PMDS
+npx allure generate projects/PD-PMDS/allure-results --clean -o projects/PD-PMDS/allure-report
 ```
 
 ## 8. Hybrid Execution Model (Playwright-first, AI-repair fallback)
@@ -87,7 +118,7 @@ Markers and their meaning:
 - `// FRAGILE: <reason>` — appears when only a 3-level CSS chain matched.
 
 ### Execution flow
-1. `node scripts/run-plan.js projects/PMDS/test-plans/<folder>/<plan>.md` — runs Playwright, emits a JSON summary.
+1. `node scripts/run-plan.js projects/PD-PMDS/test-plans/<folder>/<plan>.md` — runs Playwright, emits a JSON summary.
 2. If `status === "no-spec"` → Claude scaffolds the spec from the plan, then re-invokes the runner.
 3. If `status === "passed"` → report is already written; proceed to Allure.
 4. If any test failed → for each failure: replay via MCP, snapshot, resolve real selector, **edit only the failing line** in the .spec.ts, re-run that single test with `--grep "TC-NN" --no-report`. Up to 2 repair attempts per failing test.
