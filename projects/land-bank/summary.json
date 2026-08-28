@@ -1,13 +1,13 @@
 {
-  "totalPlans": 1,
-  "totalRuns": 1,
-  "last7Runs": 1,
-  "last7Pass": 1,
-  "last7PassPct": 100,
+  "totalPlans": 6,
+  "totalRuns": 4,
+  "last7Runs": 3,
+  "last7Pass": 0,
+  "last7PassPct": 0,
   "failingFlows": 0,
   "lastRun": {
-    "date": "2026-07-30",
-    "result": "PASSED",
-    "plan": "test-plans/auth/login-navigate-to-leads.md"
+    "date": "2026-08-21",
+    "result": "PARTIAL",
+    "plan": "test-plans/leads/branch-manual-document-upload.md"
   }
 }

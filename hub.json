@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-21T07:58:09.389Z",
+  "generated": "2026-08-24T04:36:17.108Z",
   "projects": [
     {
       "name": "Approvals",
@@ -117,6 +117,29 @@
       "href": "projects/HCM/index.html"
     },
     {
+      "name": "land-bank",
+      "displayName": "Land Bank CRM",
+      "appUrl": "https://landbankcrm-adminportal-landbankcrmdev.shesha.app",
+      "environment": "Dev",
+      "sourceRepo": null,
+      "description": "Hybrid Markdown + Playwright test reports for the Land Bank CRM Admin Portal.",
+      "health": "partial",
+      "summary": {
+        "totalPlans": 6,
+        "totalRuns": 4,
+        "last7Runs": 3,
+        "last7Pass": 0,
+        "last7PassPct": 0,
+        "failingFlows": 0,
+        "lastRun": {
+          "date": "2026-08-21",
+          "result": "PARTIAL",
+          "plan": "test-plans/leads/branch-manual-document-upload.md"
+        }
+      },
+      "href": "projects/land-bank/index.html"
+    },
+    {
       "name": "bid-management",
       "displayName": "Bid Management",
       "appUrl": "https://pd-supplychainmanagement-adminportal-qa.shesha.app/login",
@@ -184,29 +207,6 @@
         }
       },
       "href": "projects/EC-DEDEA-Bid-Management/index.html"
-    },
-    {
-      "name": "land-bank",
-      "displayName": "land-bank",
-      "appUrl": null,
-      "environment": null,
-      "sourceRepo": null,
-      "description": null,
-      "health": "healthy",
-      "summary": {
-        "totalPlans": 1,
-        "totalRuns": 1,
-        "last7Runs": 1,
-        "last7Pass": 1,
-        "last7PassPct": 100,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-07-30",
-          "result": "PASSED",
-          "plan": "test-plans/auth/login-navigate-to-leads.md"
-        }
-      },
-      "href": "projects/land-bank/index.html"
     },
     {
       "name": "dispatch",
@@ -322,9 +322,9 @@
   ],
   "totals": {
     "totalProjects": 14,
-    "totalPlans": 254,
-    "totalRuns": 469,
-    "last7Runs": 251,
+    "totalPlans": 259,
+    "totalRuns": 472,
+    "last7Runs": 253,
     "failingFlows": 46
   }
 }
