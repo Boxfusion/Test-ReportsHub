@@ -31,7 +31,12 @@ contract = a real AT failure. Contrast is computed (WCAG formula) from resolved 
 
 ## 🔑 Starting observations (from earlier suites — re-confirm here)
 - Login inputs emit a **DevTools warning: "Input elements should have autocomplete attributes"** (→ TC-14W-002).
-- An uploaded-file link renders as an `<a>` **with no `href`** (JS-only) → not keyboard-focusable (→ TC-14W-006).
+- An uploaded-file link renders as an `<a>` **with no `href`** (JS-only) (→ TC-14W-006). ⚠️ **The "→ not
+  keyboard-focusable" half of this note is WRONG and is corrected (2026-08-27):** the anchor carries an explicit
+  `tabindex="0"`, so it **is** focusable. The real defect is that an `<a>` without `href` has **no implicit ARIA
+  role**, so it exposes as `generic` — the filename is announced as plain text, not as a control. **The fix is a
+  `<button>`, not a `tabindex`.** What *is* genuinely keyboard-unreachable is the four file **action** controls
+  (history ×2, replace, delete): `role="img"` spans at `tabindex="-1"` inside href-less anchors.
 - **Only nav links lack a focus ring**; text inputs show focus on the `.ant-input-affix-wrapper` (from 08-14) (→ 002/003).
 
 ## Test Cases

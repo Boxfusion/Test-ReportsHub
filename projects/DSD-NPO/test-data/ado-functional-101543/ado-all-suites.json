@@ -1,0 +1,555 @@
+{
+  "101889": {
+    "suite": {
+      "id": 101889,
+      "name": "06 OB Self-Confirmation",
+      "n": 6
+    },
+    "cases": [
+      {
+        "id": 101705,
+        "fields": {
+          "System.Id": 101705,
+          "System.State": "Design",
+          "System.Title": "[TC-06-003 | Src:Both | Email-Link] OB declines - 'No' requires a comment and flags OB as not part of NPO",
+          "Microsoft.VSTS.Common.Priority": 1,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). OB received confirmation link.<br><br><b>Source:</b> Both<br><br><b>Portal:</b> Email-Link",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;OB clicks link, selects &#x27;No I am not part of this organisation&#x27;, adds comment, submits&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;OB is flagged &#x27;Not part of NPO&#x27; with reason; counts toward OB Confirmation Failure; admin sees this on backend (per FDS 7.6 rule 2)&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "DSD-NPO; Functional; Negative; Portal-Email-Link; Source-Both; Suite-06; TC-06-003"
+        }
+      },
+      {
+        "id": 101706,
+        "fields": {
+          "System.Id": 101706,
+          "System.State": "Design",
+          "System.Title": "[TC-06-004 | Src:Both | Email-Link] OB confirmation link is single-use",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). OB has confirmed.<br><br><b>Source:</b> Both<br><br><b>Portal:</b> Email-Link<br><br><b>⚠ Drift note:</b> Single-use enforced at OfficeBearerManager.cs:306-307 - confirmed.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;OB clicks the same link again&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Page indicates the link has already been used; cannot change response&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Email-Link; Source-Both; Suite-06; TC-06-004"
+        }
+      },
+      {
+        "id": 101707,
+        "fields": {
+          "System.Id": 101707,
+          "System.State": "Design",
+          "System.Title": "[TC-06-005 | Src:FDS | Email-Link] OB confirmation link is time-bound (e.g., expires after N days)",
+          "Microsoft.VSTS.Common.Priority": 3,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). OB link was sent more than N days ago and not used.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Email-Link<br><br><b>⚠ Drift note:</b> Code: confirmation reminders at day 5 &amp; 7; status moves to OBConfirmationFailed at 10 business days (not a 'link expiry' message per se).",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;OB opens link after expiry&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Page indicates link expired and instructs OB to request a new one&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Email-Link; Source-FDS; Suite-06; TC-06-005"
+        }
+      },
+      {
+        "id": 101708,
+        "fields": {
+          "System.Id": 101708,
+          "System.State": "Design",
+          "System.Title": "[TC-06-006 | Src:FDS | Email-Link] Application status transitions to 'OB Confirmed' once all OBs confirm",
+          "Microsoft.VSTS.Common.Priority": 1,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). All OBs confirm.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Email-Link<br><br><b>⚠ Drift note:</b> Code: OBConfirmed (16) status defined but NOT transitioned to. Expect status to remain on workflow node or move to OBConfirmationFailed if timeout.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Observe application status on admin portal&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Status moves to &#x27;OB Confirmed&#x27; (RefListApplicationStatus = 16) and triggers next workflow step&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Functional; Portal-Email-Link; Positive; Source-FDS; Suite-06; TC-06-006"
+        }
+      },
+      {
+        "id": 101709,
+        "fields": {
+          "System.Id": 101709,
+          "System.State": "Design",
+          "System.Title": "[TC-06-007 | Src:FDS | Email-Link] Application status becomes 'OB Partially Confirmed' if only some confirm",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). Some OBs confirmed, some not.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Email-Link<br><br><b>⚠ Drift note:</b> Code: OBPartiallyConfirmed (13) defined but NOT used.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;View status&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Status = &#x27;OB Partially Confirm&#x27; (RefList=13)&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Email-Link; Source-FDS; Suite-06; TC-06-007"
+        }
+      },
+      {
+        "id": 101710,
+        "fields": {
+          "System.Id": 101710,
+          "System.State": "Design",
+          "System.Title": "[TC-06-008 | Src:Both | Email-Link] Application status becomes 'OB Confirmation Failed' if any OB says No",
+          "Microsoft.VSTS.Common.Priority": 1,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). At least one OB clicks No with reason.<br><br><b>Source:</b> Both<br><br><b>Portal:</b> Email-Link",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;View status&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Status = &#x27;OB Confirmation Failed&#x27; (RefList=7); reason captured; application is flagged for resubmission per FDS 6.2&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "DSD-NPO; Functional; Negative; Portal-Email-Link; Source-Both; Suite-06; TC-06-008"
+        }
+      }
+    ]
+  },
+  "101892": {
+    "suite": {
+      "id": 101892,
+      "name": "09 Annual Compliance backend-QA",
+      "n": 3
+    },
+    "cases": [
+      {
+        "id": 101759,
+        "fields": {
+          "System.Id": 101759,
+          "System.State": "Design",
+          "System.Title": "[TC-09-004 | Src:FDS | Admin] Backend - QA 'Not Aligned' requires reason; triggers resubmission email",
+          "Microsoft.VSTS.Common.Priority": 1,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. QA dialog open.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Same as above - QA workflow may not exist as separate dialog action.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Select &#x27;Not Aligned&#x27;, leave reason blank, Submit&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Validation error&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Enter reason and Submit&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Resubmission email with reason sent; report enters resubmission workflow&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Functional; Negative; Portal-Admin; Source-FDS; Suite-09; TC-09-004"
+        }
+      },
+      {
+        "id": 101760,
+        "fields": {
+          "System.Id": 101760,
+          "System.State": "Design",
+          "System.Title": "[TC-09-005 | Src:FDS | Admin] Annual Compliance - 30-day non-response after notice leads to cancellation",
+          "Microsoft.VSTS.Common.Priority": 1,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Org sent notice for non-compliance.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Code: 30-day auto-cancellation not found.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Wait 30 days with no response&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Org status moves to Cancelled per FDS Annual 6.2 rule 9 bullet 3&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Functional; Negative; Portal-Admin; Source-FDS; Suite-09; TC-09-005"
+        }
+      },
+      {
+        "id": 101761,
+        "fields": {
+          "System.Id": 101761,
+          "System.State": "Design",
+          "System.Title": "[TC-09-006 | Src:FDS | Admin] Annual Compliance - Trends analysis is visible/accessible to backend user",
+          "Microsoft.VSTS.Common.Priority": 3,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Multiple reports across years.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Open report comparing previous years&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Trends are visible per FDS Annual 6.2 rule 9 (analyse trends)&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "DSD-NPO; Functional; Portal-Admin; Positive; Source-FDS; Suite-09; TC-09-006"
+        }
+      }
+    ]
+  },
+  "101901": {
+    "suite": {
+      "id": 101901,
+      "name": "14C Session read-only access control",
+      "n": 5
+    },
+    "cases": [
+      {
+        "id": 101821,
+        "fields": {
+          "System.Id": 101821,
+          "System.State": "Design",
+          "System.Title": "[TC-14-009 | Src:FDS | Both] Submitter cannot edit OB/org data of an application not in editable state",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Public AND Admin Portal (verify on both). Application in 'Application In-Progress' (read-only) or successful.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Both",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Attempt edit&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;UI blocks edit; API rejects PATCH attempts with 403/409&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "DSD-NPO; Functional; Negative; Portal-Both; Source-FDS; Suite-14C; TC-14-009"
+        }
+      },
+      {
+        "id": 101822,
+        "fields": {
+          "System.Id": 101822,
+          "System.State": "Design",
+          "System.Title": "[TC-14-010 | Src:FDS | Both] Session expiry and re-login lands user where they were (or to dashboard)",
+          "Microsoft.VSTS.Common.Priority": 3,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Public AND Admin Portal (verify on both). User signed in.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Both",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Leave session idle past timeout, attempt action&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;User is redirected to sign-in; after sign-in, taken to dashboard or original deep link&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "DSD-NPO; Edge; Functional; Portal-Both; Source-FDS; Suite-14C; TC-14-010"
+        }
+      },
+      {
+        "id": 107428,
+        "fields": {
+          "System.Id": 107428,
+          "System.State": "Design",
+          "System.Title": "[TC-14C-003 | Src:Code | Both] Session cookie has Secure + HttpOnly + SameSite=Lax/Strict",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<p><b>Intended behaviour:</b> Session cookie has Secure + HttpOnly + SameSite=Lax/Strict </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14C per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> OWASP ASVS §V3 (Session). </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> Cross-cutting: OWASP ASVS v4 §V3 (Session Management). Signed DSDNPO FDS Module 1 §7.1 (Sign-In) implicit. </p><p><b>Code anchor:</b> backend Shesha authentication middleware + session cookie config (backend/src/boxfusion.dsdnpo.Web.Host/**). </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14C-003 | Src:Code | Both] Session cookie has Secure + HttpOnly + SameSite=Lax/Strict&quot; </p>",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Sign in via browser; inspect Set-Cookie response header for session cookie.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Cookie flags: Secure=true, HttpOnly=true, SameSite=Lax or Strict.&lt;/p&gt;</parameterizedString></step></steps>",
+          "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14C"
+        }
+      },
+      {
+        "id": 107429,
+        "fields": {
+          "System.Id": 107429,
+          "System.State": "Design",
+          "System.Title": "[TC-14C-004 | Src:Code | Both] Concurrent logins from same user — session behaviour is defined and stable",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<p><b>Intended behaviour:</b> Concurrent logins from same user — session behaviour is defined and stable </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14C per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> OWASP ASVS §V3 (Session). </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> Cross-cutting: OWASP ASVS v4 §V3 (Session Management). Signed DSDNPO FDS Module 1 §7.1 (Sign-In) implicit. </p><p><b>Code anchor:</b> backend Shesha authentication middleware + session cookie config (backend/src/boxfusion.dsdnpo.Web.Host/**). </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14C-004 | Src:Code | Both] Concurrent logins from same user — session behaviour is defined and stable&quot; </p>",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Sign in from Browser A.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Session A active.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Sign in same account from Browser B.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Behaviour matches defined policy: (a) both sessions valid (allowed by design), OR (b) session A invalidated + user notified. Test asserts the defined behaviour, not one of the two.&lt;/p&gt;</parameterizedString></step></steps>",
+          "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14C"
+        }
+      },
+      {
+        "id": 107430,
+        "fields": {
+          "System.Id": 107430,
+          "System.State": "Design",
+          "System.Title": "[TC-14C-005 | Src:Code | Both] Read-only role cannot mutate — POST/PUT/DELETE endpoints return 403",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<p><b>Intended behaviour:</b> Read-only role cannot mutate — POST/PUT/DELETE endpoints return 403 </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14C per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> OWASP ASVS §V3 (Session). </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> Cross-cutting: OWASP ASVS v4 §V3 (Session Management). Signed DSDNPO FDS Module 1 §7.1 (Sign-In) implicit. </p><p><b>Code anchor:</b> backend Shesha authentication middleware + session cookie config (backend/src/boxfusion.dsdnpo.Web.Host/**). </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14C-005 | Src:Code | Both] Read-only role cannot mutate — POST/PUT/DELETE endpoints return 403&quot; </p>",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Precondition: user with \"Read only\" role signed in.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Role seed present.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Attempt POST /api/services/dsdnpo/OrganisationLocations/CreateAsync via authorised session.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Response 403 Forbidden. No side-effect in DB.&lt;/p&gt;</parameterizedString></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Attempt DELETE variants.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Same — 403.&lt;/p&gt;</parameterizedString></step></steps>",
+          "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14C"
+        }
+      }
+    ]
+  },
+  "101903": {
+    "suite": {
+      "id": 101903,
+      "name": "14N Notifications and delivery",
+      "n": 3
+    },
+    "cases": [
+      {
+        "id": 101813,
+        "fields": {
+          "System.Id": 101813,
+          "System.State": "Design",
+          "System.Title": "[TC-14-001 | Src:Code | Admin] Email/SMS notifications - bounced or invalid address surfaces to admin",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Use a known-bouncing email for an OB.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> RefListDeliveryStatus enum supports delivery tracking but UI surface to admin not verified.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Submit application; mail server returns bounce&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Admin sees a &#x27;notification delivery failed&#x27; indicator on application (RefListDeliveryStatus reflects)&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14N; TC-14-001"
+        }
+      },
+      {
+        "id": 101825,
+        "fields": {
+          "System.Id": 101825,
+          "System.State": "Design",
+          "System.Title": "[TC-14-013 | Src:Code | Admin] OB notification retry: failed SMS/email re-sends to persons without success status",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Notification previously failed delivery for at least one OB.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> OfficeBearerManager.cs:185-293 - failed-notification retry logic.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Wait for retry job / trigger manually&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Persons with DeliveryFailed/AwaitingToBeSent get a fresh send; persons with DeliveryConfirmed do not get duplicates&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14N; TC-14-013"
+        }
+      },
+      {
+        "id": 101827,
+        "fields": {
+          "System.Id": 101827,
+          "System.State": "Design",
+          "System.Title": "[TC-14-015 | Src:Code | Admin] Notification delivery status reflects on admin view per OB after send attempt",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Application submitted; OB notifications dispatched.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Code: enum exists. Verify UI surfaces the value.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Open application detail or OB detail&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Per OB: shows DeliveryStatus = AwaitingToBeSent | Sent | DeliveryConfirmed | DeliveryRetry | DeliveryFailed (RefListDeliveryStatus.cs:9)&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Functional; Portal-Admin; Positive; Source-Code; Suite-14N; TC-14-015"
+        }
+      }
+    ]
+  },
+  "101904": {
+    "suite": {
+      "id": 101904,
+      "name": "14R Integration retries DHA-CIPC",
+      "n": 2
+    },
+    "cases": [
+      {
+        "id": 101817,
+        "fields": {
+          "System.Id": 101817,
+          "System.State": "Design",
+          "System.Title": "[TC-14-005 | Src:FDS | Admin] Background DHA verification retry runs after 1 hour and updates OB status",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. OB saved while DHA was down.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Code: no 1-hour scheduled retry; DHA job halts on exception.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Wait &gt; 1 hour with DHA back up&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Background job retries verification; OB status updates accordingly (per FDS 6.1 rule 2c(i))&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-FDS; Suite-14R; TC-14-005"
+        }
+      },
+      {
+        "id": 101818,
+        "fields": {
+          "System.Id": 101818,
+          "System.State": "Design",
+          "System.Title": "[TC-14-006 | Src:FDS | Admin] Background CIPC verification retry runs after 1 hour and updates application",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. NPC application saved while CIPC was down.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Code: no 1-hour scheduled retry for CIPC; user re-submits manually.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Wait &gt; 1 hour with CIPC back up&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Background job retries; directors are populated from CIPC (per FDS 6.1 rule 2b(ii))&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-FDS; Suite-14R; TC-14-006"
+        }
+      }
+    ]
+  },
+  "101907": {
+    "suite": {
+      "id": 101907,
+      "name": "14U Audit trail and resubmission diff",
+      "n": 4
+    },
+    "cases": [
+      {
+        "id": 101815,
+        "fields": {
+          "System.Id": 101815,
+          "System.State": "Design",
+          "System.Title": "[TC-14-003 | Src:FDS | Admin] Audit trail captures who/when for every state transition",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Various state changes occurred.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Code: Shesha FullAuditedEntity captures creation/modification only; explicit state-transition audit log not verified.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Open audit trail for an application&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Each transition includes actor, timestamp, from-state, to-state, comment&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Functional; Portal-Admin; Positive; Source-FDS; Suite-14U; TC-14-003"
+        }
+      },
+      {
+        "id": 101816,
+        "fields": {
+          "System.Id": 101816,
+          "System.State": "Design",
+          "System.Title": "[TC-14-004 | Src:FDS | Admin] Resubmission diff shows changed fields between submissions",
+          "Microsoft.VSTS.Common.Priority": 3,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Application has been resubmitted at least once.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;View resubmission diff on admin portal&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Changed fields highlighted; original retained&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "DSD-NPO; Functional; Portal-Admin; Positive; Source-FDS; Suite-14U; TC-14-004"
+        }
+      },
+      {
+        "id": 107426,
+        "fields": {
+          "System.Id": 107426,
+          "System.State": "Design",
+          "System.Title": "[TC-14U-003 | Src:Code | Both] Office Bearer CRUD writes audit entries (Create, Update, Delete + Confirmed OB self-verification)",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<p><b>Intended behaviour:</b> Office Bearer CRUD writes audit entries (Create, Update, Delete + Confirmed OB self-verification) </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14U per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> ISO/IEC/IEEE 29119-2 §6.4. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> Signed DSDNPO FDS Module 1 §6.2 (Resubmission — audit) + Module 1 §8 (Backend audit trail requirements). </p><p><b>Code anchor:</b> Shesha AbpEntity audit conventions; explicit [Audited] attributes on OfficeBearer / Application / Document services. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14U-003 | Src:Code | Both] Office Bearer CRUD writes audit entries (Create, Update, Delete + Confirmed OB self-verification)&quot; </p>",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"4\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Admin creates an OB.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry: actor + timestamp + OB reference + action=Create.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Admin updates OB position field.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry: action=Update + diff of changed fields.&lt;/p&gt;</parameterizedString></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;OB confirms self-verification via email link.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry: action=SelfConfirm + link source.&lt;/p&gt;</parameterizedString></step><step id=\"4\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Admin deletes / retracts OB.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry: action=Delete or Retract + reason.&lt;/p&gt;</parameterizedString></step></steps>",
+          "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14U"
+        }
+      },
+      {
+        "id": 107427,
+        "fields": {
+          "System.Id": 107427,
+          "System.State": "Design",
+          "System.Title": "[TC-14U-004 | Src:Code | Both] Document upload + Application state-change actions written to audit",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<p><b>Intended behaviour:</b> Document upload + Application state-change actions written to audit </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14U per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> ISO/IEC/IEEE 29119-2 §6.4. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> Signed DSDNPO FDS Module 1 §6.2 (Resubmission — audit) + Module 1 §8 (Backend audit trail requirements). </p><p><b>Code anchor:</b> Shesha AbpEntity audit conventions; explicit [Audited] attributes on OfficeBearer / Application / Document services. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14U-004 | Src:Code | Both] Document upload + Application state-change actions written to audit&quot; </p>",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;User uploads Founding Documents on Wizard Tab 7.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry per file upload with file hash + user reference.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Admin transitions Application from Submitted to Under Review.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry: state transition captured with before/after + actor.&lt;/p&gt;</parameterizedString></step></steps>",
+          "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14U"
+        }
+      }
+    ]
+  },
+  "101908": {
+    "suite": {
+      "id": 101908,
+      "name": "14X Concurrency and race conditions",
+      "n": 8
+    },
+    "cases": [
+      {
+        "id": 101850,
+        "fields": {
+          "System.Id": 101850,
+          "System.State": "Design",
+          "System.Title": "[TC-14X-001 | Src:Code | Admin] Two admins act on same Document Verification dialog: only one wins",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Application in Awaiting Document Verification; two admin users both open the Document Verification dialog.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Admin1 submits &#x27;all docs valid&#x27;; before Admin2 submits, Admin2 should see a stale-state error OR the second submission is rejected with 409. The application status changes once, not twice.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-001"
+        }
+      },
+      {
+        "id": 101851,
+        "fields": {
+          "System.Id": 101851,
+          "System.State": "Design",
+          "System.Title": "[TC-14X-002 | Src:Code | Admin] Submitter resubmits while admin is making decision",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Application set to Incomplete; submitter has wizard reopened; admin still has decision dialog open.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;If submitter submits first, admin&#x27;s decision attempt detects the resubmission and refuses to overwrite. No data loss.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-002"
+        }
+      },
+      {
+        "id": 101852,
+        "fields": {
+          "System.Id": 101852,
+          "System.State": "Design",
+          "System.Title": "[TC-14X-003 | Src:Code | Both] Two users try to Link the same NPO simultaneously",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. NPO L not yet linked to anyone; user A and user B both attempt to link.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Both<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Only one user becomes Authorised Admin; the other sees a &#x27;already linked&#x27; message.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-003"
+        }
+      },
+      {
+        "id": 101853,
+        "fields": {
+          "System.Id": 101853,
+          "System.State": "Design",
+          "System.Title": "[TC-14X-004 | Src:Code | Both] PersonIdVerifier concurrency lock holds under simultaneous trigger",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Multiple OB verifications queued; two triggers fire at the same time on the same instance.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Both<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Only one PersonIdVerifier processes; the other logs &#x27;already processing&#x27; and skips (PersonIdVerifier.cs:48-49). Verify no double DHA call for any single OB.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-004"
+        }
+      },
+      {
+        "id": 101854,
+        "fields": {
+          "System.Id": 101854,
+          "System.State": "Design",
+          "System.Title": "[TC-14X-005 | Src:Code | Admin] Two admins both try to assign different investigators to the same case",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Case validated and assignable.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;First assignment wins; second admin sees stale state and is refused with a clear message.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-005"
+        }
+      },
+      {
+        "id": 101855,
+        "fields": {
+          "System.Id": 101855,
+          "System.State": "Design",
+          "System.Title": "[TC-14X-006 | Src:Code | Admin] OB confirmation race: OB clicks link while admin is processing an unrelated update",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Application in AwaitingOBConfirmation.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;OB confirmation succeeds independently; admin&#x27;s update does not erase the OB confirmation status.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-006"
+        }
+      },
+      {
+        "id": 101856,
+        "fields": {
+          "System.Id": 101856,
+          "System.State": "Design",
+          "System.Title": "[TC-14X-007 | Src:Code | Both] Bulk reallocation Excel upload: duplicate NPO rows handled gracefully",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Admin uploads Excel containing two rows for the same NPO GUID.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Both<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Second occurrence either ignored, deduped, or processed idempotently. No partial-failure crash; result report lists each row&#x27;s outcome.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-007"
+        }
+      },
+      {
+        "id": 101857,
+        "fields": {
+          "System.Id": 101857,
+          "System.State": "Design",
+          "System.Title": "[TC-14X-008 | Src:Code | Both] BackgroundJob runs while transaction in flight",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Status transition to ApplicationSuccessful triggers BackfillMissingApplicationDocumentsAsync.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Both<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Certificate generation reads NpoNumber via projection query (cache-bypass workaround at ApplicationManager.cs:278-283). Certificate PDF shows the freshly-issued NpoNumber, not a stale value.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-008"
+        }
+      }
+    ]
+  },
+  "102152": {
+    "suite": {
+      "id": 102152,
+      "name": "14Y POPIA transport and logging",
+      "n": 6
+    },
+    "cases": [
+      {
+        "id": 102161,
+        "fields": {
+          "System.Id": 102161,
+          "System.State": "Design",
+          "System.Title": "[TC-14Y-001 | Src:Code | Public] Wizard data sent over HTTPS only; submitter PII (RSA ID, email, phone) is not echoed into application logs",
+          "Microsoft.VSTS.Common.Priority": 1,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<b>Preconditions:</b> Network capture tool (browser DevTools) available. Access to application log files or test-env log aggregator.",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"4\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Open browser DevTools Network tab and submit a draft Application Wizard with synthetic PII&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;All wizard requests use https:// scheme; no http:// requests&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Inspect every request URL and response headers&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Strict-Transport-Security header is set; no mixed-content warnings in browser console&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Capture the request correlation ID from response headers&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Correlation ID is present and unique per request&lt;/P&gt;</parameterizedString><description/></step><step id=\"4\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Search the application logs for the test submitter's RSA ID, email, and cellphone&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Logs reference the correlation ID but do not contain raw RSA ID, raw email, or raw cellphone - PII is redacted, masked, or omitted&lt;/P&gt;</parameterizedString><description/></step></steps>",
+          "System.Tags": "DSD-NPO; Functional; Portal-Public; Security; Source-Sys-Obs; Suite-14Y; TC-14Y-001"
+        }
+      },
+      {
+        "id": 107417,
+        "fields": {
+          "System.Id": 107417,
+          "System.State": "Design",
+          "System.Title": "[TC-14Y-002 | Src:Code | Both] Sign In credentials transmitted over TLS only",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<p><b>Intended behaviour:</b> Sign In credentials transmitted over TLS only </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14Y per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> POPIA §11, §26, §27; OWASP ASVS §V3. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> POPIA (Act 4 of 2013) §11+§26+§27; Signed DSDNPO FDS Module 1 §7 (Portal) + Module 1 §8 (Backend) — where PII is processed. </p><p><b>Code anchor:</b> backend endpoints handling SA ID / contact details; app logging config; TLS termination at Azure/Shesha edge. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14Y-002 | Src:Code | Both] Sign In credentials transmitted over TLS only&quot; </p>",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Capture Sign In request via browser DevTools Network.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Request URL uses https://. Password appears only in TLS-encrypted body; no plaintext leak.&lt;/p&gt;</parameterizedString></step></steps>",
+          "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y"
+        }
+      },
+      {
+        "id": 107418,
+        "fields": {
+          "System.Id": 107418,
+          "System.State": "Design",
+          "System.Title": "[TC-14Y-003 | Src:Code | Both] SA ID number treated as special personal information — logs redacted",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<p><b>Intended behaviour:</b> SA ID number treated as special personal information — logs redacted </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14Y per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> POPIA §11, §26, §27; OWASP ASVS §V3. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> POPIA (Act 4 of 2013) §11+§26+§27; Signed DSDNPO FDS Module 1 §7 (Portal) + Module 1 §8 (Backend) — where PII is processed. </p><p><b>Code anchor:</b> backend endpoints handling SA ID / contact details; app logging config; TLS termination at Azure/Shesha edge. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14Y-003 | Src:Code | Both] SA ID number treated as special personal information — logs redacted&quot; </p>",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Perform DHA verification with synthetic SA ID.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;App logs tail shows SA ID masked (e.g. XXXXXXXXXX1234) or absent. Audit trail logs SA ID only if strictly required + separately protected.&lt;/p&gt;</parameterizedString></step></steps>",
+          "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y"
+        }
+      },
+      {
+        "id": 107419,
+        "fields": {
+          "System.Id": 107419,
+          "System.State": "Design",
+          "System.Title": "[TC-14Y-004 | Src:Code | Both] POPI Act consent captured before Register-New-NPO submission",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<p><b>Intended behaviour:</b> POPI Act consent captured before Register-New-NPO submission </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14Y per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> POPIA §11, §26, §27; OWASP ASVS §V3. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> POPIA (Act 4 of 2013) §11+§26+§27; Signed DSDNPO FDS Module 1 §7 (Portal) + Module 1 §8 (Backend) — where PII is processed. </p><p><b>Code anchor:</b> backend endpoints handling SA ID / contact details; app logging config; TLS termination at Azure/Shesha edge. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14Y-004 | Src:Code | Both] POPI Act consent captured before Register-New-NPO submission&quot; </p>",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Open Register-New-NPO flow.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;POPI consent dialogue visible before any submission.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Attempt submit without ticking consent.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Submit blocked with plain-language POPIA notice.&lt;/p&gt;</parameterizedString></step></steps>",
+          "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y"
+        }
+      },
+      {
+        "id": 107420,
+        "fields": {
+          "System.Id": 107420,
+          "System.State": "Design",
+          "System.Title": "[TC-14Y-005 | Src:Code | Both] Subject access — user can request export of their personal data",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<p><b>Intended behaviour:</b> Subject access — user can request export of their personal data </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14Y per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> POPIA §11, §26, §27; OWASP ASVS §V3. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> POPIA (Act 4 of 2013) §11+§26+§27; Signed DSDNPO FDS Module 1 §7 (Portal) + Module 1 §8 (Backend) — where PII is processed. </p><p><b>Code anchor:</b> backend endpoints handling SA ID / contact details; app logging config; TLS termination at Azure/Shesha edge. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14Y-005 | Src:Code | Both] Subject access — user can request export of their personal data&quot; </p>",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Signed-in user opens Profile &gt; Data &amp; Privacy.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Export My Data action visible.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Trigger export.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Email sent with structured export (JSON or CSV) of user PII + linked NPO records.&lt;/p&gt;</parameterizedString></step></steps>",
+          "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y"
+        }
+      },
+      {
+        "id": 107421,
+        "fields": {
+          "System.Id": 107421,
+          "System.State": "Design",
+          "System.Title": "[TC-14Y-006 | Src:Code | Both] Data retention — inactive user records archived after policy-defined period",
+          "Microsoft.VSTS.Common.Priority": 2,
+          "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+          "System.Description": "<p><b>Intended behaviour:</b> Data retention — inactive user records archived after policy-defined period </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14Y per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> POPIA §11, §26, §27; OWASP ASVS §V3. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> POPIA (Act 4 of 2013) §11+§26+§27; Signed DSDNPO FDS Module 1 §7 (Portal) + Module 1 §8 (Backend) — where PII is processed. </p><p><b>Code anchor:</b> backend endpoints handling SA ID / contact details; app logging config; TLS termination at Azure/Shesha edge. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14Y-006 | Src:Code | Both] Data retention — inactive user records archived after policy-defined period&quot; </p>",
+          "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Precondition: user with no login in policy-defined inactive window.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Seed data.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Run retention job (or observe scheduled trigger).&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;User record moved to Archived state; personal data no longer accessible via normal queries; audit entry recorded.&lt;/p&gt;</parameterizedString></step></steps>",
+          "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y"
+        }
+      }
+    ]
+  }
+}

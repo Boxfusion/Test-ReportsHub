@@ -186,7 +186,7 @@ on the passport-captured OB shows:
 ⚠️ **I expected this to destroy the record and it does not.** I saved deliberately to find out: afterwards the grid
 still showed `John van der Merwe · M00123456 · 15/06/2029 · 12/03/1999 · Male`, **fully intact**. So this is a
 **display/load defect with a misleading enabled Save**, *not* data loss. Recorded this way so the stronger claim is not
-quoted. Evidence: `v15-ob-edit-loses-identity-data.png`, *(screenshot withheld — POPIA, see `audits/2026-08-21-evidence-popia-sweep.md`)*.
+quoted. Evidence: `v15-ob-edit-loses-identity-data.png`, `v16-ob-identity-wiped-after-edit.png`.
 ⛔ The case's own assertions remain unexecutable: there is no verification status to re-check (TC-06), and no DHA call
 is visible client-side.
 

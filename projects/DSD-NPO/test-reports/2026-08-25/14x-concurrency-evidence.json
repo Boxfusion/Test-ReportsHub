@@ -1,0 +1,33 @@
+{
+  "capturedAt": "2026-08-25T15:55Z",
+  "suite": "14X Concurrency & race conditions (8 cases)",
+  "summary": "All 8 cases are Src:Code backend concurrency guards. A black-box tester can reach almost none: 1 BLOCKED on a safe test NPO (harness proven ready), 7 NOT EXECUTED (backend-only, feature-absent, or needing owned records in specific states + permission to fire concurrent mutations on shared QA). No new coverage; one real defect surfaced building the harness.",
+  "TC-14X-003_link-race": {
+    "verdict": "BLOCKED — harness ready, no safe linkable test NPO",
+    "harnessProven": {
+      "twoAccountsAuthenticate": true,
+      "A_userId": 15944, "B_userId": 15945,
+      "authHeaderRequired": "sha-frontend-application: public-portal",
+      "linkModal": "boxfusion.dsdnpo/dsd-link-existing-npo v13 — NPO Number field + search",
+      "lookupEndpoint": "GET /api/services/dsdnpo/Organisations/GetNPOByNpoNumber?npoNumber=<num>",
+      "lookupRequiresAuth": "401 anonymous — this SERVICE endpoint enforces auth, unlike the dynamic CRUD layer (sharpens the Class B finding: the anonymous-read gap is the /api/dynamic/ CRUD layer specifically)"
+    },
+    "whyBlocked": "Linking claims Authorised Admin over a real NPO. Accounts A/B are office bearers of no NPO, and there is no designated test NPO both may legitimately link. Firing A+B link-confirm at a real org would hijack it — not done. Needs a test NPO from Thabiso."
+  },
+  "defectFoundBuildingHarness": {
+    "bug": "bugs/2026-08-25-link-existing-npo-lookup-500-on-orphaned-person.md",
+    "finding": "GetNPOByNpoNumber returns HTTP 500 for 7 of 12 sampled real NPOs — orphaned Shesha.Domain.Person reference unhandled; a non-existent number also 500s ('Npo Not Found') though the UI catches that one.",
+    "sampledLookups": {"tested": 12, "ok": 5, "personMissing500": 7, "npoNotFound": 0},
+    "uiHandlingOfNotFound": "friendly 'NPO Number Not Found!' shown for the not-found path"
+  },
+  "perCaseVerdicts": {
+    "TC-14X-001_two-admin-doc-verification": "NOT EXECUTED — needs an owned application at a document-verification decision point + two admin identities; a double state-transition on a real application is unsafe on shared QA. Not simulated.",
+    "TC-14X-002_submitter-resubmit-vs-admin": "NOT EXECUTED — needs a submitter-owned application in a decidable state paired with an admin on the same application; not safely constructable this pass.",
+    "TC-14X-003_link-race": "BLOCKED — see above.",
+    "TC-14X-004_PersonIdVerifier-lock": "NOT EXECUTED — internal lock (PersonIdVerifier.cs:48-49), no UI trigger alignable to the millisecond; 'no double DHA call' only visible in logs/integration we lack.",
+    "TC-14X-005_two-admin-investigator-assign": "NOT EXECUTED — needs an investigation case in an assignable state + two admins.",
+    "TC-14X-006_OB-confirmation-race": "NOT EXECUTED — needs a pending OB confirmation link + an admin editing the same application.",
+    "TC-14X-007_bulk-reallocation-upload": "NOT EXECUTED — no reallocation upload screen exists (form registry: 0 of 8294 match reallocat*; only add-content-file and form-import-json are upload forms).",
+    "TC-14X-008_backgroundjob-vs-transaction": "NOT EXECUTED — background-job-vs-transaction timing (ApplicationManager.cs:278-283 cache-bypass); no client-alignable trigger."
+  }
+}

@@ -7,7 +7,23 @@
 ## Progress
 | Module | New scripts (this week) | Overall progress |
 |---|---|---|
-| DSD-NPO | **23 functional test plans authored** (187 cases imported from ADO plan 101543) | **Smoke plan 101541 — 70 / 70 cases · 100% complete** · **Functional plan 101543 — 145 / 314 cases executed · 46%** (21 of 36 suites) |
+| DSD-NPO | **23 functional test plans authored** (187 cases imported from ADO plan 101543) | **Smoke plan 101541 — 70 / 70 cases · 100% complete** · **Functional plan 101543 — 130 / 314 cases executed · 41%** (21 of 36 suites) |
+
+### Functional outcomes — the 130 executed cases
+| Outcome | Cases |
+|---|---|
+| ✅ Passed | **53** |
+| 🔴 Failed | **51** |
+| ⚠️ Partial | **26** |
+| **Executed** | **130** |
+
+A further **46** cases were reached but recorded as **blocked, deferred or outside the black-box remit** (they need a
+system clock rolled, a record we cannot create, or server/source access), so **176 of the 314 carry a recorded
+outcome**.
+
+The failure rate is high because the functional plan is deliberately the negative-path and validation pass — it is
+written to find the places where the build and the rules disagree, and most of the 51 are validation that is advisory
+rather than enforcing.
 
 ## The week's headline: the smoke plan is finished
 Smoke closed at **70 of 70 cases verdicted — 100%**, from 66 (94%) at the start of the week. Three things got it
@@ -23,9 +39,9 @@ there:
 3. **The annual-compliance pair was found not to be blocked after all** and was executed, rather than being carried
    forward as blocked for a third week.
 
-## Functional suites executed this week — 21 of 36 suites, 145 of 314 cases (46%)
+## Functional suites executed this week — 21 of 36 suites, 130 of 314 cases (41%)
 Essentially the whole functional programme was imported and run inside this week: 187 of the plan's 314 cases are now
-imported, and 145 of them carry a verdict.
+imported, and 130 of them were executed to a pass, fail or partial verdict.
 
 - **Registration (01 · 02 · 03 · 04 · 05)** — sign-in and account creation, NPO linking, and all three wizard bands
   exercised in depth against their validation rules.

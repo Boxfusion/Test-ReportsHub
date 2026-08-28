@@ -1,0 +1,14 @@
+{
+  "checked": true,
+  "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/ob-self-verification-thank-you?isSuccess=true",
+  "toasts": [],
+  "placeholders": [],
+  "calls": [
+    {
+      "status": 200,
+      "url": "/api/services/dsdnpo/NpoOfficeBearers/GetOfficeBearerIdBySubstringId?subStringId=eba499877cad",
+      "body": ""
+    }
+  ],
+  "body": "Thank You Should there be any issues the Department of Social Development will be in touch with you. You are to contact the department on 012 312 7500, npoinquiry@dsd.gov.za"
+}

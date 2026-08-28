@@ -1,0 +1,30 @@
+{
+  "dis": {
+    "radios": 4,
+    "radiosDisabled": 4,
+    "inputs": 5,
+    "inputsDisabled": 4,
+    "submitDisabled": [
+      true
+    ]
+  },
+  "gate": [
+    "You already have an existing Appeal that is either in Draft or In Progress status."
+  ],
+  "vis": true,
+  "enabled": true,
+  "url": "https://dsd-npo-publicportal-1-qa.shesha.app/shesha/workflow-action?id=4106f35f-ee6e-45b3-8357-a8931fc61d7b&todoid=0e83fd9d-e6db-4c1e-9ce6-93b382790521",
+  "after": "Shesha/header-public-portal v3 LIVE DashboardRegister NPOEducation and AwarenessContact UsFAQs Hi Mpendulo ntshangase Nomfanelo QA Test NPO 2026-08-13 Latest Initial Appeal: DRAFT Ref No: APPEAL1445/25/08/2026 Created by: Mpendulo ntshangase 2 hours ago boxfusion.dsdnpo/npo-appeal-application v35 LIVE As per Section 14(1) and 22(1) of the NPO Act NPOs have the provision to submit an Appeal of Cancellation or of Refusal to Register outcomes. This form is therefore applicable to organisations which would have received communication on either of the above outcomes in the application or annual submission processes. Organisation Details boxfusion.dsdnpo/organisation-details-subform v14 LIVE Name Nature of Appeal Refusal To Register Cancellation Of Registration Preferred Representation Mode * Oral Written Submission Note: The panel reserve the right to approve the Oral submission Supporting Documents (press to upload) Submitting Office Bearer Details Search for office bearer boxfusion.dsdnpo/deregistrationOB-details-subform v21 LIVE Name Last Name ID Number Passport Number Cellphone number Email Nationality boxfusion.dsdnpo/deregistrationOB-details-subform-position v4 LIVE Position Declaration I here with serve notice of appeal against refusal to register/decision of the director to cancel registration and hereby confirm that I am the authorised person to tender this notice on behalf of the organisation. Name * Surname * Capacity * Cancel Submit Shesha/footer-public-portal v2 LIVE ",
+  "bad": [
+    {
+      "status": 500,
+      "url": "/api/services/dsdnpo/AppealActions/GetAppealInitialData?appealId=4106f35f-ee6e-45b3-8357-a8931fc61d7b",
+      "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"No Appeal or NPO found\",\"details\":\"No Appeal or NPO found\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+    },
+    {
+      "status": 500,
+      "url": "/api/services/dsdnpo/AppealActions/GetAppealInitialData?appealId=4106f35f-ee6e-45b3-8357-a8931fc61d7b",
+      "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"No Appeal or NPO found\",\"details\":\"No Appeal or NPO found\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+    }
+  ]
+}

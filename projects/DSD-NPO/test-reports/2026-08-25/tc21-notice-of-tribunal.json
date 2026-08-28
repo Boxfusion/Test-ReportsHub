@@ -1,0 +1,16 @@
+{
+  "info": {
+    "fields": [
+      {
+        "label": "Yes",
+        "requiredClass": false,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "Yes No"
+      }
+    ],
+    "uploads": 0,
+    "buttons": []
+  },
+  "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/notice-of-tribunal v15 LIVE Hint: Please add the appeal result and confirm Is assessment complete? Yes No"
+}

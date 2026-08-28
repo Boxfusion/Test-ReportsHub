@@ -69,15 +69,23 @@ export async function waitForHydration(page: Page) {
  * not a failed switch.
  */
 export async function switchToLatest(page: Page) {
-  const trigger = page.locator('.ant-dropdown-trigger', { hasText: /^Live$/ }).first();
-  if (!(await trigger.isVisible().catch(() => false))) return false;
+  // 🔑 The trigger only exists AFTER hydration. The previous version bailed out with
+  // `isVisible() === false` when called too early and the caller swallowed the `false` —
+  // so the run silently exercised the PUBLISHED form version. On 2026-08-25 that produced a
+  // "the form has no Correspondence section" reading taken entirely in Live mode.
+  // Wait for the trigger, switch, then RE-READ it and throw. Never fail silently.
+  const trigger = page.locator('.ant-dropdown-trigger').filter({ hasText: /^(Live|Ready|Latest)$/ }).first();
+  await trigger.waitFor({ state: 'visible', timeout: 45_000 });
+  if ((await trigger.innerText()).trim() === 'Latest') return true;
   await trigger.click();
   const option = page
     .locator('.ant-dropdown:not(.ant-dropdown-hidden) li, .ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item')
-    .filter({ hasText: /Latest/i })
+    .filter({ hasText: /^Latest/i })
     .first();
-  await option.click({ timeout: 5000 });
-  await page.waitForTimeout(1500);
+  await option.click({ timeout: 8000 });
+  await page.waitForTimeout(2500);
+  const now = (await trigger.innerText()).trim();
+  if (now !== 'Latest') throw new Error(`view mode did not switch to Latest, still: ${now}`);
   return true;
 }
 
@@ -89,7 +97,8 @@ export async function loginPublic(page: Page, creds = CREDS) {
   await typeReal(page.locator('input[type=password]').first(), creds.password);
   await page.getByRole('button', { name: 'Login' }).click();
   await page.waitForURL(/dynamic|landing/i, { timeout: 45_000 });
-  await switchToLatest(page).catch(() => {});
+  await waitForHydration(page);
+  await switchToLatest(page);          // throws if it did not take — never silently Live
 }
 
 /** Admin portal. Submit button reads **Sign In**. */
@@ -100,7 +109,8 @@ export async function loginAdmin(page: Page, creds = CREDS) {
   await typeReal(page.locator('input[type=password]').first(), creds.password);
   await page.getByRole('button', { name: 'Sign In' }).click();
   await page.waitForURL(/dynamic/i, { timeout: 45_000 });
-  await switchToLatest(page).catch(() => {});
+  await waitForHydration(page);
+  await switchToLatest(page);          // throws if it did not take — never silently Live
 }
 
 /**

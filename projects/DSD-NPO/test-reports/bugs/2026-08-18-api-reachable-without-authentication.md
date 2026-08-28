@@ -75,3 +75,76 @@ not confined to that class.
 Captured as structured `browser_evaluate` output in the run report
 `test-reports/2026-08-18/01-authentication-account-creation-functional--sign-in-and-enumeration.md`
 (status codes, `totalCount`, and `user:null` recorded there; no PII transcribed).
+
+---
+
+## Re-confirmed 2026-08-27 — two details to add
+
+Hit again incidentally while running TC-01-022. Both narrow the finding usefully rather than widening it.
+
+### 1. It affects read-by-**id**, not only `Crud/GetAll`
+A single known GUID is enough — no enumeration required:
+
+```
+GET /api/dynamic/boxfusion.dsdnpo/NpoOrganisation/Crud/Get?properties=applicationRef,id,name,status&id=<npoGuid>
+    (no Authorization header at all)
+→ 200 { "id": "be7125b8-…", "applicationRef": " APPL26-01570",
+        "name": "NpoQa Bravo Wizard Test 2026-08-27", "status": 1 }
+```
+
+`unAuthorizedRequest: false`. Same body when called with an authenticated but **completely unrelated** user's token
+(a brand-new account with no NPO links), so there is no ownership check either. The 08-25 14Z Class B run had already
+recorded `boxfusion.dsdnpo/NpoOrganisation` as anonymously readable at `GetAll` level (320 595 records); this adds the
+by-id route.
+
+### 2. 🔑 The exposure is per-endpoint, not blanket — and there is a working reference in the same codebase
+Not everything is open. On the same host, with no token:
+
+| Endpoint | Anonymous result |
+|---|---|
+| `/api/dynamic/boxfusion.dsdnpo/NpoOrganisation/Crud/Get?id=…` | ❌ **200 + data** |
+| `/api/services/app/Entities/GetAll?entityType=Npo.Application` | ✅ **401** *"Current user did not login to the application"* |
+
+So `Npo.Application` is correctly guarded. Whoever fixes this can use it as the in-repo reference for how the
+guard should be applied, rather than designing one. That also means a blanket claim like *"the API is anonymously
+readable"* is too strong and should be stated per-endpoint.
+
+---
+
+## Update 2026-08-28 — uploaded documents download anonymously by id (`StoredFile/Download`)
+
+Found closing out **TC-14Z-018 / 019** (StoredFile access guard). This is the most concrete instance yet: not
+metadata, but the **actual file content** of an applicant's uploaded documents, served to anyone with the file id
+and **no credentials at all**.
+
+**Specimens** — the three files owned by application **APPL26-01570** (`6c02e52c-…`, Account B). All ids were
+obtained legitimately from that application's own `FilesList`, then re-requested from other contexts:
+
+| Context | `StoredFile/Download?id=<B's file>` | `StoredFile/FilesList?ownerId=<B's app>` |
+|---|---|---|
+| Account **B** (owner) | 200 + PDF (control) | 200, lists all 3 (control) |
+| Account **A** (unrelated user, no link to B) | ✅ **200 + full PDF** (79 549 / 107 890 / 193 B) | ✅ **200, lists all 3 by name** |
+| **Anonymous** (no token) | ✅ **200 + full 79 549 B PDF** | — |
+
+So there is **no owner check and no authentication check** on file retrieval: any authenticated user can read any
+other user's uploaded documents by id, and an anonymous caller can too.
+
+**Discrimination control.** A zero GUID (`00000000-…`) does **not** return content — it errors (CORS-masked, the
+known pattern on this host's error path), while every real id returns 200 + bytes. So the 200s are genuine file
+retrievals, not blanket-200 behaviour.
+
+**Scope / POPIA.** Uploaded documents in this register include founding constitutions, and elsewhere ID and
+banking documents — so this is a direct route to personal and organisational documents by guessable/leaked id. The
+files touched here were **our own synthetic Account-B documents**; only blob sizes were read, no content
+transcribed.
+
+**Verdict impact.** TC-14Z-018 and TC-14Z-019 both **FAILED** on this evidence — the StoredFile guard the cases
+exist to prove is absent in the strongest form (cross-account **and** anonymous).
+⚠️ The verbatim ADO steps for 018 vs 019 could not be quoted: suite 14Z is not among the 9 committed raw ADO pulls
+and the `ado` MCP was unreachable this session. The two cases are verdicted against the plan's stated intent
+("StoredFile guard", Class B), with `FilesList` (enumeration) and `Download` (retrieval) each demonstrated
+unguarded. **Thabiso to confirm which of 018/019 targets enumeration vs retrieval** — the finding covers both
+regardless.
+
+Same root cause and fix as the rest of this bug: apply the guard already present on `Npo.Application` to the
+`StoredFile` endpoints.
