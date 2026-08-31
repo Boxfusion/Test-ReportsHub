@@ -1,0 +1,110 @@
+{
+  "npo-appeal-application": {
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/dynamic/boxfusion.dsdnpo/npo-appeal-application",
+    "notFound": false,
+    "grid": false,
+    "fields": [
+      "Name",
+      "Name",
+      "Nature of Appeal",
+      "Preferred Representation Mode *",
+      "Supporting Documents",
+      "Name",
+      "Name",
+      "Last Name",
+      "ID Number",
+      "Passport Number",
+      "Cellphone number",
+      "Email",
+      "Nationality",
+      "Position",
+      "Position",
+      "Name *",
+      "Surname *",
+      "Capacity *"
+    ],
+    "buttons": [
+      "Cancel",
+      "Submit",
+      "Enquiry"
+    ],
+    "body": "Shesha/header-public-portal v3 LIVE DashboardRegister NPOEducation and AwarenessContact UsFAQs Hi Mpendulo ntshangase Nomfanelo QA Test NPO 2026-08-13 Latest boxfusion.dsdnpo/npo-appeal-application v35 LIVE As per Section 14(1) and 22(1) of the NPO Act NPOs have the provision to submit an Appeal of Cancellation or of Refusal to Register outcomes. This form is therefore applicable to organisations which would have received communication on either of the above outcomes in the application or annual submission processes. Organisation Details boxfusion.dsdnpo/organisation-details-subform v14 LIVE Name Nature of Appeal Refusal To Register Cancellation Of Registration Preferred Representation Mode * Oral Written Submission Note: The panel reserve the right to approve the Oral submission Supporting Documents Submitting Office Bearer Details Search for office bearer boxfusion.dsdnpo/deregistratio",
+    "bad": []
+  },
+  "portal-appeals-table": {
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/dynamic/boxfusion.dsdnpo/portal-appeals-table",
+    "notFound": false,
+    "grid": true,
+    "fields": [],
+    "buttons": [
+      "Initiate Appeal",
+      "Enquiry"
+    ],
+    "body": "Shesha/header-public-portal v3 LIVE DashboardRegister NPOEducation and AwarenessContact UsFAQs Hi Mpendulo ntshangase Nomfanelo QA Test NPO 2026-08-13 Latest boxfusion.dsdnpo/portal-appeals-table v11 DRAFT Appeals 0 items found 1 10 / page Initiate Appeal You already have an existing Appeal that is either in Draft or In Progress status. Only one active appeal may exist at a time. If your appeal is in Draft status, please complete and submit it or delete it before creating a new appeal. If your appeal is In Progress, please follow up with the NPO Administrators regarding its status Name Type Of Appeal Submitted date Status No Data No data is available for this table Shesha/footer-public-portal v2 LIVE © 2024 DSD. All rights reserved. Support Contact Us FAQ Enquiry Connect with us",
+    "bad": []
+  },
+  "portal-appeal-records": {
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/dynamic/boxfusion.dsdnpo/portal-appeal-records",
+    "notFound": false,
+    "grid": false,
+    "fields": [],
+    "buttons": [
+      "Add",
+      "Export",
+      "Enquiry"
+    ],
+    "body": "Shesha/header-public-portal v3 LIVE DashboardRegister NPOEducation and AwarenessContact UsFAQs Hi Mpendulo ntshangase Nomfanelo QA Test NPO 2026-08-13 Latest boxfusion.dsdnpo/portal-appeal-records v14 LIVE Add Export Shesha/footer-public-portal v2 LIVE © 2024 DSD. All rights reserved. Support Contact Us FAQ Enquiry Connect with us",
+    "bad": [
+      "400 /api/services/app/Entities/GetAll?entityType=Npo.DeregistrationAppeal&maxResultCount=10&skipCount=0&properties=&sorting="
+    ]
+  },
+  "appeal-portal-details": {
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/dynamic/boxfusion.dsdnpo/appeal-portal-details",
+    "notFound": false,
+    "grid": false,
+    "fields": [
+      "Name of Organisation",
+      "Npo Number",
+      "Nature of Appeal",
+      "Mode of Appeal",
+      "Text field2",
+      "Text field7",
+      "Text field8",
+      "Text field9",
+      "Text field10",
+      "Name",
+      "Surname",
+      "Capacity",
+      "Supporting Documents"
+    ],
+    "buttons": [
+      "Edit",
+      "Enquiry"
+    ],
+    "body": "Shesha/header-public-portal v3 LIVE DashboardRegister NPOEducation and AwarenessContact UsFAQs Hi Mpendulo ntshangase Nomfanelo QA Test NPO 2026-08-13 Latest boxfusion.dsdnpo/appeal-portal-details v14 LIVE Appealing the COMPLETED Edit Details Appeal Details and Submitting Office Bearer Details Name of Organisation Npo Number Nature of Appeal Mode of Appeal Text field2 Text field7 Text field8 Text field9 Text field10 Declaration I, the undersigned, declare that I am duly authorised by the organisation to complete and submit this appeal and that the information contained in this form is to the best of my knowledge correct Name Surname Capacity Documents Supporting Documents Shesha/footer-public-portal v2 LIVE © 2024 DSD. All rights reserved. Support Contact Us FAQ Enquiry Connect with us",
+    "bad": []
+  },
+  "npo-appeal-application-details": {
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/dynamic/boxfusion.dsdnpo/npo-appeal-application-details",
+    "notFound": false,
+    "grid": false,
+    "fields": [
+      "Name of organisation",
+      "Npo Number",
+      "Nature of Appeal",
+      "Appeal description",
+      "Name",
+      "Surname",
+      "Capacity",
+      "Supporting Documents",
+      "Attach Docs",
+      "Other Communication"
+    ],
+    "buttons": [
+      "Edit",
+      "Enquiry"
+    ],
+    "body": "Shesha/header-public-portal v3 LIVE DashboardRegister NPOEducation and AwarenessContact UsFAQs Hi Mpendulo ntshangase Nomfanelo QA Test NPO 2026-08-13 Latest boxfusion.dsdnpo/npo-appeal-application-details v9 LIVE - Appeal Application COMPLETED Edit Appeal Details Name of organisation Npo Number Nature of Appeal Appeal description Declaration I, the undersigned, declare that I am duly authorised by the organisation to complete and submit this appeal and that the information contained in this form is to the best Name Surname Capacity Documents Documents From Npo Supporting Documents Documents To Panel Attach Docs Other Communication Comment There are no notes Shesha/footer-public-portal v2 LIVE © 2024 DSD. All rights reserved. Support Contact Us FAQ Enquiry Connect with us",
+    "bad": []
+  }
+}

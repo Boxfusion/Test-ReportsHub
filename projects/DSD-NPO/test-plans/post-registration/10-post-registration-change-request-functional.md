@@ -101,3 +101,30 @@ Ran on registered NPO **333-019** (existing request POST1317).
 
 🔑 Change Request = registered NPO landing → Post Registration → `portal-change-request-table`. The blocking POST1317 is
 a typeless auto-draft from suite 08 that can't be cleared → TC-10-003's block is a dead-end.
+
+---
+
+## ✅ Executed 2026-08-27 — the two admin cases come off the deferred list
+Report: `test-reports/2026-08-27/10-post-registration-change-request-functional--admin-decisions.md`
+Ran on our own registered NPO **333-022** (`Nomfanelo QA Unfinished NPO 2026-08-20`), change request **POST1424**.
+
+| Case | Verdict | Note |
+|---|---|---|
+| TC-03 (TC-10-005) | ⚪ DEFERRED | still needs an "assigned" state; ours went submitted → Completed |
+| TC-04 (TC-10-010) | ⚠️ PARTIAL | status 3 / `changeRequestStatus` 4 + `ApprovalLetter.pdf` + outcome email — but `changeDecision`, `changesApproved`, `comments`, `actionedBy` all unset |
+| TC-05 (TC-10-011) | ✅ PASS | required `Comment` gates `Decline` both ways; disabled-button style |
+
+🔑 **Correction to the 08-18 note.** These two were recorded as needing *"a submitted typed request"*, which read as
+an admin-side or data blocker. It was neither — the **submitter wizard cannot submit a saved draft at all**. Step 3's
+office-bearer gate tests `globalState.numberOfOfficeBearer`, set only by the add/edit-office-bearer success handler
+and `undefined` on load, so `0 >= required` always fails. Three office bearers were listed while the form insisted on
+"3 or more". **Adding a fourth office bearer in-session unblocks it** — that is the workaround for any future run.
+Bug: `test-reports/bugs/2026-08-27-change-request-draft-cannot-be-submitted-office-bearer-counter.md`.
+
+🔑 **Preconditions to correct in this plan:**
+- Drop *"the admin cases need a request in the queue"* as the blocker — replace with *"a submitted request; note the
+  draft-submission bug and add/edit an office bearer to get past step 3"*.
+- The admin decision is reached via `/shesha/workflow-action?id=<crId>&todoid=<todoId>` → **Accept Changes** →
+  **Confirm Decision** (`change-request-decision-final-dialog`). Both Approve and Decline live in that one dialog —
+  there is no separate "Decline" toolbar action, which is what the TC-05 steps imply.
+- POST1317 on 333-019 is still the undeletable typeless draft; **use 333-022, not 333-019**, for this suite.

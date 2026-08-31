@@ -36,7 +36,7 @@ It was not a regression; it was this.
 - **Partial mitigation:** there *is* a message — a transient toast **"OB With same mobile number exists"**. But it
   auto-dismisses, there is no error on the Mobile Number field, and if you look away or (as in automation) inspect the
   form a few seconds later, the form looks simply broken. A field-level error would cost nothing and would not vanish.
-- Screenshot: `../2026-08-20/*(screenshot withheld — POPIA, see `audits/2026-08-21-evidence-popia-sweep.md`)* (taken before the toast was found —
+- Screenshot: `../2026-08-20/evidence/ob-save-disabled-duplicate-mobile.png` (taken before the toast was found —
   which is exactly the problem).
 
 ### 3. Admin → Document Verification → **Additional Reasons for rejection**
@@ -79,3 +79,33 @@ looks *already answered*); diagnosis requires DOM inspection or brute-force fiel
 Is the red star driven off the same metadata as the validation rule? If they are two independent settings in the form
 builder, every mandatory field in the module is a candidate for this, and it would be worth an audit rather than
 three point fixes.
+
+---
+
+## Re-confirmed 2026-08-27 — instance 1, on a fresh application, by someone who had not seen this bug
+
+Independent re-confirmation while running TC-04-019 / TC-14W-006 / TC-14W-007 on a **brand-new** application
+(APPL26-01570, Account B, `create-npo` **v62** — a newer form version than the 08-20 run).
+
+Instance 1 reproduced exactly:
+
+- all **9** red-starred fields on Organisation Details satisfied
+- **zero** `.ant-form-item-explain-error` on the page, **zero** form items carrying an error class
+- no toast, no alert, no validation summary
+- **no network request fires on field change** — confirming the gate is purely client-side
+- `Next` `disabled`
+- selecting **any** province in the unstarred **National (SA)** → `Next` enabled immediately
+
+Cost: roughly **15 minutes** of diagnosis, on a form I had already filled correctly. I went as far as reading the
+form configuration to look for a `customEnabled` expression before finding the field — which is the point this bug
+makes: there is no on-screen path from "button is dead" to "this field".
+
+**A fourth instance of the same pattern, one tab later:** wizard tab 5 *Admin & Operations* is a checkbox list of
+~30 options, **none marked required**, and `Next` stays disabled until at least one is ticked — again with no error
+and no indication. Ticking `Social Development` enabled it.
+
+So the pattern is now **4 confirmed instances** across `create-npo` (×3: Organisation Details, Admin & Operations,
+plus the office-bearer modal) and `document-verification-copied` (×1). The severity assessment in this bug —
+*"not because any one field is hard to guess, but because the pattern repeats"* — holds up.
+
+⚠️ A duplicate bug for instance 1 was drafted on 08-27 and deleted in favour of this note.

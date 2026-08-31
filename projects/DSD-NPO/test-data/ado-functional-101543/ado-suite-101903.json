@@ -1,0 +1,48 @@
+{
+  "suite": {
+    "id": 101903,
+    "name": "14N Notifications and delivery",
+    "n": 3
+  },
+  "cases": [
+    {
+      "id": 101813,
+      "fields": {
+        "System.Id": 101813,
+        "System.State": "Design",
+        "System.Title": "[TC-14-001 | Src:Code | Admin] Email/SMS notifications - bounced or invalid address surfaces to admin",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Use a known-bouncing email for an OB.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> RefListDeliveryStatus enum supports delivery tracking but UI surface to admin not verified.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Submit application; mail server returns bounce&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Admin sees a &#x27;notification delivery failed&#x27; indicator on application (RefListDeliveryStatus reflects)&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14N; TC-14-001"
+      }
+    },
+    {
+      "id": 101825,
+      "fields": {
+        "System.Id": 101825,
+        "System.State": "Design",
+        "System.Title": "[TC-14-013 | Src:Code | Admin] OB notification retry: failed SMS/email re-sends to persons without success status",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Notification previously failed delivery for at least one OB.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> OfficeBearerManager.cs:185-293 - failed-notification retry logic.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Wait for retry job / trigger manually&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Persons with DeliveryFailed/AwaitingToBeSent get a fresh send; persons with DeliveryConfirmed do not get duplicates&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14N; TC-14-013"
+      }
+    },
+    {
+      "id": 101827,
+      "fields": {
+        "System.Id": 101827,
+        "System.State": "Design",
+        "System.Title": "[TC-14-015 | Src:Code | Admin] Notification delivery status reflects on admin view per OB after send attempt",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Application submitted; OB notifications dispatched.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Code: enum exists. Verify UI surfaces the value.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Open application detail or OB detail&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Per OB: shows DeliveryStatus = AwaitingToBeSent | Sent | DeliveryConfirmed | DeliveryRetry | DeliveryFailed (RefListDeliveryStatus.cs:9)&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Functional; Portal-Admin; Positive; Source-Code; Suite-14N; TC-14-015"
+      }
+    }
+  ]
+}

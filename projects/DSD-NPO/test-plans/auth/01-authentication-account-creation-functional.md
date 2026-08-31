@@ -312,7 +312,13 @@ Sources across the 19 owned: **3 `Src:Both`** (002, 003, 013) · **14 `Src:FDS`*
   14Z security suite.
 
 ### TC-19 — Re-register after account deletion (ADO #107678 · TC-01-022)
-*P2 · Src:Code · `L1-draft` `CodeDerived`.* ⛔ **NOT SCHEDULED — requires developer DB access.**
+*P2 · Src:Code · `L1-draft` `CodeDerived`.* ✅ **RUN 2026-08-27, verdict PARTIAL — the "requires developer DB access"
+reason was wrong for 4 of the 5 steps.** **User Management has a per-row delete icon**
+(`boxfusion.dsdnpo/user-management-table` — note the module is *not* `Shesha`), so the deletion is a UI action.
+Only **step 5** (`Core_OrganisationPersons` table read) still needs DB access.
+🔑 Result: the blocking assertion **passes**, but re-registration with the same email **and** mobile is **silently
+allowed** — no error, no reactivation flow. ⚠️ Stays `L1-draft` with no agreed criterion, so that was recorded as an
+observation for the BA, **not** a defect.
 - **Steps:** 1. Delete the account while it holds a Draft NPO → 2. Re-register with the **same email and mobile** →
   3. Sign in and open the Dashboard → 4. Inspect DevTools network on Dashboard load → 5. Query
   `Core_OrganisationPersons` for the deleted Person

@@ -1,0 +1,163 @@
+{
+  "/dynamic/Shesha/entity-change-audit-log": {
+    "gotRows": false,
+    "cols": [],
+    "pag": "",
+    "rows": [],
+    "bad": [
+      {
+        "status": 400,
+        "q": "entityId=&entityTypeFullName=&includeEventsOnChildEntities=&sorting=creationTime desc&maxResultCount=10&skipCount=0&properties=&quickSearch=&sorting=&filter=",
+        "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"Your request is not valid!\",\"details\":\"The following errors were detected during validation.\\n - The value '' is invalid.\\n\",\"validationErrors\":[{\"message\":\"The value '' is invalid.\",\"members\":[\"includeEventsOnChildEntities\"]}]},\"unAuthorizedRequest\":false,\"__abp\":true}"
+      }
+    ]
+  },
+  "/dynamic/Shesha/logon-audit": {
+    "gotRows": true,
+    "cols": [
+      "Creation Time",
+      "User Name Or Email Address",
+      "Browser Info",
+      "Result",
+      "Login Attempt Number",
+      "IP Address",
+      "User Id",
+      "IMEI",
+      "Device Name"
+    ],
+    "pag": "1-10 of 60451 items 1 2 3 ••• 6046 10 / page",
+    "rows": [
+      [
+        "",
+        "16/10/2025 21:00",
+        "NTOMBIKHUMALO638@GMAIL.COM",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+        "Success",
+        "",
+        "102.38.105.239",
+        "9883",
+        "",
+        ""
+      ],
+      [
+        "",
+        "18/03/2024 12:51",
+        "Linahnd",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Invalid User Name Or Email Address",
+        "",
+        "41.57.15.178",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "27/09/2025 13:20",
+        "dominique16111@gmail.com",
+        "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36",
+        "Success",
+        "",
+        "197.185.175.211",
+        "4240",
+        "",
+        ""
+      ]
+    ],
+    "bad": []
+  },
+  "/dynamic/Shesha/login-audit-table": {
+    "gotRows": true,
+    "cols": [
+      "Date",
+      "Username",
+      "Client Ip Address",
+      "Result",
+      "Browser Info",
+      "Login Attempt Number"
+    ],
+    "pag": "1-10 of 60451 items 1 2 3 ••• 6046 10 / page",
+    "rows": [
+      [
+        "16/10/2025 21:00",
+        "NTOMBIKHUMALO638@GMAIL.COM",
+        "102.38.105.239",
+        "Success",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+        ""
+      ],
+      [
+        "18/03/2024 12:51",
+        "Linahnd",
+        "41.57.15.178",
+        "Invalid User Name Or Email Address",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        ""
+      ],
+      [
+        "27/09/2025 13:20",
+        "dominique16111@gmail.com",
+        "197.185.175.211",
+        "Success",
+        "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36",
+        ""
+      ]
+    ],
+    "bad": []
+  },
+  "/dynamic/StarterTemplate/otp-audit-table": {
+    "gotRows": true,
+    "cols": [
+      "Date",
+      "OTP",
+      "Expires On",
+      "Sent On",
+      "Send Status",
+      "Sent To"
+    ],
+    "pag": "1-10 of 13258 items 1 2 3 ••• 1326 10 / page",
+    "rows": [
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ],
+    "bad": []
+  },
+  "/dynamic/Shesha/scheduled-jobs-logs-view": {
+    "gotRows": false,
+    "cols": [],
+    "pag": "",
+    "rows": [],
+    "bad": [
+      {
+        "status": 404,
+        "q": "container=Shesha.Scheduler.Services.ScheduledJobs.Dto.ScheduledJobExecutionDto",
+        "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":404,\"message\":\"Type `Shesha.Scheduler.Services.ScheduledJobs.Dto.ScheduledJobExecutionDto` not found\",\"details\":\"Type `Shesha.Scheduler.Services.ScheduledJobs.Dto.ScheduledJobExecutionDto` not found\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+      }
+    ]
+  }
+}

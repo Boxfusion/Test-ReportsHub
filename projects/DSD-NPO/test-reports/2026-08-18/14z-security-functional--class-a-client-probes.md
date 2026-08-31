@@ -20,13 +20,19 @@ must-not-run-by-us cases are listed at the foot for the report, not executed.
 
 | Case | Title | Verdict |
 |---|---|---|
-| TC-14Z-003 | Wide-open CORS | 🔴 **CONFIRMED (worst form)** — reflects any origin **+** allow-credentials |
-| TC-14Z-004 | GraphQL Playground exposed at `/ui/playground` | 🔴 **CONFIRMED (IDE exposed)** — but `/graphql` itself 401s to anon |
-| TC-14Z-005 | Unauthenticated OTP retrieval | 🔴🔴 **CONFIRMED** (proven 2026-08-18 in suite 01) |
-| TC-14Z-007 | Hardcoded test-env URL fallback in PROD | ⚪ NOT CONFIRMABLE from test env (PROD-only symptom) |
-| TC-14Z-017 | File enumeration / DoS (authz half) | ⚪ INCONCLUSIVE — need the exact route from source bug #102956 |
-| TC-14Z-020 | Test-only `ApplyChangesAsync` on main | ⚪ INCONCLUSIVE — guessed routes 404; need source bug #102960 |
-| TC-14Z-031 | App Insights URL-PII tracking | ⚪ NOT CONFIRMABLE — App Insights not instrumented on either portal in test env |
+| TC-14Z-003 | Wide-open CORS | 🔴 **FAILED** — confirmed, worst form: reflects any origin **+** allow-credentials |
+| TC-14Z-004 | GraphQL Playground exposed at `/ui/playground` | 🔴 **FAILED** — confirmed (IDE exposed); `/graphql` itself 401s to anon |
+| TC-14Z-005 | Unauthenticated OTP retrieval | 🔴🔴 **FAILED** — confirmed (proven 2026-08-18 in suite 01) |
+| TC-14Z-007 | Hardcoded test-env URL fallback in PROD | ⚪ **NOT EXECUTED** — not confirmable from test env (PROD-only symptom) |
+| TC-14Z-017 | File enumeration / DoS (authz half) | ⚪ **NOT EXECUTED** — inconclusive; need the exact route from source bug #102956 |
+| TC-14Z-020 | Test-only `ApplyChangesAsync` on main | ⚪ **NOT EXECUTED** — inconclusive; guessed routes 404, need source bug #102960 |
+| TC-14Z-031 | App Insights URL-PII tracking | ⚪ **NOT EXECUTED** — App Insights not instrumented on either portal in test env |
+
+> **Verdict vocabulary normalised 2026-08-25.** This table originally read `CONFIRMED` / `NOT CONFIRMABLE` /
+> `INCONCLUSIVE`. Those are not tokens the coverage script recognises, so all seven cases were being counted as
+> *assumed* rather than verdicted. The three confirmed defects are **FAILED** (the case asserts the vulnerability is
+> absent; it is present), and the four unconfirmable ones are **NOT EXECUTED** so they stay excluded from coverage.
+> No verdict was changed in substance — only the wording, so the figures can be read mechanically.
 
 ## 🔴 TC-14Z-003 — Wide-open CORS: CONFIRMED, worst form
 Bug: `bugs/2026-08-18-wide-open-cors-reflects-any-origin-with-credentials.md`.

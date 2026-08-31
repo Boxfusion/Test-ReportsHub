@@ -1,0 +1,61 @@
+{
+  "suite": {
+    "id": 101907,
+    "name": "14U Audit trail and resubmission diff",
+    "n": 4
+  },
+  "cases": [
+    {
+      "id": 101815,
+      "fields": {
+        "System.Id": 101815,
+        "System.State": "Design",
+        "System.Title": "[TC-14-003 | Src:FDS | Admin] Audit trail captures who/when for every state transition",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Various state changes occurred.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Code: Shesha FullAuditedEntity captures creation/modification only; explicit state-transition audit log not verified.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Open audit trail for an application&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Each transition includes actor, timestamp, from-state, to-state, comment&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Functional; Portal-Admin; Positive; Source-FDS; Suite-14U; TC-14-003"
+      }
+    },
+    {
+      "id": 101816,
+      "fields": {
+        "System.Id": 101816,
+        "System.State": "Design",
+        "System.Title": "[TC-14-004 | Src:FDS | Admin] Resubmission diff shows changed fields between submissions",
+        "Microsoft.VSTS.Common.Priority": 3,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Application has been resubmitted at least once.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;View resubmission diff on admin portal&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Changed fields highlighted; original retained&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "DSD-NPO; Functional; Portal-Admin; Positive; Source-FDS; Suite-14U; TC-14-004"
+      }
+    },
+    {
+      "id": 107426,
+      "fields": {
+        "System.Id": 107426,
+        "System.State": "Design",
+        "System.Title": "[TC-14U-003 | Src:Code | Both] Office Bearer CRUD writes audit entries (Create, Update, Delete + Confirmed OB self-verification)",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<p><b>Intended behaviour:</b> Office Bearer CRUD writes audit entries (Create, Update, Delete + Confirmed OB self-verification) </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14U per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> ISO/IEC/IEEE 29119-2 §6.4. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> Signed DSDNPO FDS Module 1 §6.2 (Resubmission — audit) + Module 1 §8 (Backend audit trail requirements). </p><p><b>Code anchor:</b> Shesha AbpEntity audit conventions; explicit [Audited] attributes on OfficeBearer / Application / Document services. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14U-003 | Src:Code | Both] Office Bearer CRUD writes audit entries (Create, Update, Delete + Confirmed OB self-verification)&quot; </p>",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"4\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Admin creates an OB.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry: actor + timestamp + OB reference + action=Create.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Admin updates OB position field.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry: action=Update + diff of changed fields.&lt;/p&gt;</parameterizedString></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;OB confirms self-verification via email link.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry: action=SelfConfirm + link source.&lt;/p&gt;</parameterizedString></step><step id=\"4\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Admin deletes / retracts OB.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry: action=Delete or Retract + reason.&lt;/p&gt;</parameterizedString></step></steps>",
+        "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14U"
+      }
+    },
+    {
+      "id": 107427,
+      "fields": {
+        "System.Id": 107427,
+        "System.State": "Design",
+        "System.Title": "[TC-14U-004 | Src:Code | Both] Document upload + Application state-change actions written to audit",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<p><b>Intended behaviour:</b> Document upload + Application state-change actions written to audit </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14U per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> ISO/IEC/IEEE 29119-2 §6.4. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> Signed DSDNPO FDS Module 1 §6.2 (Resubmission — audit) + Module 1 §8 (Backend audit trail requirements). </p><p><b>Code anchor:</b> Shesha AbpEntity audit conventions; explicit [Audited] attributes on OfficeBearer / Application / Document services. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14U-004 | Src:Code | Both] Document upload + Application state-change actions written to audit&quot; </p>",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;User uploads Founding Documents on Wizard Tab 7.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry per file upload with file hash + user reference.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Admin transitions Application from Submitted to Under Review.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Audit entry: state transition captured with before/after + actor.&lt;/p&gt;</parameterizedString></step></steps>",
+        "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14U"
+      }
+    }
+  ]
+}

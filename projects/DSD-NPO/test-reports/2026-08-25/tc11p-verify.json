@@ -1,0 +1,65 @@
+{
+  "cells": [
+    [
+      "",
+      "Name",
+      "Type Of Appeal",
+      "Submitted date",
+      "Status"
+    ]
+  ],
+  "adminRows": [
+    [
+      "",
+      "APPEAL008/01/10/2025",
+      "Registered",
+      "Boxfusion DevTest",
+      "Refusal To Register",
+      "",
+      "Upheld",
+      "01/10/2025 14:54"
+    ],
+    [
+      "",
+      "APPEAL105/05/08/2026",
+      "Registered",
+      "Test Unsuccessful Letter02",
+      "Refusal To Register",
+      "Welcomed Galane",
+      "Upheld",
+      "05/08/2026 11:08"
+    ],
+    [
+      "",
+      "APPEAL029/04/08/2026",
+      "Application Failed",
+      "ghj",
+      "",
+      "Cinisile Mogane",
+      "In Complete",
+      "04/08/2026 14:31"
+    ],
+    [
+      "",
+      "APPEAL101/05/08/2026",
+      "Registered",
+      "Appeal Application",
+      "Refusal To Register",
+      "Cinisile Mogane",
+      "Denied",
+      "05/08/2026 10:58"
+    ],
+    [
+      "",
+      "APPEAL1389/20/08/2026",
+      "Not Registered",
+      "Test Unsuccessful Letter 01",
+      "",
+      "Cinisile Mogane",
+      "In Complete",
+      "20/08/2026 12:01"
+    ]
+  ],
+  "bad": [],
+  "body": "Shesha/header-public-portal v3 LIVE DashboardRegister NPOEducation and AwarenessContact UsFAQs Hi Mpendulo ntshangase Nomfanelo QA Test NPO 2026-08-13 Latest boxfusion.dsdnpo/portal-appeals-table v11 DRAFT Appeals 0 items found 1 10 / page Initiate Appeal You already have an existing Appeal that is either in Draft or In Progress status. Only one active appeal may exist at a time. If your appeal is in Draft status, please complete and submit it or delete it before creating a new appeal. If your appeal is In Progress, please follow up with the NPO Administrators regarding its status Name Type Of Appeal Submitted date Status No Data No data is available for this table Shesha/footer-public-portal v2 LIVE © 2024 DSD. All rights reserved. Support Contact Us FAQ Enquiry Connect with us"
+}

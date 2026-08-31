@@ -78,6 +78,17 @@ and **`Verification`** (disabled until OB Compliance is done), a **read-only tab
   notification is created (`NotificationMessage`)
 - **🔑 Destructive** — run **after** TC-02 (which needs an OB still editable) and near the end of the OB-compliance
   cases, since it terminates that path for APPL26-01270.
+- ✅ **RUN 2026-08-27, verdict PARTIAL — and APPL26-01270 was NOT used.** It ran against **APPL26-01570**, an
+  application we submitted ourselves that morning, so 01270's path is still intact and TC-02/TC-04/TC-09 remain
+  available on it. `applicationStatus` = **10** confirmed; `OB Compliance` then disables and `Verification` unlocks.
+  ❌ **No resubmission notification is created** (validated against `NotificationMessage` with controls), so the
+  FDS 8.4 rule 2b email does not fire. 📌 `numOfResubmissions` also stays `null`.
+- 🔑 **How to reach this action:** the applications grid cannot find a record (see below), so open the **Workflows
+  inbox** and use the row's own `/shesha/workflow-action?id=<instance>&todoid=<todo>` link. The admin inbox is
+  **populated** (2 476 items) — the "every inbox renders empty" claim applies to the applicant portal, not here.
+- ⚠️ **`boxfusion.dsdnpo/npoapplication` renders no data in 7 of 8 columns.** Its own request returns `"npo": null`
+  for every row on the default page, and those columns project through `npo { … }`. Sorting is also ignored. Do not
+  expect to locate a specimen through that grid.
 
 ### TC-04 — Mixed OB compliance → 'OB Partially Compliance' (ADO #101719 · TC-07-009)
 *P2 · Edge · Src:FDS · `Drift-Risk`.*
@@ -156,14 +167,21 @@ and **`Verification`** (disabled until OB Compliance is done), a **read-only tab
   — if the SLA is computed from that wrong date, the due-date will be off. Cross-check.
 
 ### TC-13 — Non-admin cannot access admin views (ADO #101730 · TC-07-020)
-*P1 · Negative · Src:FDS.* ⛔ **NOT EXECUTABLE — needs a non-admin user.**
+*P1 · Negative · Src:FDS.* ✅ **RUNNABLE since 2026-08-26 — and RUN on 08-27, verdict FAILED.** The blocker was the
+missing non-admin account; **Account D** (`npo.qa.clerk.d@example.org`, `Dsd.Npo.Registry Clerk` only) is it.
+🔑 The route is **`/dynamic/boxfusion.dsdnpo/npoapplication`** — *not* `all-applications`, which 404s. The menu label
+is "All Apllications" (product typo) and CRUDS is a flyout that renders no anchors until clicked.
 - **Steps:** 1. As a **non-admin**, navigate to `/all-applications`
 - **Expected result:** *"Access denied / redirect; no application data leaks"*
 - **Assertions:** [ ] (BLOCKING) access denied · [ ] no data leaks
-- **⛔** We hold only the broadly-privileged shared account, so a success proves nothing. **Needs role-scoped users** —
-  the standing project-wide dependency. ⚠️ And note the API answers **anonymously**
-  (`bugs/2026-08-18-api-reachable-without-authentication.md`), so any admin-view gating may be moot at the data layer
-  regardless of the UI — flag that alongside this case.
+- **⚠️ The old ⛔ reason is retired** — role-scoped users exist now (`test-data/qa-accounts.md`, accounts C and D).
+- ⚠️ **The "API answers anonymously so gating is moot" note is HALF WRONG and should not be repeated as written.**
+  The *OTP* endpoint does answer anonymously (`bugs/2026-08-18-api-reachable-without-authentication.md`), but the
+  **admin portal perimeter holds**: an unauthenticated route request redirects to `/login?returnUrl=…` with no data,
+  and a public-portal credential is rejected at `POST /api/TokenAuth/Authenticate` → **403**. The exposure is to
+  **internal users of any of the ~46 roles**, not to the public internet — a materially different severity.
+- 🔑 **Do not "log out" by clearing `localStorage`** — the token is not held there, and an apparent anonymous probe
+  can silently still be the shared dev account with full admin rights. Use the user-menu **Logout**.
 
 ### TC-14 — BackfillDocuments regenerates missing letters (ADO #101731 · TC-07-021)
 *P2 · Positive · Src:Code · `Drift-Risk`.* ⛔ **NOT UI — direct API POST.**

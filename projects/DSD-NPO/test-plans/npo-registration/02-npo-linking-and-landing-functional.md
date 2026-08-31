@@ -70,12 +70,16 @@ the other 6 — nothing shared.
 - **📌** The most self-contained case — no Confirm dependency. Do this first.
 
 ### TC-05 — No linked NPO → empty-state dashboard (ADO #101623 · TC-02-008)
-*P3 · Edge · Src:FDS.* ⚠️ **Likely NOT EXECUTABLE with our account.**
+*P3 · Edge · Src:FDS.* ✅ **RUN 2026-08-27, verdict PARTIAL.** The empty-state page exists and is correct; sign-in
+routes an unlinked user to `Shesha.Workflow/workflows-inbox` instead of it.
 - **Steps:** 1. Sign in
 - **Expected result:** *"Empty-state page (FDS Fig.9) with CTA to Register/Link"*
 - **Assertions:** [ ] empty-state shown · [ ] Register/Link CTA present
-- **⚠️** Our shared account already has linked NPOs, so it lands on a populated dashboard, not the empty state. Needs a
-  **fresh account with no links** — record as not executable unless one is available.
+- **⚠️ Needs a genuinely unlinked account, and we no longer hold one.** Account B was unlinked and used for the
+  08-27 run, but it now owns APPL26-01570; Account A picked up an NPO via *Invite to Organisation* during the 08-26
+  appeals work. **A re-run needs a fresh sign-up** — cheap, see the 3-step journey in `test-data/qa-accounts.md`.
+- 🔑 The correct empty-state page is `boxfusion.dsdnpo/no-existing-npo-landing-page` (v7). It renders the FDS Fig.9
+  copy and **both** CTAs. It is reachable from the nav *Register NPO* item — it is simply not the post-login target.
 
 ### TC-06 — Cannot link the same NPO twice (ADO #101624 · TC-02-009)
 *P2 · Edge · Src:FDS.*
