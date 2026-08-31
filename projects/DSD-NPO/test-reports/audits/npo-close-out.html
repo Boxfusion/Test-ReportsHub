@@ -1,0 +1,381 @@
+<title>DSD-NPO Close-Out</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+<style>
+  :root {
+    /* light — institutional register: neutrals carry a green bias toward the accent */
+    --ground:      #F7F8F7;
+    --surface:     #FFFFFF;
+    --surface-sunk:#EFF2F0;
+    --ink:         #161B1A;
+    --ink-muted:   #5A6764;
+    --ink-faint:   #8A9490;
+    --rule:        #D9DEDB;
+    --rule-strong: #BFC7C3;
+    --accent:      #1F5E52;
+    --accent-soft: #E4EFEB;
+    --pass:        #2F6B4F;
+    --fail:        #9B3A2F;
+    --partial:     #8A6A1F;
+    --shadow:      0 1px 2px rgba(22,27,26,.05), 0 8px 24px -16px rgba(22,27,26,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:      #121615;
+      --surface:     #1A201E;
+      --surface-sunk:#151A19;
+      --ink:         #E8EDEA;
+      --ink-muted:   #9AA6A2;
+      --ink-faint:   #6D7975;
+      --rule:        #2C3532;
+      --rule-strong: #3D4844;
+      --accent:      #5FB8A4;
+      --accent-soft: #1C2A27;
+      --pass:        #6FBF92;
+      --fail:        #DE8577;
+      --partial:     #D2AC5A;
+      --shadow:      0 1px 2px rgba(0,0,0,.3), 0 8px 24px -16px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:      #121615;
+    --surface:     #1A201E;
+    --surface-sunk:#151A19;
+    --ink:         #E8EDEA;
+    --ink-muted:   #9AA6A2;
+    --ink-faint:   #6D7975;
+    --rule:        #2C3532;
+    --rule-strong: #3D4844;
+    --accent:      #5FB8A4;
+    --accent-soft: #1C2A27;
+    --pass:        #6FBF92;
+    --fail:        #DE8577;
+    --partial:     #D2AC5A;
+    --shadow:      0 1px 2px rgba(0,0,0,.3), 0 8px 24px -16px rgba(0,0,0,.6);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16.5px;
+    line-height: 1.62;
+    margin: 0;
+    padding: clamp(1.5rem, 5vw, 4.5rem) clamp(1.1rem, 5vw, 2rem) 6rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet { max-width: 50rem; margin: 0 auto; }
+
+  /* ---- typographic roles ---- */
+  .eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: .69rem;
+    font-weight: 500;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 .6rem;
+  }
+  h1 {
+    font-family: Newsreader, ui-serif, Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.1rem, 6vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -.017em;
+    text-wrap: balance;
+    margin: 0 0 1.1rem;
+  }
+  h2 {
+    font-family: Newsreader, ui-serif, Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(1.4rem, 3.4vw, 1.78rem);
+    line-height: 1.2;
+    letter-spacing: -.012em;
+    text-wrap: balance;
+    margin: 0 0 .75rem;
+  }
+  h3 {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    font-size: .95rem;
+    letter-spacing: .005em;
+    margin: 0 0 .4rem;
+  }
+  p { margin: 0 0 1.05rem; max-width: 66ch; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+  code, .mono {
+    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    font-size: .855em;
+    font-variant-numeric: tabular-nums;
+  }
+  code {
+    background: var(--surface-sunk);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: .08em .34em;
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* ---- masthead ---- */
+  .masthead { border-bottom: 2px solid var(--ink); padding-bottom: 1.5rem; margin-bottom: 1.6rem; }
+  .status-line {
+    display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .8rem;
+    margin-bottom: 1.4rem;
+  }
+  .stamp {
+    font-family: "JetBrains Mono", monospace;
+    font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--surface); background: var(--pass);
+    padding: .32rem .6rem; border-radius: 3px;
+  }
+  .stamp-note { font-size: .84rem; color: var(--ink-muted); }
+  .meta {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    gap: .9rem 1.4rem; margin-top: 1.3rem;
+    border-top: 1px solid var(--rule); padding-top: 1.1rem;
+  }
+  .meta div { display: flex; flex-direction: column; gap: .12rem; }
+  .meta dt, .meta .k {
+    font-family: "JetBrains Mono", monospace;
+    font-size: .655rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint);
+  }
+  .meta .v { font-size: .9rem; font-weight: 500; }
+
+  /* ---- sections ---- */
+  section { margin-top: 3rem; }
+  section > .eyebrow { margin-bottom: .45rem; }
+  .lede { font-size: 1.06rem; color: var(--ink-muted); max-width: 62ch; }
+
+  /* ---- the coverage figure ---- */
+  figure.coverage {
+    margin: 1.6rem 0 0; padding: 1.5rem;
+    background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 6px; box-shadow: var(--shadow);
+  }
+  .plan-row {
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+    gap: .4rem 1rem; padding: .85rem 0;
+  }
+  .plan-row + .plan-row { border-top: 1px solid var(--rule); }
+  .plan-name { font-weight: 600; font-size: .93rem; }
+  .plan-name span { font-weight: 400; color: var(--ink-faint); font-size: .84rem; }
+  .plan-figure {
+    font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums;
+    font-size: 1.02rem; font-weight: 500; white-space: nowrap;
+  }
+  .plan-figure em { font-style: normal; color: var(--ink-faint); font-weight: 400; }
+
+  .bar-label {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin: 1.5rem 0 .5rem; gap: 1rem;
+  }
+  .bar-label .k {
+    font-family: "JetBrains Mono", monospace; font-size: .655rem;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint);
+  }
+  .bar {
+    display: flex; height: .72rem; border-radius: 2px; overflow: hidden;
+    background: var(--surface-sunk); border: 1px solid var(--rule);
+  }
+  .bar i { display: block; height: 100%; }
+  .bar .seg-v { background: var(--accent); }
+  .bar .seg-b { background: var(--rule-strong); }
+  .bar .seg-d { background: var(--surface-sunk); box-shadow: inset 0 0 0 1px var(--rule-strong); }
+  .bar-key {
+    display: flex; flex-wrap: wrap; gap: .35rem 1.2rem; margin-top: .7rem;
+    font-size: .8rem; color: var(--ink-muted);
+  }
+  .bar-key span { display: inline-flex; align-items: center; gap: .42rem; }
+  .swatch { width: .62rem; height: .62rem; border-radius: 2px; flex: none; }
+
+  /* ---- verdict tiles ---- */
+  .tiles {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+    gap: .75rem; margin-top: 1.5rem;
+  }
+  .tile {
+    background: var(--surface-sunk); border: 1px solid var(--rule);
+    border-left: 3px solid var(--stripe, var(--rule-strong));
+    border-radius: 4px; padding: .85rem .95rem;
+  }
+  .tile .n {
+    font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums;
+    font-size: 1.65rem; font-weight: 700; line-height: 1; display: block;
+    color: var(--stripe, var(--ink));
+  }
+  .tile .l {
+    font-family: "JetBrains Mono", monospace; font-size: .66rem;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-muted);
+    margin-top: .4rem; display: block;
+  }
+  .tile .pct { font-size: .76rem; color: var(--ink-faint); margin-top: .1rem; display: block; }
+  .t-pass    { --stripe: var(--pass); }
+  .t-fail    { --stripe: var(--fail); }
+  .t-partial { --stripe: var(--partial); }
+
+  /* ---- tables ---- */
+  .scroller { overflow-x: auto; margin-top: 1.2rem; border: 1px solid var(--rule); border-radius: 5px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; font-size: .89rem; }
+  caption { text-align: left; font-size: .84rem; color: var(--ink-muted); padding: 0 0 .55rem; }
+  th, td { padding: .62rem .85rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rule); }
+  thead th {
+    font-family: "JetBrains Mono", monospace; font-size: .64rem;
+    letter-spacing: .11em; text-transform: uppercase; color: var(--ink-faint);
+    font-weight: 500; background: var(--surface-sunk); white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr.total td { font-weight: 600; background: var(--surface-sunk); }
+  td.num, th.num { text-align: right; font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  /* ---- callout ---- */
+  .note {
+    margin-top: 1.3rem; padding: 1rem 1.15rem;
+    background: var(--accent-soft); border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+  }
+  .note p { font-size: .93rem; max-width: 62ch; }
+
+  footer {
+    margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule);
+    font-size: .82rem; color: var(--ink-faint);
+  }
+  footer p { max-width: 64ch; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<div class="sheet">
+
+  <header class="masthead">
+    <p class="eyebrow">Quality Assurance · Completion Report</p>
+    <h1>DSD-NPO</h1>
+    <div class="status-line">
+      <span class="stamp">Delivered</span>
+      <span class="stamp-note">Merged to <code>main</code> on 31 August 2026 — pull request #37, merge <code>422c48f</code></span>
+    </div>
+    <p class="lede">Department of Social Development NPO registration and compliance portal. Both Azure DevOps test
+      plans are fully imported and executed to the limit of what black-box testing can reach on the QA environment.</p>
+    <div class="meta">
+      <div><span class="k">QA</span><span class="v">Nomfanelo Nhleko</span></div>
+      <div><span class="k">Period</span><span class="v mono">12 – 31 Aug 2026</span></div>
+      <div><span class="k">Active days</span><span class="v mono">13</span></div>
+      <div><span class="k">Environment</span><span class="v">QA · both portals</span></div>
+    </div>
+  </header>
+
+  <section>
+    <p class="eyebrow">Coverage</p>
+    <h2>Both plans, measured</h2>
+    <p>Coverage is re-derived by script on every change rather than carried forward, so the figure below is
+      reproducible on demand and is not an estimate.</p>
+
+    <figure class="coverage">
+      <div class="plan-row">
+        <span class="plan-name">Smoke plan <span>· 101541 · 20 suites</span></span>
+        <span class="plan-figure">70 / 70 <em>·</em> 100%</span>
+      </div>
+      <div class="plan-row">
+        <span class="plan-name">Functional plan <span>· 101543 · 36 suites</span></span>
+        <span class="plan-figure">222 / 314 <em>·</em> 70.7%</span>
+      </div>
+
+      <div class="bar-label">
+        <span class="k">Disposition of all 314 functional cases</span>
+        <span class="k mono">314 / 314 accounted</span>
+      </div>
+      <div class="bar" role="img" aria-label="Of 314 functional cases: 222 verdicted, 50 recorded blocked or not executed, 42 dispositioned in the attribution audit.">
+        <i class="seg-v" style="width:70.7%"></i>
+        <i class="seg-b" style="width:15.9%"></i>
+        <i class="seg-d" style="width:13.4%"></i>
+      </div>
+      <div class="bar-key">
+        <span><i class="swatch" style="background:var(--accent)"></i>222 verdicted</span>
+        <span><i class="swatch" style="background:var(--rule-strong)"></i>50 blocked / not executed, with a reason</span>
+        <span><i class="swatch" style="background:var(--surface-sunk);box-shadow:inset 0 0 0 1px var(--rule-strong)"></i>42 dispositioned by audit</span>
+      </div>
+
+      <div class="tiles">
+        <div class="tile t-pass"><span class="n">65</span><span class="l">Passed</span><span class="pct">29% of verdicted</span></div>
+        <div class="tile t-fail"><span class="n">100</span><span class="l">Failed</span><span class="pct">45% of verdicted</span></div>
+        <div class="tile t-partial"><span class="n">57</span><span class="l">Partial</span><span class="pct">26% of verdicted</span></div>
+      </div>
+    </figure>
+
+    <div class="note">
+      <p><strong>The failure count is the plan working, not the build collapsing.</strong> Plan 101543 is the
+        negative-path and validation plan — most of its cases assert that the product <em>blocks</em> something, or
+        that a prescribed control exists. The happy-path smoke plan closed at <strong>70 / 70</strong>. Read together:
+        the core journeys work, and the guardrails around them are where the findings are.</p>
+    </div>
+
+    <p style="margin-top:1.3rem">70.7% is the <strong>conservative</strong> figure. Blocked, ADO-closed, smoke-owned
+      and out-of-remit cases are all excluded from the numerator — none of them inflate it.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Progress</p>
+    <h2>Module summary</h2>
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr><th>Module</th><th>New scripts</th><th>Overall progress</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>DSD-NPO</strong></td>
+            <td>56 test plans authored — 33 functional, 23 smoke — with 20 paired Playwright specs. Both ADO plans
+              fully imported: smoke 20/20 suites, functional 36/36 suites.</td>
+            <td>Smoke <span class="mono">70/70 · 100%</span><br>Functional <span class="mono">222/314 · 70.7%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="scroller">
+      <table>
+        <caption>Artefacts produced over the engagement</caption>
+        <thead><tr><th>Artefact</th><th class="num">Count</th></tr></thead>
+        <tbody>
+          <tr><td>Test plans authored</td><td class="num">56</td></tr>
+          <tr><td>Paired Playwright specs</td><td class="num">20</td></tr>
+          <tr><td>Run reports filed</td><td class="num">184</td></tr>
+          <tr><td>Defect write-ups <span style="color:var(--ink-faint)">(three later retracted after re-verification)</span></td><td class="num">76</td></tr>
+          <tr><td>Audits and reconciliations</td><td class="num">7</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Scope</p>
+    <h2>What these figures cover</h2>
+    <p>ADO plans <strong>101541</strong> and <strong>101543</strong> on the <strong>QA</strong> environment only,
+      exercised black-box through both portals. Performance, load, penetration testing, cross-browser and mobile were
+      not in scope and were not run. Forty-two cases were dispositioned as outside black-box remit — code review,
+      transport-layer and direct-API assertions — and belong to development and security rather than QA.</p>
+    <div class="note">
+      <p><strong>Security observations were raised directly with the test lead</strong> and are recorded in the
+        repository. They are deliberately not summarised in this document.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Figures derived from <code>scripts/coverage-baseline.js</code> against the committed tree on 31 August 2026 and
+      reproducible from it. Full run reports, defect write-ups and reconciliation audits are in the Test Reports Hub
+      under <code>projects/DSD-NPO/test-reports/</code>.</p>
+  </footer>
+
+</div>

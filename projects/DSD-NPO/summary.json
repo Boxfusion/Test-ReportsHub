@@ -1,13 +1,13 @@
 {
   "totalPlans": 56,
-  "totalRuns": 102,
-  "last7Runs": 39,
+  "totalRuns": 104,
+  "last7Runs": 40,
   "last7Pass": 1,
   "last7PassPct": 3,
   "failingFlows": 25,
   "lastRun": {
-    "date": "2026-08-28",
-    "result": "FAILED",
-    "plan": "test-plans/npo-registration/02-npo-linking-and-landing-functional.md"
+    "date": "2026-08-31",
+    "result": "BLOCKED",
+    "plan": "test-plans/appeals/11p-appeals-submitter-functional.md"
   }
 }
