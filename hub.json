@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-28T11:52:25.531Z",
+  "generated": "2026-08-31T09:48:33.767Z",
   "projects": [
     {
       "name": "Approvals",
@@ -57,15 +57,15 @@
       "health": "failing",
       "summary": {
         "totalPlans": 56,
-        "totalRuns": 102,
-        "last7Runs": 39,
+        "totalRuns": 104,
+        "last7Runs": 40,
         "last7Pass": 1,
         "last7PassPct": 3,
         "failingFlows": 25,
         "lastRun": {
-          "date": "2026-08-28",
-          "result": "FAILED",
-          "plan": "test-plans/npo-registration/02-npo-linking-and-landing-functional.md"
+          "date": "2026-08-31",
+          "result": "BLOCKED",
+          "plan": "test-plans/appeals/11p-appeals-submitter-functional.md"
         }
       },
       "href": "projects/DSD-NPO/index.html"
@@ -323,8 +323,8 @@
   "totals": {
     "totalProjects": 14,
     "totalPlans": 269,
-    "totalRuns": 522,
-    "last7Runs": 262,
+    "totalRuns": 524,
+    "last7Runs": 263,
     "failingFlows": 50
   }
 }

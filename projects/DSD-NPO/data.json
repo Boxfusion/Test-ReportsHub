@@ -16,68 +16,19 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 56,
-    "totalRuns": 102,
-    "last7Runs": 39,
+    "totalRuns": 104,
+    "last7Runs": 40,
     "last7Pass": 1,
     "last7PassPct": 3,
     "failingFlows": 25,
     "passingFlows": 4,
-    "partialFlows": 17,
+    "partialFlows": 15,
     "neverFlows": 6
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-08-30",
+    "startDate": "2025-09-06",
     "days": [
-      {
-        "iso": "2025-08-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-06",
         "runs": 0,
@@ -2576,6 +2527,55 @@
         "passed": 0,
         "failed": 5,
         "partial": 4
+      },
+      {
+        "iso": "2026-08-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-31",
+        "runs": 2,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2635,6 +2635,10 @@
           "specHref": null,
           "canRun": false,
           "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
             {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
@@ -2723,7 +2727,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -2755,7 +2759,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -2786,6 +2790,50 @@
       "stripPrefix": "test-plans/appeals/",
       "plans": [
         {
+          "plan": "test-plans/appeals/11p-appeals-submitter-functional.md",
+          "planHref": "test-plans/appeals/11p-appeals-submitter-functional.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
+          "badges": [
+            {
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "BLOCKED",
+          "last": {
+            "date": "2026-08-31",
+            "result": "BLOCKED",
+            "duration": "~600s",
+            "variant": null,
+            "reportHref": "test-reports/2026-08-31/11-appeals-suite-11-reconciliation.md"
+          },
+          "runCount": 3,
+          "history": [
+            {
+              "date": "2026-08-31",
+              "result": "BLOCKED",
+              "duration": "~600s",
+              "variant": null
+            },
+            {
+              "date": "2026-08-26",
+              "result": "PARTIAL",
+              "duration": "~600s",
+              "variant": null
+            },
+            {
+              "date": "2026-08-25",
+              "result": "FAILED",
+              "duration": "~1800s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
           "plan": "test-plans/appeals/11a-appeals-admin-tribunal.md",
           "planHref": "test-plans/appeals/11a-appeals-admin-tribunal.md",
           "spec": "test-plans/appeals/11a-appeals-admin-tribunal.spec.ts",
@@ -2794,7 +2842,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2818,48 +2866,6 @@
               "date": "2026-08-14",
               "result": "PARTIAL",
               "duration": "~300s",
-              "variant": null
-            }
-          ],
-          "bugs": []
-        },
-        {
-          "plan": "test-plans/appeals/11p-appeals-submitter-functional.md",
-          "planHref": "test-plans/appeals/11p-appeals-submitter-functional.md",
-          "spec": null,
-          "specHref": null,
-          "canRun": false,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            },
-            {
-              "kind": "no-spec",
-              "text": "no .spec.ts yet"
-            }
-          ],
-          "rowStatus": "partial",
-          "status": "PARTIAL",
-          "last": {
-            "date": "2026-08-26",
-            "result": "PARTIAL",
-            "duration": "~600s",
-            "variant": null,
-            "reportHref": "test-reports/2026-08-26/11p-appeals-submitter-functional--written-submission-enforced.md"
-          },
-          "runCount": 2,
-          "history": [
-            {
-              "date": "2026-08-26",
-              "result": "PARTIAL",
-              "duration": "~600s",
-              "variant": null
-            },
-            {
-              "date": "2026-08-25",
-              "result": "FAILED",
-              "duration": "~1800s",
               "variant": null
             }
           ],
@@ -3015,7 +3021,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3201,6 +3207,10 @@
           "canRun": false,
           "badges": [
             {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
+            {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
             }
@@ -3244,6 +3254,10 @@
           "specHref": null,
           "canRun": false,
           "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
             {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
@@ -3294,6 +3308,10 @@
           "specHref": null,
           "canRun": false,
           "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
             {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
@@ -3646,7 +3664,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4127,17 +4145,23 @@
               "text": "no .spec.ts yet"
             }
           ],
-          "rowStatus": "partial",
-          "status": "PARTIAL",
+          "rowStatus": "never",
+          "status": "BLOCKED",
           "last": {
-            "date": "2026-08-28",
-            "result": "PARTIAL",
-            "duration": "~1400s",
+            "date": "2026-08-31",
+            "result": "BLOCKED",
+            "duration": "~1150s",
             "variant": null,
-            "reportHref": "test-reports/2026-08-28/12-investigations-functional--intake-rebuilt-tc12-005-closed.md"
+            "reportHref": "test-reports/2026-08-31/12-investigations-functional--both-creation-routes-down.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-08-31",
+              "result": "BLOCKED",
+              "duration": "~1150s",
+              "variant": null
+            },
             {
               "date": "2026-08-28",
               "result": "PARTIAL",
@@ -4162,7 +4186,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -4225,6 +4249,10 @@
           "canRun": false,
           "badges": [
             {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
+            {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
             }
@@ -4268,6 +4296,10 @@
           "specHref": null,
           "canRun": false,
           "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
             {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
@@ -4656,7 +4688,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -4756,7 +4788,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -4808,6 +4840,29 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-08-31",
+      "runs": [
+        {
+          "plan": "test-plans/appeals/11p-appeals-submitter-functional.md",
+          "planDisplay": "appeals/11p-appeals-submitter-functional.md",
+          "variant": null,
+          "result": "BLOCKED",
+          "duration": "~600s",
+          "mode": "ai-mcp",
+          "reportHref": "test-reports/2026-08-31/11-appeals-suite-11-reconciliation.md"
+        },
+        {
+          "plan": "test-plans/investigations/12-investigations-functional.md",
+          "planDisplay": "investigations/12-investigations-functional.md",
+          "variant": null,
+          "result": "BLOCKED",
+          "duration": "~1150s",
+          "mode": "ai-mcp",
+          "reportHref": "test-reports/2026-08-31/12-investigations-functional--both-creation-routes-down.md"
+        }
+      ]
+    },
     {
       "date": "2026-08-28",
       "runs": [
@@ -5787,5 +5842,5 @@
       ]
     }
   ],
-  "generated": "2026-08-28T11:52:25.158Z"
+  "generated": "2026-08-31T09:48:07.551Z"
 }

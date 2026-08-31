@@ -453,3 +453,97 @@ Report: `2026-08-27/14t-notification-templates-functional--change-request-acknow
 >   bugs/2026-08-28-npo-linking-has-no-identity-verification-and-discloses-authorized-person-details.md
 > ROUTE REUSE for next time: investigation lifecycle = file (public, own NPO by number) -> admin Workflows inbox ->
 > workflow-action -> Validate Case. Repeat down Valid branch to close 007/008/010.
+
+---
+
+> ### 🔴 2026-08-31 — suite 12: BOTH case-creation routes are down. Coverage unchanged at 222/314.
+> Attempted TC-12-007 / TC-12-008 / TC-12-010 (the three left route-known on 08-28). **None verdicted.** Every old
+> blocker reason for these three is now REPLACED by a tested one. Report:
+> `2026-08-31/12-investigations-functional--both-creation-routes-down.md`
+>
+> **1. Public whistleblowing intake — DOWN, and it is a REGRESSION.** The landing **Whistleblowing** button calls
+> `POST /api/services/SheshaWorkflow/Process/StartByName` → **404**
+> `workflow-definition boxfusion.dsdnpo\investigaton-definition not found`. The endpoint is healthy; the **definition
+> name is wrong and misspelt** — all **169** existing investigations carry **`investigation-process`**. Reproduced on
+> retry and from both landing routes. ⚠️ **This route WORKED on 08-28** (INV1696/INV1698 filed through it) and a case
+> was created 08-29, so the break landed on/after 08-29. Bug:
+> `bugs/2026-08-31-whistleblowing-intake-cannot-start-its-workflow.md`
+> 🔑 **And the form does NOT work standalone either** — opened directly at
+> `/no-auth/boxfusion.dsdnpo/create-investigation-workflow`, **5 required fields (First/Last/Email/Mobile/Npo Number)
+> render as labels with NO input control**, Remain Anonymous is disabled, Submit is disabled (4 inputs on the page).
+> ⚠️ **An intermediate reading of "the form is fine, only the button is broken" is RETRACTED** — that came from
+> reading labels instead of checking for controls. **Do not requote it.**
+>
+> **2. Admin `Create Case` is SILENTLY INERT for Category = Investigation.** CRM → Cases → Create Case
+> (`case-create-two v4`): fully valid form, click **Ok** → click lands (`clicks:1`, capturing listener), issues **one
+> GET** to `CaseRouting/Crud/GetAll?caseCategory==6`, then **nothing**. No POST, **no validation error** (0 error
+> items), no toast, no console error, Ok stays enabled. Instrumented via patched `fetch`/`XHR.open`, not a filtered
+> log. **ROOT CAUSE + CONTROL:** `CaseRouting` rows are Application 6 · Annual Compliance 3 · Appeals 2 · Vol Dereg 1
+> · Post Registration 2 · **Investigation 0** · Ed&Awareness 1 — Investigation is the ONLY category with none. Same
+> form + same data with **only Category changed to Post Registration** created immediately (**119 → 120** cases). So
+> causation, not correlation. Bug:
+> `bugs/2026-08-31-create-case-silently-inert-for-investigation-category.md`
+> ⇒ **Combined with (1) there is currently NO route of any kind to create an investigation case in QA.**
+>
+> **3. TC-12-008 / TC-12-010 — identity-gated AND un-routable.** The plan was to assign investigator/reviewer to
+> accounts we create (no impersonation of the real assignees). **Not possible:** on INV1698's live *Investigation
+> Outcome* task, opened correctly via `workflow-action?id=&todoid=` on **2 of its 9 todo ids**, **`Assign Case` is
+> DISABLED** and `Save` is disabled; the **Case Outcome** tab exposes only a **read-only `Investigator` label** — no
+> outcome field, no attachment, no Close action. So the shared admin can neither complete the step nor reassign.
+>
+> **4. 🔑 NEW — Reviewer Feedback has NO surface for the statuses TC-12-009/010 require.** Open-todo counts on our own
+> 333-018 cases: **INV1694 (draft) 0 · INV1698 (Under Investigation) 9 · INV1283 (reviewer assigned) 0 · INV1696
+> (closed) 0.** **Only *Under Investigation* has a workflow task at all.** Closed/Referred cases have zero todos, so
+> the only surface left is read-only `investigation-details`, which carries no Feedback control. ⚠️ **This REPLACES
+> TC-12-009's recorded reason** *("actions not on the CRUD view; needs the case-processing view")* — that view was
+> found on 08-26/08-28, so the old reason is STALE. The real obstacle is that closed cases carry no task.
+>
+> **Observations:** INV1698's single Investigation Outcome step holds **9 duplicate todos** (all `08-28T09:01`);
+> `case-create-two` throws `executeScriptSync ... Cannot read properties of null (reading 'id')` **once per
+> keystroke** (25+ per field).
+> **Records:** one synthetic **Post Registration** case on our own 333-018 (`08-31T07:45:01`) — created as the
+> control test for defect 2 and left as its evidence. Nothing else created or modified; no workflow decision taken.
+
+---
+
+> ### ✅ 2026-08-31 (later) — SUITE 11 RECONCILED. The R3 "Suite 11 — all BLOCKED" entry above is **STALE — do not requote it.**
+> Report: `2026-08-31/11-appeals-suite-11-reconciliation.md`. Coverage unchanged **222/314**.
+>
+> **7 of the 11 functional cases already carry verdicts** (matches the coverage script's own `suite 11 → 7 / 0 / 4`):
+> TC-11-004 ✅ PASSED · TC-11-010/011/013 ⚠️ PARTIAL · TC-11-014/015/016 🔴 FAILED.
+> **Residue is 4, not 13** — and all four were checked individually this session. **None is actionable:**
+> - **TC-11-009 — NOT EXECUTABLE, already dispositioned 08-26.** The case says *"TYPE chairperson email = invalid"*;
+>   **there is no email field** — Send-to-Chairperson is a confirmation dialog. 🔑 It reads as an unexplained gap only
+>   because that write-up is filed against the **SMOKE** plan, and `coverage-baseline.js:68` reads only
+>   `-functional.md` plans. **Bookkeeping gap, not a testing gap.** ▶ #101781 needs a rewrite (Thabiso).
+> - **TC-11-002 — precondition DESTROYED 08-29.** `Test Unsuccessful 03` is no longer OrganisationStatus 9: it now
+>   holds `npoNumber 333-027-NPO`, `dateRegistered 2026-08-29T10:52`, a registration certificate, and
+>   `lastModifierUserId 15932`. **Another user registered our appeals fixture.** No refusal left to appeal.
+> - **TC-11-003** — still needs OrganisationStatus 7; never set on any NPO; `canBeCancelled=true` on 333-027 with
+>   still no UI action. Unchanged.
+> - **TC-11-006** — no Compulsory-Register org with a denied application found; the plan already calls the
+>   precondition possibly unbuildable.
+>
+> ### ⚠️ FIVE claims made earlier the same session are RETRACTED — all from reading THIS REGISTER instead of report tables
+> | Claimed | Actually |
+> |---|---|
+> | Case TC-15A-004 reclassifiable to FAILED | **already 🔴 FAIL since 08-18** (District list empty) |
+> | Case TC-15A-005 reclassifiable | **already ⚠️ PARTIAL since 08-18** |
+> | Case TC-15B-005 reclassifiable to FAILED | **already 🔴 FAIL since 08-18** (upload control disabled) |
+> | Case TC-10-005 verdictable from "cancel broken unassigned" | case tests the **assigned** path; observation does not verdict it |
+> | Cases TC-14Z-021/022 unlockable via accounts A/B | both are **`Src:Code`** naming C# methods — out of black-box remit |
+> **Suite 15A is 8/0 · suite 15B is 6/4** (006 time-travel; 007/009/010 depend on the broken upload). **Nothing to
+> reclaim.** 🔑 **THE REGISTER IS NOT A VERDICT SOURCE.** It is prose about why a run was hampered. A case can be
+> verdicted FAIL *because* of the very blocker described here. **Read the report verdict tables.** Second occurrence
+> this month.
+>
+> ### 🔧 Parser fragility found while writing that report
+> The verdict-table regex uses `[^|]`, which **matches newlines**, so a **two-column** row starting with `TC-` eats the
+> line break and matches the next row's pipe. The reconciliation table registered **9** phantom rows and the
+> corrections table **2** more (total unmoved — keys deduped). **For any report that REPORTS rather than PRODUCES
+> verdicts: keep case ids out of the first column** (lead with the ADO number, or prefix `Case TC-…`) and confirm the
+> report shows `0  NO DATA` before publishing. Suggested fix if the script is ever revised: `[^|]` → `[^|\n]`.
+>
+> ### 📌 QA state is drifting — 3 instances dated on/after 08-29
+> whistleblowing intake broken · Create Case inert for Investigation · **appeals fixture registered away**.
+> **Re-read every precondition immediately before use.**
