@@ -23,9 +23,9 @@
   "kpis": {
     "totalPlans": 15,
     "totalRuns": 47,
-    "last7Runs": 28,
-    "last7Pass": 24,
-    "last7PassPct": 86,
+    "last7Runs": 0,
+    "last7Pass": 0,
+    "last7PassPct": null,
     "failingFlows": 0,
     "passingFlows": 22,
     "partialFlows": 1,
@@ -33,407 +33,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-07-12",
+    "startDate": "2025-09-07",
     "days": [
-      {
-        "iso": "2025-07-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-07",
         "runs": 0,
@@ -2582,6 +2183,405 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-07-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2597,13 +2597,18 @@
           "spec": "test-plans/administrative-functions/admin-functions-crud.spec.ts",
           "specHref": "test-plans/administrative-functions/admin-functions-crud.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "11.7s",
+            "duration": "311.0s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/admin-functions-crud.md"
           },
@@ -2612,31 +2617,31 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "11.7s",
+              "duration": "311.0s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PARTIAL",
-              "duration": "10.6s",
+              "duration": "356.3s",
               "variant": null
             },
             {
               "date": "2026-06-24",
               "result": "PARTIAL",
-              "duration": "12.0s",
+              "duration": "390.9s",
               "variant": null
             },
             {
               "date": "2026-06-23",
               "result": "PARTIAL",
-              "duration": "11.1s",
+              "duration": "425.6s",
               "variant": null
             },
             {
               "date": "2026-06-17",
               "result": "PARTIAL",
-              "duration": "18.4s",
+              "duration": "361.3s",
               "variant": null
             }
           ],
@@ -2648,13 +2653,18 @@
           "spec": "test-plans/administrative-functions/agents.spec.ts",
           "specHref": "test-plans/administrative-functions/agents.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "39.2s",
+            "duration": "193.9s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/agents.md"
           },
@@ -2663,13 +2673,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "39.2s",
+              "duration": "193.9s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PARTIAL",
-              "duration": "47.0s",
+              "duration": "216.2s",
               "variant": null
             }
           ],
@@ -2681,13 +2691,18 @@
           "spec": "test-plans/administrative-functions/crews.spec.ts",
           "specHref": "test-plans/administrative-functions/crews.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "10.0s",
+            "duration": "131.1s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/crews.md"
           },
@@ -2696,13 +2711,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "10.0s",
+              "duration": "131.1s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PASSED",
-              "duration": "7.9s",
+              "duration": "110.1s",
               "variant": null
             }
           ],
@@ -2714,13 +2729,18 @@
           "spec": "test-plans/administrative-functions/devices.spec.ts",
           "specHref": "test-plans/administrative-functions/devices.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "9.1s",
+            "duration": "134.1s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/devices.md"
           },
@@ -2729,13 +2749,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "9.1s",
+              "duration": "134.1s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PASSED",
-              "duration": "9.4s",
+              "duration": "118.6s",
               "variant": null
             }
           ],
@@ -2747,13 +2767,18 @@
           "spec": "test-plans/administrative-functions/incident-types.spec.ts",
           "specHref": "test-plans/administrative-functions/incident-types.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "10.8s",
+            "duration": "112.4s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/incident-types.md"
           },
@@ -2762,31 +2787,31 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "10.8s",
+              "duration": "112.4s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PASSED",
-              "duration": "9.0s",
+              "duration": "93.7s",
               "variant": null
             },
             {
               "date": "2026-06-24",
               "result": "PASSED",
-              "duration": "12.2s",
+              "duration": "139.0s",
               "variant": null
             },
             {
               "date": "2026-06-23",
               "result": "PASSED",
-              "duration": "9.9s",
+              "duration": "132.6s",
               "variant": null
             },
             {
               "date": "2026-06-17",
               "result": "PASSED",
-              "duration": "10.8s",
+              "duration": "112.7s",
               "variant": null
             }
           ],
@@ -2798,13 +2823,18 @@
           "spec": "test-plans/administrative-functions/points-of-interest.spec.ts",
           "specHref": "test-plans/administrative-functions/points-of-interest.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "10.4s",
+            "duration": "138.6s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/points-of-interest.md"
           },
@@ -2813,13 +2843,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "10.4s",
+              "duration": "138.6s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PASSED",
-              "duration": "39.0s",
+              "duration": "169.0s",
               "variant": null
             }
           ],
@@ -2831,13 +2861,18 @@
           "spec": "test-plans/administrative-functions/resources.spec.ts",
           "specHref": "test-plans/administrative-functions/resources.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "10.4s",
+            "duration": "169.5s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/resources.md"
           },
@@ -2846,13 +2881,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "10.4s",
+              "duration": "169.5s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PARTIAL",
-              "duration": "8.4s",
+              "duration": "181.7s",
               "variant": null
             }
           ],
@@ -2864,13 +2899,18 @@
           "spec": "test-plans/administrative-functions/shift-assignment.spec.ts",
           "specHref": "test-plans/administrative-functions/shift-assignment.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "10.2s",
+            "duration": "138.6s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/shift-assignment.md"
           },
@@ -2879,13 +2919,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "10.2s",
+              "duration": "138.6s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PASSED",
-              "duration": "9.3s",
+              "duration": "181.2s",
               "variant": null
             }
           ],
@@ -2897,13 +2937,18 @@
           "spec": "test-plans/administrative-functions/shifts.spec.ts",
           "specHref": "test-plans/administrative-functions/shifts.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "10.3s",
+            "duration": "123.0s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/shifts.md"
           },
@@ -2912,13 +2957,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "10.3s",
+              "duration": "123.0s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PASSED",
-              "duration": "8.1s",
+              "duration": "106.0s",
               "variant": null
             }
           ],
@@ -2930,13 +2975,18 @@
           "spec": "test-plans/administrative-functions/site-types.spec.ts",
           "specHref": "test-plans/administrative-functions/site-types.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "11.3s",
+            "duration": "133.7s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/site-types.md"
           },
@@ -2945,13 +2995,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "11.3s",
+              "duration": "133.7s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PASSED",
-              "duration": "10.6s",
+              "duration": "110.8s",
               "variant": null
             }
           ],
@@ -2963,13 +3013,18 @@
           "spec": "test-plans/administrative-functions/stations.spec.ts",
           "specHref": "test-plans/administrative-functions/stations.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "12.6s",
+            "duration": "151.2s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/stations.md"
           },
@@ -2978,13 +3033,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "12.6s",
+              "duration": "151.2s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PASSED",
-              "duration": "13.5s",
+              "duration": "119.5s",
               "variant": null
             }
           ],
@@ -2996,13 +3051,18 @@
           "spec": "test-plans/administrative-functions/vehicle-types.spec.ts",
           "specHref": "test-plans/administrative-functions/vehicle-types.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "12.2s",
+            "duration": "129.9s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/vehicle-types.md"
           },
@@ -3011,13 +3071,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "12.2s",
+              "duration": "129.9s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PASSED",
-              "duration": "10.6s",
+              "duration": "120.0s",
               "variant": null
             }
           ],
@@ -3029,13 +3089,18 @@
           "spec": "test-plans/administrative-functions/vehicles.spec.ts",
           "specHref": "test-plans/administrative-functions/vehicles.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "12.1s",
+            "duration": "143.8s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/vehicles.md"
           },
@@ -3044,13 +3109,13 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "12.1s",
+              "duration": "143.8s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PARTIAL",
-              "duration": "55.9s",
+              "duration": "204.8s",
               "variant": null
             }
           ],
@@ -3069,13 +3134,18 @@
           "spec": "test-plans/operational/incident-creation.spec.ts",
           "specHref": "test-plans/operational/incident-creation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-08",
             "result": "PASSED",
-            "duration": "29.9s",
+            "duration": "32.1s",
             "variant": null,
             "reportHref": "test-reports/2026-07-08/incident-creation.md"
           },
@@ -3084,19 +3154,19 @@
             {
               "date": "2026-07-08",
               "result": "PASSED",
-              "duration": "29.9s",
+              "duration": "32.1s",
               "variant": null
             },
             {
               "date": "2026-07-07",
               "result": "PASSED",
-              "duration": "39.6s",
+              "duration": "42.5s",
               "variant": null
             },
             {
               "date": "2026-06-24",
               "result": "PASSED",
-              "duration": "45.7s",
+              "duration": "49.4s",
               "variant": null
             }
           ],
@@ -3137,7 +3207,7 @@
           "planDisplay": "administrative-functions/admin-functions-crud.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "11.7s",
+          "duration": "311.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/admin-functions-crud.md"
         },
@@ -3146,7 +3216,7 @@
           "planDisplay": "administrative-functions/agents.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "39.2s",
+          "duration": "193.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/agents.md"
         },
@@ -3155,7 +3225,7 @@
           "planDisplay": "administrative-functions/crews.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "10.0s",
+          "duration": "131.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/crews.md"
         },
@@ -3164,7 +3234,7 @@
           "planDisplay": "administrative-functions/devices.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "9.1s",
+          "duration": "134.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/devices.md"
         },
@@ -3173,7 +3243,7 @@
           "planDisplay": "operational/incident-creation.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "29.9s",
+          "duration": "32.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/incident-creation.md"
         },
@@ -3182,7 +3252,7 @@
           "planDisplay": "administrative-functions/incident-types.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "10.8s",
+          "duration": "112.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/incident-types.md"
         },
@@ -3191,7 +3261,7 @@
           "planDisplay": "administrative-functions/points-of-interest.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "10.4s",
+          "duration": "138.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/points-of-interest.md"
         },
@@ -3200,7 +3270,7 @@
           "planDisplay": "administrative-functions/resources.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "10.4s",
+          "duration": "169.5s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/resources.md"
         },
@@ -3209,7 +3279,7 @@
           "planDisplay": "administrative-functions/shift-assignment.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "10.2s",
+          "duration": "138.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/shift-assignment.md"
         },
@@ -3218,7 +3288,7 @@
           "planDisplay": "administrative-functions/shifts.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "10.3s",
+          "duration": "123.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/shifts.md"
         },
@@ -3227,7 +3297,7 @@
           "planDisplay": "administrative-functions/site-types.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "11.3s",
+          "duration": "133.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/site-types.md"
         },
@@ -3236,7 +3306,7 @@
           "planDisplay": "administrative-functions/stations.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "12.6s",
+          "duration": "151.2s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/stations.md"
         },
@@ -3245,7 +3315,7 @@
           "planDisplay": "administrative-functions/vehicle-types.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "12.2s",
+          "duration": "129.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/vehicle-types.md"
         },
@@ -3254,7 +3324,7 @@
           "planDisplay": "administrative-functions/vehicles.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "12.1s",
+          "duration": "143.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-08/vehicles.md"
         }
@@ -3268,7 +3338,7 @@
           "planDisplay": "administrative-functions/admin-functions-crud.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "10.6s",
+          "duration": "356.3s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-07-07/admin-functions-crud.md"
         },
@@ -3277,7 +3347,7 @@
           "planDisplay": "administrative-functions/agents.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "47.0s",
+          "duration": "216.2s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-07-07/agents.md"
         },
@@ -3286,7 +3356,7 @@
           "planDisplay": "administrative-functions/crews.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "7.9s",
+          "duration": "110.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-07/crews.md"
         },
@@ -3295,7 +3365,7 @@
           "planDisplay": "administrative-functions/devices.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "9.4s",
+          "duration": "118.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-07/devices.md"
         },
@@ -3304,7 +3374,7 @@
           "planDisplay": "operational/incident-creation.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "39.6s",
+          "duration": "42.5s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-07/incident-creation.md"
         },
@@ -3313,7 +3383,7 @@
           "planDisplay": "administrative-functions/incident-types.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "9.0s",
+          "duration": "93.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-07/incident-types.md"
         },
@@ -3322,7 +3392,7 @@
           "planDisplay": "administrative-functions/points-of-interest.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "39.0s",
+          "duration": "169.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-07/points-of-interest.md"
         },
@@ -3331,7 +3401,7 @@
           "planDisplay": "administrative-functions/resources.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "8.4s",
+          "duration": "181.7s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-07-07/resources.md"
         },
@@ -3340,7 +3410,7 @@
           "planDisplay": "administrative-functions/shift-assignment.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "9.3s",
+          "duration": "181.2s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-07/shift-assignment.md"
         },
@@ -3349,7 +3419,7 @@
           "planDisplay": "administrative-functions/shifts.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "8.1s",
+          "duration": "106.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-07/shifts.md"
         },
@@ -3358,7 +3428,7 @@
           "planDisplay": "administrative-functions/site-types.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "10.6s",
+          "duration": "110.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-07/site-types.md"
         },
@@ -3367,7 +3437,7 @@
           "planDisplay": "administrative-functions/stations.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "13.5s",
+          "duration": "119.5s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-07/stations.md"
         },
@@ -3376,7 +3446,7 @@
           "planDisplay": "administrative-functions/vehicle-types.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "10.6s",
+          "duration": "120.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-07/vehicle-types.md"
         },
@@ -3385,7 +3455,7 @@
           "planDisplay": "administrative-functions/vehicles.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "55.9s",
+          "duration": "204.8s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-07-07/vehicles.md"
         }
@@ -3445,7 +3515,7 @@
           "planDisplay": "administrative-functions/admin-functions-crud.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "12.0s",
+          "duration": "390.9s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-24/admin-functions-crud.md"
         },
@@ -3463,7 +3533,7 @@
           "planDisplay": "operational/incident-creation.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "45.7s",
+          "duration": "49.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-06-24/incident-creation.md"
         },
@@ -3472,7 +3542,7 @@
           "planDisplay": "administrative-functions/incident-types.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "12.2s",
+          "duration": "139.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-06-24/incident-types.md"
         }
@@ -3486,7 +3556,7 @@
           "planDisplay": "administrative-functions/admin-functions-crud.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "11.1s",
+          "duration": "425.6s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-23/admin-functions-crud.md"
         },
@@ -3540,7 +3610,7 @@
           "planDisplay": "administrative-functions/incident-types.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "9.9s",
+          "duration": "132.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-06-23/incident-types.md"
         }
@@ -3554,7 +3624,7 @@
           "planDisplay": "administrative-functions/admin-functions-crud.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "18.4s",
+          "duration": "361.3s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-17/admin-functions-crud.md"
         },
@@ -3581,12 +3651,12 @@
           "planDisplay": "administrative-functions/incident-types.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "10.8s",
+          "duration": "112.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-06-17/incident-types.md"
         }
       ]
     }
   ],
-  "generated": "2026-07-08T07:34:58.576Z"
+  "generated": "2026-09-04T12:20:25.172Z"
 }

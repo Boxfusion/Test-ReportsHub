@@ -1,59 +1,94 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="1" time="136.43759">
-<testsuite name="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" timestamp="2026-05-28T12:39:10.270Z" hostname="" tests="3" failures="0" skipped="0" time="135.166" errors="1">
-<testcase name="Create Service Request › TC-01: Login as Admin" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="22.936">
+<testsuites id="" name="" tests="12" failures="0" skipped="11" errors="0" time="11.803097">
+<testsuite name="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts" timestamp="2026-09-04T12:20:12.883Z" hostname="" tests="12" failures="0" skipped="11" time="10.813" errors="0">
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-01: Login as Admin" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts" time="10.813">
 </testcase>
-<testcase name="Create Service Request › TC-02: Navigate to Service Requests" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="18.902">
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-02: Route item to the next step when &apos;Submit&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
 </testcase>
-<testcase name="Create Service Request › TC-03: Create a Service Request" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="93.328">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/test-failed-1.png]]
-
-[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/video.webm]]
-
-[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/error-context.md]]
-
-[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/trace.zip]]
-]]>
-</system-out>
-<error message="Test timeout of 90000ms exceeded." type="Error">
-<![CDATA[  projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts:66:7 › Create Service Request › TC-03: Create a Service Request 
-
-    Test timeout of 90000ms exceeded.
-
-    Error: locator.click: Test timeout of 90000ms exceeded.
-    Call log:
-      - waiting for getByRole('dialog').first().getByRole('combobox', { name: 'Channel' })
-
-
-      89 |     // STEP 5: SELECT / TYPE each mandatory field on the form with valid values
-      90 |     // Channel — Ant Design combobox; pick first available option
-    > 91 |     await dialog.getByRole('combobox', { name: 'Channel' }).click();
-         |                                                             ^
-      92 |     await page.getByRole('option').first().click();
-      93 |
-      94 |     // Mobile Number
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts:91:61
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/error-context.md
-
-    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/trace.zip
-    Usage:
-
-        npx playwright show-trace ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</error>
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-03: Change status to &apos;Approved Without Full Pay&apos; when &apos;Submit&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-04: System should not allow a user to action an item without checking the declaration box" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-05: Display &apos;Override&apos; dialog when &apos;Override&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-06: Display &apos;Send Back to Approver&apos; dialog when &apos;Send Back to Approver&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-07: Display &apos;Refer Back&apos; dialog when &apos;Refer Back&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-08: Display &apos;Close Leave Application&apos; dialog when &apos;Close&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-09: System should not allow action without downloading supporting documents" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-10: System should not allow action without reviewing supporting documents" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-11: A user should be able to view the captured leave application details" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-12: A user should be able to download supporting documents" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<properties>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
 </testsuites>

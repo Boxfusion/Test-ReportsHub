@@ -1,12 +1,12 @@
 {
-  "project": "bid-management",
-  "displayName": "Bid Management",
+  "project": "PD-Dispatch",
+  "displayName": "PD-Dispatch",
   "meta": {
-    "displayName": "Bid Management",
-    "appUrl": "https://pd-supplychainmanagement-adminportal-qa.shesha.app/login",
+    "displayName": "PD-Dispatch",
+    "appUrl": "https://pd-dispatcher-v2-adminportal-qa.shesha.app/login",
     "environment": "QA",
-    "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
-    "description": "Hybrid Markdown + Playwright test reports for the Supply Chain Management (Bid Management) Admin Portal.",
+    "sourceRepo": "https://dev.azure.com/boxfusion/pd-dispatcher-V2",
+    "description": "Hybrid Markdown + Playwright test reports for PD-Dispatch — the Boxfusion master Dispatcher Admin Portal (upstream of NC Dispatch; tested first before promotion to the client site).",
     "source": {
       "kind": "local"
     }
@@ -14,25 +14,20 @@
   "hasAllure": true,
   "allureReports": [
     {
-      "slug": "80-20",
-      "label": "80/20",
-      "href": "allure-report--80-20/index.html"
-    },
-    {
-      "slug": "90-10",
-      "label": "90/10",
-      "href": "allure-report--90-10/index.html"
+      "slug": null,
+      "label": null,
+      "href": "allure-report/index.html"
     }
   ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 1,
-    "totalRuns": 24,
+    "totalPlans": 0,
+    "totalRuns": 18,
     "last7Runs": 0,
     "last7Pass": 0,
     "last7PassPct": null,
     "failingFlows": 0,
-    "passingFlows": 1,
+    "passingFlows": 13,
     "partialFlows": 0,
     "neverFlows": 0
   },
@@ -1918,31 +1913,31 @@
       },
       {
         "iso": "2026-06-02",
-        "runs": 1,
-        "passed": 1,
+        "runs": 0,
+        "passed": 0,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-06-03",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
-        "failed": 1,
+        "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-06-04",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
         "failed": 0,
-        "partial": 1
+        "partial": 0
       },
       {
         "iso": "2026-06-05",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
         "failed": 0,
-        "partial": 1
+        "partial": 0
       },
       {
         "iso": "2026-06-06",
@@ -1960,8 +1955,8 @@
       },
       {
         "iso": "2026-06-08",
-        "runs": 2,
-        "passed": 2,
+        "runs": 0,
+        "passed": 0,
         "failed": 0,
         "partial": 0
       },
@@ -2156,8 +2151,8 @@
       },
       {
         "iso": "2026-07-06",
-        "runs": 0,
-        "passed": 0,
+        "runs": 13,
+        "passed": 13,
         "failed": 0,
         "partial": 0
       },
@@ -2205,8 +2200,8 @@
       },
       {
         "iso": "2026-07-13",
-        "runs": 0,
-        "passed": 0,
+        "runs": 5,
+        "passed": 1,
         "failed": 0,
         "partial": 0
       },
@@ -2317,17 +2312,17 @@
       },
       {
         "iso": "2026-07-29",
-        "runs": 1,
+        "runs": 0,
         "passed": 0,
         "failed": 0,
-        "partial": 1
+        "partial": 0
       },
       {
         "iso": "2026-07-30",
-        "runs": 8,
-        "passed": 4,
+        "runs": 0,
+        "passed": 0,
         "failed": 0,
-        "partial": 3
+        "partial": 0
       },
       {
         "iso": "2026-07-31",
@@ -2352,10 +2347,10 @@
       },
       {
         "iso": "2026-08-03",
-        "runs": 9,
-        "passed": 3,
+        "runs": 0,
+        "passed": 0,
         "failed": 0,
-        "partial": 6
+        "partial": 0
       },
       {
         "iso": "2026-08-04",
@@ -2590,379 +2585,180 @@
       }
     ]
   },
-  "sections": [
-    {
-      "key": "tender-process",
-      "title": "Tender Process",
-      "stripPrefix": "test-plans/tender-process/",
-      "plans": [
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planHref": "test-plans/tender-process/bid-supply-chain-management.md",
-          "spec": "test-plans/tender-process/bid-supply-chain-management.spec.ts",
-          "specHref": "test-plans/tender-process/bid-supply-chain-management.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "passing",
-          "status": "PASSED",
-          "last": {
-            "date": "2026-08-03",
-            "result": "PASSED",
-            "duration": "1766.4s total across all invocations",
-            "variant": "80/20",
-            "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--80-20-resumed.md"
-          },
-          "runCount": 24,
-          "history": [
-            {
-              "date": "2026-08-03",
-              "result": "PASSED",
-              "duration": "1766.4s total across all invocations",
-              "variant": "80/20"
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PASSED",
-              "duration": "565.0s",
-              "variant": "80/20"
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PASSED",
-              "duration": "610.6s",
-              "variant": "90/10"
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PARTIAL",
-              "duration": "~110s (pass 1) + ~150s (pass 2, incl. fresh-tender creation)",
-              "variant": null
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PARTIAL",
-              "duration": "7.3m chain + ~2m live",
-              "variant": "80/20, `FUNC_SCORE_MODE=below`"
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PARTIAL",
-              "duration": "",
-              "variant": null
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PARTIAL",
-              "duration": "",
-              "variant": null
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PARTIAL",
-              "duration": "",
-              "variant": null
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PARTIAL",
-              "duration": "737.5s",
-              "variant": null
-            },
-            {
-              "date": "2026-07-30",
-              "result": "PASSED",
-              "duration": "453.2s",
-              "variant": "80/20"
-            },
-            {
-              "date": "2026-07-30",
-              "result": "PASSED",
-              "duration": "404.1s",
-              "variant": "90/10"
-            },
-            {
-              "date": "2026-07-30",
-              "result": "PARTIAL",
-              "duration": "",
-              "variant": null
-            }
-          ],
-          "bugs": [
-            {
-              "name": "2026-06-02-bid-supply-chain-management.md",
-              "href": "test-reports/bugs/2026-06-02-bid-supply-chain-management.md"
-            },
-            {
-              "name": "2026-06-04-bid-supply-chain-management-evaluate-duplicate-supplier.md",
-              "href": "test-reports/bugs/2026-06-04-bid-supply-chain-management-evaluate-duplicate-supplier.md"
-            }
-          ]
-        }
-      ]
-    }
-  ],
+  "sections": [],
   "timeline": [
     {
-      "date": "2026-08-03",
+      "date": "2026-07-13",
       "runs": [
         {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
-          "variant": "80/20",
-          "result": "PASSED",
-          "duration": "1766.4s total across all invocations",
-          "mode": "playwright-script (chain resumed across 4 invocations; one spec repair)",
-          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--80-20-resumed.md"
-        },
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
-          "variant": "80/20",
-          "result": "PASSED",
-          "duration": "565.0s",
-          "mode": "playwright-script",
-          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--80-20.md"
-        },
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
-          "variant": "90/10",
-          "result": "PASSED",
-          "duration": "610.6s",
-          "mode": "playwright-script",
-          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--90-10.md"
-        },
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
+          "plan": null,
+          "planDisplay": "admin-functions-crud.md",
           "variant": null,
-          "result": "PARTIAL",
-          "duration": "~110s (pass 1) + ~150s (pass 2, incl. fresh-tender creation)",
-          "mode": "ai-driven (MCP browser, headless)",
-          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--tc-20-disapprove-retest.md"
-        },
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20, `FUNC_SCORE_MODE=below`)",
-          "variant": "80/20, `FUNC_SCORE_MODE=below`",
-          "result": "PARTIAL",
-          "duration": "7.3m chain + ~2m live",
-          "mode": "hybrid (playwright-script chain + ai-driven decision)",
-          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--tc-26-bid-non-responsive-committed.md"
-        },
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
-          "variant": null,
-          "result": "PARTIAL",
+          "result": "UNKNOWN",
           "duration": "",
           "mode": null,
-          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--tc-27-draft-tender-validation.md"
+          "reportHref": "test-reports/2026-07-13/admin-functions-crud.md"
         },
         {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
+          "plan": null,
+          "planDisplay": "admin-functions-smoke.md",
           "variant": null,
-          "result": "PARTIAL",
+          "result": "UNKNOWN",
           "duration": "",
           "mode": null,
-          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--tc-32-compliance-row-write-access.md"
+          "reportHref": "test-reports/2026-07-13/admin-functions-smoke.md"
         },
         {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
+          "plan": null,
+          "planDisplay": "incident-actions.md",
           "variant": null,
-          "result": "PARTIAL",
+          "result": "PASSED",
           "duration": "",
           "mode": null,
-          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--tc-33-bac-cancel-tender.md"
+          "reportHref": "test-reports/2026-07-13/incident-actions.md"
         },
         {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
+          "plan": null,
+          "planDisplay": "incident-lifecycle-rerun.md",
           "variant": null,
-          "result": "PARTIAL",
-          "duration": "737.5s",
-          "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-08-03/bid-supply-chain-management.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-07-30",
-      "runs": [
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
-          "variant": "80/20",
-          "result": "PASSED",
-          "duration": "453.2s",
-          "mode": "playwright-script",
-          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--80-20.md"
-        },
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
-          "variant": "90/10",
-          "result": "PASSED",
-          "duration": "404.1s",
-          "mode": "playwright-script",
-          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--90-10.md"
-        },
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
-          "variant": null,
-          "result": "PARTIAL",
-          "duration": "",
-          "mode": "live via Playwright MCP",
-          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-authz-replay-order-amount.md"
-        },
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
-          "variant": "80/20",
-          "result": "PARTIAL",
+          "result": "UNKNOWN",
           "duration": "",
           "mode": null,
-          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-below-minimum-chain.md"
+          "reportHref": "test-reports/2026-07-13/incident-lifecycle-rerun.md"
         },
         {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
-          "variant": "80/20",
-          "result": "BLOCKED",
+          "plan": null,
+          "planDisplay": "scheduled-transfer-rerun.md",
+          "variant": null,
+          "result": "UNKNOWN",
           "duration": "",
-          "mode": "live via Playwright MCP (TC-01 automated to create the test data)",
-          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-disapprove.md"
+          "mode": null,
+          "reportHref": "test-reports/2026-07-13/scheduled-transfer-rerun.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-06",
+      "runs": [
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → each entity → View (details) · Edit (change grid-visible field + Save + verify) · Cancel (dismiss without persisting)",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → each entity → View (details) · Edit (change grid-visible field + Save + verify) · Cancel (dismiss without persisting)",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~20 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/admin-functions-crud.md"
         },
         {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Agents → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Agents → Add New",
           "variant": null,
-          "result": "PARTIAL",
-          "duration": "",
-          "mode": "live via Playwright MCP",
-          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-non-compliant-and-bac.md"
+          "result": "PASSED",
+          "duration": "~3 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/agents-create.md"
         },
         {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
-          "variant": "80/20",
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Crews → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Crews → Add New",
+          "variant": null,
           "result": "PASSED",
-          "duration": "",
-          "mode": "hybrid — mapped and driven live via Playwright MCP, then encoded as opt-in spec branches and re-run automated",
-          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-send-back-sweep.md"
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/crews-create.md"
         },
         {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
-          "variant": "80/20",
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Devices → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Devices → Add New",
+          "variant": null,
           "result": "PASSED",
-          "duration": "42.1s",
-          "mode": "hybrid — driven live via Playwright MCP, then encoded as TC-17 and **verified as an automated spec (PASSED in 42.1s)**",
-          "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-send-back.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-07-29",
-      "runs": [
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
-          "variant": "90/10",
-          "result": "PARTIAL",
-          "duration": "421.7s",
-          "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-07-29/bid-supply-chain-management--90-10.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-08",
-      "runs": [
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
-          "variant": "80/20",
-          "result": "PASSED",
-          "duration": "413.1s",
-          "mode": "playwright-script",
-          "reportHref": "test-reports/2026-06-08/bid-supply-chain-management--80-20.md"
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/devices-create.md"
         },
         {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
-          "variant": "90/10",
-          "result": "PASSED",
-          "duration": "399.6s",
-          "mode": "playwright-script",
-          "reportHref": "test-reports/2026-06-08/bid-supply-chain-management--90-10.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-05",
-      "runs": [
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
-          "variant": null,
-          "result": "PARTIAL",
-          "duration": "420.3s",
-          "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-06-05/bid-supply-chain-management.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-04",
-      "runs": [
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
-          "variant": null,
-          "result": "PARTIAL",
-          "duration": "215.3s",
-          "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-06-04/bid-supply-chain-management.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-03",
-      "runs": [
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
-          "variant": null,
-          "result": "FAILED",
-          "duration": "44.1s",
-          "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-06-03/bid-supply-chain-management.md"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-02",
-      "runs": [
-        {
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
-          "planDisplay": "tender-process/bid-supply-chain-management.md",
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Incident Types → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Incident Types → Add New",
           "variant": null,
           "result": "PASSED",
-          "duration": "6.6s",
-          "mode": "playwright-script",
-          "reportHref": "test-reports/2026-06-02/bid-supply-chain-management.md"
+          "duration": "~6 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/incident-types-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Points of Interest → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Points of Interest → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~3 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/points-of-interest-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Resources → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Resources → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/resources-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Shift Assignments → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Shift Assignments → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~2.5 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/shift-assignments-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Shifts → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Shifts → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/shifts-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Site Types → inline add row",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Site Types → inline add row",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~1.5 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/site-types-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Stations → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Stations → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/stations-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Vehicle Types → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Vehicle Types → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~2 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/vehicle-types-create.md"
+        },
+        {
+          "plan": "(ad-hoc live run — no paired plan yet) Management → Vehicles → Add New",
+          "planDisplay": "(ad-hoc live run — no paired plan yet) Management → Vehicles → Add New",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~3 min",
+          "mode": "live-mcp (Playwright MCP, manual drive)",
+          "reportHref": "test-reports/2026-07-06/vehicles-create.md"
         }
       ]
     }
   ],
-  "generated": "2026-09-04T12:20:25.076Z"
+  "generated": "2026-09-04T12:20:24.970Z"
 }

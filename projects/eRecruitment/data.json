@@ -12,225 +12,29 @@
     }
   },
   "hasAllure": true,
+  "allureReports": [
+    {
+      "slug": null,
+      "label": null,
+      "href": "allure-report/index.html"
+    }
+  ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 121,
     "totalRuns": 127,
-    "last7Runs": 86,
-    "last7Pass": 72,
-    "last7PassPct": 84,
-    "failingFlows": 3,
-    "passingFlows": 107,
+    "last7Runs": 0,
+    "last7Pass": 0,
+    "last7PassPct": null,
+    "failingFlows": 4,
+    "passingFlows": 109,
     "partialFlows": 7,
     "neverFlows": 2
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-08-09",
+    "startDate": "2025-09-07",
     "days": [
-      {
-        "iso": "2025-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-07",
         "runs": 0,
@@ -2558,19 +2362,222 @@
       {
         "iso": "2026-08-05",
         "runs": 42,
-        "passed": 34,
-        "failed": 3,
+        "passed": 35,
+        "failed": 4,
         "partial": 3
       },
       {
         "iso": "2026-08-06",
         "runs": 28,
-        "passed": 25,
+        "passed": 26,
         "failed": 1,
         "partial": 1
       },
       {
         "iso": "2026-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-05",
         "runs": 0,
         "passed": 0,
         "failed": 0,
@@ -2590,13 +2597,19 @@
           "spec": "test-plans/AdminPortal/verify-appointed-ref43-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-appointed-ref43-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "13.7s",
+            "duration": "156.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-appointed-ref43-completeflow.md"
           },
           "runCount": 1,
@@ -2604,7 +2617,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "13.7s"
+              "duration": "156.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2615,13 +2629,19 @@
           "spec": "test-plans/AdminPortal/verify-category-details-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-category-details-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "9.1s",
+            "duration": "253.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-category-details-completeflow.md"
           },
           "runCount": 1,
@@ -2629,7 +2649,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "9.1s"
+              "duration": "253.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2640,21 +2661,28 @@
           "spec": "test-plans/AdminPortal/verify-decline-pre-screened-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-decline-pre-screened-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
-          "rowStatus": "never",
-          "status": "PASSED (CORRECTED — SEE ADDENDUM)",
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
             "date": "2026-08-06",
-            "result": "PASSED (CORRECTED — SEE ADDENDUM)",
-            "duration": "23.9s",
+            "result": "PASSED",
+            "duration": "164.7s + 39.2s corrected re-run",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-decline-pre-screened-completeflow.md"
           },
           "runCount": 1,
           "history": [
             {
               "date": "2026-08-06",
-              "result": "PASSED (CORRECTED — SEE ADDENDUM)",
-              "duration": "23.9s"
+              "result": "PASSED",
+              "duration": "164.7s + 39.2s corrected re-run",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2665,13 +2693,19 @@
           "spec": "test-plans/AdminPortal/verify-decline-pre-screened-ref41-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-decline-pre-screened-ref41-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "9.1s",
+            "duration": "122.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-decline-pre-screened-ref41-completeflow.md"
           },
           "runCount": 1,
@@ -2679,7 +2713,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "9.1s"
+              "duration": "122.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2690,13 +2725,19 @@
           "spec": "test-plans/AdminPortal/verify-delete-qualification-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-delete-qualification-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "11.0s",
+            "duration": "375.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-delete-qualification-completeflow.md"
           },
           "runCount": 1,
@@ -2704,7 +2745,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "11.0s"
+              "duration": "375.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2715,13 +2757,19 @@
           "spec": "test-plans/AdminPortal/verify-delete-work-experience-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-delete-work-experience-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
             "date": "2026-08-06",
             "result": "FAILED",
-            "duration": "9.3s",
+            "duration": "113.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-delete-work-experience-completeflow.md"
           },
           "runCount": 1,
@@ -2729,7 +2777,8 @@
             {
               "date": "2026-08-06",
               "result": "FAILED",
-              "duration": "9.3s"
+              "duration": "113.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2740,13 +2789,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-city-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-city-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "24.1s",
+            "duration": "379.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-edit-city-completeflow.md"
           },
           "runCount": 2,
@@ -2754,12 +2809,14 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "24.1s"
+              "duration": "379.9s",
+              "variant": null
             },
             {
               "date": "2026-08-05",
               "result": "FAILED",
-              "duration": "44.8s"
+              "duration": "46.5s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2770,13 +2827,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-employer-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-employer-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "8.0s",
+            "duration": "231.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-edit-employer-completeflow.md"
           },
           "runCount": 1,
@@ -2784,7 +2847,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "8.0s"
+              "duration": "231.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2795,13 +2859,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-employment-date-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-employment-date-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "8.5s",
+            "duration": "241.4s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-edit-employment-date-completeflow.md"
           },
           "runCount": 1,
@@ -2809,7 +2879,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "8.5s"
+              "duration": "241.4s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2820,13 +2891,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-institution-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-institution-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "11.0s",
+            "duration": "239.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-edit-institution-completeflow.md"
           },
           "runCount": 1,
@@ -2834,7 +2911,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "11.0s"
+              "duration": "239.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2845,13 +2923,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-qualification-name-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-qualification-name-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "8.2s",
+            "duration": "265.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-edit-qualification-name-completeflow.md"
           },
           "runCount": 1,
@@ -2859,7 +2943,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "8.2s"
+              "duration": "265.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2870,13 +2955,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-qualification-status-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-qualification-status-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "9.2s",
+            "duration": "185.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-edit-qualification-status-completeflow.md"
           },
           "runCount": 1,
@@ -2884,7 +2975,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "9.2s"
+              "duration": "185.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2895,13 +2987,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-qualification-type-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-qualification-type-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "7.9s",
+            "duration": "274.2s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-edit-qualification-type-completeflow.md"
           },
           "runCount": 1,
@@ -2909,7 +3007,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "7.9s"
+              "duration": "274.2s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2920,13 +3019,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-reasons-for-leaving-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-reasons-for-leaving-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "9.4s",
+            "duration": "195.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-edit-reasons-for-leaving-completeflow.md"
           },
           "runCount": 1,
@@ -2934,7 +3039,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "9.4s"
+              "duration": "195.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2945,13 +3051,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-work-title-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-work-title-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "29.4s",
+            "duration": "276.4s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-edit-work-title-completeflow.md"
           },
           "runCount": 1,
@@ -2959,7 +3071,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "29.4s"
+              "duration": "276.4s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2970,13 +3083,19 @@
           "spec": "test-plans/AdminPortal/verify-interviewed-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-interviewed-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "6.9s",
+            "duration": "208.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-interviewed-completeflow.md"
           },
           "runCount": 1,
@@ -2984,7 +3103,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "6.9s"
+              "duration": "208.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -2995,13 +3115,19 @@
           "spec": "test-plans/AdminPortal/verify-interviewed-ref43-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-interviewed-ref43-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "24.0s",
+            "duration": "150.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-interviewed-ref43-completeflow.md"
           },
           "runCount": 1,
@@ -3009,7 +3135,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "24.0s"
+              "duration": "150.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3020,13 +3147,19 @@
           "spec": "test-plans/AdminPortal/verify-not-appointed-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-not-appointed-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "28.0s",
+            "duration": "151.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-not-appointed-completeflow.md"
           },
           "runCount": 1,
@@ -3034,7 +3167,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "28.0s"
+              "duration": "151.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3045,13 +3179,19 @@
           "spec": "test-plans/AdminPortal/verify-not-appointed-hrm354-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-not-appointed-hrm354-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "9.1s",
+            "duration": "130.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-not-appointed-hrm354-completeflow.md"
           },
           "runCount": 1,
@@ -3059,7 +3199,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "9.1s"
+              "duration": "130.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3070,13 +3211,19 @@
           "spec": "test-plans/AdminPortal/verify-not-interviewed-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-not-interviewed-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "23.7s",
+            "duration": "150.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-not-interviewed-completeflow.md"
           },
           "runCount": 1,
@@ -3084,7 +3231,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "23.7s"
+              "duration": "150.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3095,13 +3243,19 @@
           "spec": "test-plans/AdminPortal/verify-not-interviewed-frd123-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-not-interviewed-frd123-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "11.8s",
+            "duration": "231.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-not-interviewed-frd123-completeflow.md"
           },
           "runCount": 1,
@@ -3109,7 +3263,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "11.8s"
+              "duration": "231.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3120,13 +3275,19 @@
           "spec": "test-plans/AdminPortal/verify-pre-screen-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-pre-screen-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "partial",
           "status": "PARTIAL",
           "last": {
             "date": "2026-08-06",
             "result": "PARTIAL",
-            "duration": "7.0s",
+            "duration": "123.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-pre-screen-completeflow.md"
           },
           "runCount": 1,
@@ -3134,7 +3295,8 @@
             {
               "date": "2026-08-06",
               "result": "PARTIAL",
-              "duration": "7.0s"
+              "duration": "123.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3145,13 +3307,19 @@
           "spec": "test-plans/AdminPortal/verify-pre-screen-workflow-inbox-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-pre-screen-workflow-inbox-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "11.9s",
+            "duration": "192.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-pre-screen-workflow-inbox-completeflow.md"
           },
           "runCount": 1,
@@ -3159,7 +3327,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "11.9s"
+              "duration": "192.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3170,13 +3339,19 @@
           "spec": "test-plans/AdminPortal/verify-qualification-status-complete-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-qualification-status-complete-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "9.7s",
+            "duration": "216.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-qualification-status-complete-completeflow.md"
           },
           "runCount": 1,
@@ -3184,7 +3359,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "9.7s"
+              "duration": "216.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3195,13 +3371,19 @@
           "spec": "test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-send-message-public-portal-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "9.7s",
+            "duration": "124.5s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-send-message-public-portal-completeflow.md"
           },
           "runCount": 1,
@@ -3209,7 +3391,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "9.7s"
+              "duration": "124.5s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3220,13 +3403,19 @@
           "spec": "test-plans/AdminPortal/verify-shortlist-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-shortlist-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "9.3s",
+            "duration": "135.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-shortlist-completeflow.md"
           },
           "runCount": 1,
@@ -3234,7 +3423,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "9.3s"
+              "duration": "135.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3245,13 +3435,19 @@
           "spec": "test-plans/AdminPortal/verify-shortlist-workflow-inbox-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-shortlist-workflow-inbox-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "7.5s",
+            "duration": "101.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-shortlist-workflow-inbox-completeflow.md"
           },
           "runCount": 1,
@@ -3259,7 +3455,8 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "7.5s"
+              "duration": "101.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3270,13 +3467,19 @@
           "spec": "test-plans/AdminPortal/verify-successful-manual-application.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-successful-manual-application.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-06",
             "result": "PASSED",
-            "duration": "61.4s",
+            "duration": "64.2s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-06/verify-successful-manual-application.md"
           },
           "runCount": 2,
@@ -3284,12 +3487,14 @@
             {
               "date": "2026-08-06",
               "result": "PASSED",
-              "duration": "61.4s"
+              "duration": "64.2s",
+              "variant": null
             },
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "~90s (steps 1-6 combined, excluding investigation/debugging overhead)"
+              "duration": "~90s (steps 1-6 combined, excluding investigation/debugging overhead)",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3300,13 +3505,19 @@
           "spec": "test-plans/AdminPortal/advertise-job-posting-comments.spec.ts",
           "specHref": "test-plans/AdminPortal/advertise-job-posting-comments.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "9.5s",
+            "duration": "62.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/advertise-job-posting-comments.md"
           },
           "runCount": 1,
@@ -3314,7 +3525,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "9.5s"
+              "duration": "62.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3325,13 +3537,19 @@
           "spec": "test-plans/AdminPortal/verify-advertise-dha-website-functionality.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-advertise-dha-website-functionality.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "9.6s",
+            "duration": "63.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-advertise-dha-website-functionality.md"
           },
           "runCount": 1,
@@ -3339,7 +3557,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "9.6s"
+              "duration": "63.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3350,13 +3569,19 @@
           "spec": "test-plans/AdminPortal/verify-advertise-later-functionality.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-advertise-later-functionality.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "partial",
           "status": "PARTIAL",
           "last": {
             "date": "2026-08-05",
             "result": "PARTIAL",
-            "duration": "9.8s",
+            "duration": "199.2s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-advertise-later-functionality.md"
           },
           "runCount": 1,
@@ -3364,7 +3589,8 @@
             {
               "date": "2026-08-05",
               "result": "PARTIAL",
-              "duration": "9.8s"
+              "duration": "199.2s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3375,13 +3601,19 @@
           "spec": "test-plans/AdminPortal/verify-close-button-advertiser.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-close-button-advertiser.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "partial",
           "status": "PARTIAL",
           "last": {
             "date": "2026-08-05",
             "result": "PARTIAL",
-            "duration": "11.4s",
+            "duration": "270.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-close-button-advertiser.md"
           },
           "runCount": 1,
@@ -3389,7 +3621,8 @@
             {
               "date": "2026-08-05",
               "result": "PARTIAL",
-              "duration": "11.4s"
+              "duration": "270.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3400,13 +3633,19 @@
           "spec": "test-plans/AdminPortal/verify-delete-qualification.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-delete-qualification.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "6.6s",
+            "duration": "108.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-delete-qualification.md"
           },
           "runCount": 1,
@@ -3414,7 +3653,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "6.6s"
+              "duration": "108.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3425,13 +3665,19 @@
           "spec": "test-plans/AdminPortal/verify-delete-work-experience.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-delete-work-experience.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
             "date": "2026-08-05",
             "result": "FAILED",
-            "duration": "8.5s",
+            "duration": "141.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-delete-work-experience.md"
           },
           "runCount": 1,
@@ -3439,7 +3685,8 @@
             {
               "date": "2026-08-05",
               "result": "FAILED",
-              "duration": "8.5s"
+              "duration": "141.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3450,13 +3697,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-city.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-city.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "6.6s",
+            "duration": "155.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-city.md"
           },
           "runCount": 1,
@@ -3464,7 +3717,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "6.6s"
+              "duration": "155.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3475,13 +3729,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-email-address-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-email-address-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "9.3s",
+            "duration": "215.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-email-address-completeflow.md"
           },
           "runCount": 1,
@@ -3489,7 +3749,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "9.3s"
+              "duration": "215.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3500,13 +3761,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-email-address.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-email-address.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.2s",
+            "duration": "190.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-email-address.md"
           },
           "runCount": 1,
@@ -3514,7 +3781,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.2s"
+              "duration": "190.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3525,13 +3793,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-employer.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-employer.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.7s",
+            "duration": "158.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-employer.md"
           },
           "runCount": 1,
@@ -3539,7 +3813,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.7s"
+              "duration": "158.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3550,13 +3825,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-employment-date.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-employment-date.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "6.1s",
+            "duration": "202.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-employment-date.md"
           },
           "runCount": 1,
@@ -3564,7 +3845,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "6.1s"
+              "duration": "202.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3575,21 +3857,28 @@
           "spec": "test-plans/AdminPortal/verify-edit-first-name.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-first-name.spec.ts",
           "canRun": true,
-          "badges": [],
-          "rowStatus": "never",
-          "status": "FAILED (CORRECTED 2026-08-05 — SEE BELOW)",
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
           "last": {
             "date": "2026-08-05",
-            "result": "FAILED (CORRECTED 2026-08-05 — SEE BELOW)",
-            "duration": "8.1s",
+            "result": "FAILED",
+            "duration": "203.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-first-name.md"
           },
           "runCount": 1,
           "history": [
             {
               "date": "2026-08-05",
-              "result": "FAILED (CORRECTED 2026-08-05 — SEE BELOW)",
-              "duration": "8.1s"
+              "result": "FAILED",
+              "duration": "203.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3600,13 +3889,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-gender-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-gender-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "9.4s",
+            "duration": "203.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-gender-completeflow.md"
           },
           "runCount": 1,
@@ -3614,7 +3909,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "9.4s"
+              "duration": "203.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3625,13 +3921,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-gender.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-gender.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "6.6s",
+            "duration": "144.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-gender.md"
           },
           "runCount": 1,
@@ -3639,7 +3941,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "6.6s"
+              "duration": "144.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3650,13 +3953,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-identity-number-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-identity-number-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.9s",
+            "duration": "210.5s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-identity-number-completeflow.md"
           },
           "runCount": 1,
@@ -3664,7 +3973,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.9s"
+              "duration": "210.5s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3675,13 +3985,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-identity-number.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-identity-number.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "6.3s",
+            "duration": "208.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-identity-number.md"
           },
           "runCount": 1,
@@ -3689,7 +4005,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "6.3s"
+              "duration": "208.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3700,13 +4017,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-institution.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-institution.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.5s",
+            "duration": "152.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-institution.md"
           },
           "runCount": 1,
@@ -3714,7 +4037,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.5s"
+              "duration": "152.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3725,13 +4049,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-internal-external-applicant.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-internal-external-applicant.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "6.3s",
+            "duration": "205.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-internal-external-applicant.md"
           },
           "runCount": 1,
@@ -3739,7 +4069,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "6.3s"
+              "duration": "205.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3750,13 +4081,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-internal-external-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-internal-external-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.1s",
+            "duration": "187.4s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-internal-external-completeflow.md"
           },
           "runCount": 1,
@@ -3764,7 +4101,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.1s"
+              "duration": "187.4s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3775,21 +4113,28 @@
           "spec": "test-plans/AdminPortal/verify-edit-last-name-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-last-name-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
-          "rowStatus": "never",
-          "status": "PASSED (ON A LATER ATTEMPT — SEE NOTE BELOW)",
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
             "date": "2026-08-05",
-            "result": "PASSED (ON A LATER ATTEMPT — SEE NOTE BELOW)",
-            "duration": "7.7s",
+            "result": "PASSED",
+            "duration": "92.3s (this run) + ~30s follow-up confirmation",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-last-name-completeflow.md"
           },
           "runCount": 1,
           "history": [
             {
               "date": "2026-08-05",
-              "result": "PASSED (ON A LATER ATTEMPT — SEE NOTE BELOW)",
-              "duration": "7.7s"
+              "result": "PASSED",
+              "duration": "92.3s (this run) + ~30s follow-up confirmation",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3800,13 +4145,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-last-name.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-last-name.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "8.3s",
+            "duration": "206.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-last-name.md"
           },
           "runCount": 1,
@@ -3814,7 +4165,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "8.3s"
+              "duration": "206.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3825,13 +4177,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-mobile-number-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-mobile-number-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.2s",
+            "duration": "206.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-mobile-number-completeflow.md"
           },
           "runCount": 1,
@@ -3839,7 +4197,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.2s"
+              "duration": "206.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3850,13 +4209,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-mobile-number.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-mobile-number.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "8.2s",
+            "duration": "220.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-mobile-number.md"
           },
           "runCount": 1,
@@ -3864,7 +4229,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "8.2s"
+              "duration": "220.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3875,13 +4241,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-nature-of-disability-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-nature-of-disability-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.0s",
+            "duration": "169.2s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-nature-of-disability-completeflow.md"
           },
           "runCount": 1,
@@ -3889,7 +4261,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.0s"
+              "duration": "169.2s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3900,13 +4273,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-nature-of-disability.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-nature-of-disability.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "6.8s",
+            "duration": "207.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-nature-of-disability.md"
           },
           "runCount": 1,
@@ -3914,7 +4293,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "6.8s"
+              "duration": "207.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3925,13 +4305,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-province-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-province-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "8.1s",
+            "duration": "182.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-province-completeflow.md"
           },
           "runCount": 1,
@@ -3939,7 +4325,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "8.1s"
+              "duration": "182.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3950,13 +4337,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-province.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-province.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.0s",
+            "duration": "178.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-province.md"
           },
           "runCount": 1,
@@ -3964,7 +4357,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.0s"
+              "duration": "178.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -3975,13 +4369,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-qualification-name.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-qualification-name.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.1s",
+            "duration": "189.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-qualification-name.md"
           },
           "runCount": 1,
@@ -3989,7 +4389,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.1s"
+              "duration": "189.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4002,6 +4403,10 @@
           "canRun": false,
           "badges": [
             {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
+            {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
             }
@@ -4012,6 +4417,7 @@
             "date": "2026-08-05",
             "result": "FAILED",
             "duration": "N/A",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-qualification-status.md"
           },
           "runCount": 1,
@@ -4019,7 +4425,8 @@
             {
               "date": "2026-08-05",
               "result": "FAILED",
-              "duration": "N/A"
+              "duration": "N/A",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4030,13 +4437,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-qualification-type.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-qualification-type.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.1s",
+            "duration": "257.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-qualification-type.md"
           },
           "runCount": 1,
@@ -4044,7 +4457,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.1s"
+              "duration": "257.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4055,13 +4469,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-race-completeflow.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-race-completeflow.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.3s",
+            "duration": "181.4s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-race-completeflow.md"
           },
           "runCount": 1,
@@ -4069,7 +4489,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.3s"
+              "duration": "181.4s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4080,13 +4501,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-race.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-race.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "6.6s",
+            "duration": "196.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-race.md"
           },
           "runCount": 1,
@@ -4094,7 +4521,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "6.6s"
+              "duration": "196.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4105,13 +4533,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-reasons-for-leaving.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-reasons-for-leaving.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "7.3s",
+            "duration": "159.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-reasons-for-leaving.md"
           },
           "runCount": 1,
@@ -4119,7 +4553,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "7.3s"
+              "duration": "159.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4130,13 +4565,19 @@
           "spec": "test-plans/AdminPortal/verify-edit-work-title.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-edit-work-title.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "6.6s",
+            "duration": "211.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-edit-work-title.md"
           },
           "runCount": 1,
@@ -4144,7 +4585,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "6.6s"
+              "duration": "211.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4155,13 +4597,19 @@
           "spec": "test-plans/AdminPortal/verify-internal-communications-functionality.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-internal-communications-functionality.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "10.4s",
+            "duration": "81.4s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-internal-communications-functionality.md"
           },
           "runCount": 1,
@@ -4169,7 +4617,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "10.4s"
+              "duration": "81.4s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4180,13 +4629,19 @@
           "spec": "test-plans/AdminPortal/verify-job-information-summary-details-advertiser.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-job-information-summary-details-advertiser.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "9.0s",
+            "duration": "112.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-job-information-summary-details-advertiser.md"
           },
           "runCount": 1,
@@ -4194,7 +4649,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "9.0s"
+              "duration": "112.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4205,13 +4661,19 @@
           "spec": "test-plans/AdminPortal/verify-output-and-competencies-advertiser.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-output-and-competencies-advertiser.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "9.1s",
+            "duration": "86.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-output-and-competencies-advertiser.md"
           },
           "runCount": 1,
@@ -4219,7 +4681,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "9.1s"
+              "duration": "86.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4230,13 +4693,19 @@
           "spec": "test-plans/AdminPortal/verify-qualification-status-complete.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-qualification-status-complete.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "partial",
           "status": "PARTIAL",
           "last": {
             "date": "2026-08-05",
             "result": "PARTIAL",
-            "duration": "6.5s",
+            "duration": "142.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-qualification-status-complete.md"
           },
           "runCount": 1,
@@ -4244,7 +4713,8 @@
             {
               "date": "2026-08-05",
               "result": "PARTIAL",
-              "duration": "6.5s"
+              "duration": "142.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4255,13 +4725,19 @@
           "spec": "test-plans/AdminPortal/verify-recruiter-details-advertiser.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-recruiter-details-advertiser.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "9.4s",
+            "duration": "88.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-recruiter-details-advertiser.md"
           },
           "runCount": 1,
@@ -4269,7 +4745,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "9.4s"
+              "duration": "88.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4280,13 +4757,19 @@
           "spec": "test-plans/AdminPortal/verify-view-in-pdf-button-advertiser.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-view-in-pdf-button-advertiser.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-05",
             "result": "PASSED",
-            "duration": "9.3s",
+            "duration": "50.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-view-in-pdf-button-advertiser.md"
           },
           "runCount": 1,
@@ -4294,7 +4777,8 @@
             {
               "date": "2026-08-05",
               "result": "PASSED",
-              "duration": "9.3s"
+              "duration": "50.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4305,13 +4789,19 @@
           "spec": "test-plans/AdminPortal/authorize-job-posting-comments.spec.ts",
           "specHref": "test-plans/AdminPortal/authorize-job-posting-comments.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "9.4s",
+            "duration": "73.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/authorize-job-posting-comments.md"
           },
           "runCount": 1,
@@ -4319,7 +4809,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "9.4s"
+              "duration": "73.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4330,13 +4821,19 @@
           "spec": "test-plans/AdminPortal/create-job-posting-valid.spec.ts",
           "specHref": "test-plans/AdminPortal/create-job-posting-valid.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "9.7s",
+            "duration": "257.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/create-job-posting-valid.md"
           },
           "runCount": 2,
@@ -4344,12 +4841,14 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "9.7s"
+              "duration": "257.0s",
+              "variant": null
             },
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "11.3s"
+              "duration": "230.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4360,13 +4859,19 @@
           "spec": "test-plans/AdminPortal/job-information-summary-confirmation.spec.ts",
           "specHref": "test-plans/AdminPortal/job-information-summary-confirmation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "23.1s",
+            "duration": "363.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/job-information-summary-confirmation.md"
           },
           "runCount": 1,
@@ -4374,7 +4879,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "23.1s"
+              "duration": "363.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4385,13 +4891,19 @@
           "spec": "test-plans/AdminPortal/output-and-competencies-profiles-confirmation.spec.ts",
           "specHref": "test-plans/AdminPortal/output-and-competencies-profiles-confirmation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "22.4s",
+            "duration": "266.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/output-and-competencies-profiles-confirmation.md"
           },
           "runCount": 1,
@@ -4399,7 +4911,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "22.4s"
+              "duration": "266.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4410,13 +4923,19 @@
           "spec": "test-plans/AdminPortal/recruiter-details-confirmation.spec.ts",
           "specHref": "test-plans/AdminPortal/recruiter-details-confirmation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "19.9s",
+            "duration": "279.4s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/recruiter-details-confirmation.md"
           },
           "runCount": 1,
@@ -4424,7 +4943,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "19.9s"
+              "duration": "279.4s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4435,13 +4955,19 @@
           "spec": "test-plans/AdminPortal/upload-approved-submission-document.spec.ts",
           "specHref": "test-plans/AdminPortal/upload-approved-submission-document.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "22.1s",
+            "duration": "188.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/upload-approved-submission-document.md"
           },
           "runCount": 1,
@@ -4449,7 +4975,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "22.1s"
+              "duration": "188.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4460,13 +4987,19 @@
           "spec": "test-plans/AdminPortal/upload-supporting-documents.spec.ts",
           "specHref": "test-plans/AdminPortal/upload-supporting-documents.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "19.2s",
+            "duration": "224.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/upload-supporting-documents.md"
           },
           "runCount": 1,
@@ -4474,7 +5007,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "19.2s"
+              "duration": "224.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4485,13 +5019,19 @@
           "spec": "test-plans/AdminPortal/verify-authorize-job-post.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-authorize-job-post.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "11.0s",
+            "duration": "54.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-05/verify-authorize-job-post.md"
           },
           "runCount": 1,
@@ -4499,7 +5039,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "11.0s"
+              "duration": "54.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4510,13 +5051,19 @@
           "spec": "test-plans/AdminPortal/verify-authorize-job-posting.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-authorize-job-posting.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "9.4s",
+            "duration": "80.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/verify-authorize-job-posting.md"
           },
           "runCount": 1,
@@ -4524,7 +5071,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "9.4s"
+              "duration": "80.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4535,13 +5083,19 @@
           "spec": "test-plans/AdminPortal/verify-close-button-authoriser.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-close-button-authoriser.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "partial",
           "status": "PARTIAL",
           "last": {
             "date": "2026-08-04",
             "result": "PARTIAL",
-            "duration": "9.6s",
+            "duration": "248.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/verify-close-button-authoriser.md"
           },
           "runCount": 1,
@@ -4549,7 +5103,8 @@
             {
               "date": "2026-08-04",
               "result": "PARTIAL",
-              "duration": "9.6s"
+              "duration": "248.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4560,13 +5115,19 @@
           "spec": "test-plans/AdminPortal/verify-close-button-do-not-authorise-dialog.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-close-button-do-not-authorise-dialog.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "9.6s",
+            "duration": "81.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/verify-close-button-do-not-authorise-dialog.md"
           },
           "runCount": 1,
@@ -4574,7 +5135,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "9.6s"
+              "duration": "81.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4585,13 +5147,19 @@
           "spec": "test-plans/AdminPortal/verify-job-information-summary-details.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-job-information-summary-details.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "8.4s",
+            "duration": "111.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/verify-job-information-summary-details.md"
           },
           "runCount": 1,
@@ -4599,7 +5167,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "8.4s"
+              "duration": "111.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4610,13 +5179,19 @@
           "spec": "test-plans/AdminPortal/verify-outputs-and-competencies-details.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-outputs-and-competencies-details.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "11.1s",
+            "duration": "103.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/verify-outputs-and-competencies-details.md"
           },
           "runCount": 1,
@@ -4624,7 +5199,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "11.1s"
+              "duration": "103.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4635,13 +5211,19 @@
           "spec": "test-plans/AdminPortal/verify-recruiter-details-authoriser.spec.ts",
           "specHref": "test-plans/AdminPortal/verify-recruiter-details-authoriser.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-08-04",
             "result": "PASSED",
-            "duration": "9.7s",
+            "duration": "92.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-08-04/verify-recruiter-details-authoriser.md"
           },
           "runCount": 1,
@@ -4649,7 +5231,8 @@
             {
               "date": "2026-08-04",
               "result": "PASSED",
-              "duration": "9.7s"
+              "duration": "92.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4667,13 +5250,19 @@
           "spec": "test-plans/Alerts/verify-add-alert-daily.spec.ts",
           "specHref": "test-plans/Alerts/verify-add-alert-daily.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "6.9s",
+            "duration": "82.4s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-add-alert-daily.md"
           },
           "runCount": 1,
@@ -4681,7 +5270,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "6.9s"
+              "duration": "82.4s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4692,13 +5282,19 @@
           "spec": "test-plans/Alerts/verify-add-alert-weekly.spec.ts",
           "specHref": "test-plans/Alerts/verify-add-alert-weekly.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "partial",
           "status": "PARTIAL",
           "last": {
             "date": "2026-07-30",
             "result": "PARTIAL",
-            "duration": "7.6s",
+            "duration": "989.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-add-alert-weekly.md"
           },
           "runCount": 1,
@@ -4706,7 +5302,8 @@
             {
               "date": "2026-07-30",
               "result": "PARTIAL",
-              "duration": "7.6s"
+              "duration": "989.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4717,13 +5314,19 @@
           "spec": "test-plans/Alerts/verify-delete-alert.spec.ts",
           "specHref": "test-plans/Alerts/verify-delete-alert.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "9.5s",
+            "duration": "180.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-delete-alert.md"
           },
           "runCount": 1,
@@ -4731,7 +5334,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "9.5s"
+              "duration": "180.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4749,13 +5353,19 @@
           "spec": "test-plans/Dashboard/verify-resubmit.spec.ts",
           "specHref": "test-plans/Dashboard/verify-resubmit.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "10.3s",
+            "duration": "68.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-resubmit.md"
           },
           "runCount": 1,
@@ -4763,7 +5373,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "10.3s"
+              "duration": "68.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4800,13 +5411,19 @@
           "spec": "test-plans/Home/refresh-the-home-page.spec.ts",
           "specHref": "test-plans/Home/refresh-the-home-page.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "10.3s",
+            "duration": "28.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/refresh-the-home-page.md"
           },
           "runCount": 1,
@@ -4814,7 +5431,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "10.3s"
+              "duration": "28.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4825,13 +5443,19 @@
           "spec": "test-plans/Home/search-with-invalid-input.spec.ts",
           "specHref": "test-plans/Home/search-with-invalid-input.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "8.3s",
+            "duration": "51.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/search-with-invalid-input.md"
           },
           "runCount": 1,
@@ -4839,7 +5463,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "8.3s"
+              "duration": "51.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4850,13 +5475,19 @@
           "spec": "test-plans/Home/search-with-job-title-only.spec.ts",
           "specHref": "test-plans/Home/search-with-job-title-only.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "8.9s",
+            "duration": "39.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/search-with-job-title-only.md"
           },
           "runCount": 1,
@@ -4864,7 +5495,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "8.9s"
+              "duration": "39.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4875,13 +5507,19 @@
           "spec": "test-plans/Home/verify-valid-job-title-and-location-106559.spec.ts",
           "specHref": "test-plans/Home/verify-valid-job-title-and-location-106559.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "7.6s",
+            "duration": "63.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-valid-job-title-and-location-106559.md"
           },
           "runCount": 1,
@@ -4889,7 +5527,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "7.6s"
+              "duration": "63.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4900,13 +5539,19 @@
           "spec": "test-plans/Home/verify-valid-job-title-and-location.spec.ts",
           "specHref": "test-plans/Home/verify-valid-job-title-and-location.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "7.3s",
+            "duration": "88.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-valid-job-title-and-location.md"
           },
           "runCount": 1,
@@ -4914,7 +5559,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "7.3s"
+              "duration": "88.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4932,13 +5578,19 @@
           "spec": "test-plans/Jobs/cancel-job-application.spec.ts",
           "specHref": "test-plans/Jobs/cancel-job-application.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "12.2s",
+            "duration": "193.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/cancel-job-application.md"
           },
           "runCount": 1,
@@ -4946,7 +5598,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "12.2s"
+              "duration": "193.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4957,13 +5610,19 @@
           "spec": "test-plans/Jobs/verify-clear-all-filters.spec.ts",
           "specHref": "test-plans/Jobs/verify-clear-all-filters.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "8.2s",
+            "duration": "59.5s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-clear-all-filters.md"
           },
           "runCount": 1,
@@ -4971,7 +5630,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "8.2s"
+              "duration": "59.5s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -4982,13 +5642,19 @@
           "spec": "test-plans/Jobs/verify-search-by-job-title.spec.ts",
           "specHref": "test-plans/Jobs/verify-search-by-job-title.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "6.6s",
+            "duration": "43.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-search-by-job-title.md"
           },
           "runCount": 1,
@@ -4996,7 +5662,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "6.6s"
+              "duration": "43.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5007,13 +5674,19 @@
           "spec": "test-plans/Jobs/verify-search-by-location.spec.ts",
           "specHref": "test-plans/Jobs/verify-search-by-location.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "14.1s",
+            "duration": "78.4s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-search-by-location.md"
           },
           "runCount": 1,
@@ -5021,7 +5694,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "14.1s"
+              "duration": "78.4s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5032,13 +5706,19 @@
           "spec": "test-plans/Jobs/verify-search-by-salary-range.spec.ts",
           "specHref": "test-plans/Jobs/verify-search-by-salary-range.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "6.5s",
+            "duration": "52.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-search-by-salary-range.md"
           },
           "runCount": 1,
@@ -5046,7 +5726,8 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "6.5s"
+              "duration": "52.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5083,13 +5764,19 @@
           "spec": "test-plans/Profile/verify-profile-details.spec.ts",
           "specHref": "test-plans/Profile/verify-profile-details.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-30",
             "result": "PASSED",
-            "duration": "10.7s",
+            "duration": "173.5s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-30/verify-profile-details.md"
           },
           "runCount": 2,
@@ -5097,12 +5784,14 @@
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "10.7s"
+              "duration": "173.5s",
+              "variant": null
             },
             {
               "date": "2026-07-06",
               "result": "PASSED",
-              "duration": "16.0s"
+              "duration": "196.2s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5113,13 +5802,19 @@
           "spec": "test-plans/Profile/verify-add-reference.spec.ts",
           "specHref": "test-plans/Profile/verify-add-reference.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "11.5s",
+            "duration": "79.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-add-reference.md"
           },
           "runCount": 1,
@@ -5127,7 +5822,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "11.5s"
+              "duration": "79.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5138,13 +5834,19 @@
           "spec": "test-plans/Profile/verify-add-skills.spec.ts",
           "specHref": "test-plans/Profile/verify-add-skills.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "13.6s",
+            "duration": "33.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-add-skills.md"
           },
           "runCount": 1,
@@ -5152,7 +5854,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "13.6s"
+              "duration": "33.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5163,13 +5866,19 @@
           "spec": "test-plans/Profile/verify-add-tertiary-qualification-complete.spec.ts",
           "specHref": "test-plans/Profile/verify-add-tertiary-qualification-complete.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "12.2s",
+            "duration": "200.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-add-tertiary-qualification-complete.md"
           },
           "runCount": 1,
@@ -5177,7 +5886,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "12.2s"
+              "duration": "200.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5188,13 +5898,19 @@
           "spec": "test-plans/Profile/verify-add-tertiary-qualification-in-progress.spec.ts",
           "specHref": "test-plans/Profile/verify-add-tertiary-qualification-in-progress.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "13.0s",
+            "duration": "168.4s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-add-tertiary-qualification-in-progress.md"
           },
           "runCount": 1,
@@ -5202,7 +5918,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "13.0s"
+              "duration": "168.4s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5213,13 +5930,19 @@
           "spec": "test-plans/Profile/verify-add-work-experience-not-current-employer.spec.ts",
           "specHref": "test-plans/Profile/verify-add-work-experience-not-current-employer.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "12.9s",
+            "duration": "143.3s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-add-work-experience-not-current-employer.md"
           },
           "runCount": 1,
@@ -5227,7 +5950,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "12.9s"
+              "duration": "143.3s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5238,13 +5962,19 @@
           "spec": "test-plans/Profile/verify-add-work-experience.spec.ts",
           "specHref": "test-plans/Profile/verify-add-work-experience.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "12.0s",
+            "duration": "147.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-add-work-experience.md"
           },
           "runCount": 1,
@@ -5252,7 +5982,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "12.0s"
+              "duration": "147.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5263,13 +5994,19 @@
           "spec": "test-plans/Profile/verify-complete-secondary-qualifications.spec.ts",
           "specHref": "test-plans/Profile/verify-complete-secondary-qualifications.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "18.2s",
+            "duration": "138.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-complete-secondary-qualifications.md"
           },
           "runCount": 2,
@@ -5277,12 +6014,14 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "18.2s"
+              "duration": "138.0s",
+              "variant": null
             },
             {
               "date": "2026-07-06",
               "result": "PARTIAL",
-              "duration": "9.0s"
+              "duration": "12989.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5293,13 +6032,19 @@
           "spec": "test-plans/Profile/verify-delete-reference.spec.ts",
           "specHref": "test-plans/Profile/verify-delete-reference.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "13.4s",
+            "duration": "74.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-delete-reference.md"
           },
           "runCount": 1,
@@ -5307,7 +6052,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "13.4s"
+              "duration": "74.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5318,13 +6064,19 @@
           "spec": "test-plans/Profile/verify-delete-skill.spec.ts",
           "specHref": "test-plans/Profile/verify-delete-skill.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "11.5s",
+            "duration": "59.7s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-delete-skill.md"
           },
           "runCount": 1,
@@ -5332,7 +6084,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "11.5s"
+              "duration": "59.7s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5343,13 +6096,19 @@
           "spec": "test-plans/Profile/verify-delete-tertiary-qualification.spec.ts",
           "specHref": "test-plans/Profile/verify-delete-tertiary-qualification.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "14.9s",
+            "duration": "129.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-delete-tertiary-qualification.md"
           },
           "runCount": 1,
@@ -5357,7 +6116,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "14.9s"
+              "duration": "129.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5368,13 +6128,19 @@
           "spec": "test-plans/Profile/verify-delete-work-experience.spec.ts",
           "specHref": "test-plans/Profile/verify-delete-work-experience.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "12.9s",
+            "duration": "138.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-delete-work-experience.md"
           },
           "runCount": 1,
@@ -5382,7 +6148,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "12.9s"
+              "duration": "138.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5393,13 +6160,19 @@
           "spec": "test-plans/Profile/verify-edit-reference.spec.ts",
           "specHref": "test-plans/Profile/verify-edit-reference.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "11.9s",
+            "duration": "74.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-edit-reference.md"
           },
           "runCount": 1,
@@ -5407,7 +6180,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "11.9s"
+              "duration": "74.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5418,13 +6192,19 @@
           "spec": "test-plans/Profile/verify-edit-skills.spec.ts",
           "specHref": "test-plans/Profile/verify-edit-skills.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "12.5s",
+            "duration": "66.1s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-edit-skills.md"
           },
           "runCount": 1,
@@ -5432,7 +6212,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "12.5s"
+              "duration": "66.1s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5443,13 +6224,19 @@
           "spec": "test-plans/Profile/verify-edit-tertiary-qualification.spec.ts",
           "specHref": "test-plans/Profile/verify-edit-tertiary-qualification.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "11.8s",
+            "duration": "143.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-edit-tertiary-qualification.md"
           },
           "runCount": 1,
@@ -5457,7 +6244,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "11.8s"
+              "duration": "143.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5468,13 +6256,19 @@
           "spec": "test-plans/Profile/verify-edit-work-experience.spec.ts",
           "specHref": "test-plans/Profile/verify-edit-work-experience.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "13.3s",
+            "duration": "141.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-edit-work-experience.md"
           },
           "runCount": 1,
@@ -5482,7 +6276,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "13.3s"
+              "duration": "141.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5493,13 +6288,19 @@
           "spec": "test-plans/Profile/verify-no-tertiary-qualification.spec.ts",
           "specHref": "test-plans/Profile/verify-no-tertiary-qualification.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "19.1s",
+            "duration": "88.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-no-tertiary-qualification.md"
           },
           "runCount": 1,
@@ -5507,7 +6308,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "19.1s"
+              "duration": "88.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5518,13 +6320,19 @@
           "spec": "test-plans/Profile/verify-no-work-experience.spec.ts",
           "specHref": "test-plans/Profile/verify-no-work-experience.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "31.0s",
+            "duration": "81.8s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-no-work-experience.md"
           },
           "runCount": 1,
@@ -5532,7 +6340,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "31.0s"
+              "duration": "81.8s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5543,13 +6352,19 @@
           "spec": "test-plans/Profile/verify-secondary-qualifications-in-progress.spec.ts",
           "specHref": "test-plans/Profile/verify-secondary-qualifications-in-progress.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-16",
             "result": "PASSED",
-            "duration": "13.4s",
+            "duration": "72.9s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-16/verify-secondary-qualifications-in-progress.md"
           },
           "runCount": 1,
@@ -5557,7 +6372,8 @@
             {
               "date": "2026-07-16",
               "result": "PASSED",
-              "duration": "13.4s"
+              "duration": "72.9s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5568,13 +6384,19 @@
           "spec": "test-plans/Profile/verify-background-information.spec.ts",
           "specHref": "test-plans/Profile/verify-background-information.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-06",
             "result": "PASSED",
-            "duration": "26.8s",
+            "duration": "229.6s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-06/verify-background-information.md"
           },
           "runCount": 1,
@@ -5582,7 +6404,8 @@
             {
               "date": "2026-07-06",
               "result": "PASSED",
-              "duration": "26.8s"
+              "duration": "229.6s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5593,13 +6416,19 @@
           "spec": "test-plans/Profile/verify-contact-details.spec.ts",
           "specHref": "test-plans/Profile/verify-contact-details.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-06",
             "result": "PASSED",
-            "duration": "19.7s",
+            "duration": "248.0s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-06/verify-contact-details.md"
           },
           "runCount": 1,
@@ -5607,7 +6436,8 @@
             {
               "date": "2026-07-06",
               "result": "PASSED",
-              "duration": "19.7s"
+              "duration": "248.0s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5618,13 +6448,19 @@
           "spec": "test-plans/Profile/verify-demographic-details.spec.ts",
           "specHref": "test-plans/Profile/verify-demographic-details.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-06",
             "result": "PASSED",
-            "duration": "30.6s",
+            "duration": "229.5s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-06/verify-demographic-details.md"
           },
           "runCount": 1,
@@ -5632,7 +6468,8 @@
             {
               "date": "2026-07-06",
               "result": "PASSED",
-              "duration": "30.6s"
+              "duration": "229.5s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5643,13 +6480,19 @@
           "spec": "test-plans/Profile/verify-languages.spec.ts",
           "specHref": "test-plans/Profile/verify-languages.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
             "date": "2026-07-06",
             "result": "PASSED",
-            "duration": "19.9s",
+            "duration": "198.5s",
+            "variant": null,
             "reportHref": "test-reports/2026-07-06/verify-languages.md"
           },
           "runCount": 1,
@@ -5657,7 +6500,8 @@
             {
               "date": "2026-07-06",
               "result": "PASSED",
-              "duration": "19.9s"
+              "duration": "198.5s",
+              "variant": null
             }
           ],
           "bugs": []
@@ -5672,224 +6516,252 @@
         {
           "plan": "test-plans/AdminPortal/verify-appointed-ref43-completeflow.md",
           "planDisplay": "AdminPortal/verify-appointed-ref43-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "13.7s",
+          "duration": "156.3s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-appointed-ref43-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-category-details-completeflow.md",
           "planDisplay": "AdminPortal/verify-category-details-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.1s",
+          "duration": "253.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-category-details-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-decline-pre-screened-completeflow.md",
           "planDisplay": "AdminPortal/verify-decline-pre-screened-completeflow.md",
-          "result": "PASSED (CORRECTED — SEE ADDENDUM)",
-          "duration": "23.9s",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "164.7s + 39.2s corrected re-run",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-06/verify-decline-pre-screened-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-decline-pre-screened-ref41-completeflow.md",
           "planDisplay": "AdminPortal/verify-decline-pre-screened-ref41-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.1s",
+          "duration": "122.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-decline-pre-screened-ref41-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-delete-qualification-completeflow.md",
           "planDisplay": "AdminPortal/verify-delete-qualification-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.0s",
+          "duration": "375.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-delete-qualification-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-delete-work-experience-completeflow.md",
           "planDisplay": "AdminPortal/verify-delete-work-experience-completeflow.md",
+          "variant": null,
           "result": "FAILED",
-          "duration": "9.3s",
+          "duration": "113.1s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-06/verify-delete-work-experience-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-city-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-city-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "24.1s",
+          "duration": "379.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-edit-city-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-employer-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-employer-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "8.0s",
+          "duration": "231.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-edit-employer-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-employment-date-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-employment-date-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "8.5s",
+          "duration": "241.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-edit-employment-date-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-institution-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-institution-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.0s",
+          "duration": "239.3s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-edit-institution-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-qualification-name-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-qualification-name-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "8.2s",
+          "duration": "265.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-edit-qualification-name-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-qualification-status-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-qualification-status-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.2s",
+          "duration": "185.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-edit-qualification-status-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-qualification-type-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-qualification-type-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.9s",
+          "duration": "274.2s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-edit-qualification-type-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-reasons-for-leaving-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-reasons-for-leaving-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.4s",
+          "duration": "195.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-edit-reasons-for-leaving-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-work-title-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-work-title-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "29.4s",
+          "duration": "276.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-edit-work-title-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-interviewed-completeflow.md",
           "planDisplay": "AdminPortal/verify-interviewed-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.9s",
+          "duration": "208.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-interviewed-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-interviewed-ref43-completeflow.md",
           "planDisplay": "AdminPortal/verify-interviewed-ref43-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "24.0s",
+          "duration": "150.3s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-interviewed-ref43-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-not-appointed-completeflow.md",
           "planDisplay": "AdminPortal/verify-not-appointed-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "28.0s",
+          "duration": "151.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-not-appointed-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-not-appointed-hrm354-completeflow.md",
           "planDisplay": "AdminPortal/verify-not-appointed-hrm354-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.1s",
+          "duration": "130.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-not-appointed-hrm354-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-not-interviewed-completeflow.md",
           "planDisplay": "AdminPortal/verify-not-interviewed-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "23.7s",
+          "duration": "150.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-not-interviewed-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-not-interviewed-frd123-completeflow.md",
           "planDisplay": "AdminPortal/verify-not-interviewed-frd123-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.8s",
+          "duration": "231.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-not-interviewed-frd123-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-pre-screen-completeflow.md",
           "planDisplay": "AdminPortal/verify-pre-screen-completeflow.md",
+          "variant": null,
           "result": "PARTIAL",
-          "duration": "7.0s",
+          "duration": "123.0s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-06/verify-pre-screen-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-pre-screen-workflow-inbox-completeflow.md",
           "planDisplay": "AdminPortal/verify-pre-screen-workflow-inbox-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.9s",
+          "duration": "192.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-pre-screen-workflow-inbox-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-qualification-status-complete-completeflow.md",
           "planDisplay": "AdminPortal/verify-qualification-status-complete-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.7s",
+          "duration": "216.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-qualification-status-complete-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-send-message-public-portal-completeflow.md",
           "planDisplay": "AdminPortal/verify-send-message-public-portal-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.7s",
+          "duration": "124.5s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-send-message-public-portal-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-shortlist-completeflow.md",
           "planDisplay": "AdminPortal/verify-shortlist-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.3s",
+          "duration": "135.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-shortlist-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-shortlist-workflow-inbox-completeflow.md",
           "planDisplay": "AdminPortal/verify-shortlist-workflow-inbox-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.5s",
+          "duration": "101.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-shortlist-workflow-inbox-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-successful-manual-application.md",
           "planDisplay": "AdminPortal/verify-successful-manual-application.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "61.4s",
+          "duration": "64.2s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-06/verify-successful-manual-application.md"
         }
@@ -5901,238 +6773,268 @@
         {
           "plan": "test-plans/AdminPortal/advertise-job-posting-comments.md",
           "planDisplay": "AdminPortal/advertise-job-posting-comments.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.5s",
+          "duration": "62.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/advertise-job-posting-comments.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-advertise-dha-website-functionality.md",
           "planDisplay": "AdminPortal/verify-advertise-dha-website-functionality.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.6s",
+          "duration": "63.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-advertise-dha-website-functionality.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-advertise-later-functionality.md",
           "planDisplay": "AdminPortal/verify-advertise-later-functionality.md",
+          "variant": null,
           "result": "PARTIAL",
-          "duration": "9.8s",
+          "duration": "199.2s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-05/verify-advertise-later-functionality.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-close-button-advertiser.md",
           "planDisplay": "AdminPortal/verify-close-button-advertiser.md",
+          "variant": null,
           "result": "PARTIAL",
-          "duration": "11.4s",
+          "duration": "270.6s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-05/verify-close-button-advertiser.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-delete-qualification.md",
           "planDisplay": "AdminPortal/verify-delete-qualification.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.6s",
+          "duration": "108.3s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-delete-qualification.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-delete-work-experience.md",
           "planDisplay": "AdminPortal/verify-delete-work-experience.md",
+          "variant": null,
           "result": "FAILED",
-          "duration": "8.5s",
+          "duration": "141.9s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-05/verify-delete-work-experience.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-city-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-city-completeflow.md",
+          "variant": null,
           "result": "FAILED",
-          "duration": "44.8s",
+          "duration": "46.5s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-05/verify-edit-city-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-city.md",
           "planDisplay": "AdminPortal/verify-edit-city.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.6s",
+          "duration": "155.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-city.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-email-address-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-email-address-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.3s",
+          "duration": "215.3s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-email-address-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-email-address.md",
           "planDisplay": "AdminPortal/verify-edit-email-address.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.2s",
+          "duration": "190.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-email-address.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-employer.md",
           "planDisplay": "AdminPortal/verify-edit-employer.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.7s",
+          "duration": "158.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-employer.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-employment-date.md",
           "planDisplay": "AdminPortal/verify-edit-employment-date.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.1s",
+          "duration": "202.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-employment-date.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-first-name.md",
           "planDisplay": "AdminPortal/verify-edit-first-name.md",
-          "result": "FAILED (CORRECTED 2026-08-05 — SEE BELOW)",
-          "duration": "8.1s",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "203.3s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-first-name.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-gender-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-gender-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.4s",
+          "duration": "203.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-gender-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-gender.md",
           "planDisplay": "AdminPortal/verify-edit-gender.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.6s",
+          "duration": "144.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-gender.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-identity-number-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-identity-number-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.9s",
+          "duration": "210.5s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-identity-number-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-identity-number.md",
           "planDisplay": "AdminPortal/verify-edit-identity-number.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.3s",
+          "duration": "208.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-identity-number.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-institution.md",
           "planDisplay": "AdminPortal/verify-edit-institution.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.5s",
+          "duration": "152.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-institution.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-internal-external-applicant.md",
           "planDisplay": "AdminPortal/verify-edit-internal-external-applicant.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.3s",
+          "duration": "205.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-internal-external-applicant.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-internal-external-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-internal-external-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.1s",
+          "duration": "187.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-internal-external-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-last-name-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-last-name-completeflow.md",
-          "result": "PASSED (ON A LATER ATTEMPT — SEE NOTE BELOW)",
-          "duration": "7.7s",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "92.3s (this run) + ~30s follow-up confirmation",
           "mode": "playwright-script (failures pending AI-repair), final confirmation via a live-investigation script with a longer wait window",
           "reportHref": "test-reports/2026-08-05/verify-edit-last-name-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-last-name.md",
           "planDisplay": "AdminPortal/verify-edit-last-name.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "8.3s",
+          "duration": "206.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-last-name.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-mobile-number-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-mobile-number-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.2s",
+          "duration": "206.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-mobile-number-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-mobile-number.md",
           "planDisplay": "AdminPortal/verify-edit-mobile-number.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "8.2s",
+          "duration": "220.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-mobile-number.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-nature-of-disability-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-nature-of-disability-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.0s",
+          "duration": "169.2s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-nature-of-disability-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-nature-of-disability.md",
           "planDisplay": "AdminPortal/verify-edit-nature-of-disability.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.8s",
+          "duration": "207.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-nature-of-disability.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-province-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-province-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "8.1s",
+          "duration": "182.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-province-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-province.md",
           "planDisplay": "AdminPortal/verify-edit-province.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.0s",
+          "duration": "178.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-province.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-qualification-name.md",
           "planDisplay": "AdminPortal/verify-edit-qualification-name.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.1s",
+          "duration": "189.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-qualification-name.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-qualification-status.md",
           "planDisplay": "AdminPortal/verify-edit-qualification-status.md",
+          "variant": null,
           "result": "FAILED",
           "duration": "N/A",
           "mode": "manual-investigation",
@@ -6141,86 +7043,97 @@
         {
           "plan": "test-plans/AdminPortal/verify-edit-qualification-type.md",
           "planDisplay": "AdminPortal/verify-edit-qualification-type.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.1s",
+          "duration": "257.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-qualification-type.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-race-completeflow.md",
           "planDisplay": "AdminPortal/verify-edit-race-completeflow.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.3s",
+          "duration": "181.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-race-completeflow.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-race.md",
           "planDisplay": "AdminPortal/verify-edit-race.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.6s",
+          "duration": "196.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-race.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-reasons-for-leaving.md",
           "planDisplay": "AdminPortal/verify-edit-reasons-for-leaving.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.3s",
+          "duration": "159.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-reasons-for-leaving.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-edit-work-title.md",
           "planDisplay": "AdminPortal/verify-edit-work-title.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.6s",
+          "duration": "211.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-edit-work-title.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-internal-communications-functionality.md",
           "planDisplay": "AdminPortal/verify-internal-communications-functionality.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "10.4s",
+          "duration": "81.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-internal-communications-functionality.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-job-information-summary-details-advertiser.md",
           "planDisplay": "AdminPortal/verify-job-information-summary-details-advertiser.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.0s",
+          "duration": "112.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-job-information-summary-details-advertiser.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-output-and-competencies-advertiser.md",
           "planDisplay": "AdminPortal/verify-output-and-competencies-advertiser.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.1s",
+          "duration": "86.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-output-and-competencies-advertiser.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-qualification-status-complete.md",
           "planDisplay": "AdminPortal/verify-qualification-status-complete.md",
+          "variant": null,
           "result": "PARTIAL",
-          "duration": "6.5s",
+          "duration": "142.8s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-05/verify-qualification-status-complete.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-recruiter-details-advertiser.md",
           "planDisplay": "AdminPortal/verify-recruiter-details-advertiser.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.4s",
+          "duration": "88.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-recruiter-details-advertiser.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-successful-manual-application.md",
           "planDisplay": "AdminPortal/verify-successful-manual-application.md",
+          "variant": null,
           "result": "PASSED",
           "duration": "~90s (steps 1-6 combined, excluding investigation/debugging overhead)",
           "mode": "live-investigation (executed via a throwaway Node/Playwright script during live exploration, then transcribed into the derived .spec.ts above — not re-run through run-plan.js, since every run of this wizard past step 1 creates a new, permanent, undeletable candidate record; re-running solely to generate a formal harness report was judged not worth the cost of a 7th stray record)",
@@ -6229,8 +7142,9 @@
         {
           "plan": "test-plans/AdminPortal/verify-view-in-pdf-button-advertiser.md",
           "planDisplay": "AdminPortal/verify-view-in-pdf-button-advertiser.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.3s",
+          "duration": "50.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-view-in-pdf-button-advertiser.md"
         }
@@ -6242,120 +7156,135 @@
         {
           "plan": "test-plans/AdminPortal/create-job-posting-output-competencies.md",
           "planDisplay": "AdminPortal/create-job-posting-output-competencies.md",
+          "variant": null,
           "result": "PARTIAL",
-          "duration": "10.0s",
+          "duration": "470.6s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-04/create-job-posting-output-competencies.md"
         },
         {
           "plan": "test-plans/AdminPortal/create-job-posting-valid.md",
           "planDisplay": "AdminPortal/create-job-posting-valid.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.7s",
+          "duration": "257.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/create-job-posting-valid.md"
         },
         {
           "plan": "test-plans/AdminPortal/job-information-summary-confirmation.md",
           "planDisplay": "AdminPortal/job-information-summary-confirmation.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "23.1s",
+          "duration": "363.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/job-information-summary-confirmation.md"
         },
         {
           "plan": "test-plans/AdminPortal/output-and-competencies-profiles-confirmation.md",
           "planDisplay": "AdminPortal/output-and-competencies-profiles-confirmation.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "22.4s",
+          "duration": "266.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/output-and-competencies-profiles-confirmation.md"
         },
         {
           "plan": "test-plans/AdminPortal/recruiter-details-confirmation.md",
           "planDisplay": "AdminPortal/recruiter-details-confirmation.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "19.9s",
+          "duration": "279.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/recruiter-details-confirmation.md"
         },
         {
           "plan": "test-plans/AdminPortal/upload-approved-submission-document.md",
           "planDisplay": "AdminPortal/upload-approved-submission-document.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "22.1s",
+          "duration": "188.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/upload-approved-submission-document.md"
         },
         {
           "plan": "test-plans/AdminPortal/upload-supporting-documents.md",
           "planDisplay": "AdminPortal/upload-supporting-documents.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "19.2s",
+          "duration": "224.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/upload-supporting-documents.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-authorize-job-posting.md",
           "planDisplay": "AdminPortal/verify-authorize-job-posting.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.4s",
+          "duration": "80.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/verify-authorize-job-posting.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-close-button-authoriser.md",
           "planDisplay": "AdminPortal/verify-close-button-authoriser.md",
+          "variant": null,
           "result": "PARTIAL",
-          "duration": "9.6s",
+          "duration": "248.9s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-04/verify-close-button-authoriser.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-close-button-do-not-authorise-dialog.md",
           "planDisplay": "AdminPortal/verify-close-button-do-not-authorise-dialog.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.6s",
+          "duration": "81.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/verify-close-button-do-not-authorise-dialog.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-job-information-summary-details.md",
           "planDisplay": "AdminPortal/verify-job-information-summary-details.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "8.4s",
+          "duration": "111.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/verify-job-information-summary-details.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-outputs-and-competencies-details.md",
           "planDisplay": "AdminPortal/verify-outputs-and-competencies-details.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.1s",
+          "duration": "103.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/verify-outputs-and-competencies-details.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-recruiter-details-authoriser.md",
           "planDisplay": "AdminPortal/verify-recruiter-details-authoriser.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.7s",
+          "duration": "92.3s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-04/verify-recruiter-details-authoriser.md"
         },
         {
           "plan": "test-plans/AdminPortal/authorize-job-posting-comments.md",
           "planDisplay": "AdminPortal/authorize-job-posting-comments.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.4s",
+          "duration": "73.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/authorize-job-posting-comments.md"
         },
         {
           "plan": "test-plans/AdminPortal/verify-authorize-job-post.md",
           "planDisplay": "AdminPortal/verify-authorize-job-post.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.0s",
+          "duration": "54.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-05/verify-authorize-job-post.md"
         }
@@ -6367,8 +7296,9 @@
         {
           "plan": "test-plans/AdminPortal/create-job-posting-output-competencies.md",
           "planDisplay": "AdminPortal/create-job-posting-output-competencies.md",
+          "variant": null,
           "result": "FAILED",
-          "duration": "6.1s",
+          "duration": "14.7s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-07-31/create-job-posting-output-competencies.md"
         }
@@ -6380,136 +7310,153 @@
         {
           "plan": "test-plans/Jobs/cancel-job-application.md",
           "planDisplay": "Jobs/cancel-job-application.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "12.2s",
+          "duration": "193.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/cancel-job-application.md"
         },
         {
           "plan": "test-plans/AdminPortal/create-job-posting-output-competencies.md",
           "planDisplay": "AdminPortal/create-job-posting-output-competencies.md",
+          "variant": null,
           "result": "PARTIAL",
-          "duration": "16.7s",
+          "duration": "434.0s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-07-30/create-job-posting-output-competencies.md"
         },
         {
           "plan": "test-plans/AdminPortal/create-job-posting-valid.md",
           "planDisplay": "AdminPortal/create-job-posting-valid.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.3s",
+          "duration": "230.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/create-job-posting-valid.md"
         },
         {
           "plan": "test-plans/Home/refresh-the-home-page.md",
           "planDisplay": "Home/refresh-the-home-page.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "10.3s",
+          "duration": "28.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/refresh-the-home-page.md"
         },
         {
           "plan": "test-plans/Home/search-with-invalid-input.md",
           "planDisplay": "Home/search-with-invalid-input.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "8.3s",
+          "duration": "51.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/search-with-invalid-input.md"
         },
         {
           "plan": "test-plans/Home/search-with-job-title-only.md",
           "planDisplay": "Home/search-with-job-title-only.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "8.9s",
+          "duration": "39.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/search-with-job-title-only.md"
         },
         {
           "plan": "test-plans/Alerts/verify-add-alert-daily.md",
           "planDisplay": "Alerts/verify-add-alert-daily.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.9s",
+          "duration": "82.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/verify-add-alert-daily.md"
         },
         {
           "plan": "test-plans/Alerts/verify-add-alert-weekly.md",
           "planDisplay": "Alerts/verify-add-alert-weekly.md",
+          "variant": null,
           "result": "PARTIAL",
-          "duration": "7.6s",
+          "duration": "989.3s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-07-30/verify-add-alert-weekly.md"
         },
         {
           "plan": "test-plans/Jobs/verify-clear-all-filters.md",
           "planDisplay": "Jobs/verify-clear-all-filters.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "8.2s",
+          "duration": "59.5s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/verify-clear-all-filters.md"
         },
         {
           "plan": "test-plans/Alerts/verify-delete-alert.md",
           "planDisplay": "Alerts/verify-delete-alert.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "9.5s",
+          "duration": "180.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/verify-delete-alert.md"
         },
         {
           "plan": "test-plans/Profile/verify-profile-details.md",
           "planDisplay": "Profile/verify-profile-details.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "10.7s",
+          "duration": "173.5s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/verify-profile-details.md"
         },
         {
           "plan": "test-plans/Dashboard/verify-resubmit.md",
           "planDisplay": "Dashboard/verify-resubmit.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "10.3s",
+          "duration": "68.3s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/verify-resubmit.md"
         },
         {
           "plan": "test-plans/Jobs/verify-search-by-job-title.md",
           "planDisplay": "Jobs/verify-search-by-job-title.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.6s",
+          "duration": "43.3s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/verify-search-by-job-title.md"
         },
         {
           "plan": "test-plans/Jobs/verify-search-by-location.md",
           "planDisplay": "Jobs/verify-search-by-location.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "14.1s",
+          "duration": "78.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/verify-search-by-location.md"
         },
         {
           "plan": "test-plans/Jobs/verify-search-by-salary-range.md",
           "planDisplay": "Jobs/verify-search-by-salary-range.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "6.5s",
+          "duration": "52.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/verify-search-by-salary-range.md"
         },
         {
           "plan": "test-plans/Home/verify-valid-job-title-and-location-106559.md",
           "planDisplay": "Home/verify-valid-job-title-and-location-106559.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.6s",
+          "duration": "63.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/verify-valid-job-title-and-location-106559.md"
         },
         {
           "plan": "test-plans/Home/verify-valid-job-title-and-location.md",
           "planDisplay": "Home/verify-valid-job-title-and-location.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "7.3s",
+          "duration": "88.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/verify-valid-job-title-and-location.md"
         }
@@ -6521,144 +7468,162 @@
         {
           "plan": "test-plans/Profile/verify-add-reference.md",
           "planDisplay": "Profile/verify-add-reference.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.5s",
+          "duration": "79.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-add-reference.md"
         },
         {
           "plan": "test-plans/Profile/verify-add-skills.md",
           "planDisplay": "Profile/verify-add-skills.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "13.6s",
+          "duration": "33.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-add-skills.md"
         },
         {
           "plan": "test-plans/Profile/verify-add-tertiary-qualification-complete.md",
           "planDisplay": "Profile/verify-add-tertiary-qualification-complete.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "12.2s",
+          "duration": "200.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-add-tertiary-qualification-complete.md"
         },
         {
           "plan": "test-plans/Profile/verify-add-tertiary-qualification-in-progress.md",
           "planDisplay": "Profile/verify-add-tertiary-qualification-in-progress.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "13.0s",
+          "duration": "168.4s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-add-tertiary-qualification-in-progress.md"
         },
         {
           "plan": "test-plans/Profile/verify-add-work-experience-not-current-employer.md",
           "planDisplay": "Profile/verify-add-work-experience-not-current-employer.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "12.9s",
+          "duration": "143.3s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-add-work-experience-not-current-employer.md"
         },
         {
           "plan": "test-plans/Profile/verify-add-work-experience.md",
           "planDisplay": "Profile/verify-add-work-experience.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "12.0s",
+          "duration": "147.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-add-work-experience.md"
         },
         {
           "plan": "test-plans/Profile/verify-complete-secondary-qualifications.md",
           "planDisplay": "Profile/verify-complete-secondary-qualifications.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "18.2s",
+          "duration": "138.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-complete-secondary-qualifications.md"
         },
         {
           "plan": "test-plans/Profile/verify-delete-reference.md",
           "planDisplay": "Profile/verify-delete-reference.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "13.4s",
+          "duration": "74.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-delete-reference.md"
         },
         {
           "plan": "test-plans/Profile/verify-delete-skill.md",
           "planDisplay": "Profile/verify-delete-skill.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.5s",
+          "duration": "59.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-delete-skill.md"
         },
         {
           "plan": "test-plans/Profile/verify-delete-tertiary-qualification.md",
           "planDisplay": "Profile/verify-delete-tertiary-qualification.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "14.9s",
+          "duration": "129.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-delete-tertiary-qualification.md"
         },
         {
           "plan": "test-plans/Profile/verify-delete-work-experience.md",
           "planDisplay": "Profile/verify-delete-work-experience.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "12.9s",
+          "duration": "138.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-delete-work-experience.md"
         },
         {
           "plan": "test-plans/Profile/verify-edit-reference.md",
           "planDisplay": "Profile/verify-edit-reference.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.9s",
+          "duration": "74.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-edit-reference.md"
         },
         {
           "plan": "test-plans/Profile/verify-edit-skills.md",
           "planDisplay": "Profile/verify-edit-skills.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "12.5s",
+          "duration": "66.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-edit-skills.md"
         },
         {
           "plan": "test-plans/Profile/verify-edit-tertiary-qualification.md",
           "planDisplay": "Profile/verify-edit-tertiary-qualification.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "11.8s",
+          "duration": "143.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-edit-tertiary-qualification.md"
         },
         {
           "plan": "test-plans/Profile/verify-edit-work-experience.md",
           "planDisplay": "Profile/verify-edit-work-experience.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "13.3s",
+          "duration": "141.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-edit-work-experience.md"
         },
         {
           "plan": "test-plans/Profile/verify-no-tertiary-qualification.md",
           "planDisplay": "Profile/verify-no-tertiary-qualification.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "19.1s",
+          "duration": "88.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-no-tertiary-qualification.md"
         },
         {
           "plan": "test-plans/Profile/verify-no-work-experience.md",
           "planDisplay": "Profile/verify-no-work-experience.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "31.0s",
+          "duration": "81.8s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-no-work-experience.md"
         },
         {
           "plan": "test-plans/Profile/verify-secondary-qualifications-in-progress.md",
           "planDisplay": "Profile/verify-secondary-qualifications-in-progress.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "13.4s",
+          "duration": "72.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-16/verify-secondary-qualifications-in-progress.md"
         }
@@ -6670,53 +7635,59 @@
         {
           "plan": "test-plans/Profile/verify-background-information.md",
           "planDisplay": "Profile/verify-background-information.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "26.8s",
+          "duration": "229.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-06/verify-background-information.md"
         },
         {
           "plan": "test-plans/Profile/verify-complete-secondary-qualifications.md",
           "planDisplay": "Profile/verify-complete-secondary-qualifications.md",
+          "variant": null,
           "result": "PARTIAL",
-          "duration": "9.0s",
+          "duration": "12989.1s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-07-06/verify-complete-secondary-qualifications.md"
         },
         {
           "plan": "test-plans/Profile/verify-contact-details.md",
           "planDisplay": "Profile/verify-contact-details.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "19.7s",
+          "duration": "248.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-06/verify-contact-details.md"
         },
         {
           "plan": "test-plans/Profile/verify-demographic-details.md",
           "planDisplay": "Profile/verify-demographic-details.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "30.6s",
+          "duration": "229.5s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-06/verify-demographic-details.md"
         },
         {
           "plan": "test-plans/Profile/verify-languages.md",
           "planDisplay": "Profile/verify-languages.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "19.9s",
+          "duration": "198.5s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-06/verify-languages.md"
         },
         {
           "plan": "test-plans/Profile/verify-profile-details.md",
           "planDisplay": "Profile/verify-profile-details.md",
+          "variant": null,
           "result": "PASSED",
-          "duration": "16.0s",
+          "duration": "196.2s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-06/verify-profile-details.md"
         }
       ]
     }
   ],
-  "generated": "2026-08-06T13:10:06.216Z"
+  "generated": "2026-09-04T12:20:25.231Z"
 }

@@ -17,9 +17,9 @@
   "kpis": {
     "totalPlans": 56,
     "totalRuns": 104,
-    "last7Runs": 40,
-    "last7Pass": 1,
-    "last7PassPct": 3,
+    "last7Runs": 2,
+    "last7Pass": 0,
+    "last7PassPct": 0,
     "failingFlows": 25,
     "passingFlows": 4,
     "partialFlows": 15,
@@ -27,15 +27,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-09-06",
+    "startDate": "2025-09-07",
     "days": [
-      {
-        "iso": "2025-09-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-07",
         "runs": 0,
@@ -2576,6 +2569,13 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-09-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2797,6 +2797,10 @@
           "canRun": false,
           "badges": [
             {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
+            {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
             }
@@ -2842,7 +2846,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2880,7 +2884,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3120,7 +3124,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -4103,7 +4107,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -4140,6 +4144,10 @@
           "specHref": null,
           "canRun": false,
           "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
             {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
@@ -4430,7 +4438,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -4486,7 +4494,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4688,7 +4696,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -4788,7 +4796,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -5842,5 +5850,5 @@
       ]
     }
   ],
-  "generated": "2026-08-31T09:48:07.551Z"
+  "generated": "2026-09-04T12:20:24.779Z"
 }

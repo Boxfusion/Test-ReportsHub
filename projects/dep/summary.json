@@ -4,7 +4,7 @@
   "last7Runs": 0,
   "last7Pass": 0,
   "last7PassPct": null,
-  "failingFlows": 2,
+  "failingFlows": 3,
   "lastRun": {
     "date": "2026-05-28",
     "result": "FAILED",

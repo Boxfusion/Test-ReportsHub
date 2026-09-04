@@ -32,565 +32,19 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 24,
-    "totalRuns": 37,
-    "last7Runs": 8,
-    "last7Pass": 2,
-    "last7PassPct": 25,
-    "failingFlows": 17,
-    "passingFlows": 11,
+    "totalRuns": 38,
+    "last7Runs": 1,
+    "last7Pass": 1,
+    "last7PassPct": 100,
+    "failingFlows": 16,
+    "passingFlows": 15,
     "partialFlows": 1,
     "neverFlows": 5
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-06-21",
+    "startDate": "2025-09-07",
     "days": [
-      {
-        "iso": "2025-06-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-07",
         "runs": 0,
@@ -2533,14 +1987,14 @@
       {
         "iso": "2026-06-11",
         "runs": 5,
-        "passed": 4,
+        "passed": 5,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-06-12",
         "runs": 4,
-        "passed": 2,
+        "passed": 4,
         "failed": 0,
         "partial": 0
       },
@@ -2592,6 +2046,552 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-06-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-04",
+        "runs": 1,
+        "passed": 1,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2607,27 +2607,28 @@
           "spec": "test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
           "specHref": "test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
-            }
-          ],
-          "rowStatus": "failing",
-          "status": "FAILED",
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
-            "date": "2026-06-02",
-            "result": "FAILED",
-            "duration": "0.0s",
+            "date": "2026-09-04",
+            "result": "PASSED",
+            "duration": "11.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-06-02/acknowledge-leave-approved-without-pay.md"
+            "reportHref": "test-reports/2026-09-04/acknowledge-leave-approved-without-pay.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-04",
+              "result": "PASSED",
+              "duration": "11.8s",
+              "variant": null
+            },
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.4s",
               "variant": null
             }
           ],
@@ -2642,7 +2643,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2650,7 +2651,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "3.9s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/add-personal-credit-dialog.md"
           },
@@ -2659,7 +2660,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "3.9s",
               "variant": null
             }
           ],
@@ -2674,7 +2675,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2682,7 +2683,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.5s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/add-public-holiday-dialog.md"
           },
@@ -2691,7 +2692,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.5s",
               "variant": null
             }
           ],
@@ -2706,7 +2707,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2714,7 +2715,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.9s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/approve-leave-cancellation.md"
           },
@@ -2723,7 +2724,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.9s",
               "variant": null
             }
           ],
@@ -2738,7 +2739,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2746,7 +2747,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.5s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/approve-without-pay-dialog.md"
           },
@@ -2755,7 +2756,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.5s",
               "variant": null
             }
           ],
@@ -2770,7 +2771,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2778,7 +2779,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.1s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/edit-leave-credits-dialog.md"
           },
@@ -2787,7 +2788,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.1s",
               "variant": null
             }
           ],
@@ -2802,7 +2803,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2810,7 +2811,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.1s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/holiday-calendar-details.md"
           },
@@ -2819,7 +2820,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.1s",
               "variant": null
             }
           ],
@@ -2834,7 +2835,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2842,7 +2843,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "3.8s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/leave-application-dashboard.md"
           },
@@ -2851,7 +2852,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "3.8s",
               "variant": null
             }
           ],
@@ -2866,7 +2867,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2874,7 +2875,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.6s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/leave-balances-administration.md"
           },
@@ -2883,7 +2884,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.6s",
               "variant": null
             }
           ],
@@ -2898,7 +2899,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2906,7 +2907,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "5.8s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/leave-balances-details.md"
           },
@@ -2915,7 +2916,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "5.8s",
               "variant": null
             }
           ],
@@ -2930,7 +2931,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -2938,7 +2939,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "PARTIAL",
-            "duration": "0.0s",
+            "duration": "4.5s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/leave-credits-audit-trail.md"
           },
@@ -2947,7 +2948,7 @@
             {
               "date": "2026-06-02",
               "result": "PARTIAL",
-              "duration": "0.0s",
+              "duration": "4.5s",
               "variant": null
             }
           ],
@@ -2962,7 +2963,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2970,7 +2971,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.3s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/not-approve-leave-application.md"
           },
@@ -2979,7 +2980,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.3s",
               "variant": null
             }
           ],
@@ -2994,7 +2995,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3002,7 +3003,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.1s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/not-recommend-leave-application.md"
           },
@@ -3011,7 +3012,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.1s",
               "variant": null
             }
           ],
@@ -3026,7 +3027,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3034,7 +3035,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.1s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/override-dialog.md"
           },
@@ -3043,7 +3044,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.1s",
               "variant": null
             }
           ],
@@ -3058,7 +3059,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3066,7 +3067,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.2s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/reassign-dialog.md"
           },
@@ -3075,7 +3076,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.2s",
               "variant": null
             }
           ],
@@ -3090,7 +3091,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3098,7 +3099,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.2s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/refer-back-dialog.md"
           },
@@ -3107,7 +3108,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.2s",
               "variant": null
             }
           ],
@@ -3122,7 +3123,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3130,7 +3131,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.3s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/send-back-dialog.md"
           },
@@ -3139,7 +3140,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.3s",
               "variant": null
             }
           ],
@@ -3154,7 +3155,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3162,7 +3163,7 @@
           "last": {
             "date": "2026-06-02",
             "result": "FAILED",
-            "duration": "0.0s",
+            "duration": "4.4s",
             "variant": null,
             "reportHref": "test-reports/2026-06-02/verify-attachments.md"
           },
@@ -3171,7 +3172,7 @@
             {
               "date": "2026-06-02",
               "result": "FAILED",
-              "duration": "0.0s",
+              "duration": "4.4s",
               "variant": null
             }
           ],
@@ -3316,7 +3317,7 @@
           "last": {
             "date": "2026-05-29",
             "result": "PASSED",
-            "duration": "9.2s",
+            "duration": "93.1s",
             "variant": null,
             "reportHref": "test-reports/2026-05-29/smoke-happy-path.md"
           },
@@ -3325,7 +3326,7 @@
             {
               "date": "2026-05-29",
               "result": "PASSED",
-              "duration": "9.2s",
+              "duration": "93.1s",
               "variant": null
             }
           ],
@@ -3335,6 +3336,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-04",
+      "runs": [
+        {
+          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md",
+          "planDisplay": "eLeave/acknowledge-leave-approved-without-pay.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "11.8s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-04/acknowledge-leave-approved-without-pay.md"
+        }
+      ]
+    },
     {
       "date": "2026-06-15",
       "runs": [
@@ -3401,7 +3416,7 @@
           "plan": "test-plans/eLeave/capture-new-leave-application.md (Negative path — validation guard variant)",
           "planDisplay": "eLeave/capture-new-leave-application.md (Negative path — validation guard variant)",
           "variant": null,
-          "result": "PASSED (SYSTEM CORRECTLY PREVENTED SUBMISSION)",
+          "result": "PASSED",
           "duration": "~4 min (13:17–13:21 UTC)",
           "mode": "mcp-live",
           "reportHref": "test-reports/2026-06-12/negative-path-weekend-only-leave-validation.md"
@@ -3410,7 +3425,7 @@
           "plan": "test-plans/eLeave/capture-new-leave-application.md (One-Step Approver routing variant)",
           "planDisplay": "eLeave/capture-new-leave-application.md (One-Step Approver routing variant)",
           "variant": null,
-          "result": "PASSED (BUSINESS RULE WORKS — RECOMMEND STEP SKIPPED)",
+          "result": "PASSED",
           "duration": "~6 min (14:00–14:07 UTC)",
           "mode": "mcp-live",
           "reportHref": "test-reports/2026-06-12/one-step-approver-skip-recommend-e2e.md"
@@ -3460,7 +3475,7 @@
           "plan": "_ad-hoc — Negative path (workflow rejection branches)_",
           "planDisplay": "_ad-hoc — Negative path (workflow rejection branches)_",
           "variant": null,
-          "result": "PASSED (ALL REJECTION BRANCHES BEHAVED AS EXPECTED)",
+          "result": "PASSED",
           "duration": "~40 min (12:11–12:50 UTC)",
           "mode": "mcp-live",
           "reportHref": "test-reports/2026-06-11/negative-path-workflow-rejections-e2e.md"
@@ -3530,7 +3545,7 @@
           "planDisplay": "eLeave/acknowledge-leave-approved-without-pay.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.4s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/acknowledge-leave-approved-without-pay.md"
         },
@@ -3539,7 +3554,7 @@
           "planDisplay": "eLeave/add-personal-credit-dialog.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "3.9s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/add-personal-credit-dialog.md"
         },
@@ -3548,7 +3563,7 @@
           "planDisplay": "eLeave/add-public-holiday-dialog.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.5s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/add-public-holiday-dialog.md"
         },
@@ -3557,7 +3572,7 @@
           "planDisplay": "eLeave/approve-leave-cancellation.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.9s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/approve-leave-cancellation.md"
         },
@@ -3566,7 +3581,7 @@
           "planDisplay": "eLeave/approve-without-pay-dialog.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.5s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/approve-without-pay-dialog.md"
         },
@@ -3575,7 +3590,7 @@
           "planDisplay": "eLeave/edit-leave-credits-dialog.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.1s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/edit-leave-credits-dialog.md"
         },
@@ -3584,7 +3599,7 @@
           "planDisplay": "eLeave/holiday-calendar-details.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.1s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/holiday-calendar-details.md"
         },
@@ -3593,7 +3608,7 @@
           "planDisplay": "eLeave/leave-application-dashboard.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "3.8s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/leave-application-dashboard.md"
         },
@@ -3602,7 +3617,7 @@
           "planDisplay": "eLeave/leave-balances-administration.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.6s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/leave-balances-administration.md"
         },
@@ -3611,7 +3626,7 @@
           "planDisplay": "eLeave/leave-balances-details.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "5.8s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/leave-balances-details.md"
         },
@@ -3620,7 +3635,7 @@
           "planDisplay": "eLeave/leave-credits-audit-trail.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "0.0s",
+          "duration": "4.5s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/leave-credits-audit-trail.md"
         },
@@ -3629,7 +3644,7 @@
           "planDisplay": "eLeave/not-approve-leave-application.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.3s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/not-approve-leave-application.md"
         },
@@ -3638,7 +3653,7 @@
           "planDisplay": "eLeave/not-recommend-leave-application.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.1s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/not-recommend-leave-application.md"
         },
@@ -3647,7 +3662,7 @@
           "planDisplay": "eLeave/override-dialog.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.1s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/override-dialog.md"
         },
@@ -3656,7 +3671,7 @@
           "planDisplay": "eLeave/reassign-dialog.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.2s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/reassign-dialog.md"
         },
@@ -3665,7 +3680,7 @@
           "planDisplay": "eLeave/refer-back-dialog.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.2s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/refer-back-dialog.md"
         },
@@ -3674,7 +3689,7 @@
           "planDisplay": "eLeave/send-back-dialog.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.3s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/send-back-dialog.md"
         },
@@ -3683,7 +3698,7 @@
           "planDisplay": "eLeave/verify-attachments.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "0.0s",
+          "duration": "4.4s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-02/verify-attachments.md"
         }
@@ -3697,12 +3712,12 @@
           "planDisplay": "performance-agreements/smoke-happy-path.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "9.2s",
+          "duration": "93.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-05-29/smoke-happy-path.md"
         }
       ]
     }
   ],
-  "generated": "2026-06-18T12:39:23.796Z"
+  "generated": "2026-09-04T12:20:24.879Z"
 }
