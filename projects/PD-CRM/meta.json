@@ -1,0 +1,7 @@
+{
+  "displayName": "PD-CRM",
+  "appUrl": "https://pd-dep-adminportal-qa.shesha.app/login",
+  "environment": "QA",
+  "sourceRepo": "https://dev.azure.com/boxfusion/PD-Dep",
+  "description": "Hybrid Markdown + Playwright test reports for PD-CRM — the Service Management / CRM Admin Portal (Cases, Contacts, Customers, Facilities, Events, FAQ) on the PD-Dep QA environment."
+}

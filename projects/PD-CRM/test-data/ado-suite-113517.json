@@ -1,0 +1,543 @@
+{
+  "suites": [
+    {
+      "id": 112719,
+      "name": "PD-CRM",
+      "parent": null
+    },
+    {
+      "id": 112720,
+      "name": "Case Management",
+      "parent": 112719
+    },
+    {
+      "id": 112721,
+      "name": "Authentication",
+      "parent": 112719
+    },
+    {
+      "id": 112722,
+      "name": "Field Service",
+      "parent": 112719
+    },
+    {
+      "id": 112731,
+      "name": "Admin Portal",
+      "parent": 112721
+    },
+    {
+      "id": 112732,
+      "name": "CEP App",
+      "parent": 112721
+    },
+    {
+      "id": 112733,
+      "name": "SmartField App",
+      "parent": 112721
+    },
+    {
+      "id": 112754,
+      "name": "Case Creation",
+      "parent": 112720
+    },
+    {
+      "id": 112755,
+      "name": "Case Lifecycle",
+      "parent": 112720
+    },
+    {
+      "id": 112756,
+      "name": "Contacts Directory",
+      "parent": 112720
+    },
+    {
+      "id": 113290,
+      "name": "Facilities",
+      "parent": 112720
+    },
+    {
+      "id": 113324,
+      "name": "Customers",
+      "parent": 112720
+    },
+    {
+      "id": 113517,
+      "name": "Broadcast Notifications",
+      "parent": 112720
+    },
+    {
+      "id": 113658,
+      "name": "Case Mapping",
+      "parent": 112720
+    },
+    {
+      "id": 113720,
+      "name": "Integration Suite",
+      "parent": 112719
+    },
+    {
+      "id": 113721,
+      "name": "Admin Portal ↔ CEP App",
+      "parent": 113720
+    },
+    {
+      "id": 113722,
+      "name": "CEP App",
+      "parent": 112719
+    },
+    {
+      "id": 113723,
+      "name": "Report Issue",
+      "parent": 113722
+    },
+    {
+      "id": 113724,
+      "name": "Reported Issue",
+      "parent": 113722
+    },
+    {
+      "id": 113725,
+      "name": "Around Me",
+      "parent": 113722
+    },
+    {
+      "id": 113727,
+      "name": "Service Point",
+      "parent": 113722
+    },
+    {
+      "id": 113728,
+      "name": "Directory",
+      "parent": 113722
+    },
+    {
+      "id": 113729,
+      "name": "Inbox",
+      "parent": 113722
+    },
+    {
+      "id": 113760,
+      "name": "Report Issue ↔ Admin Portal",
+      "parent": 113721
+    },
+    {
+      "id": 113761,
+      "name": "Contacts Directory ↔ CEP App",
+      "parent": 113721
+    },
+    {
+      "id": 113762,
+      "name": "Service Point ↔ CEP App",
+      "parent": 113721
+    },
+    {
+      "id": 113763,
+      "name": "Broadcast Notifications ↔ CEP",
+      "parent": 113721
+    }
+  ],
+  "caseCount": 10,
+  "casesError": null,
+  "cases": [
+    {
+      "id": 113519,
+      "title": "Verify Broadcast Notification Can Be Created",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Broadcast Notifications",
+          "expected": "The Broadcast Notifications screen is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Click the Create New Broadcase button.",
+          "expected": "The Add New Broadcast Notification form is displayed."
+        },
+        {
+          "index": 4,
+          "action": "Type a valid notification title in the Title field.",
+          "expected": "The title is accepted."
+        },
+        {
+          "index": 5,
+          "action": "Select a valid option from the Target field",
+          "expected": "The selected Target is displayed."
+        },
+        {
+          "index": 6,
+          "action": "Type a valid message in the Message field.",
+          "expected": "The message is entered successfully."
+        },
+        {
+          "index": 7,
+          "action": "Check the required notification delivery option(s), such as Send Push and/or Send Sms.",
+          "expected": "The selected notification delivery options are checked."
+        },
+        {
+          "index": 8,
+          "action": "Click Publish.",
+          "expected": "The Broadcast Notification is successfully published and the notification is added to the Broadcast Notifications list."
+        }
+      ]
+    },
+    {
+      "id": 113520,
+      "title": "Verify Broadcast Notification Details Can Be Viewed",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Broadcast Notifications",
+          "expected": "The Broadcast Notifications screen is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Locate a published Broadcast Notification.",
+          "expected": "The notification is displayed in the list."
+        },
+        {
+          "index": 4,
+          "action": "Click the View icon for the Broadcast Notification.",
+          "expected": "The Broadcast Notification details are displayed"
+        },
+        {
+          "index": 5,
+          "action": "Review the notification details.",
+          "expected": "The notification details, including the configured title, target, message, delivery options, and any attachment, are displayed correctly"
+        }
+      ]
+    },
+    {
+      "id": 113521,
+      "title": "Verify Broadcast Notification Can Be Deleted",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Broadcast Notifications.",
+          "expected": "The Broadcast Notifications screen is displayed"
+        },
+        {
+          "index": 3,
+          "action": "Locate the Broadcast Notification to be deleted.",
+          "expected": "The notification is displayed in the list."
+        },
+        {
+          "index": 4,
+          "action": "Click the Delete icon for the Broadcast Notification",
+          "expected": "A confirmation dialog is displayed with the message “Are you sure you want to delete this item?” and Cancel and OK buttons."
+        },
+        {
+          "index": 5,
+          "action": "Click Yes on the confirmation dialog",
+          "expected": "The customer is successfully deleted from the Customers list."
+        },
+        {
+          "index": 6,
+          "action": "Search for the deleted customer",
+          "expected": "The deleted customer is no longer displayed in the Customers list"
+        }
+      ]
+    },
+    {
+      "id": 113522,
+      "title": "Verify Broadcast Notification Can Be Edited",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Broadcast Notifications.",
+          "expected": "The Broadcast Notifications screen is displayed"
+        },
+        {
+          "index": 3,
+          "action": "Locate the Broadcast Notification to be edited.",
+          "expected": "The notification is displayed in the list"
+        },
+        {
+          "index": 4,
+          "action": "Click the Edit icon for the Broadcast Notification.",
+          "expected": "The Broadcast Notification edit form is displayed with the existing information populated."
+        },
+        {
+          "index": 5,
+          "action": "Update the required notification information",
+          "expected": "The updated information is accepted."
+        },
+        {
+          "index": 6,
+          "action": "Save the changes.",
+          "expected": "The Broadcast Notification is successfully updated."
+        },
+        {
+          "index": 7,
+          "action": "View the updated Broadcast Notification.",
+          "expected": "The updated information is displayed correctly."
+        }
+      ]
+    },
+    {
+      "id": 113523,
+      "title": "Verify Broadcast Notification Can Be Withdrawn",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Broadcast Notifications.",
+          "expected": "The Broadcast Notifications screen is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Locate and open a published Broadcast Notification.",
+          "expected": "The Broadcast Details screen is displayed."
+        },
+        {
+          "index": 4,
+          "action": "Click Withdraw.",
+          "expected": "A Withdraw Notification confirmation dialog is displayed with the message “Are you sure you want to withdraw the notification?” and No and Yes buttons."
+        },
+        {
+          "index": 5,
+          "action": "Click Yes.",
+          "expected": "The Broadcast Notification is successfully withdrawn."
+        },
+        {
+          "index": 6,
+          "action": "Review the Broadcast Notification details.",
+          "expected": "The Withdrawal Date is populated and the notification reflects that it has been withdrawn."
+        }
+      ]
+    },
+    {
+      "id": 113524,
+      "title": "erify Broadcast Notification Deletion Can Be Cancelled",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Broadcast Notifications.",
+          "expected": "The Broadcast Notifications screen is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Locate the Broadcast Notification to be deleted.",
+          "expected": "The notification is displayed in the list."
+        },
+        {
+          "index": 4,
+          "action": "Click the Delete icon for the Broadcast Notification.",
+          "expected": "A confirmation dialog is displayed with the message “Are you sure you want to delete this item?” and Cancel and OK buttons."
+        },
+        {
+          "index": 5,
+          "action": "Click Cancel.",
+          "expected": "The confirmation dialog closes and the Broadcast Notification is not deleted."
+        }
+      ]
+    },
+    {
+      "id": 113525,
+      "title": "Verify Broadcast Notification Withdrawal Can Be Cancelled",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Broadcast Notifications.",
+          "expected": "The Broadcast Details screen is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Open a published Broadcast Notification.",
+          "expected": "The Broadcast Details screen is displayed."
+        },
+        {
+          "index": 4,
+          "action": "Click Withdraw.",
+          "expected": "A Withdraw Notification dialog is displayed with the message “Are you sure you want to withdraw the notification?” and No and Yes buttons."
+        },
+        {
+          "index": 5,
+          "action": "Click No.",
+          "expected": "The dialog closes and the Broadcast Notification is not withdrawn."
+        }
+      ]
+    },
+    {
+      "id": 113526,
+      "title": "Verify Broadcast Notification Delivery Options Can Be Selected",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials",
+          "expected": "User is successfully logged in"
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Broadcast Notifications.",
+          "expected": "The Add New Broadcast Notification form is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Type a valid Title and select a valid Target.",
+          "expected": "The Title and Target are accepted."
+        },
+        {
+          "index": 4,
+          "action": "Check the Send SMS box.",
+          "expected": "Send SMS is checked"
+        },
+        {
+          "index": 5,
+          "action": "Checkthe Send Push box",
+          "expected": "Send Push is checked"
+        },
+        {
+          "index": 6,
+          "action": "Type a valid message in the Message field.",
+          "expected": "The message is displayed"
+        },
+        {
+          "index": 7,
+          "action": "Click Publish.",
+          "expected": "The Broadcast Notification is successfully published with the selected delivery options."
+        }
+      ]
+    },
+    {
+      "id": 113527,
+      "title": "Verify Broadcast Notifications Can Be Searched",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Broadcast Notifications",
+          "expected": "The Broadcast Notifications screen is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Type the title or relevant search text of an existing Broadcast Notification in the Search field.",
+          "expected": "The search criteria is accepted."
+        },
+        {
+          "index": 4,
+          "action": "Execute the search.",
+          "expected": "The Broadcast Notifications list is filtered according to the search criteria."
+        },
+        {
+          "index": 5,
+          "action": "Review the search results.",
+          "expected": "The matching Broadcast Notification is displayed"
+        }
+      ]
+    },
+    {
+      "id": 113528,
+      "title": "Verify Broadcast Notifications Can Be Filtered",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in"
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Broadcast Notifications.",
+          "expected": "The Broadcast Notifications screen is displayed"
+        },
+        {
+          "index": 3,
+          "action": "Click the Filter icon.",
+          "expected": "The available filter options are displayed."
+        },
+        {
+          "index": 4,
+          "action": "Select the required filter criteria",
+          "expected": "The selected filter criteria are accepted."
+        },
+        {
+          "index": 5,
+          "action": "Apply the filter.",
+          "expected": "The Broadcast Notifications list is filtered according to the selected criteria."
+        },
+        {
+          "index": 6,
+          "action": "Review the filtered results.",
+          "expected": "Only Broadcast Notifications matching the selected criteria are displayed."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "suites": [
+    {
+      "id": 112719,
+      "name": "PD-CRM",
+      "parent": null
+    },
+    {
+      "id": 112720,
+      "name": "Case Management",
+      "parent": 112719
+    },
+    {
+      "id": 112721,
+      "name": "Authentication",
+      "parent": 112719
+    },
+    {
+      "id": 112722,
+      "name": "Field Service",
+      "parent": 112719
+    },
+    {
+      "id": 112731,
+      "name": "Admin Portal",
+      "parent": 112721
+    },
+    {
+      "id": 112732,
+      "name": "CEP App",
+      "parent": 112721
+    },
+    {
+      "id": 112733,
+      "name": "SmartField App",
+      "parent": 112721
+    },
+    {
+      "id": 112754,
+      "name": "Case Creation",
+      "parent": 112720
+    },
+    {
+      "id": 112755,
+      "name": "Case Lifecycle",
+      "parent": 112720
+    },
+    {
+      "id": 112756,
+      "name": "Contacts Directory",
+      "parent": 112720
+    },
+    {
+      "id": 113290,
+      "name": "Facilities",
+      "parent": 112720
+    },
+    {
+      "id": 113324,
+      "name": "Customers",
+      "parent": 112720
+    },
+    {
+      "id": 113517,
+      "name": "Broadcast Notifications",
+      "parent": 112720
+    },
+    {
+      "id": 113658,
+      "name": "Case Mapping",
+      "parent": 112720
+    },
+    {
+      "id": 113720,
+      "name": "Integration Suite",
+      "parent": 112719
+    },
+    {
+      "id": 113721,
+      "name": "Admin Portal ↔ CEP App",
+      "parent": 113720
+    },
+    {
+      "id": 113722,
+      "name": "CEP App",
+      "parent": 112719
+    },
+    {
+      "id": 113723,
+      "name": "Report Issue",
+      "parent": 113722
+    },
+    {
+      "id": 113724,
+      "name": "Reported Issue",
+      "parent": 113722
+    },
+    {
+      "id": 113725,
+      "name": "Around Me",
+      "parent": 113722
+    },
+    {
+      "id": 113727,
+      "name": "Service Point",
+      "parent": 113722
+    },
+    {
+      "id": 113728,
+      "name": "Directory",
+      "parent": 113722
+    },
+    {
+      "id": 113729,
+      "name": "Inbox",
+      "parent": 113722
+    },
+    {
+      "id": 113760,
+      "name": "Report Issue ↔ Admin Portal",
+      "parent": 113721
+    },
+    {
+      "id": 113761,
+      "name": "Contacts Directory ↔ CEP App",
+      "parent": 113721
+    },
+    {
+      "id": 113762,
+      "name": "Service Point ↔ CEP App",
+      "parent": 113721
+    },
+    {
+      "id": 113763,
+      "name": "Broadcast Notifications ↔ CEP",
+      "parent": 113721
+    }
+  ],
+  "caseCount": 8,
+  "casesError": null,
+  "cases": [
+    {
+      "id": 113659,
+      "title": "Verify Logged Cases Are Displayed on the Map",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Case Mapping.",
+          "expected": "The Case Mapping screen is displayed with the map."
+        },
+        {
+          "index": 3,
+          "action": "Review the map.",
+          "expected": "Cases with valid locations are displayed as pins on the map."
+        },
+        {
+          "index": 4,
+          "action": "Select a case pin on the map.",
+          "expected": "The selected case is highlighted and its case information is displayed"
+        }
+      ]
+    },
+    {
+      "id": 113660,
+      "title": "Verify Cases Can Be Filtered by Channel",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Case Mapping.",
+          "expected": "The Case Mapping screen is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Open the Channel filter.",
+          "expected": "The available Channel filter options are displayed."
+        },
+        {
+          "index": 4,
+          "action": "Select a Channel.",
+          "expected": "The selected Channel is applied as the filter criterion."
+        },
+        {
+          "index": 5,
+          "action": "Apply the filter.",
+          "expected": "The map refreshes and displays only cases associated with the selected Channel."
+        }
+      ]
+    },
+    {
+      "id": 113661,
+      "title": "Verify Cases Can Be Filtered by Status",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Case Mapping",
+          "expected": "The Case Mapping screen is displayed"
+        },
+        {
+          "index": 3,
+          "action": "Open the Status filter",
+          "expected": "The available status filter options are displayed"
+        },
+        {
+          "index": 4,
+          "action": "Select a status.",
+          "expected": "The selected status is applied as the filter criterion."
+        },
+        {
+          "index": 5,
+          "action": "Apply the filter",
+          "expected": "The map refreshes and displays only cases with the selected status."
+        }
+      ]
+    },
+    {
+      "id": 113662,
+      "title": "Verify Cases Can Be Filtered by Priority",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Case Mapping",
+          "expected": "The Case Mapping screen is displayed"
+        },
+        {
+          "index": 3,
+          "action": "Open the Priority filter",
+          "expected": "The available priority filter options are displayed"
+        },
+        {
+          "index": 4,
+          "action": "Select a Priority",
+          "expected": "The selected priority is applied as the filter criterion."
+        },
+        {
+          "index": 5,
+          "action": "Apply the filter",
+          "expected": "The map refreshes and displays only cases with the selected priority."
+        }
+      ]
+    },
+    {
+      "id": 113663,
+      "title": "Verify Cases Can Be Filtered by Category and Case Type",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Case Mapping",
+          "expected": "The Case Mapping screen is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Open the Category filter.",
+          "expected": "The available Category options are displayed."
+        },
+        {
+          "index": 4,
+          "action": "Select a Category.",
+          "expected": "The selected Category is applied and the Case Type options are populated based on the selected Category."
+        },
+        {
+          "index": 5,
+          "action": "Select Case Type",
+          "expected": "The selected Case Type is accepted as a filter criterion."
+        },
+        {
+          "index": 6,
+          "action": "Apply the filters.",
+          "expected": "The map refreshes and displays only cases matching the selected Category and Case Type."
+        }
+      ]
+    },
+    {
+      "id": 113664,
+      "title": "Verify Cases Can Be Filtered by Reported Date",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Case Mapping.",
+          "expected": "The Case Mapping screen is displayed"
+        },
+        {
+          "index": 3,
+          "action": "Open the Reported Date filter.",
+          "expected": "The Reported Date filter options/fields are displayed"
+        },
+        {
+          "index": 4,
+          "action": "Specify the date and time from the date picker",
+          "expected": "Specified time and date should be displayed"
+        },
+        {
+          "index": 5,
+          "action": "Apply the filter.",
+          "expected": "The map refreshes and displays only cases matching the selected reported date criteria."
+        }
+      ]
+    },
+    {
+      "id": 113665,
+      "title": "Verify Multiple Case Mapping Filters Can Be Applied",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Case Mapping.",
+          "expected": "The Case Mapping screen is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Select a Channel from the channel dropdown",
+          "expected": "The selected channel is displayed"
+        },
+        {
+          "index": 4,
+          "action": "Select a Status from the dropdown",
+          "expected": "Selected status is displayed"
+        },
+        {
+          "index": 5,
+          "action": "Select a priority from the dropdown",
+          "expected": "Selected Priority is specified"
+        },
+        {
+          "index": 6,
+          "action": "Select a Category and its corresponding Case Type.",
+          "expected": "The selected Category and cascading Case Type are applied."
+        },
+        {
+          "index": 7,
+          "action": "Specify the date and time from the date picker",
+          "expected": "Specified date and time are displayed"
+        }
+      ]
+    },
+    {
+      "id": 113666,
+      "title": "Verify Case Details Are Displayed When a Case Location Is Hovered Over or Selected",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the Admin Portal using valid credentials.",
+          "expected": "User is successfully logged in."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to Case Mapping",
+          "expected": "The Case Mapping screen is displayed with case location icons"
+        },
+        {
+          "index": 3,
+          "action": "Hover over a case location icon on the map.",
+          "expected": "A case information dialog is displayed for the selected case."
+        },
+        {
+          "index": 4,
+          "action": "Review the information displayed in the dialog.",
+          "expected": "The dialog displays the correct Reference, Status, Received Date, Address, and Description for the case."
+        }
+      ]
+    }
+  ]
+}
