@@ -4,7 +4,7 @@
       "/opt/hostedtoolcache/node/20.20.2/x64/bin/node",
       "/home/runner/work/Test-ReportsHub/Test-ReportsHub/node_modules/.bin/playwright",
       "test",
-      "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+      "projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
       "--config=playwright.config.ci.ts"
     ],
     "configFile": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/playwright.config.ci.ts",
@@ -20,24 +20,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/4044f2df69efb4fc5a7553c342d44f282a57d361",
-        "commitHash": "4044f2df69efb4fc5a7553c342d44f282a57d361",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/33871775959"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/36634fb1764a4b5a2c28f308b1df1f176d4506d3",
+        "commitHash": "36634fb1764a4b5a2c28f308b1df1f176d4506d3",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/33872724215"
       },
       "gitCommit": {
-        "shortHash": "4044f2d",
-        "hash": "4044f2df69efb4fc5a7553c342d44f282a57d361",
-        "subject": "Merge pull request #38 from NomfaneloN/test/2026-08-31-dsd-npo",
-        "body": "Merge pull request #38 from NomfaneloN/test/2026-08-31-dsd-npo\n\ntest(dsd-npo): suites 11 + 12 assessed — 2 defects filed, suite 11 re…",
+        "shortHash": "36634fb",
+        "hash": "36634fb1764a4b5a2c28f308b1df1f176d4506d3",
+        "subject": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success",
+        "body": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success\n",
         "author": {
-          "name": "MishaliaPillay",
-          "email": "117475572+MishaliaPillay@users.noreply.github.com",
-          "time": 1788183498000
+          "name": "Boxfusion CI",
+          "email": "ci@boxfusion",
+          "time": 1788524425000
         },
         "committer": {
-          "name": "GitHub",
-          "email": "noreply@github.com",
-          "time": 1788183498000
+          "name": "Boxfusion CI",
+          "email": "ci@boxfusion",
+          "time": 1788524425000
         },
         "branch": "main"
       },
@@ -51,24 +51,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/4044f2df69efb4fc5a7553c342d44f282a57d361",
-            "commitHash": "4044f2df69efb4fc5a7553c342d44f282a57d361",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/33871775959"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/36634fb1764a4b5a2c28f308b1df1f176d4506d3",
+            "commitHash": "36634fb1764a4b5a2c28f308b1df1f176d4506d3",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/33872724215"
           },
           "gitCommit": {
-            "shortHash": "4044f2d",
-            "hash": "4044f2df69efb4fc5a7553c342d44f282a57d361",
-            "subject": "Merge pull request #38 from NomfaneloN/test/2026-08-31-dsd-npo",
-            "body": "Merge pull request #38 from NomfaneloN/test/2026-08-31-dsd-npo\n\ntest(dsd-npo): suites 11 + 12 assessed — 2 defects filed, suite 11 re…",
+            "shortHash": "36634fb",
+            "hash": "36634fb1764a4b5a2c28f308b1df1f176d4506d3",
+            "subject": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success",
+            "body": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success\n",
             "author": {
-              "name": "MishaliaPillay",
-              "email": "117475572+MishaliaPillay@users.noreply.github.com",
-              "time": 1788183498000
+              "name": "Boxfusion CI",
+              "email": "ci@boxfusion",
+              "time": 1788524425000
             },
             "committer": {
-              "name": "GitHub",
-              "email": "noreply@github.com",
-              "time": 1788183498000
+              "name": "Boxfusion CI",
+              "email": "ci@boxfusion",
+              "time": 1788524425000
             },
             "branch": "main"
           },
@@ -117,15 +117,15 @@
   },
   "suites": [
     {
-      "title": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-      "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+      "title": "projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
+      "file": "projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay",
-          "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+          "title": "ELEAVE-ADD-PERSONAL-CREDIT — Add Personal Credit Dialog",
+          "file": "projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
           "line": 25,
           "column": 6,
           "specs": [
@@ -145,12 +145,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 10813,
+                      "duration": 12442,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-04T12:20:13.392Z",
+                      "startTime": "2026-09-04T12:26:34.564Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -158,13 +158,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "85cb2748c8615c5d9fc1-ecf35509c651c7fae6a6",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+              "id": "e2a4492a868975e053dc-b0c8c4bef8c1371c2050",
+              "file": "projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
               "line": 27,
               "column": 7
             },
             {
-              "title": "TC-02: Route item to the next step when 'Submit' button is clicked",
+              "title": "TC-02: When a user clicks on the 'Close' button, the system should close the dialog",
               "ok": true,
               "tags": [],
               "tests": [
@@ -174,7 +174,7 @@
                     {
                       "type": "fixme",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
                         "line": 46,
                         "column": 8
                       }
@@ -193,12 +193,12 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.463Z",
+                      "startTime": "2026-09-04T12:26:47.257Z",
                       "annotations": [
                         {
                           "type": "fixme",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
                             "line": 46,
                             "column": 8
                           }
@@ -210,13 +210,13 @@
                   "status": "skipped"
                 }
               ],
-              "id": "85cb2748c8615c5d9fc1-06ba7aad84437c394a75",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+              "id": "e2a4492a868975e053dc-a702c9798afd62ea0390",
+              "file": "projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
               "line": 46,
               "column": 8
             },
             {
-              "title": "TC-03: Change status to 'Approved Without Full Pay' when 'Submit' button is clicked",
+              "title": "TC-03: System should add credits when 'OK' button is clicked",
               "ok": true,
               "tags": [],
               "tests": [
@@ -226,7 +226,7 @@
                     {
                       "type": "fixme",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
                         "line": 61,
                         "column": 8
                       }
@@ -245,12 +245,12 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.463Z",
+                      "startTime": "2026-09-04T12:26:47.258Z",
                       "annotations": [
                         {
                           "type": "fixme",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
                             "line": 61,
                             "column": 8
                           }
@@ -262,13 +262,13 @@
                   "status": "skipped"
                 }
               ],
-              "id": "85cb2748c8615c5d9fc1-9df855040d879805adf5",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+              "id": "e2a4492a868975e053dc-8c6875a3e616013ca1e0",
+              "file": "projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
               "line": 61,
               "column": 8
             },
             {
-              "title": "TC-04: System should not allow a user to action an item without checking the declaration box",
+              "title": "TC-04: System should redirect to Leave Balances dashboard when 'OK' button is clicked",
               "ok": true,
               "tags": [],
               "tests": [
@@ -278,7 +278,7 @@
                     {
                       "type": "fixme",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
                         "line": 76,
                         "column": 8
                       }
@@ -297,12 +297,12 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.463Z",
+                      "startTime": "2026-09-04T12:26:47.258Z",
                       "annotations": [
                         {
                           "type": "fixme",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
                             "line": 76,
                             "column": 8
                           }
@@ -314,13 +314,13 @@
                   "status": "skipped"
                 }
               ],
-              "id": "85cb2748c8615c5d9fc1-4a6709a21cab6fd2eb52",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+              "id": "e2a4492a868975e053dc-c8754a0353f2ea051e5d",
+              "file": "projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
               "line": 76,
               "column": 8
             },
             {
-              "title": "TC-05: Display 'Override' dialog when 'Override' button is clicked",
+              "title": "TC-05: The system should not allow a user to add credits without adding all the mandatory fields",
               "ok": true,
               "tags": [],
               "tests": [
@@ -330,7 +330,7 @@
                     {
                       "type": "fixme",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
                         "line": 91,
                         "column": 8
                       }
@@ -349,12 +349,12 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.467Z",
+                      "startTime": "2026-09-04T12:26:47.258Z",
                       "annotations": [
                         {
                           "type": "fixme",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
                             "line": 91,
                             "column": 8
                           }
@@ -366,373 +366,9 @@
                   "status": "skipped"
                 }
               ],
-              "id": "85cb2748c8615c5d9fc1-28069e0298df73e0986f",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+              "id": "e2a4492a868975e053dc-29ad06d18085d303c5fc",
+              "file": "projects/HCM/test-plans/eLeave/add-personal-credit-dialog.spec.ts",
               "line": 91,
-              "column": 8
-            },
-            {
-              "title": "TC-06: Display 'Send Back to Approver' dialog when 'Send Back to Approver' button is clicked",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 106,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.467Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 106,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-bbc321fbe5602ba2e814",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 106,
-              "column": 8
-            },
-            {
-              "title": "TC-07: Display 'Refer Back' dialog when 'Refer Back' button is clicked",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 121,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.467Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 121,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-e6d39f290604906ba99e",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 121,
-              "column": 8
-            },
-            {
-              "title": "TC-08: Display 'Close Leave Application' dialog when 'Close' button is clicked",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 136,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.467Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 136,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-9dae6bac0452fa72b160",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 136,
-              "column": 8
-            },
-            {
-              "title": "TC-09: System should not allow action without downloading supporting documents",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 151,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.467Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 151,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-7ce97b465ff2f5b27e04",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 151,
-              "column": 8
-            },
-            {
-              "title": "TC-10: System should not allow action without reviewing supporting documents",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 166,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.468Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 166,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-593b9fb610257f8f2e10",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 166,
-              "column": 8
-            },
-            {
-              "title": "TC-11: A user should be able to view the captured leave application details",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 185,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.468Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 185,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-0dd7bd83f961ecaa72ab",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 185,
-              "column": 8
-            },
-            {
-              "title": "TC-12: A user should be able to download supporting documents",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 198,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-04T12:20:24.468Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 198,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-5e635aca7f59e6e7c100",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 198,
               "column": 8
             }
           ]
@@ -742,10 +378,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-04T12:20:12.710Z",
-    "duration": 11803.097,
+    "startTime": "2026-09-04T12:26:33.886Z",
+    "duration": 13421.662999999999,
     "expected": 1,
-    "skipped": 11,
+    "skipped": 4,
     "unexpected": 0,
     "flaky": 0
   }

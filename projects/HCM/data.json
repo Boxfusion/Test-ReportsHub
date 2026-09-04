@@ -32,12 +32,12 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 24,
-    "totalRuns": 38,
-    "last7Runs": 1,
-    "last7Pass": 1,
+    "totalRuns": 39,
+    "last7Runs": 2,
+    "last7Pass": 2,
     "last7PassPct": 100,
-    "failingFlows": 16,
-    "passingFlows": 15,
+    "failingFlows": 15,
+    "passingFlows": 16,
     "partialFlows": 1,
     "neverFlows": 5
   },
@@ -2581,8 +2581,8 @@
       },
       {
         "iso": "2026-09-04",
-        "runs": 1,
-        "passed": 1,
+        "runs": 2,
+        "passed": 2,
         "failed": 0,
         "partial": 0
       },
@@ -2640,23 +2640,24 @@
           "spec": "test-plans/eLeave/add-personal-credit-dialog.spec.ts",
           "specHref": "test-plans/eLeave/add-personal-credit-dialog.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "failing",
-          "status": "FAILED",
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
-            "date": "2026-06-02",
-            "result": "FAILED",
-            "duration": "3.9s",
+            "date": "2026-09-04",
+            "result": "PASSED",
+            "duration": "13.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-06-02/add-personal-credit-dialog.md"
+            "reportHref": "test-reports/2026-09-04/add-personal-credit-dialog.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-04",
+              "result": "PASSED",
+              "duration": "13.4s",
+              "variant": null
+            },
             {
               "date": "2026-06-02",
               "result": "FAILED",
@@ -3309,7 +3310,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3347,6 +3348,15 @@
           "duration": "11.8s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-04/acknowledge-leave-approved-without-pay.md"
+        },
+        {
+          "plan": "test-plans/eLeave/add-personal-credit-dialog.md",
+          "planDisplay": "eLeave/add-personal-credit-dialog.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "13.4s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-04/add-personal-credit-dialog.md"
         }
       ]
     },
@@ -3719,5 +3729,5 @@
       ]
     }
   ],
-  "generated": "2026-09-04T12:20:24.879Z"
+  "generated": "2026-09-04T12:26:47.697Z"
 }

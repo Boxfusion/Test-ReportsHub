@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T12:20:25.365Z",
+  "generated": "2026-09-04T12:26:48.205Z",
   "projects": [
     {
       "name": "Approvals",
@@ -103,11 +103,11 @@
       "health": "failing",
       "summary": {
         "totalPlans": 24,
-        "totalRuns": 38,
-        "last7Runs": 1,
-        "last7Pass": 1,
+        "totalRuns": 39,
+        "last7Runs": 2,
+        "last7Pass": 2,
         "last7PassPct": 100,
-        "failingFlows": 16,
+        "failingFlows": 15,
         "lastRun": {
           "date": "2026-09-04",
           "result": "PASSED",
@@ -323,8 +323,8 @@
   "totals": {
     "totalProjects": 14,
     "totalPlans": 272,
-    "totalRuns": 525,
-    "last7Runs": 3,
-    "failingFlows": 52
+    "totalRuns": 526,
+    "last7Runs": 4,
+    "failingFlows": 51
   }
 }
