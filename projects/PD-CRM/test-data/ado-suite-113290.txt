@@ -1,0 +1,133 @@
+SUITE 113290 — 8 CASE(S)
+
+#113291 — Verify Site Can Be Created
+  state=Design priority=2 tags=-
+   1. ACTION:   Navigate to the Facilities menu
+      EXPECTED: The Site index table list is displayed.
+   2. ACTION:   Click Add Site button.
+      EXPECTED: The Add New Site form is displayed.
+   3. ACTION:   Type a valid Site Name
+      EXPECTED: The Site Name is accepted.
+   4. ACTION:   Click on the drop down arrow and select the Site Type.
+      EXPECTED: The selected Site Type is displayed.
+   5. ACTION:   Type a location in the Address search field.
+      EXPECTED: The system retrieves matching locations from Geo/GIS.
+   6. ACTION:   Select the required location from the returned Geo/GIS results.
+      EXPECTED: 1. The selected address is populated in the Address field and the corresponding location information is captured.2. The Latitude and Longitude values corresponding to the selected location are autopopulated.
+   7. ACTION:   Click on the dropdown arrow andselect a valid Region.
+      EXPECTED: The selected Region is displayed.
+   8. ACTION:   Type a valid Contact Number
+      EXPECTED: The contact number is displayed
+   9. ACTION:   Type a valid email address
+      EXPECTED: The email address is displayed
+   10. ACTION:   Type in Operating Hours, if applicable.
+      EXPECTED: Operating hours are displayed
+   11. ACTION:   Click on OK button
+      EXPECTED: The Site is successfully created2. The site should be displayed on the Regional Offices index table
+
+#113292 — Verify Site Creation Can Be Cancelled
+  state=Design priority=2 tags=-
+   1. ACTION:   Navigate to the Facilities menu
+      EXPECTED: The Site list is displayed.
+   2. ACTION:   Click Add Site button
+      EXPECTED: The Add New Site form is displayed.
+   3. ACTION:   Type valid information into one or more fields on the Add New Site form.
+      EXPECTED: All information is displayed.
+   4. ACTION:   Click Cancel button
+      EXPECTED: The Add New Site form closes without creating the site
+
+#113293 — Verify Mandatory Site Fields Are Validated
+  state=Design priority=2 tags=-
+   1. ACTION:   Navigate to the Facilities
+      EXPECTED: The site is displayed
+   2. ACTION:   Click Add Site button.
+      EXPECTED: The Add New Site form is displayed.
+   3. ACTION:   Leave Site Name, Site Type, Latitude, Longitude, contact Number and Email Address blank.
+      EXPECTED: The mandatory fields remain empty.
+   4. ACTION:   Type valid information in any optional fields.
+      EXPECTED: The information is displayed.
+   5. ACTION:   Click OK button
+      EXPECTED: 1. The system prevents the Site from being created and displays validation messages that reads:"This field is required" for the mandatory fields .2. For email address,: "Please enter a valid email address"3. For contact number an additional message that reads:" Please enter a valid cellphone number"
+
+#113294 — Verify Site Type Can Be Selected
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the PD-DEP Admin Portal using valid credentials.
+      EXPECTED: The user is successfully authenticated.
+   2. ACTION:   Navigate to the Facilities section.
+      EXPECTED: The Site list is displayed.
+   3. ACTION:   Click Add Site button
+      EXPECTED: The Add New Site form is displayed.
+   4. ACTION:   Click the Site Type dropdown.
+      EXPECTED: The available Site Types are displayed.
+   5. ACTION:   Select a valid Site Type.
+      EXPECTED: The selected Site Type is displayed in the field.
+   6. ACTION:   Complete the remaining mandatory fields with valid information.
+      EXPECTED: Information is displayed.
+   7. ACTION:   Click OK button
+      EXPECTED: The Site is successfully created with the selected Site Type.
+   8. ACTION:   View the newly created Site.
+      EXPECTED: The selected Site Type is displayed correctly against the Site.
+
+#113295 — Verify Region Can Be Selected
+  state=Design priority=2 tags=-
+   1. ACTION:   Navigate to the Facilities menu
+      EXPECTED: The Site list is displayed.
+   2. ACTION:   Click Add site button
+      EXPECTED: The Add New Site form is displayed.
+   3. ACTION:   Click the Region dropdown
+      EXPECTED: The available Regions are displayed.
+   4. ACTION:   Select a valid region
+      EXPECTED: The selected region is displayed in the region field
+   5. ACTION:   Complete the remaining mandatory fields with valid information
+      EXPECTED: The information is displayed
+   6. ACTION:   Click OK button
+      EXPECTED: The Site is successfully created.
+   7. ACTION:   View the newly created Site.
+      EXPECTED: The selected Region is displayed correctly against the Site.
+
+#113296 — Verify Site Contact Number and Email Address Accept Valid Formats
+  state=Design priority=2 tags=-
+   1. ACTION:   Navigate to the Facilities menu
+      EXPECTED: The Site list is displayed.
+   2. ACTION:   Click Add Site button.
+      EXPECTED: The Add New Site form is displayed.
+   3. ACTION:   Type a valid 10-digit Contact Number.
+      EXPECTED: The Contact Number is accepted without a validation error.
+   4. ACTION:   Type a valid Email Address using the accepted email format.
+      EXPECTED: The Email Address is accepted without a validation error.
+   5. ACTION:   Complete the remaining mandatory fields with valid information.
+      EXPECTED: Information is displayed
+   6. ACTION:   Click OK button
+      EXPECTED: The Site is successfully created.
+   7. ACTION:   View the newly created Site.
+      EXPECTED: The saved Contact Number and Email Address are displayed correctly.
+
+#113297 — Verify Site Contact Number and Email Address Reject Invalid Formats
+  state=Design priority=2 tags=-
+   1. ACTION:   Navigate to the Facilities menu
+      EXPECTED: The Site list is displayed.
+   2. ACTION:   Click Add Site button
+      EXPECTED: The Add New Site form is displayed.
+   3. ACTION:   Type a valid Site Name and Site Type.
+      EXPECTED: All details are displayed.
+   4. ACTION:   Type a valid address and select a location from the Geo/GIS results
+      EXPECTED: The selected address is populated and the Latitude and Longitude are automatically populated
+   5. ACTION:   Type a Contact Number with fewer than 10 digits
+      EXPECTED: The system displays the applicable Contact Number validation and does not accept the invalid value.
+   6. ACTION:   Replace the Contact Number with a value containing more than 10 digits.
+      EXPECTED: The system displays the applicable Contact Number validation and does not accept the invalid value.
+   7. ACTION:   Type an invalid Email Address format.
+      EXPECTED: The system displays the applicable Email Address validation and does not accept the invalid value
+   8. ACTION:   Click OK. button
+      EXPECTED: The system prevents the Site from being created while the invalid values remain.
+
+#113298 — Verify Site Details Can Be Viewed
+  state=Design priority=2 tags=-
+   1. ACTION:   Navigate to the Facilities menu
+      EXPECTED: The Site list is displayed.
+   2. ACTION:   Locate an existing Site.
+      EXPECTED: The Site is displayed in the list.
+   3. ACTION:   Click the View icon for the selected Site.
+      EXPECTED: The Site details are displayed.
+   4. ACTION:   Review the Site details
+      EXPECTED: The Site Name, Site Type, Address, Latitude, Longitude, Region, Contact Number, Email Address and Operating Hours are displayed correctly

@@ -1,0 +1,493 @@
+{
+  "suites": [
+    {
+      "id": 112719,
+      "name": "PD-CRM",
+      "parent": null
+    },
+    {
+      "id": 112720,
+      "name": "Case Management",
+      "parent": 112719
+    },
+    {
+      "id": 112721,
+      "name": "Authentication",
+      "parent": 112719
+    },
+    {
+      "id": 112722,
+      "name": "Field Service",
+      "parent": 112719
+    },
+    {
+      "id": 112731,
+      "name": "Admin Portal",
+      "parent": 112721
+    },
+    {
+      "id": 112732,
+      "name": "CEP App",
+      "parent": 112721
+    },
+    {
+      "id": 112733,
+      "name": "SmartField App",
+      "parent": 112721
+    },
+    {
+      "id": 112754,
+      "name": "Case Creation",
+      "parent": 112720
+    },
+    {
+      "id": 112755,
+      "name": "Case Lifecycle",
+      "parent": 112720
+    },
+    {
+      "id": 112756,
+      "name": "Contacts Directory",
+      "parent": 112720
+    },
+    {
+      "id": 113290,
+      "name": "Facilities",
+      "parent": 112720
+    },
+    {
+      "id": 113324,
+      "name": "Customers",
+      "parent": 112720
+    },
+    {
+      "id": 113517,
+      "name": "Broadcast Notifications",
+      "parent": 112720
+    },
+    {
+      "id": 113658,
+      "name": "Case Mapping",
+      "parent": 112720
+    },
+    {
+      "id": 113720,
+      "name": "Integration Suite",
+      "parent": 112719
+    },
+    {
+      "id": 113721,
+      "name": "Admin Portal ↔ CEP App",
+      "parent": 113720
+    },
+    {
+      "id": 113722,
+      "name": "CEP App",
+      "parent": 112719
+    },
+    {
+      "id": 113723,
+      "name": "Report Issue",
+      "parent": 113722
+    },
+    {
+      "id": 113724,
+      "name": "Reported Issue",
+      "parent": 113722
+    },
+    {
+      "id": 113725,
+      "name": "Around Me",
+      "parent": 113722
+    },
+    {
+      "id": 113727,
+      "name": "Service Point",
+      "parent": 113722
+    },
+    {
+      "id": 113728,
+      "name": "Directory",
+      "parent": 113722
+    },
+    {
+      "id": 113729,
+      "name": "Inbox",
+      "parent": 113722
+    },
+    {
+      "id": 113760,
+      "name": "Report Issue ↔ Admin Portal",
+      "parent": 113721
+    },
+    {
+      "id": 113761,
+      "name": "Contacts Directory ↔ CEP App",
+      "parent": 113721
+    },
+    {
+      "id": 113762,
+      "name": "Service Point ↔ CEP App",
+      "parent": 113721
+    },
+    {
+      "id": 113763,
+      "name": "Broadcast Notifications ↔ CEP",
+      "parent": 113721
+    }
+  ],
+  "caseCount": 8,
+  "casesError": null,
+  "cases": [
+    {
+      "id": 113291,
+      "title": "Verify Site Can Be Created",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Navigate to the Facilities menu",
+          "expected": "The Site index table list is displayed."
+        },
+        {
+          "index": 2,
+          "action": "Click Add Site button.",
+          "expected": "The Add New Site form is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Type a valid Site Name",
+          "expected": "The Site Name is accepted."
+        },
+        {
+          "index": 4,
+          "action": "Click on the drop down arrow and select the Site Type.",
+          "expected": "The selected Site Type is displayed."
+        },
+        {
+          "index": 5,
+          "action": "Type a location in the Address search field.",
+          "expected": "The system retrieves matching locations from Geo/GIS."
+        },
+        {
+          "index": 6,
+          "action": "Select the required location from the returned Geo/GIS results.",
+          "expected": "1. The selected address is populated in the Address field and the corresponding location information is captured.2. The Latitude and Longitude values corresponding to the selected location are autopopulated."
+        },
+        {
+          "index": 7,
+          "action": "Click on the dropdown arrow andselect a valid Region.",
+          "expected": "The selected Region is displayed."
+        },
+        {
+          "index": 8,
+          "action": "Type a valid Contact Number",
+          "expected": "The contact number is displayed"
+        },
+        {
+          "index": 9,
+          "action": "Type a valid email address",
+          "expected": "The email address is displayed"
+        },
+        {
+          "index": 10,
+          "action": "Type in Operating Hours, if applicable.",
+          "expected": "Operating hours are displayed"
+        },
+        {
+          "index": 11,
+          "action": "Click on OK button",
+          "expected": "The Site is successfully created2. The site should be displayed on the Regional Offices index table"
+        }
+      ]
+    },
+    {
+      "id": 113292,
+      "title": "Verify Site Creation Can Be Cancelled",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Navigate to the Facilities menu",
+          "expected": "The Site list is displayed."
+        },
+        {
+          "index": 2,
+          "action": "Click Add Site button",
+          "expected": "The Add New Site form is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Type valid information into one or more fields on the Add New Site form.",
+          "expected": "All information is displayed."
+        },
+        {
+          "index": 4,
+          "action": "Click Cancel button",
+          "expected": "The Add New Site form closes without creating the site"
+        }
+      ]
+    },
+    {
+      "id": 113293,
+      "title": "Verify Mandatory Site Fields Are Validated",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Navigate to the Facilities",
+          "expected": "The site is displayed"
+        },
+        {
+          "index": 2,
+          "action": "Click Add Site button.",
+          "expected": "The Add New Site form is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Leave Site Name, Site Type, Latitude, Longitude, contact Number and Email Address blank.",
+          "expected": "The mandatory fields remain empty."
+        },
+        {
+          "index": 4,
+          "action": "Type valid information in any optional fields.",
+          "expected": "The information is displayed."
+        },
+        {
+          "index": 5,
+          "action": "Click OK button",
+          "expected": "1. The system prevents the Site from being created and displays validation messages that reads:\"This field is required\" for the mandatory fields .2. For email address,: \"Please enter a valid email address\"3. For contact number an additional message that reads:\" Please enter a valid cellphone number\""
+        }
+      ]
+    },
+    {
+      "id": 113294,
+      "title": "Verify Site Type Can Be Selected",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Log in to the PD-DEP Admin Portal using valid credentials.",
+          "expected": "The user is successfully authenticated."
+        },
+        {
+          "index": 2,
+          "action": "Navigate to the Facilities section.",
+          "expected": "The Site list is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Click Add Site button",
+          "expected": "The Add New Site form is displayed."
+        },
+        {
+          "index": 4,
+          "action": "Click the Site Type dropdown.",
+          "expected": "The available Site Types are displayed."
+        },
+        {
+          "index": 5,
+          "action": "Select a valid Site Type.",
+          "expected": "The selected Site Type is displayed in the field."
+        },
+        {
+          "index": 6,
+          "action": "Complete the remaining mandatory fields with valid information.",
+          "expected": "Information is displayed."
+        },
+        {
+          "index": 7,
+          "action": "Click OK button",
+          "expected": "The Site is successfully created with the selected Site Type."
+        },
+        {
+          "index": 8,
+          "action": "View the newly created Site.",
+          "expected": "The selected Site Type is displayed correctly against the Site."
+        }
+      ]
+    },
+    {
+      "id": 113295,
+      "title": "Verify Region Can Be Selected",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Navigate to the Facilities menu",
+          "expected": "The Site list is displayed."
+        },
+        {
+          "index": 2,
+          "action": "Click Add site button",
+          "expected": "The Add New Site form is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Click the Region dropdown",
+          "expected": "The available Regions are displayed."
+        },
+        {
+          "index": 4,
+          "action": "Select a valid region",
+          "expected": "The selected region is displayed in the region field"
+        },
+        {
+          "index": 5,
+          "action": "Complete the remaining mandatory fields with valid information",
+          "expected": "The information is displayed"
+        },
+        {
+          "index": 6,
+          "action": "Click OK button",
+          "expected": "The Site is successfully created."
+        },
+        {
+          "index": 7,
+          "action": "View the newly created Site.",
+          "expected": "The selected Region is displayed correctly against the Site."
+        }
+      ]
+    },
+    {
+      "id": 113296,
+      "title": "Verify Site Contact Number and Email Address Accept Valid Formats",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Navigate to the Facilities menu",
+          "expected": "The Site list is displayed."
+        },
+        {
+          "index": 2,
+          "action": "Click Add Site button.",
+          "expected": "The Add New Site form is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Type a valid 10-digit Contact Number.",
+          "expected": "The Contact Number is accepted without a validation error."
+        },
+        {
+          "index": 4,
+          "action": "Type a valid Email Address using the accepted email format.",
+          "expected": "The Email Address is accepted without a validation error."
+        },
+        {
+          "index": 5,
+          "action": "Complete the remaining mandatory fields with valid information.",
+          "expected": "Information is displayed"
+        },
+        {
+          "index": 6,
+          "action": "Click OK button",
+          "expected": "The Site is successfully created."
+        },
+        {
+          "index": 7,
+          "action": "View the newly created Site.",
+          "expected": "The saved Contact Number and Email Address are displayed correctly."
+        }
+      ]
+    },
+    {
+      "id": 113297,
+      "title": "Verify Site Contact Number and Email Address Reject Invalid Formats",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Navigate to the Facilities menu",
+          "expected": "The Site list is displayed."
+        },
+        {
+          "index": 2,
+          "action": "Click Add Site button",
+          "expected": "The Add New Site form is displayed."
+        },
+        {
+          "index": 3,
+          "action": "Type a valid Site Name and Site Type.",
+          "expected": "All details are displayed."
+        },
+        {
+          "index": 4,
+          "action": "Type a valid address and select a location from the Geo/GIS results",
+          "expected": "The selected address is populated and the Latitude and Longitude are automatically populated"
+        },
+        {
+          "index": 5,
+          "action": "Type a Contact Number with fewer than 10 digits",
+          "expected": "The system displays the applicable Contact Number validation and does not accept the invalid value."
+        },
+        {
+          "index": 6,
+          "action": "Replace the Contact Number with a value containing more than 10 digits.",
+          "expected": "The system displays the applicable Contact Number validation and does not accept the invalid value."
+        },
+        {
+          "index": 7,
+          "action": "Type an invalid Email Address format.",
+          "expected": "The system displays the applicable Email Address validation and does not accept the invalid value"
+        },
+        {
+          "index": 8,
+          "action": "Click OK. button",
+          "expected": "The system prevents the Site from being created while the invalid values remain."
+        }
+      ]
+    },
+    {
+      "id": 113298,
+      "title": "Verify Site Details Can Be Viewed",
+      "state": "Design",
+      "tags": "",
+      "priority": 2,
+      "description": "",
+      "steps": [
+        {
+          "index": 1,
+          "action": "Navigate to the Facilities menu",
+          "expected": "The Site list is displayed."
+        },
+        {
+          "index": 2,
+          "action": "Locate an existing Site.",
+          "expected": "The Site is displayed in the list."
+        },
+        {
+          "index": 3,
+          "action": "Click the View icon for the selected Site.",
+          "expected": "The Site details are displayed."
+        },
+        {
+          "index": 4,
+          "action": "Review the Site details",
+          "expected": "The Site Name, Site Type, Address, Latitude, Longitude, Region, Contact Number, Email Address and Operating Hours are displayed correctly"
+        }
+      ]
+    }
+  ]
+}

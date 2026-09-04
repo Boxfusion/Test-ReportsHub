@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T12:26:48.205Z",
+  "generated": "2026-09-04T13:54:10.133Z",
   "projects": [
     {
       "name": "Approvals",
@@ -163,6 +163,29 @@
       "href": "projects/land-bank/index.html"
     },
     {
+      "name": "PD-CRM",
+      "displayName": "PD-CRM",
+      "appUrl": "https://pd-dep-adminportal-qa.shesha.app/login",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Dep",
+      "description": "Hybrid Markdown + Playwright test reports for PD-CRM — the Service Management / CRM Admin Portal (Cases, Contacts, Customers, Facilities, Events, FAQ) on the PD-Dep QA environment.",
+      "health": "partial",
+      "summary": {
+        "totalPlans": 8,
+        "totalRuns": 20,
+        "last7Runs": 20,
+        "last7Pass": 6,
+        "last7PassPct": 30,
+        "failingFlows": 0,
+        "lastRun": {
+          "date": "2026-09-04",
+          "result": "PARTIAL",
+          "plan": "test-plans/case-management/broadcast-notifications.md"
+        }
+      },
+      "href": "projects/PD-CRM/index.html"
+    },
+    {
       "name": "bid-management",
       "displayName": "Bid Management",
       "appUrl": "https://pd-supplychainmanagement-adminportal-qa.shesha.app/login",
@@ -321,10 +344,10 @@
     }
   ],
   "totals": {
-    "totalProjects": 14,
-    "totalPlans": 272,
-    "totalRuns": 526,
-    "last7Runs": 4,
+    "totalProjects": 15,
+    "totalPlans": 280,
+    "totalRuns": 546,
+    "last7Runs": 24,
     "failingFlows": 51
   }
 }

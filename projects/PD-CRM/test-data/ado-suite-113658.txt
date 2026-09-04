@@ -1,0 +1,107 @@
+SUITE 113658 — 8 CASE(S)
+
+#113659 — Verify Logged Cases Are Displayed on the Map
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Case Mapping.
+      EXPECTED: The Case Mapping screen is displayed with the map.
+   3. ACTION:   Review the map.
+      EXPECTED: Cases with valid locations are displayed as pins on the map.
+   4. ACTION:   Select a case pin on the map.
+      EXPECTED: The selected case is highlighted and its case information is displayed
+
+#113660 — Verify Cases Can Be Filtered by Channel
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Case Mapping.
+      EXPECTED: The Case Mapping screen is displayed.
+   3. ACTION:   Open the Channel filter.
+      EXPECTED: The available Channel filter options are displayed.
+   4. ACTION:   Select a Channel.
+      EXPECTED: The selected Channel is applied as the filter criterion.
+   5. ACTION:   Apply the filter.
+      EXPECTED: The map refreshes and displays only cases associated with the selected Channel.
+
+#113661 — Verify Cases Can Be Filtered by Status
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Case Mapping
+      EXPECTED: The Case Mapping screen is displayed
+   3. ACTION:   Open the Status filter
+      EXPECTED: The available status filter options are displayed
+   4. ACTION:   Select a status.
+      EXPECTED: The selected status is applied as the filter criterion.
+   5. ACTION:   Apply the filter
+      EXPECTED: The map refreshes and displays only cases with the selected status.
+
+#113662 — Verify Cases Can Be Filtered by Priority
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Case Mapping
+      EXPECTED: The Case Mapping screen is displayed
+   3. ACTION:   Open the Priority filter
+      EXPECTED: The available priority filter options are displayed
+   4. ACTION:   Select a Priority
+      EXPECTED: The selected priority is applied as the filter criterion.
+   5. ACTION:   Apply the filter
+      EXPECTED: The map refreshes and displays only cases with the selected priority.
+
+#113663 — Verify Cases Can Be Filtered by Category and Case Type
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Case Mapping
+      EXPECTED: The Case Mapping screen is displayed.
+   3. ACTION:   Open the Category filter.
+      EXPECTED: The available Category options are displayed.
+   4. ACTION:   Select a Category.
+      EXPECTED: The selected Category is applied and the Case Type options are populated based on the selected Category.
+   5. ACTION:   Select Case Type
+      EXPECTED: The selected Case Type is accepted as a filter criterion.
+   6. ACTION:   Apply the filters.
+      EXPECTED: The map refreshes and displays only cases matching the selected Category and Case Type.
+
+#113664 — Verify Cases Can Be Filtered by Reported Date
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Case Mapping.
+      EXPECTED: The Case Mapping screen is displayed
+   3. ACTION:   Open the Reported Date filter.
+      EXPECTED: The Reported Date filter options/fields are displayed
+   4. ACTION:   Specify the date and time from the date picker
+      EXPECTED: Specified time and date should be displayed
+   5. ACTION:   Apply the filter.
+      EXPECTED: The map refreshes and displays only cases matching the selected reported date criteria.
+
+#113665 — Verify Multiple Case Mapping Filters Can Be Applied
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Case Mapping.
+      EXPECTED: The Case Mapping screen is displayed.
+   3. ACTION:   Select a Channel from the channel dropdown
+      EXPECTED: The selected channel is displayed
+   4. ACTION:   Select a Status from the dropdown
+      EXPECTED: Selected status is displayed
+   5. ACTION:   Select a priority from the dropdown
+      EXPECTED: Selected Priority is specified
+   6. ACTION:   Select a Category and its corresponding Case Type.
+      EXPECTED: The selected Category and cascading Case Type are applied.
+   7. ACTION:   Specify the date and time from the date picker
+      EXPECTED: Specified date and time are displayed
+
+#113666 — Verify Case Details Are Displayed When a Case Location Is Hovered Over or Selected
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Case Mapping
+      EXPECTED: The Case Mapping screen is displayed with case location icons
+   3. ACTION:   Hover over a case location icon on the map.
+      EXPECTED: A case information dialog is displayed for the selected case.
+   4. ACTION:   Review the information displayed in the dialog.
+      EXPECTED: The dialog displays the correct Reference, Status, Received Date, Address, and Description for the case.

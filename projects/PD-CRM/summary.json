@@ -1,0 +1,13 @@
+{
+  "totalPlans": 8,
+  "totalRuns": 20,
+  "last7Runs": 20,
+  "last7Pass": 6,
+  "last7PassPct": 30,
+  "failingFlows": 0,
+  "lastRun": {
+    "date": "2026-09-04",
+    "result": "PARTIAL",
+    "plan": "test-plans/case-management/broadcast-notifications.md"
+  }
+}

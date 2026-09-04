@@ -1,0 +1,151 @@
+SUITE 113517 — 10 CASE(S)
+
+#113519 — Verify Broadcast Notification Can Be Created
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Broadcast Notifications
+      EXPECTED: The Broadcast Notifications screen is displayed.
+   3. ACTION:   Click the Create New Broadcase button.
+      EXPECTED: The Add New Broadcast Notification form is displayed.
+   4. ACTION:   Type a valid notification title in the Title field.
+      EXPECTED: The title is accepted.
+   5. ACTION:   Select a valid option from the Target field
+      EXPECTED: The selected Target is displayed.
+   6. ACTION:   Type a valid message in the Message field.
+      EXPECTED: The message is entered successfully.
+   7. ACTION:   Check the required notification delivery option(s), such as Send Push and/or Send Sms.
+      EXPECTED: The selected notification delivery options are checked.
+   8. ACTION:   Click Publish.
+      EXPECTED: The Broadcast Notification is successfully published and the notification is added to the Broadcast Notifications list.
+
+#113520 — Verify Broadcast Notification Details Can Be Viewed
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Broadcast Notifications
+      EXPECTED: The Broadcast Notifications screen is displayed.
+   3. ACTION:   Locate a published Broadcast Notification.
+      EXPECTED: The notification is displayed in the list.
+   4. ACTION:   Click the View icon for the Broadcast Notification.
+      EXPECTED: The Broadcast Notification details are displayed
+   5. ACTION:   Review the notification details.
+      EXPECTED: The notification details, including the configured title, target, message, delivery options, and any attachment, are displayed correctly
+
+#113521 — Verify Broadcast Notification Can Be Deleted
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Broadcast Notifications.
+      EXPECTED: The Broadcast Notifications screen is displayed
+   3. ACTION:   Locate the Broadcast Notification to be deleted.
+      EXPECTED: The notification is displayed in the list.
+   4. ACTION:   Click the Delete icon for the Broadcast Notification
+      EXPECTED: A confirmation dialog is displayed with the message “Are you sure you want to delete this item?” and Cancel and OK buttons.
+   5. ACTION:   Click Yes on the confirmation dialog
+      EXPECTED: The customer is successfully deleted from the Customers list.
+   6. ACTION:   Search for the deleted customer
+      EXPECTED: The deleted customer is no longer displayed in the Customers list
+
+#113522 — Verify Broadcast Notification Can Be Edited
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Broadcast Notifications.
+      EXPECTED: The Broadcast Notifications screen is displayed
+   3. ACTION:   Locate the Broadcast Notification to be edited.
+      EXPECTED: The notification is displayed in the list
+   4. ACTION:   Click the Edit icon for the Broadcast Notification.
+      EXPECTED: The Broadcast Notification edit form is displayed with the existing information populated.
+   5. ACTION:   Update the required notification information
+      EXPECTED: The updated information is accepted.
+   6. ACTION:   Save the changes.
+      EXPECTED: The Broadcast Notification is successfully updated.
+   7. ACTION:   View the updated Broadcast Notification.
+      EXPECTED: The updated information is displayed correctly.
+
+#113523 — Verify Broadcast Notification Can Be Withdrawn
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Broadcast Notifications.
+      EXPECTED: The Broadcast Notifications screen is displayed.
+   3. ACTION:   Locate and open a published Broadcast Notification.
+      EXPECTED: The Broadcast Details screen is displayed.
+   4. ACTION:   Click Withdraw.
+      EXPECTED: A Withdraw Notification confirmation dialog is displayed with the message “Are you sure you want to withdraw the notification?” and No and Yes buttons.
+   5. ACTION:   Click Yes.
+      EXPECTED: The Broadcast Notification is successfully withdrawn.
+   6. ACTION:   Review the Broadcast Notification details.
+      EXPECTED: The Withdrawal Date is populated and the notification reflects that it has been withdrawn.
+
+#113524 — erify Broadcast Notification Deletion Can Be Cancelled
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Broadcast Notifications.
+      EXPECTED: The Broadcast Notifications screen is displayed.
+   3. ACTION:   Locate the Broadcast Notification to be deleted.
+      EXPECTED: The notification is displayed in the list.
+   4. ACTION:   Click the Delete icon for the Broadcast Notification.
+      EXPECTED: A confirmation dialog is displayed with the message “Are you sure you want to delete this item?” and Cancel and OK buttons.
+   5. ACTION:   Click Cancel.
+      EXPECTED: The confirmation dialog closes and the Broadcast Notification is not deleted.
+
+#113525 — Verify Broadcast Notification Withdrawal Can Be Cancelled
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Broadcast Notifications.
+      EXPECTED: The Broadcast Details screen is displayed.
+   3. ACTION:   Open a published Broadcast Notification.
+      EXPECTED: The Broadcast Details screen is displayed.
+   4. ACTION:   Click Withdraw.
+      EXPECTED: A Withdraw Notification dialog is displayed with the message “Are you sure you want to withdraw the notification?” and No and Yes buttons.
+   5. ACTION:   Click No.
+      EXPECTED: The dialog closes and the Broadcast Notification is not withdrawn.
+
+#113526 — Verify Broadcast Notification Delivery Options Can Be Selected
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials
+      EXPECTED: User is successfully logged in
+   2. ACTION:   Navigate to Broadcast Notifications.
+      EXPECTED: The Add New Broadcast Notification form is displayed.
+   3. ACTION:   Type a valid Title and select a valid Target.
+      EXPECTED: The Title and Target are accepted.
+   4. ACTION:   Check the Send SMS box.
+      EXPECTED: Send SMS is checked
+   5. ACTION:   Checkthe Send Push box
+      EXPECTED: Send Push is checked
+   6. ACTION:   Type a valid message in the Message field.
+      EXPECTED: The message is displayed
+   7. ACTION:   Click Publish.
+      EXPECTED: The Broadcast Notification is successfully published with the selected delivery options.
+
+#113527 — Verify Broadcast Notifications Can Be Searched
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to Broadcast Notifications
+      EXPECTED: The Broadcast Notifications screen is displayed.
+   3. ACTION:   Type the title or relevant search text of an existing Broadcast Notification in the Search field.
+      EXPECTED: The search criteria is accepted.
+   4. ACTION:   Execute the search.
+      EXPECTED: The Broadcast Notifications list is filtered according to the search criteria.
+   5. ACTION:   Review the search results.
+      EXPECTED: The matching Broadcast Notification is displayed
+
+#113528 — Verify Broadcast Notifications Can Be Filtered
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in
+   2. ACTION:   Navigate to Broadcast Notifications.
+      EXPECTED: The Broadcast Notifications screen is displayed
+   3. ACTION:   Click the Filter icon.
+      EXPECTED: The available filter options are displayed.
+   4. ACTION:   Select the required filter criteria
+      EXPECTED: The selected filter criteria are accepted.
+   5. ACTION:   Apply the filter.
+      EXPECTED: The Broadcast Notifications list is filtered according to the selected criteria.
+   6. ACTION:   Review the filtered results.
+      EXPECTED: Only Broadcast Notifications matching the selected criteria are displayed.

@@ -1,0 +1,170 @@
+SUITE 113324 — 11 CASE(S)
+
+#113348 — Verify Customers Are Displayed in the Customers List
+  state=Design priority=2 tags=-
+   1. ACTION:   Login to the admin portal using valid credentials
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to the Customers side menu
+      EXPECTED: The Customers screen is displayed.
+   3. ACTION:   Locate an existing customer in the Customer index table
+      EXPECTED: The customer is displayed in the list.
+   4. ACTION:   Click on the Magnifying glass of that customer
+      EXPECTED: The customer details panel is displayed.
+   5. ACTION:   Review the customer information displayed in the panel.
+      EXPECTED: The customer's available details are displayed
+   6. ACTION:   Select the Logged Cases tab
+      EXPECTED: The Logged Cases tab is displayed.
+   7. ACTION:   Select the Interactions tab.
+      EXPECTED: The Interactions tab is displayed.
+
+#113349 — Verify Customer Logged Cases Are Displayed
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to the Customers side menu.
+      EXPECTED: The Customers screen is displayed.
+   3. ACTION:   Locate the customer with logged cases
+      EXPECTED: The customer is displayed in the Customers list
+   4. ACTION:   Click the View icon for the customer.
+      EXPECTED: The customer details panel is displayed.
+   5. ACTION:   Scroll down and click on the Logged Cases tab.
+      EXPECTED: All cases linked to the selected customer are displayed.
+   6. ACTION:   Review the cases displayed under the Logged Cases tab.
+      EXPECTED: The relevant case information, including the case status, is displayed for each linked case.
+
+#113350 — : Verify Customer Case Can Be Accessed from Logged Cases
+  state=Design priority=2 tags=-
+   1. ACTION:   Login in the admin portal using valid credentials
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to the Customers side menu.
+      EXPECTED: The Customers screen is displayed
+   3. ACTION:   Locate the customer with a logged case.
+      EXPECTED: The customer is displayed in the Customers list.
+   4. ACTION:   Click the View icon for the customer.
+      EXPECTED: The customer details panel is displayed.
+   5. ACTION:   Select the Logged Cases tab.
+      EXPECTED: The cases linked to the customer are displayed.
+   6. ACTION:   Select a case from the Logged Cases list.
+      EXPECTED: The selected case opens the All Service Request landing page.
+   7. ACTION:   Verify the selected case on the All Service Request landing page.
+      EXPECTED: The selected case is displayed and can be accessed from the All Service Request landing page.
+
+#113351 — Verify Customer Interactions Are Displayed
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to the Customers side menu.
+      EXPECTED: The Customers screen is displayed.
+   3. ACTION:   Locate the customer with logged cases and interactions
+      EXPECTED: The customer is displayed in the Customers list.
+   4. ACTION:   Click the View icon for the customer.
+      EXPECTED: The customer details panel is displayed.
+   5. ACTION:   Select the Interactions tab.
+      EXPECTED: he Interactions tab is displayed.
+   6. ACTION:   Review the interactions displayed for the customer
+      EXPECTED: The interactions associated with the customer's logged cases are displayed.
+   7. ACTION:   Verify the displayed interactions.
+      EXPECTED: The interactions correspond to the cases associated with the selected customer.
+
+#113352 — Verify Customer Details Can Be Edited
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to the Customers side menu.
+      EXPECTED: The Customer's screen is displayed.
+   3. ACTION:   Locate an existing customer.
+      EXPECTED: The customer is displayed in the Customers list.
+   4. ACTION:   Click the Edit icon for the customer.
+      EXPECTED: The customer details form is displayed with the existing information populated.
+   5. ACTION:   Update the required customer information.
+      EXPECTED: The updated information is accepted.
+   6. ACTION:   Save the changes.
+      EXPECTED: The customer details are successfully updated.
+   7. ACTION:   Click the View icon for the updated customer.
+      EXPECTED: The customer details panel is displayed.
+   8. ACTION:   Verify the updated information.
+      EXPECTED: The updated customer details are correctly displayed
+
+#113353 — Verify Customer Can Be Deleted
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to the Customers side menu.
+      EXPECTED: The Customers screen is displayed.
+   3. ACTION:   Locate the customer to be deleted.
+      EXPECTED: The customer is displayed in the Customers list.
+   4. ACTION:   Click the Delete icon for the customer.
+      EXPECTED: A confirmation dialog is displayed with the message “Are you sure you want to delete this item?” and Cancel and OK buttons.
+   5. ACTION:   Click OK on the confirmation dialog.
+      EXPECTED: The customer is successfully deleted from the Customers list.
+   6. ACTION:   Search for the deleted customer
+      EXPECTED: The deleted customer is no longer displayed in the Customers lis
+
+#113354 — Verify Customer Deletion Can Be Cancelled
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to the Customers side menu.
+      EXPECTED: The Customers screen is displayed.
+   3. ACTION:   Locate the customer to be deleted.
+      EXPECTED: The customer is displayed in the Customers list.
+   4. ACTION:   Click the Delete icon for the customer.
+      EXPECTED: A confirmation dialog is displayed with the message “Are you sure you want to delete this item?” and Cancel and OK buttons.
+   5. ACTION:   Click Cancel on the confirmation dialog.
+      EXPECTED: The confirmation dialog closes and the customer is not deleted.
+
+#113355 — Verify Customers Can Be Searched
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to the Customers side menu.
+      EXPECTED: The Customers screen is displayed
+   3. ACTION:   Type a known customer name in the Search field.
+      EXPECTED: The search criteria is accepted
+   4. ACTION:   Execute the search.
+      EXPECTED: The Customers list is filtered based on the typed search criteria
+   5. ACTION:   Review the search results.
+      EXPECTED: Only customers matching the search criteria are displayed.
+   6. ACTION:   Clear the search criteria.
+      EXPECTED: The search field is cleared.
+
+#113356 — Verify Customers Can Be Filtered
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to the Customers side menu.
+      EXPECTED: The Customers screen is displayed.
+   3. ACTION:   Click the Filter icon .
+      EXPECTED: The filter options are displayed.
+   4. ACTION:   Select the required filter criteria.
+      EXPECTED: The selected filter criteria are accepted
+   5. ACTION:   Apply the filter.
+      EXPECTED: The Customers list is filtered according to the selected criteria.
+   6. ACTION:   Review the filtered results
+      EXPECTED: Only customers matching the selected criteria are displayed.
+
+#113357 — Verify Customers Can Be Exported
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in.
+   2. ACTION:   Navigate to the Customers side menu.
+      EXPECTED: The Customers screen is displayed.
+   3. ACTION:   Click the Export option.
+      EXPECTED: The customer data export is initiated.
+   4. ACTION:   Open the exported file.
+      EXPECTED: The exported file opens successfully.
+   5. ACTION:   Review the exported customer records.
+      EXPECTED: The exported file contains the customer records displayed in the Customers list.
+
+#113358 — Verify Customer Search Returns No Results for Invalid Criteria
+  state=Design priority=2 tags=-
+   1. ACTION:   Log in to the Admin Portal using valid credentials.
+      EXPECTED: User is successfully logged in
+   2. ACTION:   Navigate to the Customers side menu.
+      EXPECTED: The Customers screen is displayed.
+   3. ACTION:   Type a value that does not match any existing customer in the Search field.
+      EXPECTED: he search criteria is accepted
+   4. ACTION:   Execute the search.
+      EXPECTED: The Customers list is filtered according to the entered criteria.
+   5. ACTION:   Review the search results.
+      EXPECTED: No customer records are displayed for the unmatched search criteria, and the system indicates that no results were found, if applicable.
