@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T12:26:48.205Z",
+  "generated": "2026-09-05T02:43:25.813Z",
   "projects": [
     {
       "name": "Approvals",
@@ -11,15 +11,15 @@
       "health": "failing",
       "summary": {
         "totalPlans": 33,
-        "totalRuns": 33,
-        "last7Runs": 0,
+        "totalRuns": 68,
+        "last7Runs": 35,
         "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 3,
+        "last7PassPct": 0,
+        "failingFlows": 35,
         "lastRun": {
-          "date": "2026-07-17",
-          "result": "PASSED",
-          "plan": "test-plans/Memo/verify-reassign-function.md"
+          "date": "2026-09-05",
+          "result": "FAILED",
+          "plan": "test-plans/Memo/_adhoc-craig-myitems-retract.md"
         }
       },
       "href": "projects/Approvals/index.html"
@@ -48,6 +48,29 @@
       "href": "projects/dep/index.html"
     },
     {
+      "name": "DHA-Invoice-Tracking",
+      "displayName": "DHA Invoice Tracking",
+      "appUrl": "https://dha-smartgov-adminportal-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
+      "description": "Hybrid Markdown + Playwright test reports for the DHA SmartGov Invoice Tracking (ITS) Admin Portal. Same ITS workflows as PD, deployed for Department of Home Affairs.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 2,
+        "totalRuns": 24,
+        "last7Runs": 1,
+        "last7Pass": 0,
+        "last7PassPct": 0,
+        "failingFlows": 1,
+        "lastRun": {
+          "date": "2026-09-05",
+          "result": "FAILED",
+          "plan": "test-plans/invoice-process/bas.md"
+        }
+      },
+      "href": "projects/DHA-Invoice-Tracking/index.html"
+    },
+    {
       "name": "DSD-NPO",
       "displayName": "DSD NPO",
       "appUrl": "https://dsd-npo-publicportal-1-qa.shesha.app/login",
@@ -57,18 +80,41 @@
       "health": "failing",
       "summary": {
         "totalPlans": 56,
-        "totalRuns": 104,
-        "last7Runs": 2,
-        "last7Pass": 0,
-        "last7PassPct": 0,
-        "failingFlows": 25,
+        "totalRuns": 124,
+        "last7Runs": 22,
+        "last7Pass": 8,
+        "last7PassPct": 36,
+        "failingFlows": 33,
         "lastRun": {
-          "date": "2026-08-31",
-          "result": "BLOCKED",
-          "plan": "test-plans/appeals/11p-appeals-submitter-functional.md"
+          "date": "2026-09-05",
+          "result": "FAILED",
+          "plan": "test-plans/auth/01-authentication-account-creation.md"
         }
       },
       "href": "projects/DSD-NPO/index.html"
+    },
+    {
+      "name": "EC-DEDEA-Bid-Management",
+      "displayName": "ECDEDEA Bid Management",
+      "appUrl": "https://ecdedea-smartgov2-adminportal-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
+      "description": "Hybrid Markdown + Playwright test reports for EC DEDEA SmartGov2 — Bid Management (Tender Process). Same Bid Management workflows as PD Supply Chain Management, deployed for the Eastern Cape Department of Economic Development, Environmental Affairs and Tourism.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 1,
+        "totalRuns": 6,
+        "last7Runs": 1,
+        "last7Pass": 0,
+        "last7PassPct": 0,
+        "failingFlows": 1,
+        "lastRun": {
+          "date": "2026-09-05",
+          "result": "FAILED",
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md"
+        }
+      },
+      "href": "projects/EC-DEDEA-Bid-Management/index.html"
     },
     {
       "name": "eRecruitment",
@@ -94,29 +140,6 @@
       "href": "projects/eRecruitment/index.html"
     },
     {
-      "name": "HCM",
-      "displayName": "HCM Admin Portal",
-      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
-      "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
-      "health": "failing",
-      "summary": {
-        "totalPlans": 24,
-        "totalRuns": 39,
-        "last7Runs": 2,
-        "last7Pass": 2,
-        "last7PassPct": 100,
-        "failingFlows": 15,
-        "lastRun": {
-          "date": "2026-09-04",
-          "result": "PASSED",
-          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md"
-        }
-      },
-      "href": "projects/HCM/index.html"
-    },
-    {
       "name": "invoice-tracking",
       "displayName": "Invoice Tracking",
       "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
@@ -138,6 +161,52 @@
         }
       },
       "href": "projects/invoice-tracking/index.html"
+    },
+    {
+      "name": "ITS",
+      "displayName": "ITS",
+      "appUrl": null,
+      "environment": null,
+      "sourceRepo": null,
+      "description": null,
+      "health": "failing",
+      "summary": {
+        "totalPlans": 3,
+        "totalRuns": 1,
+        "last7Runs": 1,
+        "last7Pass": 0,
+        "last7PassPct": 0,
+        "failingFlows": 1,
+        "lastRun": {
+          "date": "2026-09-05",
+          "result": "FAILED",
+          "plan": "test-plans/BAS/register-and-upload-invoice.md"
+        }
+      },
+      "href": "projects/ITS/index.html"
+    },
+    {
+      "name": "PD-PMDS",
+      "displayName": "PMDS",
+      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+      "description": "Hybrid Markdown + Playwright test reports for PMDS (Performance Management & Development System) — a module of the HCM Admin Portal (same site as eLeave).",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 2,
+        "totalRuns": 72,
+        "last7Runs": 2,
+        "last7Pass": 0,
+        "last7PassPct": 0,
+        "failingFlows": 2,
+        "lastRun": {
+          "date": "2026-09-05",
+          "result": "FAILED",
+          "plan": "test-plans/contracting/contracting-lifecycle.md"
+        }
+      },
+      "href": "projects/PD-PMDS/index.html"
     },
     {
       "name": "land-bank",
@@ -186,50 +255,27 @@
       "href": "projects/bid-management/index.html"
     },
     {
-      "name": "DHA-Invoice-Tracking",
-      "displayName": "DHA Invoice Tracking",
-      "appUrl": "https://dha-smartgov-adminportal-qa.shesha.app/",
+      "name": "HCM",
+      "displayName": "HCM Admin Portal",
+      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
       "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Shesha%203%20Migration",
-      "description": "Hybrid Markdown + Playwright test reports for the DHA SmartGov Invoice Tracking (ITS) Admin Portal. Same ITS workflows as PD, deployed for Department of Home Affairs.",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+      "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
       "health": "healthy",
       "summary": {
-        "totalPlans": 2,
-        "totalRuns": 23,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
+        "totalPlans": 24,
+        "totalRuns": 58,
+        "last7Runs": 21,
+        "last7Pass": 21,
+        "last7PassPct": 100,
         "failingFlows": 0,
         "lastRun": {
-          "date": "2026-07-31",
+          "date": "2026-09-05",
           "result": "PASSED",
-          "plan": "test-plans/invoice-process/bas.md — TC-06 (ADO #102378), reject branch off TC-07 Prepare Voucher"
+          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md"
         }
       },
-      "href": "projects/DHA-Invoice-Tracking/index.html"
-    },
-    {
-      "name": "EC-DEDEA-Bid-Management",
-      "displayName": "ECDEDEA Bid Management",
-      "appUrl": "https://ecdedea-smartgov2-adminportal-qa.shesha.app/",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
-      "description": "Hybrid Markdown + Playwright test reports for EC DEDEA SmartGov2 — Bid Management (Tender Process). Same Bid Management workflows as PD Supply Chain Management, deployed for the Eastern Cape Department of Economic Development, Environmental Affairs and Tourism.",
-      "health": "healthy",
-      "summary": {
-        "totalPlans": 1,
-        "totalRuns": 5,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-07-27",
-          "result": "PASSED",
-          "plan": null
-        }
-      },
-      "href": "projects/EC-DEDEA-Bid-Management/index.html"
+      "href": "projects/HCM/index.html"
     },
     {
       "name": "dispatch",
@@ -253,48 +299,6 @@
         }
       },
       "href": "projects/dispatch/index.html"
-    },
-    {
-      "name": "PD-PMDS",
-      "displayName": "PMDS",
-      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
-      "description": "Hybrid Markdown + Playwright test reports for PMDS (Performance Management & Development System) — a module of the HCM Admin Portal (same site as eLeave).",
-      "health": "healthy",
-      "summary": {
-        "totalPlans": 2,
-        "totalRuns": 70,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-08-17",
-          "result": "PASSED",
-          "plan": null
-        }
-      },
-      "href": "projects/PD-PMDS/index.html"
-    },
-    {
-      "name": "ITS",
-      "displayName": "ITS",
-      "appUrl": null,
-      "environment": null,
-      "sourceRepo": null,
-      "description": null,
-      "health": "unknown",
-      "summary": {
-        "totalPlans": 3,
-        "totalRuns": 0,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 0,
-        "lastRun": null
-      },
-      "href": "projects/ITS/index.html"
     },
     {
       "name": "PD-Dispatch",
@@ -323,8 +327,8 @@
   "totals": {
     "totalProjects": 14,
     "totalPlans": 272,
-    "totalRuns": 526,
-    "last7Runs": 4,
-    "failingFlows": 51
+    "totalRuns": 605,
+    "last7Runs": 83,
+    "failingFlows": 81
   }
 }

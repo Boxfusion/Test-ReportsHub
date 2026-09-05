@@ -1,13 +1,13 @@
 {
   "totalPlans": 1,
-  "totalRuns": 5,
-  "last7Runs": 0,
+  "totalRuns": 6,
+  "last7Runs": 1,
   "last7Pass": 0,
-  "last7PassPct": null,
-  "failingFlows": 0,
+  "last7PassPct": 0,
+  "failingFlows": 1,
   "lastRun": {
-    "date": "2026-07-27",
-    "result": "PASSED",
-    "plan": null
+    "date": "2026-09-05",
+    "result": "FAILED",
+    "plan": "test-plans/tender-process/ecdedea-tender-process.md"
   }
 }

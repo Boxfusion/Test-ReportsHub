@@ -27,12 +27,12 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 2,
-    "totalRuns": 23,
-    "last7Runs": 0,
+    "totalRuns": 24,
+    "last7Runs": 1,
     "last7Pass": 0,
-    "last7PassPct": null,
-    "failingFlows": 0,
-    "passingFlows": 8,
+    "last7PassPct": 0,
+    "failingFlows": 1,
+    "passingFlows": 7,
     "partialFlows": 0,
     "neverFlows": 0
   },
@@ -2583,9 +2583,9 @@
       },
       {
         "iso": "2026-09-05",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       }
     ]
@@ -2602,23 +2602,24 @@
           "spec": "test-plans/invoice-process/bas.spec.ts",
           "specHref": "test-plans/invoice-process/bas.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
-            }
-          ],
-          "rowStatus": "passing",
-          "status": "PASSED",
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
           "last": {
-            "date": "2026-07-31",
-            "result": "PASSED",
-            "duration": "~26 min wall clock for the completed chain",
+            "date": "2026-09-05",
+            "result": "FAILED",
+            "duration": "60.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-07-31/bas-post-deployment-QA-PAY3306.md"
+            "reportHref": "test-reports/2026-09-05/bas.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "60.3s",
+              "variant": null
+            },
             {
               "date": "2026-07-31",
               "result": "PASSED",
@@ -2780,6 +2781,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-05",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "60.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-05/bas.md"
+        }
+      ]
+    },
     {
       "date": "2026-07-31",
       "runs": [
@@ -3008,5 +3023,5 @@
       ]
     }
   ],
-  "generated": "2026-09-04T12:26:47.515Z"
+  "generated": "2026-09-05T02:43:25.221Z"
 }

@@ -16,14 +16,14 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 3,
-    "totalRuns": 0,
-    "last7Runs": 0,
+    "totalRuns": 1,
+    "last7Runs": 1,
     "last7Pass": 0,
-    "last7PassPct": null,
-    "failingFlows": 0,
+    "last7PassPct": 0,
+    "failingFlows": 1,
     "passingFlows": 0,
     "partialFlows": 0,
-    "neverFlows": 3
+    "neverFlows": 2
   },
   "heatmap": {
     "weeks": 52,
@@ -2572,9 +2572,9 @@
       },
       {
         "iso": "2026-09-05",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       }
     ]
@@ -2585,6 +2585,33 @@
       "title": "BAS",
       "stripPrefix": "test-plans/BAS/",
       "plans": [
+        {
+          "plan": "test-plans/BAS/register-and-upload-invoice.md",
+          "planHref": "test-plans/BAS/register-and-upload-invoice.md",
+          "spec": "test-plans/BAS/register-and-upload-invoice.spec.ts",
+          "specHref": "test-plans/BAS/register-and-upload-invoice.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-09-05",
+            "result": "FAILED",
+            "duration": "982.3s",
+            "variant": null,
+            "reportHref": "test-reports/2026-09-05/register-and-upload-invoice.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "982.3s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
         {
           "plan": "test-plans/BAS/assign-branch-finance-admin-to-assign-certifier.md",
           "planHref": "test-plans/BAS/assign-branch-finance-admin-to-assign-certifier.md",
@@ -2630,29 +2657,25 @@
           "runCount": 0,
           "history": [],
           "bugs": []
-        },
-        {
-          "plan": "test-plans/BAS/register-and-upload-invoice.md",
-          "planHref": "test-plans/BAS/register-and-upload-invoice.md",
-          "spec": "test-plans/BAS/register-and-upload-invoice.spec.ts",
-          "specHref": "test-plans/BAS/register-and-upload-invoice.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "new",
-              "text": "NEW · never run"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
-          "bugs": []
         }
       ]
     }
   ],
-  "timeline": [],
-  "generated": "2026-09-04T12:26:47.750Z"
+  "timeline": [
+    {
+      "date": "2026-09-05",
+      "runs": [
+        {
+          "plan": "test-plans/BAS/register-and-upload-invoice.md",
+          "planDisplay": "BAS/register-and-upload-invoice.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "982.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-05/register-and-upload-invoice.md"
+        }
+      ]
+    }
+  ],
+  "generated": "2026-09-05T02:43:25.409Z"
 }

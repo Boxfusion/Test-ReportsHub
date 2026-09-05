@@ -1,13 +1,13 @@
 {
   "totalPlans": 56,
-  "totalRuns": 104,
-  "last7Runs": 2,
-  "last7Pass": 0,
-  "last7PassPct": 0,
-  "failingFlows": 25,
+  "totalRuns": 124,
+  "last7Runs": 22,
+  "last7Pass": 8,
+  "last7PassPct": 36,
+  "failingFlows": 33,
   "lastRun": {
-    "date": "2026-08-31",
-    "result": "BLOCKED",
-    "plan": "test-plans/appeals/11p-appeals-submitter-functional.md"
+    "date": "2026-09-05",
+    "result": "FAILED",
+    "plan": "test-plans/auth/01-authentication-account-creation.md"
   }
 }

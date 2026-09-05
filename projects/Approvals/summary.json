@@ -1,13 +1,13 @@
 {
   "totalPlans": 33,
-  "totalRuns": 33,
-  "last7Runs": 0,
+  "totalRuns": 68,
+  "last7Runs": 35,
   "last7Pass": 0,
-  "last7PassPct": null,
-  "failingFlows": 3,
+  "last7PassPct": 0,
+  "failingFlows": 35,
   "lastRun": {
-    "date": "2026-07-17",
-    "result": "PASSED",
-    "plan": "test-plans/Memo/verify-reassign-function.md"
+    "date": "2026-09-05",
+    "result": "FAILED",
+    "plan": "test-plans/Memo/_adhoc-craig-myitems-retract.md"
   }
 }
