@@ -16,10 +16,10 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 56,
-    "totalRuns": 124,
-    "last7Runs": 22,
-    "last7Pass": 8,
-    "last7PassPct": 36,
+    "totalRuns": 144,
+    "last7Runs": 42,
+    "last7Pass": 16,
+    "last7PassPct": 38,
     "failingFlows": 33,
     "passingFlows": 11,
     "partialFlows": 7,
@@ -27,57 +27,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-09-07",
+    "startDate": "2025-09-14",
     "days": [
-      {
-        "iso": "2025-09-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-14",
         "runs": 0,
@@ -2576,6 +2527,55 @@
         "passed": 8,
         "failed": 12,
         "partial": 0
+      },
+      {
+        "iso": "2026-09-06",
+        "runs": 20,
+        "passed": 8,
+        "failed": 12,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2638,14 +2638,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "PASSED",
-            "duration": "0.2s",
+            "duration": "0.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/08-annual-report-submission.md"
+            "reportHref": "test-reports/2026-09-06/08-annual-report-submission.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "PASSED",
+              "duration": "0.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "PASSED",
@@ -2671,14 +2677,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "203.8s",
+            "duration": "184.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/09-annual-report-backend-quality-assure.md"
+            "reportHref": "test-reports/2026-09-06/09-annual-report-backend-quality-assure.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "184.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -2801,14 +2813,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "280.3s",
+            "duration": "281.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/11a-appeals-admin-tribunal.md"
+            "reportHref": "test-reports/2026-09-06/11a-appeals-admin-tribunal.md"
           },
-          "runCount": 3,
+          "runCount": 4,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "281.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -2840,14 +2858,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "PASSED",
             "duration": "0.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/11p-appeals-submitter.md"
+            "reportHref": "test-reports/2026-09-06/11p-appeals-submitter.md"
           },
-          "runCount": 3,
+          "runCount": 4,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "PASSED",
+              "duration": "0.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "PASSED",
@@ -2970,14 +2994,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "418.2s",
+            "duration": "418.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/07-application-triage-and-verification.md"
+            "reportHref": "test-reports/2026-09-06/07-application-triage-and-verification.md"
           },
-          "runCount": 3,
+          "runCount": 4,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "418.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -3076,14 +3106,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "49.4s",
+            "duration": "52.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/01-authentication-account-creation.md"
+            "reportHref": "test-reports/2026-09-06/01-authentication-account-creation.md"
           },
-          "runCount": 3,
+          "runCount": 4,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "52.8s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -3219,14 +3255,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "6.4s",
+            "duration": "14.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/14s-public-npo-search.md"
+            "reportHref": "test-reports/2026-09-06/14s-public-npo-search.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "14.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -3246,14 +3288,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "35.8s",
+            "duration": "38.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/14w-accessibility-wcag.md"
+            "reportHref": "test-reports/2026-09-06/14w-accessibility-wcag.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "38.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -3742,14 +3790,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "PASSED",
-            "duration": "29.1s",
+            "duration": "32.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/13a-voluntary-deregistration-admin.md"
+            "reportHref": "test-reports/2026-09-06/13a-voluntary-deregistration-admin.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "PASSED",
+              "duration": "32.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "PASSED",
@@ -3769,14 +3823,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "PASSED",
             "duration": "0.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/13p-voluntary-deregistration-submitter.md"
+            "reportHref": "test-reports/2026-09-06/13p-voluntary-deregistration-submitter.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "PASSED",
+              "duration": "0.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "PASSED",
@@ -3845,14 +3905,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "106.6s",
+            "duration": "113.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/15-education-awareness-smoke.md"
+            "reportHref": "test-reports/2026-09-06/15-education-awareness-smoke.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "113.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -4179,14 +4245,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "123s",
+            "duration": "125.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/12a-investigations-admin.md"
+            "reportHref": "test-reports/2026-09-06/12a-investigations-admin.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "125.8s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -4206,14 +4278,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "5.9s",
+            "duration": "6.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/12p-investigations-public-submission.md"
+            "reportHref": "test-reports/2026-09-06/12p-investigations-public-submission.md"
           },
-          "runCount": 3,
+          "runCount": 4,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "6.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -4300,14 +4378,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "133.8s",
+            "duration": "143.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/02-npo-linking-and-landing.md"
+            "reportHref": "test-reports/2026-09-06/02-npo-linking-and-landing.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "143.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -4327,14 +4411,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "638.1s",
+            "duration": "644.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/03-wizard-org-details-objectives.md"
+            "reportHref": "test-reports/2026-09-06/03-wizard-org-details-objectives.md"
           },
-          "runCount": 6,
+          "runCount": 7,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "644.5s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -4384,14 +4474,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "PASSED",
             "duration": "0.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/04-wizard-office-bearers.md"
+            "reportHref": "test-reports/2026-09-06/04-wizard-office-bearers.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "PASSED",
+              "duration": "0.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "PASSED",
@@ -4417,14 +4513,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "PASSED",
             "duration": "0.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/05-wizard-admin-docs-declaration.md"
+            "reportHref": "test-reports/2026-09-06/05-wizard-admin-docs-declaration.md"
           },
-          "runCount": 5,
+          "runCount": 6,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "PASSED",
+              "duration": "0.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "PASSED",
@@ -4468,14 +4570,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "PASSED",
             "duration": "0.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/06-office-bearer-self-confirmation.md"
+            "reportHref": "test-reports/2026-09-06/06-office-bearer-self-confirmation.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "PASSED",
+              "duration": "0.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "PASSED",
@@ -4808,14 +4916,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "77.1s",
+            "duration": "82.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/10a-post-registration-admin.md"
+            "reportHref": "test-reports/2026-09-06/10a-post-registration-admin.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "82.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -4835,14 +4949,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "PASSED",
             "duration": "0.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/10p-post-registration-submitter.md"
+            "reportHref": "test-reports/2026-09-06/10p-post-registration-submitter.md"
           },
-          "runCount": 3,
+          "runCount": 4,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "PASSED",
+              "duration": "0.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "PASSED",
@@ -4910,6 +5030,191 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-06",
+      "runs": [
+        {
+          "plan": "test-plans/auth/01-authentication-account-creation.md",
+          "planDisplay": "auth/01-authentication-account-creation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "52.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/01-authentication-account-creation.md"
+        },
+        {
+          "plan": "test-plans/npo-registration/02-npo-linking-and-landing.md",
+          "planDisplay": "npo-registration/02-npo-linking-and-landing.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "143.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/02-npo-linking-and-landing.md"
+        },
+        {
+          "plan": "test-plans/npo-registration/03-wizard-org-details-objectives.md",
+          "planDisplay": "npo-registration/03-wizard-org-details-objectives.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "644.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/03-wizard-org-details-objectives.md"
+        },
+        {
+          "plan": "test-plans/npo-registration/04-wizard-office-bearers.md",
+          "planDisplay": "npo-registration/04-wizard-office-bearers.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "0.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/04-wizard-office-bearers.md"
+        },
+        {
+          "plan": "test-plans/npo-registration/05-wizard-admin-docs-declaration.md",
+          "planDisplay": "npo-registration/05-wizard-admin-docs-declaration.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "0.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/05-wizard-admin-docs-declaration.md"
+        },
+        {
+          "plan": "test-plans/npo-registration/06-office-bearer-self-confirmation.md",
+          "planDisplay": "npo-registration/06-office-bearer-self-confirmation.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "0.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/06-office-bearer-self-confirmation.md"
+        },
+        {
+          "plan": "test-plans/application-processing/07-application-triage-and-verification.md",
+          "planDisplay": "application-processing/07-application-triage-and-verification.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "418.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/07-application-triage-and-verification.md"
+        },
+        {
+          "plan": "test-plans/annual-compliance/08-annual-report-submission.md",
+          "planDisplay": "annual-compliance/08-annual-report-submission.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "0.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/08-annual-report-submission.md"
+        },
+        {
+          "plan": "test-plans/annual-compliance/09-annual-report-backend-quality-assure.md",
+          "planDisplay": "annual-compliance/09-annual-report-backend-quality-assure.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "184.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/09-annual-report-backend-quality-assure.md"
+        },
+        {
+          "plan": "test-plans/post-registration/10a-post-registration-admin.md",
+          "planDisplay": "post-registration/10a-post-registration-admin.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "82.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/10a-post-registration-admin.md"
+        },
+        {
+          "plan": "test-plans/post-registration/10p-post-registration-submitter.md",
+          "planDisplay": "post-registration/10p-post-registration-submitter.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "0.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/10p-post-registration-submitter.md"
+        },
+        {
+          "plan": "test-plans/appeals/11a-appeals-admin-tribunal.md",
+          "planDisplay": "appeals/11a-appeals-admin-tribunal.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "281.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/11a-appeals-admin-tribunal.md"
+        },
+        {
+          "plan": "test-plans/appeals/11p-appeals-submitter.md",
+          "planDisplay": "appeals/11p-appeals-submitter.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "0.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/11p-appeals-submitter.md"
+        },
+        {
+          "plan": "test-plans/investigations/12a-investigations-admin.md",
+          "planDisplay": "investigations/12a-investigations-admin.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "125.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/12a-investigations-admin.md"
+        },
+        {
+          "plan": "test-plans/investigations/12p-investigations-public-submission.md",
+          "planDisplay": "investigations/12p-investigations-public-submission.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "6.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/12p-investigations-public-submission.md"
+        },
+        {
+          "plan": "test-plans/deregistration/13a-voluntary-deregistration-admin.md",
+          "planDisplay": "deregistration/13a-voluntary-deregistration-admin.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "32.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/13a-voluntary-deregistration-admin.md"
+        },
+        {
+          "plan": "test-plans/deregistration/13p-voluntary-deregistration-submitter.md",
+          "planDisplay": "deregistration/13p-voluntary-deregistration-submitter.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "0.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/13p-voluntary-deregistration-submitter.md"
+        },
+        {
+          "plan": "test-plans/cross-cutting/14s-public-npo-search.md",
+          "planDisplay": "cross-cutting/14s-public-npo-search.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "14.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/14s-public-npo-search.md"
+        },
+        {
+          "plan": "test-plans/cross-cutting/14w-accessibility-wcag.md",
+          "planDisplay": "cross-cutting/14w-accessibility-wcag.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "38.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/14w-accessibility-wcag.md"
+        },
+        {
+          "plan": "test-plans/education-awareness/15-education-awareness-smoke.md",
+          "planDisplay": "education-awareness/15-education-awareness-smoke.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "113.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/15-education-awareness-smoke.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-05",
       "runs": [
@@ -6097,5 +6402,5 @@
       ]
     }
   ],
-  "generated": "2026-09-05T02:43:25.278Z"
+  "generated": "2026-09-06T02:50:02.886Z"
 }

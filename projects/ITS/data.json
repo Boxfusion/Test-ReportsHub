@@ -16,8 +16,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 3,
-    "totalRuns": 1,
-    "last7Runs": 1,
+    "totalRuns": 2,
+    "last7Runs": 2,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 1,
@@ -27,57 +27,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-09-07",
+    "startDate": "2025-09-14",
     "days": [
-      {
-        "iso": "2025-09-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-14",
         "runs": 0,
@@ -2576,6 +2527,55 @@
         "passed": 0,
         "failed": 1,
         "partial": 0
+      },
+      {
+        "iso": "2026-09-06",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2595,14 +2595,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-05",
+            "date": "2026-09-06",
             "result": "FAILED",
-            "duration": "982.3s",
+            "duration": "643.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-05/register-and-upload-invoice.md"
+            "reportHref": "test-reports/2026-09-06/register-and-upload-invoice.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "643.5s",
+              "variant": null
+            },
             {
               "date": "2026-09-05",
               "result": "FAILED",
@@ -2663,6 +2669,20 @@
   ],
   "timeline": [
     {
+      "date": "2026-09-06",
+      "runs": [
+        {
+          "plan": "test-plans/BAS/register-and-upload-invoice.md",
+          "planDisplay": "BAS/register-and-upload-invoice.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "643.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/register-and-upload-invoice.md"
+        }
+      ]
+    },
+    {
       "date": "2026-09-05",
       "runs": [
         {
@@ -2677,5 +2697,5 @@
       ]
     }
   ],
-  "generated": "2026-09-05T02:43:25.409Z"
+  "generated": "2026-09-06T02:50:03.074Z"
 }

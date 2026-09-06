@@ -14,14 +14,14 @@
 ```
 Error: expect(locator).toBeVisible() failed
 
-Locator: getByRole('row').filter({ hasText: 'REF2026-0982' }).filter({ hasText: 'Invite BEC members' }).first()
+Locator: getByRole('row').filter({ hasText: 'REF2026-0988' }).filter({ hasText: 'Invite BEC members' }).first()
 Expected: visible
 Timeout: 30000ms
 Error: element(s) not found
 
 Call log:
-  - Expect "toBeVisible" getByRole('row').filter({ hasText: 'REF2026-0982' }).filter({ hasText: 'Invite BEC members' }).first() with timeout 30000ms
-  - waiting for getByRole('row').filter({ hasText: 'REF2026-0982' }).filter({ hasText: 'Invite BEC members' }).first()
+  - Expect "toBeVisible" getByRole('row').filter({ hasText: 'REF2026-0988' }).filter({ hasText: 'Invite BEC members' }).first() with timeout 30000ms
+  - waiting for getByRole('row').filter({ hasText: 'REF2026-0988' }).filter({ hasText: 'Invite BEC members' }).first()
 
 ```
 
@@ -133,7 +133,7 @@ Call log:
         - text: Period In Possession
         - separator
     - rowgroup:
-      - row "search REF2026-1821 Maand-awe Mamathuntsha Tender Process Tender REF2026-1821 - Building Invite BEC members 31/08/2026 Evaluation In Progress 5 day(s) ago":
+      - row "search REF2026-1821 Maand-awe Mamathuntsha Tender Process Tender REF2026-1821 - Building Invite BEC members 31/08/2026 Evaluation In Progress 6 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=30fa0790-3e61-46a2-bcac-d933a96333b8&todoid=43596ac3-e0d1-46e5-ae6a-f66236daf178
@@ -146,8 +146,8 @@ Call log:
         - cell "31/08/2026"
         - cell
         - cell "Evaluation In Progress"
-        - cell "5 day(s) ago"
-      - 'row "search REF2026-1764 Maand-awe Mamathuntsha Tender Process Tender REF2026-1764 - tender101 BEC: Monitor Evaluation Progress 30/08/2026 Evaluation In Progress 6 day(s) ago"':
+        - cell "6 day(s) ago"
+      - 'row "search REF2026-1764 Maand-awe Mamathuntsha Tender Process Tender REF2026-1764 - tender101 BEC: Monitor Evaluation Progress 30/08/2026 Evaluation In Progress 7 day(s) ago"':
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=06c771f6-e027-475d-8752-6897fcce29df&todoid=8792a085-1d25-4706-907a-184ae385b43f
@@ -160,8 +160,8 @@ Call log:
         - cell "30/08/2026"
         - cell
         - cell "Evaluation In Progress"
-        - cell "6 day(s) ago"
-      - 'row "search REF2026-1122 Maand-awe Mamathuntsha Tender Process Tender REF2026-1122 - TC-01 Automated Draft Tender run-msiqgav7 - 90/10 Compulsory Hybrid BEC: Monitor Evaluation Progress 07/08/2026 Evaluation In Progress 29 day(s) ago"':
+        - cell "7 day(s) ago"
+      - 'row "search REF2026-1122 Maand-awe Mamathuntsha Tender Process Tender REF2026-1122 - TC-01 Automated Draft Tender run-msiqgav7 - 90/10 Compulsory Hybrid BEC: Monitor Evaluation Progress 07/08/2026 Evaluation In Progress 1 month(s) ago"':
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=4e36f3ff-352d-4cf5-8fe8-9505b8e00ac4&todoid=23fc7213-b4dd-4e3c-ad97-73bdc0c50bb2
@@ -174,8 +174,8 @@ Call log:
         - cell "07/08/2026"
         - cell
         - cell "Evaluation In Progress"
-        - cell "29 day(s) ago"
-      - row "search REF2026-6424 System Administrator Tender Process Tender REF2026-6424 - UFS construction Monitor calibration and finalise scoring 07/08/2026 In Progress 29 day(s) ago":
+        - cell "1 month(s) ago"
+      - row "search REF2026-6424 System Administrator Tender Process Tender REF2026-6424 - UFS construction Monitor calibration and finalise scoring 07/08/2026 In Progress 1 month(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=bffe0eed-8908-4a71-82ea-f2693068a76b&todoid=bddfe5a1-d89c-4d66-9c23-7e02e2818b55
@@ -188,8 +188,8 @@ Call log:
         - cell "07/08/2026"
         - cell
         - cell "In Progress"
-        - cell "29 day(s) ago"
-      - 'row "search REF2026-1088 Maand-awe Mamathuntsha Tender Process Tender REF2026-1088 - TC-01 Automated Draft Tender run-msi0f63c - 90/10 Compulsory Hybrid BEC: Finalise recommendation 07/08/2026 Evaluation In Progress 29 day(s) ago"':
+        - cell "1 month(s) ago"
+      - 'row "search REF2026-1088 Maand-awe Mamathuntsha Tender Process Tender REF2026-1088 - TC-01 Automated Draft Tender run-msi0f63c - 90/10 Compulsory Hybrid BEC: Finalise recommendation 07/08/2026 Evaluation In Progress 1 month(s) ago"':
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=a980c03c-2e5c-42d4-a2ee-278d0c4ce0e3&todoid=36aaf337-aceb-48f2-9389-fe189ebfe7ad
@@ -202,7 +202,7 @@ Call log:
         - cell "07/08/2026"
         - cell
         - cell "Evaluation In Progress"
-        - cell "29 day(s) ago"
+        - cell "1 month(s) ago"
       - 'row "search REF2026-1019 Thabiso Maake Tender Process Tender REF2026-1019 - Test statuses BEC: Monitor Evaluation Progress 06/08/2026 Evaluation In Progress 1 month(s) ago"':
         - cell "search":
           - link "search":
