@@ -14,27 +14,39 @@
   "hasAllure": true,
   "allureReports": [
     {
-      "slug": null,
-      "label": null,
-      "href": "allure-report/index.html"
+      "slug": "am",
+      "label": "am",
+      "href": "allure-report--am/index.html"
+    },
+    {
+      "slug": "pm",
+      "label": "pm",
+      "href": "allure-report--pm/index.html"
     }
   ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 6,
-    "totalRuns": 4,
-    "last7Runs": 0,
-    "last7Pass": 0,
-    "last7PassPct": null,
-    "failingFlows": 0,
-    "passingFlows": 1,
-    "partialFlows": 2,
-    "neverFlows": 3
+    "totalPlans": 13,
+    "totalRuns": 45,
+    "last7Runs": 13,
+    "last7Pass": 1,
+    "last7PassPct": 8,
+    "failingFlows": 4,
+    "passingFlows": 4,
+    "partialFlows": 4,
+    "neverFlows": 7
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-09-14",
+    "startDate": "2025-09-13",
     "days": [
+      {
+        "iso": "2025-09-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
       {
         "iso": "2025-09-14",
         "runs": 0,
@@ -2445,107 +2457,107 @@
       },
       {
         "iso": "2026-08-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
+        "runs": 13,
+        "passed": 5,
+        "failed": 5,
+        "partial": 3
       },
       {
         "iso": "2026-08-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
+        "runs": 3,
+        "passed": 1,
+        "failed": 1,
+        "partial": 1
       },
       {
         "iso": "2026-08-26",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-08-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
+        "runs": 2,
+        "passed": 1,
+        "failed": 1,
         "partial": 0
       },
       {
         "iso": "2026-08-28",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-08-29",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-08-30",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-08-31",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
+        "runs": 2,
+        "passed": 1,
+        "failed": 1,
         "partial": 0
       },
       {
         "iso": "2026-09-02",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-03",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-04",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-05",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-06",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-07",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2575,27 +2587,145 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
-      },
-      {
-        "iso": "2026-09-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
       }
     ]
   },
   "sections": [
     {
-      "key": "auth",
-      "title": "Auth",
-      "stripPrefix": "test-plans/auth/",
+      "key": "dev",
+      "title": "Dev",
+      "stripPrefix": "test-plans/dev/",
       "plans": [
         {
-          "plan": "test-plans/auth/login-navigate-to-leads.md",
-          "planHref": "test-plans/auth/login-navigate-to-leads.md",
-          "spec": "test-plans/auth/login-navigate-to-leads.spec.ts",
-          "specHref": "test-plans/auth/login-navigate-to-leads.spec.ts",
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planHref": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "spec": "test-plans/dev/auth/login-navigate-to-leads.spec.ts",
+          "specHref": "test-plans/dev/auth/login-navigate-to-leads.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-09-07",
+            "result": "FAILED",
+            "duration": "1.3s",
+            "variant": "am",
+            "reportHref": "test-reports/dev/2026-09-07/login-navigate-to-leads--am.md"
+          },
+          "runCount": 29,
+          "history": [
+            {
+              "date": "2026-09-07",
+              "result": "FAILED",
+              "duration": "1.3s",
+              "variant": "am"
+            },
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "1.2s",
+              "variant": "am"
+            },
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "1.2s",
+              "variant": "pm"
+            },
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "1.9s",
+              "variant": "am"
+            },
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "1.3s",
+              "variant": "pm"
+            },
+            {
+              "date": "2026-09-04",
+              "result": "FAILED",
+              "duration": "1.7s",
+              "variant": "am"
+            },
+            {
+              "date": "2026-09-04",
+              "result": "FAILED",
+              "duration": "1.7s",
+              "variant": "pm"
+            },
+            {
+              "date": "2026-09-03",
+              "result": "FAILED",
+              "duration": "1.7s",
+              "variant": "am"
+            },
+            {
+              "date": "2026-09-03",
+              "result": "FAILED",
+              "duration": "1.6s",
+              "variant": "pm"
+            },
+            {
+              "date": "2026-09-02",
+              "result": "FAILED",
+              "duration": "1.7s",
+              "variant": "am"
+            },
+            {
+              "date": "2026-09-02",
+              "result": "FAILED",
+              "duration": "951.8s",
+              "variant": "pm"
+            },
+            {
+              "date": "2026-09-01",
+              "result": "FAILED",
+              "duration": "1.8s",
+              "variant": "am"
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/dev/compliance/case-lifecycle-workflow.md",
+          "planHref": "test-plans/dev/compliance/case-lifecycle-workflow.md",
+          "spec": "test-plans/dev/compliance/case-lifecycle-workflow.spec.ts",
+          "specHref": "test-plans/dev/compliance/case-lifecycle-workflow.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
+          "rowStatus": "partial",
+          "status": "PARTIAL",
+          "last": {
+            "date": "2026-08-24",
+            "result": "PARTIAL",
+            "duration": "140.1s",
+            "variant": null,
+            "reportHref": "test-reports/dev/2026-08-24/case-lifecycle-workflow.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-08-24",
+              "result": "PARTIAL",
+              "duration": "140.1s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/dev/compliance/compliance-review-functions.md",
+          "planHref": "test-plans/dev/compliance/compliance-review-functions.md",
+          "spec": "test-plans/dev/compliance/compliance-review-functions.spec.ts",
+          "specHref": "test-plans/dev/compliance/compliance-review-functions.spec.ts",
           "canRun": true,
           "badges": [
             {
@@ -2606,73 +2736,135 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-07-30",
+            "date": "2026-08-24",
             "result": "PASSED",
-            "duration": "28.7s",
+            "duration": "214.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-07-30/login-navigate-to-leads.md"
+            "reportHref": "test-reports/dev/2026-08-24/compliance-review-functions.md"
           },
           "runCount": 1,
           "history": [
             {
-              "date": "2026-07-30",
+              "date": "2026-08-24",
               "result": "PASSED",
-              "duration": "28.7s",
-              "variant": null
-            }
-          ],
-          "bugs": []
-        }
-      ]
-    },
-    {
-      "key": "leads",
-      "title": "Leads",
-      "stripPrefix": "test-plans/leads/",
-      "plans": [
-        {
-          "plan": "test-plans/leads/branch-manual-document-upload.md",
-          "planHref": "test-plans/leads/branch-manual-document-upload.md",
-          "spec": "test-plans/leads/branch-manual-document-upload.spec.ts",
-          "specHref": "test-plans/leads/branch-manual-document-upload.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
-            }
-          ],
-          "rowStatus": "partial",
-          "status": "PARTIAL",
-          "last": {
-            "date": "2026-08-21",
-            "result": "PARTIAL",
-            "duration": "152.1s",
-            "variant": null,
-            "reportHref": "test-reports/2026-08-21/branch-manual-document-upload.md"
-          },
-          "runCount": 2,
-          "history": [
-            {
-              "date": "2026-08-21",
-              "result": "PARTIAL",
-              "duration": "152.1s",
-              "variant": null
-            },
-            {
-              "date": "2026-08-20",
-              "result": "FAILED",
-              "duration": "600.4s",
+              "duration": "214.5s",
               "variant": null
             }
           ],
           "bugs": []
         },
         {
-          "plan": "test-plans/leads/online-digital-channel-lead-capture.md",
-          "planHref": "test-plans/leads/online-digital-channel-lead-capture.md",
-          "spec": "test-plans/leads/online-digital-channel-lead-capture.spec.ts",
-          "specHref": "test-plans/leads/online-digital-channel-lead-capture.spec.ts",
+          "plan": "test-plans/dev/leads/branch-manual-document-upload.md",
+          "planHref": "test-plans/dev/leads/branch-manual-document-upload.md",
+          "spec": "test-plans/dev/leads/branch-manual-document-upload.spec.ts",
+          "specHref": "test-plans/dev/leads/branch-manual-document-upload.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/dev/leads/lead-to-opportunity-lifecycle.md",
+          "planHref": "test-plans/dev/leads/lead-to-opportunity-lifecycle.md",
+          "spec": "test-plans/dev/leads/lead-to-opportunity-lifecycle.spec.ts",
+          "specHref": "test-plans/dev/leads/lead-to-opportunity-lifecycle.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": [
+            {
+              "name": "2026-08-24-lead-to-opportunity-lifecycle-phase2.md",
+              "href": "test-reports/bugs/2026-08-24-lead-to-opportunity-lifecycle-phase2.md"
+            }
+          ]
+        },
+        {
+          "plan": "test-plans/dev/leads/online-digital-channel-lead-capture.md",
+          "planHref": "test-plans/dev/leads/online-digital-channel-lead-capture.md",
+          "spec": "test-plans/dev/leads/online-digital-channel-lead-capture.spec.ts",
+          "specHref": "test-plans/dev/leads/online-digital-channel-lead-capture.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/dev/opportunities/opportunity-loan-application-capture.md",
+          "planHref": "test-plans/dev/opportunities/opportunity-loan-application-capture.md",
+          "spec": "test-plans/dev/opportunities/opportunity-loan-application-capture.spec.ts",
+          "specHref": "test-plans/dev/opportunities/opportunity-loan-application-capture.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/dev/workflow/loan-application-workflow-stages.md",
+          "planHref": "test-plans/dev/workflow/loan-application-workflow-stages.md",
+          "spec": "test-plans/dev/workflow/loan-application-workflow-stages.spec.ts",
+          "specHref": "test-plans/dev/workflow/loan-application-workflow-stages.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "new",
+              "text": "NEW · never run"
+            }
+          ],
+          "rowStatus": "never",
+          "status": "NEVER",
+          "last": null,
+          "runCount": 0,
+          "history": [],
+          "bugs": []
+        }
+      ]
+    },
+    {
+      "key": "phase2",
+      "title": "Phase2",
+      "stripPrefix": "test-plans/phase2/",
+      "plans": [
+        {
+          "plan": "test-plans/phase2/leads/lead-to-opportunity-lifecycle.md",
+          "planHref": "test-plans/phase2/leads/lead-to-opportunity-lifecycle.md",
+          "spec": "test-plans/phase2/leads/lead-to-opportunity-lifecycle.spec.ts",
+          "specHref": "test-plans/phase2/leads/lead-to-opportunity-lifecycle.spec.ts",
           "canRun": true,
           "badges": [
             {
@@ -2683,33 +2875,112 @@
           "rowStatus": "partial",
           "status": "PARTIAL",
           "last": {
-            "date": "2026-08-21",
+            "date": "2026-08-25",
             "result": "PARTIAL",
-            "duration": "126.2s",
+            "duration": "564.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-08-21/online-digital-channel-lead-capture.md"
+            "reportHref": "test-reports/phase2/2026-08-25/lead-to-opportunity-lifecycle.md"
+          },
+          "runCount": 2,
+          "history": [
+            {
+              "date": "2026-08-25",
+              "result": "PARTIAL",
+              "duration": "564.6s",
+              "variant": null
+            },
+            {
+              "date": "2026-08-24",
+              "result": "FAILED",
+              "duration": "171.0s",
+              "variant": null
+            }
+          ],
+          "bugs": [
+            {
+              "name": "2026-08-24-lead-to-opportunity-lifecycle-phase2.md",
+              "href": "test-reports/bugs/2026-08-24-lead-to-opportunity-lifecycle-phase2.md"
+            }
+          ]
+        },
+        {
+          "plan": "test-plans/phase2/auth/login-navigate-modules.md",
+          "planHref": "test-plans/phase2/auth/login-navigate-modules.md",
+          "spec": "test-plans/phase2/auth/login-navigate-modules.spec.ts",
+          "specHref": "test-plans/phase2/auth/login-navigate-modules.spec.ts",
+          "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-08-24",
+            "result": "PASSED",
+            "duration": "59.9s",
+            "variant": null,
+            "reportHref": "test-reports/phase2/2026-08-24/login-navigate-modules.md"
           },
           "runCount": 1,
           "history": [
             {
-              "date": "2026-08-21",
-              "result": "PARTIAL",
-              "duration": "126.2s",
+              "date": "2026-08-24",
+              "result": "PASSED",
+              "duration": "59.9s",
               "variant": null
             }
           ],
           "bugs": []
         },
         {
-          "plan": "test-plans/leads/lead-to-opportunity-lifecycle.md",
-          "planHref": "test-plans/leads/lead-to-opportunity-lifecycle.md",
-          "spec": "test-plans/leads/lead-to-opportunity-lifecycle.spec.ts",
-          "specHref": "test-plans/leads/lead-to-opportunity-lifecycle.spec.ts",
+          "plan": "test-plans/phase2/compliance/compliance-review-functions.md",
+          "planHref": "test-plans/phase2/compliance/compliance-review-functions.md",
+          "spec": "test-plans/phase2/compliance/compliance-review-functions.spec.ts",
+          "specHref": "test-plans/phase2/compliance/compliance-review-functions.spec.ts",
           "canRun": true,
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
+          "rowStatus": "passing",
+          "status": "PASSED",
+          "last": {
+            "date": "2026-08-24",
+            "result": "PASSED",
+            "duration": "144.9s",
+            "variant": null,
+            "reportHref": "test-reports/phase2/2026-08-24/compliance-review-functions.md"
+          },
+          "runCount": 1,
+          "history": [
+            {
+              "date": "2026-08-24",
+              "result": "PASSED",
+              "duration": "144.9s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/phase2/opportunities/opportunity-loan-application-capture.md",
+          "planHref": "test-plans/phase2/opportunities/opportunity-loan-application-capture.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
           "badges": [
             {
               "kind": "new",
               "text": "NEW · never run"
+            },
+            {
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
             }
           ],
           "rowStatus": "never",
@@ -2718,50 +2989,21 @@
           "runCount": 0,
           "history": [],
           "bugs": []
-        }
-      ]
-    },
-    {
-      "key": "opportunities",
-      "title": "Opportunities",
-      "stripPrefix": "test-plans/opportunities/",
-      "plans": [
+        },
         {
-          "plan": "test-plans/opportunities/opportunity-loan-application-capture.md",
-          "planHref": "test-plans/opportunities/opportunity-loan-application-capture.md",
-          "spec": "test-plans/opportunities/opportunity-loan-application-capture.spec.ts",
-          "specHref": "test-plans/opportunities/opportunity-loan-application-capture.spec.ts",
-          "canRun": true,
+          "plan": "test-plans/phase2/workflow/loan-application-workflow-stages.md",
+          "planHref": "test-plans/phase2/workflow/loan-application-workflow-stages.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
           "badges": [
             {
               "kind": "new",
               "text": "NEW · never run"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "NEVER",
-          "last": null,
-          "runCount": 0,
-          "history": [],
-          "bugs": []
-        }
-      ]
-    },
-    {
-      "key": "workflow",
-      "title": "Workflow",
-      "stripPrefix": "test-plans/workflow/",
-      "plans": [
-        {
-          "plan": "test-plans/workflow/loan-application-workflow-stages.md",
-          "planHref": "test-plans/workflow/loan-application-workflow-stages.md",
-          "spec": "test-plans/workflow/loan-application-workflow-stages.spec.ts",
-          "specHref": "test-plans/workflow/loan-application-workflow-stages.spec.ts",
-          "canRun": true,
-          "badges": [
+            },
             {
-              "kind": "new",
-              "text": "NEW · never run"
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
             }
           ],
           "rowStatus": "never",
@@ -2776,6 +3018,450 @@
   ],
   "timeline": [
     {
+      "date": "2026-09-07",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.3s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-07/login-navigate-to-leads--am.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.2s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-06/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "1.2s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-06/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.9s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-05/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "1.3s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-05/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-04/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "1.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-04/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-03/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "1.6s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-03/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-02/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "951.8s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-02/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.8s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-09-01/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "PASSED",
+          "duration": "10.6s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/dev/2026-09-01/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.3s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-31/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "2.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-31/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-30/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "1.4s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-30/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-29",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-29/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "1.5s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-29/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-28/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "1.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-28/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.4s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-27/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "PASSED",
+          "duration": "10.1s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/dev/2026-08-27/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "2.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-26/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "74.2s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-26/login-navigate-to-leads--pm.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "runs": [
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "1.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-25/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "PASSED",
+          "duration": "35.5s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/dev/2026-08-25/login-navigate-to-leads--pm.md"
+        },
+        {
+          "plan": "test-plans/phase2/leads/lead-to-opportunity-lifecycle.md",
+          "planDisplay": "phase2/leads/lead-to-opportunity-lifecycle.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "564.6s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/phase2/2026-08-25/lead-to-opportunity-lifecycle.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "runs": [
+        {
+          "plan": "test-plans/leads/branch-manual-document-upload.md",
+          "planDisplay": "leads/branch-manual-document-upload.md (am)",
+          "variant": "am",
+          "result": "PARTIAL",
+          "duration": "207.8s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-24/branch-manual-document-upload--am.md"
+        },
+        {
+          "plan": "test-plans/dev/compliance/case-lifecycle-workflow.md",
+          "planDisplay": "dev/compliance/case-lifecycle-workflow.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "140.1s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-24/case-lifecycle-workflow.md"
+        },
+        {
+          "plan": "test-plans/dev/compliance/compliance-review-functions.md",
+          "planDisplay": "dev/compliance/compliance-review-functions.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "214.5s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/dev/2026-08-24/compliance-review-functions.md"
+        },
+        {
+          "plan": "test-plans/leads/lead-to-opportunity-lifecycle.md",
+          "planDisplay": "leads/lead-to-opportunity-lifecycle.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "727.5s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-24/lead-to-opportunity-lifecycle--am.md"
+        },
+        {
+          "plan": "test-plans/workflow/loan-application-workflow-stages.md",
+          "planDisplay": "workflow/loan-application-workflow-stages.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "250.1s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-24/loan-application-workflow-stages--am.md"
+        },
+        {
+          "plan": "test-plans/auth/login-navigate-to-leads.md",
+          "planDisplay": "auth/login-navigate-to-leads.md (am)",
+          "variant": "am",
+          "result": "PASSED",
+          "duration": "13.0s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/dev/2026-08-24/login-navigate-to-leads--am.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md (pm)",
+          "variant": "pm",
+          "result": "FAILED",
+          "duration": "2.1s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-24/login-navigate-to-leads--pm.md"
+        },
+        {
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md",
+          "planDisplay": "dev/auth/login-navigate-to-leads.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "11.9s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/dev/2026-08-24/login-navigate-to-leads.md"
+        },
+        {
+          "plan": "test-plans/leads/online-digital-channel-lead-capture.md",
+          "planDisplay": "leads/online-digital-channel-lead-capture.md (am)",
+          "variant": "am",
+          "result": "PARTIAL",
+          "duration": "191.9s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-24/online-digital-channel-lead-capture--am.md"
+        },
+        {
+          "plan": "test-plans/opportunities/opportunity-loan-application-capture.md",
+          "planDisplay": "opportunities/opportunity-loan-application-capture.md (am)",
+          "variant": "am",
+          "result": "FAILED",
+          "duration": "802.7s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/dev/2026-08-24/opportunity-loan-application-capture--am.md"
+        },
+        {
+          "plan": "test-plans/phase2/compliance/compliance-review-functions.md",
+          "planDisplay": "phase2/compliance/compliance-review-functions.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "144.9s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/phase2/2026-08-24/compliance-review-functions.md"
+        },
+        {
+          "plan": "test-plans/phase2/leads/lead-to-opportunity-lifecycle.md",
+          "planDisplay": "phase2/leads/lead-to-opportunity-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "171.0s",
+          "mode": "playwright-script (failures pending AI-repair)",
+          "reportHref": "test-reports/phase2/2026-08-24/lead-to-opportunity-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/phase2/auth/login-navigate-modules.md",
+          "planDisplay": "phase2/auth/login-navigate-modules.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "59.9s",
+          "mode": "playwright-script",
+          "reportHref": "test-reports/phase2/2026-08-24/login-navigate-modules.md"
+        }
+      ]
+    },
+    {
       "date": "2026-08-21",
       "runs": [
         {
@@ -2785,7 +3471,7 @@
           "result": "PARTIAL",
           "duration": "152.1s",
           "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-08-21/branch-manual-document-upload.md"
+          "reportHref": "test-reports/dev/2026-08-21/branch-manual-document-upload.md"
         },
         {
           "plan": "test-plans/leads/online-digital-channel-lead-capture.md",
@@ -2794,7 +3480,7 @@
           "result": "PARTIAL",
           "duration": "126.2s",
           "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-08-21/online-digital-channel-lead-capture.md"
+          "reportHref": "test-reports/dev/2026-08-21/online-digital-channel-lead-capture.md"
         }
       ]
     },
@@ -2808,7 +3494,7 @@
           "result": "FAILED",
           "duration": "600.4s",
           "mode": "playwright-script (failures pending AI-repair)",
-          "reportHref": "test-reports/2026-08-20/branch-manual-document-upload.md"
+          "reportHref": "test-reports/dev/2026-08-20/branch-manual-document-upload.md"
         }
       ]
     },
@@ -2822,10 +3508,10 @@
           "result": "PASSED",
           "duration": "28.7s",
           "mode": "playwright-script",
-          "reportHref": "test-reports/2026-07-30/login-navigate-to-leads.md"
+          "reportHref": "test-reports/dev/2026-07-30/login-navigate-to-leads.md"
         }
       ]
     }
   ],
-  "generated": "2026-09-07T02:49:09.910Z"
+  "generated": "2026-09-07T10:53:30.589Z"
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T02:49:09.955Z",
+  "generated": "2026-09-07T10:53:30.617Z",
   "projects": [
     {
       "name": "Approvals",
@@ -186,6 +186,29 @@
       "href": "projects/ITS/index.html"
     },
     {
+      "name": "land-bank",
+      "displayName": "Land Bank CRM",
+      "appUrl": "https://landbankcrm-adminportal-landbankcrmdev.shesha.app",
+      "environment": "Dev",
+      "sourceRepo": null,
+      "description": "Hybrid Markdown + Playwright test reports for the Land Bank CRM Admin Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 13,
+        "totalRuns": 45,
+        "last7Runs": 13,
+        "last7Pass": 1,
+        "last7PassPct": 8,
+        "failingFlows": 4,
+        "lastRun": {
+          "date": "2026-09-07",
+          "result": "FAILED",
+          "plan": "test-plans/dev/auth/login-navigate-to-leads.md"
+        }
+      },
+      "href": "projects/land-bank/index.html"
+    },
+    {
       "name": "PD-PMDS",
       "displayName": "PMDS",
       "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
@@ -207,29 +230,6 @@
         }
       },
       "href": "projects/PD-PMDS/index.html"
-    },
-    {
-      "name": "land-bank",
-      "displayName": "Land Bank CRM",
-      "appUrl": "https://landbankcrm-adminportal-landbankcrmdev.shesha.app",
-      "environment": "Dev",
-      "sourceRepo": null,
-      "description": "Hybrid Markdown + Playwright test reports for the Land Bank CRM Admin Portal.",
-      "health": "partial",
-      "summary": {
-        "totalPlans": 6,
-        "totalRuns": 4,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-08-21",
-          "result": "PARTIAL",
-          "plan": "test-plans/leads/branch-manual-document-upload.md"
-        }
-      },
-      "href": "projects/land-bank/index.html"
     },
     {
       "name": "bid-management",
@@ -326,9 +326,9 @@
   ],
   "totals": {
     "totalProjects": 14,
-    "totalPlans": 272,
-    "totalRuns": 763,
-    "last7Runs": 239,
-    "failingFlows": 81
+    "totalPlans": 279,
+    "totalRuns": 804,
+    "last7Runs": 252,
+    "failingFlows": 85
   }
 }
