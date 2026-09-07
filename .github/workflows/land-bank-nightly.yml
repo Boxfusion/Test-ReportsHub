@@ -1,0 +1,225 @@
+name: Land Bank nightly tests
+run-name: Land Bank nightly run · ${{ github.event_name }}
+
+# Runs every Land Bank spec under projects/land-bank/test-plans/**/*.spec.ts
+# against both Dev and Phase2, writes per-plan markdown reports into
+# projects/land-bank/test-reports/<YYYY-MM-DD>/ (Dev) and
+# projects/land-bank/test-reports/phase2/<YYYY-MM-DD>/ (Phase2), rebuilds the
+# hub dashboards and commits everything back in a single push.
+on:
+  schedule:
+    # 00:00 UTC = 02:00 SAST every night — same schedule as the hub-wide nightly run.
+    # Times are always UTC; scheduled workflows only fire on the default branch.
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  land-bank-nightly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright
+        run: |
+          npm init -y > /dev/null
+          npm install --no-save --no-package-lock @playwright/test@^1.49
+          npx playwright install chromium --with-deps
+
+      - name: Write CI Playwright config
+        run: |
+          cat > playwright.config.ci.ts <<'EOF'
+          import { defineConfig } from '@playwright/test';
+          export default defineConfig({
+            testDir: '.',
+            workers: 1,
+            timeout: 90_000,
+            reporter: [
+              ['list'],
+              ['json',  { outputFile: 'ci-results/results.json' }],
+              ['junit', { outputFile: 'ci-results/junit.xml' }],
+            ],
+            use: {
+              screenshot: 'only-on-failure',
+              trace: 'retain-on-failure',
+              video: 'retain-on-failure',
+            },
+            outputDir: 'ci-results/artifacts',
+          });
+          EOF
+
+      - name: Run Land Bank Dev specs
+        env:
+          TEST_ENV: dev
+          DEV_APP_URL: ${{ secrets.DEV_APP_URL }}
+          ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          RM_USERNAME: ${{ secrets.RM_USERNAME }}
+          RM_PASSWORD: ${{ secrets.RM_PASSWORD }}
+          COMPLIANCE_USERNAME: ${{ secrets.COMPLIANCE_USERNAME }}
+          COMPLIANCE_PASSWORD: ${{ secrets.COMPLIANCE_PASSWORD }}
+        run: |
+          set +e
+          TODAY=$(date -u +%Y-%m-%d)
+          STAMP=$(date -u +%Y-%m-%dT%H:%MZ)
+          PASS=0
+          FAIL=0
+          ROWS=""
+          PROJ_DIR="projects/land-bank"
+
+          mapfile -t SPECS < <(find "$PROJ_DIR/test-plans" -name '*.spec.ts' -not -path '*/test-plans/phase2/*' | sort)
+          if [ ${#SPECS[@]} -eq 0 ]; then
+            echo "::warning::No Dev specs found under $PROJ_DIR/test-plans. Nothing to run."
+            exit 0
+          fi
+
+          for SPEC in "${SPECS[@]}"; do
+            REL=${SPEC#$PROJ_DIR/test-plans/}
+            PLAN=${REL%.spec.ts}.md
+            PLAN_BASE=$(basename "$PLAN" .md)
+
+            echo "::group::land-bank/dev / $PLAN"
+            rm -rf ci-results
+            npx playwright test "$SPEC" --config=playwright.config.ci.ts
+            RC=$?
+            if [ $RC -eq 0 ]; then
+              RESULT=PASSED
+              PASS=$((PASS+1))
+            else
+              RESULT=FAILED
+              FAIL=$((FAIL+1))
+            fi
+
+            DURATION=""
+            if [ -f ci-results/results.json ]; then
+              DURATION=$(node -e "const r=require('./ci-results/results.json'); const d=Math.round((r.stats?.duration||0)/100)/10; console.log(d+'s');" 2>/dev/null || echo '')
+            fi
+
+            mkdir -p "$PROJ_DIR/test-reports/$TODAY"
+            {
+              echo "# Report: $PLAN_BASE"
+              echo ""
+              echo "**Date:** $STAMP"
+              echo "**Plan:** test-plans/$PLAN"
+              echo "**Spec:** $SPEC"
+              echo "**Execution Mode:** ci-nightly"
+              echo "**Result:** $RESULT"
+              echo "**Duration:** ${DURATION:-unknown}"
+              echo "**Run:** https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo ""
+              echo "_Triggered by the Land Bank nightly schedule (Dev environment)._"
+            } > "$PROJ_DIR/test-reports/$TODAY/$PLAN_BASE.md"
+
+            ROWS="${ROWS}- ${RESULT} · \`land-bank/dev\` / \`${PLAN}\` (${DURATION:-?})\n"
+            echo "::endgroup::"
+          done
+
+          {
+            echo "## Land Bank Dev nightly summary — $TODAY"
+            echo ""
+            echo "**Passed:** $PASS · **Failed:** $FAIL · **Total:** ${#SPECS[@]}"
+            echo ""
+            echo -e "$ROWS"
+          } >> $GITHUB_STEP_SUMMARY
+
+      - name: Run Land Bank Phase2 specs
+        if: always()
+        env:
+          TEST_ENV: phase2
+          PHASE2_APP_URL: ${{ secrets.PHASE2_APP_URL }}
+          PHASE2_ADMIN_USERNAME: ${{ secrets.PHASE2_ADMIN_USERNAME }}
+          PHASE2_ADMIN_PASSWORD: ${{ secrets.PHASE2_ADMIN_PASSWORD }}
+          PHASE2_RM_USERNAME: ${{ secrets.PHASE2_RM_USERNAME }}
+          PHASE2_RM_PASSWORD: ${{ secrets.PHASE2_RM_PASSWORD }}
+          PHASE2_RM2_USERNAME: ${{ secrets.PHASE2_RM2_USERNAME }}
+          PHASE2_RM2_PASSWORD: ${{ secrets.PHASE2_RM2_PASSWORD }}
+          PHASE2_COMPLIANCE_USERNAME: ${{ secrets.PHASE2_COMPLIANCE_USERNAME }}
+          PHASE2_COMPLIANCE_PASSWORD: ${{ secrets.PHASE2_COMPLIANCE_PASSWORD }}
+        run: |
+          set +e
+          TODAY=$(date -u +%Y-%m-%d)
+          STAMP=$(date -u +%Y-%m-%dT%H:%MZ)
+          PASS=0
+          FAIL=0
+          ROWS=""
+          PROJ_DIR="projects/land-bank"
+
+          mapfile -t SPECS < <(find "$PROJ_DIR/test-plans/phase2" -name '*.spec.ts' | sort)
+          if [ ${#SPECS[@]} -eq 0 ]; then
+            echo "::warning::No Phase2 specs found under $PROJ_DIR/test-plans/phase2. Nothing to run."
+            exit 0
+          fi
+
+          for SPEC in "${SPECS[@]}"; do
+            REL=${SPEC#$PROJ_DIR/test-plans/phase2/}
+            PLAN=${REL%.spec.ts}.md
+            PLAN_BASE=$(basename "$PLAN" .md)
+
+            echo "::group::land-bank/phase2 / $PLAN"
+            rm -rf ci-results
+            npx playwright test "$SPEC" --config=playwright.config.ci.ts
+            RC=$?
+            if [ $RC -eq 0 ]; then
+              RESULT=PASSED
+              PASS=$((PASS+1))
+            else
+              RESULT=FAILED
+              FAIL=$((FAIL+1))
+            fi
+
+            DURATION=""
+            if [ -f ci-results/results.json ]; then
+              DURATION=$(node -e "const r=require('./ci-results/results.json'); const d=Math.round((r.stats?.duration||0)/100)/10; console.log(d+'s');" 2>/dev/null || echo '')
+            fi
+
+            mkdir -p "$PROJ_DIR/test-reports/phase2/$TODAY"
+            {
+              echo "# Report: $PLAN_BASE"
+              echo ""
+              echo "**Date:** $STAMP"
+              echo "**Plan:** test-plans/phase2/$PLAN"
+              echo "**Spec:** $SPEC"
+              echo "**Execution Mode:** ci-nightly-phase2"
+              echo "**Result:** $RESULT"
+              echo "**Duration:** ${DURATION:-unknown}"
+              echo "**Run:** https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo ""
+              echo "_Triggered by the Land Bank nightly schedule (Phase2 environment)._"
+            } > "$PROJ_DIR/test-reports/phase2/$TODAY/$PLAN_BASE.md"
+
+            ROWS="${ROWS}- ${RESULT} · \`land-bank/phase2\` / \`${PLAN}\` (${DURATION:-?})\n"
+            echo "::endgroup::"
+          done
+
+          {
+            echo "## Land Bank Phase2 nightly summary — $TODAY"
+            echo ""
+            echo "**Passed:** $PASS · **Failed:** $FAIL · **Total:** ${#SPECS[@]}"
+            echo ""
+            echo -e "$ROWS"
+          } >> $GITHUB_STEP_SUMMARY
+
+      - name: Rebuild hub dashboards
+        if: always()
+        run: node scripts/build-all.js
+
+      - name: Commit and push
+        if: always()
+        run: |
+          git config user.email "ci@boxfusion"
+          git config user.name "Boxfusion CI"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "ci: land-bank nightly run $(date -u +%Y-%m-%d)"
+            git pull --rebase --autostash || true
+            git push
+          fi

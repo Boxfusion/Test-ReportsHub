@@ -99,31 +99,57 @@ function collectPlans(plansRoot, projectRoot) {
   });
 }
 
+// Run reports, either flat (test-reports/YYYY-MM-DD/) or grouped by target to mirror
+// test-plans/<target>/ (test-reports/<target>/YYYY-MM-DD/). Both layouts are read so projects
+// that group and projects that don't both work — and so a project that gets reorganised does not
+// silently drop its whole run history from the dashboard.
 function collectReports(reportsRoot) {
   if (!fs.existsSync(reportsRoot)) return [];
   const reports = [];
+  const isDateDir = (name) => /^\d{4}-\d{2}-\d{2}$/.test(name);
+  const readDateDir = (dir) => {
+    for (const f of fs.readdirSync(dir)) {
+      if (f.endsWith('.md')) reports.push(parseReport(path.join(dir, f), reportsRoot));
+    }
+  };
   for (const d of fs.readdirSync(reportsRoot, { withFileTypes: true })) {
     if (!d.isDirectory()) continue;
     if (d.name === 'bugs') continue;
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(d.name)) continue;
-    for (const f of fs.readdirSync(path.join(reportsRoot, d.name))) {
-      if (f.endsWith('.md')) reports.push(parseReport(path.join(reportsRoot, d.name, f), reportsRoot));
+    const abs = path.join(reportsRoot, d.name);
+    if (isDateDir(d.name)) {
+      readDateDir(abs);
+      continue;
+    }
+    // A non-date directory is a target group (dev/, qa/, phase2/) — descend one level.
+    for (const sub of fs.readdirSync(abs, { withFileTypes: true })) {
+      if (sub.isDirectory() && isDateDir(sub.name)) readDateDir(path.join(abs, sub.name));
     }
   }
   return reports.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 }
 
+// Open bugs, either flat (bugs/<bug>.md) or grouped by target (bugs/<target>/<bug>.md) to mirror
+// test-plans/<target>/. A `closed/` folder is skipped at either level — resolved bugs have always
+// been excluded here, and that must survive the extra nesting.
 function collectBugs(bugsRoot, reportsRoot) {
   if (!fs.existsSync(bugsRoot)) return [];
   const out = [];
-  for (const f of fs.readdirSync(bugsRoot)) {
-    if (!f.endsWith('.md')) continue;
-    out.push({
-      file: path.join(bugsRoot, f),
-      fileRel: path.relative(reportsRoot, path.join(bugsRoot, f)).replace(/\\/g, '/'),
-      name: f,
-      date: dateOnly(f) || '',
-    });
+  const add = (dir, name) => out.push({
+    file: path.join(dir, name),
+    fileRel: path.relative(reportsRoot, path.join(dir, name)).replace(/\\/g, '/'),
+    name,
+    date: dateOnly(name) || '',
+  });
+  for (const entry of fs.readdirSync(bugsRoot, { withFileTypes: true })) {
+    if (entry.isDirectory()) {
+      if (entry.name === 'closed') continue;
+      const sub = path.join(bugsRoot, entry.name);
+      for (const f of fs.readdirSync(sub)) {
+        if (f.endsWith('.md')) add(sub, f);
+      }
+      continue;
+    }
+    if (entry.name.endsWith('.md')) add(bugsRoot, entry.name);
   }
   return out;
 }

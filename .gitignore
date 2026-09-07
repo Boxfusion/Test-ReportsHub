@@ -15,6 +15,9 @@ allure-results/
 # Playwright run output
 playwright-report/
 test-results/
+ci-results/
 
 # Loose screenshots dropped in the repo root
 /REF*.png
+Mac-Setup-Simple-Guide.docx
+Test-Reports-Hub-User-Guide.docx

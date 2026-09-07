@@ -143,8 +143,10 @@ async function collectReports(source) {
   const reportFiles = source.files.filter((f) => {
     if (!f.path.startsWith('test-reports/')) return false;
     if (!f.path.endsWith('.md')) return false;
-    // Match test-reports/YYYY-MM-DD/<file>.md
-    return /^test-reports\/\d{4}-\d{2}-\d{2}\/[^/]+\.md$/.test(f.path);
+    // Match test-reports/YYYY-MM-DD/<file>.md, and the target-grouped form
+    // test-reports/<target>/YYYY-MM-DD/<file>.md that mirrors test-plans/<target>/.
+    // test-reports/bugs/** never matches: it has no YYYY-MM-DD folder.
+    return /^test-reports\/(?:[^/]+\/)?\d{4}-\d{2}-\d{2}\/[^/]+\.md$/.test(f.path);
   });
   const reports = [];
   for (const f of reportFiles) {
@@ -181,12 +183,24 @@ function collectAllure(source, reports) {
   return out;
 }
 
+// Open bugs, either flat (test-reports/bugs/<bug>.md) or grouped by target to mirror
+// test-plans/<target>/ (test-reports/bugs/<target>/<bug>.md).
+//
+// Anything under a `closed/` folder is excluded at any depth — that exclusion is load-bearing,
+// not incidental: the previous flat pattern only ever matched bugs/*.md, so bugs/closed/*.md was
+// silently left out, and admitting a target level without re-stating the rule would start counting
+// resolved bugs as open.
 function collectBugs(source) {
   return source.files
-    .filter((f) => /^test-reports\/bugs\/[^/]+\.md$/.test(f.path))
+    .filter((f) => {
+      if (!/^test-reports\/bugs\/(?:[^/]+\/)?[^/]+\.md$/.test(f.path)) return false;
+      return !f.path.split('/').includes('closed');
+    })
     .map((f) => ({
       fileRel: f.path,
       name: pathPosix.basename(f.path),
+      // The target folder, when present — lets the dashboard tell a dev bug from a phase2 one.
+      target: (f.path.match(/^test-reports\/bugs\/([^/]+)\/[^/]+\.md$/) || [])[1] || null,
       date: dateOnly(pathPosix.basename(f.path)) || '',
     }));
 }
