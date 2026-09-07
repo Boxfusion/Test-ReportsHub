@@ -2754,7 +2754,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2985,5 +2985,5 @@
       ]
     }
   ],
-  "generated": "2026-09-06T02:50:03.284Z"
+  "generated": "2026-09-07T02:49:09.702Z"
 }
