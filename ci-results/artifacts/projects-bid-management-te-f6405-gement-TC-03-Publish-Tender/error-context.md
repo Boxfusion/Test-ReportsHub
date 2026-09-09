@@ -14,14 +14,14 @@
 ```
 Error: expect(locator).toBeVisible() failed
 
-Locator: getByRole('row').filter({ hasText: 'REF2026-1153' }).filter({ hasText: 'Publish Tender' }).first()
+Locator: getByRole('row').filter({ hasText: 'REF2026-1196' }).filter({ hasText: 'Publish Tender' }).first()
 Expected: visible
 Timeout: 30000ms
 Error: element(s) not found
 
 Call log:
-  - Expect "toBeVisible" getByRole('row').filter({ hasText: 'REF2026-1153' }).filter({ hasText: 'Publish Tender' }).first() with timeout 30000ms
-  - waiting for getByRole('row').filter({ hasText: 'REF2026-1153' }).filter({ hasText: 'Publish Tender' }).first()
+  - Expect "toBeVisible" getByRole('row').filter({ hasText: 'REF2026-1196' }).filter({ hasText: 'Publish Tender' }).first() with timeout 30000ms
+  - waiting for getByRole('row').filter({ hasText: 'REF2026-1196' }).filter({ hasText: 'Publish Tender' }).first()
 
 ```
 
@@ -133,7 +133,7 @@ Call log:
         - text: Period In Possession
         - separator
     - rowgroup:
-      - row "search REF2026-1052 Maand-awe Mamathuntsha Tender Process Tender REF2026-1052 - 9TH TENDER Consolidate Responses 07/09/2026 Advertised 17 hour(s) ago":
+      - row "search REF2026-1052 Maand-awe Mamathuntsha Tender Process Tender REF2026-1052 - 9TH TENDER Consolidate Responses 07/09/2026 Advertised 2 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=aba7c56d-8b32-4bc6-be6c-4f9d7ec19563&todoid=bdd4cfc6-8305-4106-b71d-649a708863e9
@@ -146,8 +146,8 @@ Call log:
         - cell "07/09/2026"
         - cell
         - cell "Advertised"
-        - cell "17 hour(s) ago"
-      - row "search REF2026-1047 Maand-awe Mamathuntsha Tender Process Tender REF2026-1047 - 8TH TENDER Consolidate Responses 07/09/2026 Advertised 17 hour(s) ago":
+        - cell "2 day(s) ago"
+      - row "search REF2026-1047 Maand-awe Mamathuntsha Tender Process Tender REF2026-1047 - 8TH TENDER Consolidate Responses 07/09/2026 Advertised 2 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=499a22c8-8ec9-4e49-994d-911e8e8a1717&todoid=19b98d97-46da-46d6-9d44-e66dcb425a1d
@@ -160,8 +160,8 @@ Call log:
         - cell "07/09/2026"
         - cell
         - cell "Advertised"
-        - cell "17 hour(s) ago"
-      - row "search REF2026-1042 Maand-awe Mamathuntsha Tender Process Tender REF2026-1042 - SEVENTH TENDER Consolidate Responses 07/09/2026 Advertised 17 hour(s) ago":
+        - cell "2 day(s) ago"
+      - row "search REF2026-1042 Maand-awe Mamathuntsha Tender Process Tender REF2026-1042 - SEVENTH TENDER Consolidate Responses 07/09/2026 Advertised 2 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=5ad3677d-e0e5-4dbd-a6c2-b0093d06e786&todoid=0cd8c045-4329-4b8f-8765-06b6119724a2
@@ -174,8 +174,8 @@ Call log:
         - cell "07/09/2026"
         - cell
         - cell "Advertised"
-        - cell "17 hour(s) ago"
-      - row "search REF2026-1037 Maand-awe Mamathuntsha Tender Process Tender REF2026-1037 - SIXITH TENDER Consolidate Responses 07/09/2026 Advertised 17 hour(s) ago":
+        - cell "2 day(s) ago"
+      - row "search REF2026-1037 Maand-awe Mamathuntsha Tender Process Tender REF2026-1037 - SIXITH TENDER Consolidate Responses 07/09/2026 Advertised 2 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=e6f899e9-0c17-4521-a697-1a7f5772c483&todoid=fb4ca7dc-7e67-43a9-b080-5567d14474bb
@@ -188,8 +188,8 @@ Call log:
         - cell "07/09/2026"
         - cell
         - cell "Advertised"
-        - cell "17 hour(s) ago"
-      - row "search REF2026-1032 Maand-awe Mamathuntsha Tender Process Tender REF2026-1032 - FIFTH TENDER Consolidate Responses 07/09/2026 Advertised 17 hour(s) ago":
+        - cell "2 day(s) ago"
+      - row "search REF2026-1032 Maand-awe Mamathuntsha Tender Process Tender REF2026-1032 - FIFTH TENDER Consolidate Responses 07/09/2026 Advertised 2 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=92633f2a-3a8b-4280-8c1d-deb94a7b296c&todoid=cdf3e5a2-9489-4292-bce9-61fcdc85ca19
@@ -202,8 +202,8 @@ Call log:
         - cell "07/09/2026"
         - cell
         - cell "Advertised"
-        - cell "17 hour(s) ago"
-      - row "search REF2026-1024 Maand-awe Mamathuntsha Tender Process Tender REF2026-1024 - FOURTH TENDER Consolidate Responses 07/09/2026 Advertised 17 hour(s) ago":
+        - cell "2 day(s) ago"
+      - row "search REF2026-1024 Maand-awe Mamathuntsha Tender Process Tender REF2026-1024 - FOURTH TENDER Consolidate Responses 07/09/2026 Advertised 2 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=e8f4e423-9288-4b6c-8759-2fa3403deee3&todoid=b9bd9ce3-610b-4ddc-8468-d4cbbcd43e87
@@ -216,8 +216,8 @@ Call log:
         - cell "07/09/2026"
         - cell
         - cell "Advertised"
-        - cell "17 hour(s) ago"
-      - row "search REF2026-1019 Maand-awe Mamathuntsha Tender Process Tender REF2026-1019 - THIRD TENDER Consolidate Responses 07/09/2026 Advertised 17 hour(s) ago":
+        - cell "2 day(s) ago"
+      - row "search REF2026-1019 Maand-awe Mamathuntsha Tender Process Tender REF2026-1019 - THIRD TENDER Consolidate Responses 07/09/2026 Advertised 2 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=792fdb76-d008-48c8-b672-ea315a689da4&todoid=7c7de4f3-795d-4553-8829-7f0a02017115
@@ -230,8 +230,8 @@ Call log:
         - cell "07/09/2026"
         - cell
         - cell "Advertised"
-        - cell "17 hour(s) ago"
-      - row "search REF2026-1014 Maand-awe Mamathuntsha Tender Process Tender REF2026-1014 - SECOND TENDER Consolidate Responses 07/09/2026 Advertised 17 hour(s) ago":
+        - cell "2 day(s) ago"
+      - row "search REF2026-1014 Maand-awe Mamathuntsha Tender Process Tender REF2026-1014 - SECOND TENDER Consolidate Responses 07/09/2026 Advertised 2 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=40ba2b26-7275-49f0-ba57-32161aa50ba5&todoid=b0502928-062e-40e8-9bf5-697c6dc0f672
@@ -244,8 +244,8 @@ Call log:
         - cell "07/09/2026"
         - cell
         - cell "Advertised"
-        - cell "17 hour(s) ago"
-      - row "search REF2026-1008 Maand-awe Mamathuntsha Tender Process Tender REF2026-1008 - FIRST TENDER Consolidate Responses 07/09/2026 Advertised 17 hour(s) ago":
+        - cell "2 day(s) ago"
+      - row "search REF2026-1008 Maand-awe Mamathuntsha Tender Process Tender REF2026-1008 - FIRST TENDER Consolidate Responses 07/09/2026 Advertised 2 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=c9b69a6c-af04-4fdc-9a07-abe0332e01a2&todoid=49ee9d07-0543-4062-bdbf-3f07f2ddda7c
@@ -258,8 +258,8 @@ Call log:
         - cell "07/09/2026"
         - cell
         - cell "Advertised"
-        - cell "17 hour(s) ago"
-      - row "search REF2026-0997 Maand-awe Mamathuntsha Tender Process Tender REF2026-0997 - TC-01 Automated Draft Tender run-mtqq9vy7 - 90/10 Compulsory Hybrid Capture Order Details 07/09/2026 Awarded 20 hour(s) ago":
+        - cell "2 day(s) ago"
+      - row "search REF2026-0997 Maand-awe Mamathuntsha Tender Process Tender REF2026-0997 - TC-01 Automated Draft Tender run-mtqq9vy7 - 90/10 Compulsory Hybrid Capture Order Details 07/09/2026 Awarded 2 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=009a5e92-08b7-44fa-acd4-d2435a12fab0&todoid=708e38f2-36ea-4e23-841d-ce42f80075dd
@@ -272,7 +272,7 @@ Call log:
         - cell "07/09/2026"
         - cell
         - cell "Awarded"
-        - cell "20 hour(s) ago"
+        - cell "2 day(s) ago"
 - alert
 ```
 

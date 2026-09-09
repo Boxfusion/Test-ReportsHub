@@ -27,8 +27,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 2,
-    "totalRuns": 27,
-    "last7Runs": 4,
+    "totalRuns": 28,
+    "last7Runs": 5,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 1,
@@ -2562,9 +2562,9 @@
       },
       {
         "iso": "2026-09-09",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2606,14 +2606,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-08",
+            "date": "2026-09-09",
             "result": "FAILED",
-            "duration": "104.9s",
+            "duration": "58.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-08/bas.md"
+            "reportHref": "test-reports/2026-09-09/bas.md"
           },
-          "runCount": 14,
+          "runCount": 15,
           "history": [
+            {
+              "date": "2026-09-09",
+              "result": "FAILED",
+              "duration": "58.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-08",
               "result": "FAILED",
@@ -2678,12 +2684,6 @@
               "date": "2026-07-28",
               "result": "PARTIAL",
               "duration": "~10 min",
-              "variant": null
-            },
-            {
-              "date": "2026-07-28",
-              "result": "BLOCKED",
-              "duration": "~2 h (investigation)",
               "variant": null
             }
           ],
@@ -2787,6 +2787,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-09",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "58.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-09/bas.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-08",
       "runs": [
@@ -3071,5 +3085,5 @@
       ]
     }
   ],
-  "generated": "2026-09-08T02:45:28.261Z"
+  "generated": "2026-09-09T02:44:50.424Z"
 }
