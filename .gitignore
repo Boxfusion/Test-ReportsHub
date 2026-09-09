@@ -11,6 +11,7 @@ Thumbs.db
 # Allure raw results (intermediate). NOTE: generated allure-report/ dirs are
 # intentionally tracked — they are the published artefacts served via GitHub Pages.
 allure-results/
+allure-results--*/
 
 # Playwright run output
 playwright-report/
