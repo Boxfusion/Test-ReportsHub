@@ -27,8 +27,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 1,
-    "totalRuns": 10,
-    "last7Runs": 5,
+    "totalRuns": 11,
+    "last7Runs": 6,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 1,
@@ -2569,9 +2569,9 @@
       },
       {
         "iso": "2026-09-10",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2606,14 +2606,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-09",
+            "date": "2026-09-10",
             "result": "FAILED",
-            "duration": "1192.1s",
+            "duration": "1223s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-09/ecdedea-tender-process.md"
+            "reportHref": "test-reports/2026-09-10/ecdedea-tender-process.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-10",
+              "result": "FAILED",
+              "duration": "1223s",
+              "variant": null
+            },
             {
               "date": "2026-09-09",
               "result": "FAILED",
@@ -2669,6 +2675,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-10",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1223s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-10/ecdedea-tender-process.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-09",
       "runs": [
@@ -2790,5 +2810,5 @@
       ]
     }
   ],
-  "generated": "2026-09-09T02:44:50.552Z"
+  "generated": "2026-09-10T02:43:08.661Z"
 }

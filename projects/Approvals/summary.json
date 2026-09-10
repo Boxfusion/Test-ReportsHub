@@ -1,12 +1,12 @@
 {
   "totalPlans": 33,
-  "totalRuns": 208,
-  "last7Runs": 175,
+  "totalRuns": 243,
+  "last7Runs": 210,
   "last7Pass": 0,
   "last7PassPct": 0,
   "failingFlows": 35,
   "lastRun": {
-    "date": "2026-09-09",
+    "date": "2026-09-10",
     "result": "FAILED",
     "plan": "test-plans/Memo/_adhoc-craig-myitems-retract.md"
   }

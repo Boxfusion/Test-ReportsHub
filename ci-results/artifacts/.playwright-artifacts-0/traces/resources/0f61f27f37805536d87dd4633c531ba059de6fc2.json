@@ -1,0 +1,112 @@
+{
+  "result": {
+    "totalCount": 410,
+    "items": [
+      {
+        "id": "7d8f4ca3-b5ac-42b6-9530-376cad1a1ae9",
+        "refNumber": " REF2026-0837",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-0837 - Test period in possession",
+        "initiatedOn": "2026-09-09T20:57:03.67",
+        "workflowInstanceId": "7d8f4ca3-b5ac-42b6-9530-376cad1a1ae9",
+        "statusFinalText": "Submitted",
+        "currentTask": "Review and Approve Tender Details"
+      },
+      {
+        "id": "bc0d396b-b67f-463a-8b5f-a6c234a031fe",
+        "refNumber": " REF2026-1876",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1876 - testing the supplier portal",
+        "initiatedOn": "2026-08-31T13:53:13.91",
+        "workflowInstanceId": "bc0d396b-b67f-463a-8b5f-a6c234a031fe",
+        "statusFinalText": "Advertised",
+        "currentTask": "Consolidate Responses"
+      },
+      {
+        "id": "30fa0790-3e61-46a2-bcac-d933a96333b8",
+        "refNumber": " REF2026-1821",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1821 - Building",
+        "initiatedOn": "2026-08-31T10:36:04.733",
+        "workflowInstanceId": "30fa0790-3e61-46a2-bcac-d933a96333b8",
+        "statusFinalText": "Evaluation In Progress",
+        "currentTask": "Invite BEC members"
+      },
+      {
+        "id": "b260bd9c-497d-4700-875c-967054480ae5",
+        "refNumber": " REF2026-1794",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1794 - Building of a school",
+        "initiatedOn": "2026-08-31T08:38:28.237",
+        "workflowInstanceId": "b260bd9c-497d-4700-875c-967054480ae5",
+        "statusFinalText": "Awarded",
+        "currentTask": null
+      },
+      {
+        "id": "f7b74c9a-3229-422d-96e0-8a36f2c227ce",
+        "refNumber": " REF2026-1790",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1790 - TC-01 Automated Draft Tender run-mtgmjbs0 - 90/10 Compulsory Hybrid",
+        "initiatedOn": "2026-08-31T04:33:51.147",
+        "workflowInstanceId": "f7b74c9a-3229-422d-96e0-8a36f2c227ce",
+        "statusFinalText": "Awarded",
+        "currentTask": "Capture Order Details"
+      },
+      {
+        "id": "8b0315fd-9e81-483d-b095-b325835227ca",
+        "refNumber": " REF2026-1771",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1771 - School",
+        "initiatedOn": "2026-08-30T14:32:23.117",
+        "workflowInstanceId": "8b0315fd-9e81-483d-b095-b325835227ca",
+        "statusFinalText": "Awarded",
+        "currentTask": null
+      },
+      {
+        "id": "06c771f6-e027-475d-8752-6897fcce29df",
+        "refNumber": " REF2026-1764",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1764 - tender101",
+        "initiatedOn": "2026-08-30T13:17:05.847",
+        "workflowInstanceId": "06c771f6-e027-475d-8752-6897fcce29df",
+        "statusFinalText": "Evaluation In Progress",
+        "currentTask": "BEC: Monitor Evaluation Progress"
+      },
+      {
+        "id": "bc3ae043-e1fd-4c8b-91b3-40416eb32c26",
+        "refNumber": " REF2026-1758",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1758 - TC-01 Automated Draft Tender run-mtf738zp - 90/10 Compulsory Hybrid",
+        "initiatedOn": "2026-08-30T04:34:03.383",
+        "workflowInstanceId": "bc3ae043-e1fd-4c8b-91b3-40416eb32c26",
+        "statusFinalText": "Awarded",
+        "currentTask": "Capture Order Details"
+      },
+      {
+        "id": "5acbd489-27de-4fa5-ac15-e63eb5b5b954",
+        "refNumber": " REF2026-1752",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1752 - TC-01 Automated Draft Tender run-mtdrblfn - 90/10 Compulsory Hybrid",
+        "initiatedOn": "2026-08-29T04:24:32.857",
+        "workflowInstanceId": "5acbd489-27de-4fa5-ac15-e63eb5b5b954",
+        "statusFinalText": "Awarded",
+        "currentTask": "Capture Order Details"
+      },
+      {
+        "id": "ffc2b235-57a2-4f1d-9e22-40ca745a3619",
+        "refNumber": " REF2026-1724",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1724 - test",
+        "initiatedOn": "2026-08-28T08:40:59.42",
+        "workflowInstanceId": "ffc2b235-57a2-4f1d-9e22-40ca745a3619",
+        "statusFinalText": "Awarded",
+        "currentTask": null
+      }
+    ]
+  },
+  "targetUrl": null,
+  "success": true,
+  "error": null,
+  "unAuthorizedRequest": false,
+  "__abp": true
+}
