@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 248,
-    "last7Runs": 215,
+    "totalRuns": 249,
+    "last7Runs": 216,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 35,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 5,
+        "runs": 6,
         "passed": 0,
-        "failed": 5,
+        "failed": 6,
         "partial": 0
       },
       {
@@ -3017,23 +3017,24 @@
           "spec": "test-plans/Memo/verify-add-referral.spec.ts",
           "specHref": "test-plans/Memo/verify-add-referral.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "48.5s",
+            "duration": "49.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-add-referral.md"
+            "reportHref": "test-reports/2026-09-11/verify-add-referral.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "49.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -3768,7 +3769,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4040,7 +4041,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4584,7 +4585,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4652,7 +4653,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4898,6 +4899,15 @@
           "duration": "65s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/verify-action-required-auto-populate-action-text.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-add-referral.md",
+          "planDisplay": "Memo/verify-add-referral.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "49.2s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/verify-add-referral.md"
         }
       ]
     },
@@ -7144,5 +7154,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T09:25:59.366Z"
+  "generated": "2026-09-11T09:28:54.463Z"
 }
