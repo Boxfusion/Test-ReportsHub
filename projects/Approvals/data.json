@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 253,
-    "last7Runs": 220,
+    "totalRuns": 254,
+    "last7Runs": 221,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 35,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 10,
+        "runs": 11,
         "passed": 0,
-        "failed": 10,
+        "failed": 11,
         "partial": 0
       },
       {
@@ -3362,23 +3362,24 @@
           "spec": "test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts",
           "specHref": "test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "48.1s",
+            "duration": "49.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-can-edit-enabled-shows-edit-button.md"
+            "reportHref": "test-reports/2026-09-11/verify-can-edit-enabled-shows-edit-button.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "49.8s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -3705,7 +3706,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3841,7 +3842,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4453,7 +4454,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4725,7 +4726,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4948,6 +4949,15 @@
           "duration": "51.3s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/verify-can-edit-disabled-hides-edit-button.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-can-edit-enabled-shows-edit-button.md",
+          "planDisplay": "Memo/verify-can-edit-enabled-shows-edit-button.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "49.8s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/verify-can-edit-enabled-shows-edit-button.md"
         }
       ]
     },
@@ -7194,5 +7204,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T09:41:54.951Z"
+  "generated": "2026-09-11T09:44:55.202Z"
 }

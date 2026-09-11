@@ -1,19 +1,19 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="51.290592">
-<testsuite name="projects/Approvals/test-plans/Memo/verify-can-edit-disabled-hides-edit-button.spec.ts" timestamp="2026-09-11T09:41:03.721Z" hostname="" tests="1" failures="0" skipped="0" time="48.115" errors="1">
-<testcase name="TC-01 — Verify Can Edit Disabled Hides Edit Button" classname="projects/Approvals/test-plans/Memo/verify-can-edit-disabled-hides-edit-button.spec.ts" time="48.115">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="49.751106">
+<testsuite name="projects/Approvals/test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts" timestamp="2026-09-11T09:44:05.553Z" hostname="" tests="1" failures="0" skipped="0" time="47.486" errors="1">
+<testcase name="TC-01 — Verify Can Edit Enabled Shows Edit Button" classname="projects/Approvals/test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts" time="47.486">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-d0d5b--Disabled-Hides-Edit-Button/test-failed-1.png]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-0fca4-t-Enabled-Shows-Edit-Button/test-failed-1.png]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-d0d5b--Disabled-Hides-Edit-Button/video.webm]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-0fca4-t-Enabled-Shows-Edit-Button/video.webm]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-d0d5b--Disabled-Hides-Edit-Button/error-context.md]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-0fca4-t-Enabled-Shows-Edit-Button/error-context.md]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-d0d5b--Disabled-Hides-Edit-Button/trace.zip]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-0fca4-t-Enabled-Shows-Edit-Button/trace.zip]]
 ]]>
 </system-out>
 <error message="locator.click: Timeout 6000ms exceeded." type="TimeoutError">
-<![CDATA[  projects/Approvals/test-plans/Memo/verify-can-edit-disabled-hides-edit-button.spec.ts:90:5 › TC-01 — Verify Can Edit Disabled Hides Edit Button 
+<![CDATA[  projects/Approvals/test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts:92:5 › TC-01 — Verify Can Edit Enabled Shows Edit Button 
 
     TimeoutError: locator.click: Timeout 6000ms exceeded.
     Call log:
@@ -41,10 +41,6 @@
            - <a class="nav-links-renderer" href="/dynamic/Shesha.Workflow/workflows-inbox">Inbox</a> from <div>…</div> subtree intercepts pointer events
          - retrying click action
            - waiting 500ms
-        - waiting for element to be visible, enabled and stable
-        - element is visible, enabled and stable
-        - scrolling into view if needed
-        - done scrolling
 
 
       29 |   for (let i = 0; i < attempts; i++) {
@@ -54,24 +50,24 @@
       32 |       return;
       33 |     } catch (err) {
       34 |       if (i === attempts - 1) throw err;
-        at clickWithFlyoutRetry (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-can-edit-disabled-hides-edit-button.spec.ts:31:21)
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-can-edit-disabled-hides-edit-button.spec.ts:118:5
+        at clickWithFlyoutRetry (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts:31:21)
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts:120:5
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-d0d5b--Disabled-Hides-Edit-Button/test-failed-1.png
+    ci-results/artifacts/projects-Approvals-test-pl-0fca4-t-Enabled-Shows-Edit-Button/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-d0d5b--Disabled-Hides-Edit-Button/video.webm
+    ci-results/artifacts/projects-Approvals-test-pl-0fca4-t-Enabled-Shows-Edit-Button/video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ci-results/artifacts/projects-Approvals-test-pl-d0d5b--Disabled-Hides-Edit-Button/error-context.md
+    Error Context: ci-results/artifacts/projects-Approvals-test-pl-0fca4-t-Enabled-Shows-Edit-Button/error-context.md
 
     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-d0d5b--Disabled-Hides-Edit-Button/trace.zip
+    ci-results/artifacts/projects-Approvals-test-pl-0fca4-t-Enabled-Shows-Edit-Button/trace.zip
     Usage:
 
-        npx playwright show-trace ci-results/artifacts/projects-Approvals-test-pl-d0d5b--Disabled-Hides-Edit-Button/trace.zip
+        npx playwright show-trace ci-results/artifacts/projects-Approvals-test-pl-0fca4-t-Enabled-Shows-Edit-Button/trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>

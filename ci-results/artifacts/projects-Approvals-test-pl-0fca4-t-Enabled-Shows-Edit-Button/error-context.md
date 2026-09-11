@@ -6,8 +6,8 @@
 
 # Test info
 
-- Name: projects/Approvals/test-plans/Memo/verify-can-edit-disabled-hides-edit-button.spec.ts >> TC-01 — Verify Can Edit Disabled Hides Edit Button
-- Location: projects/Approvals/test-plans/Memo/verify-can-edit-disabled-hides-edit-button.spec.ts:90:5
+- Name: projects/Approvals/test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts >> TC-01 — Verify Can Edit Enabled Shows Edit Button
+- Location: projects/Approvals/test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts:92:5
 
 # Error details
 
@@ -38,10 +38,6 @@ Call log:
        - <a class="nav-links-renderer" href="/dynamic/Shesha.Workflow/workflows-inbox">Inbox</a> from <div>…</div> subtree intercepts pointer events
      - retrying click action
        - waiting 500ms
-    - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-    - done scrolling
 
 ```
 
@@ -307,8 +303,8 @@ Call log:
 # Test source
 
 ```ts
-  1   | // AUTO-RECORDED from test-plans/Memo/verify-can-edit-disabled-hides-edit-button.md
-  2   | // Source: Azure DevOps test plan #100853, suite #100854, test case #105899
+  1   | // AUTO-RECORDED from test-plans/Memo/verify-can-edit-enabled-shows-edit-button.md
+  2   | // Source: Azure DevOps test plan #100853, suite #100854, test case #105897
   3   | // The .md plan is canonical. AI-repair will patch failing lines in this file.
   4   | // Do not hand-edit unless you are also updating the .md plan.
   5   | 
@@ -386,57 +382,57 @@ Call log:
   76  |   }
   77  | }
   78  | 
-  79  | // Confirmed live in #105897: the Memo Contents tab is a flat expandable list — one row per content field
-  80  | // (Purpose, Background, Discussion, Financial Implications, Risks, Recommendation), each with its own
-  81  | // "Edit"/"audit" button pair. Scope narrowly to the Purpose row via its stable "audit" button anchor
-  82  | // (not "Edit", whose own enabled/disabled state is exactly what this test is checking, and which a
-  83  | // low-code designer overlay icon elsewhere on the page can also falsely match under a loose /edit/i query).
-  84  | function purposeRow(memoContentsPanel: Locator) {
-  85  |   return memoContentsPanel.locator(
-  86  |     'xpath=.//*[normalize-space(text())="Purpose"]/ancestor::*[.//button[contains(., "audit")]][1]'
-  87  |   );
-  88  | }
-  89  | 
-  90  | test('TC-01 — Verify Can Edit Disabled Hides Edit Button', async ({ page }) => {
-  91  |   test.setTimeout(300_000);
-  92  | 
-  93  |   // STEP 1: NAVIGATE to login page and log in as Ian (initiator)
-  94  |   await login(page, INITIATOR);
-  95  |   await expect(page).not.toHaveURL(/login/);
-  96  | 
-  97  |   // STEP 2: Live -> Latest
-  98  |   const viewModeControl = page.locator('[title="Click to change view mode"]');
-  99  |   await switchToLatest(page, viewModeControl);
-  100 | 
-  101 |   // STEP 3: CLICK the sidebar Toggle in the top-left corner
-  102 |   const toggle = page.locator('.ant-layout-sider-trigger, [class*="trigger"], [aria-label*="toggle" i], [aria-label*="menu" i]').first();
-  103 |   await toggle.click();
-  104 | 
-  105 |   // STEP 4: CLICK the Workflows dropdown
-  106 |   await page.getByText(/^Workflows?$/i).first().click();
-  107 |   await expect(page.getByText(/^Inbox$/i).first()).toBeVisible({ timeout: 10_000 });
-  108 | 
-  109 |   // STEP 5: CLICK the My Items menu item
-  110 |   await page.goto(`${APP_URL}/dynamic/Shesha.Workflow/workflows-my-items`, { waitUntil: 'domcontentloaded', timeout: 30_000 });
-  111 |   await page.waitForLoadState('networkidle');
-  112 |   await expect(page.getByRole('button', { name: /create new/i })).toBeVisible({ timeout: 15_000 });
-  113 | 
-  114 |   // STEP 6: CLICK the Create New button. Retried: this occasionally doesn't open its menu on the first
-  115 |   // click if the page is still settling.
-  116 |   const newReferralsItem = page.getByRole('menuitem', { name: /new referrals?/i });
-  117 |   for (let attempt = 0; attempt < 3; attempt++) {
-  118 |     await clickWithFlyoutRetry(page, page.getByRole('button', { name: /create new/i }));
-  119 |     try {
-  120 |       await expect(newReferralsItem).toBeVisible({ timeout: 6_000 });
-  121 |       break;
-  122 |     } catch (err) {
-  123 |       if (attempt === 2) throw err;
-  124 |     }
-  125 |   }
-  126 | 
-  127 |   // STEP 7: CLICK the New Referrals subtype
-  128 |   await clickWithFlyoutRetry(page, newReferralsItem);
-  129 | 
-  130 |   // STEP 8: POPULATE all mandatory Compose fields and ACTION the item to Routing.
-  131 |   await expect(page.getByText(/subject/i).first()).toBeVisible({ timeout: 15_000 });
+  79  | // The Memo Contents tab is a flat expandable list — one row per content field (Purpose, Background,
+  80  | // Discussion, Financial Implications, Risks, Recommendation), each with its own "Edit"/"audit" button
+  81  | // pair. Scope narrowly to the Purpose row specifically rather than assuming Purpose is first in DOM
+  82  | // order. Anchor on the "audit" button, not "Edit" — this is a lazy Playwright locator re-evaluated on
+  83  | // every use, and the row's "Edit" button itself changes (to Save/Cancel) once edit mode activates, which
+  84  | // would make an "Edit"-anchored locator silently stop matching anything after the click. The audit/history
+  85  | // button is unaffected by the edit toggle and stays a stable anchor across both states.
+  86  | function purposeRow(memoContentsPanel: Locator) {
+  87  |   return memoContentsPanel.locator(
+  88  |     'xpath=.//*[normalize-space(text())="Purpose"]/ancestor::*[.//button[contains(., "audit")]][1]'
+  89  |   );
+  90  | }
+  91  | 
+  92  | test('TC-01 — Verify Can Edit Enabled Shows Edit Button', async ({ page }) => {
+  93  |   test.setTimeout(360_000);
+  94  | 
+  95  |   // STEP 1: NAVIGATE to login page and log in as Ian (initiator)
+  96  |   await login(page, INITIATOR);
+  97  |   await expect(page).not.toHaveURL(/login/);
+  98  | 
+  99  |   // STEP 2: Live -> Latest
+  100 |   const viewModeControl = page.locator('[title="Click to change view mode"]');
+  101 |   await switchToLatest(page, viewModeControl);
+  102 | 
+  103 |   // STEP 3: CLICK the sidebar Toggle in the top-left corner
+  104 |   const toggle = page.locator('.ant-layout-sider-trigger, [class*="trigger"], [aria-label*="toggle" i], [aria-label*="menu" i]').first();
+  105 |   await toggle.click();
+  106 | 
+  107 |   // STEP 4: CLICK the Workflows dropdown
+  108 |   await page.getByText(/^Workflows?$/i).first().click();
+  109 |   await expect(page.getByText(/^Inbox$/i).first()).toBeVisible({ timeout: 10_000 });
+  110 | 
+  111 |   // STEP 5: CLICK the My Items menu item
+  112 |   await page.goto(`${APP_URL}/dynamic/Shesha.Workflow/workflows-my-items`, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+  113 |   await page.waitForLoadState('networkidle');
+  114 |   await expect(page.getByRole('button', { name: /create new/i })).toBeVisible({ timeout: 15_000 });
+  115 | 
+  116 |   // STEP 6: CLICK the Create New button. Retried: this occasionally doesn't open its menu on the first
+  117 |   // click if the page is still settling.
+  118 |   const newReferralsItem = page.getByRole('menuitem', { name: /new referrals?/i });
+  119 |   for (let attempt = 0; attempt < 3; attempt++) {
+  120 |     await clickWithFlyoutRetry(page, page.getByRole('button', { name: /create new/i }));
+  121 |     try {
+  122 |       await expect(newReferralsItem).toBeVisible({ timeout: 6_000 });
+  123 |       break;
+  124 |     } catch (err) {
+  125 |       if (attempt === 2) throw err;
+  126 |     }
+  127 |   }
+  128 | 
+  129 |   // STEP 7: CLICK the New Referrals subtype
+  130 |   await clickWithFlyoutRetry(page, newReferralsItem);
+  131 | 
 ```
