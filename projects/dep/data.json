@@ -22,12 +22,12 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 6,
-    "totalRuns": 12,
-    "last7Runs": 1,
+    "totalRuns": 13,
+    "last7Runs": 2,
     "last7Pass": 0,
     "last7PassPct": 0,
-    "failingFlows": 3,
-    "passingFlows": 1,
+    "failingFlows": 4,
+    "passingFlows": 0,
     "partialFlows": 0,
     "neverFlows": 2
   },
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2622,6 +2622,44 @@
       "stripPrefix": "test-plans/cases/",
       "plans": [
         {
+          "plan": "test-plans/cases/create-case.md",
+          "planHref": "test-plans/cases/create-case.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
+          "badges": [
+            {
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-09-11",
+            "result": "FAILED",
+            "duration": "1218.5s",
+            "variant": null,
+            "reportHref": "test-reports/2026-09-11/create-case.md"
+          },
+          "runCount": 2,
+          "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "1218.5s",
+              "variant": null
+            },
+            {
+              "date": "2026-04-30",
+              "result": "PASSED",
+              "duration": "120s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
           "plan": "test-plans/cases/create-call-log-entry.md",
           "planHref": "test-plans/cases/create-call-log-entry.md",
           "spec": null,
@@ -2652,42 +2690,6 @@
               "date": "2026-05-14",
               "result": "FAILED",
               "duration": "~37 min (incl. exploration of alternative UI)",
-              "variant": null
-            }
-          ],
-          "bugs": []
-        },
-        {
-          "plan": "test-plans/cases/create-case.md",
-          "planHref": "test-plans/cases/create-case.md",
-          "spec": null,
-          "specHref": null,
-          "canRun": false,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            },
-            {
-              "kind": "no-spec",
-              "text": "no .spec.ts yet"
-            }
-          ],
-          "rowStatus": "passing",
-          "status": "PASSED",
-          "last": {
-            "date": "2026-04-30",
-            "result": "PASSED",
-            "duration": "120s",
-            "variant": null,
-            "reportHref": "test-reports/2026-04-30/create-case.md"
-          },
-          "runCount": 1,
-          "history": [
-            {
-              "date": "2026-04-30",
-              "result": "PASSED",
-              "duration": "120s",
               "variant": null
             }
           ],
@@ -2754,7 +2756,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -2846,6 +2848,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-11",
+      "runs": [
+        {
+          "plan": "test-plans/cases/create-case.md",
+          "planDisplay": "cases/create-case.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1218.5s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/create-case.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-10",
       "runs": [
@@ -3005,5 +3021,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T06:55:13.510Z"
+  "generated": "2026-09-11T07:20:46.585Z"
 }
