@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 257,
-    "last7Runs": 224,
+    "totalRuns": 258,
+    "last7Runs": 225,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 35,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 14,
+        "runs": 15,
         "passed": 0,
-        "failed": 14,
+        "failed": 15,
         "partial": 0
       },
       {
@@ -3638,23 +3638,24 @@
           "spec": "test-plans/Memo/verify-comments-mandatory-for-negative-actions.spec.ts",
           "specHref": "test-plans/Memo/verify-comments-mandatory-for-negative-actions.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "47.1s",
+            "duration": "46.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-comments-mandatory-for-negative-actions.md"
+            "reportHref": "test-reports/2026-09-11/verify-comments-mandatory-for-negative-actions.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "46.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4049,7 +4050,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4729,7 +4730,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4988,6 +4989,15 @@
           "duration": "48.6s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/verify-comments-mandatory-for-negative-actions-craig.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-comments-mandatory-for-negative-actions.md",
+          "planDisplay": "Memo/verify-comments-mandatory-for-negative-actions.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.3s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/verify-comments-mandatory-for-negative-actions.md"
         }
       ]
     },
@@ -7234,5 +7244,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T09:54:45.117Z"
+  "generated": "2026-09-11T09:57:31.955Z"
 }

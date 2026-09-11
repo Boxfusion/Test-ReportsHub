@@ -1,19 +1,19 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="48.61865100000001">
-<testsuite name="projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.spec.ts" timestamp="2026-09-11T09:53:56.023Z" hostname="" tests="1" failures="0" skipped="0" time="46.183" errors="1">
-<testcase name="TC-01 — Verify Comments Are Mandatory For Negative Actions" classname="projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.spec.ts" time="46.183">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="46.348805">
+<testsuite name="projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions.spec.ts" timestamp="2026-09-11T09:56:45.653Z" hostname="" tests="1" failures="0" skipped="0" time="45.094" errors="1">
+<testcase name="TC-01 — Verify Comments Field Is Mandatory For Negative Actions" classname="projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions.spec.ts" time="45.094">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-7c1ec-datory-For-Negative-Actions/test-failed-1.png]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-5532f-datory-For-Negative-Actions/test-failed-1.png]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-7c1ec-datory-For-Negative-Actions/video.webm]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-5532f-datory-For-Negative-Actions/video.webm]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-7c1ec-datory-For-Negative-Actions/error-context.md]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-5532f-datory-For-Negative-Actions/error-context.md]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-7c1ec-datory-For-Negative-Actions/trace.zip]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-5532f-datory-For-Negative-Actions/trace.zip]]
 ]]>
 </system-out>
 <error message="locator.click: Timeout 6000ms exceeded." type="TimeoutError">
-<![CDATA[  projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.spec.ts:63:5 › TC-01 — Verify Comments Are Mandatory For Negative Actions 
+<![CDATA[  projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions.spec.ts:62:5 › TC-01 — Verify Comments Field Is Mandatory For Negative Actions 
 
     TimeoutError: locator.click: Timeout 6000ms exceeded.
     Call log:
@@ -47,31 +47,31 @@
         - done scrolling
 
 
-      29 |   for (let i = 0; i < attempts; i++) {
-      30 |     try {
-    > 31 |       await locator.click({ timeout: 6_000 });
+      28 |   for (let i = 0; i < attempts; i++) {
+      29 |     try {
+    > 30 |       await locator.click({ timeout: 6_000 });
          |                     ^
-      32 |       return;
-      33 |     } catch (err) {
-      34 |       if (i === attempts - 1) throw err;
-        at clickWithFlyoutRetry (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.spec.ts:31:21)
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.spec.ts:102:5
+      31 |       return;
+      32 |     } catch (err) {
+      33 |       if (i === attempts - 1) throw err;
+        at clickWithFlyoutRetry (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions.spec.ts:30:21)
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions.spec.ts:86:5
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-7c1ec-datory-For-Negative-Actions/test-failed-1.png
+    ci-results/artifacts/projects-Approvals-test-pl-5532f-datory-For-Negative-Actions/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-7c1ec-datory-For-Negative-Actions/video.webm
+    ci-results/artifacts/projects-Approvals-test-pl-5532f-datory-For-Negative-Actions/video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ci-results/artifacts/projects-Approvals-test-pl-7c1ec-datory-For-Negative-Actions/error-context.md
+    Error Context: ci-results/artifacts/projects-Approvals-test-pl-5532f-datory-For-Negative-Actions/error-context.md
 
     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-7c1ec-datory-For-Negative-Actions/trace.zip
+    ci-results/artifacts/projects-Approvals-test-pl-5532f-datory-For-Negative-Actions/trace.zip
     Usage:
 
-        npx playwright show-trace ci-results/artifacts/projects-Approvals-test-pl-7c1ec-datory-For-Negative-Actions/trace.zip
+        npx playwright show-trace ci-results/artifacts/projects-Approvals-test-pl-5532f-datory-For-Negative-Actions/trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
