@@ -2602,7 +2602,12 @@
           "spec": "test-plans/invoice-process/bas.spec.ts",
           "specHref": "test-plans/invoice-process/bas.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3099,5 +3104,5 @@
       ]
     }
   ],
-  "generated": "2026-09-10T13:37:09.254Z"
+  "generated": "2026-09-11T06:55:13.033Z"
 }

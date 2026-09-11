@@ -2597,7 +2597,12 @@
           "spec": "test-plans/Login/empty-username-and-password.spec.ts",
           "specHref": "test-plans/Login/empty-username-and-password.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2660,7 +2665,12 @@
           "spec": "test-plans/Login/invalid-login.spec.ts",
           "specHref": "test-plans/Login/invalid-login.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2723,7 +2733,12 @@
           "spec": "test-plans/Login/invalid-username-valid-password.spec.ts",
           "specHref": "test-plans/Login/invalid-username-valid-password.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2786,7 +2801,12 @@
           "spec": "test-plans/Login/valid-login.spec.ts",
           "specHref": "test-plans/Login/valid-login.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2849,7 +2869,12 @@
           "spec": "test-plans/Login/valid-username-invalid-password.spec.ts",
           "specHref": "test-plans/Login/valid-username-invalid-password.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2919,7 +2944,12 @@
           "spec": "test-plans/Memo/verify-action-required-auto-populate-action-text.spec.ts",
           "specHref": "test-plans/Memo/verify-action-required-auto-populate-action-text.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2982,7 +3012,12 @@
           "spec": "test-plans/Memo/verify-add-referral.spec.ts",
           "specHref": "test-plans/Memo/verify-add-referral.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3045,7 +3080,12 @@
           "spec": "test-plans/Memo/verify-approve-memo.spec.ts",
           "specHref": "test-plans/Memo/verify-approve-memo.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3108,7 +3148,12 @@
           "spec": "test-plans/Memo/verify-attach-supporting-documents.spec.ts",
           "specHref": "test-plans/Memo/verify-attach-supporting-documents.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3171,7 +3216,12 @@
           "spec": "test-plans/Memo/verify-attachments-next-button-navigation.spec.ts",
           "specHref": "test-plans/Memo/verify-attachments-next-button-navigation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3234,7 +3284,12 @@
           "spec": "test-plans/Memo/verify-can-edit-disabled-hides-edit-button.spec.ts",
           "specHref": "test-plans/Memo/verify-can-edit-disabled-hides-edit-button.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3297,7 +3352,12 @@
           "spec": "test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts",
           "specHref": "test-plans/Memo/verify-can-edit-enabled-shows-edit-button.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3360,7 +3420,12 @@
           "spec": "test-plans/Memo/verify-cc-user-in-routing-list.spec.ts",
           "specHref": "test-plans/Memo/verify-cc-user-in-routing-list.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3423,7 +3488,12 @@
           "spec": "test-plans/Memo/verify-close-memo.spec.ts",
           "specHref": "test-plans/Memo/verify-close-memo.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3486,7 +3556,12 @@
           "spec": "test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.spec.ts",
           "specHref": "test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3549,7 +3624,12 @@
           "spec": "test-plans/Memo/verify-comments-mandatory-for-negative-actions.spec.ts",
           "specHref": "test-plans/Memo/verify-comments-mandatory-for-negative-actions.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3612,7 +3692,12 @@
           "spec": "test-plans/Memo/verify-edit-delete-signatory.spec.ts",
           "specHref": "test-plans/Memo/verify-edit-delete-signatory.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3675,7 +3760,12 @@
           "spec": "test-plans/Memo/verify-mandatory-data-validation.spec.ts",
           "specHref": "test-plans/Memo/verify-mandatory-data-validation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3738,7 +3828,12 @@
           "spec": "test-plans/Memo/verify-new-draft-version-creation.spec.ts",
           "specHref": "test-plans/Memo/verify-new-draft-version-creation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3801,7 +3896,12 @@
           "spec": "test-plans/Memo/verify-new-version-created.spec.ts",
           "specHref": "test-plans/Memo/verify-new-version-created.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3864,7 +3964,12 @@
           "spec": "test-plans/Memo/verify-next-button-navigation.spec.ts",
           "specHref": "test-plans/Memo/verify-next-button-navigation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3927,7 +4032,12 @@
           "spec": "test-plans/Memo/verify-preview-in-pdf.spec.ts",
           "specHref": "test-plans/Memo/verify-preview-in-pdf.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3990,7 +4100,12 @@
           "spec": "test-plans/Memo/verify-reassign-function.spec.ts",
           "specHref": "test-plans/Memo/verify-reassign-function.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4053,7 +4168,12 @@
           "spec": "test-plans/Memo/verify-recommend-memo.spec.ts",
           "specHref": "test-plans/Memo/verify-recommend-memo.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4116,7 +4236,12 @@
           "spec": "test-plans/Memo/verify-reorder-signatories.spec.ts",
           "specHref": "test-plans/Memo/verify-reorder-signatories.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4179,7 +4304,12 @@
           "spec": "test-plans/Memo/verify-replace-supporting-documents.spec.ts",
           "specHref": "test-plans/Memo/verify-replace-supporting-documents.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4242,7 +4372,12 @@
           "spec": "test-plans/Memo/verify-retract-functionality.spec.ts",
           "specHref": "test-plans/Memo/verify-retract-functionality.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4305,7 +4440,12 @@
           "spec": "test-plans/Memo/verify-send-back.spec.ts",
           "specHref": "test-plans/Memo/verify-send-back.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4368,7 +4508,12 @@
           "spec": "test-plans/Memo/verify-send-to-approver-first.spec.ts",
           "specHref": "test-plans/Memo/verify-send-to-approver-first.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4431,7 +4576,12 @@
           "spec": "test-plans/Memo/verify-tabs-under-compose-step.spec.ts",
           "specHref": "test-plans/Memo/verify-tabs-under-compose-step.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4494,7 +4644,12 @@
           "spec": "test-plans/Memo/verify-take-ownership.spec.ts",
           "specHref": "test-plans/Memo/verify-take-ownership.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4557,7 +4712,12 @@
           "spec": "test-plans/Memo/verify-withdraw-button.spec.ts",
           "specHref": "test-plans/Memo/verify-withdraw-button.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4620,7 +4780,12 @@
           "spec": "test-plans/Memo/verify-withdraw-memo.spec.ts",
           "specHref": "test-plans/Memo/verify-withdraw-memo.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -6924,5 +7089,5 @@
       ]
     }
   ],
-  "generated": "2026-09-10T13:37:09.204Z"
+  "generated": "2026-09-11T06:55:12.968Z"
 }

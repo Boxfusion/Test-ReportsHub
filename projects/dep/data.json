@@ -2751,7 +2751,12 @@
           "spec": "test-plans/service-requests/create-service-request-v2.spec.ts",
           "specHref": "test-plans/service-requests/create-service-request-v2.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3000,5 +3005,5 @@
       ]
     }
   ],
-  "generated": "2026-09-10T13:37:09.690Z"
+  "generated": "2026-09-11T06:55:13.510Z"
 }

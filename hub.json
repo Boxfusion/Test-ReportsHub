@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T13:37:09.931Z",
+  "generated": "2026-09-11T06:55:13.779Z",
   "projects": [
     {
       "name": "Approvals",
@@ -140,6 +140,29 @@
       "href": "projects/eRecruitment/index.html"
     },
     {
+      "name": "HCM",
+      "displayName": "HCM Admin Portal",
+      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+      "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 24,
+        "totalRuns": 154,
+        "last7Runs": 115,
+        "last7Pass": 114,
+        "last7PassPct": 99,
+        "failingFlows": 1,
+        "lastRun": {
+          "date": "2026-09-11",
+          "result": "FAILED",
+          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md"
+        }
+      },
+      "href": "projects/HCM/index.html"
+    },
+    {
       "name": "invoice-tracking",
       "displayName": "Invoice Tracking",
       "appUrl": "https://pd-invtracking-adminportal-qa.azurewebsites.net/login",
@@ -255,29 +278,6 @@
       "href": "projects/bid-management/index.html"
     },
     {
-      "name": "HCM",
-      "displayName": "HCM Admin Portal",
-      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
-      "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
-      "health": "healthy",
-      "summary": {
-        "totalPlans": 24,
-        "totalRuns": 153,
-        "last7Runs": 116,
-        "last7Pass": 116,
-        "last7PassPct": 100,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-09-10",
-          "result": "PASSED",
-          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md"
-        }
-      },
-      "href": "projects/HCM/index.html"
-    },
-    {
       "name": "dispatch",
       "displayName": "NC Dispatch",
       "appUrl": "https://ncdoh-dispatcher-adminportal-qa.shesha.app/login",
@@ -327,8 +327,8 @@
   "totals": {
     "totalProjects": 14,
     "totalPlans": 272,
-    "totalRuns": 1001,
-    "last7Runs": 477,
-    "failingFlows": 81
+    "totalRuns": 1002,
+    "last7Runs": 476,
+    "failingFlows": 82
   }
 }

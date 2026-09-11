@@ -2602,7 +2602,12 @@
           "spec": "test-plans/tender-process/ecdedea-tender-process.spec.ts",
           "specHref": "test-plans/tender-process/ecdedea-tender-process.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2810,5 +2815,5 @@
       ]
     }
   ],
-  "generated": "2026-09-10T13:37:09.376Z"
+  "generated": "2026-09-11T06:55:13.154Z"
 }

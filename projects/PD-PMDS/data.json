@@ -2597,7 +2597,12 @@
           "spec": "test-plans/contracting/contracting-lifecycle.spec.ts",
           "specHref": "test-plans/contracting/contracting-lifecycle.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2660,7 +2665,12 @@
           "spec": "test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
           "specHref": "test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3551,5 +3561,5 @@
       ]
     }
   ],
-  "generated": "2026-09-10T13:37:09.595Z"
+  "generated": "2026-09-11T06:55:13.402Z"
 }

@@ -2634,7 +2634,12 @@
           "spec": "test-plans/annual-compliance/08-annual-report-submission.spec.ts",
           "specHref": "test-plans/annual-compliance/08-annual-report-submission.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -2697,7 +2702,12 @@
           "spec": "test-plans/annual-compliance/09-annual-report-backend-quality-assure.spec.ts",
           "specHref": "test-plans/annual-compliance/09-annual-report-backend-quality-assure.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2857,7 +2867,12 @@
           "spec": "test-plans/appeals/11a-appeals-admin-tribunal.spec.ts",
           "specHref": "test-plans/appeals/11a-appeals-admin-tribunal.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2926,7 +2941,12 @@
           "spec": "test-plans/appeals/11p-appeals-submitter.spec.ts",
           "specHref": "test-plans/appeals/11p-appeals-submitter.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3086,7 +3106,12 @@
           "spec": "test-plans/application-processing/07-application-triage-and-verification.spec.ts",
           "specHref": "test-plans/application-processing/07-application-triage-and-verification.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3222,7 +3247,12 @@
           "spec": "test-plans/auth/01-authentication-account-creation.spec.ts",
           "specHref": "test-plans/auth/01-authentication-account-creation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3395,7 +3425,12 @@
           "spec": "test-plans/cross-cutting/14s-public-npo-search.spec.ts",
           "specHref": "test-plans/cross-cutting/14s-public-npo-search.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3452,7 +3487,12 @@
           "spec": "test-plans/cross-cutting/14w-accessibility-wcag.spec.ts",
           "specHref": "test-plans/cross-cutting/14w-accessibility-wcag.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3978,7 +4018,12 @@
           "spec": "test-plans/deregistration/13a-voluntary-deregistration-admin.spec.ts",
           "specHref": "test-plans/deregistration/13a-voluntary-deregistration-admin.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -4035,7 +4080,12 @@
           "spec": "test-plans/deregistration/13p-voluntary-deregistration-submitter.spec.ts",
           "specHref": "test-plans/deregistration/13p-voluntary-deregistration-submitter.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -4141,7 +4191,12 @@
           "spec": "test-plans/education-awareness/15-education-awareness-smoke.spec.ts",
           "specHref": "test-plans/education-awareness/15-education-awareness-smoke.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4505,7 +4560,12 @@
           "spec": "test-plans/investigations/12a-investigations-admin.spec.ts",
           "specHref": "test-plans/investigations/12a-investigations-admin.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4562,7 +4622,12 @@
           "spec": "test-plans/investigations/12p-investigations-public-submission.spec.ts",
           "specHref": "test-plans/investigations/12p-investigations-public-submission.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4686,7 +4751,12 @@
           "spec": "test-plans/npo-registration/02-npo-linking-and-landing.spec.ts",
           "specHref": "test-plans/npo-registration/02-npo-linking-and-landing.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4743,7 +4813,12 @@
           "spec": "test-plans/npo-registration/03-wizard-org-details-objectives.spec.ts",
           "specHref": "test-plans/npo-registration/03-wizard-org-details-objectives.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4830,7 +4905,12 @@
           "spec": "test-plans/npo-registration/04-wizard-office-bearers.spec.ts",
           "specHref": "test-plans/npo-registration/04-wizard-office-bearers.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -4893,7 +4973,12 @@
           "spec": "test-plans/npo-registration/05-wizard-admin-docs-declaration.spec.ts",
           "specHref": "test-plans/npo-registration/05-wizard-admin-docs-declaration.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -4974,7 +5059,12 @@
           "spec": "test-plans/npo-registration/06-office-bearer-self-confirmation.spec.ts",
           "specHref": "test-plans/npo-registration/06-office-bearer-self-confirmation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -5344,7 +5434,12 @@
           "spec": "test-plans/post-registration/10a-post-registration-admin.spec.ts",
           "specHref": "test-plans/post-registration/10a-post-registration-admin.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -5401,7 +5496,12 @@
           "spec": "test-plans/post-registration/10p-post-registration-submitter.spec.ts",
           "specHref": "test-plans/post-registration/10p-post-registration-submitter.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -7622,5 +7722,5 @@
       ]
     }
   ],
-  "generated": "2026-09-10T13:37:09.326Z"
+  "generated": "2026-09-11T06:55:13.103Z"
 }
