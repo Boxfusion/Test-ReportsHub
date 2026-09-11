@@ -4,7 +4,7 @@
       "/opt/hostedtoolcache/node/20.20.2/x64/bin/node",
       "/home/runner/work/Test-ReportsHub/Test-ReportsHub/node_modules/.bin/playwright",
       "test",
-      "projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts",
+      "projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts",
       "--config=playwright.config.ci.ts"
     ],
     "configFile": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/playwright.config.ci.ts",
@@ -20,24 +20,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/fccb249912e8887433051e82d4a773c507c116af",
-        "commitHash": "fccb249912e8887433051e82d4a773c507c116af",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34584501140"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/9b5d80eb6c791b44152aa330ce6c3b509d17f591",
+        "commitHash": "9b5d80eb6c791b44152aa330ce6c3b509d17f591",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34584832111"
       },
       "gitCommit": {
-        "shortHash": "fccb249",
-        "hash": "fccb249912e8887433051e82d4a773c507c116af",
-        "subject": "ci: re-ran Approvals / test-plans/Memo/verify-add-referral.md → failure",
-        "body": "ci: re-ran Approvals / test-plans/Memo/verify-add-referral.md → failure\n",
+        "shortHash": "9b5d80e",
+        "hash": "9b5d80eb6c791b44152aa330ce6c3b509d17f591",
+        "subject": "ci: re-ran Approvals / test-plans/Memo/verify-approve-memo.md → failure",
+        "body": "ci: re-ran Approvals / test-plans/Memo/verify-approve-memo.md → failure\n",
         "author": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789118935000
+          "time": 1789119149000
         },
         "committer": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789118935000
+          "time": 1789119149000
         },
         "branch": "main"
       },
@@ -51,24 +51,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/fccb249912e8887433051e82d4a773c507c116af",
-            "commitHash": "fccb249912e8887433051e82d4a773c507c116af",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34584501140"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/9b5d80eb6c791b44152aa330ce6c3b509d17f591",
+            "commitHash": "9b5d80eb6c791b44152aa330ce6c3b509d17f591",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34584832111"
           },
           "gitCommit": {
-            "shortHash": "fccb249",
-            "hash": "fccb249912e8887433051e82d4a773c507c116af",
-            "subject": "ci: re-ran Approvals / test-plans/Memo/verify-add-referral.md → failure",
-            "body": "ci: re-ran Approvals / test-plans/Memo/verify-add-referral.md → failure\n",
+            "shortHash": "9b5d80e",
+            "hash": "9b5d80eb6c791b44152aa330ce6c3b509d17f591",
+            "subject": "ci: re-ran Approvals / test-plans/Memo/verify-approve-memo.md → failure",
+            "body": "ci: re-ran Approvals / test-plans/Memo/verify-approve-memo.md → failure\n",
             "author": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789118935000
+              "time": 1789119149000
             },
             "committer": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789118935000
+              "time": 1789119149000
             },
             "branch": "main"
           },
@@ -117,18 +117,18 @@
   },
   "suites": [
     {
-      "title": "projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts",
-      "file": "projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts",
+      "title": "projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts",
+      "file": "projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "TC-01 — Verify Approve Memo",
+          "title": "TC-01 — Verify user can attach supporting documents",
           "ok": false,
           "tags": [],
           "tests": [
             {
-              "timeout": 360000,
+              "timeout": 300000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -138,67 +138,67 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 45038,
+                  "duration": 46602,
                   "error": {
-                    "message": "TimeoutError: locator.click: Timeout 6000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /create new/i })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"ant-btn css-1lo1l9k css-var-R2kq ant-btn-link ant-dropdown-trigger\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    11 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n",
-                    "stack": "TimeoutError: locator.click: Timeout 6000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /create new/i })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"ant-btn css-1lo1l9k css-var-R2kq ant-btn-link ant-dropdown-trigger\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    11 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\n    at clickWithFlyoutRetry (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts:32:21)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts:138:3",
+                    "message": "TimeoutError: locator.click: Timeout 6000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /create new/i })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"ant-btn css-1lo1l9k css-var-R2kq ant-btn-link ant-dropdown-trigger\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    11 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 6000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /create new/i })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"ant-btn css-1lo1l9k css-var-R2kq ant-btn-link ant-dropdown-trigger\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    11 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n    at clickWithFlyoutRetry (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts:30:21)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts:74:3",
                     "location": {
-                      "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts",
+                      "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts",
                       "column": 21,
-                      "line": 32
+                      "line": 30
                     },
-                    "snippet": "\u001b[0m \u001b[90m 30 |\u001b[39m   \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m attempts\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 31 |\u001b[39m     \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m       \u001b[36mawait\u001b[39m locator\u001b[33m.\u001b[39mclick({ timeout\u001b[33m:\u001b[39m \u001b[35m6\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m       \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m     } \u001b[36mcatch\u001b[39m (err) {\n \u001b[90m 35 |\u001b[39m       \u001b[36mif\u001b[39m (i \u001b[33m===\u001b[39m attempts \u001b[33m-\u001b[39m \u001b[35m1\u001b[39m) \u001b[36mthrow\u001b[39m err\u001b[33m;\u001b[39m\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m 28 |\u001b[39m   \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m attempts\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 29 |\u001b[39m     \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m       \u001b[36mawait\u001b[39m locator\u001b[33m.\u001b[39mclick({ timeout\u001b[33m:\u001b[39m \u001b[35m6\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m       \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     } \u001b[36mcatch\u001b[39m (err) {\n \u001b[90m 33 |\u001b[39m       \u001b[36mif\u001b[39m (i \u001b[33m===\u001b[39m attempts \u001b[33m-\u001b[39m \u001b[35m1\u001b[39m) \u001b[36mthrow\u001b[39m err\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts",
                         "column": 21,
-                        "line": 32
+                        "line": 30
                       },
-                      "message": "TimeoutError: locator.click: Timeout 6000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /create new/i })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"ant-btn css-1lo1l9k css-var-R2kq ant-btn-link ant-dropdown-trigger\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    11 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\n\n  30 |   for (let i = 0; i < attempts; i++) {\n  31 |     try {\n> 32 |       await locator.click({ timeout: 6_000 });\n     |                     ^\n  33 |       return;\n  34 |     } catch (err) {\n  35 |       if (i === attempts - 1) throw err;\n    at clickWithFlyoutRetry (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts:32:21)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts:138:3"
+                      "message": "TimeoutError: locator.click: Timeout 6000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /create new/i })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"ant-btn css-1lo1l9k css-var-R2kq ant-btn-link ant-dropdown-trigger\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    11 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a class=\"nav-links-renderer\" href=\"/dynamic/Shesha.Workflow/workflows-inbox\">Inbox</a> from <div>…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n\n  28 |   for (let i = 0; i < attempts; i++) {\n  29 |     try {\n> 30 |       await locator.click({ timeout: 6_000 });\n     |                     ^\n  31 |       return;\n  32 |     } catch (err) {\n  33 |       if (i === attempts - 1) throw err;\n    at clickWithFlyoutRetry (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts:30:21)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts:74:3"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-11T09:31:40.491Z",
+                  "startTime": "2026-09-11T09:34:29.671Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/test-failed-1.png"
+                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/video.webm"
+                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/video.webm"
                     },
                     {
                       "name": "error-context",
                       "contentType": "text/markdown",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/error-context.md"
+                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/error-context.md"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/trace.zip"
+                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/trace.zip"
                     }
                   ],
                   "errorLocation": {
-                    "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts",
+                    "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts",
                     "column": 21,
-                    "line": 32
+                    "line": 30
                   }
                 }
               ],
               "status": "unexpected"
             }
           ],
-          "id": "9dd5b8b59c83f19e9819-6ae945f0b9962defcc1f",
-          "file": "projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts",
-          "line": 112,
+          "id": "3d4d37c0de82dabdae9f-6c0421ae2766f0dc8cca",
+          "file": "projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts",
+          "line": 41,
           "column": 5
         }
       ]
@@ -206,8 +206,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-11T09:31:39.923Z",
-    "duration": 48774.343,
+    "startTime": "2026-09-11T09:34:29.177Z",
+    "duration": 49414.058,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,

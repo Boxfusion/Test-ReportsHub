@@ -1,19 +1,19 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="48.774343">
-<testsuite name="projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts" timestamp="2026-09-11T09:31:40.117Z" hostname="" tests="1" failures="0" skipped="0" time="45.038" errors="1">
-<testcase name="TC-01 — Verify Approve Memo" classname="projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts" time="45.038">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="49.414058">
+<testsuite name="projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts" timestamp="2026-09-11T09:34:29.312Z" hostname="" tests="1" failures="0" skipped="0" time="46.602" errors="1">
+<testcase name="TC-01 — Verify user can attach supporting documents" classname="projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts" time="46.602">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/test-failed-1.png]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/test-failed-1.png]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/video.webm]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/video.webm]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/error-context.md]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/error-context.md]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/trace.zip]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/trace.zip]]
 ]]>
 </system-out>
 <error message="locator.click: Timeout 6000ms exceeded." type="TimeoutError">
-<![CDATA[  projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts:112:5 › TC-01 — Verify Approve Memo 
+<![CDATA[  projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts:41:5 › TC-01 — Verify user can attach supporting documents 
 
     TimeoutError: locator.click: Timeout 6000ms exceeded.
     Call log:
@@ -42,35 +42,33 @@
          - retrying click action
            - waiting 500ms
         - waiting for element to be visible, enabled and stable
-        - element is visible, enabled and stable
-        - scrolling into view if needed
 
 
-      30 |   for (let i = 0; i < attempts; i++) {
-      31 |     try {
-    > 32 |       await locator.click({ timeout: 6_000 });
+      28 |   for (let i = 0; i < attempts; i++) {
+      29 |     try {
+    > 30 |       await locator.click({ timeout: 6_000 });
          |                     ^
-      33 |       return;
-      34 |     } catch (err) {
-      35 |       if (i === attempts - 1) throw err;
-        at clickWithFlyoutRetry (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts:32:21)
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts:138:3
+      31 |       return;
+      32 |     } catch (err) {
+      33 |       if (i === attempts - 1) throw err;
+        at clickWithFlyoutRetry (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts:30:21)
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts:74:3
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/test-failed-1.png
+    ci-results/artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/video.webm
+    ci-results/artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ci-results/artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/error-context.md
+    Error Context: ci-results/artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/error-context.md
 
     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/trace.zip
+    ci-results/artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/trace.zip
     Usage:
 
-        npx playwright show-trace ci-results/artifacts/projects-Approvals-test-pl-389d4-TC-01-—-Verify-Approve-Memo/trace.zip
+        npx playwright show-trace ci-results/artifacts/projects-Approvals-test-pl-4409c-attach-supporting-documents/trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>

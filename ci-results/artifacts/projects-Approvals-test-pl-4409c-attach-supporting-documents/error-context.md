@@ -6,8 +6,8 @@
 
 # Test info
 
-- Name: projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts >> TC-01 — Verify Approve Memo
-- Location: projects/Approvals/test-plans/Memo/verify-approve-memo.spec.ts:112:5
+- Name: projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts >> TC-01 — Verify user can attach supporting documents
+- Location: projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts:41:5
 
 # Error details
 
@@ -39,8 +39,6 @@ Call log:
      - retrying click action
        - waiting 500ms
     - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
 
 ```
 
@@ -306,137 +304,135 @@ Call log:
 # Test source
 
 ```ts
-  1   | // AUTO-RECORDED from test-plans/Memo/verify-approve-memo.md
-  2   | // Source: Azure DevOps test plan #100853, suite #100854, test case #104789
+  1   | // AUTO-RECORDED from test-plans/Memo/verify-attach-supporting-documents.md
+  2   | // Source: Azure DevOps test plan #100853, suite #100854, test case #102655
   3   | // The .md plan is canonical. AI-repair will patch failing lines in this file.
   4   | // Do not hand-edit unless you are also updating the .md plan.
   5   | 
   6   | import { test, expect, Page, Locator } from '@playwright/test';
   7   | 
   8   | const APP_URL = 'https://pd-approvals-adminportal-qa.azurewebsites.net';
-  9   | const INITIATOR = { username: 'Ian', password: '123qwe' };
-  10  | const RECOMMENDER = { username: 'Craig', password: '123qwe' };
-  11  | const APPROVER = { username: 'Bonolob', password: '123qwe' };
-  12  | 
-  13  | // This QA environment can sit on an "Initializing..." splash for well over the default 15s action
-  14  | // timeout before the login form mounts. Give the username field a generous timeout rather than
-  15  | // failing fast, since the app itself (verified via curl) is otherwise up.
-  16  | async function login(page: Page, creds: { username: string; password: string }) {
-  17  |   await page.goto(`${APP_URL}/login`, { waitUntil: 'domcontentloaded', timeout: 60_000 });
-  18  |   await page.getByPlaceholder(/username/i).fill(creds.username, { timeout: 60_000 });
-  19  |   await page.getByPlaceholder(/password/i).fill(creds.password);
-  20  |   await page.getByRole('button', { name: /log ?in|sign in/i }).click();
-  21  |   await page.waitForURL(url => !url.toString().includes('/login'), { timeout: 30_000 });
-  22  |   await page.waitForLoadState('networkidle');
-  23  | }
-  24  | 
-  25  | // The Workflows sidebar item opens a hover-triggered flyout (Inbox/My Items/Sent Items/Drafts) that is
-  26  | // appended to the end of <body> and intermittently stays mounted over the page, intercepting clicks on
-  27  | // whatever is underneath. Click actions that land near it are wrapped in a retry that nudges the mouse
-  28  | // away and tries again.
-  29  | async function clickWithFlyoutRetry(page: Page, locator: Locator, attempts = 4) {
-  30  |   for (let i = 0; i < attempts; i++) {
-  31  |     try {
-> 32  |       await locator.click({ timeout: 6_000 });
+  9   | const CREDS = { username: 'Ian', password: '123qwe' };
+  10  | 
+  11  | // This QA environment can sit on an "Initializing..." splash for well over the default 15s action
+  12  | // timeout before the login form mounts. Give the username field a generous timeout rather than
+  13  | // failing fast, since the app itself (verified via curl) is otherwise up.
+  14  | async function login(page: Page) {
+  15  |   await page.goto(`${APP_URL}/login`, { waitUntil: 'domcontentloaded', timeout: 60_000 });
+  16  |   await page.getByPlaceholder(/username/i).fill(CREDS.username, { timeout: 60_000 });
+  17  |   await page.getByPlaceholder(/password/i).fill(CREDS.password);
+  18  |   await page.getByRole('button', { name: /log ?in|sign in/i }).click();
+  19  |   await page.waitForURL(url => !url.toString().includes('/login'), { timeout: 30_000 });
+  20  |   await page.waitForLoadState('networkidle');
+  21  | }
+  22  | 
+  23  | // The Workflows sidebar item opens a hover-triggered flyout (Inbox/My Items/Sent Items/Drafts) that is
+  24  | // appended to the end of <body> and intermittently stays mounted over the page, intercepting clicks on
+  25  | // whatever is underneath. Click actions that land near it are wrapped in a retry that nudges the mouse
+  26  | // away and tries again.
+  27  | async function clickWithFlyoutRetry(page: Page, locator: Locator, attempts = 4) {
+  28  |   for (let i = 0; i < attempts; i++) {
+  29  |     try {
+> 30  |       await locator.click({ timeout: 6_000 });
       |                     ^ TimeoutError: locator.click: Timeout 6000ms exceeded.
-  33  |       return;
-  34  |     } catch (err) {
-  35  |       if (i === attempts - 1) throw err;
-  36  |       await page.mouse.move(950, 450);
-  37  |       await page.mouse.move(960, 470);
-  38  |       await page.waitForTimeout(600);
-  39  |     }
-  40  |   }
-  41  | }
-  42  | 
-  43  | // The Routing step's approver dropdown is virtualized (rc-virtual-list) and the first rendered "option"
-  44  | // is sometimes an off-screen measurement placeholder that happens to carry the real first item's
-  45  | // aria-label — clicking it (even with force) fails with "Element is outside of the viewport" because it
-  46  | // genuinely isn't on screen. The reliable approach is pure keyboard traversal: read the currently
-  47  | // highlighted option via aria-activedescendant, step forward with ArrowDown until it matches, then
-  48  | // press Enter — this never depends on any option's visibility or bounding box.
-  49  | async function selectApproverOption(page: Page, matcher: RegExp, maxPresses = 20) {
-  50  |   for (let i = 0; i < maxPresses; i++) {
-  51  |     const activeId = await page.evaluate(() => document.activeElement?.getAttribute('aria-activedescendant') ?? null);
-  52  |     if (activeId) {
-  53  |       const label = await page.locator(`#${activeId}`).getAttribute('aria-label').catch(() => null);
-  54  |       if (label && matcher.test(label)) {
-  55  |         await page.keyboard.press('Enter');
-  56  |         return;
-  57  |       }
-  58  |     }
-  59  |     await page.keyboard.press('ArrowDown');
-  60  |   }
-  61  |   throw new Error(`Could not find an approver option matching ${matcher} within ${maxPresses} ArrowDown presses`);
-  62  | }
-  63  | 
-  64  | // Sets a routing row's Required Action via the Edit icon -> dropdown -> Save pattern (confirmed in
-  65  | // #102670/#104791). The dropdown's options are not role=option — fall back to plain text matching.
-  66  | async function setRequiredAction(page: Page, row: Locator, actionLabel: string) {
-  67  |   await row.scrollIntoViewIfNeeded();
-  68  |   await row.getByRole('button', { name: /edit/i }).click();
-  69  |   const requiredActionField = row.getByRole('combobox').first();
-  70  |   await expect(requiredActionField).toBeVisible({ timeout: 10_000 });
-  71  | 
-  72  |   // Confirmed live: "Approve" is the routing row's implicit default and is NOT a selectable item in the
-  73  |   // Required Action dropdown at all — its options list is Recommend/Support/Action/Review/Referral/
-  74  |   // Consult/Concur only. Attempting to click an "Approve" option therefore hangs forever (it doesn't
-  75  |   // exist). When the target is already "Approve", skip the dropdown entirely and just verify + Save.
-  76  |   if (/^approve$/i.test(actionLabel)) {
-  77  |     await expect(row.locator('.ant-select-selection-item, input')).toHaveValue(/approve/i, { timeout: 5_000 }).catch(async () => {
-  78  |       await expect(row.locator('.ant-select-selection-item')).toHaveText(/approve/i, { timeout: 5_000 });
-  79  |     });
-  80  |     await row.getByRole('button', { name: /save/i }).click();
-  81  |     await expect(row.getByRole('button', { name: /delete/i })).toBeVisible({ timeout: 10_000 });
-  82  |     return;
-  83  |   }
-  84  | 
-  85  |   await row.locator('.ant-select-selection-item').click();
-  86  |   // Scope the option click to the open dropdown panel — the row's own closed-select display can already
-  87  |   // show the same text as the target option, which makes an unscoped page-wide getByText ambiguous.
-  88  |   const optionsPanel = page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden)');
-  89  |   await expect(optionsPanel).toBeVisible({ timeout: 10_000 });
-  90  |   const option = optionsPanel.getByText(actionLabel, { exact: true });
-  91  |   await option.scrollIntoViewIfNeeded();
-  92  |   await option.click();
-  93  |   await expect(row.locator('.ant-select-selection-item')).toHaveText(new RegExp(actionLabel, 'i'), { timeout: 10_000 });
-  94  |   await row.getByRole('button', { name: /save/i }).click();
-  95  |   await expect(row.getByRole('button', { name: /delete/i })).toBeVisible({ timeout: 10_000 });
-  96  | }
+  31  |       return;
+  32  |     } catch (err) {
+  33  |       if (i === attempts - 1) throw err;
+  34  |       await page.mouse.move(950, 450);
+  35  |       await page.mouse.move(960, 470);
+  36  |       await page.waitForTimeout(600);
+  37  |     }
+  38  |   }
+  39  | }
+  40  | 
+  41  | test('TC-01 — Verify user can attach supporting documents', async ({ page }) => {
+  42  |   // Chains the same long Compose-step flow as #102653, plus an Attachments-step file upload — a
+  43  |   // confirmed passing run took as long as 182s, right up against a 180s timeout. Give it real margin
+  44  |   // rather than racing the environment.
+  45  |   test.setTimeout(300_000);
+  46  | 
+  47  |   // STEP 1: NAVIGATE to login page and log in with valid credentials
+  48  |   await login(page);
+  49  |   await expect(page).not.toHaveURL(/login/);
+  50  | 
+  51  |   // STEP 2: CLICK the "Click to change view mode" control to open the Live/Ready/Latest popover,
+  52  |   // then CLICK the "Latest" option in that popover.
+  53  |   const viewModeControl = page.locator('[title="Click to change view mode"]');
+  54  |   await viewModeControl.click();
+  55  |   await page.getByText('Latest', { exact: true }).click();
+  56  |   await expect(viewModeControl).toContainText(/latest/i, { timeout: 10_000 });
+  57  | 
+  58  |   // STEP 3: CLICK the sidebar Toggle in the top-left corner
+  59  |   const toggle = page.locator('.ant-layout-sider-trigger, [class*="trigger"], [aria-label*="toggle" i], [aria-label*="menu" i]').first();
+  60  |   await toggle.click();
+  61  | 
+  62  |   // STEP 4: CLICK the Workflows dropdown
+  63  |   await page.getByText(/^Workflows?$/i).first().click();
+  64  |   await expect(page.getByText(/^Inbox$/i).first()).toBeVisible({ timeout: 10_000 });
+  65  | 
+  66  |   // STEP 5: CLICK the My Items menu item
+  67  |   // FRAGILE: the Workflows flyout is a hover-triggered Ant Design Menu portalled to the end of <body>;
+  68  |   // clicking through it is flaky. Navigate directly to the same destination its "My Items" link points to.
+  69  |   await page.goto(`${APP_URL}/dynamic/Shesha.Workflow/workflows-my-items`, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+  70  |   await page.waitForLoadState('networkidle');
+  71  |   await expect(page.getByRole('button', { name: /create new/i })).toBeVisible({ timeout: 15_000 });
+  72  | 
+  73  |   // STEP 6: CLICK the Create New button
+  74  |   await clickWithFlyoutRetry(page, page.getByRole('button', { name: /create new/i }));
+  75  | 
+  76  |   // STEP 7: CLICK the New Referrals subtype
+  77  |   await expect(page.getByRole('menuitem', { name: /new referrals?/i })).toBeVisible({ timeout: 10_000 });
+  78  |   await clickWithFlyoutRetry(page, page.getByRole('menuitem', { name: /new referrals?/i }));
+  79  | 
+  80  |   // STEP 8: SNAPSHOT — confirm the Draft Memo page is displayed
+  81  |   await expect(page.getByText(/subject/i).first()).toBeVisible({ timeout: 15_000 });
+  82  | 
+  83  |   // STEP 9: CLICK the CC field and SELECT a signatory
+  84  |   const ccField = page.getByRole('combobox').nth(1);
+  85  |   await ccField.click();
+  86  |   const dropdownPanel = page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden)');
+  87  |   await expect(dropdownPanel).toBeVisible({ timeout: 10_000 });
+  88  |   await expect(page.getByRole('option').first()).toHaveCount(1);
+  89  |   await page.keyboard.press('ArrowDown');
+  90  |   await page.keyboard.press('Enter');
+  91  |   const ccContainer = ccField.locator('xpath=../..');
+  92  |   const signatoryName = (await ccContainer.textContent())?.trim();
+  93  |   expect(signatoryName && signatoryName.length > 0).toBeTruthy();
+  94  | 
+  95  |   // STEP 10: CLICK the Subject text field and populate it with test input
+  96  |   await page.getByRole('textbox').nth(1).fill('Test Subject');
   97  | 
-  98  | async function switchToLatest(page: Page, viewModeControl: Locator) {
-  99  |   for (let attempt = 0; attempt < 3; attempt++) {
-  100 |     await viewModeControl.click();
-  101 |     await page.waitForTimeout(300);
-  102 |     await page.getByText('Latest', { exact: true }).click();
-  103 |     try {
-  104 |       await expect(viewModeControl).toContainText(/latest/i, { timeout: 5_000 });
-  105 |       return;
-  106 |     } catch (err) {
-  107 |       if (attempt === 2) throw err;
-  108 |     }
-  109 |   }
-  110 | }
-  111 | 
-  112 | test('TC-01 — Verify Approve Memo', async ({ page }) => {
-  113 |   test.setTimeout(360_000);
-  114 | 
-  115 |   // STEP 1: NAVIGATE to login page and log in as Ian (initiator)
-  116 |   await login(page, INITIATOR);
-  117 |   await expect(page).not.toHaveURL(/login/);
-  118 | 
-  119 |   // STEP 2: CLICK the "Click to change view mode" control to open the Live/Ready/Latest popover,
-  120 |   // then CLICK the "Latest" option in that popover.
-  121 |   const viewModeControl = page.locator('[title="Click to change view mode"]');
-  122 |   await switchToLatest(page, viewModeControl);
-  123 | 
-  124 |   // STEP 3: CLICK the sidebar Toggle in the top-left corner
-  125 |   const toggle = page.locator('.ant-layout-sider-trigger, [class*="trigger"], [aria-label*="toggle" i], [aria-label*="menu" i]').first();
-  126 |   await toggle.click();
-  127 | 
-  128 |   // STEP 4: CLICK the Workflows dropdown
-  129 |   await page.getByText(/^Workflows?$/i).first().click();
-  130 |   await expect(page.getByText(/^Inbox$/i).first()).toBeVisible({ timeout: 10_000 });
-  131 | 
-  132 |   // STEP 5: CLICK the My Items menu item
+  98  |   // STEP 11: CLICK each of the Purpose, Background, Discussion, Financial Implications, Risks and
+  99  |   // Recommendation tabs individually, populating and verifying each one before moving to the next.
+  100 |   const tabNames = ['Purpose', 'Background', 'Discussion', 'Financial Implications', 'Risks', 'Recommendation'];
+  101 |   for (const name of tabNames) {
+  102 |     const tab = page.getByRole('tab', { name: new RegExp(name, 'i') });
+  103 |     for (let attempt = 0; attempt < 3; attempt++) {
+  104 |       await tab.click();
+  105 |       try {
+  106 |         await expect(tab).toHaveAttribute('aria-selected', 'true', { timeout: 4_000 });
+  107 |         break;
+  108 |       } catch (err) {
+  109 |         if (attempt === 2) throw err;
+  110 |         await page.waitForTimeout(500);
+  111 |       }
+  112 |     }
+  113 |     const editor = page.locator('[contenteditable="true"]:visible').first();
+  114 |     await editor.click();
+  115 |     const text = `Test ${name} input`;
+  116 |     await page.keyboard.type(text);
+  117 |     await expect(editor).toContainText(text, { timeout: 10_000 });
+  118 |   }
+  119 | 
+  120 |   // STEP 12: CLICK the Next button
+  121 |   await page.getByRole('button', { name: /next/i }).click();
+  122 | 
+  123 |   // STEP 13: SNAPSHOT — confirm the Attachments step is displayed
+  124 |   // "Attachments" text is always on screen (it's the wizard's step-name row) regardless of which step
+  125 |   // is active — assert on content that only exists once the transition has genuinely happened.
+  126 |   await expect(page.getByRole('button', { name: /back/i })).toBeVisible({ timeout: 15_000 });
+  127 |   await expect(page.getByRole('tab', { name: /purpose/i })).toHaveCount(0);
+  128 | 
+  129 |   // STEP 14: CLICK the "Attach Supporting Documents" option
+  130 |   // There is no "Attach Supporting Documents" text label on this step — the square icon dropzone (an
 ```
