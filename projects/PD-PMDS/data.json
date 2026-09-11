@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 2,
-    "totalRuns": 82,
-    "last7Runs": 12,
+    "totalRuns": 83,
+    "last7Runs": 13,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 2,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2597,23 +2597,24 @@
           "spec": "test-plans/contracting/contracting-lifecycle.spec.ts",
           "specHref": "test-plans/contracting/contracting-lifecycle.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "129.3s",
+            "duration": "42.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/contracting-lifecycle.md"
+            "reportHref": "test-reports/2026-09-11/contracting-lifecycle.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "42.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -2737,6 +2738,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-11",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "42.6s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/contracting-lifecycle.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-10",
       "runs": [
@@ -3561,5 +3576,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T08:15:12.253Z"
+  "generated": "2026-09-11T08:27:01.989Z"
 }

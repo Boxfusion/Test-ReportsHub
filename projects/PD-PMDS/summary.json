@@ -1,12 +1,12 @@
 {
   "totalPlans": 2,
-  "totalRuns": 82,
-  "last7Runs": 12,
+  "totalRuns": 83,
+  "last7Runs": 13,
   "last7Pass": 0,
   "last7PassPct": 0,
   "failingFlows": 2,
   "lastRun": {
-    "date": "2026-09-10",
+    "date": "2026-09-11",
     "result": "FAILED",
     "plan": "test-plans/contracting/contracting-lifecycle.md"
   }

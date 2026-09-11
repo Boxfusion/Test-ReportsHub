@@ -1,154 +1,262 @@
-<testsuites id="" name="" tests="14" failures="1" skipped="12" errors="0" time="58.44878200000001">
-<testsuite name="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts" timestamp="2026-09-11T08:14:13.494Z" hostname="" tests="14" failures="1" skipped="12" time="56.21" errors="0">
-<testcase name="BAS — DHA Invoice Tracking Process › TC-01: Login (Admin)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts" time="29.039">
-</testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-02: Register and Upload Invoice (ADO #102362)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts" time="25.941">
+<testsuites id="" name="" tests="27" failures="1" skipped="26" errors="0" time="42.617445999999994">
+<testsuite name="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts" timestamp="2026-09-11T08:26:19.243Z" hostname="" tests="27" failures="1" skipped="26" time="37.01" errors="0">
+<testcase name="Contracting — admin process state › TC-01 — Contracting stage is open with the full employee population in progress" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts" time="37.01">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
 <system-out>
-<![CDATA[
-[[ATTACHMENT|artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/test-failed-1.png]]
+<![CDATA[Contracting counters: {"status":"NOT STARTED","total":45,"notStarted":45,"inProgress":0,"completed":0}
 
-[[ATTACHMENT|artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/video.webm]]
+[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/test-failed-1.png]]
 
-[[ATTACHMENT|artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/error-context.md]]
+[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md]]
 
-[[ATTACHMENT|artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/trace.zip]]
+[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md]]
+
+[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/trace.zip]]
 ]]>
 </system-out>
-<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
-<![CDATA[  projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts:78:7 › BAS — DHA Invoice Tracking Process › TC-02: Register and Upload Invoice (ADO #102362) 
+<failure message="Contracting stage status" type="expect.toBe">
+<![CDATA[  projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts:39:7 › Contracting — admin process state › TC-01 — Contracting stage is open with the full employee population in progress 
 
-    Error: expect(locator).toBeVisible() failed
+    Error: Contracting stage status
 
-    Locator: getByRole('button', { name: 'plus Create New down' })
-    Expected: visible
-    Timeout: 5000ms
-    Error: element(s) not found
+    expect(received).toBe(expected) // Object.is equality
 
-    Call log:
-      - Expect "toBeVisible" getByRole('button', { name: 'plus Create New down' }) with timeout 5000ms
-      - waiting for getByRole('button', { name: 'plus Create New down' })
+    Expected: "IN PROGRESS"
+    Received: "NOT STARTED"
 
-
-      81 |     await page.goto(MY_ITEMS_URL);
-      82 |     await page.waitForLoadState('networkidle');
-    > 83 |     await expect(page.getByRole('button', { name: 'plus Create New down' })).toBeVisible();
-         |                                                                              ^
-      84 |
-      85 |     // STEP: Create New -> BAS Request For Payment
-      86 |     await page.getByRole('button', { name: 'plus Create New down' }).click();
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts:83:78
+      44 |     console.log('Contracting counters:', JSON.stringify(c));
+      45 |     // STEP 3: ASSERT Contracting is IN PROGRESS (BLOCKING)
+    > 46 |     expect(c.status, 'Contracting stage status').toBe('IN PROGRESS');
+         |                                                  ^
+      47 |     // STEP 4: ASSERT nobody is left Not Started
+      48 |     expect(c.notStarted, 'Not Started count').toBe(0);
+      49 |     // STEP 5: ASSERT the whole population is in progress
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts:46:50
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/test-failed-1.png
+    ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md
 
-    Error Context: ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/error-context.md
+    Error Context: ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md
 
     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/trace.zip
+    ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/trace.zip
     Usage:
 
-        npx playwright show-trace ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/trace.zip
+        npx playwright show-trace ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-03: Assign Branch Finance Admin to Assign Certifier (ADO #102369)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-02 — Confirm Details defaults the supervisor and mediator from the reporting line" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="TC-02 did not produce a Ref No">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-04: Assign Responsible Person to Certify Invoice (ADO #102370)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-03 — NEGATIVE: Next stays disabled while the KRA weights total less than 100%" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="TC-02 did not produce a Ref No">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-05: Certify Invoice (ADO #102372)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-04 — NEGATIVE: Next stays disabled at 100% until the minimum 4 GAFs are checked" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="TC-02 did not produce a Ref No">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-06: Review Invoice Rejection (ADO #102378) — driven live via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-05 — Scoring completes once 4 KRAs total 100% and 4 GAFs are checked" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-07: Prepare Voucher (ADO #102361)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-06 — NEGATIVE: the workplan cannot be left with fewer than 2 key activities per KRA" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="TC-02 did not produce a Ref No">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-08: Respond to Queries / Business Related Query (ADO #102398) — driven live via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-07 — Workplan advances once every KRA has 2 key activities" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-09: Manage Supplier related Queries (ADO #102399) — driven live via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-08 — A development area can be added to the Personal Development Plan" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-10: Verify Voucher (ADO #102380)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-09 — NEGATIVE: Submit is disabled until both attestations are confirmed" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="TC-02 did not produce a Ref No">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-11: Authorise Invoice Voucher (ADO #102383)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-10 — The employee submits the performance agreement for supervisor review" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="TC-02 did not produce a Ref No">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-12: Upload Captured Invoices Report / Final Authorise Payment (ADO #102360) — BAS import via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — supervisor send back and re-submit (Sanele Sithole) › TC-11 — NEGATIVE: Refer for Dispute cannot be confirmed without a reason" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-13: Attach Payment Stub (ADO #102359) — stub import via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — supervisor send back and re-submit (Sanele Sithole) › TC-12 — The supervisor sends the agreement back to the employee" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="">
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="BAS — DHA Invoice Tracking Process › TC-14: Capture Filing (ADO #102358) — driven live via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<testcase name="Contracting — supervisor send back and re-submit (Sanele Sithole) › TC-13 — The employee receives the returned agreement and re-submits it" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
 <properties>
-<property name="skip" value="">
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — supervisor send back and re-submit (Sanele Sithole) › TC-14 — The supervisor signs the re-submitted agreement" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — supervisor send back and re-submit (Sanele Sithole) › TC-15 — NEGATIVE: HR cannot verify until the confirmation is ticked, then verification completes" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — happy path to Generate PERSAL Input (Simmy Mthalane) › TC-16 — The employee drafts and submits the performance agreement" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — happy path to Generate PERSAL Input (Simmy Mthalane) › TC-17 — The supervisor signs the agreement without changes" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — happy path to Generate PERSAL Input (Simmy Mthalane) › TC-18 — HR verifies the agreement and it reaches Generate PERSAL Input" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-19 — Jabu submits an agreement the supervisor will dispute" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-20 — The supervisor refers Jabu&apos;s agreement for mediation" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-21 — Adam submits and his agreement is also referred for mediation" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-22 — Both disputes are routed to the mediator" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-23 — The mediator records the disagreement as resolved and it returns to the employee" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-24 — The employee updates the agreement with the dispute outcome and it completes" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-25 — NEGATIVE: an unresolved mediation requires both a comment and an attachment" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-26 — An unresolved dispute parks the agreement with no downstream task" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Contracting — dashboard reflects the completed agreements › TC-27 — The Contracting dashboard counts the agreements driven to completion" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<properties>
+<property name="serial" value="">
 </property>
 </properties>
 <skipped>

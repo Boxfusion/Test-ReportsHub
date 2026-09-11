@@ -4,7 +4,7 @@
       "/opt/hostedtoolcache/node/20.20.2/x64/bin/node",
       "/home/runner/work/Test-ReportsHub/Test-ReportsHub/node_modules/.bin/playwright",
       "test",
-      "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+      "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
       "--config=playwright.config.ci.ts"
     ],
     "configFile": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/playwright.config.ci.ts",
@@ -20,24 +20,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/9429929928dce9f0ae04678b75ff6a9caa823c83",
-        "commitHash": "9429929928dce9f0ae04678b75ff6a9caa823c83",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34578132534"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/5b5e80990946d8dae12f085af4140b714756c1fe",
+        "commitHash": "5b5e80990946d8dae12f085af4140b714756c1fe",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34579119439"
       },
       "gitCommit": {
-        "shortHash": "9429929",
-        "hash": "9429929928dce9f0ae04678b75ff6a9caa823c83",
-        "subject": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success",
-        "body": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success\n",
+        "shortHash": "5b5e809",
+        "hash": "5b5e80990946d8dae12f085af4140b714756c1fe",
+        "subject": "ci: re-ran DHA-Invoice-Tracking / test-plans/invoice-process/bas.md → failure",
+        "body": "ci: re-ran DHA-Invoice-Tracking / test-plans/invoice-process/bas.md → failure\n",
         "author": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789112735000
+          "time": 1789114512000
         },
         "committer": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789112735000
+          "time": 1789114512000
         },
         "branch": "main"
       },
@@ -51,24 +51,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/9429929928dce9f0ae04678b75ff6a9caa823c83",
-            "commitHash": "9429929928dce9f0ae04678b75ff6a9caa823c83",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34578132534"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/5b5e80990946d8dae12f085af4140b714756c1fe",
+            "commitHash": "5b5e80990946d8dae12f085af4140b714756c1fe",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34579119439"
           },
           "gitCommit": {
-            "shortHash": "9429929",
-            "hash": "9429929928dce9f0ae04678b75ff6a9caa823c83",
-            "subject": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success",
-            "body": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success\n",
+            "shortHash": "5b5e809",
+            "hash": "5b5e80990946d8dae12f085af4140b714756c1fe",
+            "subject": "ci: re-ran DHA-Invoice-Tracking / test-plans/invoice-process/bas.md → failure",
+            "body": "ci: re-ran DHA-Invoice-Tracking / test-plans/invoice-process/bas.md → failure\n",
             "author": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789112735000
+              "time": 1789114512000
             },
             "committer": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789112735000
+              "time": 1789114512000
             },
             "branch": "main"
           },
@@ -117,60 +117,35 @@
   },
   "suites": [
     {
-      "title": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-      "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+      "title": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+      "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "BAS — DHA Invoice Tracking Process",
-          "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-          "line": 71,
+          "title": "Contracting — admin process state",
+          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+          "line": 32,
           "column": 6,
           "specs": [
             {
-              "title": "TC-01: Login (Admin)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 29039,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:14:13.966Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0ef439ed7c5b38481089-30d00d5f000f350fe1f4",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 72,
-              "column": 7
-            },
-            {
-              "title": "TC-02: Register and Upload Invoice (ADO #102362)",
+              "title": "TC-01 — Contracting stage is open with the full employee population in progress",
               "ok": false,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 90000,
-                  "annotations": [],
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
@@ -179,704 +154,1239 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 25941,
+                      "duration": 37010,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'plus Create New down' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'plus Create New down' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'plus Create New down' })\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'plus Create New down' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'plus Create New down' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'plus Create New down' })\u001b[22m\n\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts:83:78",
+                        "message": "Error: Contracting stage status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"IN PROGRESS\"\u001b[39m\nReceived: \u001b[31m\"NOT STARTED\"\u001b[39m",
+                        "stack": "Error: Contracting stage status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"IN PROGRESS\"\u001b[39m\nReceived: \u001b[31m\"NOT STARTED\"\u001b[39m\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts:46:50",
                         "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                          "column": 78,
-                          "line": 83
+                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                          "column": 50,
+                          "line": 46
                         },
-                        "snippet": "\u001b[0m \u001b[90m 81 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mMY_ITEMS_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 82 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 83 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'plus Create New down'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 84 |\u001b[39m\n \u001b[90m 85 |\u001b[39m     \u001b[90m// STEP: Create New -> BAS Request For Payment\u001b[39m\n \u001b[90m 86 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'plus Create New down'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 44 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'Contracting counters:'\u001b[39m\u001b[33m,\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(c))\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[90m// STEP 3: ASSERT Contracting is IN PROGRESS (BLOCKING)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     expect(c\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m'Contracting stage status'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'IN PROGRESS'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m     \u001b[90m// STEP 4: ASSERT nobody is left Not Started\u001b[39m\n \u001b[90m 48 |\u001b[39m     expect(c\u001b[33m.\u001b[39mnotStarted\u001b[33m,\u001b[39m \u001b[32m'Not Started count'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 49 |\u001b[39m     \u001b[90m// STEP 5: ASSERT the whole population is in progress\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "column": 78,
-                            "line": 83
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                            "column": 50,
+                            "line": 46
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'plus Create New down' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'plus Create New down' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'plus Create New down' })\u001b[22m\n\n\n  81 |     await page.goto(MY_ITEMS_URL);\n  82 |     await page.waitForLoadState('networkidle');\n> 83 |     await expect(page.getByRole('button', { name: 'plus Create New down' })).toBeVisible();\n     |                                                                              ^\n  84 |\n  85 |     // STEP: Create New -> BAS Request For Payment\n  86 |     await page.getByRole('button', { name: 'plus Create New down' }).click();\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts:83:78"
+                          "message": "Error: Contracting stage status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"IN PROGRESS\"\u001b[39m\nReceived: \u001b[31m\"NOT STARTED\"\u001b[39m\n\n  44 |     console.log('Contracting counters:', JSON.stringify(c));\n  45 |     // STEP 3: ASSERT Contracting is IN PROGRESS (BLOCKING)\n> 46 |     expect(c.status, 'Contracting stage status').toBe('IN PROGRESS');\n     |                                                  ^\n  47 |     // STEP 4: ASSERT nobody is left Not Started\n  48 |     expect(c.notStarted, 'Not Started count').toBe(0);\n  49 |     // STEP 5: ASSERT the whole population is in progress\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts:46:50"
                         }
                       ],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "Contracting counters: {\"status\":\"NOT STARTED\",\"total\":45,\"notStarted\":45,\"inProgress\":0,\"completed\":0}\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T08:14:43.244Z",
-                      "annotations": [],
+                      "startTime": "2026-09-11T08:26:19.620Z",
+                      "annotations": [
+                        {
+                          "type": "serial",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                            "line": 0,
+                            "column": 0
+                          }
+                        }
+                      ],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/video.webm"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/test-failed-1.png"
                         },
                         {
                           "name": "error-context",
                           "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/error-context.md"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/trace.zip"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/trace.zip"
                         }
                       ],
                       "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "column": 78,
-                        "line": 83
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "column": 50,
+                        "line": 46
                       }
                     }
                   ],
                   "status": "unexpected"
                 }
               ],
-              "id": "0ef439ed7c5b38481089-6a27827458a49a2278d9",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 78,
+              "id": "6a702332525bc31b1b42-7b46cb736066ffc2ca8c",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 39,
               "column": 7
-            },
+            }
+          ]
+        },
+        {
+          "title": "Contracting — draft wizard validation and submit (Sanele Sithole)",
+          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+          "line": 56,
+          "column": 6,
+          "specs": [
             {
-              "title": "TC-03: Assign Branch Finance Admin to Assign Certifier (ADO #102369)",
+              "title": "TC-02 — Confirm Details defaults the supervisor and mediator from the reporting line",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 90000,
+                  "timeout": 900000,
                   "annotations": [
                     {
-                      "type": "skip",
-                      "description": "TC-02 did not produce a Ref No",
+                      "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 146,
-                        "column": 10
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
                       }
                     }
                   ],
-                  "expectedStatus": "skipped",
+                  "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 253,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:15:10.266Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "description": "TC-02 did not produce a Ref No",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 146,
-                            "column": 10
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "0ef439ed7c5b38481089-b19ebdbfc47c3f27d08a",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 145,
-              "column": 7
-            },
-            {
-              "title": "TC-04: Assign Responsible Person to Certify Invoice (ADO #102370)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "description": "TC-02 did not produce a Ref No",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 165,
-                        "column": 10
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 216,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:15:10.625Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "description": "TC-02 did not produce a Ref No",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 165,
-                            "column": 10
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "0ef439ed7c5b38481089-4418c4cff2da3e740fea",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 164,
-              "column": 7
-            },
-            {
-              "title": "TC-05: Certify Invoice (ADO #102372)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "description": "TC-02 did not produce a Ref No",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 184,
-                        "column": 10
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 187,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:15:10.855Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "description": "TC-02 did not produce a Ref No",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 184,
-                            "column": 10
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "0ef439ed7c5b38481089-ab1d0b873123ac7e04c3",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 183,
-              "column": 7
-            },
-            {
-              "title": "TC-06: Review Invoice Rejection (ADO #102378) — driven live via MCP",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 198,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
                       "status": "skipped",
                       "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T08:15:11.055Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 198,
-                            "column": 8
-                          }
-                        }
-                      ],
+                      "startTime": "2026-09-11T08:27:01.538Z",
+                      "annotations": [],
                       "attachments": []
                     }
                   ],
                   "status": "skipped"
                 }
               ],
-              "id": "0ef439ed7c5b38481089-53c904edaf5dbb94aace",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "id": "6a702332525bc31b1b42-ea7daf1091b946fc0b06",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "TC-03 — NEGATIVE: Next stays disabled while the KRA weights total less than 100%",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.538Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-8bce704eba56b66fd5ca",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 84,
+              "column": 7
+            },
+            {
+              "title": "TC-04 — NEGATIVE: Next stays disabled at 100% until the minimum 4 GAFs are checked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.538Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-15db17e7811f6d382e92",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "TC-05 — Scoring completes once 4 KRAs total 100% and 4 GAFs are checked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.538Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-acfa22a08f5ef8540f6a",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "TC-06 — NEGATIVE: the workplan cannot be left with fewer than 2 key activities per KRA",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.538Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-d63940c2ee008aeb2927",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 125,
+              "column": 7
+            },
+            {
+              "title": "TC-07 — Workplan advances once every KRA has 2 key activities",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.538Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-91de7833e8270fbc2b27",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 153,
+              "column": 7
+            },
+            {
+              "title": "TC-08 — A development area can be added to the Personal Development Plan",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-9c4a657cef58b31d984c",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 171,
+              "column": 7
+            },
+            {
+              "title": "TC-09 — NEGATIVE: Submit is disabled until both attestations are confirmed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-5e836d0b32069ae5ef27",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 185,
+              "column": 7
+            },
+            {
+              "title": "TC-10 — The employee submits the performance agreement for supervisor review",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-d0c7f809ba342915b158",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
               "line": 198,
-              "column": 8
-            },
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Contracting — supervisor send back and re-submit (Sanele Sithole)",
+          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+          "line": 216,
+          "column": 6,
+          "specs": [
             {
-              "title": "TC-07: Prepare Voucher (ADO #102361)",
+              "title": "TC-11 — NEGATIVE: Refer for Dispute cannot be confirmed without a reason",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 90000,
+                  "timeout": 900000,
                   "annotations": [
                     {
-                      "type": "skip",
-                      "description": "TC-02 did not produce a Ref No",
+                      "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 201,
-                        "column": 10
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
                       }
                     }
                   ],
-                  "expectedStatus": "skipped",
+                  "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
                       "status": "skipped",
-                      "duration": 176,
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T08:15:11.056Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "description": "TC-02 did not produce a Ref No",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 201,
-                            "column": 10
-                          }
-                        }
-                      ],
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
                       "attachments": []
                     }
                   ],
                   "status": "skipped"
                 }
               ],
-              "id": "0ef439ed7c5b38481089-78b85e452b89cce45c12",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 200,
+              "id": "6a702332525bc31b1b42-12d9945d8bb7f64c8a7f",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 225,
               "column": 7
             },
             {
-              "title": "TC-08: Respond to Queries / Business Related Query (ADO #102398) — driven live via MCP",
+              "title": "TC-12 — The supervisor sends the agreement back to the employee",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 90000,
+                  "timeout": 900000,
                   "annotations": [
                     {
-                      "type": "skip",
+                      "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 220,
-                        "column": 8
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
                       }
                     }
                   ],
-                  "expectedStatus": "skipped",
+                  "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
                       "status": "skipped",
                       "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T08:15:11.256Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 220,
-                            "column": 8
-                          }
-                        }
-                      ],
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
                       "attachments": []
                     }
                   ],
                   "status": "skipped"
                 }
               ],
-              "id": "0ef439ed7c5b38481089-6a112949a4b18d6f29d3",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 220,
-              "column": 8
-            },
-            {
-              "title": "TC-09: Manage Supplier related Queries (ADO #102399) — driven live via MCP",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 221,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:15:11.256Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 221,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "0ef439ed7c5b38481089-47a1c6ae1849adcd6008",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 221,
-              "column": 8
-            },
-            {
-              "title": "TC-10: Verify Voucher (ADO #102380)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "description": "TC-02 did not produce a Ref No",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 224,
-                        "column": 10
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 180,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:15:11.257Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "description": "TC-02 did not produce a Ref No",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 224,
-                            "column": 10
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "0ef439ed7c5b38481089-01a9c48e2800084071d7",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 223,
+              "id": "6a702332525bc31b1b42-695229763951b49fde99",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 251,
               "column": 7
             },
             {
-              "title": "TC-11: Authorise Invoice Voucher (ADO #102383)",
+              "title": "TC-13 — The employee receives the returned agreement and re-submits it",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 90000,
+                  "timeout": 900000,
                   "annotations": [
                     {
-                      "type": "skip",
-                      "description": "TC-02 did not produce a Ref No",
+                      "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 243,
-                        "column": 10
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
                       }
                     }
                   ],
-                  "expectedStatus": "skipped",
+                  "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 218,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:15:11.451Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "description": "TC-02 did not produce a Ref No",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 243,
-                            "column": 10
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "0ef439ed7c5b38481089-ec7983e407a73ced4713",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 242,
-              "column": 7
-            },
-            {
-              "title": "TC-12: Upload Captured Invoices Report / Final Authorise Payment (ADO #102360) — BAS import via MCP",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 259,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
                       "status": "skipped",
                       "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T08:15:11.690Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 259,
-                            "column": 8
-                          }
-                        }
-                      ],
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
                       "attachments": []
                     }
                   ],
                   "status": "skipped"
                 }
               ],
-              "id": "0ef439ed7c5b38481089-864d72bc104974d021b2",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 259,
-              "column": 8
-            },
-            {
-              "title": "TC-13: Attach Payment Stub (ADO #102359) — stub import via MCP",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 260,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:15:11.690Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 260,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "0ef439ed7c5b38481089-18da1d737802fd569ae5",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-              "line": 260,
-              "column": 8
-            },
-            {
-              "title": "TC-14: Capture Filing (ADO #102358) — driven live via MCP",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                        "line": 261,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:15:11.690Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
-                            "line": 261,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "0ef439ed7c5b38481089-d5a47d679872f29372ce",
-              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "id": "6a702332525bc31b1b42-a1f0595c827041d65edf",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
               "line": 261,
-              "column": 8
+              "column": 7
+            },
+            {
+              "title": "TC-14 — The supervisor signs the re-submitted agreement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-731c03f1550538a699f5",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 282,
+              "column": 7
+            },
+            {
+              "title": "TC-15 — NEGATIVE: HR cannot verify until the confirmation is ticked, then verification completes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-4fe3453d3ebc8b811fd0",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 301,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Contracting — happy path to Generate PERSAL Input (Simmy Mthalane)",
+          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+          "line": 330,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-16 — The employee drafts and submits the performance agreement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-2e2ee870a1a577190004",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 337,
+              "column": 7
+            },
+            {
+              "title": "TC-17 — The supervisor signs the agreement without changes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-bd3d13b214529e97b7d3",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 354,
+              "column": 7
+            },
+            {
+              "title": "TC-18 — HR verifies the agreement and it reaches Generate PERSAL Input",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-930261239a84393eb5a3",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 372,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple)",
+          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+          "line": 393,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-19 — Jabu submits an agreement the supervisor will dispute",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.540Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-f8f92e43d7cd886857eb",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 400,
+              "column": 7
+            },
+            {
+              "title": "TC-20 — The supervisor refers Jabu's agreement for mediation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.540Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-de5e31d2b8660585d3a3",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 412,
+              "column": 7
+            },
+            {
+              "title": "TC-21 — Adam submits and his agreement is also referred for mediation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.540Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-061256cf854df9bd5eaa",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 428,
+              "column": 7
+            },
+            {
+              "title": "TC-22 — Both disputes are routed to the mediator",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.540Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-96b0abd111b15893f056",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 449,
+              "column": 7
+            },
+            {
+              "title": "TC-23 — The mediator records the disagreement as resolved and it returns to the employee",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.540Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-7237d6fadb327f009230",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 461,
+              "column": 7
+            },
+            {
+              "title": "TC-24 — The employee updates the agreement with the dispute outcome and it completes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.540Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-ebca717b538afc88cebb",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 476,
+              "column": 7
+            },
+            {
+              "title": "TC-25 — NEGATIVE: an unresolved mediation requires both a comment and an attachment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.540Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-391c5fc8e0e7eb6d88da",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 523,
+              "column": 7
+            },
+            {
+              "title": "TC-26 — An unresolved dispute parks the agreement with no downstream task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.540Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-3b9bbda64dfda78ca2af",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 552,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Contracting — dashboard reflects the completed agreements",
+          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+          "line": 577,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-27 — The Contracting dashboard counts the agreements driven to completion",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:27:01.540Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6a702332525bc31b1b42-57a43fd956ad13bceb46",
+              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+              "line": 584,
+              "column": 7
             }
           ]
         }
@@ -885,10 +1395,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-11T08:14:13.279Z",
-    "duration": 58448.78200000001,
-    "expected": 1,
-    "skipped": 12,
+    "startTime": "2026-09-11T08:26:18.942Z",
+    "duration": 42617.445999999996,
+    "expected": 0,
+    "skipped": 26,
     "unexpected": 1,
     "flaky": 0
   }
