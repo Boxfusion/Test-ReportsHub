@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 247,
-    "last7Runs": 214,
+    "totalRuns": 248,
+    "last7Runs": 215,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 35,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 4,
+        "runs": 5,
         "passed": 0,
-        "failed": 4,
+        "failed": 5,
         "partial": 0
       },
       {
@@ -2948,23 +2948,24 @@
           "spec": "test-plans/Memo/verify-action-required-auto-populate-action-text.spec.ts",
           "specHref": "test-plans/Memo/verify-action-required-auto-populate-action-text.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "48.7s",
+            "duration": "65s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-action-required-auto-populate-action-text.md"
+            "reportHref": "test-reports/2026-09-11/verify-action-required-auto-populate-action-text.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "65s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4039,7 +4040,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4243,7 +4244,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4651,7 +4652,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4888,6 +4889,15 @@
           "duration": "8.1s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/valid-username-invalid-password.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-action-required-auto-populate-action-text.md",
+          "planDisplay": "Memo/verify-action-required-auto-populate-action-text.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "65s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/verify-action-required-auto-populate-action-text.md"
         }
       ]
     },
@@ -7134,5 +7144,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T09:22:58.701Z"
+  "generated": "2026-09-11T09:25:59.366Z"
 }
