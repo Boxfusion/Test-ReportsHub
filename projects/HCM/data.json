@@ -15,12 +15,12 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 27,
-    "totalRuns": 27,
-    "last7Runs": 1,
-    "last7Pass": 0,
-    "last7PassPct": 0,
-    "failingFlows": 1,
-    "passingFlows": 22,
+    "totalRuns": 28,
+    "last7Runs": 2,
+    "last7Pass": 1,
+    "last7PassPct": 50,
+    "failingFlows": 0,
+    "passingFlows": 23,
     "partialFlows": 0,
     "neverFlows": 4
   },
@@ -2564,8 +2564,8 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 1,
-        "passed": 0,
+        "runs": 2,
+        "passed": 1,
         "failed": 1,
         "partial": 0
       },
@@ -2591,16 +2591,21 @@
           "specHref": "test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
           "canRun": true,
           "badges": [],
-          "rowStatus": "failing",
-          "status": "FAILED",
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
             "date": "2026-09-11",
-            "result": "FAILED",
-            "duration": "136.4s",
-            "reportHref": "test-reports/2026-09-11/test-plans\\eLeave\\acknowledge-leave-approved-without-pay.md"
+            "result": "PASSED",
+            "duration": "16.7s",
+            "reportHref": "test-reports/2026-09-11/acknowledge-leave-approved-without-pay.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "PASSED",
+              "duration": "16.7s"
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -2803,7 +2808,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3267,7 +3272,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3422,6 +3427,14 @@
     {
       "date": "2026-09-11",
       "runs": [
+        {
+          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md",
+          "planDisplay": "eLeave/acknowledge-leave-approved-without-pay.md",
+          "result": "PASSED",
+          "duration": "16.7s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/acknowledge-leave-approved-without-pay.md"
+        },
         {
           "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md",
           "planDisplay": "eLeave/acknowledge-leave-approved-without-pay.md",
@@ -3666,5 +3679,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T07:17:04.188Z"
+  "generated": "2026-09-11T07:55:34.494Z"
 }

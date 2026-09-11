@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T07:17:04.252Z",
+  "generated": "2026-09-11T07:55:34.569Z",
   "projects": [
     {
       "name": "dep",
@@ -31,17 +31,17 @@
       "environment": "QA",
       "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
       "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
-      "health": "failing",
+      "health": "healthy",
       "summary": {
         "totalPlans": 27,
-        "totalRuns": 27,
-        "last7Runs": 1,
-        "last7Pass": 0,
-        "last7PassPct": 0,
-        "failingFlows": 1,
+        "totalRuns": 28,
+        "last7Runs": 2,
+        "last7Pass": 1,
+        "last7PassPct": 50,
+        "failingFlows": 0,
         "lastRun": {
           "date": "2026-09-11",
-          "result": "FAILED",
+          "result": "PASSED",
           "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md"
         }
       },
@@ -51,8 +51,8 @@
   "totals": {
     "totalProjects": 2,
     "totalPlans": 33,
-    "totalRuns": 38,
-    "last7Runs": 1,
-    "failingFlows": 3
+    "totalRuns": 39,
+    "last7Runs": 2,
+    "failingFlows": 2
   }
 }
