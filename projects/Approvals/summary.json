@@ -1,13 +1,13 @@
 {
   "totalPlans": 33,
-  "totalRuns": 243,
-  "last7Runs": 210,
+  "totalRuns": 244,
+  "last7Runs": 211,
   "last7Pass": 0,
   "last7PassPct": 0,
   "failingFlows": 35,
   "lastRun": {
-    "date": "2026-09-10",
+    "date": "2026-09-11",
     "result": "FAILED",
-    "plan": "test-plans/Memo/_adhoc-craig-myitems-retract.md"
+    "plan": "test-plans/Login/empty-username-and-password.md"
   }
 }

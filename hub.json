@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T08:55:10.587Z",
+  "generated": "2026-09-11T09:06:48.846Z",
   "projects": [
     {
       "name": "Approvals",
@@ -11,15 +11,15 @@
       "health": "failing",
       "summary": {
         "totalPlans": 33,
-        "totalRuns": 243,
-        "last7Runs": 210,
+        "totalRuns": 244,
+        "last7Runs": 211,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 35,
         "lastRun": {
-          "date": "2026-09-10",
+          "date": "2026-09-11",
           "result": "FAILED",
-          "plan": "test-plans/Memo/_adhoc-craig-myitems-retract.md"
+          "plan": "test-plans/Login/empty-username-and-password.md"
         }
       },
       "href": "projects/Approvals/index.html"
@@ -327,8 +327,8 @@
   "totals": {
     "totalProjects": 14,
     "totalPlans": 272,
-    "totalRuns": 1009,
-    "last7Runs": 483,
+    "totalRuns": 1010,
+    "last7Runs": 484,
     "failingFlows": 82
   }
 }

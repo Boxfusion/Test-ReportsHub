@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 243,
-    "last7Runs": 210,
+    "totalRuns": 244,
+    "last7Runs": 211,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 35,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2597,23 +2597,24 @@
           "spec": "test-plans/Login/empty-username-and-password.spec.ts",
           "specHref": "test-plans/Login/empty-username-and-password.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "19.1s",
+            "duration": "18.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/empty-username-and-password.md"
+            "reportHref": "test-reports/2026-09-11/empty-username-and-password.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "18.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -3491,7 +3492,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4035,7 +4036,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4103,7 +4104,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4647,7 +4648,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4715,7 +4716,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4846,6 +4847,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-11",
+      "runs": [
+        {
+          "plan": "test-plans/Login/empty-username-and-password.md",
+          "planDisplay": "Login/empty-username-and-password.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "18.3s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/empty-username-and-password.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-10",
       "runs": [
@@ -7089,5 +7104,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T08:55:09.837Z"
+  "generated": "2026-09-11T09:06:48.102Z"
 }
