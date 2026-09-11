@@ -22,12 +22,12 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 121,
-    "totalRuns": 129,
-    "last7Runs": 2,
+    "totalRuns": 130,
+    "last7Runs": 3,
     "last7Pass": 2,
-    "last7PassPct": 100,
-    "failingFlows": 4,
-    "passingFlows": 110,
+    "last7PassPct": 67,
+    "failingFlows": 5,
+    "passingFlows": 109,
     "partialFlows": 6,
     "neverFlows": 2
   },
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 2,
+        "runs": 3,
         "passed": 2,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -3086,7 +3086,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3374,7 +3374,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3636,7 +3636,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3668,7 +3668,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3828,7 +3828,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4020,7 +4020,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4084,7 +4084,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4372,7 +4372,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4696,7 +4696,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -5054,7 +5054,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -5182,7 +5182,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -5316,23 +5316,24 @@
           "spec": "test-plans/Alerts/verify-delete-alert.spec.ts",
           "specHref": "test-plans/Alerts/verify-delete-alert.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "passing",
-          "status": "PASSED",
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
           "last": {
-            "date": "2026-07-30",
-            "result": "PASSED",
-            "duration": "180.1s",
+            "date": "2026-09-11",
+            "result": "FAILED",
+            "duration": "293.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-07-30/verify-delete-alert.md"
+            "reportHref": "test-reports/2026-09-11/verify-delete-alert.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "293.5s",
+              "variant": null
+            },
             {
               "date": "2026-07-30",
               "result": "PASSED",
@@ -5358,7 +5359,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6069,7 +6070,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6485,7 +6486,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6532,6 +6533,15 @@
           "duration": "223.9s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/verify-add-alert-weekly.md"
+        },
+        {
+          "plan": "test-plans/Alerts/verify-delete-alert.md",
+          "planDisplay": "Alerts/verify-delete-alert.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "293.5s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/verify-delete-alert.md"
         }
       ]
     },
@@ -7714,5 +7724,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T10:17:52.944Z"
+  "generated": "2026-09-11T10:25:02.389Z"
 }
