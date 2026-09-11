@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T08:32:38.786Z",
+  "generated": "2026-09-11T08:55:10.587Z",
   "projects": [
     {
       "name": "Approvals",
@@ -172,13 +172,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 3,
-        "totalRuns": 6,
-        "last7Runs": 6,
+        "totalRuns": 7,
+        "last7Runs": 7,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 1,
         "lastRun": {
-          "date": "2026-09-10",
+          "date": "2026-09-11",
           "result": "FAILED",
           "plan": "test-plans/BAS/register-and-upload-invoice.md"
         }
@@ -327,8 +327,8 @@
   "totals": {
     "totalProjects": 14,
     "totalPlans": 272,
-    "totalRuns": 1008,
-    "last7Runs": 482,
+    "totalRuns": 1009,
+    "last7Runs": 483,
     "failingFlows": 82
   }
 }
