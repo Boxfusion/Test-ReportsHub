@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 255,
-    "last7Runs": 222,
+    "totalRuns": 256,
+    "last7Runs": 223,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 35,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 12,
+        "runs": 13,
         "passed": 0,
-        "failed": 12,
+        "failed": 13,
         "partial": 0
       },
       {
@@ -3500,23 +3500,24 @@
           "spec": "test-plans/Memo/verify-close-memo.spec.ts",
           "specHref": "test-plans/Memo/verify-close-memo.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "47.9s",
+            "duration": "47s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-close-memo.md"
+            "reportHref": "test-reports/2026-09-11/verify-close-memo.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "47s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4455,7 +4456,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4591,7 +4592,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4968,6 +4969,15 @@
           "duration": "48.7s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/verify-cc-user-in-routing-list.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-close-memo.md",
+          "planDisplay": "Memo/verify-close-memo.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/verify-close-memo.md"
         }
       ]
     },
@@ -7214,5 +7224,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T09:47:35.808Z"
+  "generated": "2026-09-11T09:51:02.067Z"
 }
