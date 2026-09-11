@@ -1,0 +1,118 @@
+{
+  "cols": [
+    "Ref Number",
+    "NPO Status",
+    "Organization Name",
+    "Type Of Appeal",
+    "Submitter",
+    "Status",
+    "Creation Time"
+  ],
+  "cells": [
+    [
+      "",
+      "APPEAL008/01/10/2025",
+      "Registered",
+      "Boxfusion DevTest",
+      "Refusal To Register",
+      "",
+      "Upheld",
+      "01/10/2025 14:54"
+    ],
+    [
+      "",
+      "APPEAL105/05/08/2026",
+      "Registered",
+      "Test Unsuccessful Letter02",
+      "Refusal To Register",
+      "Welcomed Galane",
+      "Upheld",
+      "05/08/2026 11:08"
+    ],
+    [
+      "",
+      "APPEAL029/04/08/2026",
+      "Application Failed",
+      "ghj",
+      "",
+      "Cinisile Mogane",
+      "In Complete",
+      "04/08/2026 14:31"
+    ],
+    [
+      "",
+      "APPEAL101/05/08/2026",
+      "Registered",
+      "Appeal Application",
+      "Refusal To Register",
+      "Cinisile Mogane",
+      "Denied",
+      "05/08/2026 10:58"
+    ],
+    [
+      "",
+      "APPEAL1389/20/08/2026",
+      "Not Registered",
+      "Test Unsuccessful Letter 01",
+      "",
+      "Cinisile Mogane",
+      "In Complete",
+      "20/08/2026 12:01"
+    ],
+    [
+      "",
+      "APPEAL1419/20/08/2026",
+      "",
+      "",
+      "",
+      "Mpendulo ntshangase",
+      "In Complete",
+      "20/08/2026 16:29"
+    ],
+    [
+      "",
+      "APPEAL057/27/09/2025",
+      "Deregistered",
+      "Testing Letter 1- Membership",
+      "",
+      "Cinisile Mogane",
+      "Upheld",
+      "27/09/2025 18:06"
+    ],
+    [
+      "",
+      "APPEAL031/04/08/2026",
+      "Deregistered",
+      "Pre Prod Membership NPO1",
+      "Refusal To Register",
+      "Mutshutshu Tshithukhe",
+      "Upheld",
+      "04/08/2026 14:31"
+    ],
+    [
+      "",
+      "APPEAL355/07/08/2026",
+      "Not Registered",
+      "Decline NPO Validation",
+      "Refusal To Register",
+      "Cinisile Mogane",
+      "Denied",
+      "07/08/2026 09:33"
+    ],
+    [
+      "",
+      "APPEAL180/05/08/2026",
+      "Not Registered",
+      "Test Unsuccessful 03",
+      "",
+      "Welcomed Galane",
+      "Case Preparation",
+      "05/08/2026 19:10"
+    ]
+  ],
+  "pag": "1-10 of 30 items 1 2 3 10 / page",
+  "seen": [
+    "https://dsd-npo-api-qa.shesha.app/api/services/app/Entities/GetAll?entityType=Shesha.Workflow.Domain.WorkflowInboxItem&maxResultCount=10&skipCount=0&properties=refNumber initiator processName subject actionText receivedOn overdueDate workflowInstanceId statusFinalText id&sorting=receivedOn desc&filter={\"and\":[{\"is_satisfied\":{\"var\":\"Shesha.Workflow.Specifications.InboxItemAssignedToMeSpecification\"}}]}",
+    "https://dsd-npo-api-qa.shesha.app/api/services/app/Entities/GetAll?entityType=Npo.DeregistrationAppeal&maxResultCount=10&skipCount=0&properties=refNumber npo { status id _displayName } typeOfAppeal submittedBy { id _displayName } appealStatus creationTime id&sorting=&filter="
+  ]
+}

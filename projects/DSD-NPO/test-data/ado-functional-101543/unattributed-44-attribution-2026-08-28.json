@@ -1,0 +1,272 @@
+{
+ "closed": [
+  {
+   "tc": "TC-05-014",
+   "wid": 101690,
+   "state": "Closed",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-05-024",
+   "wid": 101701,
+   "state": "Closed",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-05-025",
+   "wid": 101702,
+   "state": "Closed",
+   "inSmoke": false
+  }
+ ],
+ "smokeOwned": [
+  {
+   "tc": "TC-01-001",
+   "wid": 101595,
+   "state": "Design",
+   "inSmoke": true
+  },
+  {
+   "tc": "TC-03-031",
+   "wid": 102153,
+   "state": "Design",
+   "inSmoke": true
+  },
+  {
+   "tc": "TC-03-032",
+   "wid": 102154,
+   "state": "Design",
+   "inSmoke": true
+  },
+  {
+   "tc": "TC-04-023",
+   "wid": 102155,
+   "state": "Design",
+   "inSmoke": true
+  },
+  {
+   "tc": "TC-05-026",
+   "wid": 102156,
+   "state": "Design",
+   "inSmoke": true
+  },
+  {
+   "tc": "TC-05-027",
+   "wid": 102157,
+   "state": "Design",
+   "inSmoke": true
+  },
+  {
+   "tc": "TC-05-028",
+   "wid": 102158,
+   "state": "Design",
+   "inSmoke": true
+  },
+  {
+   "tc": "TC-05-029",
+   "wid": 102159,
+   "state": "Design",
+   "inSmoke": true
+  },
+  {
+   "tc": "TC-14W-001",
+   "wid": 102160,
+   "state": "Design",
+   "inSmoke": true
+  }
+ ],
+ "gap": [
+  {
+   "tc": "TC-01-013",
+   "wid": 101607,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-01-014",
+   "wid": 101608,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-05-021",
+   "wid": 101697,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-07-021",
+   "wid": 101731,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-07-022",
+   "wid": 101732,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-08-001",
+   "wid": 101733,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-08-002",
+   "wid": 101734,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-08-003",
+   "wid": 101735,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-08-004",
+   "wid": 101736,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-08-005",
+   "wid": 101737,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-08-019",
+   "wid": 101751,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-08-020",
+   "wid": 101752,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-08-021",
+   "wid": 101753,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-12-011",
+   "wid": 101799,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-001",
+   "wid": 107319,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-002",
+   "wid": 107320,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-006",
+   "wid": 107324,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-008",
+   "wid": 107326,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-009",
+   "wid": 107327,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-010",
+   "wid": 107328,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-011",
+   "wid": 107329,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-014",
+   "wid": 107332,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-015",
+   "wid": 107333,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-016",
+   "wid": 107334,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-024",
+   "wid": 107342,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-026",
+   "wid": 107344,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-028",
+   "wid": 107346,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-030",
+   "wid": 107348,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-14Z-032",
+   "wid": 107350,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-15Y-001",
+   "wid": 107400,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-15Y-002",
+   "wid": 107401,
+   "state": "Design",
+   "inSmoke": false
+  },
+  {
+   "tc": "TC-15Y-003",
+   "wid": 107402,
+   "state": "Design",
+   "inSmoke": false
+  }
+ ]
+}

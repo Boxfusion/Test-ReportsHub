@@ -1,0 +1,113 @@
+{
+  "suite": {
+    "id": 101908,
+    "name": "14X Concurrency and race conditions",
+    "n": 8
+  },
+  "cases": [
+    {
+      "id": 101850,
+      "fields": {
+        "System.Id": 101850,
+        "System.State": "Design",
+        "System.Title": "[TC-14X-001 | Src:Code | Admin] Two admins act on same Document Verification dialog: only one wins",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Application in Awaiting Document Verification; two admin users both open the Document Verification dialog.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Admin1 submits &#x27;all docs valid&#x27;; before Admin2 submits, Admin2 should see a stale-state error OR the second submission is rejected with 409. The application status changes once, not twice.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-001"
+      }
+    },
+    {
+      "id": 101851,
+      "fields": {
+        "System.Id": 101851,
+        "System.State": "Design",
+        "System.Title": "[TC-14X-002 | Src:Code | Admin] Submitter resubmits while admin is making decision",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Application set to Incomplete; submitter has wizard reopened; admin still has decision dialog open.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;If submitter submits first, admin&#x27;s decision attempt detects the resubmission and refuses to overwrite. No data loss.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-002"
+      }
+    },
+    {
+      "id": 101852,
+      "fields": {
+        "System.Id": 101852,
+        "System.State": "Design",
+        "System.Title": "[TC-14X-003 | Src:Code | Both] Two users try to Link the same NPO simultaneously",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. NPO L not yet linked to anyone; user A and user B both attempt to link.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Both<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Only one user becomes Authorised Admin; the other sees a &#x27;already linked&#x27; message.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-003"
+      }
+    },
+    {
+      "id": 101853,
+      "fields": {
+        "System.Id": 101853,
+        "System.State": "Design",
+        "System.Title": "[TC-14X-004 | Src:Code | Both] PersonIdVerifier concurrency lock holds under simultaneous trigger",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Multiple OB verifications queued; two triggers fire at the same time on the same instance.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Both<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Only one PersonIdVerifier processes; the other logs &#x27;already processing&#x27; and skips (PersonIdVerifier.cs:48-49). Verify no double DHA call for any single OB.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-004"
+      }
+    },
+    {
+      "id": 101854,
+      "fields": {
+        "System.Id": 101854,
+        "System.State": "Design",
+        "System.Title": "[TC-14X-005 | Src:Code | Admin] Two admins both try to assign different investigators to the same case",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Case validated and assignable.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;First assignment wins; second admin sees stale state and is refused with a clear message.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-005"
+      }
+    },
+    {
+      "id": 101855,
+      "fields": {
+        "System.Id": 101855,
+        "System.State": "Design",
+        "System.Title": "[TC-14X-006 | Src:Code | Admin] OB confirmation race: OB clicks link while admin is processing an unrelated update",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Application in AwaitingOBConfirmation.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;OB confirmation succeeds independently; admin&#x27;s update does not erase the OB confirmation status.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-006"
+      }
+    },
+    {
+      "id": 101856,
+      "fields": {
+        "System.Id": 101856,
+        "System.State": "Design",
+        "System.Title": "[TC-14X-007 | Src:Code | Both] Bulk reallocation Excel upload: duplicate NPO rows handled gracefully",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Admin uploads Excel containing two rows for the same NPO GUID.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Both<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Second occurrence either ignored, deduped, or processed idempotently. No partial-failure crash; result report lists each row&#x27;s outcome.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-007"
+      }
+    },
+    {
+      "id": 101857,
+      "fields": {
+        "System.Id": 101857,
+        "System.State": "Design",
+        "System.Title": "[TC-14X-008 | Src:Code | Both] BackgroundJob runs while transaction in flight",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Status transition to ApplicationSuccessful triggers BackfillMissingApplicationDocumentsAsync.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Both<br><br><b>⚠ Drift note:</b> Not in FDS. Concurrency robustness inferred from code (PersonIdVerifier, etc.). May reveal latent issues.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Set up the two concurrent actors with their respective sessions/contexts&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Both reach the relevant point at the same time&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Trigger both actions within a small time window (use a delay-tooling helper or two tabs)&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Certificate generation reads NpoNumber via projection query (cache-bypass workaround at ApplicationManager.cs:278-283). Certificate PDF shows the freshly-issued NpoNumber, not a stale value.&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Verify final DB state: only one transition is recorded; audit log reflects the actual sequence&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;No double-transition; no orphan records&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-008"
+      }
+    }
+  ]
+}

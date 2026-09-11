@@ -1,59 +1,152 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="1" time="136.43759">
-<testsuite name="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" timestamp="2026-05-28T12:39:10.270Z" hostname="" tests="3" failures="0" skipped="0" time="135.166" errors="1">
-<testcase name="Create Service Request › TC-01: Login as Admin" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="22.936">
+<testsuites id="" name="" tests="14" failures="0" skipped="3" errors="1" time="293.99647100000004">
+<testsuite name="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" timestamp="2026-09-11T10:54:03.382Z" hostname="" tests="14" failures="0" skipped="3" time="290.856" errors="1">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-01: Login as Fred" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="14.18">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
 </testcase>
-<testcase name="Create Service Request › TC-02: Navigate to Service Requests" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="18.902">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-02: Click on Alerts menu item" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="14.727">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
 </testcase>
-<testcase name="Create Service Request › TC-03: Create a Service Request" classname="projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts" time="93.328">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-03: Click Add Alert button" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="15.258">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-04: Populate Job Title/Keywords" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.809">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-05: Click Location dropdown" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.296">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-06: Select a location, e.g. Head Office" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="18.037">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-07: Populate Min Salary" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.007">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-08: Populate Max Salary" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.258">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-09: Click Daily radio button" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="17.256">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-10: Click OK button (create alert)" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="23.135">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-11: Click the Delete icon (first time)" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="122.893">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/test-failed-1.png]]
+[[ATTACHMENT|artifacts/projects-eRecruitment-test-3cf25-the-Delete-icon-first-time-/test-failed-1.png]]
 
-[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/video.webm]]
+[[ATTACHMENT|artifacts/projects-eRecruitment-test-3cf25-the-Delete-icon-first-time-/video.webm]]
 
-[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/error-context.md]]
+[[ATTACHMENT|artifacts/projects-eRecruitment-test-3cf25-the-Delete-icon-first-time-/error-context.md]]
 
-[[ATTACHMENT|artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/trace.zip]]
+[[ATTACHMENT|artifacts/projects-eRecruitment-test-3cf25-the-Delete-icon-first-time-/trace.zip]]
 ]]>
 </system-out>
-<error message="Test timeout of 90000ms exceeded." type="Error">
-<![CDATA[  projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts:66:7 › Create Service Request › TC-03: Create a Service Request 
+<error message="Test timeout of 120000ms exceeded." type="Error">
+<![CDATA[  projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts:211:7 › ALERTS-106360 — Verify Delete Alert › TC-11: Click the Delete icon (first time) 
 
-    Test timeout of 90000ms exceeded.
+    Test timeout of 120000ms exceeded.
 
-    Error: locator.click: Test timeout of 90000ms exceeded.
+    Error: locator.click: Test timeout of 120000ms exceeded.
     Call log:
-      - waiting for getByRole('dialog').first().getByRole('combobox', { name: 'Channel' })
+      - waiting for getByRole('row', { name: /DeleteAlertQA/ }).getByRole('button', { name: 'delete' }).first()
+        - locator resolved to <button type="button" title="Delete" class="ant-btn css-1lo1l9k css-var-R4q ant-btn-circle ant-btn-link ant-btn-icon-only sha-link sha-action-button">…</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is not stable
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
 
 
-      89 |     // STEP 5: SELECT / TYPE each mandatory field on the form with valid values
-      90 |     // Channel — Ant Design combobox; pick first available option
-    > 91 |     await dialog.getByRole('combobox', { name: 'Channel' }).click();
-         |                                                             ^
-      92 |     await page.getByRole('option').first().click();
-      93 |
-      94 |     // Mobile Number
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dispatcher/test-plans/service-requests/create-service-request.spec.ts:91:61
+      118 |   while ((await alertRow(page).count()) > 0 && guard < 10) {
+      119 |     guard++;
+    > 120 |     await deleteIcon(page).first().click();
+          |                                    ^
+      121 |     await page.waitForTimeout(500);
+      122 |     const popover = confirmPopover(page);
+      123 |     await expect(popover).toBeVisible({ timeout: 10000 });
+        at deleteAllMatchingAlertRows (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts:120:36)
+        at createAlert (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts:133:3)
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts:212:5
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/test-failed-1.png
+    ci-results/artifacts/projects-eRecruitment-test-3cf25-the-Delete-icon-first-time-/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/video.webm
+    ci-results/artifacts/projects-eRecruitment-test-3cf25-the-Delete-icon-first-time-/video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/error-context.md
+    Error Context: ci-results/artifacts/projects-eRecruitment-test-3cf25-the-Delete-icon-first-time-/error-context.md
 
     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/trace.zip
+    ci-results/artifacts/projects-eRecruitment-test-3cf25-the-Delete-icon-first-time-/trace.zip
     Usage:
 
-        npx playwright show-trace ci-results/artifacts/projects-dispatcher-test-p-1fe34-03-Create-a-Service-Request/trace.zip
+        npx playwright show-trace ci-results/artifacts/projects-eRecruitment-test-3cf25-the-Delete-icon-first-time-/trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </error>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-12: Click Cancel button" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-13: Click the Delete icon again" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-14: Click OK button (confirm delete)" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
 </testsuites>

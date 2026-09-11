@@ -22,614 +22,19 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 6,
-    "totalRuns": 11,
-    "last7Runs": 0,
+    "totalRuns": 15,
+    "last7Runs": 4,
     "last7Pass": 0,
-    "last7PassPct": null,
-    "failingFlows": 2,
+    "last7PassPct": 0,
+    "failingFlows": 4,
     "passingFlows": 0,
     "partialFlows": 0,
     "neverFlows": 2
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-06-21",
+    "startDate": "2025-09-14",
     "days": [
-      {
-        "iso": "2025-06-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-06-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-14",
         "runs": 0,
@@ -2229,7 +1634,7 @@
       {
         "iso": "2026-04-30",
         "runs": 1,
-        "passed": 0,
+        "passed": 1,
         "failed": 0,
         "partial": 0
       },
@@ -2328,7 +1733,7 @@
         "iso": "2026-05-14",
         "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2582,6 +1987,601 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-06-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-06-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-10",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-11",
+        "runs": 3,
+        "passed": 0,
+        "failed": 3,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2622,6 +2622,44 @@
       "stripPrefix": "test-plans/cases/",
       "plans": [
         {
+          "plan": "test-plans/cases/create-case.md",
+          "planHref": "test-plans/cases/create-case.md",
+          "spec": null,
+          "specHref": null,
+          "canRun": false,
+          "badges": [
+            {
+              "kind": "no-spec",
+              "text": "no .spec.ts yet"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-09-11",
+            "result": "FAILED",
+            "duration": "1218.5s",
+            "variant": null,
+            "reportHref": "test-reports/2026-09-11/create-case.md"
+          },
+          "runCount": 2,
+          "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "1218.5s",
+              "variant": null
+            },
+            {
+              "date": "2026-04-30",
+              "result": "PASSED",
+              "duration": "120s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
           "plan": "test-plans/cases/create-call-log-entry.md",
           "planHref": "test-plans/cases/create-call-log-entry.md",
           "spec": null,
@@ -2637,11 +2675,11 @@
               "text": "no .spec.ts yet"
             }
           ],
-          "rowStatus": "never",
-          "status": "[PASS]",
+          "rowStatus": "failing",
+          "status": "FAILED",
           "last": {
             "date": "2026-05-14",
-            "result": "[PASS]",
+            "result": "FAILED",
             "duration": "~37 min (incl. exploration of alternative UI)",
             "variant": null,
             "reportHref": "test-reports/2026-05-14/create-call-log-entry.md"
@@ -2650,44 +2688,8 @@
           "history": [
             {
               "date": "2026-05-14",
-              "result": "[PASS]",
+              "result": "FAILED",
               "duration": "~37 min (incl. exploration of alternative UI)",
-              "variant": null
-            }
-          ],
-          "bugs": []
-        },
-        {
-          "plan": "test-plans/cases/create-case.md",
-          "planHref": "test-plans/cases/create-case.md",
-          "spec": null,
-          "specHref": null,
-          "canRun": false,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            },
-            {
-              "kind": "no-spec",
-              "text": "no .spec.ts yet"
-            }
-          ],
-          "rowStatus": "never",
-          "status": "[PASS]",
-          "last": {
-            "date": "2026-04-30",
-            "result": "[PASS]",
-            "duration": "120s",
-            "variant": null,
-            "reportHref": "test-reports/2026-04-30/create-case.md"
-          },
-          "runCount": 1,
-          "history": [
-            {
-              "date": "2026-04-30",
-              "result": "[PASS]",
-              "duration": "120s",
               "variant": null
             }
           ],
@@ -2706,23 +2708,24 @@
           "spec": "test-plans/customers/create-customer.spec.ts",
           "specHref": "test-plans/customers/create-customer.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-05-28",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "118.7s",
+            "duration": "140.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-05-28/create-customer.md"
+            "reportHref": "test-reports/2026-09-11/create-customer.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "140.4s",
+              "variant": null
+            },
             {
               "date": "2026-05-28",
               "result": "FAILED",
@@ -2732,7 +2735,7 @@
             {
               "date": "2026-05-21",
               "result": "PARTIAL",
-              "duration": "20.1s",
+              "duration": "32.5s",
               "variant": null
             }
           ],
@@ -2751,23 +2754,30 @@
           "spec": "test-plans/service-requests/create-service-request-v2.spec.ts",
           "specHref": "test-plans/service-requests/create-service-request-v2.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-05-28",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "288.5s",
+            "duration": "3.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-05-28/create-service-request-v2.md"
+            "reportHref": "test-reports/2026-09-11/create-service-request-v2.md"
           },
-          "runCount": 7,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "3.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-10",
+              "result": "FAILED",
+              "duration": "4.8s",
+              "variant": null
+            },
             {
               "date": "2026-05-28",
               "result": "FAILED",
@@ -2801,13 +2811,13 @@
             {
               "date": "2026-05-19",
               "result": "FAILED",
-              "duration": "20.3s",
+              "duration": "58.2s",
               "variant": null
             },
             {
               "date": "2026-05-18",
               "result": "FAILED",
-              "duration": "44.0s",
+              "duration": "133.1s",
               "variant": null
             }
           ],
@@ -2840,6 +2850,52 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-11",
+      "runs": [
+        {
+          "plan": "test-plans/cases/create-case.md",
+          "planDisplay": "cases/create-case.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1218.5s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/create-case.md"
+        },
+        {
+          "plan": "test-plans/customers/create-customer.md",
+          "planDisplay": "customers/create-customer.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "140.4s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/create-customer.md"
+        },
+        {
+          "plan": "test-plans/service-requests/create-service-request-v2.md",
+          "planDisplay": "service-requests/create-service-request-v2.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "3.3s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/create-service-request-v2.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "runs": [
+        {
+          "plan": "test-plans/service-requests/create-service-request-v2.md",
+          "planDisplay": "service-requests/create-service-request-v2.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "4.8s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-10/create-service-request-v2.md"
+        }
+      ]
+    },
     {
       "date": "2026-05-28",
       "runs": [
@@ -2899,7 +2955,7 @@
           "planDisplay": "customers/create-customer.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "20.1s",
+          "duration": "32.5s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-05-21/create-customer.md"
         },
@@ -2936,7 +2992,7 @@
           "planDisplay": "service-requests/create-service-request-v2.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "20.3s",
+          "duration": "58.2s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-05-19/create-service-request-v2.md"
         }
@@ -2950,7 +3006,7 @@
           "planDisplay": "service-requests/create-service-request-v2.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "44.0s",
+          "duration": "133.1s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-05-18/create-service-request-v2.md"
         }
@@ -2963,7 +3019,7 @@
           "plan": "test-plans/cases/create-call-log-entry.md",
           "planDisplay": "cases/create-call-log-entry.md",
           "variant": null,
-          "result": "[PASS]",
+          "result": "FAILED",
           "duration": "~37 min (incl. exploration of alternative UI)",
           "mode": null,
           "reportHref": "test-reports/2026-05-14/create-call-log-entry.md"
@@ -2977,7 +3033,7 @@
           "plan": "test-plans/cases/create-case.md",
           "planDisplay": "cases/create-case.md",
           "variant": null,
-          "result": "[PASS]",
+          "result": "PASSED",
           "duration": "120s",
           "mode": null,
           "reportHref": "test-reports/2026-04-30/create-case.md"
@@ -2985,5 +3041,5 @@
       ]
     }
   ],
-  "generated": "2026-06-18T12:39:24.253Z"
+  "generated": "2026-09-11T10:58:57.721Z"
 }

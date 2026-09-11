@@ -1,0 +1,13 @@
+{
+  "totalPlans": 3,
+  "totalRuns": 7,
+  "last7Runs": 7,
+  "last7Pass": 0,
+  "last7PassPct": 0,
+  "failingFlows": 1,
+  "lastRun": {
+    "date": "2026-09-11",
+    "result": "FAILED",
+    "plan": "test-plans/BAS/register-and-upload-invoice.md"
+  }
+}

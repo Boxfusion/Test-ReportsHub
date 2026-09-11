@@ -1,0 +1,33 @@
+{
+  "mobile": "0684078878",
+  "email": "npo.qa.applicant.a@example.org",
+  "url": "https://dsd-npo-publicportal-1-qa.shesha.app/login",
+  "calls": [
+    {
+      "s": 200,
+      "u": "/api/services/app/UserManagement/Create",
+      "body": "{\"result\":{\"userName\":\"npo.qa.applicant.a@example.org\",\"firstName\":\"NpoQaApplicant\",\"lastName\":\"AlphaTest\",\"fullName\":null,\"mobileNumber\":\"0684078878\",\"emailAddress\":\"npo.qa.applicant.a@example.org\",\"isContractor\":false,\"primaryOrganisation\":null,\"typeOfAccount\":null,\"goToUrlAfterRegistration\":\"/\",\"userId\":15944,\"id\":\"96c5398f-fa25-4ffa-aa6d-2e5969209c42\"},\"targetUrl\":null,\"success\":true,\"error\":n"
+    },
+    {
+      "s": 200,
+      "u": "/api/dynamic/Shesha/Person/Crud/Get?id=96c5398f-fa25-4ffa-aa6d-2e5969209c42",
+      "body": "{\"result\":{\"photo\":null,\"identityNumber\":null,\"title\":null,\"firstName\":\"NpoQaApplicant\",\"lastName\":\"AlphaTest\",\"middleName\":null,\"initials\":null,\"customShortName\":null,\"homeNumber\":null,\"mobileNumber1\":\"0684078878\",\"mobileNumber2\":null,\"emailAddress1\":\"npo.qa.applicant.a@example.org\",\"emailAddress2\":null,\"dateOfBirth\":null,\"gender\":null,\"preferredContactMethod\":null,\"fullName\":\"NpoQaApplicant Alph"
+    },
+    {
+      "s": 200,
+      "u": "/api/dynamic/Shesha/Person/Crud/Update",
+      "body": "{\"result\":{\"photo\":null,\"identityNumber\":null,\"title\":null,\"firstName\":\"NpoQaApplicant\",\"lastName\":\"AlphaTest\",\"middleName\":null,\"initials\":null,\"customShortName\":null,\"homeNumber\":null,\"mobileNumber1\":\"0684078878\",\"mobileNumber2\":null,\"emailAddress1\":\"npo.qa.applicant.a@example.org\",\"emailAddress2\":null,\"dateOfBirth\":null,\"gender\":null,\"preferredContactMethod\":null,\"fullName\":\"NpoQaApplicant Alph"
+    },
+    {
+      "s": 200,
+      "u": "/api/dynamic/Shesha/User/Crud/Update",
+      "body": "{\"result\":{\"lastLoginDate\":null,\"emailAddress\":\"npo.qa.applicant.a@example.org\",\"authenticationGuid\":null,\"authenticationGuidExpiresOn\":null,\"otpEnabled\":false,\"requireChangePassword\":false,\"isAnonymous\":false,\"securityQuestionStatus\":null,\"changePasswordOnNextLogin\":false,\"passwordResetTokenExpiryTime\":null,\"supportedPasswordResetMethods\":[2,4,8],\"isActive\":true,\"typeOfAccount\":1,\"allowedFrontEnd"
+    },
+    {
+      "s": 200,
+      "u": "/api/services/app/EntityConfig/SyncClientApi",
+      "body": "{\"result\":{\"serverSnapshotHash\":\"E3E22CE4F7114A5FF328B33F28DDD4E4\",\"modules\":[]},\"targetUrl\":null,\"success\":true,\"error\":null,\"unAuthorizedRequest\":false,\"__abp\":true}"
+    }
+  ],
+  "body": "The DSD NPO Online Platform is a self-service portal for Non-Profit Organisations to initiate and manage all key processes related to their organisations profile with the Department. Sign Up Password Confirm Password Sign Up Back Already have an account? Login"
+}

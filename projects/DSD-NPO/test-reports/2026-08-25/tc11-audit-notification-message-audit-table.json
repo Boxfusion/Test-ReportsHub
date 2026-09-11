@@ -1,0 +1,20 @@
+{
+  "rows": 1,
+  "cols": [
+    "Created On",
+    "Date Sent",
+    "Notification",
+    "Recipient",
+    "Send Type",
+    "Subject",
+    "Body",
+    "Status"
+  ],
+  "bad": [
+    {
+      "status": 400,
+      "url": "https://dsd-npo-api-qa.shesha.app/api/services/app/Entities/GetAll?entityType=Shesha.Domain.NotificationMessage&maxResultCount=10&skipCount=0&properties=creationTime%20sendDate%20notification%20recipientText%20sendType%20subject%20body%20status%20id&sorting=&filter=",
+      "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"Your request is not valid!\",\"details\":\"The following errors were detected during validation.\\n - Cannot query field 'sendDate' on type 'NotificationMessage'.\\n - Cannot query field 'notification' on type 'NotificationMessage'. Did you mean 'direction'?\\n - Cannot query field 'sendType' on type 'NotificationMessage'.\\n - Cannot query field 'body' on type 'NotificationMessage'.\\n\",\"validationErrors\":[{\"message\":\"Cannot query field 'sendDate' on type 'NotificationMessage'.\",\"members\":null},{\"message\":\"Cannot query field 'notification' on type 'NotificationMessage'. Did you mean 'direction'?\",\"members\":null},{\"message\":\"Cannot query field 'sendType' on type 'NotificationMessage'.\",\"members\":null},{\"message\":\"Cannot query field 'body' on type 'NotificationMessage'.\",\"members\":null}]},\"unAuthorizedRequest\":false,\"__abp\":true}"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"entityType":"Shesha.Workflow.Domain.WorkflowMyItem","maxResultCount":2147483647,"skipCount":0,"properties":"","quickSearch":null,"sorting":"initiatedOn desc","filter":"{\"and\":[{\"is_satisfied\":{\"var\":\"Shesha.Workflow.Specifications.MyItemOwnedByMeSpecification\"}}]}","columns":[{"propertyName":"id","label":"Id"}]}

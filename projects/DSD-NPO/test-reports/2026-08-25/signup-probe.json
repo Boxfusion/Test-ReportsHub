@@ -1,0 +1,63 @@
+{
+  "inv": {
+    "fields": [
+      {
+        "label": "",
+        "maxLength": null,
+        "disabled": false
+      },
+      {
+        "label": "",
+        "maxLength": null,
+        "disabled": false
+      },
+      {
+        "label": "",
+        "maxLength": null,
+        "disabled": false
+      },
+      {
+        "label": "",
+        "maxLength": null,
+        "disabled": false
+      },
+      {
+        "label": "",
+        "maxLength": "10",
+        "disabled": false
+      },
+      {
+        "label": "",
+        "maxLength": null,
+        "disabled": false
+      },
+      {
+        "label": "",
+        "maxLength": null,
+        "disabled": false
+      }
+    ],
+    "buttons": [
+      "Verify Number"
+    ],
+    "text": "The DSD NPO Online Platform is a self-service portal for Non-Profit Organisations to initiate and manage all key processes related to their organisations profile with the Department. Verify Mobile Number Please enter mobile number to verify. Mobile Number Verify Number Back to login"
+  },
+  "links": [
+    "Forgot Password",
+    "Login",
+    "Home",
+    "Register"
+  ],
+  "calls": [
+    {
+      "s": 200,
+      "u": "/api/services/app/EntityConfig/SyncClientApi",
+      "body": "{\"result\":{\"serverSnapshotHash\":\"E3E22CE4F7114A5FF328B33F28DDD4E4\",\"modules\":[{\"accessor\":null,\"status\":\"outofdate\",\"entities\":[{\"metadata\":{\"dataType\":\"entity\",\"module\":null,\"typeAccessor\":\"TenantFeatureSetting\",\"moduleAccessor\":null,\"properties\":[{\"cascadeCreate\":false,\"cascadeUpdate\":false,\"cascadeDeleteUnreferenced\":false,\"isVisible\":true,\"required\":false,\"readonly\":false,\"minLength\":null,\"max"
+    },
+    {
+      "s": 200,
+      "u": "/api/services/app/EntityConfig/SyncClientApi",
+      "body": "{\"result\":{\"serverSnapshotHash\":\"E3E22CE4F7114A5FF328B33F28DDD4E4\",\"modules\":[]},\"targetUrl\":null,\"success\":true,\"error\":null,\"unAuthorizedRequest\":false,\"__abp\":true}"
+    }
+  ]
+}

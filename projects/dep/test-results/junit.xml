@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="3" time="285.152843">
-<testsuite name="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" timestamp="2026-05-27T07:19:18.510Z" hostname="" tests="3" failures="0" skipped="0" time="282.599" errors="3">
-<testcase name="Create Service Request (v2) › TC-01: Login as Admin" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="94.302">
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="3" time="3.315187">
+<testsuite name="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" timestamp="2026-09-11T09:13:22.777Z" hostname="" tests="3" failures="0" skipped="0" time="0.992" errors="3">
+<testcase name="Create Service Request (v2) › TC-01: Login as Admin" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="0.308">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/test-failed-1.png]]
@@ -12,24 +12,22 @@
 [[ATTACHMENT|artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip]]
 ]]>
 </system-out>
-<error message="Test timeout of 90000ms exceeded." type="Error">
+<error message="page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/" type="Error">
 <![CDATA[  projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:19:7 › Create Service Request (v2) › TC-01: Login as Admin 
 
-    Test timeout of 90000ms exceeded.
-
-    Error: locator.fill: Test timeout of 90000ms exceeded.
+    Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/
     Call log:
-      - waiting for getByRole('textbox', { name: 'Username' })
+      - navigating to "https://linux-dep-adminportal-test.azurewebsites.net/", waiting until "load"
 
 
-      25 |
-      26 |     // STEP 3: TYPE username field with `admin`
-    > 27 |     await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
-         |                                                           ^
-      28 |
-      29 |     // STEP 4: TYPE password field with `123qwe`
-      30 |     await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:27:59
+      19 |   test('TC-01: Login as Admin', async ({ page }) => {
+      20 |     // STEP 1: NAVIGATE to https://linux-dep-adminportal-test.azurewebsites.net/
+    > 21 |     await page.goto(APP_URL);
+         |                ^
+      22 |
+      23 |     // STEP 2: SNAPSHOT — confirm login form is visible
+      24 |     // SNAPSHOT: login form is visible
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:21:16
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/test-failed-1.png
@@ -51,7 +49,7 @@
 ]]>
 </error>
 </testcase>
-<testcase name="Create Service Request (v2) › TC-02: Navigate to Service Requests" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="94.262">
+<testcase name="Create Service Request (v2) › TC-02: Navigate to Service Requests" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="0.315">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/test-failed-1.png]]
@@ -63,25 +61,23 @@
 [[ATTACHMENT|artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/trace.zip]]
 ]]>
 </system-out>
-<error message="Test timeout of 90000ms exceeded." type="Error">
+<error message="page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/" type="Error">
 <![CDATA[  projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:43:7 › Create Service Request (v2) › TC-02: Navigate to Service Requests 
 
-    Test timeout of 90000ms exceeded.
-
-    Error: locator.fill: Test timeout of 90000ms exceeded.
+    Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/
     Call log:
-      - waiting for getByRole('textbox', { name: 'Username' })
+      - navigating to "https://linux-dep-adminportal-test.azurewebsites.net/", waiting until "load"
 
 
+       9 |
       10 | async function loginAsAdmin(page: Page) {
-      11 |   await page.goto(APP_URL);
-    > 12 |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
-         |                                                         ^
+    > 11 |   await page.goto(APP_URL);
+         |              ^
+      12 |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
       13 |   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);
       14 |   await page.getByRole('button', { name: 'Sign In' }).click();
-      15 |   await page.waitForLoadState('networkidle');
-        at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:12:57)
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:44:5
+        at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:11:14)
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:44:11
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/test-failed-1.png
@@ -103,7 +99,7 @@
 ]]>
 </error>
 </testcase>
-<testcase name="Create Service Request (v2) › TC-03: Create a Service Request" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="94.035">
+<testcase name="Create Service Request (v2) › TC-03: Create a Service Request" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="0.369">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/test-failed-1.png]]
@@ -115,25 +111,23 @@
 [[ATTACHMENT|artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/trace.zip]]
 ]]>
 </system-out>
-<error message="Test timeout of 90000ms exceeded." type="Error">
+<error message="page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/" type="Error">
 <![CDATA[  projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:62:7 › Create Service Request (v2) › TC-03: Create a Service Request 
 
-    Test timeout of 90000ms exceeded.
-
-    Error: locator.fill: Test timeout of 90000ms exceeded.
+    Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/
     Call log:
-      - waiting for getByRole('textbox', { name: 'Username' })
+      - navigating to "https://linux-dep-adminportal-test.azurewebsites.net/", waiting until "load"
 
 
+       9 |
       10 | async function loginAsAdmin(page: Page) {
-      11 |   await page.goto(APP_URL);
-    > 12 |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
-         |                                                         ^
+    > 11 |   await page.goto(APP_URL);
+         |              ^
+      12 |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
       13 |   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);
       14 |   await page.getByRole('button', { name: 'Sign In' }).click();
-      15 |   await page.waitForLoadState('networkidle');
-        at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:12:57)
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:63:5
+        at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:11:14)
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:63:11
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/test-failed-1.png

@@ -40,11 +40,12 @@ Site URLs are **not** stored here — only the registry of which env var holds e
 ## Credentials
 Credential **values are never committed** — they live in the gitignored `.env` at the hub root (see `.env.example`). This table is only the registry of roles and the env vars that carry them.
 
-| Role | Username env var | Password env var |
-|------|------------------|------------------|
-| ADMIN | `ADMIN_USERNAME` | `ADMIN_PASSWORD` |
+| Role | Username env var | Password env var | Notes |
+|------|------------------|------------------|-------|
+| ADMIN | `ADMIN_USERNAME` | `ADMIN_PASSWORD` | Admin portal super user |
+| RM | `RM_USERNAME` | `RM_PASSWORD` | Relationship Manager — drives the Leads → Opportunity → Inbox → Opportunity flow |
 
-Specs resolve these at run time via `credsFor(role)` / `loginAs(page, 'ADMIN')`.
+Specs resolve these at run time via `credsFor(role)` / `loginAs(page, 'ADMIN')` / `loginAs(page, 'RM')`.
 
 ## Test Artifacts (per-project)
 
@@ -57,6 +58,32 @@ Specs resolve these at run time via `credsFor(role)` / `loginAs(page, 'ADMIN')`.
 | **Run report** | `test-reports/YYYY-MM-DD/<name>.md` |
 | **Bug log** | `test-reports/bugs/<name>.md` |
 | **Screenshots / traces / videos** | `test-results/artifacts/` |
+
+## Prerequisite — Java on PATH for Allure
+
+`/RunTest` renders an Allure report on every run, and `npx allure generate` needs a JDK. On this machine
+the JDK **is** installed via Homebrew (`brew list` → `openjdk`, OpenJDK 26) but Homebrew keeps it
+**keg-only**: it is never symlinked into `/Library/Java/JavaVirtualMachines/`, which is the only place
+the macOS `/usr/bin/java` stub and `/usr/libexec/java_home` look. The result is a misleading
+*"Unable to locate a Java Runtime"* even though a working JDK is present at
+`/opt/homebrew/opt/openjdk/bin/java`.
+
+Either prefix the Allure command:
+```bash
+PATH="/opt/homebrew/opt/openjdk/bin:$PATH" npx allure generate projects/land-bank/allure-results \
+  --clean --single-file -o projects/land-bank/allure-report
+```
+…or fix it once, so every shell picks it up:
+```bash
+sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+# or add to ~/.zshrc:  export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+```
+
+> **Report size warning.** `--single-file` inlines every attachment. A run with many failures embeds
+> each trace (~13 MB) and video, which produced a **157 MB** `allure-report/index.html` on
+> 2026-08-20. `allure-report/` is **not** gitignored, so check the size before committing or running
+> `/submit-test-results`. Consider gitignoring it, dropping `--single-file`, or trimming
+> `trace`/`video` retention in `playwright.config.ts`.
 
 ## Core Constraints
 - **Plans are markdown.** `.md` files in [test-plans/](test-plans/) are canonical.

@@ -34,11 +34,21 @@ function walk(dir, filter) {
 }
 
 // ---- 1. the universe of cases, taken from the plans' ADO annotations -------------------------------
-const planned = new Map(); // tcId -> plan file
+// Segmented by plan family: the smoke plan (101541) and the functional plan (101543) split one TC
+// series, so merging them into a single total produces a number that means nothing. Functional plans
+// are named `*-functional.md`.
+const planned = new Map(); // tcId -> { plan, family }
 for (const f of walk(PLANS, p => p.endsWith('.md') && !p.endsWith('RULES.md'))) {
   const txt = fs.readFileSync(f, 'utf8');
+  const family = /-functional\.md$/.test(f) ? 'functional' : 'smoke';
   for (const m of txt.matchAll(new RegExp(`ADO #\\d+\\s*·\\s*${TC}`, 'g'))) {
-    planned.set(m[1], path.relative(PROJECT, f));
+    // A TC id belongs to exactly one plan family; first writer wins, and a clash is reported below.
+    const prev = planned.get(m[1]);
+    if (prev && prev.family !== family) {
+      planned.set(m[1], { ...prev, clash: path.relative(PROJECT, f) });
+    } else if (!prev) {
+      planned.set(m[1], { plan: path.relative(PROJECT, f), family });
+    }
   }
 }
 
@@ -94,27 +104,44 @@ for (const f of walk(REPORTS, p => p.endsWith('.md'))) {
 // ---- 3. report ------------------------------------------------------------------------------------
 const plannedIds = [...planned.keys()].sort();
 const executedIds = [...executed.keys()].sort();
-const notRun = plannedIds.filter(id => !executed.has(id));
 const unknown = executedIds.filter(id => !planned.has(id));
 
-console.log('DSD-NPO smoke coverage');
+console.log('DSD-NPO coverage');
 console.log('='.repeat(58));
-console.log(`Cases found in plans      : ${plannedIds.length}`);
-console.log(`Cases marked executed     : ${executedIds.length}`);
-console.log(`Cases still to run        : ${notRun.length}`);
+
+for (const family of ['smoke', 'functional']) {
+  const ids = plannedIds.filter(id => planned.get(id).family === family);
+  if (!ids.length) continue;
+  const done = ids.filter(id => executed.has(id));
+  const notRun = ids.filter(id => !executed.has(id));
+  const label = family === 'smoke' ? 'SMOKE plan 101541' : 'FUNCTIONAL plan 101543';
+  console.log(`\n${label}`);
+  console.log(`  cases in plans   : ${ids.length}`);
+  console.log(`  executed         : ${done.length}`);
+  console.log(`  still to run     : ${notRun.length}`);
+  if (notRun.length) {
+    const bySuite = {};
+    for (const id of notRun) {
+      const suite = id.slice(3, id.lastIndexOf('-'));
+      (bySuite[suite] ||= []).push(id);
+    }
+    console.log('  not yet executed:');
+    for (const [suite, s] of Object.entries(bySuite).sort()) {
+      console.log(`    suite ${suite.padEnd(4)} (${s.length})  ${s.join(', ')}`);
+    }
+  }
+}
 console.log('');
 
-if (notRun.length) {
-  console.log('Not yet executed:');
-  const bySuite = {};
-  for (const id of notRun) {
-    const suite = id.slice(3, id.lastIndexOf('-'));
-    (bySuite[suite] ||= []).push(id);
-  }
-  for (const [suite, ids] of Object.entries(bySuite).sort()) {
-    console.log(`  suite ${suite.padEnd(4)} (${ids.length})  ${ids.join(', ')}`);
+const clashes = plannedIds.filter(id => planned.get(id).clash);
+if (clashes.length) {
+  console.log('🔴 Same TC id claimed by both a smoke and a functional plan — one of them is wrong:');
+  for (const id of clashes) {
+    const p = planned.get(id);
+    console.log(`  ${id} — ${p.plan} (${p.family}) vs ${p.clash}`);
   }
   console.log('');
+  process.exitCode = 1;
 }
 
 if (unknown.length) {

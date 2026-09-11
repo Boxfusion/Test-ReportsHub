@@ -1,0 +1,295 @@
+{
+  "value": [
+    {
+      "testPlan": {
+        "id": 101543,
+        "name": "DSD-NPO - Functional Test Plan"
+      },
+      "project": {
+        "id": "db7c059d-314c-47da-b747-f50c84d878fc",
+        "name": "Boxfusion Test Plans",
+        "state": "unchanged",
+        "visibility": "unchanged",
+        "lastUpdateTime": "0001-01-01T00:00:00"
+      },
+      "testSuite": {
+        "id": 101905,
+        "name": "14S - Cross-Cutting - Public NPO Search & Anonymous Endpoints"
+      },
+      "workItem": {
+        "id": 101820,
+        "name": "[TC-14-008 | Src:FDS | Public] Public NPO Search - Cancelled/Dissolved NPO is shown with correct status",
+        "workItemFields": [
+          {
+            "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Search for the cancelled NPO&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Result shows status = Cancelled/Dissolved&lt;/P&gt;</parameterizedString><description/></step></steps>"
+          },
+          {
+            "Microsoft.VSTS.Common.ActivatedBy": "Thabiso Kegakwile <Thabiso.Kegakwile@boxfusion.io>"
+          },
+          {
+            "Microsoft.VSTS.Common.ActivatedDate": "2026-06-03T14:01:58.75Z"
+          },
+          {
+            "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated"
+          },
+          {
+            "System.Description": "<b>Preconditions:</b> Portal: Public Portal (publicportal). Cancelled NPO exists.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Public"
+          },
+          {
+            "System.State": "Design"
+          },
+          {
+            "System.AssignedTo": "Thabiso Kegakwile <Thabiso.Kegakwile@boxfusion.io>"
+          },
+          {
+            "Microsoft.VSTS.Common.Priority": 3
+          },
+          {
+            "Microsoft.VSTS.Common.StateChangeDate": "2026-06-03T14:01:58.75Z"
+          },
+          {
+            "System.WorkItemType": "Test Case"
+          },
+          {
+            "System.Rev": 1
+          }
+        ]
+      },
+      "pointAssignments": [
+        {
+          "id": 26501,
+          "configurationName": "Windows 10",
+          "tester": {
+            "displayName": "Thabiso Kegakwile",
+            "url": "https://spsprodeus21.vssps.visualstudio.com/Aa78373f0-4127-40cb-85d1-425053f23a8f/_apis/Identities/0f0cf3c4-c88e-6267-8f67-f4067651b5f3",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/boxfusion/_apis/GraphProfile/MemberAvatars/aad.MGYwY2YzYzQtYzg4ZS03MjY3LThmNjctZjQwNjc2NTFiNWYz"
+              }
+            },
+            "id": "0f0cf3c4-c88e-6267-8f67-f4067651b5f3",
+            "uniqueName": "Thabiso.Kegakwile@boxfusion.io",
+            "imageUrl": "https://dev.azure.com/boxfusion/_apis/GraphProfile/MemberAvatars/aad.MGYwY2YzYzQtYzg4ZS03MjY3LThmNjctZjQwNjc2NTFiNWYz",
+            "descriptor": "aad.MGYwY2YzYzQtYzg4ZS03MjY3LThmNjctZjQwNjc2NTFiNWYz"
+          },
+          "configurationId": 2879
+        }
+      ],
+      "links": {
+        "testPoints": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543/Suites/101905/TestPoint/26501"
+        },
+        "configuration": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Configurations/2879"
+        },
+        "_self": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543/Suites/101905/TestCase"
+        },
+        "sourcePlan": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543"
+        },
+        "sourceSuite": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543/Suites/101905"
+        },
+        "sourceProject": {
+          "href": "https://dev.azure.com/boxfusion/_apis/projects/Boxfusion%20Test%20Plans"
+        }
+      }
+    },
+    {
+      "testPlan": {
+        "id": 101543,
+        "name": "DSD-NPO - Functional Test Plan"
+      },
+      "project": {
+        "id": "db7c059d-314c-47da-b747-f50c84d878fc",
+        "name": "Boxfusion Test Plans",
+        "state": "unchanged",
+        "visibility": "unchanged",
+        "lastUpdateTime": "0001-01-01T00:00:00"
+      },
+      "testSuite": {
+        "id": 101905,
+        "name": "14S - Cross-Cutting - Public NPO Search & Anonymous Endpoints"
+      },
+      "workItem": {
+        "id": 101823,
+        "name": "[TC-14-011 | Src:Code | External] Public NISPIS API requires API key; /verify endpoint returns NPO details for valid NpoNumber",
+        "workItemFields": [
+          {
+            "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;POST /api/npo/verify with valid NpoNumber and API key&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;200 OK with OrganisationResponse containing status, message, Company details&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;POST /api/npo/verify WITHOUT API key&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;401/403 Unauthorized&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;POST with invalid NpoNumber&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Response indicates NPO not found / NotRegistered status&lt;/P&gt;</parameterizedString><description/></step></steps>"
+          },
+          {
+            "Microsoft.VSTS.Common.ActivatedBy": "Thabiso Kegakwile <Thabiso.Kegakwile@boxfusion.io>"
+          },
+          {
+            "Microsoft.VSTS.Common.ActivatedDate": "2026-06-03T14:02:01.12Z"
+          },
+          {
+            "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated"
+          },
+          {
+            "System.Description": "<b>Preconditions:</b> Portal: External - API client (no portal UI; e.g., NISPIS partner). Valid NPO exists; consumer has an API key.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> External<br><br><b>⚠ Drift note:</b> Not in FDS. NISPISVerificationAppService.cs:45 etc. Public-facing partner API - critical to test."
+          },
+          {
+            "System.State": "Design"
+          },
+          {
+            "System.AssignedTo": "Thabiso Kegakwile <Thabiso.Kegakwile@boxfusion.io>"
+          },
+          {
+            "Microsoft.VSTS.Common.Priority": 1
+          },
+          {
+            "Microsoft.VSTS.Common.StateChangeDate": "2026-06-03T14:02:01.12Z"
+          },
+          {
+            "System.WorkItemType": "Test Case"
+          },
+          {
+            "System.Rev": 1
+          }
+        ]
+      },
+      "order": 1,
+      "pointAssignments": [
+        {
+          "id": 26502,
+          "configurationName": "Windows 10",
+          "tester": {
+            "displayName": "Thabiso Kegakwile",
+            "url": "https://spsprodeus21.vssps.visualstudio.com/Aa78373f0-4127-40cb-85d1-425053f23a8f/_apis/Identities/0f0cf3c4-c88e-6267-8f67-f4067651b5f3",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/boxfusion/_apis/GraphProfile/MemberAvatars/aad.MGYwY2YzYzQtYzg4ZS03MjY3LThmNjctZjQwNjc2NTFiNWYz"
+              }
+            },
+            "id": "0f0cf3c4-c88e-6267-8f67-f4067651b5f3",
+            "uniqueName": "Thabiso.Kegakwile@boxfusion.io",
+            "imageUrl": "https://dev.azure.com/boxfusion/_apis/GraphProfile/MemberAvatars/aad.MGYwY2YzYzQtYzg4ZS03MjY3LThmNjctZjQwNjc2NTFiNWYz",
+            "descriptor": "aad.MGYwY2YzYzQtYzg4ZS03MjY3LThmNjctZjQwNjc2NTFiNWYz"
+          },
+          "configurationId": 2879
+        }
+      ],
+      "links": {
+        "testPoints": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543/Suites/101905/TestPoint/26502"
+        },
+        "configuration": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Configurations/2879"
+        },
+        "_self": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543/Suites/101905/TestCase"
+        },
+        "sourcePlan": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543"
+        },
+        "sourceSuite": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543/Suites/101905"
+        },
+        "sourceProject": {
+          "href": "https://dev.azure.com/boxfusion/_apis/projects/Boxfusion%20Test%20Plans"
+        }
+      }
+    },
+    {
+      "testPlan": {
+        "id": 101543,
+        "name": "DSD-NPO - Functional Test Plan"
+      },
+      "project": {
+        "id": "db7c059d-314c-47da-b747-f50c84d878fc",
+        "name": "Boxfusion Test Plans",
+        "state": "unchanged",
+        "visibility": "unchanged",
+        "lastUpdateTime": "0001-01-01T00:00:00"
+      },
+      "testSuite": {
+        "id": 101905,
+        "name": "14S - Cross-Cutting - Public NPO Search & Anonymous Endpoints"
+      },
+      "workItem": {
+        "id": 101824,
+        "name": "[TC-14-012 | Src:Code | Public] Public anonymous Organisation lookups: GetOrganisationIdBySubstringId and OrganisationComplianceStatus",
+        "workItemFields": [
+          {
+            "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Call GET /api/services/dsdnpo/organisations/GetOrganisationIdBySubstringId without auth&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;200 OK with org GUID (AbpAllowAnonymous)&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Call GET /api/services/dsdnpo/organisations/OrganisationComplianceStatus without auth&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;200 OK with compliance status; verify no PII exposed&lt;/P&gt;</parameterizedString><description/></step></steps>"
+          },
+          {
+            "Microsoft.VSTS.Common.ActivatedBy": "Thabiso Kegakwile <Thabiso.Kegakwile@boxfusion.io>"
+          },
+          {
+            "Microsoft.VSTS.Common.ActivatedDate": "2026-06-03T14:02:01.71Z"
+          },
+          {
+            "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated"
+          },
+          {
+            "System.Description": "<b>Preconditions:</b> Portal: Public Portal (publicportal). At least one registered NPO with a Compliance status set.<br><br><b>Source:</b> Code<br><br><b>Portal:</b> Public<br><br><b>⚠ Drift note:</b> Found via [AbpAllowAnonymous] attributes. Confirm with security team that this surface is acceptable."
+          },
+          {
+            "System.State": "Design"
+          },
+          {
+            "System.AssignedTo": "Thabiso Kegakwile <Thabiso.Kegakwile@boxfusion.io>"
+          },
+          {
+            "Microsoft.VSTS.Common.Priority": 2
+          },
+          {
+            "Microsoft.VSTS.Common.StateChangeDate": "2026-06-03T14:02:01.71Z"
+          },
+          {
+            "System.WorkItemType": "Test Case"
+          },
+          {
+            "System.Rev": 1
+          }
+        ]
+      },
+      "order": 2,
+      "pointAssignments": [
+        {
+          "id": 26503,
+          "configurationName": "Windows 10",
+          "tester": {
+            "displayName": "Thabiso Kegakwile",
+            "url": "https://spsprodeus21.vssps.visualstudio.com/Aa78373f0-4127-40cb-85d1-425053f23a8f/_apis/Identities/0f0cf3c4-c88e-6267-8f67-f4067651b5f3",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/boxfusion/_apis/GraphProfile/MemberAvatars/aad.MGYwY2YzYzQtYzg4ZS03MjY3LThmNjctZjQwNjc2NTFiNWYz"
+              }
+            },
+            "id": "0f0cf3c4-c88e-6267-8f67-f4067651b5f3",
+            "uniqueName": "Thabiso.Kegakwile@boxfusion.io",
+            "imageUrl": "https://dev.azure.com/boxfusion/_apis/GraphProfile/MemberAvatars/aad.MGYwY2YzYzQtYzg4ZS03MjY3LThmNjctZjQwNjc2NTFiNWYz",
+            "descriptor": "aad.MGYwY2YzYzQtYzg4ZS03MjY3LThmNjctZjQwNjc2NTFiNWYz"
+          },
+          "configurationId": 2879
+        }
+      ],
+      "links": {
+        "testPoints": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543/Suites/101905/TestPoint/26503"
+        },
+        "configuration": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Configurations/2879"
+        },
+        "_self": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543/Suites/101905/TestCase"
+        },
+        "sourcePlan": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543"
+        },
+        "sourceSuite": {
+          "href": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans/_apis/testplan/Plans/101543/Suites/101905"
+        },
+        "sourceProject": {
+          "href": "https://dev.azure.com/boxfusion/_apis/projects/Boxfusion%20Test%20Plans"
+        }
+      }
+    }
+  ],
+  "count": 3
+}

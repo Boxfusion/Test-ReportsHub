@@ -1,0 +1,1575 @@
+{
+  "totalCases": 314,
+  "byId": [
+    {
+      "suiteId": 101884,
+      "workItemId": 101595,
+      "title": "[TC-01-001 | Src:Both | Public] Sign-in with valid email and password lands authenticated user on landing page"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101596,
+      "title": "[TC-01-002 | Src:Both | Public] Sign-in with wrong password shows clear error and stays on Sign-In page"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101597,
+      "title": "[TC-01-003 | Src:Both | Public] Sign-in with non-existent email shows generic invalid-credential error"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101598,
+      "title": "[TC-01-004 | Src:FDS | Public] Sign-in with malformed email blocks submission and shows field-level error"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101599,
+      "title": "[TC-01-005 | Src:FDS | Public] Sign-in with empty email and/or password is blocked"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101600,
+      "title": "[TC-01-006 | Src:FDS | Public] Forgot Password link opens the reset password flow"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101601,
+      "title": "[TC-01-007 | Src:FDS | Public] Password reset email is sent for a registered email"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101602,
+      "title": "[TC-01-008 | Src:FDS | Public] Password reset for unregistered email shows generic success (no enumeration)"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101605,
+      "title": "[TC-01-011 | Src:FDS | Public] Create account with invalid SA ID format is rejected at field level before submit"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101606,
+      "title": "[TC-01-012 | Src:FDS | Public] Create account with SA ID that fails Luhn checksum is rejected"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101607,
+      "title": "[TC-01-013 | Src:Both | Public] Create account when DHA verification of ID fails - account creation is blocked"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101608,
+      "title": "[TC-01-014 | Src:FDS | Public] Create account when DHA service is down - graceful retry message is shown"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101609,
+      "title": "[TC-01-015 | Src:FDS | Public] Create account with mismatched Password and Confirm Password is blocked"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101610,
+      "title": "[TC-01-016 | Src:FDS | Public] Create account enforces password policy (length, complexity)"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101611,
+      "title": "[TC-01-017 | Src:FDS | Public] Create account using an email already registered is blocked"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101612,
+      "title": "[TC-01-018 | Src:FDS | Public] Create account - leading/trailing whitespace in email is trimmed"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101613,
+      "title": "[TC-01-019 | Src:FDS | Public] Account is locked after configured number of consecutive failed sign-ins"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101614,
+      "title": "[TC-01-020 | Src:FDS | Public] Sign-in is case-insensitive on email but case-sensitive on password"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 101615,
+      "title": "[TC-01-021 | Src:Code | Public] Security: NpoOtpStressTesting endpoint is gated by admin role and disabled in production"
+    },
+    {
+      "suiteId": 101884,
+      "workItemId": 107678,
+      "title": "[TC-01-022 | Src:Code | Public] Re-register with same email after account deletion — stale NPO links must not persist and Dashboard must not fetch with id=null"
+    },
+    {
+      "suiteId": 101885,
+      "workItemId": 101618,
+      "title": "[TC-02-003 | Src:FDS | Public] Link to Existing NPO with mismatched details triggers security questions"
+    },
+    {
+      "suiteId": 101885,
+      "workItemId": 101619,
+      "title": "[TC-02-004 | Src:FDS | Public] Security questions match - user is granted Authorised Admin role on the NPO"
+    },
+    {
+      "suiteId": 101885,
+      "workItemId": 101620,
+      "title": "[TC-02-005 | Src:FDS | Public] Security questions do not match - user can cancel or open Change Request form"
+    },
+    {
+      "suiteId": 101885,
+      "workItemId": 101621,
+      "title": "[TC-02-006 | Src:FDS | Public] Link to NPO with unknown NPO number returns no-result and an alternate-route link"
+    },
+    {
+      "suiteId": 101885,
+      "workItemId": 101623,
+      "title": "[TC-02-008 | Src:FDS | Public] User without any linked NPO sees the empty-state version of the dashboard"
+    },
+    {
+      "suiteId": 101885,
+      "workItemId": 101624,
+      "title": "[TC-02-009 | Src:FDS | Public] User cannot link the same NPO twice"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101626,
+      "title": "[TC-03-002 | Src:FDS | Public] POPI Act - OK button is disabled until the consent checkbox is ticked"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101627,
+      "title": "[TC-03-003 | Src:FDS | Public] Tab 2 - Organisation Details: all required fields enforced before Next"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101631,
+      "title": "[TC-03-007 | Src:FDS | Public] Tab 2 - Conditional fields are hidden again when legal form is changed"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101633,
+      "title": "[TC-03-009 | Src:FDS | Public] Tab 2 - Email field rejects invalid format"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101634,
+      "title": "[TC-03-010 | Src:FDS | Public] Tab 2 - Telephone and Cellphone accept only valid SA-format numbers"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101635,
+      "title": "[TC-03-011 | Src:FDS | Public] Tab 2 - SARS Income Tax Number is validated for format if provided"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101636,
+      "title": "[TC-03-012 | Src:FDS | Public] Tab 2 - Area of Operations multi-select is mandatory"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101637,
+      "title": "[TC-03-013 | Src:FDS | Public] Tab 2 - Term of Office Bearers must be a positive integer (months)"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101638,
+      "title": "[TC-03-014 | Src:FDS | Public] Tab 2 - Duplicate organisation prevention: cannot proceed if NPO with same Reg/IT number already registered"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101639,
+      "title": "[TC-03-015 | Src:FDS | Public] Tab 2 - Save & Continue persists data on browser refresh"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101641,
+      "title": "[TC-03-017 | Src:FDS | Public] Tab 3 - Cannot click Next with zero objectives"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101642,
+      "title": "[TC-03-018 | Src:FDS | Public] Tab 3 - Secondary Objective without a primary is rejected"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101643,
+      "title": "[TC-03-019 | Src:FDS | Public] Tab 3 - Delete an added objective"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101644,
+      "title": "[TC-03-020 | Src:FDS | Public] Tab 3 - Duplicate primary+secondary pair cannot be added twice"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101645,
+      "title": "[TC-03-021 | Src:Code | Public] Org Name: required, min length 2, max length 150"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101646,
+      "title": "[TC-03-022 | Src:Code | Public] Org Name: rejects HTML/script injection (XSS hardening)"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101647,
+      "title": "[TC-03-023 | Src:Code | Public] Shortened Name: optional but max length enforced"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101648,
+      "title": "[TC-03-024 | Src:Code | Public] Telephone: accepts SA national and international formats"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101649,
+      "title": "[TC-03-025 | Src:Code | Public] WhatsApp: same validation as cellphone; optional"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101650,
+      "title": "[TC-03-026 | Src:Code | Public] CIPC Registration Number format YYYY/NNNNNN/NN"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101651,
+      "title": "[TC-03-027 | Src:Code | Public] Trust IT Registration Number format validated"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101652,
+      "title": "[TC-03-028 | Src:Code | Public] VA Constitution date cannot be in the future"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101653,
+      "title": "[TC-03-029 | Src:Code | Public] Term of OB: positive integer in reasonable range"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 101654,
+      "title": "[TC-03-030 | Src:Both | Public] Area of Operations: at least one selection required"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 102153,
+      "title": "[TC-03-031 | Src:Code | Public] Tab 1 - Read This tab is the first step in the wizard; informational content displays; Next proceeds; no Back button"
+    },
+    {
+      "suiteId": 101886,
+      "workItemId": 102154,
+      "title": "[TC-03-032 | Src:Code | Public] Tab 2 - Conditional fields (Have Income Tax No, Is RSA ID Number) show and hide correctly when toggled"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101656,
+      "title": "[TC-04-002 | Src:FDS | Public] Tab 4 - Add OB with invalid SA ID format is rejected client-side"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101657,
+      "title": "[TC-04-003 | Src:FDS | Public] Tab 4 - Add OB with checksum-failing SA ID is rejected"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101658,
+      "title": "[TC-04-004 | Src:FDS | Public] Tab 4 - Add OB with valid passport (identification = Passport) accepted"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101659,
+      "title": "[TC-04-005 | Src:FDS | Public] Tab 4 - Add OB with expired passport is rejected"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101660,
+      "title": "[TC-04-006 | Src:FDS | Public] Tab 4 - DHA service down: OB saved but queued for background verification"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101661,
+      "title": "[TC-04-007 | Src:Both | Public] Tab 4 - DHA reports no-match: OB flagged as 'ID Not Verified'"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101663,
+      "title": "[TC-04-009 | Src:FDS | Public] Tab 4 - CIPC service down: NPC directors not pre-populated, retry message shown"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101664,
+      "title": "[TC-04-010 | Src:FDS | Public] Tab 4 - CIPC validation: invalid CIPC reg number rejected at Step 1 boundary"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101665,
+      "title": "[TC-04-011 | Src:FDS | Public] Tab 4 - Cannot proceed to Step 4 with zero Office Bearers"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101666,
+      "title": "[TC-04-012 | Src:FDS | Public] Tab 4 - Minimum-OB business rule by legal form is enforced"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101667,
+      "title": "[TC-04-013 | Src:FDS | Public] Tab 4 - Cannot add the same SA ID as two OBs on the same NPO"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101668,
+      "title": "[TC-04-014 | Src:FDS | Public] Tab 4 - Editing an OB does not lose DHA verification status if ID unchanged"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101669,
+      "title": "[TC-04-015 | Src:Both | Public] Tab 4 - OB can register on more than one NPO (cross-NPO scenario)"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101670,
+      "title": "[TC-04-016 | Src:FDS | Public] Tab 4 - Email and phone are required for every OB so confirmation can be sent"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101671,
+      "title": "[TC-04-017 | Src:Code | Public] Concurrency: only one PersonIdVerifier job runs at a time across instances"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101672,
+      "title": "[TC-04-018 | Src:Code | Public] OB First Name: required, min length 2, no leading/trailing whitespace persists"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101673,
+      "title": "[TC-04-019 | Src:Code | Public] OB Surname: required, special-char handling (van der, O'Brien)"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101674,
+      "title": "[TC-04-020 | Src:Code | Public] OB Position picker: only allowed reference-list values accepted"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101675,
+      "title": "[TC-04-021 | Src:Code | Public] OB phone format: SA format required"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 101676,
+      "title": "[TC-04-022 | Src:Code | Public] OB email: format check; cannot be same as another OB's on same NPO"
+    },
+    {
+      "suiteId": 101887,
+      "workItemId": 102155,
+      "title": "[TC-04-023 | Src:Code | Public] Tab 4 - Office Bearer minimum-3 rule is enforced before Next"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101677,
+      "title": "[TC-05-001 | Src:FDS | Public] Tab 5 - At least one Admin and Operations item must be selected"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101679,
+      "title": "[TC-05-003 | Src:FDS | Public] Tab 6 - Control Structure: only shown when org has international operations"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101680,
+      "title": "[TC-05-004 | Src:FDS | Public] Tab 6 - Add multiple control structures / partner organisations"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101681,
+      "title": "[TC-05-005 | Src:FDS | Public] Tab 6 - Delete a country with its admin/ops"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101684,
+      "title": "[TC-05-008 | Src:Both | Public] Tab 7 - Upload of disallowed file type is rejected"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101685,
+      "title": "[TC-05-009 | Src:FDS | Public] Tab 7 - Upload over max file size is rejected"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101686,
+      "title": "[TC-05-010 | Src:FDS | Public] Tab 7 - Cannot proceed to Step 7 if a required document is missing"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101687,
+      "title": "[TC-05-011 | Src:FDS | Public] Tab 7 - Constitution can be downloaded after upload"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101688,
+      "title": "[TC-05-012 | Src:FDS | Public] Tab 7 - Removing a document deletes it and the slot becomes empty again"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101690,
+      "title": "[TC-05-014 | Src:FDS | Public] Step 7 - Submit is blocked if Full Name or Capacity is missing"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101691,
+      "title": "[TC-05-015 | Src:FDS | Public] Tab 8 - All declaration checkboxes must be ticked before Submit is enabled"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101693,
+      "title": "[TC-05-017 | Src:FDS | Public] Back button on any step preserves data entered on that step"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101694,
+      "title": "[TC-05-018 | Src:FDS | Public] After Submit user cannot edit the submitted application (read-only)"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101696,
+      "title": "[TC-05-020 | Src:Both | Public] Audit trail records the original application (FDS 6.2)"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101697,
+      "title": "[TC-05-021 | Src:Code | Public] Uploaded file types - allowlist excludes images and modern Office formats"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101698,
+      "title": "[TC-05-022 | Src:Code | Public] Control Structure: partner org name required when adding a structure"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101700,
+      "title": "[TC-05-023 | Src:Code | Public] Country picker: only valid ISO country codes accepted"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101701,
+      "title": "[TC-05-024 | Src:Code | Public] Step 7 Capacity: max length and required"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 101702,
+      "title": "[TC-05-025 | Src:Code | Public] Step 7 Full Name: required; rejects digits/special chars"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 102156,
+      "title": "[TC-05-026 | Src:Code | Public] Tab 8 - Submitter Full Name auto-populates from logged-in account and is read-only"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 102157,
+      "title": "[TC-05-027 | Src:Code | Public] Tab 8 - Declaration Capacity is a dropdown of allowed values; free-text not accepted"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 102158,
+      "title": "[TC-05-028 | Src:Code | Public] Wizard tab-tick navigation - clicking a completed tab's tick mark preserves the data entered on the current tab"
+    },
+    {
+      "suiteId": 101888,
+      "workItemId": 102159,
+      "title": "[TC-05-029 | Src:Code | Public] Draft application survives logout and re-login - user can resume from the same tab"
+    },
+    {
+      "suiteId": 101889,
+      "workItemId": 101705,
+      "title": "[TC-06-003 | Src:Both | Email-Link] OB declines - 'No' requires a comment and flags OB as not part of NPO"
+    },
+    {
+      "suiteId": 101889,
+      "workItemId": 101706,
+      "title": "[TC-06-004 | Src:Both | Email-Link] OB confirmation link is single-use"
+    },
+    {
+      "suiteId": 101889,
+      "workItemId": 101707,
+      "title": "[TC-06-005 | Src:FDS | Email-Link] OB confirmation link is time-bound (e.g., expires after N days)"
+    },
+    {
+      "suiteId": 101889,
+      "workItemId": 101708,
+      "title": "[TC-06-006 | Src:FDS | Email-Link] Application status transitions to 'OB Confirmed' once all OBs confirm"
+    },
+    {
+      "suiteId": 101889,
+      "workItemId": 101709,
+      "title": "[TC-06-007 | Src:FDS | Email-Link] Application status becomes 'OB Partially Confirmed' if only some confirm"
+    },
+    {
+      "suiteId": 101889,
+      "workItemId": 101710,
+      "title": "[TC-06-008 | Src:Both | Email-Link] Application status becomes 'OB Confirmation Failed' if any OB says No"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101715,
+      "title": "[TC-07-005 | Src:FDS | Admin] Backend - Admin can add comment on an application"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101717,
+      "title": "[TC-07-007 | Src:FDS | Admin] Backend - OB marked Non-Compliant requires a reason"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101718,
+      "title": "[TC-07-008 | Src:Both | Admin] Backend - All OBs non-compliant moves status to 'OB Failed Compliance'"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101719,
+      "title": "[TC-07-009 | Src:FDS | Admin] Backend - Mixed OB compliance moves status to 'OB Partially Compliance'"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101721,
+      "title": "[TC-07-011 | Src:FDS | Admin] Backend - Any 'No' in Document Verification triggers Incomplete Application notification"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101722,
+      "title": "[TC-07-012 | Src:FDS | Admin] Backend - 'No' without reason is blocked"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101724,
+      "title": "[TC-07-014 | Src:FDS | Admin] Backend - Third resubmission failure marks application as 'Application Unsuccessful' (denied)"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101725,
+      "title": "[TC-07-015 | Src:FDS | Admin] Backend - Application moves to edit mode on resubmission so user can amend"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101726,
+      "title": "[TC-07-016 | Src:Both | Admin] Backend - Audit trail records original vs revised submissions"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101727,
+      "title": "[TC-07-017 | Src:FDS | Admin] Backend - Risk Status flag is visible on application details"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101728,
+      "title": "[TC-07-018 | Src:FDS | Admin] Backend - 'Compulsory to Register' flag displayed when applicable"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101729,
+      "title": "[TC-07-019 | Src:FDS | Admin] Backend - Two-month processing SLA timer is tracked"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101730,
+      "title": "[TC-07-020 | Src:FDS | Admin] Backend - Non-admin users cannot access admin views"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101731,
+      "title": "[TC-07-021 | Src:Code | Admin] Admin BackfillDocuments endpoint regenerates missing letters for an application"
+    },
+    {
+      "suiteId": 101890,
+      "workItemId": 101732,
+      "title": "[TC-07-022 | Src:Code | Admin] Admin Reallocation: bulk-notify OBs/primary contacts of NPO number changes via Excel upload"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101733,
+      "title": "[TC-08-001 | Src:FDS | Public] Annual Compliance - Reminder is sent one month before financial year-end"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101734,
+      "title": "[TC-08-002 | Src:FDS | Public] Annual Compliance - Second reminder is sent 3 months after year-end if not submitted"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101735,
+      "title": "[TC-08-003 | Src:Both | Public] Annual Compliance - Notice letter issued after 2 unanswered reminders"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101736,
+      "title": "[TC-08-004 | Src:FDS | Public] Annual Compliance - Ignored notice leads to NPO cancellation after 30 days"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101737,
+      "title": "[TC-08-005 | Src:Both | Public] Annual Compliance - User can request a 30-day extension"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101738,
+      "title": "[TC-08-006 | Src:FDS | Public] Annual Compliance - Cannot start new annual report until outstanding is submitted"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101740,
+      "title": "[TC-08-008 | Src:FDS | Public] Annual Report Step 1 - 'Audited = Yes' requires auditing firm details"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101742,
+      "title": "[TC-08-010 | Src:FDS | Public] Annual Report Step 2 - Employee counts must be non-negative integers"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101744,
+      "title": "[TC-08-012 | Src:FDS | Public] Annual Report Step 3 - 'Changes apply' opens Change Request pop-up"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101745,
+      "title": "[TC-08-013 | Src:FDS | Public] Annual Report Step 4 - Control Structure step is required only for international orgs"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101747,
+      "title": "[TC-08-015 | Src:FDS | Public] Annual Report Step 5 - Funding totals must be numeric and non-negative"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101748,
+      "title": "[TC-08-016 | Src:FDS | Public] Annual Report Step 5 - Funding over R500 000 triggers QA path (high-value)"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101750,
+      "title": "[TC-08-018 | Src:FDS | Public] Annual Report - Submit disabled if any step is incomplete"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101751,
+      "title": "[TC-08-019 | Src:Code | Public] Admin BackfillDocuments for Annual Compliance regenerates missing letters"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101752,
+      "title": "[TC-08-020 | Src:Code | Public] Admin ResendAnnualComplianceLetters re-sends stored letters without regenerating"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101753,
+      "title": "[TC-08-021 | Src:Both | Public] Auditing Firm fields required when 'Audited = Yes'"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101754,
+      "title": "[TC-08-022 | Src:Code | Public] Funding amounts: decimal supported, currency boundaries"
+    },
+    {
+      "suiteId": 101891,
+      "workItemId": 101755,
+      "title": "[TC-08-023 | Src:Code | Public] Employee counts: non-negative integers per demographic field"
+    },
+    {
+      "suiteId": 101892,
+      "workItemId": 101759,
+      "title": "[TC-09-004 | Src:FDS | Admin] Backend - QA 'Not Aligned' requires reason; triggers resubmission email"
+    },
+    {
+      "suiteId": 101892,
+      "workItemId": 101760,
+      "title": "[TC-09-005 | Src:FDS | Admin] Annual Compliance - 30-day non-response after notice leads to cancellation"
+    },
+    {
+      "suiteId": 101892,
+      "workItemId": 101761,
+      "title": "[TC-09-006 | Src:FDS | Admin] Annual Compliance - Trends analysis is visible/accessible to backend user"
+    },
+    {
+      "suiteId": 101893,
+      "workItemId": 101771,
+      "title": "[TC-10-010 | Src:Both | Admin] Backend - Accept Changes approves the request and notifies user"
+    },
+    {
+      "suiteId": 101893,
+      "workItemId": 101772,
+      "title": "[TC-10-011 | Src:FDS | Admin] Backend - Decline requires reason; user is notified"
+    },
+    {
+      "suiteId": 101894,
+      "workItemId": 101764,
+      "title": "[TC-10-003 | Src:FDS | Public] Post Registration - Cannot start a new request of the same type if one is in progress"
+    },
+    {
+      "suiteId": 101894,
+      "workItemId": 101765,
+      "title": "[TC-10-004 | Src:FDS | Public] Post Registration - User can cancel unassigned active request"
+    },
+    {
+      "suiteId": 101894,
+      "workItemId": 101766,
+      "title": "[TC-10-005 | Src:FDS | Public] Post Registration - Assigned request can be cancelled per FDS rule"
+    },
+    {
+      "suiteId": 101895,
+      "workItemId": 101781,
+      "title": "[TC-11-009 | Src:FDS | Admin] Backend - Send-to-Chairperson with invalid email format is blocked"
+    },
+    {
+      "suiteId": 101895,
+      "workItemId": 101782,
+      "title": "[TC-11-010 | Src:Both | Admin] Chairperson - Forward to Appeal Board notifies selected members"
+    },
+    {
+      "suiteId": 101895,
+      "workItemId": 101783,
+      "title": "[TC-11-011 | Src:FDS | Admin] Tribunal - Notice of Tribunal sent to organisation for additional information"
+    },
+    {
+      "suiteId": 101895,
+      "workItemId": 101785,
+      "title": "[TC-11-013 | Src:Both | Admin] Tribunal - Capture Appeal Outcome 'Upheld' for cancellation - certificate re-issued"
+    },
+    {
+      "suiteId": 101895,
+      "workItemId": 101786,
+      "title": "[TC-11-014 | Src:FDS | Admin] Tribunal - Denied outcome requires comments and claim document"
+    },
+    {
+      "suiteId": 101895,
+      "workItemId": 101787,
+      "title": "[TC-11-015 | Src:FDS | Admin] Tribunal - Non-tribunal user cannot access tribunal-only views"
+    },
+    {
+      "suiteId": 101895,
+      "workItemId": 101788,
+      "title": "[TC-11-016 | Src:Code | Admin] Appeal status 'InComplete' (3) and 'Initiated' (6) - confirm whether these are reachable"
+    },
+    {
+      "suiteId": 101896,
+      "workItemId": 101774,
+      "title": "[TC-11-002 | Src:FDS | Public] Appeals - Refusal appeal must be submitted within 30 days of refusal"
+    },
+    {
+      "suiteId": 101896,
+      "workItemId": 101775,
+      "title": "[TC-11-003 | Src:FDS | Public] Appeals - Appeal of Cancellation is not time-bound"
+    },
+    {
+      "suiteId": 101896,
+      "workItemId": 101776,
+      "title": "[TC-11-004 | Src:FDS | Public] Appeals - 'Written Submission' mode reveals submission text field"
+    },
+    {
+      "suiteId": 101896,
+      "workItemId": 101778,
+      "title": "[TC-11-006 | Src:FDS | Public] Appeals - Appeals do not apply to Compulsory Registration cases"
+    },
+    {
+      "suiteId": 101897,
+      "workItemId": 101793,
+      "title": "[TC-12-005 | Src:FDS | Admin] Backend - Validate case: 'Not Valid' closes case and sends notification (if details provided)"
+    },
+    {
+      "suiteId": 101897,
+      "workItemId": 101795,
+      "title": "[TC-12-007 | Src:Both | Admin] Backend - Valid case outside DSD mandate - forwarded to third party"
+    },
+    {
+      "suiteId": 101897,
+      "workItemId": 101796,
+      "title": "[TC-12-008 | Src:Both | Admin] Investigator - Close Investigation captures forensic outcome, attachment, and notifies submitter"
+    },
+    {
+      "suiteId": 101897,
+      "workItemId": 101797,
+      "title": "[TC-12-009 | Src:FDS | Admin] Reviewer - Feedback button only available for cases in Closed/Referred/Under Investigation statuses"
+    },
+    {
+      "suiteId": 101897,
+      "workItemId": 101798,
+      "title": "[TC-12-010 | Src:FDS | Admin] Reviewer - Submit feedback persists and displays on case detail"
+    },
+    {
+      "suiteId": 101897,
+      "workItemId": 101799,
+      "title": "[TC-12-011 | Src:Code | Admin] Investigation third-party-routing creates and deletes temporary Person record"
+    },
+    {
+      "suiteId": 101898,
+      "workItemId": 101790,
+      "title": "[TC-12-002 | Src:Both | Public] Investigations - Non-anonymous submission requires contact details"
+    },
+    {
+      "suiteId": 101898,
+      "workItemId": 101791,
+      "title": "[TC-12-003 | Src:FDS | Public] Investigations - Authorised user sees only active/registered NPOs enabled"
+    },
+    {
+      "suiteId": 101898,
+      "workItemId": 107422,
+      "title": "[TC-12P-003 | Src:FDS | Public] Anonymous whistleblower can submit an Investigation report without account"
+    },
+    {
+      "suiteId": 101898,
+      "workItemId": 107423,
+      "title": "[TC-12P-004 | Src:FDS | Public] Investigation submission handles evidence-file allowlist + oversize file rejection"
+    },
+    {
+      "suiteId": 101899,
+      "workItemId": 101808,
+      "title": "[TC-13-009 | Src:FDS | Admin] Backend - Application Details show captured info, assets, comments"
+    },
+    {
+      "suiteId": 101899,
+      "workItemId": 101810,
+      "title": "[TC-13-011 | Src:FDS | Admin] Backend - Document validation: insufficient -> notice sent, 30-day clock starts"
+    },
+    {
+      "suiteId": 101899,
+      "workItemId": 101811,
+      "title": "[TC-13-012 | Src:FDS | Admin] Backend - No resubmission in 30 days -> deregistration denied"
+    },
+    {
+      "suiteId": 101899,
+      "workItemId": 101812,
+      "title": "[TC-13-013 | Src:FDS | Admin] Backend - Documents resubmitted but still insufficient -> deregistration denied, investigation starts"
+    },
+    {
+      "suiteId": 101900,
+      "workItemId": 101802,
+      "title": "[TC-13-003 | Src:Both | Public] Voluntary Deregistration - Type of severance options 'Voluntary Deregistration' and 'Dissolution/Winding-up' present"
+    },
+    {
+      "suiteId": 101900,
+      "workItemId": 101803,
+      "title": "[TC-13-004 | Src:FDS | Public] Voluntary Deregistration - OB search restricted to OBs of this NPO"
+    },
+    {
+      "suiteId": 101900,
+      "workItemId": 101805,
+      "title": "[TC-13-006 | Src:FDS | Public] Voluntary Deregistration Step 2 - Effective date of donation cannot be in the past beyond limit"
+    },
+    {
+      "suiteId": 101901,
+      "workItemId": 101821,
+      "title": "[TC-14-009 | Src:FDS | Both] Submitter cannot edit OB/org data of an application not in editable state"
+    },
+    {
+      "suiteId": 101901,
+      "workItemId": 101822,
+      "title": "[TC-14-010 | Src:FDS | Both] Session expiry and re-login lands user where they were (or to dashboard)"
+    },
+    {
+      "suiteId": 101901,
+      "workItemId": 107428,
+      "title": "[TC-14C-003 | Src:Code | Both] Session cookie has Secure + HttpOnly + SameSite=Lax/Strict"
+    },
+    {
+      "suiteId": 101901,
+      "workItemId": 107429,
+      "title": "[TC-14C-004 | Src:Code | Both] Concurrent logins from same user — session behaviour is defined and stable"
+    },
+    {
+      "suiteId": 101901,
+      "workItemId": 107430,
+      "title": "[TC-14C-005 | Src:Code | Both] Read-only role cannot mutate — POST/PUT/DELETE endpoints return 403"
+    },
+    {
+      "suiteId": 101902,
+      "workItemId": 101814,
+      "title": "[TC-14-002 | Src:FDS | Admin] Generated PDFs (Certificate, Constitution, Letter) carry QR code and valid signatures"
+    },
+    {
+      "suiteId": 101902,
+      "workItemId": 101826,
+      "title": "[TC-14-014 | Src:Code | Admin] Certificate generation respects NHibernate L1 cache bypass - NPO status reflects post-transition value"
+    },
+    {
+      "suiteId": 101902,
+      "workItemId": 107424,
+      "title": "[TC-14D-003 | Src:FDS | Both] Generated PDFs embed fonts and pass PDF/A validation"
+    },
+    {
+      "suiteId": 101902,
+      "workItemId": 107425,
+      "title": "[TC-14D-004 | Src:FDS | Both] QR code on generated Certificate verifies against public NPO record"
+    },
+    {
+      "suiteId": 101903,
+      "workItemId": 101813,
+      "title": "[TC-14-001 | Src:Code | Admin] Email/SMS notifications - bounced or invalid address surfaces to admin"
+    },
+    {
+      "suiteId": 101903,
+      "workItemId": 101825,
+      "title": "[TC-14-013 | Src:Code | Admin] OB notification retry: failed SMS/email re-sends to persons without success status"
+    },
+    {
+      "suiteId": 101903,
+      "workItemId": 101827,
+      "title": "[TC-14-015 | Src:Code | Admin] Notification delivery status reflects on admin view per OB after send attempt"
+    },
+    {
+      "suiteId": 101904,
+      "workItemId": 101817,
+      "title": "[TC-14-005 | Src:FDS | Admin] Background DHA verification retry runs after 1 hour and updates OB status"
+    },
+    {
+      "suiteId": 101904,
+      "workItemId": 101818,
+      "title": "[TC-14-006 | Src:FDS | Admin] Background CIPC verification retry runs after 1 hour and updates application"
+    },
+    {
+      "suiteId": 101905,
+      "workItemId": 101820,
+      "title": "[TC-14-008 | Src:FDS | Public] Public NPO Search - Cancelled/Dissolved NPO is shown with correct status"
+    },
+    {
+      "suiteId": 101905,
+      "workItemId": 101823,
+      "title": "[TC-14-011 | Src:Code | External] Public NISPIS API requires API key; /verify endpoint returns NPO details for valid NpoNumber"
+    },
+    {
+      "suiteId": 101905,
+      "workItemId": 101824,
+      "title": "[TC-14-012 | Src:Code | Public] Public anonymous Organisation lookups: GetOrganisationIdBySubstringId and OrganisationComplianceStatus"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101828,
+      "title": "[TC-14T-001 | Src:Both | Both] Application Acknowledgement Letter content correct"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101829,
+      "title": "[TC-14T-002 | Src:Both | Both] Application Incomplete Letter content correct"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101830,
+      "title": "[TC-14T-003 | Src:Both | Both] Application Unsuccessful (Denied) Letter content correct"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101831,
+      "title": "[TC-14T-004 | Src:Both | Both] Application Successful Letter content + Certificate + Constitution + OB list attached"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101832,
+      "title": "[TC-14T-005 | Src:Both | Both] OB Self-Confirmation request email/SMS content"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101833,
+      "title": "[TC-14T-006 | Src:FDS | Email-Link] OB Confirmation Thank-you page renders after confirm"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101834,
+      "title": "[TC-14T-007 | Src:FDS | Public] Annual Compliance Reminder content (FYE - 1 month)"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101835,
+      "title": "[TC-14T-008 | Src:Both | Public] Annual Compliance Acknowledgement (Submission Received)"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101836,
+      "title": "[TC-14T-009 | Src:Both | Public] Annual Compliance Successful Letter (Compliant)"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101837,
+      "title": "[TC-14T-010 | Src:Both | Public] Annual Compliance Incomplete/Non-Compliant Letter"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101838,
+      "title": "[TC-14T-011 | Src:Both | Public] Change Request Acknowledgement (Submitted)"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101839,
+      "title": "[TC-14T-012 | Src:Both | Public] Change Request Approved: Approval Letter + (if founding) Certificate + Constitution"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101840,
+      "title": "[TC-14T-013 | Src:Both | Public] Change Request Incomplete (Resubmission Required)"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101841,
+      "title": "[TC-14T-014 | Src:Both | Public] Change Request Declined: Denial Letter"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101842,
+      "title": "[TC-14T-015 | Src:Both | Public] Voluntary Deregistration Acknowledgement"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101843,
+      "title": "[TC-14T-016 | Src:Both | Public] Voluntary Deregistration Approved Notice"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101844,
+      "title": "[TC-14T-017 | Src:Both | Public] Voluntary Deregistration Incomplete + 30-day clock"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101845,
+      "title": "[TC-14T-018 | Src:Both | Public] Voluntary Deregistration Denied + Investigation reference (if applicable)"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101846,
+      "title": "[TC-14T-019 | Src:Both | Public] Appeal Initiation Acknowledgement (CasePreparation)"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101847,
+      "title": "[TC-14T-020 | Src:Both | Public] Appeal Upheld: Restoration / Re-issued Certificate"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101848,
+      "title": "[TC-14T-021 | Src:Both | Public] Appeal Denied notification with mandatory claim attachment"
+    },
+    {
+      "suiteId": 101906,
+      "workItemId": 101849,
+      "title": "[TC-14T-022 | Src:Code | Both] SMS content fits 160-char or supports multi-segment"
+    },
+    {
+      "suiteId": 101907,
+      "workItemId": 101815,
+      "title": "[TC-14-003 | Src:FDS | Admin] Audit trail captures who/when for every state transition"
+    },
+    {
+      "suiteId": 101907,
+      "workItemId": 101816,
+      "title": "[TC-14-004 | Src:FDS | Admin] Resubmission diff shows changed fields between submissions"
+    },
+    {
+      "suiteId": 101907,
+      "workItemId": 107426,
+      "title": "[TC-14U-003 | Src:Code | Both] Office Bearer CRUD writes audit entries (Create, Update, Delete + Confirmed OB self-verification)"
+    },
+    {
+      "suiteId": 101907,
+      "workItemId": 107427,
+      "title": "[TC-14U-004 | Src:Code | Both] Document upload + Application state-change actions written to audit"
+    },
+    {
+      "suiteId": 101908,
+      "workItemId": 101850,
+      "title": "[TC-14X-001 | Src:Code | Admin] Two admins act on same Document Verification dialog: only one wins"
+    },
+    {
+      "suiteId": 101908,
+      "workItemId": 101851,
+      "title": "[TC-14X-002 | Src:Code | Admin] Submitter resubmits while admin is making decision"
+    },
+    {
+      "suiteId": 101908,
+      "workItemId": 101852,
+      "title": "[TC-14X-003 | Src:Code | Both] Two users try to Link the same NPO simultaneously"
+    },
+    {
+      "suiteId": 101908,
+      "workItemId": 101853,
+      "title": "[TC-14X-004 | Src:Code | Both] PersonIdVerifier concurrency lock holds under simultaneous trigger"
+    },
+    {
+      "suiteId": 101908,
+      "workItemId": 101854,
+      "title": "[TC-14X-005 | Src:Code | Admin] Two admins both try to assign different investigators to the same case"
+    },
+    {
+      "suiteId": 101908,
+      "workItemId": 101855,
+      "title": "[TC-14X-006 | Src:Code | Admin] OB confirmation race: OB clicks link while admin is processing an unrelated update"
+    },
+    {
+      "suiteId": 101908,
+      "workItemId": 101856,
+      "title": "[TC-14X-007 | Src:Code | Both] Bulk reallocation Excel upload: duplicate NPO rows handled gracefully"
+    },
+    {
+      "suiteId": 101908,
+      "workItemId": 101857,
+      "title": "[TC-14X-008 | Src:Code | Both] BackgroundJob runs while transaction in flight"
+    },
+    {
+      "suiteId": 102151,
+      "workItemId": 102160,
+      "title": "[TC-14W-001 | Src:Code | Public] Application Wizard - keyboard-only navigation across all tabs (WCAG 2.1 AA)"
+    },
+    {
+      "suiteId": 102151,
+      "workItemId": 107408,
+      "title": "[TC-14W-002 | Src:Code | Both] Sign In page — WCAG 2.1 AA compliance (keyboard nav, screen reader labels, contrast)"
+    },
+    {
+      "suiteId": 102151,
+      "workItemId": 107409,
+      "title": "[TC-14W-003 | Src:Code | Both] Application Wizard Tab 1 (Read This) — screen reader announces content sequence"
+    },
+    {
+      "suiteId": 102151,
+      "workItemId": 107410,
+      "title": "[TC-14W-004 | Src:Code | Both] Application Wizard Tab 2 (Legal / Contact) — form field labels + error messaging accessible"
+    },
+    {
+      "suiteId": 102151,
+      "workItemId": 107411,
+      "title": "[TC-14W-005 | Src:Code | Both] Application Wizard Tab 4 (Office Bearers) — modal dialogue is keyboard-trappable + escapable"
+    },
+    {
+      "suiteId": 102151,
+      "workItemId": 107412,
+      "title": "[TC-14W-006 | Src:Code | Both] Application Wizard Tab 7 (Documents) — file upload accessible"
+    },
+    {
+      "suiteId": 102151,
+      "workItemId": 107413,
+      "title": "[TC-14W-007 | Src:Code | Both] Application Wizard Tab 8 (Declaration) — checkbox + submit accessible"
+    },
+    {
+      "suiteId": 102151,
+      "workItemId": 107414,
+      "title": "[TC-14W-008 | Src:Code | Both] Colour contrast — every page passes AA (4.5:1 body, 3:1 large)"
+    },
+    {
+      "suiteId": 102151,
+      "workItemId": 107415,
+      "title": "[TC-14W-009 | Src:Code | Both] Zoom 200% — content reflows without horizontal scroll"
+    },
+    {
+      "suiteId": 102151,
+      "workItemId": 107416,
+      "title": "[TC-14W-010 | Src:Code | Both] Error / status messages use ARIA live regions"
+    },
+    {
+      "suiteId": 102152,
+      "workItemId": 102161,
+      "title": "[TC-14Y-001 | Src:Code | Public] Wizard data sent over HTTPS only; submitter PII (RSA ID, email, phone) is not echoed into application logs"
+    },
+    {
+      "suiteId": 102152,
+      "workItemId": 107417,
+      "title": "[TC-14Y-002 | Src:Code | Both] Sign In credentials transmitted over TLS only"
+    },
+    {
+      "suiteId": 102152,
+      "workItemId": 107418,
+      "title": "[TC-14Y-003 | Src:Code | Both] SA ID number treated as special personal information — logs redacted"
+    },
+    {
+      "suiteId": 102152,
+      "workItemId": 107419,
+      "title": "[TC-14Y-004 | Src:Code | Both] POPI Act consent captured before Register-New-NPO submission"
+    },
+    {
+      "suiteId": 102152,
+      "workItemId": 107420,
+      "title": "[TC-14Y-005 | Src:Code | Both] Subject access — user can request export of their personal data"
+    },
+    {
+      "suiteId": 102152,
+      "workItemId": 107421,
+      "title": "[TC-14Y-006 | Src:Code | Both] Data retention — inactive user records archived after policy-defined period"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107319,
+      "title": "[TC-14Z-001 | Src:Code | Admin] Backend appsettings — 4 plaintext secrets in main: Azure Storage account key, JWT signing key, Google Maps API key, commented Azure SQL admin password"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107320,
+      "title": "[TC-14Z-002 | Src:Code | Admin] k6 perf harness — Real Boxfusion email + password as default ADMIN_USER / ADMIN_PASS"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107321,
+      "title": "[TC-14Z-003 | Src:Code | External] Startup config — Wide-open CORS"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107322,
+      "title": "[TC-14Z-004 | Src:Code | External] Startup config — GraphQL Playground exposed unconditionally at /ui/playground"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107323,
+      "title": "[TC-14Z-005 | Src:Code | External] OTP-stress AppService — Unauthenticated OTP retrieval"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107324,
+      "title": "[TC-14Z-006 | Src:Code | External] Partner-API validator — ValidateApiKey uses constant-time comparison"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107325,
+      "title": "[TC-14Z-007 | Src:Code | Public] Public-portal Next config — Hardcoded test-env URL fallback in PROD"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107326,
+      "title": "[TC-14Z-008 | Src:Code | External] Android signing — Android production-signing keystore in git + storePassword + keyPassword both set to weak-default literal in build.gradle"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107327,
+      "title": "[TC-14Z-009 | Src:Code | Public] SignalR token — SignalR query-string token decrypts via ABP AppConsts.DefaultPassPhrase (well-known framework default)"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107328,
+      "title": "[TC-14Z-010 | Src:Code | Admin] Bulk notification — SendNpoNumberReallocationNotifications has [AbpAuthorize] gating('Pages.AdminMaintenance')]"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107329,
+      "title": "[TC-14Z-011 | Src:Code | Admin] Pulumi IaC — Azure Container Registry admin password in plaintext in git"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107330,
+      "title": "[TC-14Z-012 | Src:Code | External] Account info — SendAccountDetailsAsync is NOT anonymous — requires authentication + rejects arbitrary long userId"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107331,
+      "title": "[TC-14Z-013 | Src:Code | Public] Account destructive — DeleteMyAccount validates user session before destructive action instead of [AbpAuthorize]"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107332,
+      "title": "[TC-14Z-014 | Src:Code | Public] OTP verification — OTP verify pinDto.Pin != input.Pin"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107333,
+      "title": "[TC-14Z-015 | Src:Code | External] OTP lockout — No max-attempts / lockout visible in VerifyPinAsync"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107334,
+      "title": "[TC-14Z-016 | Src:Code | External] OTP bypass flag — OtpSettings.IgnoreOtpValidation = true (Shesha DB-stored flag) bypasses OTP verification entirely"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107335,
+      "title": "[TC-14Z-017 | Src:Code | Public] File enumeration — CheckDownloadableAsync restricts to authorised users only to count all PDF/DOC files system-wide + DoS-amplification via Blob-stream enumeration"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107336,
+      "title": "[TC-14Z-018 | Src:Code | Public] StoredFile no IDOR — resource ownership validated — UpdateOwnerAsync no IDOR — resource ownership validated"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107337,
+      "title": "[TC-14Z-019 | Src:Code | Public] StoredFile no IDOR — resource ownership validated (sibling) — StoredFileUpdateAsync sibling no IDOR — resource ownership validated"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107338,
+      "title": "[TC-14Z-020 | Src:Code | External] Test-only endpoint on main — ApplyChangesAsync test-only endpoint on main with TODO 'To be Removed later'"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107339,
+      "title": "[TC-14Z-021 | Src:Code | Public] Partner no IDOR — resource ownership validated — DeletePartnerAsync no IDOR — resource ownership validated"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107340,
+      "title": "[TC-14Z-022 | Src:Code | Public] OB-NPO no BOLA — object-level access verified — GetOfficeBearerOrganisationsByUserIdAsync no BOLA — object-level access verified"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107341,
+      "title": "[TC-14Z-023 | Src:Code | Public] DocumentStamp no IDOR — resource ownership validated (3 methods) — StampText / StampImage / StampWatermark take caller-controlled StoredFileId with no ownership check"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107342,
+      "title": "[TC-14Z-024 | Src:Code | Public] DocumentStamp image validation — OpenStampImageStreamAsync lacks magic-byte/MIME validation"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107343,
+      "title": "[TC-14Z-025 | Src:Code | Public] OrgLocation read no BOLA — object-level access verified (3 endpoints) — GetOperationsCountries/Provinces/CountryWithHighestRisk all take NPO ID without ownership check"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107344,
+      "title": "[TC-14Z-026 | Src:Code | Public] OrgLocation update no IDOR — resource ownership validated — UpdateNpoLocationOperationAsync no IDOR — resource ownership validated"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107345,
+      "title": "[TC-14Z-027 | Src:Code | Public] CPR criminal-record exposure — POST /api/QueryCprUsRecord returns criminal-record data (NatureOfCharge, Conviction, Sentence, etc.) with [Authorize] not [AbpA..."
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107346,
+      "title": "[TC-14Z-028 | Src:Code | External] Hardcoded test-env URL in PROD email — ForgotPasswordURL hardcoded to test-env URL in SendAccountDetailsAsync"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107347,
+      "title": "[TC-14Z-029 | Src:Code | Public] OfficeBearer full identity takeover — UpdateOfficeBearerDetailsAsync no IDOR — resource ownership validated"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107348,
+      "title": "[TC-14Z-030 | Src:Code | Public] HttpClient anti-pattern (5 adapters) — All 5 in-build outbound integrations lack Timeout/retry/cancellation; CIPC also uses STATIC HttpClient; PROJECT.md §10.2 cites ..."
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107349,
+      "title": "[TC-14Z-031 | Src:Code | External] App Insights URL tracking — enableAutoRouteTracking: true captures URL-borne PII (?npoId, ?saId, ?email)"
+    },
+    {
+      "suiteId": 107317,
+      "workItemId": 107350,
+      "title": "[TC-14Z-032 | Src:Code | Public] CIPC adapter structural issues — JSON-injection hazard (manual string concat) + mixed static-vs-factory HttpClient + inconsistent 500/504 handling + non-standar..."
+    },
+    {
+      "suiteId": 107351,
+      "workItemId": 107360,
+      "title": "[TC-15D-001 | Src:FDS | Public] E&A Portal Sign Up creates new user account with email verification"
+    },
+    {
+      "suiteId": 107351,
+      "workItemId": 107361,
+      "title": "[TC-15D-002 | Src:FDS | Public] E&A Portal Sign Up rejects existing email with helpful message"
+    },
+    {
+      "suiteId": 107351,
+      "workItemId": 107362,
+      "title": "[TC-15D-003 | Src:FDS | Public] E&A Portal Sign In with valid credentials lands user on portal home"
+    },
+    {
+      "suiteId": 107351,
+      "workItemId": 107363,
+      "title": "[TC-15D-004 | Src:FDS | Public] E&A Portal Sign In with invalid credentials shows clear error, no user enumeration"
+    },
+    {
+      "suiteId": 107351,
+      "workItemId": 107364,
+      "title": "[TC-15D-005 | Src:Code | Public] E&A Portal Password Reset sends link to Boxfusion-hosted domain (not deprecated Azure URL)"
+    },
+    {
+      "suiteId": 107351,
+      "workItemId": 107365,
+      "title": "[TC-15D-006 | Src:Code | Public] E&A Portal session expires after policy-defined idle timeout"
+    },
+    {
+      "suiteId": 107352,
+      "workItemId": 107366,
+      "title": "[TC-15A-001 | Src:FDS | Admin] Interventions Index displays all captured interventions with filter controls"
+    },
+    {
+      "suiteId": 107352,
+      "workItemId": 107367,
+      "title": "[TC-15A-002 | Src:FDS | Admin] Add Intervention button opens capture form"
+    },
+    {
+      "suiteId": 107352,
+      "workItemId": 107368,
+      "title": "[TC-15A-003 | Src:FDS | Admin] Intervention Type selection is mandatory; type-specific fields show conditionally"
+    },
+    {
+      "suiteId": 107352,
+      "workItemId": 107369,
+      "title": "[TC-15A-004 | Src:FDS | Admin] Intervention Submit with all mandatory fields sets status to Complete"
+    },
+    {
+      "suiteId": 107352,
+      "workItemId": 107370,
+      "title": "[TC-15A-005 | Src:FDS | Admin] Intervention Submit with partial mandatory data sets status to Draft"
+    },
+    {
+      "suiteId": 107352,
+      "workItemId": 107371,
+      "title": "[TC-15A-006 | Src:FDS | Admin] Close button on Intervention form discards changes without persisting"
+    },
+    {
+      "suiteId": 107352,
+      "workItemId": 107372,
+      "title": "[TC-15A-007 | Src:FDS | Admin] Reporter + Reviewer details captured on Intervention"
+    },
+    {
+      "suiteId": 107352,
+      "workItemId": 107373,
+      "title": "[TC-15A-008 | Src:FDS | Admin] Attachment upload — Attendance Register + Feedback Questionnaire + Other"
+    },
+    {
+      "suiteId": 107353,
+      "workItemId": 107374,
+      "title": "[TC-15B-001 | Src:FDS | Admin] Library Topics menu accessible only to authorised admin roles"
+    },
+    {
+      "suiteId": 107353,
+      "workItemId": 107375,
+      "title": "[TC-15B-002 | Src:FDS | Admin] Add Library — configure Library details, admins, content types, approval routing"
+    },
+    {
+      "suiteId": 107353,
+      "workItemId": 107376,
+      "title": "[TC-15B-003 | Src:FDS | Admin] Library Topics tree view shows all libraries with expandable nodes"
+    },
+    {
+      "suiteId": 107353,
+      "workItemId": 107377,
+      "title": "[TC-15B-004 | Src:FDS | Admin] View Library — index shows library status (Created / Retracted)"
+    },
+    {
+      "suiteId": 107353,
+      "workItemId": 107378,
+      "title": "[TC-15B-005 | Src:FDS | Admin] Add Library Content with allowed file type saves and sends for approval"
+    },
+    {
+      "suiteId": 107353,
+      "workItemId": 107379,
+      "title": "[TC-15B-006 | Src:FDS | Admin] Content expiration notification triggers 1 month before expiry"
+    },
+    {
+      "suiteId": 107353,
+      "workItemId": 107380,
+      "title": "[TC-15B-007 | Src:FDS | Admin] Content lifecycle states — Awaiting approval → Awaiting publication → Published → Expired"
+    },
+    {
+      "suiteId": 107353,
+      "workItemId": 107381,
+      "title": "[TC-15B-008 | Src:FDS | Admin] Incoming Items inbox displays approver queue"
+    },
+    {
+      "suiteId": 107353,
+      "workItemId": 107382,
+      "title": "[TC-15B-009 | Src:FDS | Admin] Approver reviews content via checklist; Approve publishes it"
+    },
+    {
+      "suiteId": 107353,
+      "workItemId": 107383,
+      "title": "[TC-15B-010 | Src:FDS | Admin] Approver Decline with unmet checklist items sends content back to Draft"
+    },
+    {
+      "suiteId": 107354,
+      "workItemId": 107384,
+      "title": "[TC-15C-001 | Src:FDS | Admin] Library Topics dashboard shows all libraries summary + engagement counts"
+    },
+    {
+      "suiteId": 107354,
+      "workItemId": 107385,
+      "title": "[TC-15C-002 | Src:FDS | Admin] Content-level engagement drill-down shows views/likes/downloads per item"
+    },
+    {
+      "suiteId": 107354,
+      "workItemId": 107386,
+      "title": "[TC-15C-003 | Src:FDS | Admin] Dashboard filter by library and by time range narrows aggregates"
+    },
+    {
+      "suiteId": 107354,
+      "workItemId": 107387,
+      "title": "[TC-15C-004 | Src:Code | Admin] Dashboard SQL performance — page loads within 3 seconds under nominal data"
+    },
+    {
+      "suiteId": 107355,
+      "workItemId": 107388,
+      "title": "[TC-15E-001 | Src:FDS | Public] NPO user views published Library Topics list"
+    },
+    {
+      "suiteId": 107355,
+      "workItemId": 107389,
+      "title": "[TC-15E-002 | Src:FDS | Public] NPO user opens a Library and browses content items"
+    },
+    {
+      "suiteId": 107355,
+      "workItemId": 107390,
+      "title": "[TC-15E-003 | Src:FDS | Public] NPO user downloads content; downloads counter increments"
+    },
+    {
+      "suiteId": 107355,
+      "workItemId": 107391,
+      "title": "[TC-15E-004 | Src:FDS | Public] NPO user likes content; likes counter increments; toggling removes like"
+    },
+    {
+      "suiteId": 107355,
+      "workItemId": 107392,
+      "title": "[TC-15E-005 | Src:FDS | Public] FAQ page renders questions grouped by category with expandable answers"
+    },
+    {
+      "suiteId": 107355,
+      "workItemId": 107393,
+      "title": "[TC-15E-006 | Src:FDS | Public] Contact Us form submits and confirms"
+    },
+    {
+      "suiteId": 107356,
+      "workItemId": 107394,
+      "title": "[TC-15E2E-001 | Src:FDS | Both] E2E: Admin creates library → adds content → approver approves → NPO views/likes/downloads → dashboard reflects engagement"
+    },
+    {
+      "suiteId": 107356,
+      "workItemId": 107395,
+      "title": "[TC-15E2E-002 | Src:FDS | Both] E2E: Admin captures intervention with attachments; status reflects on Dashboard"
+    },
+    {
+      "suiteId": 107357,
+      "workItemId": 107396,
+      "title": "[TC-15W-001 | Src:Code | Both] E&A Portal — keyboard-only navigation across all main pages"
+    },
+    {
+      "suiteId": 107357,
+      "workItemId": 107397,
+      "title": "[TC-15W-002 | Src:Code | Both] E&A Portal — screen reader announces landmarks + interactive elements"
+    },
+    {
+      "suiteId": 107357,
+      "workItemId": 107398,
+      "title": "[TC-15W-003 | Src:Code | Both] E&A Portal — colour contrast meets WCAG 2.1 AA on all text"
+    },
+    {
+      "suiteId": 107357,
+      "workItemId": 107399,
+      "title": "[TC-15W-004 | Src:Code | Both] Admin E&A screens — focus order + ARIA labels correct"
+    },
+    {
+      "suiteId": 107358,
+      "workItemId": 107400,
+      "title": "[TC-15Y-001 | Src:Code | Both] E&A Portal traffic served over HTTPS with HSTS"
+    },
+    {
+      "suiteId": 107358,
+      "workItemId": 107401,
+      "title": "[TC-15Y-002 | Src:Code | Both] E&A endpoints have appropriate AbpAuthorize gating"
+    },
+    {
+      "suiteId": 107358,
+      "workItemId": 107402,
+      "title": "[TC-15Y-003 | Src:Code | Both] PII (email, contact person, phone) not written to application logs"
+    },
+    {
+      "suiteId": 107358,
+      "workItemId": 107403,
+      "title": "[TC-15Y-004 | Src:FDS | Both] POPIA consent captured before user submits Contact Us form"
+    }
+  ]
+}

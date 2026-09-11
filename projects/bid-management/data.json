@@ -28,9 +28,9 @@
   "kpis": {
     "totalPlans": 1,
     "totalRuns": 24,
-    "last7Runs": 17,
-    "last7Pass": 7,
-    "last7PassPct": 41,
+    "last7Runs": 0,
+    "last7Pass": 0,
+    "last7PassPct": null,
     "failingFlows": 0,
     "passingFlows": 1,
     "partialFlows": 0,
@@ -38,260 +38,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-08-09",
+    "startDate": "2025-09-14",
     "days": [
-      {
-        "iso": "2025-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-14",
         "runs": 0,
@@ -2530,7 +2278,7 @@
         "runs": 8,
         "passed": 4,
         "failed": 0,
-        "partial": 0
+        "partial": 3
       },
       {
         "iso": "2026-07-31",
@@ -2558,7 +2306,7 @@
         "runs": 9,
         "passed": 3,
         "failed": 0,
-        "partial": 1
+        "partial": 6
       },
       {
         "iso": "2026-08-04",
@@ -2583,6 +2331,258 @@
       },
       {
         "iso": "2026-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-12",
         "runs": 0,
         "passed": 0,
         "failed": 0,
@@ -2628,66 +2628,66 @@
             {
               "date": "2026-08-03",
               "result": "PASSED",
-              "duration": "14.8s",
+              "duration": "565.0s",
               "variant": "80/20"
             },
             {
               "date": "2026-08-03",
               "result": "PASSED",
-              "duration": "23.5s",
+              "duration": "610.6s",
               "variant": "90/10"
             },
             {
               "date": "2026-08-03",
-              "result": "PARTIAL — **DISAPPROVE WORKS** (SEE THE OUTCOME-REVERSAL BANNER ABOVE; PASSES 1–2 CONCLUDED BLOCKED AND",
+              "result": "PARTIAL",
               "duration": "~110s (pass 1) + ~150s (pass 2, incl. fresh-tender creation)",
               "variant": null
             },
             {
               "date": "2026-08-03",
-              "result": "PARTIAL — THE DECISION **WORKS**; 3 DEFECTS IN HOW IT WORKS",
+              "result": "PARTIAL",
               "duration": "7.3m chain + ~2m live",
               "variant": "80/20, `FUNC_SCORE_MODE=below`"
             },
             {
               "date": "2026-08-03",
-              "result": "PARTIAL — **11 OF 14 PROBES CORRECTLY ENFORCED, 3 DEFECTS.** EVERY *DATE AND FORMAT* GUARD ON THIS",
-              "duration": "",
-              "variant": null
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PARTIAL — ✅ **PASSES AT THE UI LEVEL: COMPLIANCE DATA IS PROPERLY PROTECTED.** THE DOCUMENT HOLE FROM",
-              "duration": "",
-              "variant": null
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PARTIAL — ✅ THE DECISION WORKS · 🔴 **2 DEFECTS, BOTH AGAINST ADO #60836** · ⚪ **2 OF MY EARLIER",
+              "result": "PARTIAL",
               "duration": "",
               "variant": null
             },
             {
               "date": "2026-08-03",
               "result": "PARTIAL",
-              "duration": "17.3s",
+              "duration": "",
+              "variant": null
+            },
+            {
+              "date": "2026-08-03",
+              "result": "PARTIAL",
+              "duration": "",
+              "variant": null
+            },
+            {
+              "date": "2026-08-03",
+              "result": "PARTIAL",
+              "duration": "737.5s",
               "variant": null
             },
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "13.5s",
+              "duration": "453.2s",
               "variant": "80/20"
             },
             {
               "date": "2026-07-30",
               "result": "PASSED",
-              "duration": "20.0s",
+              "duration": "404.1s",
               "variant": "90/10"
             },
             {
               "date": "2026-07-30",
-              "result": "PARTIAL — MIXED: REPLAY DEFENCE **HOLDS**; **2 NEW HIGH BUGS** (NON-PARTICIPANT WRITES, ORDER AMOUNT)",
+              "result": "PARTIAL",
               "duration": "",
               "variant": null
             }
@@ -2724,7 +2724,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
           "variant": "80/20",
           "result": "PASSED",
-          "duration": "14.8s",
+          "duration": "565.0s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--80-20.md"
         },
@@ -2733,7 +2733,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
           "variant": "90/10",
           "result": "PASSED",
-          "duration": "23.5s",
+          "duration": "610.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--90-10.md"
         },
@@ -2741,7 +2741,7 @@
           "plan": "test-plans/tender-process/bid-supply-chain-management.md",
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
-          "result": "PARTIAL — **DISAPPROVE WORKS** (SEE THE OUTCOME-REVERSAL BANNER ABOVE; PASSES 1–2 CONCLUDED BLOCKED AND",
+          "result": "PARTIAL",
           "duration": "~110s (pass 1) + ~150s (pass 2, incl. fresh-tender creation)",
           "mode": "ai-driven (MCP browser, headless)",
           "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--tc-20-disapprove-retest.md"
@@ -2750,7 +2750,7 @@
           "plan": "test-plans/tender-process/bid-supply-chain-management.md",
           "planDisplay": "tender-process/bid-supply-chain-management.md (80/20, `FUNC_SCORE_MODE=below`)",
           "variant": "80/20, `FUNC_SCORE_MODE=below`",
-          "result": "PARTIAL — THE DECISION **WORKS**; 3 DEFECTS IN HOW IT WORKS",
+          "result": "PARTIAL",
           "duration": "7.3m chain + ~2m live",
           "mode": "hybrid (playwright-script chain + ai-driven decision)",
           "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--tc-26-bid-non-responsive-committed.md"
@@ -2759,7 +2759,7 @@
           "plan": "test-plans/tender-process/bid-supply-chain-management.md",
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
-          "result": "PARTIAL — **11 OF 14 PROBES CORRECTLY ENFORCED, 3 DEFECTS.** EVERY *DATE AND FORMAT* GUARD ON THIS",
+          "result": "PARTIAL",
           "duration": "",
           "mode": null,
           "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--tc-27-draft-tender-validation.md"
@@ -2768,7 +2768,7 @@
           "plan": "test-plans/tender-process/bid-supply-chain-management.md",
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
-          "result": "PARTIAL — ✅ **PASSES AT THE UI LEVEL: COMPLIANCE DATA IS PROPERLY PROTECTED.** THE DOCUMENT HOLE FROM",
+          "result": "PARTIAL",
           "duration": "",
           "mode": null,
           "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--tc-32-compliance-row-write-access.md"
@@ -2777,7 +2777,7 @@
           "plan": "test-plans/tender-process/bid-supply-chain-management.md",
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
-          "result": "PARTIAL — ✅ THE DECISION WORKS · 🔴 **2 DEFECTS, BOTH AGAINST ADO #60836** · ⚪ **2 OF MY EARLIER",
+          "result": "PARTIAL",
           "duration": "",
           "mode": null,
           "reportHref": "test-reports/2026-08-03/bid-supply-chain-management--tc-33-bac-cancel-tender.md"
@@ -2787,7 +2787,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "17.3s",
+          "duration": "737.5s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-08-03/bid-supply-chain-management.md"
         }
@@ -2801,7 +2801,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
           "variant": "80/20",
           "result": "PASSED",
-          "duration": "13.5s",
+          "duration": "453.2s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--80-20.md"
         },
@@ -2810,7 +2810,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
           "variant": "90/10",
           "result": "PASSED",
-          "duration": "20.0s",
+          "duration": "404.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--90-10.md"
         },
@@ -2818,7 +2818,7 @@
           "plan": "test-plans/tender-process/bid-supply-chain-management.md",
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
-          "result": "PARTIAL — MIXED: REPLAY DEFENCE **HOLDS**; **2 NEW HIGH BUGS** (NON-PARTICIPANT WRITES, ORDER AMOUNT)",
+          "result": "PARTIAL",
           "duration": "",
           "mode": "live via Playwright MCP",
           "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-authz-replay-order-amount.md"
@@ -2827,7 +2827,7 @@
           "plan": "test-plans/tender-process/bid-supply-chain-management.md",
           "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
           "variant": "80/20",
-          "result": "PARTIAL — ~~🔴 CRITICAL — A NON-BIDDER WAS RECOMMENDED AND AWARDED THE TENDER END TO END~~ →",
+          "result": "PARTIAL",
           "duration": "",
           "mode": null,
           "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-below-minimum-chain.md"
@@ -2836,7 +2836,7 @@
           "plan": "test-plans/tender-process/bid-supply-chain-management.md",
           "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
           "variant": "80/20",
-          "result": "BLOCKED — 🔴 **DEFECT FOUND.** ⚠️ SUPERSEDED BY THE 2026-08-03 RETEST",
+          "result": "BLOCKED",
           "duration": "",
           "mode": "live via Playwright MCP (TC-01 automated to create the test data)",
           "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-disapprove.md"
@@ -2845,7 +2845,7 @@
           "plan": "test-plans/tender-process/bid-supply-chain-management.md",
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
-          "result": "PARTIAL — MIXED: 2 AREAS CORRECT, **1 NEW HIGH BUG**, **1 DESIGN GAP**, **1 EXISTING BLOCKER",
+          "result": "PARTIAL",
           "duration": "",
           "mode": "live via Playwright MCP",
           "reportHref": "test-reports/2026-07-30/bid-supply-chain-management--negative-non-compliant-and-bac.md"
@@ -2878,7 +2878,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
           "variant": "90/10",
           "result": "PARTIAL",
-          "duration": "20.6s",
+          "duration": "421.7s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-07-29/bid-supply-chain-management--90-10.md"
         }
@@ -2892,7 +2892,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md (80/20)",
           "variant": "80/20",
           "result": "PASSED",
-          "duration": "31.9s",
+          "duration": "413.1s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-06-08/bid-supply-chain-management--80-20.md"
         },
@@ -2901,7 +2901,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md (90/10)",
           "variant": "90/10",
           "result": "PASSED",
-          "duration": "19.1s",
+          "duration": "399.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-06-08/bid-supply-chain-management--90-10.md"
         }
@@ -2915,7 +2915,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "18.8s",
+          "duration": "420.3s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-05/bid-supply-chain-management.md"
         }
@@ -2929,7 +2929,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
           "result": "PARTIAL",
-          "duration": "28.3s",
+          "duration": "215.3s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-04/bid-supply-chain-management.md"
         }
@@ -2943,7 +2943,7 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "41.1s",
+          "duration": "44.1s",
           "mode": "playwright-script (failures pending AI-repair)",
           "reportHref": "test-reports/2026-06-03/bid-supply-chain-management.md"
         }
@@ -2957,12 +2957,12 @@
           "planDisplay": "tender-process/bid-supply-chain-management.md",
           "variant": null,
           "result": "PASSED",
-          "duration": "4.7s",
+          "duration": "6.6s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-06-02/bid-supply-chain-management.md"
         }
       ]
     }
   ],
-  "generated": "2026-08-05T05:50:45.849Z"
+  "generated": "2026-09-11T10:58:57.685Z"
 }

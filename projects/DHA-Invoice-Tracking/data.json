@@ -27,320 +27,19 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 2,
-    "totalRuns": 23,
-    "last7Runs": 16,
-    "last7Pass": 9,
-    "last7PassPct": 56,
-    "failingFlows": 0,
-    "passingFlows": 8,
+    "totalRuns": 30,
+    "last7Runs": 7,
+    "last7Pass": 0,
+    "last7PassPct": 0,
+    "failingFlows": 1,
+    "passingFlows": 7,
     "partialFlows": 0,
     "neverFlows": 0
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-08-02",
+    "startDate": "2025-09-14",
     "days": [
-      {
-        "iso": "2025-08-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-14",
         "runs": 0,
@@ -2587,6 +2286,307 @@
         "passed": 4,
         "failed": 1,
         "partial": 0
+      },
+      {
+        "iso": "2026-08-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-05",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-06",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-07",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-08",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-09",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-10",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-11",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2603,17 +2603,59 @@
           "specHref": "test-plans/invoice-process/bas.spec.ts",
           "canRun": true,
           "badges": [],
-          "rowStatus": "passing",
-          "status": "PASSED",
+          "rowStatus": "failing",
+          "status": "FAILED",
           "last": {
-            "date": "2026-07-31",
-            "result": "PASSED",
-            "duration": "~26 min wall clock for the completed chain",
+            "date": "2026-09-11",
+            "result": "FAILED",
+            "duration": "58.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-07-31/bas-post-deployment-QA-PAY3306.md"
+            "reportHref": "test-reports/2026-09-11/bas.md"
           },
-          "runCount": 10,
+          "runCount": 17,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "58.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-10",
+              "result": "FAILED",
+              "duration": "48s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-09",
+              "result": "FAILED",
+              "duration": "58.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-08",
+              "result": "FAILED",
+              "duration": "104.9s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-07",
+              "result": "FAILED",
+              "duration": "54.9s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "67.2s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "60.3s",
+              "variant": null
+            },
             {
               "date": "2026-07-31",
               "result": "PASSED",
@@ -2643,36 +2685,6 @@
               "result": "PARTIAL",
               "duration": "~10 min",
               "variant": null
-            },
-            {
-              "date": "2026-07-28",
-              "result": "PASSED",
-              "duration": "~12 min",
-              "variant": null
-            },
-            {
-              "date": "2026-07-28",
-              "result": "PARTIAL",
-              "duration": "~10 min",
-              "variant": null
-            },
-            {
-              "date": "2026-07-28",
-              "result": "BLOCKED",
-              "duration": "~2 h (investigation)",
-              "variant": null
-            },
-            {
-              "date": "2026-07-16",
-              "result": "PASSED",
-              "duration": "",
-              "variant": null
-            },
-            {
-              "date": "2026-07-16",
-              "result": "FAILED",
-              "duration": "59.1s",
-              "variant": null
             }
           ],
           "bugs": [
@@ -2693,6 +2705,10 @@
           "specHref": null,
           "canRun": false,
           "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
             {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
@@ -2771,6 +2787,104 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-11",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "58.4s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/bas.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-10/bas.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "58.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-09/bas.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "104.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-08/bas.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "54.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-07/bas.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "67.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/bas.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "60.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-05/bas.md"
+        }
+      ]
+    },
     {
       "date": "2026-07-31",
       "runs": [
@@ -2999,5 +3113,5 @@
       ]
     }
   ],
-  "generated": "2026-07-31T13:01:35.181Z"
+  "generated": "2026-09-11T10:58:57.391Z"
 }

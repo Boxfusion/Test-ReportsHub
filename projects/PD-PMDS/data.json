@@ -21,12 +21,12 @@
   ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 0,
-    "totalRuns": 63,
-    "last7Runs": 6,
+    "totalPlans": 2,
+    "totalRuns": 90,
+    "last7Runs": 20,
     "last7Pass": 4,
-    "last7PassPct": 67,
-    "failingFlows": 0,
+    "last7PassPct": 20,
+    "failingFlows": 2,
     "passingFlows": 0,
     "partialFlows": 0,
     "neverFlows": 0
@@ -2298,8 +2298,8 @@
       },
       {
         "iso": "2026-08-02",
-        "runs": 0,
-        "passed": 0,
+        "runs": 1,
+        "passed": 1,
         "failed": 0,
         "partial": 0
       },
@@ -2375,15 +2375,15 @@
       },
       {
         "iso": "2026-08-13",
-        "runs": 0,
-        "passed": 0,
+        "runs": 3,
+        "passed": 3,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-08-14",
-        "runs": 0,
-        "passed": 0,
+        "runs": 6,
+        "passed": 6,
         "failed": 0,
         "partial": 0
       },
@@ -2403,8 +2403,8 @@
       },
       {
         "iso": "2026-08-17",
-        "runs": 0,
-        "passed": 0,
+        "runs": 3,
+        "passed": 3,
         "failed": 0,
         "partial": 0
       },
@@ -2536,56 +2536,208 @@
       },
       {
         "iso": "2026-09-05",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-06",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-07",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-08",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-09",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-10",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
         "iso": "2026-09-11",
-        "runs": 6,
+        "runs": 8,
         "passed": 4,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       }
     ]
   },
-  "sections": [],
+  "sections": [
+    {
+      "key": "contracting",
+      "title": "Contracting",
+      "stripPrefix": "test-plans/contracting/",
+      "plans": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planHref": "test-plans/contracting/contracting-lifecycle.md",
+          "spec": "test-plans/contracting/contracting-lifecycle.spec.ts",
+          "specHref": "test-plans/contracting/contracting-lifecycle.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-09-11",
+            "result": "FAILED",
+            "duration": "42.6s",
+            "variant": null,
+            "reportHref": "test-reports/2026-09-11/contracting-lifecycle.md"
+          },
+          "runCount": 8,
+          "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "42.6s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-10",
+              "result": "FAILED",
+              "duration": "129.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-09",
+              "result": "FAILED",
+              "duration": "127.7s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-08",
+              "result": "FAILED",
+              "duration": "127.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-07",
+              "result": "FAILED",
+              "duration": "126.6s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "128.9s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "128.8s",
+              "variant": null
+            },
+            {
+              "date": "2026-08-02",
+              "result": "PASSED",
+              "duration": "~26m across the four passes",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planHref": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "spec": "test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "specHref": "test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-09-11",
+            "result": "FAILED",
+            "duration": "37.1s",
+            "variant": null,
+            "reportHref": "test-reports/2026-09-11/sl1-12-contracting-scenarios.md"
+          },
+          "runCount": 9,
+          "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "37.1s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-10",
+              "result": "FAILED",
+              "duration": "175.7s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-09",
+              "result": "FAILED",
+              "duration": "172.7s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-08",
+              "result": "FAILED",
+              "duration": "186.2s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-07",
+              "result": "FAILED",
+              "duration": "185.1s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "175.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "186.8s",
+              "variant": null
+            },
+            {
+              "date": "2026-08-17",
+              "result": "PASSED",
+              "duration": "",
+              "variant": null
+            },
+            {
+              "date": "2026-08-13",
+              "result": "PASSED",
+              "duration": "",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        }
+      ]
+    }
+  ],
   "timeline": [
     {
       "date": "2026-09-11",
@@ -2600,6 +2752,15 @@
           "reportHref": "test-reports/2026-09-11/cd-director-contracting.md"
         },
         {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "42.6s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/contracting-lifecycle.md"
+        },
+        {
           "plan": null,
           "planDisplay": "ddg-contracting.md",
           "variant": null,
@@ -2607,6 +2768,15 @@
           "duration": "",
           "mode": null,
           "reportHref": "test-reports/2026-09-11/ddg-contracting.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "37.1s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/sl1-12-contracting-scenarios.md"
         },
         {
           "plan": null,
@@ -2643,6 +2813,267 @@
           "duration": "",
           "mode": null,
           "reportHref": "test-reports/2026-09-11/sl112-positive-simmy-jabu.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "129.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-10/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "175.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-10/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "127.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-09/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "172.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-09/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "127.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-08/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "186.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-08/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "126.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-07/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "185.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-07/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "128.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "175.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "128.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-05/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "186.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-05/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "cd-director-contracting.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright driver (`.tmp-cdd-positive.js`, `.tmp-cdd-neg1-sampha.js`,",
+          "reportHref": "test-reports/2026-08-17/cd-director-contracting.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "ddg-contracting.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright driver (`.tmp-ddg-positive.js`, `.tmp-ddg-neg1-thando.js`,",
+          "reportHref": "test-reports/2026-08-17/ddg-contracting.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "playwright-script (headed) — TC-00 through TC-03 via the checked-in spec through the",
+          "reportHref": "test-reports/2026-08-17/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "cd-director-annual.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-14/cd-director-annual.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "cd-director-midyear.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-14/cd-director-midyear.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "ddg-annual.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-14/ddg-annual.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "ddg-midyear.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-14/ddg-midyear.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "sl1-12-annual.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright drivers extending the shared `.tmp-pmds-lib.js` helper",
+          "reportHref": "test-reports/2026-08-14/sl1-12-annual.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "sl1-12-midyear.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright drivers extending `pmds.ts`'s selector layer with new",
+          "reportHref": "test-reports/2026-08-14/sl1-12-midyear.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "cd-director-contracting.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright driver (`.tmp-cdd-full.js`, extending `pmds.ts`'s",
+          "reportHref": "test-reports/2026-08-13/cd-director-contracting.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "ddg-contracting.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright driver (`.tmp-ddg-full.js`, extending `pmds.ts`'s",
+          "reportHref": "test-reports/2026-08-13/ddg-contracting.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "playwright-script (headed) — TC-00 through TC-03 via the checked-in spec through the",
+          "reportHref": "test-reports/2026-08-13/sl1-12-contracting-scenarios.md"
         }
       ]
     },
@@ -2756,6 +3187,20 @@
           "duration": "",
           "mode": null,
           "reportHref": "test-reports/2026-08-11/sl1-12-midyear-opened.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~26m across the four passes",
+          "mode": "playwright-script (headed; run in 4 staged passes — see *Execution note*)",
+          "reportHref": "test-reports/2026-08-02/contracting-lifecycle.md"
         }
       ]
     },
@@ -3195,5 +3640,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T11:10:18.838Z"
+  "generated": "2026-09-11T12:25:43.937Z"
 }

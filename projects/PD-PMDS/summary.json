@@ -1,10 +1,10 @@
 {
-  "totalPlans": 0,
-  "totalRuns": 63,
-  "last7Runs": 6,
+  "totalPlans": 2,
+  "totalRuns": 90,
+  "last7Runs": 20,
   "last7Pass": 4,
-  "last7PassPct": 67,
-  "failingFlows": 0,
+  "last7PassPct": 20,
+  "failingFlows": 2,
   "lastRun": {
     "date": "2026-09-11",
     "result": "BLOCKED",

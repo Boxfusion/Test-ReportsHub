@@ -1,0 +1,269 @@
+
+
+########## 101889  06 OB Self-Confirmation  (6 cases) ##########
+
+--- #101705  [TC-06-003 | Src:Both | Email-Link] OB declines - 'No' requires a comment and flags OB as not part of NPO
+    state=Design  P1  tags=DSD-NPO; Functional; Negative; Portal-Email-Link; Source-Both; Suite-06; TC-06-003
+    1. OB clicks link, selects &#x27;No I am not part of this organisation&#x27;, adds comment, submits
+       => OB is flagged &#x27;Not part of NPO&#x27; with reason; counts toward OB Confirmation Failure; admin sees this on backend (per FDS 7.6 rule 2)
+
+--- #101706  [TC-06-004 | Src:Both | Email-Link] OB confirmation link is single-use
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Email-Link; Source-Both; Suite-06; TC-06-004
+    1. OB clicks the same link again
+       => Page indicates the link has already been used; cannot change response
+
+--- #101707  [TC-06-005 | Src:FDS | Email-Link] OB confirmation link is time-bound (e.g., expires after N days)
+    state=Design  P3  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Email-Link; Source-FDS; Suite-06; TC-06-005
+    1. OB opens link after expiry
+       => Page indicates link expired and instructs OB to request a new one
+
+--- #101708  [TC-06-006 | Src:FDS | Email-Link] Application status transitions to 'OB Confirmed' once all OBs confirm
+    state=Design  P1  tags=Drift-Risk; DSD-NPO; Functional; Portal-Email-Link; Positive; Source-FDS; Suite-06; TC-06-006
+    1. Observe application status on admin portal
+       => Status moves to &#x27;OB Confirmed&#x27; (RefListApplicationStatus = 16) and triggers next workflow step
+
+--- #101709  [TC-06-007 | Src:FDS | Email-Link] Application status becomes 'OB Partially Confirmed' if only some confirm
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Email-Link; Source-FDS; Suite-06; TC-06-007
+    1. View status
+       => Status = &#x27;OB Partially Confirm&#x27; (RefList=13)
+
+--- #101710  [TC-06-008 | Src:Both | Email-Link] Application status becomes 'OB Confirmation Failed' if any OB says No
+    state=Design  P1  tags=DSD-NPO; Functional; Negative; Portal-Email-Link; Source-Both; Suite-06; TC-06-008
+    1. View status
+       => Status = &#x27;OB Confirmation Failed&#x27; (RefList=7); reason captured; application is flagged for resubmission per FDS 6.2
+
+
+########## 101892  09 Annual Compliance backend-QA  (3 cases) ##########
+
+--- #101759  [TC-09-004 | Src:FDS | Admin] Backend - QA 'Not Aligned' requires reason; triggers resubmission email
+    state=Design  P1  tags=Drift-Risk; DSD-NPO; Functional; Negative; Portal-Admin; Source-FDS; Suite-09; TC-09-004
+    1. Select &#x27;Not Aligned&#x27;, leave reason blank, Submit
+       => Validation error
+    2. Enter reason and Submit
+       => Resubmission email with reason sent; report enters resubmission workflow
+
+--- #101760  [TC-09-005 | Src:FDS | Admin] Annual Compliance - 30-day non-response after notice leads to cancellation
+    state=Design  P1  tags=Drift-Risk; DSD-NPO; Functional; Negative; Portal-Admin; Source-FDS; Suite-09; TC-09-005
+    1. Wait 30 days with no response
+       => Org status moves to Cancelled per FDS Annual 6.2 rule 9 bullet 3
+
+--- #101761  [TC-09-006 | Src:FDS | Admin] Annual Compliance - Trends analysis is visible/accessible to backend user
+    state=Design  P3  tags=DSD-NPO; Functional; Portal-Admin; Positive; Source-FDS; Suite-09; TC-09-006
+    1. Open report comparing previous years
+       => Trends are visible per FDS Annual 6.2 rule 9 (analyse trends)
+
+
+########## 101901  14C Session read-only access control  (5 cases) ##########
+
+--- #101821  [TC-14-009 | Src:FDS | Both] Submitter cannot edit OB/org data of an application not in editable state
+    state=Design  P2  tags=DSD-NPO; Functional; Negative; Portal-Both; Source-FDS; Suite-14C; TC-14-009
+    1. Attempt edit
+       => UI blocks edit; API rejects PATCH attempts with 403/409
+
+--- #101822  [TC-14-010 | Src:FDS | Both] Session expiry and re-login lands user where they were (or to dashboard)
+    state=Design  P3  tags=DSD-NPO; Edge; Functional; Portal-Both; Source-FDS; Suite-14C; TC-14-010
+    1. Leave session idle past timeout, attempt action
+       => User is redirected to sign-in; after sign-in, taken to dashboard or original deep link
+
+--- #107428  [TC-14C-003 | Src:Code | Both] Session cookie has Secure + HttpOnly + SameSite=Lax/Strict
+    state=Design  P2  tags=Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14C
+    1. Sign in via browser; inspect Set-Cookie response header for session cookie.
+       => Cookie flags: Secure=true, HttpOnly=true, SameSite=Lax or Strict.
+
+--- #107429  [TC-14C-004 | Src:Code | Both] Concurrent logins from same user — session behaviour is defined and stable
+    state=Design  P2  tags=Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14C
+    1. Sign in from Browser A.
+       => Session A active.
+    2. Sign in same account from Browser B.
+       => Behaviour matches defined policy: (a) both sessions valid (allowed by design), OR (b) session A invalidated + user notified. Test asserts the defined behaviour, not one of the two.
+
+--- #107430  [TC-14C-005 | Src:Code | Both] Read-only role cannot mutate — POST/PUT/DELETE endpoints return 403
+    state=Design  P2  tags=Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14C
+    1. Precondition: user with "Read only" role signed in.
+       => Role seed present.
+    2. Attempt POST /api/services/dsdnpo/OrganisationLocations/CreateAsync via authorised session.
+       => Response 403 Forbidden. No side-effect in DB.
+    3. Attempt DELETE variants.
+       => Same — 403.
+
+
+########## 101903  14N Notifications and delivery  (3 cases) ##########
+
+--- #101813  [TC-14-001 | Src:Code | Admin] Email/SMS notifications - bounced or invalid address surfaces to admin
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14N; TC-14-001
+    1. Submit application; mail server returns bounce
+       => Admin sees a &#x27;notification delivery failed&#x27; indicator on application (RefListDeliveryStatus reflects)
+
+--- #101825  [TC-14-013 | Src:Code | Admin] OB notification retry: failed SMS/email re-sends to persons without success status
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14N; TC-14-013
+    1. Wait for retry job / trigger manually
+       => Persons with DeliveryFailed/AwaitingToBeSent get a fresh send; persons with DeliveryConfirmed do not get duplicates
+
+--- #101827  [TC-14-015 | Src:Code | Admin] Notification delivery status reflects on admin view per OB after send attempt
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Functional; Portal-Admin; Positive; Source-Code; Suite-14N; TC-14-015
+    1. Open application detail or OB detail
+       => Per OB: shows DeliveryStatus = AwaitingToBeSent | Sent | DeliveryConfirmed | DeliveryRetry | DeliveryFailed (RefListDeliveryStatus.cs:9)
+
+
+########## 101904  14R Integration retries DHA-CIPC  (2 cases) ##########
+
+--- #101817  [TC-14-005 | Src:FDS | Admin] Background DHA verification retry runs after 1 hour and updates OB status
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-FDS; Suite-14R; TC-14-005
+    1. Wait > 1 hour with DHA back up
+       => Background job retries verification; OB status updates accordingly (per FDS 6.1 rule 2c(i))
+
+--- #101818  [TC-14-006 | Src:FDS | Admin] Background CIPC verification retry runs after 1 hour and updates application
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-FDS; Suite-14R; TC-14-006
+    1. Wait > 1 hour with CIPC back up
+       => Background job retries; directors are populated from CIPC (per FDS 6.1 rule 2b(ii))
+
+
+########## 101907  14U Audit trail and resubmission diff  (4 cases) ##########
+
+--- #101815  [TC-14-003 | Src:FDS | Admin] Audit trail captures who/when for every state transition
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Functional; Portal-Admin; Positive; Source-FDS; Suite-14U; TC-14-003
+    1. Open audit trail for an application
+       => Each transition includes actor, timestamp, from-state, to-state, comment
+
+--- #101816  [TC-14-004 | Src:FDS | Admin] Resubmission diff shows changed fields between submissions
+    state=Design  P3  tags=DSD-NPO; Functional; Portal-Admin; Positive; Source-FDS; Suite-14U; TC-14-004
+    1. View resubmission diff on admin portal
+       => Changed fields highlighted; original retained
+
+--- #107426  [TC-14U-003 | Src:Code | Both] Office Bearer CRUD writes audit entries (Create, Update, Delete + Confirmed OB self-verification)
+    state=Design  P2  tags=Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14U
+    1. Admin creates an OB.
+       => Audit entry: actor + timestamp + OB reference + action=Create.
+    2. Admin updates OB position field.
+       => Audit entry: action=Update + diff of changed fields.
+    3. OB confirms self-verification via email link.
+       => Audit entry: action=SelfConfirm + link source.
+    4. Admin deletes / retracts OB.
+       => Audit entry: action=Delete or Retract + reason.
+
+--- #107427  [TC-14U-004 | Src:Code | Both] Document upload + Application state-change actions written to audit
+    state=Design  P2  tags=Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14U
+    1. User uploads Founding Documents on Wizard Tab 7.
+       => Audit entry per file upload with file hash + user reference.
+    2. Admin transitions Application from Submitted to Under Review.
+       => Audit entry: state transition captured with before/after + actor.
+
+
+########## 101908  14X Concurrency and race conditions  (8 cases) ##########
+
+--- #101850  [TC-14X-001 | Src:Code | Admin] Two admins act on same Document Verification dialog: only one wins
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-001
+    1. Set up the two concurrent actors with their respective sessions/contexts
+       => Both reach the relevant point at the same time
+    2. Trigger both actions within a small time window (use a delay-tooling helper or two tabs)
+       => Admin1 submits &#x27;all docs valid&#x27;; before Admin2 submits, Admin2 should see a stale-state error OR the second submission is rejected with 409. The application status changes once, not twice.
+    3. Verify final DB state: only one transition is recorded; audit log reflects the actual sequence
+       => No double-transition; no orphan records
+
+--- #101851  [TC-14X-002 | Src:Code | Admin] Submitter resubmits while admin is making decision
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-002
+    1. Set up the two concurrent actors with their respective sessions/contexts
+       => Both reach the relevant point at the same time
+    2. Trigger both actions within a small time window (use a delay-tooling helper or two tabs)
+       => If submitter submits first, admin&#x27;s decision attempt detects the resubmission and refuses to overwrite. No data loss.
+    3. Verify final DB state: only one transition is recorded; audit log reflects the actual sequence
+       => No double-transition; no orphan records
+
+--- #101852  [TC-14X-003 | Src:Code | Both] Two users try to Link the same NPO simultaneously
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-003
+    1. Set up the two concurrent actors with their respective sessions/contexts
+       => Both reach the relevant point at the same time
+    2. Trigger both actions within a small time window (use a delay-tooling helper or two tabs)
+       => Only one user becomes Authorised Admin; the other sees a &#x27;already linked&#x27; message.
+    3. Verify final DB state: only one transition is recorded; audit log reflects the actual sequence
+       => No double-transition; no orphan records
+
+--- #101853  [TC-14X-004 | Src:Code | Both] PersonIdVerifier concurrency lock holds under simultaneous trigger
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-004
+    1. Set up the two concurrent actors with their respective sessions/contexts
+       => Both reach the relevant point at the same time
+    2. Trigger both actions within a small time window (use a delay-tooling helper or two tabs)
+       => Only one PersonIdVerifier processes; the other logs &#x27;already processing&#x27; and skips (PersonIdVerifier.cs:48-49). Verify no double DHA call for any single OB.
+    3. Verify final DB state: only one transition is recorded; audit log reflects the actual sequence
+       => No double-transition; no orphan records
+
+--- #101854  [TC-14X-005 | Src:Code | Admin] Two admins both try to assign different investigators to the same case
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-005
+    1. Set up the two concurrent actors with their respective sessions/contexts
+       => Both reach the relevant point at the same time
+    2. Trigger both actions within a small time window (use a delay-tooling helper or two tabs)
+       => First assignment wins; second admin sees stale state and is refused with a clear message.
+    3. Verify final DB state: only one transition is recorded; audit log reflects the actual sequence
+       => No double-transition; no orphan records
+
+--- #101855  [TC-14X-006 | Src:Code | Admin] OB confirmation race: OB clicks link while admin is processing an unrelated update
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-Code; Suite-14X; TC-14X-006
+    1. Set up the two concurrent actors with their respective sessions/contexts
+       => Both reach the relevant point at the same time
+    2. Trigger both actions within a small time window (use a delay-tooling helper or two tabs)
+       => OB confirmation succeeds independently; admin&#x27;s update does not erase the OB confirmation status.
+    3. Verify final DB state: only one transition is recorded; audit log reflects the actual sequence
+       => No double-transition; no orphan records
+
+--- #101856  [TC-14X-007 | Src:Code | Both] Bulk reallocation Excel upload: duplicate NPO rows handled gracefully
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-007
+    1. Set up the two concurrent actors with their respective sessions/contexts
+       => Both reach the relevant point at the same time
+    2. Trigger both actions within a small time window (use a delay-tooling helper or two tabs)
+       => Second occurrence either ignored, deduped, or processed idempotently. No partial-failure crash; result report lists each row&#x27;s outcome.
+    3. Verify final DB state: only one transition is recorded; audit log reflects the actual sequence
+       => No double-transition; no orphan records
+
+--- #101857  [TC-14X-008 | Src:Code | Both] BackgroundJob runs while transaction in flight
+    state=Design  P2  tags=Drift-Risk; DSD-NPO; Edge; Functional; Portal-Both; Source-Code; Suite-14X; TC-14X-008
+    1. Set up the two concurrent actors with their respective sessions/contexts
+       => Both reach the relevant point at the same time
+    2. Trigger both actions within a small time window (use a delay-tooling helper or two tabs)
+       => Certificate generation reads NpoNumber via projection query (cache-bypass workaround at ApplicationManager.cs:278-283). Certificate PDF shows the freshly-issued NpoNumber, not a stale value.
+    3. Verify final DB state: only one transition is recorded; audit log reflects the actual sequence
+       => No double-transition; no orphan records
+
+
+########## 102152  14Y POPIA transport and logging  (6 cases) ##########
+
+--- #102161  [TC-14Y-001 | Src:Code | Public] Wizard data sent over HTTPS only; submitter PII (RSA ID, email, phone) is not echoed into application logs
+    state=Design  P1  tags=DSD-NPO; Functional; Portal-Public; Security; Source-Sys-Obs; Suite-14Y; TC-14Y-001
+    1. Open browser DevTools Network tab and submit a draft Application Wizard with synthetic PII
+       => All wizard requests use https:// scheme; no http:// requests
+    2. Inspect every request URL and response headers
+       => Strict-Transport-Security header is set; no mixed-content warnings in browser console
+    3. Capture the request correlation ID from response headers
+       => Correlation ID is present and unique per request
+    4. Search the application logs for the test submitter's RSA ID, email, and cellphone
+       => Logs reference the correlation ID but do not contain raw RSA ID, raw email, or raw cellphone - PII is redacted, masked, or omitted
+
+--- #107417  [TC-14Y-002 | Src:Code | Both] Sign In credentials transmitted over TLS only
+    state=Design  P2  tags=Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y
+    1. Capture Sign In request via browser DevTools Network.
+       => Request URL uses https://. Password appears only in TLS-encrypted body; no plaintext leak.
+
+--- #107418  [TC-14Y-003 | Src:Code | Both] SA ID number treated as special personal information — logs redacted
+    state=Design  P2  tags=Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y
+    1. Perform DHA verification with synthetic SA ID.
+       => App logs tail shows SA ID masked (e.g. XXXXXXXXXX1234) or absent. Audit trail logs SA ID only if strictly required + separately protected.
+
+--- #107419  [TC-14Y-004 | Src:Code | Both] POPI Act consent captured before Register-New-NPO submission
+    state=Design  P2  tags=Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y
+    1. Open Register-New-NPO flow.
+       => POPI consent dialogue visible before any submission.
+    2. Attempt submit without ticking consent.
+       => Submit blocked with plain-language POPIA notice.
+
+--- #107420  [TC-14Y-005 | Src:Code | Both] Subject access — user can request export of their personal data
+    state=Design  P2  tags=Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y
+    1. Signed-in user opens Profile > Data & Privacy.
+       => Export My Data action visible.
+    2. Trigger export.
+       => Email sent with structured export (JSON or CSV) of user PII + linked NPO records.
+
+--- #107421  [TC-14Y-006 | Src:Code | Both] Data retention — inactive user records archived after policy-defined period
+    state=Design  P2  tags=Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y
+    1. Precondition: user with no login in policy-defined inactive window.
+       => Seed data.
+    2. Run retention job (or observe scheduled trigger).
+       => User record moved to Archived state; personal data no longer accessible via normal queries; audit entry recorded.

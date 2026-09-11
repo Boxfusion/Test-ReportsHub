@@ -1,0 +1,52 @@
+{
+  "/dynamic/Shesha/notification-message-audit-table": {
+    "gridVisible": true,
+    "cols": [
+      "",
+      "Created On",
+      "Date Sent",
+      "Notification",
+      "Recipient",
+      "Send Type",
+      "Subject",
+      "Body",
+      "Status"
+    ],
+    "pag": "",
+    "cells": [
+      []
+    ],
+    "notFound": false,
+    "bodyHead": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase Shesha/notification-message-audit-table v16 LIVE Notification Audit Export Created On Date Sent Notification Recipient Send Type Subject Body Status No Data No data is available for this table"
+  },
+  "/dynamic/Shesha/notifications-audit": {
+    "gridVisible": true,
+    "cols": [
+      "Triggering Entity",
+      "Part Of",
+      "",
+      "Creation Time",
+      "Date Sent",
+      "Notification",
+      "Recipient Text",
+      "Subject",
+      "Message",
+      "Status",
+      "Channel"
+    ],
+    "pag": "",
+    "cells": [
+      []
+    ],
+    "notFound": false,
+    "bodyHead": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase Shesha/notifications-audit v28 DRAFT Notification Audit Export Triggering Entity Part Of Creation Time Date Sent Notification Recipient Text Subject Message Status Channel No Data No data is available for this table"
+  },
+  "/dynamic/Shesha/notification-message": {
+    "gridVisible": false,
+    "cols": [],
+    "pag": "",
+    "cells": [],
+    "notFound": false,
+    "bodyHead": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase Shesha/notification-message v27 LIVE Notification Message for Notification Details Date Sent Recipient Text Notification Channel Subject None Message CHARS: 0 WORDS: 0 Sent By Status Error Message Retry Count"
+  }
+}

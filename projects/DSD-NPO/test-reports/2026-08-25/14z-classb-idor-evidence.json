@@ -1,0 +1,42 @@
+{
+  "capturedAt": "2026-08-25T15:40Z",
+  "method": "two owned applicant tokens (A userId 15944, B userId 15945) + credentials:'omit' anonymous probes, cross-origin so no cookies. Counts/status only — NO record contents transcribed.",
+  "authHeaderRequired": "TokenAuth/Authenticate needs 'sha-frontend-application: public-portal' header or it 401s even with valid creds (this cost the first attempt).",
+  "targetedPersonRead": {
+    "endpoint": "GET /api/dynamic/Shesha/Person/Crud/Get?id=<personId>&properties=firstName,lastName,identityNumber,emailAddress1,mobileNumber1,gender",
+    "A_personId": "96c5398f-fa25-4ffa-aa6d-2e5969209c42",
+    "B_personId": "82612bda-3419-4497-b583-56361b50e3ad",
+    "A_reads_A": {"status": 200, "fieldsPopulated": ["firstName","lastName","emailAddress1","mobileNumber1"]},
+    "B_reads_B": {"status": 200, "fieldsPopulated": ["firstName","lastName","emailAddress1","mobileNumber1"]},
+    "B_reads_A_BOLA": {"status": 200, "fieldsPopulated": ["firstName","lastName","emailAddress1","mobileNumber1"], "verdict": "B reads A's PII — cross-account access succeeds"},
+    "anon_reads_A": {"status": 200, "fieldsPopulated": ["firstName","lastName","emailAddress1","mobileNumber1"], "verdict": "NO token at all reads A's PII — auth guard absent entirely, strictly worse than BOLA"},
+    "note": "identityNumber came back null for A and B because our test accounts genuinely have no SA ID (consistent with the known 'SA ID absent from sign-up' finding). Whether a populated SA ID is returned for REAL persons was NOT tested — that would mean handling a stranger's identity number. Class confirmed on our own accounts; stopped there per the PII-safety rule."
+  },
+  "anonymousCollectionReads": {
+    "note": "credentials:'omit', no Authorization header. Count + status only, never row contents.",
+    "Person":          {"status": 200, "totalCount": 1834038},
+    "NpoOfficeBearer": {"status": 200, "totalCount": 2181679},
+    "NpoPartner":      {"status": 200, "totalCount": 1550},
+    "NpoOrganisation": {"status": 200, "totalCount": 320595}
+  },
+  "entitiesNotReachableViaGenericCrud": {
+    "StoredFile":  "404 on both Shesha/StoredFile and Shesha.Domain/StoredFile — StoredFile is served via a dedicated download endpoint, not generic Crud/GetAll. Real route unknown; NOT guessed. TC-018/019 NOT EXECUTED.",
+    "Location":    "404 on Shesha/Location — same; TC-025/026 NOT EXECUTED.",
+    "DocumentStamp": "no entity named DocumentStamp in EntityConfig (448 entities listed); nearest are InquiryDocument, FoundingDocumentsChecklist, AppealAttachedDocument. Real mechanism unknown; TC-023 NOT EXECUTED."
+  },
+  "entityConfigSource": "GET /api/services/app/EntityConfig/GetMainDataList?maxResultCount=2000 → 448 entities (this is how the real namespaces were resolved rather than guessed)",
+  "classBVerdicts": {
+    "TC-14Z-012_account-info-requires-auth": "FAILED — anon reads 1,834,038 Person records incl name/email/mobile",
+    "TC-14Z-021_Partner": "FAILED — anon reads 1,550 NpoPartner records",
+    "TC-14Z-022_OB-NPO-read": "FAILED — anon reads 2,181,679 NpoOfficeBearer records",
+    "TC-14Z-029_OB-identity-takeover": "PARTIAL — read/enumeration side confirmed open anonymously; the takeover WRITE was NOT attempted (mutation on shared QA)",
+    "TC-14Z-013_DeleteMyAccount": "NOT EXECUTED — a delete mutation; cannot test the session guard without risking a real account deletion on shared QA",
+    "TC-14Z-018_StoredFile": "NOT EXECUTED — dedicated download route unknown (won't guess); also A owns no file to serve as the A-owned resource",
+    "TC-14Z-019_StoredFile": "NOT EXECUTED — same",
+    "TC-14Z-023_DocumentStamp": "NOT EXECUTED — no such entity in config; real mechanism unknown",
+    "TC-14Z-025_OrgLocation-read": "NOT EXECUTED — Location not exposed via generic CRUD; route unknown",
+    "TC-14Z-026_OrgLocation-update": "NOT EXECUTED — mutation + unknown route",
+    "TC-14Z-027_CPR-criminal-record": "NOT EXECUTED — most sensitive case; requires a synthetic query against QueryCprUsRecord that cannot return a real person's record; not wired this pass, routed to Thabiso"
+  },
+  "rootCauseCrossReference": "This is the same defect already filed as bugs/2026-08-18-api-reachable-without-authentication.md (TC-14Z-005 / TC-01-021) — the dynamic CRUD API answers anonymous callers. Class B did not find a NEW bug; it demonstrated that the SAME broken-auth root removes the per-user (BOLA) guard the Class B cases were written to check. Not re-raised; cross-referenced."
+}

@@ -27,320 +27,19 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 1,
-    "totalRuns": 5,
-    "last7Runs": 5,
-    "last7Pass": 4,
-    "last7PassPct": 80,
-    "failingFlows": 0,
-    "passingFlows": 1,
+    "totalRuns": 11,
+    "last7Runs": 6,
+    "last7Pass": 0,
+    "last7PassPct": 0,
+    "failingFlows": 1,
+    "passingFlows": 0,
     "partialFlows": 0,
     "neverFlows": 0
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-08-02",
+    "startDate": "2025-09-14",
     "days": [
-      {
-        "iso": "2025-08-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-14",
         "runs": 0,
@@ -2587,6 +2286,307 @@
         "passed": 0,
         "failed": 0,
         "partial": 0
+      },
+      {
+        "iso": "2026-08-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-14",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-05",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-06",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-07",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-08",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-09",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-10",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-11",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2602,28 +2602,69 @@
           "spec": "test-plans/tender-process/ecdedea-tender-process.spec.ts",
           "specHref": "test-plans/tender-process/ecdedea-tender-process.spec.ts",
           "canRun": true,
-          "badges": [],
-          "rowStatus": "passing",
-          "status": "PASSED",
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
+          "rowStatus": "failing",
+          "status": "FAILED",
           "last": {
-            "date": "2026-07-27",
-            "result": "PASSED",
-            "duration": "13.5s",
-            "variant": "80/20",
-            "reportHref": "test-reports/2026-07-27/ecdedea-tender-process--80-20.md"
+            "date": "2026-09-10",
+            "result": "FAILED",
+            "duration": "1218.5s",
+            "variant": null,
+            "reportHref": "test-reports/2026-09-10/ecdedea-tender-process.md"
           },
-          "runCount": 3,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-10",
+              "result": "FAILED",
+              "duration": "1218.5s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-09",
+              "result": "FAILED",
+              "duration": "1192.1s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-08",
+              "result": "FAILED",
+              "duration": "1197.8s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-07",
+              "result": "FAILED",
+              "duration": "1185s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "1166.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "1090.5s",
+              "variant": null
+            },
             {
               "date": "2026-07-27",
               "result": "PASSED",
-              "duration": "13.5s",
+              "duration": "344.9s",
               "variant": "80/20"
             },
             {
               "date": "2026-07-27",
               "result": "PASSED",
-              "duration": "14.0s",
+              "duration": "316.7s",
               "variant": "90/10"
             },
             {
@@ -2639,6 +2680,90 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-10",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1218.5s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-10/ecdedea-tender-process.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1192.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-09/ecdedea-tender-process.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1197.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-08/ecdedea-tender-process.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1185s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-07/ecdedea-tender-process.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1166.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/ecdedea-tender-process.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1090.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-05/ecdedea-tender-process.md"
+        }
+      ]
+    },
     {
       "date": "2026-07-27",
       "runs": [
@@ -2665,7 +2790,7 @@
           "planDisplay": "tender-process/ecdedea-tender-process.md (80/20)",
           "variant": "80/20",
           "result": "PASSED",
-          "duration": "13.5s",
+          "duration": "344.9s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-27/ecdedea-tender-process--80-20.md"
         },
@@ -2674,7 +2799,7 @@
           "planDisplay": "tender-process/ecdedea-tender-process.md (90/10)",
           "variant": "90/10",
           "result": "PASSED",
-          "duration": "14.0s",
+          "duration": "316.7s",
           "mode": "playwright-script",
           "reportHref": "test-reports/2026-07-27/ecdedea-tender-process--90-10.md"
         },
@@ -2690,5 +2815,5 @@
       ]
     }
   ],
-  "generated": "2026-07-27T13:27:54.555Z"
+  "generated": "2026-09-11T10:58:57.485Z"
 }
