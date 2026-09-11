@@ -6,8 +6,8 @@
 
 # Test info
 
-- Name: projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts >> TC-01 — Verify user can attach supporting documents
-- Location: projects/Approvals/test-plans/Memo/verify-attach-supporting-documents.spec.ts:41:5
+- Name: projects/Approvals/test-plans/Memo/verify-attachments-next-button-navigation.spec.ts >> TC-01 — Verify next button navigation (Attachments to Routing)
+- Location: projects/Approvals/test-plans/Memo/verify-attachments-next-button-navigation.spec.ts:41:5
 
 # Error details
 
@@ -31,14 +31,13 @@ Call log:
       - <a class="nav-links-renderer" href="/dynamic/Shesha.Workflow/workflows-inbox">Inbox</a> from <div>…</div> subtree intercepts pointer events
     - retrying click action
       - waiting 100ms
-    11 × waiting for element to be visible, enabled and stable
+    12 × waiting for element to be visible, enabled and stable
        - element is visible, enabled and stable
        - scrolling into view if needed
        - done scrolling
        - <a class="nav-links-renderer" href="/dynamic/Shesha.Workflow/workflows-inbox">Inbox</a> from <div>…</div> subtree intercepts pointer events
      - retrying click action
        - waiting 500ms
-    - waiting for element to be visible, enabled and stable
 
 ```
 
@@ -304,8 +303,8 @@ Call log:
 # Test source
 
 ```ts
-  1   | // AUTO-RECORDED from test-plans/Memo/verify-attach-supporting-documents.md
-  2   | // Source: Azure DevOps test plan #100853, suite #100854, test case #102655
+  1   | // AUTO-RECORDED from test-plans/Memo/verify-attachments-next-button-navigation.md
+  2   | // Source: Azure DevOps test plan #100853, suite #100854, test case #102661
   3   | // The .md plan is canonical. AI-repair will patch failing lines in this file.
   4   | // Do not hand-edit unless you are also updating the .md plan.
   5   | 
@@ -345,94 +344,94 @@ Call log:
   38  |   }
   39  | }
   40  | 
-  41  | test('TC-01 — Verify user can attach supporting documents', async ({ page }) => {
-  42  |   // Chains the same long Compose-step flow as #102653, plus an Attachments-step file upload — a
-  43  |   // confirmed passing run took as long as 182s, right up against a 180s timeout. Give it real margin
-  44  |   // rather than racing the environment.
-  45  |   test.setTimeout(300_000);
-  46  | 
-  47  |   // STEP 1: NAVIGATE to login page and log in with valid credentials
-  48  |   await login(page);
-  49  |   await expect(page).not.toHaveURL(/login/);
-  50  | 
-  51  |   // STEP 2: CLICK the "Click to change view mode" control to open the Live/Ready/Latest popover,
-  52  |   // then CLICK the "Latest" option in that popover.
-  53  |   const viewModeControl = page.locator('[title="Click to change view mode"]');
-  54  |   await viewModeControl.click();
-  55  |   await page.getByText('Latest', { exact: true }).click();
-  56  |   await expect(viewModeControl).toContainText(/latest/i, { timeout: 10_000 });
-  57  | 
-  58  |   // STEP 3: CLICK the sidebar Toggle in the top-left corner
-  59  |   const toggle = page.locator('.ant-layout-sider-trigger, [class*="trigger"], [aria-label*="toggle" i], [aria-label*="menu" i]').first();
-  60  |   await toggle.click();
-  61  | 
-  62  |   // STEP 4: CLICK the Workflows dropdown
-  63  |   await page.getByText(/^Workflows?$/i).first().click();
-  64  |   await expect(page.getByText(/^Inbox$/i).first()).toBeVisible({ timeout: 10_000 });
-  65  | 
-  66  |   // STEP 5: CLICK the My Items menu item
-  67  |   // FRAGILE: the Workflows flyout is a hover-triggered Ant Design Menu portalled to the end of <body>;
-  68  |   // clicking through it is flaky. Navigate directly to the same destination its "My Items" link points to.
-  69  |   await page.goto(`${APP_URL}/dynamic/Shesha.Workflow/workflows-my-items`, { waitUntil: 'domcontentloaded', timeout: 30_000 });
-  70  |   await page.waitForLoadState('networkidle');
-  71  |   await expect(page.getByRole('button', { name: /create new/i })).toBeVisible({ timeout: 15_000 });
-  72  | 
-  73  |   // STEP 6: CLICK the Create New button
-  74  |   await clickWithFlyoutRetry(page, page.getByRole('button', { name: /create new/i }));
-  75  | 
-  76  |   // STEP 7: CLICK the New Referrals subtype
-  77  |   await expect(page.getByRole('menuitem', { name: /new referrals?/i })).toBeVisible({ timeout: 10_000 });
-  78  |   await clickWithFlyoutRetry(page, page.getByRole('menuitem', { name: /new referrals?/i }));
-  79  | 
-  80  |   // STEP 8: SNAPSHOT — confirm the Draft Memo page is displayed
-  81  |   await expect(page.getByText(/subject/i).first()).toBeVisible({ timeout: 15_000 });
-  82  | 
-  83  |   // STEP 9: CLICK the CC field and SELECT a signatory
-  84  |   const ccField = page.getByRole('combobox').nth(1);
-  85  |   await ccField.click();
-  86  |   const dropdownPanel = page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden)');
-  87  |   await expect(dropdownPanel).toBeVisible({ timeout: 10_000 });
-  88  |   await expect(page.getByRole('option').first()).toHaveCount(1);
-  89  |   await page.keyboard.press('ArrowDown');
-  90  |   await page.keyboard.press('Enter');
-  91  |   const ccContainer = ccField.locator('xpath=../..');
-  92  |   const signatoryName = (await ccContainer.textContent())?.trim();
-  93  |   expect(signatoryName && signatoryName.length > 0).toBeTruthy();
-  94  | 
-  95  |   // STEP 10: CLICK the Subject text field and populate it with test input
-  96  |   await page.getByRole('textbox').nth(1).fill('Test Subject');
-  97  | 
-  98  |   // STEP 11: CLICK each of the Purpose, Background, Discussion, Financial Implications, Risks and
-  99  |   // Recommendation tabs individually, populating and verifying each one before moving to the next.
-  100 |   const tabNames = ['Purpose', 'Background', 'Discussion', 'Financial Implications', 'Risks', 'Recommendation'];
-  101 |   for (const name of tabNames) {
-  102 |     const tab = page.getByRole('tab', { name: new RegExp(name, 'i') });
-  103 |     for (let attempt = 0; attempt < 3; attempt++) {
-  104 |       await tab.click();
-  105 |       try {
-  106 |         await expect(tab).toHaveAttribute('aria-selected', 'true', { timeout: 4_000 });
-  107 |         break;
-  108 |       } catch (err) {
-  109 |         if (attempt === 2) throw err;
-  110 |         await page.waitForTimeout(500);
-  111 |       }
-  112 |     }
-  113 |     const editor = page.locator('[contenteditable="true"]:visible').first();
-  114 |     await editor.click();
-  115 |     const text = `Test ${name} input`;
-  116 |     await page.keyboard.type(text);
-  117 |     await expect(editor).toContainText(text, { timeout: 10_000 });
-  118 |   }
-  119 | 
-  120 |   // STEP 12: CLICK the Next button
-  121 |   await page.getByRole('button', { name: /next/i }).click();
-  122 | 
-  123 |   // STEP 13: SNAPSHOT — confirm the Attachments step is displayed
-  124 |   // "Attachments" text is always on screen (it's the wizard's step-name row) regardless of which step
-  125 |   // is active — assert on content that only exists once the transition has genuinely happened.
-  126 |   await expect(page.getByRole('button', { name: /back/i })).toBeVisible({ timeout: 15_000 });
-  127 |   await expect(page.getByRole('tab', { name: /purpose/i })).toHaveCount(0);
-  128 | 
-  129 |   // STEP 14: CLICK the "Attach Supporting Documents" option
-  130 |   // There is no "Attach Supporting Documents" text label on this step — the square icon dropzone (an
+  41  | test('TC-01 — Verify next button navigation (Attachments to Routing)', async ({ page }) => {
+  42  |   test.setTimeout(240_000);
+  43  | 
+  44  |   // STEP 1: NAVIGATE to login page and log in with valid credentials
+  45  |   await login(page);
+  46  |   await expect(page).not.toHaveURL(/login/);
+  47  | 
+  48  |   // STEP 2: CLICK the "Click to change view mode" control to open the Live/Ready/Latest popover,
+  49  |   // then CLICK the "Latest" option in that popover.
+  50  |   const viewModeControl = page.locator('[title="Click to change view mode"]');
+  51  |   await viewModeControl.click();
+  52  |   await page.getByText('Latest', { exact: true }).click();
+  53  |   await expect(viewModeControl).toContainText(/latest/i, { timeout: 10_000 });
+  54  | 
+  55  |   // STEP 3: CLICK the sidebar Toggle in the top-left corner
+  56  |   const toggle = page.locator('.ant-layout-sider-trigger, [class*="trigger"], [aria-label*="toggle" i], [aria-label*="menu" i]').first();
+  57  |   await toggle.click();
+  58  | 
+  59  |   // STEP 4: CLICK the Workflows dropdown
+  60  |   await page.getByText(/^Workflows?$/i).first().click();
+  61  |   await expect(page.getByText(/^Inbox$/i).first()).toBeVisible({ timeout: 10_000 });
+  62  | 
+  63  |   // STEP 5: CLICK the My Items menu item
+  64  |   await page.goto(`${APP_URL}/dynamic/Shesha.Workflow/workflows-my-items`, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+  65  |   await page.waitForLoadState('networkidle');
+  66  |   await expect(page.getByRole('button', { name: /create new/i })).toBeVisible({ timeout: 15_000 });
+  67  | 
+  68  |   // STEP 6: CLICK the Create New button
+  69  |   await clickWithFlyoutRetry(page, page.getByRole('button', { name: /create new/i }));
+  70  | 
+  71  |   // STEP 7: CLICK the New Referrals subtype
+  72  |   await expect(page.getByRole('menuitem', { name: /new referrals?/i })).toBeVisible({ timeout: 10_000 });
+  73  |   await clickWithFlyoutRetry(page, page.getByRole('menuitem', { name: /new referrals?/i }));
+  74  | 
+  75  |   // STEP 8: CLICK the CC field and SELECT a signatory
+  76  |   await expect(page.getByText(/subject/i).first()).toBeVisible({ timeout: 15_000 });
+  77  |   const ccField = page.getByRole('combobox').nth(1);
+  78  |   await ccField.click();
+  79  |   const dropdownPanel = page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden)');
+  80  |   await expect(dropdownPanel).toBeVisible({ timeout: 10_000 });
+  81  |   await expect(page.getByRole('option').first()).toHaveCount(1);
+  82  |   await page.keyboard.press('ArrowDown');
+  83  |   await page.keyboard.press('Enter');
+  84  |   const ccContainer = ccField.locator('xpath=../..');
+  85  |   const signatoryName = (await ccContainer.textContent())?.trim();
+  86  |   expect(signatoryName && signatoryName.length > 0).toBeTruthy();
+  87  | 
+  88  |   // STEP 9: CLICK the Subject text field and populate it with test input
+  89  |   await page.getByRole('textbox').nth(1).fill('Test Subject');
+  90  | 
+  91  |   // STEP 10: CLICK each of the Purpose, Background, Discussion, Financial Implications, Risks and
+  92  |   // Recommendation tabs individually, populating and verifying each one before moving to the next.
+  93  |   const tabNames = ['Purpose', 'Background', 'Discussion', 'Financial Implications', 'Risks', 'Recommendation'];
+  94  |   for (const name of tabNames) {
+  95  |     const tab = page.getByRole('tab', { name: new RegExp(name, 'i') });
+  96  |     for (let attempt = 0; attempt < 3; attempt++) {
+  97  |       await tab.click();
+  98  |       try {
+  99  |         await expect(tab).toHaveAttribute('aria-selected', 'true', { timeout: 4_000 });
+  100 |         break;
+  101 |       } catch (err) {
+  102 |         if (attempt === 2) throw err;
+  103 |         await page.waitForTimeout(500);
+  104 |       }
+  105 |     }
+  106 |     const editor = page.locator('[contenteditable="true"]:visible').first();
+  107 |     await editor.click();
+  108 |     const text = `Test ${name} input`;
+  109 |     await page.keyboard.type(text);
+  110 |     await expect(editor).toContainText(text, { timeout: 10_000 });
+  111 |   }
+  112 | 
+  113 |   // STEP 11: CLICK the Next button (Compose -> Attachments)
+  114 |   await page.getByRole('button', { name: /next/i }).click();
+  115 |   await expect(page.getByRole('button', { name: /back/i })).toBeVisible({ timeout: 15_000 });
+  116 |   await expect(page.getByRole('tab', { name: /purpose/i })).toHaveCount(0);
+  117 | 
+  118 |   // STEP 12: CLICK the Next button again (Attachments -> Routing)
+  119 |   await page.getByRole('button', { name: /next/i }).click();
+  120 | 
+  121 |   // ASSERT (BLOCKING) Clicking Next again navigates the wizard from Attachments to the Routing step.
+  122 |   // The Routing step replaces the Next button entirely with "Submit" (disabled until an approver is
+  123 |   // added) and introduces a "Select approver" control with a "No Approvers" table — none of which exist
+  124 |   // on Compose or Attachments — so these are genuine, unambiguous signals of the transition.
+  125 |   await expect(page.getByRole('button', { name: /^next$/i })).toHaveCount(0, { timeout: 15_000 });
+  126 |   await expect(page.getByRole('button', { name: /submit/i })).toBeVisible();
+  127 |   await expect(page.getByText(/select approver/i).first()).toBeVisible();
+  128 |   await expect(page.getByText(/no approvers/i).first()).toBeVisible();
+  129 | });
+  130 | 
 ```

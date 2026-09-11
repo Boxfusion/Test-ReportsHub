@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 251,
-    "last7Runs": 218,
+    "totalRuns": 252,
+    "last7Runs": 219,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 35,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 8,
+        "runs": 9,
         "passed": 0,
-        "failed": 8,
+        "failed": 9,
         "partial": 0
       },
       {
@@ -3224,23 +3224,24 @@
           "spec": "test-plans/Memo/verify-attachments-next-button-navigation.spec.ts",
           "specHref": "test-plans/Memo/verify-attachments-next-button-navigation.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "48.5s",
+            "duration": "47.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-attachments-next-button-navigation.md"
+            "reportHref": "test-reports/2026-09-11/verify-attachments-next-button-navigation.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "47.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -3567,7 +3568,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4791,7 +4792,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4928,6 +4929,15 @@
           "duration": "49.4s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/verify-attach-supporting-documents.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-attachments-next-button-navigation.md",
+          "planDisplay": "Memo/verify-attachments-next-button-navigation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.9s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/verify-attachments-next-button-navigation.md"
         }
       ]
     },
@@ -7174,5 +7184,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T09:35:18.724Z"
+  "generated": "2026-09-11T09:38:14.870Z"
 }
