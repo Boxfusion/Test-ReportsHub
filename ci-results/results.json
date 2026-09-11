@@ -4,7 +4,7 @@
       "/opt/hostedtoolcache/node/20.20.2/x64/bin/node",
       "/home/runner/work/Test-ReportsHub/Test-ReportsHub/node_modules/.bin/playwright",
       "test",
-      "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
+      "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
       "--config=playwright.config.ci.ts"
     ],
     "configFile": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/playwright.config.ci.ts",
@@ -20,24 +20,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/1e74ff02def0f18c11d8fdbe64373aa7b6c7e038",
-        "commitHash": "1e74ff02def0f18c11d8fdbe64373aa7b6c7e038",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34587651521"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/cf6c8effbf9564eaa03fefb72d31713c32e5f52c",
+        "commitHash": "cf6c8effbf9564eaa03fefb72d31713c32e5f52c",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34588144858"
       },
       "gitCommit": {
-        "shortHash": "1e74ff0",
-        "hash": "1e74ff02def0f18c11d8fdbe64373aa7b6c7e038",
-        "subject": "ci: re-ran Approvals / test-plans/Memo/verify-comments-mandatory-for-negative-actions.md → failure",
-        "body": "ci: re-ran Approvals / test-plans/Memo/verify-comments-mandatory-for-negative-actions.md → failure\n",
+        "shortHash": "cf6c8ef",
+        "hash": "cf6c8effbf9564eaa03fefb72d31713c32e5f52c",
+        "subject": "ci: re-ran eRecruitment / test-plans/Alerts/verify-add-alert-daily.md → success",
+        "body": "ci: re-ran eRecruitment / test-plans/Alerts/verify-add-alert-daily.md → success\n",
         "author": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789120652000
+          "time": 1789121509000
         },
         "committer": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789120652000
+          "time": 1789121509000
         },
         "branch": "main"
       },
@@ -51,24 +51,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/1e74ff02def0f18c11d8fdbe64373aa7b6c7e038",
-            "commitHash": "1e74ff02def0f18c11d8fdbe64373aa7b6c7e038",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34587651521"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/cf6c8effbf9564eaa03fefb72d31713c32e5f52c",
+            "commitHash": "cf6c8effbf9564eaa03fefb72d31713c32e5f52c",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34588144858"
           },
           "gitCommit": {
-            "shortHash": "1e74ff0",
-            "hash": "1e74ff02def0f18c11d8fdbe64373aa7b6c7e038",
-            "subject": "ci: re-ran Approvals / test-plans/Memo/verify-comments-mandatory-for-negative-actions.md → failure",
-            "body": "ci: re-ran Approvals / test-plans/Memo/verify-comments-mandatory-for-negative-actions.md → failure\n",
+            "shortHash": "cf6c8ef",
+            "hash": "cf6c8effbf9564eaa03fefb72d31713c32e5f52c",
+            "subject": "ci: re-ran eRecruitment / test-plans/Alerts/verify-add-alert-daily.md → success",
+            "body": "ci: re-ran eRecruitment / test-plans/Alerts/verify-add-alert-daily.md → success\n",
             "author": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789120652000
+              "time": 1789121509000
             },
             "committer": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789120652000
+              "time": 1789121509000
             },
             "branch": "main"
           },
@@ -117,16 +117,16 @@
   },
   "suites": [
     {
-      "title": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-      "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
+      "title": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+      "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "ALERTS-106357 — Verify Add Alert (Daily)",
-          "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-          "line": 97,
+          "title": "ALERTS-106343 — Verify Add an Alert (Weekly)",
+          "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+          "line": 107,
           "column": 6,
           "specs": [
             {
@@ -140,8 +140,8 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                        "line": 97,
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
                         "column": 6
                       }
                     }
@@ -154,18 +154,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 19975,
+                      "duration": 16248,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T10:08:30.571Z",
+                      "startTime": "2026-09-11T10:14:08.966Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                            "line": 97,
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
                             "column": 6
                           }
                         }
@@ -176,9 +176,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "491b61410381e49f88e0-b131e22a91eed73813d0",
-              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-              "line": 100,
+              "id": "b8969d4576bc1518b7b3-3762c110f4acbb5a9ce1",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 110,
               "column": 7
             },
             {
@@ -192,8 +192,8 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                        "line": 97,
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
                         "column": 6
                       }
                     }
@@ -206,18 +206,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 18525,
+                      "duration": 17573,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T10:08:50.787Z",
+                      "startTime": "2026-09-11T10:14:26.062Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                            "line": 97,
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
                             "column": 6
                           }
                         }
@@ -228,9 +228,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "491b61410381e49f88e0-4b8c599158a128c17594",
-              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-              "line": 106,
+              "id": "b8969d4576bc1518b7b3-bf6c45864415f43789ae",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 116,
               "column": 7
             },
             {
@@ -244,8 +244,8 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                        "line": 97,
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
                         "column": 6
                       }
                     }
@@ -258,18 +258,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 17758,
+                      "duration": 17592,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T10:09:09.335Z",
+                      "startTime": "2026-09-11T10:14:43.650Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                            "line": 97,
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
                             "column": 6
                           }
                         }
@@ -280,9 +280,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "491b61410381e49f88e0-a8ed1493c402fbaa9783",
-              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-              "line": 112,
+              "id": "b8969d4576bc1518b7b3-b0c9adde532d4de7344e",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 122,
               "column": 7
             },
             {
@@ -296,8 +296,8 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                        "line": 97,
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
                         "column": 6
                       }
                     }
@@ -310,18 +310,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 20735,
+                      "duration": 17692,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T10:09:27.113Z",
+                      "startTime": "2026-09-11T10:15:01.259Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                            "line": 97,
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
                             "column": 6
                           }
                         }
@@ -332,9 +332,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "491b61410381e49f88e0-5b7d80f185122bbcf5a8",
-              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-              "line": 117,
+              "id": "b8969d4576bc1518b7b3-ebace73e9536ffd51263",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 127,
               "column": 7
             },
             {
@@ -348,8 +348,8 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                        "line": 97,
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
                         "column": 6
                       }
                     }
@@ -362,18 +362,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 18225,
+                      "duration": 17406,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T10:09:47.866Z",
+                      "startTime": "2026-09-11T10:15:18.966Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                            "line": 97,
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
                             "column": 6
                           }
                         }
@@ -384,9 +384,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "491b61410381e49f88e0-0185b37a65dfe1dd47ee",
-              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-              "line": 125,
+              "id": "b8969d4576bc1518b7b3-1197e00218c2830ad8f0",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 135,
               "column": 7
             },
             {
@@ -400,8 +400,8 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                        "line": 97,
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
                         "column": 6
                       }
                     }
@@ -414,18 +414,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 20718,
+                      "duration": 20540,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T10:10:06.108Z",
+                      "startTime": "2026-09-11T10:15:36.384Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                            "line": 97,
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
                             "column": 6
                           }
                         }
@@ -436,9 +436,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "491b61410381e49f88e0-a629f863d78823f35287",
-              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-              "line": 133,
+              "id": "b8969d4576bc1518b7b3-6891e954a293cb5dc406",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 143,
               "column": 7
             },
             {
@@ -452,8 +452,8 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                        "line": 97,
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
                         "column": 6
                       }
                     }
@@ -466,18 +466,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 19386,
+                      "duration": 17742,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T10:10:26.844Z",
+                      "startTime": "2026-09-11T10:15:56.934Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                            "line": 97,
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
                             "column": 6
                           }
                         }
@@ -488,9 +488,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "491b61410381e49f88e0-b34e4ce93898baea4251",
-              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-              "line": 141,
+              "id": "b8969d4576bc1518b7b3-a722666a78afee21e7b0",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 151,
               "column": 7
             },
             {
@@ -504,8 +504,8 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                        "line": 97,
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
                         "column": 6
                       }
                     }
@@ -518,18 +518,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 19212,
+                      "duration": 18315,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T10:10:46.249Z",
+                      "startTime": "2026-09-11T10:16:14.687Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                            "line": 97,
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
                             "column": 6
                           }
                         }
@@ -540,13 +540,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "491b61410381e49f88e0-a9bd2b0d598c810f6e84",
-              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-              "line": 149,
+              "id": "b8969d4576bc1518b7b3-dd4502f41b0c75586bbc",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 159,
               "column": 7
             },
             {
-              "title": "TC-09: Click Daily radio button",
+              "title": "TC-09: Click Weekly radio button",
               "ok": true,
               "tags": [],
               "tests": [
@@ -556,8 +556,8 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                        "line": 97,
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
                         "column": 6
                       }
                     }
@@ -570,18 +570,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 19896,
+                      "duration": 18264,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T10:11:05.479Z",
+                      "startTime": "2026-09-11T10:16:33.012Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                            "line": 97,
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
                             "column": 6
                           }
                         }
@@ -592,13 +592,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "491b61410381e49f88e0-186a391772e2e4d07a89",
-              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-              "line": 158,
+              "id": "b8969d4576bc1518b7b3-a6f0044d8b34ef3267ae",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 168,
               "column": 7
             },
             {
-              "title": "TC-10: Click OK button",
+              "title": "TC-10: Click Day Of The Week dropdown",
               "ok": true,
               "tags": [],
               "tests": [
@@ -608,8 +608,8 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                        "line": 97,
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
                         "column": 6
                       }
                     }
@@ -622,18 +622,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 22347,
+                      "duration": 18712,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T10:11:25.391Z",
+                      "startTime": "2026-09-11T10:16:51.289Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-                            "line": 97,
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
                             "column": 6
                           }
                         }
@@ -644,9 +644,113 @@
                   "status": "expected"
                 }
               ],
-              "id": "491b61410381e49f88e0-16c8a7f1d356127c4824",
-              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts",
-              "line": 166,
+              "id": "b8969d4576bc1518b7b3-782e411b93f43bdacbc6",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 177,
+              "column": 7
+            },
+            {
+              "title": "TC-11: Select a day, e.g. Friday",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 19325,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T10:17:10.014Z",
+                      "annotations": [
+                        {
+                          "type": "serial",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
+                            "column": 6
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8969d4576bc1518b7b3-23a40f05c6246615db03",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 187,
+              "column": 7
+            },
+            {
+              "title": "TC-12: Click OK button",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                        "line": 107,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 22851,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T10:17:29.352Z",
+                      "annotations": [
+                        {
+                          "type": "serial",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+                            "line": 107,
+                            "column": 6
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8969d4576bc1518b7b3-5a09da5e68243c422991",
+              "file": "projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts",
+              "line": 197,
               "column": 7
             }
           ]
@@ -656,9 +760,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-11T10:08:29.892Z",
-    "duration": 197982.05200000003,
-    "expected": 10,
+    "startTime": "2026-09-11T10:14:08.445Z",
+    "duration": 223874.2,
+    "expected": 12,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

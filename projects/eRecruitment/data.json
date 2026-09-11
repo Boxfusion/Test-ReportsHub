@@ -22,13 +22,13 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 121,
-    "totalRuns": 128,
-    "last7Runs": 1,
-    "last7Pass": 1,
+    "totalRuns": 129,
+    "last7Runs": 2,
+    "last7Pass": 2,
     "last7PassPct": 100,
     "failingFlows": 4,
-    "passingFlows": 109,
-    "partialFlows": 7,
+    "passingFlows": 110,
+    "partialFlows": 6,
     "neverFlows": 2
   },
   "heatmap": {
@@ -2571,8 +2571,8 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 1,
-        "passed": 1,
+        "runs": 2,
+        "passed": 2,
         "failed": 0,
         "partial": 0
       },
@@ -2760,7 +2760,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3086,7 +3086,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3508,7 +3508,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3636,7 +3636,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3796,7 +3796,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4020,7 +4020,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4664,7 +4664,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4696,7 +4696,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -5054,7 +5054,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -5283,23 +5283,24 @@
           "spec": "test-plans/Alerts/verify-add-alert-weekly.spec.ts",
           "specHref": "test-plans/Alerts/verify-add-alert-weekly.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "partial",
-          "status": "PARTIAL",
+          "badges": [],
+          "rowStatus": "passing",
+          "status": "PASSED",
           "last": {
-            "date": "2026-07-30",
-            "result": "PARTIAL",
-            "duration": "989.3s",
+            "date": "2026-09-11",
+            "result": "PASSED",
+            "duration": "223.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-07-30/verify-add-alert-weekly.md"
+            "reportHref": "test-reports/2026-09-11/verify-add-alert-weekly.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "PASSED",
+              "duration": "223.9s",
+              "variant": null
+            },
             {
               "date": "2026-07-30",
               "result": "PARTIAL",
@@ -5357,7 +5358,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -5582,7 +5583,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -5806,7 +5807,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6484,7 +6485,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6522,6 +6523,15 @@
           "duration": "198s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/verify-add-alert-daily.md"
+        },
+        {
+          "plan": "test-plans/Alerts/verify-add-alert-weekly.md",
+          "planDisplay": "Alerts/verify-add-alert-weekly.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "223.9s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/verify-add-alert-weekly.md"
         }
       ]
     },
@@ -7704,5 +7714,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T10:11:48.609Z"
+  "generated": "2026-09-11T10:17:52.944Z"
 }

@@ -1,60 +1,72 @@
-<testsuites id="" name="" tests="10" failures="0" skipped="0" errors="0" time="197.98205200000004">
-<testsuite name="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" timestamp="2026-09-11T10:08:30.081Z" hostname="" tests="10" failures="0" skipped="0" time="196.777" errors="0">
-<testcase name="ALERTS-106357 — Verify Add Alert (Daily) › TC-01: Login as Fred" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" time="19.975">
+<testsuites id="" name="" tests="12" failures="0" skipped="0" errors="0" time="223.8742">
+<testsuite name="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" timestamp="2026-09-11T10:14:08.590Z" hostname="" tests="12" failures="0" skipped="0" time="222.26" errors="0">
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-01: Login as Fred" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="16.248">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106357 — Verify Add Alert (Daily) › TC-02: Click on Alerts menu item" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" time="18.525">
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-02: Click on Alerts menu item" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="17.573">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106357 — Verify Add Alert (Daily) › TC-03: Click Add Alert button" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" time="17.758">
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-03: Click Add Alert button" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="17.592">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106357 — Verify Add Alert (Daily) › TC-04: Populate Job Title/Keywords" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" time="20.735">
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-04: Populate Job Title/Keywords" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="17.692">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106357 — Verify Add Alert (Daily) › TC-05: Click Location dropdown" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" time="18.225">
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-05: Click Location dropdown" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="17.406">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106357 — Verify Add Alert (Daily) › TC-06: Select a location, e.g. Head Office" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" time="20.718">
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-06: Select a location, e.g. Head Office" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="20.54">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106357 — Verify Add Alert (Daily) › TC-07: Populate Min Salary" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" time="19.386">
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-07: Populate Min Salary" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="17.742">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106357 — Verify Add Alert (Daily) › TC-08: Populate Max Salary" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" time="19.212">
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-08: Populate Max Salary" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="18.315">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106357 — Verify Add Alert (Daily) › TC-09: Click Daily radio button" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" time="19.896">
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-09: Click Weekly radio button" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="18.264">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106357 — Verify Add Alert (Daily) › TC-10: Click OK button" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-daily.spec.ts" time="22.347">
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-10: Click Day Of The Week dropdown" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="18.712">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-11: Select a day, e.g. Friday" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="19.325">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="ALERTS-106343 — Verify Add an Alert (Weekly) › TC-12: Click OK button" classname="projects/eRecruitment/test-plans/Alerts/verify-add-alert-weekly.spec.ts" time="22.851">
 <properties>
 <property name="serial" value="">
 </property>
