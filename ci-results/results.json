@@ -4,7 +4,7 @@
       "/opt/hostedtoolcache/node/20.20.2/x64/bin/node",
       "/home/runner/work/Test-ReportsHub/Test-ReportsHub/node_modules/.bin/playwright",
       "test",
-      "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+      "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
       "--config=playwright.config.ci.ts"
     ],
     "configFile": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/playwright.config.ci.ts",
@@ -20,24 +20,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/5b5e80990946d8dae12f085af4140b714756c1fe",
-        "commitHash": "5b5e80990946d8dae12f085af4140b714756c1fe",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34579119439"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/6be73bbb0117b8c00ad6674f0acebe4b201e74bf",
+        "commitHash": "6be73bbb0117b8c00ad6674f0acebe4b201e74bf",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34579597467"
       },
       "gitCommit": {
-        "shortHash": "5b5e809",
-        "hash": "5b5e80990946d8dae12f085af4140b714756c1fe",
-        "subject": "ci: re-ran DHA-Invoice-Tracking / test-plans/invoice-process/bas.md → failure",
-        "body": "ci: re-ran DHA-Invoice-Tracking / test-plans/invoice-process/bas.md → failure\n",
+        "shortHash": "6be73bb",
+        "hash": "6be73bbb0117b8c00ad6674f0acebe4b201e74bf",
+        "subject": "ci: re-ran PD-PMDS / test-plans/contracting/contracting-lifecycle.md → failure",
+        "body": "ci: re-ran PD-PMDS / test-plans/contracting/contracting-lifecycle.md → failure\n",
         "author": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789114512000
+          "time": 1789115222000
         },
         "committer": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789114512000
+          "time": 1789115222000
         },
         "branch": "main"
       },
@@ -51,24 +51,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/5b5e80990946d8dae12f085af4140b714756c1fe",
-            "commitHash": "5b5e80990946d8dae12f085af4140b714756c1fe",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34579119439"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/6be73bbb0117b8c00ad6674f0acebe4b201e74bf",
+            "commitHash": "6be73bbb0117b8c00ad6674f0acebe4b201e74bf",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34579597467"
           },
           "gitCommit": {
-            "shortHash": "5b5e809",
-            "hash": "5b5e80990946d8dae12f085af4140b714756c1fe",
-            "subject": "ci: re-ran DHA-Invoice-Tracking / test-plans/invoice-process/bas.md → failure",
-            "body": "ci: re-ran DHA-Invoice-Tracking / test-plans/invoice-process/bas.md → failure\n",
+            "shortHash": "6be73bb",
+            "hash": "6be73bbb0117b8c00ad6674f0acebe4b201e74bf",
+            "subject": "ci: re-ran PD-PMDS / test-plans/contracting/contracting-lifecycle.md → failure",
+            "body": "ci: re-ran PD-PMDS / test-plans/contracting/contracting-lifecycle.md → failure\n",
             "author": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789114512000
+              "time": 1789115222000
             },
             "committer": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789114512000
+              "time": 1789115222000
             },
             "branch": "main"
           },
@@ -117,20 +117,20 @@
   },
   "suites": [
     {
-      "title": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-      "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+      "title": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+      "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Contracting — admin process state",
-          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-          "line": 32,
+          "title": "TC-00 — Contracting is opened for the full population",
+          "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "line": 40,
           "column": 6,
           "specs": [
             {
-              "title": "TC-01 — Contracting stage is open with the full employee population in progress",
+              "title": "TC-00 — admin verifies the population is fully in progress",
               "ok": false,
               "tags": [],
               "tests": [
@@ -140,7 +140,7 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
                         "line": 0,
                         "column": 0
                       }
@@ -154,25 +154,25 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 37010,
+                      "duration": 34946,
                       "error": {
-                        "message": "Error: Contracting stage status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"IN PROGRESS\"\u001b[39m\nReceived: \u001b[31m\"NOT STARTED\"\u001b[39m",
-                        "stack": "Error: Contracting stage status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"IN PROGRESS\"\u001b[39m\nReceived: \u001b[31m\"NOT STARTED\"\u001b[39m\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts:46:50",
+                        "message": "Error: Contracting status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"IN PROGRESS\"\u001b[39m\nReceived: \u001b[31m\"NOT STARTED\"\u001b[39m",
+                        "stack": "Error: Contracting status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"IN PROGRESS\"\u001b[39m\nReceived: \u001b[31m\"NOT STARTED\"\u001b[39m\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts:52:44",
                         "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                          "column": 50,
-                          "line": 46
+                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+                          "column": 44,
+                          "line": 52
                         },
-                        "snippet": "\u001b[0m \u001b[90m 44 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'Contracting counters:'\u001b[39m\u001b[33m,\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(c))\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[90m// STEP 3: ASSERT Contracting is IN PROGRESS (BLOCKING)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     expect(c\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m'Contracting stage status'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'IN PROGRESS'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m     \u001b[90m// STEP 4: ASSERT nobody is left Not Started\u001b[39m\n \u001b[90m 48 |\u001b[39m     expect(c\u001b[33m.\u001b[39mnotStarted\u001b[33m,\u001b[39m \u001b[32m'Not Started count'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 49 |\u001b[39m     \u001b[90m// STEP 5: ASSERT the whole population is in progress\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 50 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'Contracting counters:'\u001b[39m\u001b[33m,\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(c))\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m     \u001b[90m// STEP 4: ASSERT IN PROGRESS, 0 Not Started (BLOCKING)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m     expect(c\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m'Contracting status'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'IN PROGRESS'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m     expect(c\u001b[33m.\u001b[39mnotStarted\u001b[33m,\u001b[39m \u001b[32m'Not Started'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 54 |\u001b[39m     expect(c\u001b[33m.\u001b[39minProgress \u001b[33m+\u001b[39m c\u001b[33m.\u001b[39mcompleted)\u001b[33m.\u001b[39mtoBe(c\u001b[33m.\u001b[39mtotal)\u001b[33m;\u001b[39m\n \u001b[90m 55 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                            "column": 50,
-                            "line": 46
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+                            "column": 44,
+                            "line": 52
                           },
-                          "message": "Error: Contracting stage status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"IN PROGRESS\"\u001b[39m\nReceived: \u001b[31m\"NOT STARTED\"\u001b[39m\n\n  44 |     console.log('Contracting counters:', JSON.stringify(c));\n  45 |     // STEP 3: ASSERT Contracting is IN PROGRESS (BLOCKING)\n> 46 |     expect(c.status, 'Contracting stage status').toBe('IN PROGRESS');\n     |                                                  ^\n  47 |     // STEP 4: ASSERT nobody is left Not Started\n  48 |     expect(c.notStarted, 'Not Started count').toBe(0);\n  49 |     // STEP 5: ASSERT the whole population is in progress\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts:46:50"
+                          "message": "Error: Contracting status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"IN PROGRESS\"\u001b[39m\nReceived: \u001b[31m\"NOT STARTED\"\u001b[39m\n\n  50 |     console.log('Contracting counters:', JSON.stringify(c));\n  51 |     // STEP 4: ASSERT IN PROGRESS, 0 Not Started (BLOCKING)\n> 52 |     expect(c.status, 'Contracting status').toBe('IN PROGRESS');\n     |                                            ^\n  53 |     expect(c.notStarted, 'Not Started').toBe(0);\n  54 |     expect(c.inProgress + c.completed).toBe(c.total);\n  55 |   });\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts:52:44"
                         }
                       ],
                       "stdout": [
@@ -182,12 +182,12 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T08:26:19.620Z",
+                      "startTime": "2026-09-11T08:32:01.718Z",
                       "annotations": [
                         {
                           "type": "serial",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
                             "line": 0,
                             "column": 0
                           }
@@ -197,49 +197,151 @@
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/test-failed-1.png"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/test-failed-1.png"
                         },
                         {
                           "name": "error-context",
                           "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/error-context.md"
                         },
                         {
                           "name": "error-context",
                           "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/error-context.md"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/trace.zip"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/trace.zip"
                         }
                       ],
                       "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "column": 50,
-                        "line": 46
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+                        "column": 44,
+                        "line": 52
                       }
                     }
                   ],
                   "status": "unexpected"
                 }
               ],
-              "id": "6a702332525bc31b1b42-7b46cb736066ffc2ca8c",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 39,
+              "id": "470f265582c4520604ba-72345c13eecb9fee334b",
+              "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+              "line": 45,
               "column": 7
             }
           ]
         },
         {
-          "title": "Contracting — draft wizard validation and submit (Sanele Sithole)",
-          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-          "line": 56,
+          "title": "TC-01 — Positive 1 (Simmy Mthalane) — plain happy path",
+          "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "line": 60,
+          "column": 8,
+          "specs": [
+            {
+              "title": "TC-01 — Positive 1 (Simmy Mthalane) — draft, submit, sign, verify",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:32:37.889Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "470f265582c4520604ba-4adf525d2e86697365d3",
+              "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+              "line": 65,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "TC-02 — Positive 2 (Tony Dayimane) — plain happy path",
+          "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "line": 60,
+          "column": 8,
+          "specs": [
+            {
+              "title": "TC-02 — Positive 2 (Tony Dayimane) — draft, submit, sign, verify",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 900000,
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:32:37.890Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "470f265582c4520604ba-ddba79157962d1901db5",
+              "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+              "line": 65,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "TC-03 — Negative 1: Jabu Hadebe, resolved dispute",
+          "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "line": 99,
           "column": 6,
           "specs": [
             {
-              "title": "TC-02 — Confirm Details defaults the supervisor and mediator from the reporting line",
+              "title": "TC-03 — refer, mediator resolves, employee updates, supervisor approves, HR verifies",
               "ok": true,
               "tags": [],
               "tests": [
@@ -249,7 +351,7 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
                         "line": 0,
                         "column": 0
                       }
@@ -268,7 +370,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.538Z",
+                      "startTime": "2026-09-11T08:32:37.890Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -276,365 +378,21 @@
                   "status": "skipped"
                 }
               ],
-              "id": "6a702332525bc31b1b42-ea7daf1091b946fc0b06",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 68,
-              "column": 7
-            },
-            {
-              "title": "TC-03 — NEGATIVE: Next stays disabled while the KRA weights total less than 100%",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.538Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-8bce704eba56b66fd5ca",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 84,
-              "column": 7
-            },
-            {
-              "title": "TC-04 — NEGATIVE: Next stays disabled at 100% until the minimum 4 GAFs are checked",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.538Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-15db17e7811f6d382e92",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 97,
-              "column": 7
-            },
-            {
-              "title": "TC-05 — Scoring completes once 4 KRAs total 100% and 4 GAFs are checked",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.538Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-acfa22a08f5ef8540f6a",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 112,
-              "column": 7
-            },
-            {
-              "title": "TC-06 — NEGATIVE: the workplan cannot be left with fewer than 2 key activities per KRA",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.538Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-d63940c2ee008aeb2927",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 125,
-              "column": 7
-            },
-            {
-              "title": "TC-07 — Workplan advances once every KRA has 2 key activities",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.538Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-91de7833e8270fbc2b27",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 153,
-              "column": 7
-            },
-            {
-              "title": "TC-08 — A development area can be added to the Personal Development Plan",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-9c4a657cef58b31d984c",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 171,
-              "column": 7
-            },
-            {
-              "title": "TC-09 — NEGATIVE: Submit is disabled until both attestations are confirmed",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-5e836d0b32069ae5ef27",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 185,
-              "column": 7
-            },
-            {
-              "title": "TC-10 — The employee submits the performance agreement for supervisor review",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-d0c7f809ba342915b158",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 198,
+              "id": "470f265582c4520604ba-6332ecfe24857aaaeddf",
+              "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+              "line": 100,
               "column": 7
             }
           ]
         },
         {
-          "title": "Contracting — supervisor send back and re-submit (Sanele Sithole)",
-          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-          "line": 216,
+          "title": "TC-04 — Negative 2: Sanele Sithole, escalated dispute resolved at tier 2",
+          "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "line": 151,
           "column": 6,
           "specs": [
             {
-              "title": "TC-11 — NEGATIVE: Refer for Dispute cannot be confirmed without a reason",
+              "title": "TC-04 — refer, mediator not-resolved, tier-2 resolves, updates, HR verifies",
               "ok": true,
               "tags": [],
               "tests": [
@@ -644,7 +402,7 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
                         "line": 0,
                         "column": 0
                       }
@@ -663,7 +421,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "startTime": "2026-09-11T08:32:37.890Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -671,193 +429,21 @@
                   "status": "skipped"
                 }
               ],
-              "id": "6a702332525bc31b1b42-12d9945d8bb7f64c8a7f",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 225,
-              "column": 7
-            },
-            {
-              "title": "TC-12 — The supervisor sends the agreement back to the employee",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-695229763951b49fde99",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 251,
-              "column": 7
-            },
-            {
-              "title": "TC-13 — The employee receives the returned agreement and re-submits it",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-a1f0595c827041d65edf",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 261,
-              "column": 7
-            },
-            {
-              "title": "TC-14 — The supervisor signs the re-submitted agreement",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-731c03f1550538a699f5",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 282,
-              "column": 7
-            },
-            {
-              "title": "TC-15 — NEGATIVE: HR cannot verify until the confirmation is ticked, then verification completes",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-4fe3453d3ebc8b811fd0",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 301,
+              "id": "470f265582c4520604ba-ef410c360924c9c8a7bb",
+              "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+              "line": 152,
               "column": 7
             }
           ]
         },
         {
-          "title": "Contracting — happy path to Generate PERSAL Input (Simmy Mthalane)",
-          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-          "line": 330,
+          "title": "TC-05 — Negative 3: Adam Apple, escalated dispute unresolved at both tiers",
+          "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "line": 211,
           "column": 6,
           "specs": [
             {
-              "title": "TC-16 — The employee drafts and submits the performance agreement",
+              "title": "TC-05 — refer, mediator not-resolved, tier-2 not-resolved, terminal",
               "ok": true,
               "tags": [],
               "tests": [
@@ -867,7 +453,7 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
                         "line": 0,
                         "column": 0
                       }
@@ -886,7 +472,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
+                      "startTime": "2026-09-11T08:32:37.890Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -894,107 +480,21 @@
                   "status": "skipped"
                 }
               ],
-              "id": "6a702332525bc31b1b42-2e2ee870a1a577190004",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 337,
-              "column": 7
-            },
-            {
-              "title": "TC-17 — The supervisor signs the agreement without changes",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-bd3d13b214529e97b7d3",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 354,
-              "column": 7
-            },
-            {
-              "title": "TC-18 — HR verifies the agreement and it reaches Generate PERSAL Input",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.539Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-930261239a84393eb5a3",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 372,
+              "id": "470f265582c4520604ba-0aeee03c615394cb9432",
+              "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+              "line": 212,
               "column": 7
             }
           ]
         },
         {
-          "title": "Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple)",
-          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-          "line": 393,
+          "title": "TC-06 — Contracting dashboard counts all 5 scenarios as completed",
+          "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "line": 263,
           "column": 6,
           "specs": [
             {
-              "title": "TC-19 — Jabu submits an agreement the supervisor will dispute",
+              "title": "TC-06 — final recount",
               "ok": true,
               "tags": [],
               "tests": [
@@ -1004,7 +504,7 @@
                     {
                       "type": "serial",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
                         "line": 0,
                         "column": 0
                       }
@@ -1023,7 +523,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.540Z",
+                      "startTime": "2026-09-11T08:32:37.891Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1031,361 +531,9 @@
                   "status": "skipped"
                 }
               ],
-              "id": "6a702332525bc31b1b42-f8f92e43d7cd886857eb",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 400,
-              "column": 7
-            },
-            {
-              "title": "TC-20 — The supervisor refers Jabu's agreement for mediation",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.540Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-de5e31d2b8660585d3a3",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 412,
-              "column": 7
-            },
-            {
-              "title": "TC-21 — Adam submits and his agreement is also referred for mediation",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.540Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-061256cf854df9bd5eaa",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 428,
-              "column": 7
-            },
-            {
-              "title": "TC-22 — Both disputes are routed to the mediator",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.540Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-96b0abd111b15893f056",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 449,
-              "column": 7
-            },
-            {
-              "title": "TC-23 — The mediator records the disagreement as resolved and it returns to the employee",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.540Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-7237d6fadb327f009230",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 461,
-              "column": 7
-            },
-            {
-              "title": "TC-24 — The employee updates the agreement with the dispute outcome and it completes",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.540Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-ebca717b538afc88cebb",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 476,
-              "column": 7
-            },
-            {
-              "title": "TC-25 — NEGATIVE: an unresolved mediation requires both a comment and an attachment",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.540Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-391c5fc8e0e7eb6d88da",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 523,
-              "column": 7
-            },
-            {
-              "title": "TC-26 — An unresolved dispute parks the agreement with no downstream task",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.540Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-3b9bbda64dfda78ca2af",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 552,
-              "column": 7
-            }
-          ]
-        },
-        {
-          "title": "Contracting — dashboard reflects the completed agreements",
-          "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-          "line": 577,
-          "column": 6,
-          "specs": [
-            {
-              "title": "TC-27 — The Contracting dashboard counts the agreements driven to completion",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 900000,
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T08:27:01.540Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6a702332525bc31b1b42-57a43fd956ad13bceb46",
-              "file": "projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts",
-              "line": 584,
+              "id": "470f265582c4520604ba-6318fe42f5effa30eb7e",
+              "file": "projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+              "line": 264,
               "column": 7
             }
           ]
@@ -1395,10 +543,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-11T08:26:18.942Z",
-    "duration": 42617.445999999996,
+    "startTime": "2026-09-11T08:32:00.865Z",
+    "duration": 37050.601,
     "expected": 0,
-    "skipped": 26,
+    "skipped": 6,
     "unexpected": 1,
     "flaky": 0
   }

@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="27" failures="1" skipped="26" errors="0" time="42.617445999999994">
-<testsuite name="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts" timestamp="2026-09-11T08:26:19.243Z" hostname="" tests="27" failures="1" skipped="26" time="37.01" errors="0">
-<testcase name="Contracting — admin process state › TC-01 — Contracting stage is open with the full employee population in progress" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts" time="37.01">
+<testsuites id="" name="" tests="7" failures="1" skipped="6" errors="0" time="37.050601">
+<testsuite name="projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts" timestamp="2026-09-11T08:32:01.232Z" hostname="" tests="7" failures="1" skipped="6" time="34.946" errors="0">
+<testcase name="TC-00 — Contracting is opened for the full population › TC-00 — admin verifies the population is fully in progress" classname="projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts" time="34.946">
 <properties>
 <property name="serial" value="">
 </property>
@@ -8,53 +8,53 @@
 <system-out>
 <![CDATA[Contracting counters: {"status":"NOT STARTED","total":45,"notStarted":45,"inProgress":0,"completed":0}
 
-[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/test-failed-1.png]]
+[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/test-failed-1.png]]
 
-[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md]]
+[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/error-context.md]]
 
-[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md]]
+[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/error-context.md]]
 
-[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/trace.zip]]
+[[ATTACHMENT|artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/trace.zip]]
 ]]>
 </system-out>
-<failure message="Contracting stage status" type="expect.toBe">
-<![CDATA[  projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts:39:7 › Contracting — admin process state › TC-01 — Contracting stage is open with the full employee population in progress 
+<failure message="Contracting status" type="expect.toBe">
+<![CDATA[  projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts:45:7 › TC-00 — Contracting is opened for the full population › TC-00 — admin verifies the population is fully in progress 
 
-    Error: Contracting stage status
+    Error: Contracting status
 
     expect(received).toBe(expected) // Object.is equality
 
     Expected: "IN PROGRESS"
     Received: "NOT STARTED"
 
-      44 |     console.log('Contracting counters:', JSON.stringify(c));
-      45 |     // STEP 3: ASSERT Contracting is IN PROGRESS (BLOCKING)
-    > 46 |     expect(c.status, 'Contracting stage status').toBe('IN PROGRESS');
-         |                                                  ^
-      47 |     // STEP 4: ASSERT nobody is left Not Started
-      48 |     expect(c.notStarted, 'Not Started count').toBe(0);
-      49 |     // STEP 5: ASSERT the whole population is in progress
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts:46:50
+      50 |     console.log('Contracting counters:', JSON.stringify(c));
+      51 |     // STEP 4: ASSERT IN PROGRESS, 0 Not Started (BLOCKING)
+    > 52 |     expect(c.status, 'Contracting status').toBe('IN PROGRESS');
+         |                                            ^
+      53 |     expect(c.notStarted, 'Not Started').toBe(0);
+      54 |     expect(c.inProgress + c.completed).toBe(c.total);
+      55 |   });
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts:52:44
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/test-failed-1.png
+    ci-results/artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md
+    Error Context: ci-results/artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/error-context.md
 
-    Error Context: ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/error-context.md
+    Error Context: ci-results/artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/error-context.md
 
     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/trace.zip
+    ci-results/artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/trace.zip
     Usage:
 
-        npx playwright show-trace ci-results/artifacts/projects-PD-PMDS-test-plan-74489-oyee-population-in-progress/trace.zip
+        npx playwright show-trace ci-results/artifacts/projects-PD-PMDS-test-plan-c71e1-lation-is-fully-in-progress/trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 </testcase>
-<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-02 — Confirm Details defaults the supervisor and mediator from the reporting line" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<testcase name="TC-01 — Positive 1 (Simmy Mthalane) — plain happy path › TC-01 — Positive 1 (Simmy Mthalane) — draft, submit, sign, verify" classname="projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts">
 <properties>
 <property name="serial" value="">
 </property>
@@ -62,7 +62,7 @@
 <skipped>
 </skipped>
 </testcase>
-<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-03 — NEGATIVE: Next stays disabled while the KRA weights total less than 100%" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<testcase name="TC-02 — Positive 2 (Tony Dayimane) — plain happy path › TC-02 — Positive 2 (Tony Dayimane) — draft, submit, sign, verify" classname="projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts">
 <properties>
 <property name="serial" value="">
 </property>
@@ -70,7 +70,7 @@
 <skipped>
 </skipped>
 </testcase>
-<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-04 — NEGATIVE: Next stays disabled at 100% until the minimum 4 GAFs are checked" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<testcase name="TC-03 — Negative 1: Jabu Hadebe, resolved dispute › TC-03 — refer, mediator resolves, employee updates, supervisor approves, HR verifies" classname="projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts">
 <properties>
 <property name="serial" value="">
 </property>
@@ -78,7 +78,7 @@
 <skipped>
 </skipped>
 </testcase>
-<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-05 — Scoring completes once 4 KRAs total 100% and 4 GAFs are checked" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<testcase name="TC-04 — Negative 2: Sanele Sithole, escalated dispute resolved at tier 2 › TC-04 — refer, mediator not-resolved, tier-2 resolves, updates, HR verifies" classname="projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts">
 <properties>
 <property name="serial" value="">
 </property>
@@ -86,7 +86,7 @@
 <skipped>
 </skipped>
 </testcase>
-<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-06 — NEGATIVE: the workplan cannot be left with fewer than 2 key activities per KRA" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<testcase name="TC-05 — Negative 3: Adam Apple, escalated dispute unresolved at both tiers › TC-05 — refer, mediator not-resolved, tier-2 not-resolved, terminal" classname="projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts">
 <properties>
 <property name="serial" value="">
 </property>
@@ -94,167 +94,7 @@
 <skipped>
 </skipped>
 </testcase>
-<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-07 — Workplan advances once every KRA has 2 key activities" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-08 — A development area can be added to the Personal Development Plan" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-09 — NEGATIVE: Submit is disabled until both attestations are confirmed" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — draft wizard validation and submit (Sanele Sithole) › TC-10 — The employee submits the performance agreement for supervisor review" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — supervisor send back and re-submit (Sanele Sithole) › TC-11 — NEGATIVE: Refer for Dispute cannot be confirmed without a reason" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — supervisor send back and re-submit (Sanele Sithole) › TC-12 — The supervisor sends the agreement back to the employee" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — supervisor send back and re-submit (Sanele Sithole) › TC-13 — The employee receives the returned agreement and re-submits it" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — supervisor send back and re-submit (Sanele Sithole) › TC-14 — The supervisor signs the re-submitted agreement" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — supervisor send back and re-submit (Sanele Sithole) › TC-15 — NEGATIVE: HR cannot verify until the confirmation is ticked, then verification completes" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — happy path to Generate PERSAL Input (Simmy Mthalane) › TC-16 — The employee drafts and submits the performance agreement" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — happy path to Generate PERSAL Input (Simmy Mthalane) › TC-17 — The supervisor signs the agreement without changes" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — happy path to Generate PERSAL Input (Simmy Mthalane) › TC-18 — HR verifies the agreement and it reaches Generate PERSAL Input" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-19 — Jabu submits an agreement the supervisor will dispute" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-20 — The supervisor refers Jabu&apos;s agreement for mediation" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-21 — Adam submits and his agreement is also referred for mediation" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-22 — Both disputes are routed to the mediator" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-23 — The mediator records the disagreement as resolved and it returns to the employee" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-24 — The employee updates the agreement with the dispute outcome and it completes" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-25 — NEGATIVE: an unresolved mediation requires both a comment and an attachment" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — dispute referred for mediation (Jabu Hadebe, Adam Apple) › TC-26 — An unresolved dispute parks the agreement with no downstream task" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-<testcase name="Contracting — dashboard reflects the completed agreements › TC-27 — The Contracting dashboard counts the agreements driven to completion" classname="projects/PD-PMDS/test-plans/contracting/contracting-lifecycle.spec.ts">
+<testcase name="TC-06 — Contracting dashboard counts all 5 scenarios as completed › TC-06 — final recount" classname="projects/PD-PMDS/test-plans/contracting/sl1-12-contracting-scenarios.spec.ts">
 <properties>
 <property name="serial" value="">
 </property>
