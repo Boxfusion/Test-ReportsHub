@@ -4,7 +4,7 @@
       "/opt/hostedtoolcache/node/20.20.2/x64/bin/node",
       "/home/runner/work/Test-ReportsHub/Test-ReportsHub/node_modules/.bin/playwright",
       "test",
-      "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
+      "projects/dep/test-plans/customers/create-customer.spec.ts",
       "--config=playwright.config.ci.ts"
     ],
     "configFile": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/playwright.config.ci.ts",
@@ -20,24 +20,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/099846698e2a97e6276a6a5607461efd3a235159",
-        "commitHash": "099846698e2a97e6276a6a5607461efd3a235159",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34481571038"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/cc20a2f4415ac8b628b07729b80a72430373de88",
+        "commitHash": "cc20a2f4415ac8b628b07729b80a72430373de88",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34574442334"
       },
       "gitCommit": {
-        "shortHash": "0998466",
-        "hash": "099846698e2a97e6276a6a5607461efd3a235159",
-        "subject": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure",
-        "body": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure\n",
+        "shortHash": "cc20a2f",
+        "hash": "cc20a2f4415ac8b628b07729b80a72430373de88",
+        "subject": "ci: re-ran dep / test-plans/cases/create-case.md → skipped",
+        "body": "ci: re-ran dep / test-plans/cases/create-case.md → skipped\n",
         "author": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789046092000
+          "time": 1789111247000
         },
         "committer": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789046092000
+          "time": 1789111247000
         },
         "branch": "main"
       },
@@ -51,24 +51,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/099846698e2a97e6276a6a5607461efd3a235159",
-            "commitHash": "099846698e2a97e6276a6a5607461efd3a235159",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34481571038"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/cc20a2f4415ac8b628b07729b80a72430373de88",
+            "commitHash": "cc20a2f4415ac8b628b07729b80a72430373de88",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34574442334"
           },
           "gitCommit": {
-            "shortHash": "0998466",
-            "hash": "099846698e2a97e6276a6a5607461efd3a235159",
-            "subject": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure",
-            "body": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure\n",
+            "shortHash": "cc20a2f",
+            "hash": "cc20a2f4415ac8b628b07729b80a72430373de88",
+            "subject": "ci: re-ran dep / test-plans/cases/create-case.md → skipped",
+            "body": "ci: re-ran dep / test-plans/cases/create-case.md → skipped\n",
             "author": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789046092000
+              "time": 1789111247000
             },
             "committer": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789046092000
+              "time": 1789111247000
             },
             "branch": "main"
           },
@@ -117,25 +117,93 @@
   },
   "suites": [
     {
-      "title": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-      "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
+      "title": "projects/dep/test-plans/customers/create-customer.spec.ts",
+      "file": "projects/dep/test-plans/customers/create-customer.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "ECDEDEA-TP — EC DEDEA Bid Management (Tender Process)",
-          "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-          "line": 361,
+          "title": "Create Customer",
+          "file": "projects/dep/test-plans/customers/create-customer.spec.ts",
+          "line": 23,
           "column": 6,
           "specs": [
             {
-              "title": "TC-01: Draft Tender",
+              "title": "TC-01: Login as Admin",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 30129,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T07:27:54.738Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8d9bb79dcff8c91b36e7-501b86c28781d39d168c",
+              "file": "projects/dep/test-plans/customers/create-customer.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "TC-02: Navigate to Customers",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16222,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T07:28:25.113Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8d9bb79dcff8c91b36e7-d4981b907ba228eda7dd",
+              "file": "projects/dep/test-plans/customers/create-customer.spec.ts",
+              "line": 47,
+              "column": 7
+            },
+            {
+              "title": "TC-03: Create a Customer",
               "ok": false,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 240000,
+                  "timeout": 90000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "",
@@ -145,53 +213,49 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "timedOut",
-                      "duration": 248684,
+                      "duration": 92800,
                       "error": {
-                        "message": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m"
+                        "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
                       },
                       "errors": [
                         {
-                          "message": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m"
+                          "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
                         },
                         {
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 14,
-                            "line": 120
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/customers/create-customer.spec.ts",
+                            "column": 66,
+                            "line": 78
                           },
-                          "message": "Error: locator.click: Test timeout of 240000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.ant-picker-dropdown:not(.ant-picker-dropdown-hidden)').last().locator('td[title=\"2026-08-03\"]')\u001b[22m\n\n\n  118 |     await dropdown.locator('.ant-picker-header-next-btn').first().click();\n  119 |   }\n> 120 |   await cell.click();\n      |              ^\n  121 |   await dropdown.locator('.ant-picker-time-panel-column').first()\n  122 |     .locator('.ant-picker-time-panel-cell-inner')\n  123 |     .filter({ hasText: new RegExp(`^${hour}$`) }).first().click();\n    at pickAntDateTime (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:120:14)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:412:5"
+                          "message": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /^Create/i }).first()\u001b[22m\n\n\n  76 |     // STEP 2: CLICK the Create button\n  77 |     // TODO[selector]: Create button on Customers page — MCP unavailable at create time\n> 78 |     await page.getByRole('button', { name: /^Create/i }).first().click();\n     |                                                                  ^\n  79 |\n  80 |     // STEP 3: WAIT for the create customer form/dialog to appear\n  81 |     // TODO[selector]: create customer dialog — MCP unavailable at create time\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/customers/create-customer.spec.ts:78:66"
                         }
                       ],
-                      "stdout": [
-                        {
-                          "text": "[CHAIN] TC-01 created RUN_REF=REF2026-2018\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-10T13:16:51.335Z",
+                      "startTime": "2026-09-11T07:28:41.353Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-81493--Process-TC-01-Draft-Tender/test-failed-1.png"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/test-failed-1.png"
                         },
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-81493--Process-TC-01-Draft-Tender/video.webm"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/video.webm"
                         },
                         {
                           "name": "error-context",
                           "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-81493--Process-TC-01-Draft-Tender/error-context.md"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/error-context.md"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-81493--Process-TC-01-Draft-Tender/trace.zip"
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/trace.zip"
                         }
                       ]
                     }
@@ -199,1186 +263,9 @@
                   "status": "unexpected"
                 }
               ],
-              "id": "798a5edd37d7d21c30c7-e8c6a3e7dc488f04283a",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 363,
-              "column": 7
-            },
-            {
-              "title": "TC-02: Review and Approve Tender Details",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 55477,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Review and Approve' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Review and Approve' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Review and Approve' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Review and Approve' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Review and Approve' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Review and Approve' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:471:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Review and Approve' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Review and Approve' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Review and Approve' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:471:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:21:02.062Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ee2a6--and-Approve-Tender-Details/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ee2a6--and-Approve-Tender-Details/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ee2a6--and-Approve-Tender-Details/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ee2a6--and-Approve-Tender-Details/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-fca7ee3692c2b34c6c5d",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 467,
-              "column": 7
-            },
-            {
-              "title": "TC-03: Publish Tender",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 56364,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Publish Tender' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Publish Tender' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Publish Tender' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Publish Tender' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Publish Tender' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Publish Tender' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:489:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Publish Tender' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Publish Tender' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Publish Tender' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:489:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:21:58.649Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ba432-rocess-TC-03-Publish-Tender/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ba432-rocess-TC-03-Publish-Tender/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ba432-rocess-TC-03-Publish-Tender/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ba432-rocess-TC-03-Publish-Tender/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-49fb7466fc01a628f33f",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 485,
-              "column": 7
-            },
-            {
-              "title": "TC-04: Consolidate Supplier Responses",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 300000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 52530,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.ant-modal-content')\nExpected: hidden\nReceived: visible\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" locator('.ant-modal-content') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-modal-content')\u001b[22m\n\u001b[2m    33 × locator resolved to <div class=\"ant-modal-content\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.ant-modal-content')\nExpected: hidden\nReceived: visible\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" locator('.ant-modal-content') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-modal-content')\u001b[22m\n\u001b[2m    33 × locator resolved to <div class=\"ant-modal-content\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at addSupplierResponse (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:245:24)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:510:32",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 24,
-                          "line": 245
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 243 |\u001b[39m   \u001b[36mawait\u001b[39m expect(dlgSubmit)\u001b[33m.\u001b[39mtoBeEnabled({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 244 |\u001b[39m   \u001b[36mawait\u001b[39m dlgSubmit\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 245 |\u001b[39m   \u001b[36mawait\u001b[39m expect(dialog)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 246 |\u001b[39m }\n \u001b[90m 247 |\u001b[39m\n \u001b[90m 248 |\u001b[39m \u001b[90m// EC DEDEA's \"Supplier compliance\" dialog. Happy path = everything compliant. NOTE the build\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 24,
-                            "line": 245
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.ant-modal-content')\nExpected: hidden\nReceived: visible\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" locator('.ant-modal-content') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-modal-content')\u001b[22m\n\u001b[2m    33 × locator resolved to <div class=\"ant-modal-content\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n  243 |   await expect(dlgSubmit).toBeEnabled({ timeout: 15000 });\n  244 |   await dlgSubmit.click();\n> 245 |   await expect(dialog).toBeHidden({ timeout: 15000 });\n      |                        ^\n  246 | }\n  247 |\n  248 | // EC DEDEA's \"Supplier compliance\" dialog. Happy path = everything compliant. NOTE the build\n    at addSupplierResponse (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:245:24)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:510:32"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:22:56.154Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-1b958-solidate-Supplier-Responses/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-1b958-solidate-Supplier-Responses/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-1b958-solidate-Supplier-Responses/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-1b958-solidate-Supplier-Responses/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 24,
-                        "line": 245
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-bd6877a64ae729e38cb0",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 503,
-              "column": 7
-            },
-            {
-              "title": "TC-05: Verify Compliance",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 300000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 56195,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Verify Compliance' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Verify Compliance' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Verify Compliance' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Verify Compliance' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Verify Compliance' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Verify Compliance' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:528:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Verify Compliance' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Verify Compliance' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Verify Compliance' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:528:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:23:50.458Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-390d5-ess-TC-05-Verify-Compliance/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-390d5-ess-TC-05-Verify-Compliance/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-390d5-ess-TC-05-Verify-Compliance/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-390d5-ess-TC-05-Verify-Compliance/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-d6f8570a0e4471f2dbc4",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 524,
-              "column": 7
-            },
-            {
-              "title": "TC-06: Calculate Specific Goal Points",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 180000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 56220,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Calculate Specific Goal Points' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Calculate Specific Goal Points' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Calculate Specific Goal Points' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Calculate Specific Goal Points' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Calculate Specific Goal Points' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Calculate Specific Goal Points' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:553:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Calculate Specific Goal Points' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Calculate Specific Goal Points' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Calculate Specific Goal Points' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:553:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:24:47.862Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-8f0c4-culate-Specific-Goal-Points/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-8f0c4-culate-Specific-Goal-Points/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-8f0c4-culate-Specific-Goal-Points/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-8f0c4-culate-Specific-Goal-Points/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-e9ecdfd7c87e3b5e42af",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 549,
-              "column": 7
-            },
-            {
-              "title": "TC-07: Invite BEC Members",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 180000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 6,
-                      "parallelIndex": 0,
-                      "status": "timedOut",
-                      "duration": 186099,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 14,
-                            "line": 120
-                          },
-                          "message": "Error: locator.click: Test timeout of 180000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.ant-picker-dropdown:not(.ant-picker-dropdown-hidden)').last().locator('td[title=\"2026-08-05\"]')\u001b[22m\n\n\n  118 |     await dropdown.locator('.ant-picker-header-next-btn').first().click();\n  119 |   }\n> 120 |   await cell.click();\n      |              ^\n  121 |   await dropdown.locator('.ant-picker-time-panel-column').first()\n  122 |     .locator('.ant-picker-time-panel-cell-inner')\n  123 |     .filter({ hasText: new RegExp(`^${hour}$`) }).first().click();\n    at pickAntDateTime (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:120:14)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:593:5"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:25:45.252Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-449fa-ss-TC-07-Invite-BEC-Members/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-449fa-ss-TC-07-Invite-BEC-Members/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-449fa-ss-TC-07-Invite-BEC-Members/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-449fa-ss-TC-07-Invite-BEC-Members/trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-b7f97c6aaf831e113286",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 581,
-              "column": 7
-            },
-            {
-              "title": "TC-08: Confirm Attendance & Open Evaluation",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 180000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 7,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 55967,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Confirm Attendance and Open Evaluation' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Confirm Attendance and Open Evaluation' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Confirm Attendance and Open Evaluation' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Confirm Attendance and Open Evaluation' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Confirm Attendance and Open Evaluation' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Confirm Attendance and Open Evaluation' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:608:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Confirm Attendance and Open Evaluation' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Confirm Attendance and Open Evaluation' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Confirm Attendance and Open Evaluation' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:608:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:28:53.237Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-66237--Attendance-Open-Evaluation/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-66237--Attendance-Open-Evaluation/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-66237--Attendance-Open-Evaluation/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-66237--Attendance-Open-Evaluation/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-abbe6af23d94a6e8fe6b",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 604,
-              "column": 7
-            },
-            {
-              "title": "TC-09: Capture Functionality Scores",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 420000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 8,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 48618,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'ECDEDEA Automated Tender' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('link', { name: 'ECDEDEA Automated Tender' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'ECDEDEA Automated Tender' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'ECDEDEA Automated Tender' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('link', { name: 'ECDEDEA Automated Tender' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'ECDEDEA Automated Tender' }).first()\u001b[22m\n\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:637:26",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 26,
-                          "line": 637
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 635 |\u001b[39m       }\n \u001b[90m 636 |\u001b[39m       \u001b[36mconst\u001b[39m card \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[33mRUN_REF\u001b[39m \u001b[33m||\u001b[39m tenderMatch() })\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 637 |\u001b[39m       \u001b[36mawait\u001b[39m expect(card)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 638 |\u001b[39m       \u001b[36mconst\u001b[39m href \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m card\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 639 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`${BASE}${href}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 640 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 26,
-                            "line": 637
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'ECDEDEA Automated Tender' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('link', { name: 'ECDEDEA Automated Tender' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'ECDEDEA Automated Tender' }).first()\u001b[22m\n\n\n  635 |       }\n  636 |       const card = page.getByRole('link', { name: RUN_REF || tenderMatch() }).first();\n> 637 |       await expect(card).toBeVisible({ timeout: 30000 });\n      |                          ^\n  638 |       const href = await card.getAttribute('href');\n  639 |       await page.goto(`${BASE}${href}`);\n  640 |\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:637:26"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:29:50.428Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-bfdb4-apture-Functionality-Scores/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-bfdb4-apture-Functionality-Scores/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-bfdb4-apture-Functionality-Scores/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-bfdb4-apture-Functionality-Scores/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 26,
-                        "line": 637
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-57609f170476df1bce1a",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 622,
-              "column": 7
-            },
-            {
-              "title": "TC-10: BEC: Monitor Evaluation Progress → Begin Calibration",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 9,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 55528,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor Evaluation Progress' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor Evaluation Progress' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor Evaluation Progress' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor Evaluation Progress' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor Evaluation Progress' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor Evaluation Progress' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:655:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor Evaluation Progress' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor Evaluation Progress' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor Evaluation Progress' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:655:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:30:40.059Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-49236-rogress-→-Begin-Calibration/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-49236-rogress-→-Begin-Calibration/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-49236-rogress-→-Begin-Calibration/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-49236-rogress-→-Begin-Calibration/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-1a6ec68713aa17247f6f",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 651,
-              "column": 7
-            },
-            {
-              "title": "TC-11: Monitor Calibration and Finalise Scoring",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 54978,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:670:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:670:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:31:36.763Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-c9e50-ration-and-Finalise-Scoring/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-c9e50-ration-and-Finalise-Scoring/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-c9e50-ration-and-Finalise-Scoring/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-c9e50-ration-and-Finalise-Scoring/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-a5fc5b7d811d358c1b7f",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 666,
-              "column": 7
-            },
-            {
-              "title": "TC-12: BEC: Finalise Recommendation",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 11,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 55059,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'BEC: Finalise recommendation' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'BEC: Finalise recommendation' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'BEC: Finalise recommendation' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'BEC: Finalise recommendation' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'BEC: Finalise recommendation' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'BEC: Finalise recommendation' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:688:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'BEC: Finalise recommendation' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'BEC: Finalise recommendation' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'BEC: Finalise recommendation' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:688:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:32:32.894Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-65db4-BEC-Finalise-Recommendation/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-65db4-BEC-Finalise-Recommendation/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-65db4-BEC-Finalise-Recommendation/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-65db4-BEC-Finalise-Recommendation/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-c8c2610e9df99f431079",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 684,
-              "column": 7
-            },
-            {
-              "title": "TC-13: Capture Outcome from the BAC",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 12,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 55207,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Capture outcome from the BAC' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Capture outcome from the BAC' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Capture outcome from the BAC' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Capture outcome from the BAC' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Capture outcome from the BAC' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Capture outcome from the BAC' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:708:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Capture outcome from the BAC' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Capture outcome from the BAC' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Capture outcome from the BAC' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:708:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:33:29.139Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-6f455-apture-Outcome-from-the-BAC/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-6f455-apture-Outcome-from-the-BAC/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-6f455-apture-Outcome-from-the-BAC/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-6f455-apture-Outcome-from-the-BAC/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-d8c35cacaf38272c5315",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 704,
-              "column": 7
-            },
-            {
-              "title": "TC-14: Approve Recommendation from BAC",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 13,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 57466,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Approve Recommendation from BAC' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Approve Recommendation from BAC' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Approve Recommendation from BAC' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Approve Recommendation from BAC' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Approve Recommendation from BAC' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Approve Recommendation from BAC' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:725:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Approve Recommendation from BAC' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Approve Recommendation from BAC' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Approve Recommendation from BAC' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:725:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:34:25.488Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-814e7-ove-Recommendation-from-BAC/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-814e7-ove-Recommendation-from-BAC/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-814e7-ove-Recommendation-from-BAC/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-814e7-ove-Recommendation-from-BAC/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-c499e2d46c67480528be",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 721,
-              "column": 7
-            },
-            {
-              "title": "TC-15: Upload Appointment Letter",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 150000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 14,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 56055,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Upload Appointment letter' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Upload Appointment letter' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Upload Appointment letter' }).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Upload Appointment letter' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Upload Appointment letter' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Upload Appointment letter' }).first()\u001b[22m\n\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:741:11",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 27,
-                          "line": 185
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 183 |\u001b[39m     \u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m actionText })\n \u001b[90m 184 |\u001b[39m     \u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 185 |\u001b[39m   \u001b[36mawait\u001b[39m expect(targetRow)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 186 |\u001b[39m   \u001b[36mconst\u001b[39m rowHref \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'href'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 187 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(rowHref\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mstartsWith(\u001b[32m'http'\u001b[39m) \u001b[33m?\u001b[39m rowHref\u001b[33m!\u001b[39m \u001b[33m:\u001b[39m \u001b[32m`${BASE}${rowHref}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 188 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/workflow-action/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 27,
-                            "line": 185
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Upload Appointment letter' }).first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Upload Appointment letter' }).first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ hasText: 'ECDEDEA Automated Tender' }).filter({ hasText: 'Upload Appointment letter' }).first()\u001b[22m\n\n\n  183 |     .filter({ hasText: actionText })\n  184 |     .first();\n> 185 |   await expect(targetRow).toBeVisible({ timeout: 30000 });\n      |                           ^\n  186 |   const rowHref = await targetRow.getByRole('link').first().getAttribute('href');\n  187 |   await page.goto(rowHref!.startsWith('http') ? rowHref! : `${BASE}${rowHref}`);\n  188 |   await page.waitForURL(/workflow-action/, { timeout: 30000 });\n    at openInboxItem (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:185:27)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:741:11"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:35:24.118Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ca799-5-Upload-Appointment-Letter/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ca799-5-Upload-Appointment-Letter/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ca799-5-Upload-Appointment-Letter/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-ca799-5-Upload-Appointment-Letter/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 27,
-                        "line": 185
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-08534b4066d9767a1aa0",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 737,
-              "column": 7
-            },
-            {
-              "title": "TC-16: Capture Order Details",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 150000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 46650,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Submit', exact: true })\nExpected: enabled\nReceived: disabled\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" getByRole('button', { name: 'Submit', exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Submit', exact: true })\u001b[22m\n\u001b[2m    33 × locator resolved to <button title=\"\" disabled type=\"button\" class=\"ant-btn css-1lo1l9k css-var-Rkq ant-btn-primary sha-toolbar-btn sha-toolbar-btn-configurable\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"disabled\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Submit', exact: true })\nExpected: enabled\nReceived: disabled\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" getByRole('button', { name: 'Submit', exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Submit', exact: true })\u001b[22m\n\u001b[2m    33 × locator resolved to <button title=\"\" disabled type=\"button\" class=\"ant-btn css-1lo1l9k css-var-Rkq ant-btn-primary sha-toolbar-btn sha-toolbar-btn-configurable\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"disabled\"\u001b[22m\n\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:813:26",
-                        "location": {
-                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                          "column": 26,
-                          "line": 813
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 811 |\u001b[39m\n \u001b[90m 812 |\u001b[39m     \u001b[36mconst\u001b[39m submit \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Submit'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 813 |\u001b[39m     \u001b[36mawait\u001b[39m expect(submit)\u001b[33m.\u001b[39mtoBeEnabled({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 814 |\u001b[39m     \u001b[36mawait\u001b[39m clickOnceAndAwait(submit\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m \u001b[35m/workflows-(my-items|inbox)/\u001b[39m\u001b[33m.\u001b[39mtest(page\u001b[33m.\u001b[39murl())\u001b[33m,\u001b[39m \u001b[32m'Capture Order Details'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 815 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 816 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                            "column": 26,
-                            "line": 813
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Submit', exact: true })\nExpected: enabled\nReceived: disabled\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" getByRole('button', { name: 'Submit', exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Submit', exact: true })\u001b[22m\n\u001b[2m    33 × locator resolved to <button title=\"\" disabled type=\"button\" class=\"ant-btn css-1lo1l9k css-var-Rkq ant-btn-primary sha-toolbar-btn sha-toolbar-btn-configurable\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"disabled\"\u001b[22m\n\n\n  811 |\n  812 |     const submit = page.getByRole('button', { name: 'Submit', exact: true });\n> 813 |     await expect(submit).toBeEnabled({ timeout: 15000 });\n      |                          ^\n  814 |     await clickOnceAndAwait(submit, async () => /workflows-(my-items|inbox)/.test(page.url()), 'Capture Order Details');\n  815 |   });\n  816 | });\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts:813:26"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-10T13:36:21.370Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-c1eed-TC-16-Capture-Order-Details/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-c1eed-TC-16-Capture-Order-Details/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-c1eed-TC-16-Capture-Order-Details/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-EC-DEDEA-Bid-Mana-c1eed-TC-16-Capture-Order-Details/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-                        "column": 26,
-                        "line": 813
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "798a5edd37d7d21c30c7-160bc153014bf74a524d",
-              "file": "projects/EC-DEDEA-Bid-Management/test-plans/tender-process/ecdedea-tender-process.spec.ts",
-              "line": 765,
+              "id": "8d9bb79dcff8c91b36e7-aa7a8f9462f7462e5bca",
+              "file": "projects/dep/test-plans/customers/create-customer.spec.ts",
+              "line": 67,
               "column": 7
             }
           ]
@@ -1388,11 +275,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-10T13:16:50.519Z",
-    "duration": 1218485.4479999999,
-    "expected": 0,
+    "startTime": "2026-09-11T07:27:54.124Z",
+    "duration": 140441.17799999999,
+    "expected": 2,
     "skipped": 0,
-    "unexpected": 16,
+    "unexpected": 1,
     "flaky": 0
   }
 }
