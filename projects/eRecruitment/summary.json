@@ -1,13 +1,13 @@
 {
   "totalPlans": 121,
-  "totalRuns": 127,
-  "last7Runs": 0,
-  "last7Pass": 0,
-  "last7PassPct": null,
+  "totalRuns": 128,
+  "last7Runs": 1,
+  "last7Pass": 1,
+  "last7PassPct": 100,
   "failingFlows": 4,
   "lastRun": {
-    "date": "2026-08-06",
+    "date": "2026-09-11",
     "result": "PASSED",
-    "plan": "test-plans/AdminPortal/verify-appointed-ref43-completeflow.md"
+    "plan": "test-plans/Alerts/verify-add-alert-daily.md"
   }
 }

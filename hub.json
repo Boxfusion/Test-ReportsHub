@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T09:57:32.607Z",
+  "generated": "2026-09-11T10:11:48.735Z",
   "projects": [
     {
       "name": "Approvals",
@@ -126,15 +126,15 @@
       "health": "failing",
       "summary": {
         "totalPlans": 121,
-        "totalRuns": 127,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
+        "totalRuns": 128,
+        "last7Runs": 1,
+        "last7Pass": 1,
+        "last7PassPct": 100,
         "failingFlows": 4,
         "lastRun": {
-          "date": "2026-08-06",
+          "date": "2026-09-11",
           "result": "PASSED",
-          "plan": "test-plans/AdminPortal/verify-appointed-ref43-completeflow.md"
+          "plan": "test-plans/Alerts/verify-add-alert-daily.md"
         }
       },
       "href": "projects/eRecruitment/index.html"
@@ -327,8 +327,8 @@
   "totals": {
     "totalProjects": 14,
     "totalPlans": 272,
-    "totalRuns": 1025,
-    "last7Runs": 499,
+    "totalRuns": 1026,
+    "last7Runs": 500,
     "failingFlows": 82
   }
 }
