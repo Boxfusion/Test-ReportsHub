@@ -4,7 +4,7 @@
       "/opt/hostedtoolcache/node/20.20.2/x64/bin/node",
       "/home/runner/work/Test-ReportsHub/Test-ReportsHub/node_modules/.bin/playwright",
       "test",
-      "projects/Approvals/test-plans/Login/invalid-login.spec.ts",
+      "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
       "--config=playwright.config.ci.ts"
     ],
     "configFile": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/playwright.config.ci.ts",
@@ -20,24 +20,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/3576ccd881c8082cd0511565e251f8467b028a61",
-        "commitHash": "3576ccd881c8082cd0511565e251f8467b028a61",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34582725662"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
+        "commitHash": "786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34582889201"
       },
       "gitCommit": {
-        "shortHash": "3576ccd",
-        "hash": "3576ccd881c8082cd0511565e251f8467b028a61",
-        "subject": "ci: re-ran Approvals / test-plans/Login/empty-username-and-password.md → failure",
-        "body": "ci: re-ran Approvals / test-plans/Login/empty-username-and-password.md → failure\n",
+        "shortHash": "786218c",
+        "hash": "786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
+        "subject": "ci: re-ran Approvals / test-plans/Login/invalid-login.md → failure",
+        "body": "ci: re-ran Approvals / test-plans/Login/invalid-login.md → failure\n",
         "author": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789117609000
+          "time": 1789117794000
         },
         "committer": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789117609000
+          "time": 1789117794000
         },
         "branch": "main"
       },
@@ -51,24 +51,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/3576ccd881c8082cd0511565e251f8467b028a61",
-            "commitHash": "3576ccd881c8082cd0511565e251f8467b028a61",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34582725662"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
+            "commitHash": "786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34582889201"
           },
           "gitCommit": {
-            "shortHash": "3576ccd",
-            "hash": "3576ccd881c8082cd0511565e251f8467b028a61",
-            "subject": "ci: re-ran Approvals / test-plans/Login/empty-username-and-password.md → failure",
-            "body": "ci: re-ran Approvals / test-plans/Login/empty-username-and-password.md → failure\n",
+            "shortHash": "786218c",
+            "hash": "786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
+            "subject": "ci: re-ran Approvals / test-plans/Login/invalid-login.md → failure",
+            "body": "ci: re-ran Approvals / test-plans/Login/invalid-login.md → failure\n",
             "author": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789117609000
+              "time": 1789117794000
             },
             "committer": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789117609000
+              "time": 1789117794000
             },
             "branch": "main"
           },
@@ -117,100 +117,267 @@
   },
   "suites": [
     {
-      "title": "projects/Approvals/test-plans/Login/invalid-login.spec.ts",
-      "file": "projects/Approvals/test-plans/Login/invalid-login.spec.ts",
+      "title": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+      "file": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "TC-01 — Invalid (Username and Password)",
-          "ok": false,
-          "tags": [],
-          "tests": [
+          "title": "Create Service Request (v2)",
+          "file": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+          "line": 18,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
+              "title": "TC-01: Login as Admin",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 8565,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/username/i)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByPlaceholder(/username/i) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/username/i)\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/username/i)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByPlaceholder(/username/i) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/username/i)\u001b[22m\n\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/invalid-login.spec.ts:17:52",
-                    "location": {
-                      "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/invalid-login.spec.ts",
-                      "column": 52,
-                      "line": 17
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m   \u001b[90m// STEP 2: SNAPSHOT — confirm the Approvals login page opens with all login fields visible and functional\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/login/\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[35m/username/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[35m/password/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/log ?in|sign in/i\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/invalid-login.spec.ts",
-                        "column": 52,
-                        "line": 17
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/username/i)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByPlaceholder(/username/i) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/username/i)\u001b[22m\n\n\n  15 |   // STEP 2: SNAPSHOT — confirm the Approvals login page opens with all login fields visible and functional\n  16 |   await expect(page).toHaveURL(/login/);\n> 17 |   await expect(page.getByPlaceholder(/username/i)).toBeVisible();\n     |                                                    ^\n  18 |   await expect(page.getByPlaceholder(/password/i)).toBeVisible();\n  19 |   await expect(page.getByRole('button', { name: /log ?in|sign in/i })).toBeVisible();\n  20 |\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/invalid-login.spec.ts:17:52"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-09-11T09:09:42.852Z",
+                  "timeout": 90000,
                   "annotations": [],
-                  "attachments": [
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-4ba90-alid-Username-and-Password-/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-4ba90-alid-Username-and-Password-/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-4ba90-alid-Username-and-Password-/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-4ba90-alid-Username-and-Password-/trace.zip"
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 306,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:21:16",
+                        "location": {
+                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                          "column": 16,
+                          "line": 21
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 19 |\u001b[39m   test(\u001b[32m'TC-01: Login as Admin'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 20 |\u001b[39m     \u001b[90m// STEP 1: NAVIGATE to https://linux-dep-adminportal-test.azurewebsites.net/\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mAPP_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[90m// STEP 2: SNAPSHOT — confirm login form is visible\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[90m// SNAPSHOT: login form is visible\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                            "column": 16,
+                            "line": 21
+                          },
+                          "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n\n\n  19 |   test('TC-01: Login as Admin', async ({ page }) => {\n  20 |     // STEP 1: NAVIGATE to https://linux-dep-adminportal-test.azurewebsites.net/\n> 21 |     await page.goto(APP_URL);\n     |                ^\n  22 |\n  23 |     // STEP 2: SNAPSHOT — confirm login form is visible\n  24 |     // SNAPSHOT: login form is visible\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:21:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T09:11:46.578Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                        "column": 16,
+                        "line": 21
+                      }
                     }
                   ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/invalid-login.spec.ts",
-                    "column": 52,
-                    "line": 17
-                  }
+                  "status": "unexpected"
                 }
               ],
-              "status": "unexpected"
+              "id": "047422c8524377bfd6d3-9fee644e6d7ed7d3dbd1",
+              "file": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+              "line": 19,
+              "column": 7
+            },
+            {
+              "title": "TC-02: Navigate to Service Requests",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 316,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n\n    at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:11:14)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:44:11",
+                        "location": {
+                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                          "column": 14,
+                          "line": 11
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAsAdmin(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mAPP_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Username'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[33mADMIN\u001b[39m\u001b[33m.\u001b[39muser)\u001b[33m;\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Password'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[33mADMIN\u001b[39m\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Sign In'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                            "column": 14,
+                            "line": 11
+                          },
+                          "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n\n\n   9 |\n  10 | async function loginAsAdmin(page: Page) {\n> 11 |   await page.goto(APP_URL);\n     |              ^\n  12 |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);\n  13 |   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);\n  14 |   await page.getByRole('button', { name: 'Sign In' }).click();\n    at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:11:14)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:44:11"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T09:11:47.703Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                        "column": 14,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "047422c8524377bfd6d3-e9c7d8fc615ffa09384f",
+              "file": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+              "line": 43,
+              "column": 7
+            },
+            {
+              "title": "TC-03: Create a Service Request",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 308,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n\n    at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:11:14)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:63:11",
+                        "location": {
+                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                          "column": 14,
+                          "line": 11
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m loginAsAdmin(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mAPP_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Username'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[33mADMIN\u001b[39m\u001b[33m.\u001b[39muser)\u001b[33m;\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Password'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[33mADMIN\u001b[39m\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Sign In'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                            "column": 14,
+                            "line": 11
+                          },
+                          "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n\n\n   9 |\n  10 | async function loginAsAdmin(page: Page) {\n> 11 |   await page.goto(APP_URL);\n     |              ^\n  12 |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);\n  13 |   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);\n  14 |   await page.getByRole('button', { name: 'Sign In' }).click();\n    at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:11:14)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:63:11"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T09:11:48.668Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+                        "column": 14,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "047422c8524377bfd6d3-c8eac75230b20a947690",
+              "file": "projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts",
+              "line": 62,
+              "column": 7
             }
-          ],
-          "id": "84dee745e0c946125f66-a1b326f78a098b9abb35",
-          "file": "projects/Approvals/test-plans/Login/invalid-login.spec.ts",
-          "line": 11,
-          "column": 5
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-11T09:09:42.266Z",
-    "duration": 10972.425000000001,
+    "startTime": "2026-09-11T09:11:45.919Z",
+    "duration": 3233.925,
     "expected": 0,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 3,
     "flaky": 0
   }
 }

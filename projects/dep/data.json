@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 6,
-    "totalRuns": 14,
-    "last7Runs": 3,
+    "totalRuns": 15,
+    "last7Runs": 4,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 4,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 2,
+        "runs": 3,
         "passed": 0,
-        "failed": 2,
+        "failed": 3,
         "partial": 0
       },
       {
@@ -2754,23 +2754,24 @@
           "spec": "test-plans/service-requests/create-service-request-v2.spec.ts",
           "specHref": "test-plans/service-requests/create-service-request-v2.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "4.8s",
+            "duration": "3.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/create-service-request-v2.md"
+            "reportHref": "test-reports/2026-09-11/create-service-request-v2.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "3.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -2869,6 +2870,15 @@
           "duration": "140.4s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/create-customer.md"
+        },
+        {
+          "plan": "test-plans/service-requests/create-service-request-v2.md",
+          "planDisplay": "service-requests/create-service-request-v2.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "3.2s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/create-service-request-v2.md"
         }
       ]
     },
@@ -3031,5 +3041,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T09:09:53.875Z"
+  "generated": "2026-09-11T09:11:49.908Z"
 }

@@ -1,55 +1,149 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="1" time="140.44117799999998">
-<testsuite name="projects/dep/test-plans/customers/create-customer.spec.ts" timestamp="2026-09-11T07:27:54.266Z" hostname="" tests="3" failures="0" skipped="0" time="139.151" errors="1">
-<testcase name="Create Customer › TC-01: Login as Admin" classname="projects/dep/test-plans/customers/create-customer.spec.ts" time="30.129">
-</testcase>
-<testcase name="Create Customer › TC-02: Navigate to Customers" classname="projects/dep/test-plans/customers/create-customer.spec.ts" time="16.222">
-</testcase>
-<testcase name="Create Customer › TC-03: Create a Customer" classname="projects/dep/test-plans/customers/create-customer.spec.ts" time="92.8">
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="3" time="3.233925">
+<testsuite name="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" timestamp="2026-09-11T09:11:46.082Z" hostname="" tests="3" failures="0" skipped="0" time="0.93" errors="3">
+<testcase name="Create Service Request (v2) › TC-01: Login as Admin" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="0.306">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/test-failed-1.png]]
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/test-failed-1.png]]
 
-[[ATTACHMENT|artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/video.webm]]
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/video.webm]]
 
-[[ATTACHMENT|artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/error-context.md]]
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/error-context.md]]
 
-[[ATTACHMENT|artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/trace.zip]]
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip]]
 ]]>
 </system-out>
-<error message="Test timeout of 90000ms exceeded." type="Error">
-<![CDATA[  projects/dep/test-plans/customers/create-customer.spec.ts:67:7 › Create Customer › TC-03: Create a Customer 
+<error message="page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/" type="Error">
+<![CDATA[  projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:19:7 › Create Service Request (v2) › TC-01: Login as Admin 
 
-    Test timeout of 90000ms exceeded.
-
-    Error: locator.click: Test timeout of 90000ms exceeded.
+    Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/
     Call log:
-      - waiting for getByRole('button', { name: /^Create/i }).first()
+      - navigating to "https://linux-dep-adminportal-test.azurewebsites.net/", waiting until "load"
 
 
-      76 |     // STEP 2: CLICK the Create button
-      77 |     // TODO[selector]: Create button on Customers page — MCP unavailable at create time
-    > 78 |     await page.getByRole('button', { name: /^Create/i }).first().click();
-         |                                                                  ^
-      79 |
-      80 |     // STEP 3: WAIT for the create customer form/dialog to appear
-      81 |     // TODO[selector]: create customer dialog — MCP unavailable at create time
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/customers/create-customer.spec.ts:78:66
+      19 |   test('TC-01: Login as Admin', async ({ page }) => {
+      20 |     // STEP 1: NAVIGATE to https://linux-dep-adminportal-test.azurewebsites.net/
+    > 21 |     await page.goto(APP_URL);
+         |                ^
+      22 |
+      23 |     // STEP 2: SNAPSHOT — confirm login form is visible
+      24 |     // SNAPSHOT: login form is visible
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:21:16
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/test-failed-1.png
+    ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/video.webm
+    ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ci-results/artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/error-context.md
+    Error Context: ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/error-context.md
 
     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/trace.zip
+    ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip
     Usage:
 
-        npx playwright show-trace ci-results/artifacts/projects-dep-test-plans-cu-8d350-mer-TC-03-Create-a-Customer/trace.zip
+        npx playwright show-trace ci-results/artifacts/projects-dep-test-plans-se-03599-est-v2-TC-01-Login-as-Admin/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Create Service Request (v2) › TC-02: Navigate to Service Requests" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="0.316">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/video.webm]]
+
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/error-context.md]]
+
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/trace.zip]]
+]]>
+</system-out>
+<error message="page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/" type="Error">
+<![CDATA[  projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:43:7 › Create Service Request (v2) › TC-02: Navigate to Service Requests 
+
+    Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/
+    Call log:
+      - navigating to "https://linux-dep-adminportal-test.azurewebsites.net/", waiting until "load"
+
+
+       9 |
+      10 | async function loginAsAdmin(page: Page) {
+    > 11 |   await page.goto(APP_URL);
+         |              ^
+      12 |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
+      13 |   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);
+      14 |   await page.getByRole('button', { name: 'Sign In' }).click();
+        at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:11:14)
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:44:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/trace.zip
+    Usage:
+
+        npx playwright show-trace ci-results/artifacts/projects-dep-test-plans-se-6d76d-avigate-to-Service-Requests/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Create Service Request (v2) › TC-03: Create a Service Request" classname="projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts" time="0.308">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/video.webm]]
+
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/error-context.md]]
+
+[[ATTACHMENT|artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/trace.zip]]
+]]>
+</system-out>
+<error message="page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/" type="Error">
+<![CDATA[  projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:62:7 › Create Service Request (v2) › TC-03: Create a Service Request 
+
+    Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/
+    Call log:
+      - navigating to "https://linux-dep-adminportal-test.azurewebsites.net/", waiting until "load"
+
+
+       9 |
+      10 | async function loginAsAdmin(page: Page) {
+    > 11 |   await page.goto(APP_URL);
+         |              ^
+      12 |   await page.getByRole('textbox', { name: 'Username' }).fill(ADMIN.user);
+      13 |   await page.getByRole('textbox', { name: 'Password' }).fill(ADMIN.password);
+      14 |   await page.getByRole('button', { name: 'Sign In' }).click();
+        at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:11:14)
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:63:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/trace.zip
+    Usage:
+
+        npx playwright show-trace ci-results/artifacts/projects-dep-test-plans-se-826f6-03-Create-a-Service-Request/trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
