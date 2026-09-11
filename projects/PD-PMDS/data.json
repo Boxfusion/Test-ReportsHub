@@ -22,10 +22,10 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 2,
-    "totalRuns": 84,
-    "last7Runs": 14,
-    "last7Pass": 0,
-    "last7PassPct": 0,
+    "totalRuns": 90,
+    "last7Runs": 20,
+    "last7Pass": 4,
+    "last7PassPct": 20,
     "failingFlows": 2,
     "passingFlows": 0,
     "partialFlows": 0,
@@ -33,8 +33,15 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-09-14",
+    "startDate": "2025-09-13",
     "days": [
+      {
+        "iso": "2025-09-13",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
       {
         "iso": "2025-09-14",
         "runs": 0,
@@ -2571,16 +2578,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 2,
-        "passed": 0,
+        "runs": 8,
+        "passed": 4,
         "failed": 2,
-        "partial": 0
-      },
-      {
-        "iso": "2026-09-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
         "partial": 0
       }
     ]
@@ -2743,6 +2743,15 @@
       "date": "2026-09-11",
       "runs": [
         {
+          "plan": null,
+          "planDisplay": "cd-director-contracting.md",
+          "variant": null,
+          "result": "BLOCKED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-09-11/cd-director-contracting.md"
+        },
+        {
           "plan": "test-plans/contracting/contracting-lifecycle.md",
           "planDisplay": "contracting/contracting-lifecycle.md",
           "variant": null,
@@ -2752,6 +2761,15 @@
           "reportHref": "test-reports/2026-09-11/contracting-lifecycle.md"
         },
         {
+          "plan": null,
+          "planDisplay": "ddg-contracting.md",
+          "variant": null,
+          "result": "BLOCKED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-09-11/ddg-contracting.md"
+        },
+        {
           "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
           "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
           "variant": null,
@@ -2759,6 +2777,42 @@
           "duration": "37.1s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/sl1-12-contracting-scenarios.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "sl112-negative1-resolved-dispute-adam.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-09-11/sl112-negative1-resolved-dispute-adam.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "sl112-negative2-escalated-resolved-sanele.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-09-11/sl112-negative2-escalated-resolved-sanele.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "sl112-negative3-escalated-unresolved-thato.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-09-11/sl112-negative3-escalated-unresolved-thato.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "sl112-positive-simmy-jabu.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-09-11/sl112-positive-simmy-jabu.md"
         }
       ]
     },
@@ -3586,5 +3640,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T10:58:57.647Z"
+  "generated": "2026-09-11T12:25:43.937Z"
 }
