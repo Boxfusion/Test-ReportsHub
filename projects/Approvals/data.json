@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 249,
-    "last7Runs": 216,
+    "totalRuns": 250,
+    "last7Runs": 217,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 35,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 6,
+        "runs": 7,
         "passed": 0,
-        "failed": 6,
+        "failed": 7,
         "partial": 0
       },
       {
@@ -3086,23 +3086,24 @@
           "spec": "test-plans/Memo/verify-approve-memo.spec.ts",
           "specHref": "test-plans/Memo/verify-approve-memo.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "49s",
+            "duration": "48.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-approve-memo.md"
+            "reportHref": "test-reports/2026-09-11/verify-approve-memo.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "48.8s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -3769,7 +3770,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3905,7 +3906,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4585,7 +4586,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4908,6 +4909,15 @@
           "duration": "49.2s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/verify-add-referral.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-approve-memo.md",
+          "planDisplay": "Memo/verify-approve-memo.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48.8s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/verify-approve-memo.md"
         }
       ]
     },
@@ -7154,5 +7164,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T09:28:54.463Z"
+  "generated": "2026-09-11T09:32:28.827Z"
 }
