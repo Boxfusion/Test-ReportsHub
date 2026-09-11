@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 246,
-    "last7Runs": 213,
+    "totalRuns": 247,
+    "last7Runs": 214,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 35,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-09-11",
-        "runs": 3,
+        "runs": 4,
         "passed": 0,
-        "failed": 3,
+        "failed": 4,
         "partial": 0
       },
       {
@@ -2799,6 +2799,75 @@
           "bugs": []
         },
         {
+          "plan": "test-plans/Login/valid-username-invalid-password.md",
+          "planHref": "test-plans/Login/valid-username-invalid-password.md",
+          "spec": "test-plans/Login/valid-username-invalid-password.spec.ts",
+          "specHref": "test-plans/Login/valid-username-invalid-password.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-09-11",
+            "result": "FAILED",
+            "duration": "8.1s",
+            "variant": null,
+            "reportHref": "test-reports/2026-09-11/valid-username-invalid-password.md"
+          },
+          "runCount": 8,
+          "history": [
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "8.1s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-10",
+              "result": "FAILED",
+              "duration": "8.2s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-09",
+              "result": "FAILED",
+              "duration": "8.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-08",
+              "result": "FAILED",
+              "duration": "8.1s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-07",
+              "result": "FAILED",
+              "duration": "7.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "7.8s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "8.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "9.4s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
           "plan": "test-plans/Login/invalid-username-valid-password.md",
           "planHref": "test-plans/Login/invalid-username-valid-password.md",
           "spec": "test-plans/Login/invalid-username-valid-password.spec.ts",
@@ -2861,74 +2930,6 @@
               "date": "2026-07-07",
               "result": "PASSED",
               "duration": "10.8s",
-              "variant": null
-            }
-          ],
-          "bugs": []
-        },
-        {
-          "plan": "test-plans/Login/valid-username-invalid-password.md",
-          "planHref": "test-plans/Login/valid-username-invalid-password.md",
-          "spec": "test-plans/Login/valid-username-invalid-password.spec.ts",
-          "specHref": "test-plans/Login/valid-username-invalid-password.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "failing",
-          "status": "FAILED",
-          "last": {
-            "date": "2026-09-10",
-            "result": "FAILED",
-            "duration": "8.2s",
-            "variant": null,
-            "reportHref": "test-reports/2026-09-10/valid-username-invalid-password.md"
-          },
-          "runCount": 7,
-          "history": [
-            {
-              "date": "2026-09-10",
-              "result": "FAILED",
-              "duration": "8.2s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-09",
-              "result": "FAILED",
-              "duration": "8.3s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-08",
-              "result": "FAILED",
-              "duration": "8.1s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-07",
-              "result": "FAILED",
-              "duration": "7.4s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-06",
-              "result": "FAILED",
-              "duration": "7.8s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "FAILED",
-              "duration": "8.3s",
-              "variant": null
-            },
-            {
-              "date": "2026-07-07",
-              "result": "PASSED",
-              "duration": "9.4s",
               "variant": null
             }
           ],
@@ -3630,7 +3631,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4878,6 +4879,15 @@
           "duration": "8.9s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/valid-login.md"
+        },
+        {
+          "plan": "test-plans/Login/valid-username-invalid-password.md",
+          "planDisplay": "Login/valid-username-invalid-password.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "8.1s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/valid-username-invalid-password.md"
         }
       ]
     },
@@ -7124,5 +7134,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T09:20:22.894Z"
+  "generated": "2026-09-11T09:22:58.701Z"
 }

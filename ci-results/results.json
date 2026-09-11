@@ -4,7 +4,7 @@
       "/opt/hostedtoolcache/node/20.20.2/x64/bin/node",
       "/home/runner/work/Test-ReportsHub/Test-ReportsHub/node_modules/.bin/playwright",
       "test",
-      "projects/Approvals/test-plans/Login/valid-login.spec.ts",
+      "projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts",
       "--config=playwright.config.ci.ts"
     ],
     "configFile": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/playwright.config.ci.ts",
@@ -20,24 +20,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/05acb891710fbb99a9f4f7526c2e5d4a102f0f73",
-        "commitHash": "05acb891710fbb99a9f4f7526c2e5d4a102f0f73",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34583607285"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/db3293dc1162958bbaea036b3c88b8f39ba52ef3",
+        "commitHash": "db3293dc1162958bbaea036b3c88b8f39ba52ef3",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34583813344"
       },
       "gitCommit": {
-        "shortHash": "05acb89",
-        "hash": "05acb891710fbb99a9f4f7526c2e5d4a102f0f73",
-        "subject": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure",
-        "body": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure\n",
+        "shortHash": "db3293d",
+        "hash": "db3293dc1162958bbaea036b3c88b8f39ba52ef3",
+        "subject": "ci: re-ran Approvals / test-plans/Login/valid-login.md → failure",
+        "body": "ci: re-ran Approvals / test-plans/Login/valid-login.md → failure\n",
         "author": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789118007000
+          "time": 1789118423000
         },
         "committer": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789118007000
+          "time": 1789118423000
         },
         "branch": "main"
       },
@@ -51,24 +51,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/05acb891710fbb99a9f4f7526c2e5d4a102f0f73",
-            "commitHash": "05acb891710fbb99a9f4f7526c2e5d4a102f0f73",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34583607285"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/db3293dc1162958bbaea036b3c88b8f39ba52ef3",
+            "commitHash": "db3293dc1162958bbaea036b3c88b8f39ba52ef3",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34583813344"
           },
           "gitCommit": {
-            "shortHash": "05acb89",
-            "hash": "05acb891710fbb99a9f4f7526c2e5d4a102f0f73",
-            "subject": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure",
-            "body": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure\n",
+            "shortHash": "db3293d",
+            "hash": "db3293dc1162958bbaea036b3c88b8f39ba52ef3",
+            "subject": "ci: re-ran Approvals / test-plans/Login/valid-login.md → failure",
+            "body": "ci: re-ran Approvals / test-plans/Login/valid-login.md → failure\n",
             "author": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789118007000
+              "time": 1789118423000
             },
             "committer": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789118007000
+              "time": 1789118423000
             },
             "branch": "main"
           },
@@ -117,13 +117,13 @@
   },
   "suites": [
     {
-      "title": "projects/Approvals/test-plans/Login/valid-login.spec.ts",
-      "file": "projects/Approvals/test-plans/Login/valid-login.spec.ts",
+      "title": "projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts",
+      "file": "projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "TC-01 — Valid Login",
+          "title": "TC-01 — Valid Username and Invalid Password",
           "ok": false,
           "tags": [],
           "tests": [
@@ -138,56 +138,56 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 6588,
+                  "duration": 7307,
                   "error": {
                     "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/username/i)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByPlaceholder(/username/i) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/username/i)\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/username/i)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByPlaceholder(/username/i) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/username/i)\u001b[22m\n\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-login.spec.ts:17:52",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/username/i)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByPlaceholder(/username/i) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/username/i)\u001b[22m\n\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts:17:52",
                     "location": {
-                      "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-login.spec.ts",
+                      "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts",
                       "column": 52,
                       "line": 17
                     },
-                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m   \u001b[90m// STEP 2: SNAPSHOT — confirm the Approvals login page opens with all login elements displayed\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/login/\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[35m/username/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[35m/password/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/log ?in|sign in/i\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m   \u001b[90m// STEP 2: SNAPSHOT — confirm the Approvals login page opens with all login fields visible and functional\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/login/\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[35m/username/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[35m/password/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/log ?in|sign in/i\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-login.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts",
                         "column": 52,
                         "line": 17
                       },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/username/i)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByPlaceholder(/username/i) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/username/i)\u001b[22m\n\n\n  15 |   // STEP 2: SNAPSHOT — confirm the Approvals login page opens with all login elements displayed\n  16 |   await expect(page).toHaveURL(/login/);\n> 17 |   await expect(page.getByPlaceholder(/username/i)).toBeVisible();\n     |                                                    ^\n  18 |   await expect(page.getByPlaceholder(/password/i)).toBeVisible();\n  19 |   await expect(page.getByRole('button', { name: /log ?in|sign in/i })).toBeVisible();\n  20 |\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-login.spec.ts:17:52"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/username/i)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByPlaceholder(/username/i) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/username/i)\u001b[22m\n\n\n  15 |   // STEP 2: SNAPSHOT — confirm the Approvals login page opens with all login fields visible and functional\n  16 |   await expect(page).toHaveURL(/login/);\n> 17 |   await expect(page.getByPlaceholder(/username/i)).toBeVisible();\n     |                                                    ^\n  18 |   await expect(page.getByPlaceholder(/password/i)).toBeVisible();\n  19 |   await expect(page.getByRole('button', { name: /log ?in|sign in/i })).toBeVisible();\n  20 |\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts:17:52"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-11T09:20:14.413Z",
+                  "startTime": "2026-09-11T09:22:50.925Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/test-failed-1.png"
+                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/video.webm"
+                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/video.webm"
                     },
                     {
                       "name": "error-context",
                       "contentType": "text/markdown",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/error-context.md"
+                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/error-context.md"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/trace.zip"
+                      "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/trace.zip"
                     }
                   ],
                   "errorLocation": {
-                    "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-login.spec.ts",
+                    "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts",
                     "column": 52,
                     "line": 17
                   }
@@ -196,8 +196,8 @@
               "status": "unexpected"
             }
           ],
-          "id": "08263366c43f8678c30f-3f04236254cd56285f2e",
-          "file": "projects/Approvals/test-plans/Login/valid-login.spec.ts",
+          "id": "6990bcbce20b57feac80-cf2a9fe97fb3d2428021",
+          "file": "projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts",
           "line": 11,
           "column": 5
         }
@@ -206,8 +206,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-11T09:20:13.843Z",
-    "duration": 8876.005,
+    "startTime": "2026-09-11T09:22:50.438Z",
+    "duration": 8119.449,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,

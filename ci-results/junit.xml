@@ -1,19 +1,19 @@
-<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="8.876005">
-<testsuite name="projects/Approvals/test-plans/Login/valid-login.spec.ts" timestamp="2026-09-11T09:20:13.958Z" hostname="" tests="1" failures="1" skipped="0" time="6.588" errors="0">
-<testcase name="TC-01 — Valid Login" classname="projects/Approvals/test-plans/Login/valid-login.spec.ts" time="6.588">
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="8.119449">
+<testsuite name="projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts" timestamp="2026-09-11T09:22:50.534Z" hostname="" tests="1" failures="1" skipped="0" time="7.307" errors="0">
+<testcase name="TC-01 — Valid Username and Invalid Password" classname="projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts" time="7.307">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/test-failed-1.png]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/test-failed-1.png]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/video.webm]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/video.webm]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/error-context.md]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/error-context.md]]
 
-[[ATTACHMENT|artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/trace.zip]]
+[[ATTACHMENT|artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/trace.zip]]
 ]]>
 </system-out>
 <failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
-<![CDATA[  projects/Approvals/test-plans/Login/valid-login.spec.ts:11:5 › TC-01 — Valid Login ───────────────
+<![CDATA[  projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts:11:5 › TC-01 — Valid Username and Invalid Password 
 
     Error: expect(locator).toBeVisible() failed
 
@@ -27,30 +27,30 @@
       - waiting for getByPlaceholder(/username/i)
 
 
-      15 |   // STEP 2: SNAPSHOT — confirm the Approvals login page opens with all login elements displayed
+      15 |   // STEP 2: SNAPSHOT — confirm the Approvals login page opens with all login fields visible and functional
       16 |   await expect(page).toHaveURL(/login/);
     > 17 |   await expect(page.getByPlaceholder(/username/i)).toBeVisible();
          |                                                    ^
       18 |   await expect(page.getByPlaceholder(/password/i)).toBeVisible();
       19 |   await expect(page.getByRole('button', { name: /log ?in|sign in/i })).toBeVisible();
       20 |
-        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-login.spec.ts:17:52
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/Approvals/test-plans/Login/valid-username-invalid-password.spec.ts:17:52
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/test-failed-1.png
+    ci-results/artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/video.webm
+    ci-results/artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ci-results/artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/error-context.md
+    Error Context: ci-results/artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/error-context.md
 
     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ci-results/artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/trace.zip
+    ci-results/artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/trace.zip
     Usage:
 
-        npx playwright show-trace ci-results/artifacts/projects-Approvals-test-pl-2e1ea-d-login-TC-01-—-Valid-Login/trace.zip
+        npx playwright show-trace ci-results/artifacts/projects-Approvals-test-pl-d29cc-ername-and-Invalid-Password/trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
