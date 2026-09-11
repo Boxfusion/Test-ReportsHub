@@ -2792,7 +2792,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3374,7 +3374,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3668,7 +3668,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3828,7 +3828,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4084,7 +4084,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4340,7 +4340,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4372,7 +4372,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4696,7 +4696,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -5182,7 +5182,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -5322,7 +5322,7 @@
           "last": {
             "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "293.5s",
+            "duration": "294s",
             "variant": null,
             "reportHref": "test-reports/2026-09-11/verify-delete-alert.md"
           },
@@ -5331,7 +5331,7 @@
             {
               "date": "2026-09-11",
               "result": "FAILED",
-              "duration": "293.5s",
+              "duration": "294s",
               "variant": null
             },
             {
@@ -5584,7 +5584,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6070,7 +6070,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6294,7 +6294,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6539,7 +6539,7 @@
           "planDisplay": "Alerts/verify-delete-alert.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "293.5s",
+          "duration": "294s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/verify-delete-alert.md"
         }
@@ -7724,5 +7724,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T10:25:02.389Z"
+  "generated": "2026-09-11T10:58:57.813Z"
 }

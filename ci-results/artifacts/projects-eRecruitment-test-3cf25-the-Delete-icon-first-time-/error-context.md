@@ -22,18 +22,8 @@ Call log:
     - locator resolved to <button type="button" title="Delete" class="ant-btn css-1lo1l9k css-var-R4q ant-btn-circle ant-btn-link ant-btn-icon-only sha-link sha-action-button">…</button>
   - attempting click action
     - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-    - done scrolling
-    - <div aria-busy="true" aria-live="polite" class="ant-spin ant-spin-spinning css-1lo1l9k css-var-R4q">…</div> from <div>…</div> subtree intercepts pointer events
+    - element is not stable
   - retrying click action
-    - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-    - done scrolling
-    - element is not visible
-  - retrying click action
-    - waiting 20ms
     - waiting for element to be visible, enabled and stable
   - element was detached from the DOM, retrying
 

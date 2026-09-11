@@ -1,66 +1,66 @@
-<testsuites id="" name="" tests="14" failures="0" skipped="3" errors="1" time="293.490299">
-<testsuite name="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" timestamp="2026-09-11T10:20:08.332Z" hostname="" tests="14" failures="0" skipped="3" time="291.563" errors="1">
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-01: Login as Fred" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="14.829">
+<testsuites id="" name="" tests="14" failures="0" skipped="3" errors="1" time="293.99647100000004">
+<testsuite name="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" timestamp="2026-09-11T10:54:03.382Z" hostname="" tests="14" failures="0" skipped="3" time="290.856" errors="1">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-01: Login as Fred" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="14.18">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-02: Click on Alerts menu item" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="15.122">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-02: Click on Alerts menu item" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="14.727">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-03: Click Add Alert button" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="15.256">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-03: Click Add Alert button" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="15.258">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-04: Populate Job Title/Keywords" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="17.014">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-04: Populate Job Title/Keywords" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.809">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-05: Click Location dropdown" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.434">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-05: Click Location dropdown" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.296">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-06: Select a location, e.g. Head Office" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="17.297">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-06: Select a location, e.g. Head Office" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="18.037">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-07: Populate Min Salary" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.065">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-07: Populate Min Salary" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.007">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-08: Populate Max Salary" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.367">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-08: Populate Max Salary" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.258">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-09: Click Daily radio button" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="16.97">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-09: Click Daily radio button" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="17.256">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-10: Click OK button (create alert)" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="22.229">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-10: Click OK button (create alert)" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="23.135">
 <properties>
 <property name="serial" value="">
 </property>
 </properties>
 </testcase>
-<testcase name="ALERTS-106360 — Verify Delete Alert › TC-11: Click the Delete icon (first time)" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="123.98">
+<testcase name="ALERTS-106360 — Verify Delete Alert › TC-11: Click the Delete icon (first time)" classname="projects/eRecruitment/test-plans/Alerts/verify-delete-alert.spec.ts" time="122.893">
 <properties>
 <property name="serial" value="">
 </property>
@@ -87,18 +87,8 @@
         - locator resolved to <button type="button" title="Delete" class="ant-btn css-1lo1l9k css-var-R4q ant-btn-circle ant-btn-link ant-btn-icon-only sha-link sha-action-button">…</button>
       - attempting click action
         - waiting for element to be visible, enabled and stable
-        - element is visible, enabled and stable
-        - scrolling into view if needed
-        - done scrolling
-        - <div aria-busy="true" aria-live="polite" class="ant-spin ant-spin-spinning css-1lo1l9k css-var-R4q">…</div> from <div>…</div> subtree intercepts pointer events
+        - element is not stable
       - retrying click action
-        - waiting for element to be visible, enabled and stable
-        - element is visible, enabled and stable
-        - scrolling into view if needed
-        - done scrolling
-        - element is not visible
-      - retrying click action
-        - waiting 20ms
         - waiting for element to be visible, enabled and stable
       - element was detached from the DOM, retrying
 
