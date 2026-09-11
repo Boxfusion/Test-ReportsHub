@@ -4,7 +4,7 @@
       "/opt/hostedtoolcache/node/20.20.2/x64/bin/node",
       "/home/runner/work/Test-ReportsHub/Test-ReportsHub/node_modules/.bin/playwright",
       "test",
-      "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+      "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
       "--config=playwright.config.ci.ts"
     ],
     "configFile": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/playwright.config.ci.ts",
@@ -20,24 +20,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/bde265f5f821b1d23fbadd19723abe93e4a52641",
-        "commitHash": "bde265f5f821b1d23fbadd19723abe93e4a52641",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34575804784"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/9429929928dce9f0ae04678b75ff6a9caa823c83",
+        "commitHash": "9429929928dce9f0ae04678b75ff6a9caa823c83",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34578132534"
       },
       "gitCommit": {
-        "shortHash": "bde265f",
-        "hash": "bde265f5f821b1d23fbadd19723abe93e4a52641",
-        "subject": "ci: re-ran dep / test-plans/customers/create-customer.md → failure",
-        "body": "ci: re-ran dep / test-plans/customers/create-customer.md → failure\n",
+        "shortHash": "9429929",
+        "hash": "9429929928dce9f0ae04678b75ff6a9caa823c83",
+        "subject": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success",
+        "body": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success\n",
         "author": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789111816000
+          "time": 1789112735000
         },
         "committer": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789111816000
+          "time": 1789112735000
         },
         "branch": "main"
       },
@@ -51,24 +51,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/bde265f5f821b1d23fbadd19723abe93e4a52641",
-            "commitHash": "bde265f5f821b1d23fbadd19723abe93e4a52641",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34575804784"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/9429929928dce9f0ae04678b75ff6a9caa823c83",
+            "commitHash": "9429929928dce9f0ae04678b75ff6a9caa823c83",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34578132534"
           },
           "gitCommit": {
-            "shortHash": "bde265f",
-            "hash": "bde265f5f821b1d23fbadd19723abe93e4a52641",
-            "subject": "ci: re-ran dep / test-plans/customers/create-customer.md → failure",
-            "body": "ci: re-ran dep / test-plans/customers/create-customer.md → failure\n",
+            "shortHash": "9429929",
+            "hash": "9429929928dce9f0ae04678b75ff6a9caa823c83",
+            "subject": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success",
+            "body": "ci: re-ran HCM / test-plans/eLeave/acknowledge-leave-approved-without-pay.md → success\n",
             "author": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789111816000
+              "time": 1789112735000
             },
             "committer": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789111816000
+              "time": 1789112735000
             },
             "branch": "main"
           },
@@ -117,20 +117,20 @@
   },
   "suites": [
     {
-      "title": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-      "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+      "title": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+      "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay",
-          "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-          "line": 25,
+          "title": "BAS — DHA Invoice Tracking Process",
+          "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+          "line": 71,
           "column": 6,
           "specs": [
             {
-              "title": "TC-01: Login as Admin",
+              "title": "TC-01: Login (Admin)",
               "ok": true,
               "tags": [],
               "tests": [
@@ -145,12 +145,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 15811,
+                      "duration": 29039,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T07:45:17.564Z",
+                      "startTime": "2026-09-11T08:14:13.966Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -158,13 +158,92 @@
                   "status": "expected"
                 }
               ],
-              "id": "85cb2748c8615c5d9fc1-ecf35509c651c7fae6a6",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 27,
+              "id": "0ef439ed7c5b38481089-30d00d5f000f350fe1f4",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 72,
               "column": 7
             },
             {
-              "title": "TC-02: Route item to the next step when 'Submit' button is clicked",
+              "title": "TC-02: Register and Upload Invoice (ADO #102362)",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 25941,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'plus Create New down' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'plus Create New down' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'plus Create New down' })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'plus Create New down' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'plus Create New down' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'plus Create New down' })\u001b[22m\n\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts:83:78",
+                        "location": {
+                          "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                          "column": 78,
+                          "line": 83
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 81 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[33mMY_ITEMS_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 82 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 83 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'plus Create New down'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 84 |\u001b[39m\n \u001b[90m 85 |\u001b[39m     \u001b[90m// STEP: Create New -> BAS Request For Payment\u001b[39m\n \u001b[90m 86 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'plus Create New down'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "column": 78,
+                            "line": 83
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'plus Create New down' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'plus Create New down' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'plus Create New down' })\u001b[22m\n\n\n  81 |     await page.goto(MY_ITEMS_URL);\n  82 |     await page.waitForLoadState('networkidle');\n> 83 |     await expect(page.getByRole('button', { name: 'plus Create New down' })).toBeVisible();\n     |                                                                              ^\n  84 |\n  85 |     // STEP: Create New -> BAS Request For Payment\n  86 |     await page.getByRole('button', { name: 'plus Create New down' }).click();\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts:83:78"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:14:43.244Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "column": 78,
+                        "line": 83
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0ef439ed7c5b38481089-6a27827458a49a2278d9",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "TC-03: Assign Branch Finance Admin to Assign Certifier (ADO #102369)",
               "ok": true,
               "tags": [],
               "tests": [
@@ -172,11 +251,12 @@
                   "timeout": 90000,
                   "annotations": [
                     {
-                      "type": "fixme",
+                      "type": "skip",
+                      "description": "TC-02 did not produce a Ref No",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 46,
-                        "column": 8
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 146,
+                        "column": 10
                       }
                     }
                   ],
@@ -185,22 +265,23 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 0,
+                      "duration": 253,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.624Z",
+                      "startTime": "2026-09-11T08:15:10.266Z",
                       "annotations": [
                         {
-                          "type": "fixme",
+                          "type": "skip",
+                          "description": "TC-02 did not produce a Ref No",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 46,
-                            "column": 8
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 146,
+                            "column": 10
                           }
                         }
                       ],
@@ -210,13 +291,13 @@
                   "status": "skipped"
                 }
               ],
-              "id": "85cb2748c8615c5d9fc1-06ba7aad84437c394a75",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 46,
-              "column": 8
+              "id": "0ef439ed7c5b38481089-b19ebdbfc47c3f27d08a",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 145,
+              "column": 7
             },
             {
-              "title": "TC-03: Change status to 'Approved Without Full Pay' when 'Submit' button is clicked",
+              "title": "TC-04: Assign Responsible Person to Certify Invoice (ADO #102370)",
               "ok": true,
               "tags": [],
               "tests": [
@@ -224,11 +305,12 @@
                   "timeout": 90000,
                   "annotations": [
                     {
-                      "type": "fixme",
+                      "type": "skip",
+                      "description": "TC-02 did not produce a Ref No",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 61,
-                        "column": 8
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 165,
+                        "column": 10
                       }
                     }
                   ],
@@ -237,22 +319,23 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 0,
+                      "duration": 216,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.624Z",
+                      "startTime": "2026-09-11T08:15:10.625Z",
                       "annotations": [
                         {
-                          "type": "fixme",
+                          "type": "skip",
+                          "description": "TC-02 did not produce a Ref No",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 61,
-                            "column": 8
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 165,
+                            "column": 10
                           }
                         }
                       ],
@@ -262,13 +345,13 @@
                   "status": "skipped"
                 }
               ],
-              "id": "85cb2748c8615c5d9fc1-9df855040d879805adf5",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 61,
-              "column": 8
+              "id": "0ef439ed7c5b38481089-4418c4cff2da3e740fea",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 164,
+              "column": 7
             },
             {
-              "title": "TC-04: System should not allow a user to action an item without checking the declaration box",
+              "title": "TC-05: Certify Invoice (ADO #102372)",
               "ok": true,
               "tags": [],
               "tests": [
@@ -276,11 +359,12 @@
                   "timeout": 90000,
                   "annotations": [
                     {
-                      "type": "fixme",
+                      "type": "skip",
+                      "description": "TC-02 did not produce a Ref No",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 76,
-                        "column": 8
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 184,
+                        "column": 10
                       }
                     }
                   ],
@@ -289,22 +373,23 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 0,
+                      "duration": 187,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.624Z",
+                      "startTime": "2026-09-11T08:15:10.855Z",
                       "annotations": [
                         {
-                          "type": "fixme",
+                          "type": "skip",
+                          "description": "TC-02 did not produce a Ref No",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 76,
-                            "column": 8
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 184,
+                            "column": 10
                           }
                         }
                       ],
@@ -314,13 +399,13 @@
                   "status": "skipped"
                 }
               ],
-              "id": "85cb2748c8615c5d9fc1-4a6709a21cab6fd2eb52",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 76,
-              "column": 8
+              "id": "0ef439ed7c5b38481089-ab1d0b873123ac7e04c3",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 183,
+              "column": 7
             },
             {
-              "title": "TC-05: Display 'Override' dialog when 'Override' button is clicked",
+              "title": "TC-06: Review Invoice Rejection (ADO #102378) — driven live via MCP",
               "ok": true,
               "tags": [],
               "tests": [
@@ -328,373 +413,9 @@
                   "timeout": 90000,
                   "annotations": [
                     {
-                      "type": "fixme",
+                      "type": "skip",
                       "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 91,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.625Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 91,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-28069e0298df73e0986f",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 91,
-              "column": 8
-            },
-            {
-              "title": "TC-06: Display 'Send Back to Approver' dialog when 'Send Back to Approver' button is clicked",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 106,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.625Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 106,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-bbc321fbe5602ba2e814",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 106,
-              "column": 8
-            },
-            {
-              "title": "TC-07: Display 'Refer Back' dialog when 'Refer Back' button is clicked",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 121,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.625Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 121,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-e6d39f290604906ba99e",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 121,
-              "column": 8
-            },
-            {
-              "title": "TC-08: Display 'Close Leave Application' dialog when 'Close' button is clicked",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 136,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.625Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 136,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-9dae6bac0452fa72b160",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 136,
-              "column": 8
-            },
-            {
-              "title": "TC-09: System should not allow action without downloading supporting documents",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 151,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.625Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 151,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-7ce97b465ff2f5b27e04",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 151,
-              "column": 8
-            },
-            {
-              "title": "TC-10: System should not allow action without reviewing supporting documents",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 166,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.626Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 166,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-593b9fb610257f8f2e10",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 166,
-              "column": 8
-            },
-            {
-              "title": "TC-11: A user should be able to view the captured leave application details",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                        "line": 185,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.626Z",
-                      "annotations": [
-                        {
-                          "type": "fixme",
-                          "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-                            "line": 185,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "85cb2748c8615c5d9fc1-0dd7bd83f961ecaa72ab",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
-              "line": 185,
-              "column": 8
-            },
-            {
-              "title": "TC-12: A user should be able to download supporting documents",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [
-                    {
-                      "type": "fixme",
-                      "location": {
-                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
                         "line": 198,
                         "column": 8
                       }
@@ -705,7 +426,7 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
                       "duration": 0,
@@ -713,12 +434,12 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T07:45:33.626Z",
+                      "startTime": "2026-09-11T08:15:11.055Z",
                       "annotations": [
                         {
-                          "type": "fixme",
+                          "type": "skip",
                           "location": {
-                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
                             "line": 198,
                             "column": 8
                           }
@@ -730,9 +451,431 @@
                   "status": "skipped"
                 }
               ],
-              "id": "85cb2748c8615c5d9fc1-5e635aca7f59e6e7c100",
-              "file": "projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
+              "id": "0ef439ed7c5b38481089-53c904edaf5dbb94aace",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
               "line": 198,
+              "column": 8
+            },
+            {
+              "title": "TC-07: Prepare Voucher (ADO #102361)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "TC-02 did not produce a Ref No",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 201,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 176,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:15:11.056Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "TC-02 did not produce a Ref No",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 201,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0ef439ed7c5b38481089-78b85e452b89cce45c12",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 200,
+              "column": 7
+            },
+            {
+              "title": "TC-08: Respond to Queries / Business Related Query (ADO #102398) — driven live via MCP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 220,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:15:11.256Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 220,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0ef439ed7c5b38481089-6a112949a4b18d6f29d3",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 220,
+              "column": 8
+            },
+            {
+              "title": "TC-09: Manage Supplier related Queries (ADO #102399) — driven live via MCP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 221,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:15:11.256Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 221,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0ef439ed7c5b38481089-47a1c6ae1849adcd6008",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 221,
+              "column": 8
+            },
+            {
+              "title": "TC-10: Verify Voucher (ADO #102380)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "TC-02 did not produce a Ref No",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 224,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 180,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:15:11.257Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "TC-02 did not produce a Ref No",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 224,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0ef439ed7c5b38481089-01a9c48e2800084071d7",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 223,
+              "column": 7
+            },
+            {
+              "title": "TC-11: Authorise Invoice Voucher (ADO #102383)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "TC-02 did not produce a Ref No",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 243,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 218,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:15:11.451Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "TC-02 did not produce a Ref No",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 243,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0ef439ed7c5b38481089-ec7983e407a73ced4713",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 242,
+              "column": 7
+            },
+            {
+              "title": "TC-12: Upload Captured Invoices Report / Final Authorise Payment (ADO #102360) — BAS import via MCP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 259,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:15:11.690Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 259,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0ef439ed7c5b38481089-864d72bc104974d021b2",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 259,
+              "column": 8
+            },
+            {
+              "title": "TC-13: Attach Payment Stub (ADO #102359) — stub import via MCP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 260,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:15:11.690Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 260,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0ef439ed7c5b38481089-18da1d737802fd569ae5",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 260,
+              "column": 8
+            },
+            {
+              "title": "TC-14: Capture Filing (ADO #102358) — driven live via MCP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                        "line": 261,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T08:15:11.690Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+                            "line": 261,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0ef439ed7c5b38481089-d5a47d679872f29372ce",
+              "file": "projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts",
+              "line": 261,
               "column": 8
             }
           ]
@@ -742,11 +885,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-11T07:45:16.911Z",
-    "duration": 16764.766,
+    "startTime": "2026-09-11T08:14:13.279Z",
+    "duration": 58448.78200000001,
     "expected": 1,
-    "skipped": 11,
-    "unexpected": 0,
+    "skipped": 12,
+    "unexpected": 1,
     "flaky": 0
   }
 }

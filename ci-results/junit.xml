@@ -1,90 +1,154 @@
-<testsuites id="" name="" tests="12" failures="0" skipped="11" errors="0" time="16.764765999999998">
-<testsuite name="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts" timestamp="2026-09-11T07:45:17.077Z" hostname="" tests="12" failures="0" skipped="11" time="15.811" errors="0">
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-01: Login as Admin" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts" time="15.811">
+<testsuites id="" name="" tests="14" failures="1" skipped="12" errors="0" time="58.44878200000001">
+<testsuite name="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts" timestamp="2026-09-11T08:14:13.494Z" hostname="" tests="14" failures="1" skipped="12" time="56.21" errors="0">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-01: Login (Admin)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts" time="29.039">
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-02: Route item to the next step when &apos;Submit&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-02: Register and Upload Invoice (ADO #102362)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts" time="25.941">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/video.webm]]
+
+[[ATTACHMENT|artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/error-context.md]]
+
+[[ATTACHMENT|artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts:78:7 › BAS — DHA Invoice Tracking Process › TC-02: Register and Upload Invoice (ADO #102362) 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'plus Create New down' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: 'plus Create New down' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'plus Create New down' })
+
+
+      81 |     await page.goto(MY_ITEMS_URL);
+      82 |     await page.waitForLoadState('networkidle');
+    > 83 |     await expect(page.getByRole('button', { name: 'plus Create New down' })).toBeVisible();
+         |                                                                              ^
+      84 |
+      85 |     // STEP: Create New -> BAS Request For Payment
+      86 |     await page.getByRole('button', { name: 'plus Create New down' }).click();
+        at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts:83:78
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/trace.zip
+    Usage:
+
+        npx playwright show-trace ci-results/artifacts/projects-DHA-Invoice-Track-2ba6f--Upload-Invoice-ADO-102362-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="BAS — DHA Invoice Tracking Process › TC-03: Assign Branch Finance Admin to Assign Certifier (ADO #102369)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="TC-02 did not produce a Ref No">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-03: Change status to &apos;Approved Without Full Pay&apos; when &apos;Submit&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-04: Assign Responsible Person to Certify Invoice (ADO #102370)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="TC-02 did not produce a Ref No">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-04: System should not allow a user to action an item without checking the declaration box" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-05: Certify Invoice (ADO #102372)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="TC-02 did not produce a Ref No">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-05: Display &apos;Override&apos; dialog when &apos;Override&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-06: Review Invoice Rejection (ADO #102378) — driven live via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-06: Display &apos;Send Back to Approver&apos; dialog when &apos;Send Back to Approver&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-07: Prepare Voucher (ADO #102361)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="TC-02 did not produce a Ref No">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-07: Display &apos;Refer Back&apos; dialog when &apos;Refer Back&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-08: Respond to Queries / Business Related Query (ADO #102398) — driven live via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-08: Display &apos;Close Leave Application&apos; dialog when &apos;Close&apos; button is clicked" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-09: Manage Supplier related Queries (ADO #102399) — driven live via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-09: System should not allow action without downloading supporting documents" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-10: Verify Voucher (ADO #102380)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="TC-02 did not produce a Ref No">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-10: System should not allow action without reviewing supporting documents" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-11: Authorise Invoice Voucher (ADO #102383)" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="TC-02 did not produce a Ref No">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-11: A user should be able to view the captured leave application details" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-12: Upload Captured Invoices Report / Final Authorise Payment (ADO #102360) — BAS import via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="">
 </property>
 </properties>
 <skipped>
 </skipped>
 </testcase>
-<testcase name="ELEAVE-ACK-WITHOUT-PAY — Acknowledge Leave Approved Without Pay › TC-12: A user should be able to download supporting documents" classname="projects/HCM/test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts">
+<testcase name="BAS — DHA Invoice Tracking Process › TC-13: Attach Payment Stub (ADO #102359) — stub import via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
 <properties>
-<property name="fixme" value="">
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="BAS — DHA Invoice Tracking Process › TC-14: Capture Filing (ADO #102358) — driven live via MCP" classname="projects/DHA-Invoice-Tracking/test-plans/invoice-process/bas.spec.ts">
+<properties>
+<property name="skip" value="">
 </property>
 </properties>
 <skipped>
