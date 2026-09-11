@@ -6,8 +6,8 @@
 
 # Test info
 
-- Name: projects/Approvals/test-plans/Memo/verify-close-memo.spec.ts >> TC-01 — Verify Close Memo
-- Location: projects/Approvals/test-plans/Memo/verify-close-memo.spec.ts:63:5
+- Name: projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.spec.ts >> TC-01 — Verify Comments Are Mandatory For Negative Actions
+- Location: projects/Approvals/test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.spec.ts:63:5
 
 # Error details
 
@@ -31,13 +31,17 @@ Call log:
       - <a class="nav-links-renderer" href="/dynamic/Shesha.Workflow/workflows-inbox">Inbox</a> from <div>…</div> subtree intercepts pointer events
     - retrying click action
       - waiting 100ms
-    12 × waiting for element to be visible, enabled and stable
+    11 × waiting for element to be visible, enabled and stable
        - element is visible, enabled and stable
        - scrolling into view if needed
        - done scrolling
        - <a class="nav-links-renderer" href="/dynamic/Shesha.Workflow/workflows-inbox">Inbox</a> from <div>…</div> subtree intercepts pointer events
      - retrying click action
        - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
 
 ```
 
@@ -303,8 +307,8 @@ Call log:
 # Test source
 
 ```ts
-  1   | // AUTO-RECORDED from test-plans/Memo/verify-close-memo.md
-  2   | // Source: Azure DevOps test plan #100853, suite #100854, test case #105864
+  1   | // AUTO-RECORDED from test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.md
+  2   | // Source: Azure DevOps test plan #100853, suite #100854, test case #105910
   3   | // The .md plan is canonical. AI-repair will patch failing lines in this file.
   4   | // Do not hand-edit unless you are also updating the .md plan.
   5   | 
@@ -366,7 +370,7 @@ Call log:
   60  |   throw new Error(`Could not find an approver option matching ${matcher} within ${maxPresses} ArrowDown presses`);
   61  | }
   62  | 
-  63  | test('TC-01 — Verify Close Memo', async ({ page }) => {
+  63  | test('TC-01 — Verify Comments Are Mandatory For Negative Actions', async ({ page }) => {
   64  |   test.setTimeout(300_000);
   65  | 
   66  |   // STEP 1: NAVIGATE to login page and log in as Ian (initiator)
@@ -375,64 +379,64 @@ Call log:
   69  | 
   70  |   // STEP 2: CLICK the "Click to change view mode" control to open the Live/Ready/Latest popover,
   71  |   // then CLICK the "Latest" option in that popover.
-  72  |   // FRAGILE: clicking "Latest" immediately after the popover opens can race its open animation and miss
-  73  |   // — retry with a short settle wait if the badge hasn't updated.
-  74  |   const viewModeControl = page.locator('[title="Click to change view mode"]');
-  75  |   for (let attempt = 0; attempt < 3; attempt++) {
-  76  |     await viewModeControl.click();
-  77  |     await page.waitForTimeout(300);
-  78  |     await page.getByText('Latest', { exact: true }).click();
-  79  |     try {
-  80  |       await expect(viewModeControl).toContainText(/latest/i, { timeout: 5_000 });
-  81  |       break;
-  82  |     } catch (err) {
-  83  |       if (attempt === 2) throw err;
-  84  |     }
-  85  |   }
-  86  | 
-  87  |   // STEP 3: CLICK the sidebar Toggle in the top-left corner
-  88  |   const toggle = page.locator('.ant-layout-sider-trigger, [class*="trigger"], [aria-label*="toggle" i], [aria-label*="menu" i]').first();
-  89  |   await toggle.click();
-  90  | 
-  91  |   // STEP 4: CLICK the Workflows dropdown
-  92  |   await page.getByText(/^Workflows?$/i).first().click();
-  93  |   await expect(page.getByText(/^Inbox$/i).first()).toBeVisible({ timeout: 10_000 });
-  94  | 
-  95  |   // STEP 5: CLICK the My Items menu item
-  96  |   await page.goto(`${APP_URL}/dynamic/Shesha.Workflow/workflows-my-items`, { waitUntil: 'domcontentloaded', timeout: 30_000 });
-  97  |   await page.waitForLoadState('networkidle');
-  98  |   await expect(page.getByRole('button', { name: /create new/i })).toBeVisible({ timeout: 15_000 });
-  99  | 
-  100 |   // STEP 6: CLICK the Create New button
-  101 |   await clickWithFlyoutRetry(page, page.getByRole('button', { name: /create new/i }));
-  102 | 
-  103 |   // STEP 7: CLICK the New Referrals subtype
-  104 |   await expect(page.getByRole('menuitem', { name: /new referrals?/i })).toBeVisible({ timeout: 10_000 });
-  105 |   await clickWithFlyoutRetry(page, page.getByRole('menuitem', { name: /new referrals?/i }));
-  106 | 
-  107 |   // STEP 8: POPULATE all mandatory Compose fields and ACTION the item to Routing.
-  108 |   // The system enforces "The CC recipient must be one of the routing approvers" (confirmed live in
-  109 |   // #102699) — CC must select the same person who will be added as the routing approver (Craig).
-  110 |   await expect(page.getByText(/subject/i).first()).toBeVisible({ timeout: 15_000 });
-  111 |   const ccField = page.getByRole('combobox').nth(1);
-  112 |   await ccField.click();
-  113 |   const ccDropdownPanel = page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden)');
-  114 |   await expect(ccDropdownPanel).toBeVisible({ timeout: 10_000 });
-  115 |   await selectApproverOption(page, /craig/i);
-  116 |   const ccContainer = ccField.locator('xpath=../..');
-  117 |   await expect(ccContainer).toContainText(/craig/i, { timeout: 10_000 });
-  118 | 
-  119 |   await page.getByRole('textbox').nth(1).fill('Test Subject');
-  120 | 
-  121 |   const tabNames = ['Purpose', 'Background', 'Discussion', 'Financial Implications', 'Risks', 'Recommendation'];
-  122 |   for (const name of tabNames) {
-  123 |     const tab = page.getByRole('tab', { name: new RegExp(name, 'i') });
-  124 |     for (let attempt = 0; attempt < 3; attempt++) {
-  125 |       await tab.click();
-  126 |       try {
-  127 |         await expect(tab).toHaveAttribute('aria-selected', 'true', { timeout: 4_000 });
-  128 |         break;
-  129 |       } catch (err) {
-  130 |         if (attempt === 2) throw err;
-  131 |         await page.waitForTimeout(500);
+  72  |   const viewModeControl = page.locator('[title="Click to change view mode"]');
+  73  |   for (let attempt = 0; attempt < 3; attempt++) {
+  74  |     await viewModeControl.click();
+  75  |     await page.waitForTimeout(300);
+  76  |     await page.getByText('Latest', { exact: true }).click();
+  77  |     try {
+  78  |       await expect(viewModeControl).toContainText(/latest/i, { timeout: 5_000 });
+  79  |       break;
+  80  |     } catch (err) {
+  81  |       if (attempt === 2) throw err;
+  82  |     }
+  83  |   }
+  84  | 
+  85  |   // STEP 3: CLICK the sidebar Toggle in the top-left corner
+  86  |   const toggle = page.locator('.ant-layout-sider-trigger, [class*="trigger"], [aria-label*="toggle" i], [aria-label*="menu" i]').first();
+  87  |   await toggle.click();
+  88  | 
+  89  |   // STEP 4: CLICK the Workflows dropdown
+  90  |   await page.getByText(/^Workflows?$/i).first().click();
+  91  |   await expect(page.getByText(/^Inbox$/i).first()).toBeVisible({ timeout: 10_000 });
+  92  | 
+  93  |   // STEP 5: CLICK the My Items menu item
+  94  |   await page.goto(`${APP_URL}/dynamic/Shesha.Workflow/workflows-my-items`, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+  95  |   await page.waitForLoadState('networkidle');
+  96  |   await expect(page.getByRole('button', { name: /create new/i })).toBeVisible({ timeout: 15_000 });
+  97  | 
+  98  |   // STEP 6: CLICK the Create New button. Retried: this occasionally doesn't open its menu on the first
+  99  |   // click if the page is still settling.
+  100 |   const newReferralsItem = page.getByRole('menuitem', { name: /new referrals?/i });
+  101 |   for (let attempt = 0; attempt < 3; attempt++) {
+  102 |     await clickWithFlyoutRetry(page, page.getByRole('button', { name: /create new/i }));
+  103 |     try {
+  104 |       await expect(newReferralsItem).toBeVisible({ timeout: 6_000 });
+  105 |       break;
+  106 |     } catch (err) {
+  107 |       if (attempt === 2) throw err;
+  108 |     }
+  109 |   }
+  110 | 
+  111 |   // STEP 7: CLICK the New Referrals subtype
+  112 |   await clickWithFlyoutRetry(page, newReferralsItem);
+  113 | 
+  114 |   // STEP 8: POPULATE all mandatory Compose fields and ACTION the item to Routing.
+  115 |   // The system enforces "The CC recipient must be one of the routing approvers" (confirmed live in
+  116 |   // #102699) — CC must select the same person who will be added as the routing approver (Craig).
+  117 |   await expect(page.getByText(/subject/i).first()).toBeVisible({ timeout: 15_000 });
+  118 |   const ccField = page.getByRole('combobox').nth(1);
+  119 |   await ccField.click();
+  120 |   const ccDropdownPanel = page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden)');
+  121 |   await expect(ccDropdownPanel).toBeVisible({ timeout: 10_000 });
+  122 |   await selectApproverOption(page, /craig/i);
+  123 |   const ccContainer = ccField.locator('xpath=../..');
+  124 |   await expect(ccContainer).toContainText(/craig/i, { timeout: 10_000 });
+  125 | 
+  126 |   await page.getByRole('textbox').nth(1).fill('Test Subject');
+  127 | 
+  128 |   const tabNames = ['Purpose', 'Background', 'Discussion', 'Financial Implications', 'Risks', 'Recommendation'];
+  129 |   for (const name of tabNames) {
+  130 |     const tab = page.getByRole('tab', { name: new RegExp(name, 'i') });
+  131 |     for (let attempt = 0; attempt < 3; attempt++) {
 ```
