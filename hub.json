@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-29T11:53:03.337Z",
+  "generated": "2026-09-11T07:17:04.252Z",
   "projects": [
     {
       "name": "dep",
@@ -12,9 +12,9 @@
       "summary": {
         "totalPlans": 6,
         "totalRuns": 11,
-        "last7Runs": 4,
+        "last7Runs": 0,
         "last7Pass": 0,
-        "last7PassPct": 0,
+        "last7PassPct": null,
         "failingFlows": 2,
         "lastRun": {
           "date": "2026-05-28",
@@ -31,18 +31,18 @@
       "environment": "QA",
       "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
       "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
-      "health": "healthy",
+      "health": "failing",
       "summary": {
-        "totalPlans": 1,
-        "totalRuns": 1,
+        "totalPlans": 27,
+        "totalRuns": 27,
         "last7Runs": 1,
-        "last7Pass": 1,
-        "last7PassPct": 100,
-        "failingFlows": 0,
+        "last7Pass": 0,
+        "last7PassPct": 0,
+        "failingFlows": 1,
         "lastRun": {
-          "date": "2026-05-29",
-          "result": "PASSED",
-          "plan": "test-plans/performance-agreements/smoke-happy-path.md"
+          "date": "2026-09-11",
+          "result": "FAILED",
+          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md"
         }
       },
       "href": "projects/HCM/index.html"
@@ -50,9 +50,9 @@
   ],
   "totals": {
     "totalProjects": 2,
-    "totalPlans": 7,
-    "totalRuns": 12,
-    "last7Runs": 5,
-    "failingFlows": 2
+    "totalPlans": 33,
+    "totalRuns": 38,
+    "last7Runs": 1,
+    "failingFlows": 3
   }
 }

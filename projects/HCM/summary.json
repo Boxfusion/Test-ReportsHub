@@ -1,13 +1,13 @@
 {
   "totalPlans": 27,
-  "totalRuns": 26,
-  "last7Runs": 25,
-  "last7Pass": 25,
-  "last7PassPct": 100,
-  "failingFlows": 0,
+  "totalRuns": 27,
+  "last7Runs": 1,
+  "last7Pass": 0,
+  "last7PassPct": 0,
+  "failingFlows": 1,
   "lastRun": {
-    "date": "2026-06-05",
-    "result": "PASSED",
-    "plan": "test-plans/eLeaveSmokeTest/application-for-leave.md"
+    "date": "2026-09-11",
+    "result": "FAILED",
+    "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md"
   }
 }
