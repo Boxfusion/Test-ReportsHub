@@ -2760,7 +2760,7 @@
           "last": {
             "date": "2026-09-11",
             "result": "FAILED",
-            "duration": "3.2s",
+            "duration": "3.3s",
             "variant": null,
             "reportHref": "test-reports/2026-09-11/create-service-request-v2.md"
           },
@@ -2769,7 +2769,7 @@
             {
               "date": "2026-09-11",
               "result": "FAILED",
-              "duration": "3.2s",
+              "duration": "3.3s",
               "variant": null
             },
             {
@@ -2876,7 +2876,7 @@
           "planDisplay": "service-requests/create-service-request-v2.md",
           "variant": null,
           "result": "FAILED",
-          "duration": "3.2s",
+          "duration": "3.3s",
           "mode": "ci-playwright-script",
           "reportHref": "test-reports/2026-09-11/create-service-request-v2.md"
         }
@@ -3041,5 +3041,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T09:11:49.908Z"
+  "generated": "2026-09-11T09:13:27.178Z"
 }

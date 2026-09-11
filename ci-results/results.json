@@ -20,24 +20,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
-        "commitHash": "786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
-        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34582889201"
+        "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/c969bdd8af7c2126cc85b6a813b4f5f93a17368b",
+        "commitHash": "c969bdd8af7c2126cc85b6a813b4f5f93a17368b",
+        "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34583038098"
       },
       "gitCommit": {
-        "shortHash": "786218c",
-        "hash": "786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
-        "subject": "ci: re-ran Approvals / test-plans/Login/invalid-login.md → failure",
-        "body": "ci: re-ran Approvals / test-plans/Login/invalid-login.md → failure\n",
+        "shortHash": "c969bdd",
+        "hash": "c969bdd8af7c2126cc85b6a813b4f5f93a17368b",
+        "subject": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure",
+        "body": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure\n",
         "author": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789117794000
+          "time": 1789117910000
         },
         "committer": {
           "name": "Boxfusion CI",
           "email": "ci@boxfusion",
-          "time": 1789117794000
+          "time": 1789117910000
         },
         "branch": "main"
       },
@@ -51,24 +51,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
-            "commitHash": "786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
-            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34582889201"
+            "commitHref": "https://github.com/Boxfusion/Test-ReportsHub/commit/c969bdd8af7c2126cc85b6a813b4f5f93a17368b",
+            "commitHash": "c969bdd8af7c2126cc85b6a813b4f5f93a17368b",
+            "buildHref": "https://github.com/Boxfusion/Test-ReportsHub/actions/runs/34583038098"
           },
           "gitCommit": {
-            "shortHash": "786218c",
-            "hash": "786218c1a3c15632f1e2bbc9db642a1f2aedb14e",
-            "subject": "ci: re-ran Approvals / test-plans/Login/invalid-login.md → failure",
-            "body": "ci: re-ran Approvals / test-plans/Login/invalid-login.md → failure\n",
+            "shortHash": "c969bdd",
+            "hash": "c969bdd8af7c2126cc85b6a813b4f5f93a17368b",
+            "subject": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure",
+            "body": "ci: re-ran dep / test-plans/service-requests/create-service-request-v2.md → failure\n",
             "author": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789117794000
+              "time": 1789117910000
             },
             "committer": {
               "name": "Boxfusion CI",
               "email": "ci@boxfusion",
-              "time": 1789117794000
+              "time": 1789117910000
             },
             "branch": "main"
           },
@@ -145,7 +145,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 306,
+                      "duration": 308,
                       "error": {
                         "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:21:16",
@@ -169,7 +169,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T09:11:46.578Z",
+                      "startTime": "2026-09-11T09:13:23.276Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -224,7 +224,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 316,
+                      "duration": 315,
                       "error": {
                         "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n\n    at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:11:14)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:44:11",
@@ -248,7 +248,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T09:11:47.703Z",
+                      "startTime": "2026-09-11T09:13:24.388Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -303,7 +303,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 308,
+                      "duration": 369,
                       "error": {
                         "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://linux-dep-adminportal-test.azurewebsites.net/\nCall log:\n\u001b[2m  - navigating to \"https://linux-dep-adminportal-test.azurewebsites.net/\", waiting until \"load\"\u001b[22m\n\n    at loginAsAdmin (/home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:11:14)\n    at /home/runner/work/Test-ReportsHub/Test-ReportsHub/projects/dep/test-plans/service-requests/create-service-request-v2.spec.ts:63:11",
@@ -327,7 +327,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-11T09:11:48.668Z",
+                      "startTime": "2026-09-11T09:13:25.371Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -373,8 +373,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-11T09:11:45.919Z",
-    "duration": 3233.925,
+    "startTime": "2026-09-11T09:13:22.610Z",
+    "duration": 3315.187,
     "expected": 0,
     "skipped": 0,
     "unexpected": 3,
