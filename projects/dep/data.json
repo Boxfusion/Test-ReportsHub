@@ -2629,6 +2629,10 @@
           "canRun": false,
           "badges": [
             {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            },
+            {
               "kind": "no-spec",
               "text": "no .spec.ts yet"
             }
@@ -2708,7 +2712,12 @@
           "spec": "test-plans/customers/create-customer.spec.ts",
           "specHref": "test-plans/customers/create-customer.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2754,7 +2763,12 @@
           "spec": "test-plans/service-requests/create-service-request-v2.spec.ts",
           "specHref": "test-plans/service-requests/create-service-request-v2.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3041,5 +3055,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T10:58:57.721Z"
+  "generated": "2026-09-12T02:42:22.028Z"
 }

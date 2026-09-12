@@ -22,7 +22,7 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 258,
+    "totalRuns": 293,
     "last7Runs": 225,
     "last7Pass": 0,
     "last7PassPct": 0,
@@ -2578,9 +2578,9 @@
       },
       {
         "iso": "2026-09-12",
-        "runs": 0,
+        "runs": 35,
         "passed": 0,
-        "failed": 0,
+        "failed": 35,
         "partial": 0
       }
     ]
@@ -2601,14 +2601,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "18.3s",
+            "duration": "20.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/empty-username-and-password.md"
+            "reportHref": "test-reports/2026-09-12/empty-username-and-password.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "20.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -2670,14 +2676,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "11s",
+            "duration": "7.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/invalid-login.md"
+            "reportHref": "test-reports/2026-09-12/invalid-login.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "7.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -2730,6 +2742,75 @@
           "bugs": []
         },
         {
+          "plan": "test-plans/Login/invalid-username-valid-password.md",
+          "planHref": "test-plans/Login/invalid-username-valid-password.md",
+          "spec": "test-plans/Login/invalid-username-valid-password.spec.ts",
+          "specHref": "test-plans/Login/invalid-username-valid-password.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-09-12",
+            "result": "FAILED",
+            "duration": "8.3s",
+            "variant": null,
+            "reportHref": "test-reports/2026-09-12/invalid-username-valid-password.md"
+          },
+          "runCount": 8,
+          "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "8.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-10",
+              "result": "FAILED",
+              "duration": "8.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-09",
+              "result": "FAILED",
+              "duration": "7.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-08",
+              "result": "FAILED",
+              "duration": "7.8s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-07",
+              "result": "FAILED",
+              "duration": "7.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "8.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "7.5s",
+              "variant": null
+            },
+            {
+              "date": "2026-07-07",
+              "result": "PASSED",
+              "duration": "10.8s",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
           "plan": "test-plans/Login/valid-login.md",
           "planHref": "test-plans/Login/valid-login.md",
           "spec": "test-plans/Login/valid-login.spec.ts",
@@ -2739,14 +2820,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "8.9s",
+            "duration": "8.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/valid-login.md"
+            "reportHref": "test-reports/2026-09-12/valid-login.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "8.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -2808,14 +2895,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "8.1s",
+            "duration": "7.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/valid-username-invalid-password.md"
+            "reportHref": "test-reports/2026-09-12/valid-username-invalid-password.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "7.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -2866,74 +2959,6 @@
             }
           ],
           "bugs": []
-        },
-        {
-          "plan": "test-plans/Login/invalid-username-valid-password.md",
-          "planHref": "test-plans/Login/invalid-username-valid-password.md",
-          "spec": "test-plans/Login/invalid-username-valid-password.spec.ts",
-          "specHref": "test-plans/Login/invalid-username-valid-password.spec.ts",
-          "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
-          "rowStatus": "failing",
-          "status": "FAILED",
-          "last": {
-            "date": "2026-09-10",
-            "result": "FAILED",
-            "duration": "8.3s",
-            "variant": null,
-            "reportHref": "test-reports/2026-09-10/invalid-username-valid-password.md"
-          },
-          "runCount": 7,
-          "history": [
-            {
-              "date": "2026-09-10",
-              "result": "FAILED",
-              "duration": "8.3s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-09",
-              "result": "FAILED",
-              "duration": "7.4s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-08",
-              "result": "FAILED",
-              "duration": "7.8s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-07",
-              "result": "FAILED",
-              "duration": "7.3s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-06",
-              "result": "FAILED",
-              "duration": "8.4s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "FAILED",
-              "duration": "7.5s",
-              "variant": null
-            },
-            {
-              "date": "2026-07-07",
-              "result": "PASSED",
-              "duration": "10.8s",
-              "variant": null
-            }
-          ],
-          "bugs": []
         }
       ]
     },
@@ -2952,14 +2977,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "65s",
+            "duration": "48.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-action-required-auto-populate-action-text.md"
+            "reportHref": "test-reports/2026-09-12/verify-action-required-auto-populate-action-text.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "48.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3021,14 +3052,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "49.2s",
+            "duration": "48.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-add-referral.md"
+            "reportHref": "test-reports/2026-09-12/verify-add-referral.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "48.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3090,14 +3127,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.8s",
+            "duration": "49.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-approve-memo.md"
+            "reportHref": "test-reports/2026-09-12/verify-approve-memo.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "49.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3159,14 +3202,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "49.4s",
+            "duration": "49.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-attach-supporting-documents.md"
+            "reportHref": "test-reports/2026-09-12/verify-attach-supporting-documents.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "49.8s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3228,14 +3277,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "47.9s",
+            "duration": "47.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-attachments-next-button-navigation.md"
+            "reportHref": "test-reports/2026-09-12/verify-attachments-next-button-navigation.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3297,14 +3352,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "51.3s",
+            "duration": "47.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-can-edit-disabled-hides-edit-button.md"
+            "reportHref": "test-reports/2026-09-12/verify-can-edit-disabled-hides-edit-button.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3366,14 +3427,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "49.8s",
+            "duration": "47.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-can-edit-enabled-shows-edit-button.md"
+            "reportHref": "test-reports/2026-09-12/verify-can-edit-enabled-shows-edit-button.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3435,14 +3502,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.7s",
+            "duration": "47.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-cc-user-in-routing-list.md"
+            "reportHref": "test-reports/2026-09-12/verify-cc-user-in-routing-list.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.4s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3504,14 +3577,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "47s",
+            "duration": "48.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-close-memo.md"
+            "reportHref": "test-reports/2026-09-12/verify-close-memo.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "48.4s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3573,14 +3652,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.6s",
+            "duration": "48.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-comments-mandatory-for-negative-actions-craig.md"
+            "reportHref": "test-reports/2026-09-12/verify-comments-mandatory-for-negative-actions-craig.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "48.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3642,14 +3727,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-11",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "46.3s",
+            "duration": "46.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-11/verify-comments-mandatory-for-negative-actions.md"
+            "reportHref": "test-reports/2026-09-12/verify-comments-mandatory-for-negative-actions.md"
           },
-          "runCount": 8,
+          "runCount": 9,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "46.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-11",
               "result": "FAILED",
@@ -3707,23 +3798,24 @@
           "spec": "test-plans/Memo/verify-edit-delete-signatory.spec.ts",
           "specHref": "test-plans/Memo/verify-edit-delete-signatory.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.2s",
+            "duration": "47.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-edit-delete-signatory.md"
+            "reportHref": "test-reports/2026-09-12/verify-edit-delete-signatory.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -3775,23 +3867,24 @@
           "spec": "test-plans/Memo/verify-mandatory-data-validation.spec.ts",
           "specHref": "test-plans/Memo/verify-mandatory-data-validation.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.1s",
+            "duration": "48.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-mandatory-data-validation.md"
+            "reportHref": "test-reports/2026-09-12/verify-mandatory-data-validation.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "48.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -3843,23 +3936,24 @@
           "spec": "test-plans/Memo/verify-new-draft-version-creation.spec.ts",
           "specHref": "test-plans/Memo/verify-new-draft-version-creation.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.7s",
+            "duration": "47.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-new-draft-version-creation.md"
+            "reportHref": "test-reports/2026-09-12/verify-new-draft-version-creation.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -3911,23 +4005,24 @@
           "spec": "test-plans/Memo/verify-new-version-created.spec.ts",
           "specHref": "test-plans/Memo/verify-new-version-created.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48s",
+            "duration": "48.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-new-version-created.md"
+            "reportHref": "test-reports/2026-09-12/verify-new-version-created.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "48.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -3979,23 +4074,24 @@
           "spec": "test-plans/Memo/verify-next-button-navigation.spec.ts",
           "specHref": "test-plans/Memo/verify-next-button-navigation.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.8s",
+            "duration": "48.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-next-button-navigation.md"
+            "reportHref": "test-reports/2026-09-12/verify-next-button-navigation.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "48.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4047,23 +4143,24 @@
           "spec": "test-plans/Memo/verify-preview-in-pdf.spec.ts",
           "specHref": "test-plans/Memo/verify-preview-in-pdf.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "66.7s",
+            "duration": "48.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-preview-in-pdf.md"
+            "reportHref": "test-reports/2026-09-12/verify-preview-in-pdf.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "48.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4115,23 +4212,24 @@
           "spec": "test-plans/Memo/verify-reassign-function.spec.ts",
           "specHref": "test-plans/Memo/verify-reassign-function.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "33.2s",
+            "duration": "33.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-reassign-function.md"
+            "reportHref": "test-reports/2026-09-12/verify-reassign-function.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "33.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4183,23 +4281,24 @@
           "spec": "test-plans/Memo/verify-recommend-memo.spec.ts",
           "specHref": "test-plans/Memo/verify-recommend-memo.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.2s",
+            "duration": "47.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-recommend-memo.md"
+            "reportHref": "test-reports/2026-09-12/verify-recommend-memo.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4251,23 +4350,24 @@
           "spec": "test-plans/Memo/verify-reorder-signatories.spec.ts",
           "specHref": "test-plans/Memo/verify-reorder-signatories.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.1s",
+            "duration": "47.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-reorder-signatories.md"
+            "reportHref": "test-reports/2026-09-12/verify-reorder-signatories.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4319,23 +4419,24 @@
           "spec": "test-plans/Memo/verify-replace-supporting-documents.spec.ts",
           "specHref": "test-plans/Memo/verify-replace-supporting-documents.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "49.4s",
+            "duration": "47.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-replace-supporting-documents.md"
+            "reportHref": "test-reports/2026-09-12/verify-replace-supporting-documents.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4387,23 +4488,24 @@
           "spec": "test-plans/Memo/verify-retract-functionality.spec.ts",
           "specHref": "test-plans/Memo/verify-retract-functionality.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.6s",
+            "duration": "48.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-retract-functionality.md"
+            "reportHref": "test-reports/2026-09-12/verify-retract-functionality.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "48.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4455,23 +4557,24 @@
           "spec": "test-plans/Memo/verify-send-back.spec.ts",
           "specHref": "test-plans/Memo/verify-send-back.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.2s",
+            "duration": "49.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-send-back.md"
+            "reportHref": "test-reports/2026-09-12/verify-send-back.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "49.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4523,23 +4626,24 @@
           "spec": "test-plans/Memo/verify-send-to-approver-first.spec.ts",
           "specHref": "test-plans/Memo/verify-send-to-approver-first.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.2s",
+            "duration": "47.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-send-to-approver-first.md"
+            "reportHref": "test-reports/2026-09-12/verify-send-to-approver-first.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4591,23 +4695,24 @@
           "spec": "test-plans/Memo/verify-tabs-under-compose-step.spec.ts",
           "specHref": "test-plans/Memo/verify-tabs-under-compose-step.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.2s",
+            "duration": "47.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-tabs-under-compose-step.md"
+            "reportHref": "test-reports/2026-09-12/verify-tabs-under-compose-step.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4659,23 +4764,24 @@
           "spec": "test-plans/Memo/verify-take-ownership.spec.ts",
           "specHref": "test-plans/Memo/verify-take-ownership.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.3s",
+            "duration": "47.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-take-ownership.md"
+            "reportHref": "test-reports/2026-09-12/verify-take-ownership.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4727,23 +4833,24 @@
           "spec": "test-plans/Memo/verify-withdraw-button.spec.ts",
           "specHref": "test-plans/Memo/verify-withdraw-button.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "47.9s",
+            "duration": "47.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-withdraw-button.md"
+            "reportHref": "test-reports/2026-09-12/verify-withdraw-button.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "47.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4795,23 +4902,24 @@
           "spec": "test-plans/Memo/verify-withdraw-memo.spec.ts",
           "specHref": "test-plans/Memo/verify-withdraw-memo.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-10",
+            "date": "2026-09-12",
             "result": "FAILED",
-            "duration": "48.5s",
+            "duration": "49s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-10/verify-withdraw-memo.md"
+            "reportHref": "test-reports/2026-09-12/verify-withdraw-memo.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "49s",
+              "variant": null
+            },
             {
               "date": "2026-09-10",
               "result": "FAILED",
@@ -4861,6 +4969,326 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-12",
+      "runs": [
+        {
+          "plan": "test-plans/Memo/_adhoc-craig-myitems-retract.md",
+          "planDisplay": "Memo/_adhoc-craig-myitems-retract.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "109.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/_adhoc-craig-myitems-retract.md"
+        },
+        {
+          "plan": "test-plans/Memo/_adhoc-craig-newversion-ref08200.md",
+          "planDisplay": "Memo/_adhoc-craig-newversion-ref08200.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "113s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/_adhoc-craig-newversion-ref08200.md"
+        },
+        {
+          "plan": "test-plans/Login/empty-username-and-password.md",
+          "planDisplay": "Login/empty-username-and-password.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "20.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/empty-username-and-password.md"
+        },
+        {
+          "plan": "test-plans/Login/invalid-login.md",
+          "planDisplay": "Login/invalid-login.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "7.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/invalid-login.md"
+        },
+        {
+          "plan": "test-plans/Login/invalid-username-valid-password.md",
+          "planDisplay": "Login/invalid-username-valid-password.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "8.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/invalid-username-valid-password.md"
+        },
+        {
+          "plan": "test-plans/Login/valid-login.md",
+          "planDisplay": "Login/valid-login.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "8.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/valid-login.md"
+        },
+        {
+          "plan": "test-plans/Login/valid-username-invalid-password.md",
+          "planDisplay": "Login/valid-username-invalid-password.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "7.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/valid-username-invalid-password.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-action-required-auto-populate-action-text.md",
+          "planDisplay": "Memo/verify-action-required-auto-populate-action-text.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-action-required-auto-populate-action-text.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-add-referral.md",
+          "planDisplay": "Memo/verify-add-referral.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-add-referral.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-approve-memo.md",
+          "planDisplay": "Memo/verify-approve-memo.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "49.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-approve-memo.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-attach-supporting-documents.md",
+          "planDisplay": "Memo/verify-attach-supporting-documents.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "49.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-attach-supporting-documents.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-attachments-next-button-navigation.md",
+          "planDisplay": "Memo/verify-attachments-next-button-navigation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-attachments-next-button-navigation.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-can-edit-disabled-hides-edit-button.md",
+          "planDisplay": "Memo/verify-can-edit-disabled-hides-edit-button.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-can-edit-disabled-hides-edit-button.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-can-edit-enabled-shows-edit-button.md",
+          "planDisplay": "Memo/verify-can-edit-enabled-shows-edit-button.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-can-edit-enabled-shows-edit-button.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-cc-user-in-routing-list.md",
+          "planDisplay": "Memo/verify-cc-user-in-routing-list.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-cc-user-in-routing-list.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-close-memo.md",
+          "planDisplay": "Memo/verify-close-memo.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-close-memo.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.md",
+          "planDisplay": "Memo/verify-comments-mandatory-for-negative-actions-craig.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-comments-mandatory-for-negative-actions-craig.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-comments-mandatory-for-negative-actions.md",
+          "planDisplay": "Memo/verify-comments-mandatory-for-negative-actions.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-comments-mandatory-for-negative-actions.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-edit-delete-signatory.md",
+          "planDisplay": "Memo/verify-edit-delete-signatory.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-edit-delete-signatory.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-mandatory-data-validation.md",
+          "planDisplay": "Memo/verify-mandatory-data-validation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-mandatory-data-validation.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-new-draft-version-creation.md",
+          "planDisplay": "Memo/verify-new-draft-version-creation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-new-draft-version-creation.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-new-version-created.md",
+          "planDisplay": "Memo/verify-new-version-created.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-new-version-created.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-next-button-navigation.md",
+          "planDisplay": "Memo/verify-next-button-navigation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-next-button-navigation.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-preview-in-pdf.md",
+          "planDisplay": "Memo/verify-preview-in-pdf.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-preview-in-pdf.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-reassign-function.md",
+          "planDisplay": "Memo/verify-reassign-function.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "33.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-reassign-function.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-recommend-memo.md",
+          "planDisplay": "Memo/verify-recommend-memo.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-recommend-memo.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-reorder-signatories.md",
+          "planDisplay": "Memo/verify-reorder-signatories.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-reorder-signatories.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-replace-supporting-documents.md",
+          "planDisplay": "Memo/verify-replace-supporting-documents.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-replace-supporting-documents.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-retract-functionality.md",
+          "planDisplay": "Memo/verify-retract-functionality.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "48.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-retract-functionality.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-send-back.md",
+          "planDisplay": "Memo/verify-send-back.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "49.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-send-back.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-send-to-approver-first.md",
+          "planDisplay": "Memo/verify-send-to-approver-first.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-send-to-approver-first.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-tabs-under-compose-step.md",
+          "planDisplay": "Memo/verify-tabs-under-compose-step.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-tabs-under-compose-step.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-take-ownership.md",
+          "planDisplay": "Memo/verify-take-ownership.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-take-ownership.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-withdraw-button.md",
+          "planDisplay": "Memo/verify-withdraw-button.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-withdraw-button.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-withdraw-memo.md",
+          "planDisplay": "Memo/verify-withdraw-memo.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "49s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/verify-withdraw-memo.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-11",
       "runs": [
@@ -7244,5 +7672,5 @@
       ]
     }
   ],
-  "generated": "2026-09-11T10:58:57.351Z"
+  "generated": "2026-09-12T02:42:21.556Z"
 }
