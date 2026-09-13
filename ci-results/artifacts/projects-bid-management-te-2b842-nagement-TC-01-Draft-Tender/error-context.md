@@ -18,491 +18,491 @@ Test timeout of 180000ms exceeded.
 ```
 Error: locator.click: Test timeout of 180000ms exceeded.
 Call log:
-  - waiting for locator('.ant-picker-dropdown:not(.ant-picker-dropdown-hidden)').last().locator('td[title="2026-09-15"]')
+  - waiting for locator('.ant-picker-dropdown:not(.ant-picker-dropdown-hidden)').last().locator('td[title="2026-09-16"]')
 
 ```
 
 # Page snapshot
 
 ```yaml
-- generic [ref=e1]:
-  - generic [ref=e4]:
-    - complementary [ref=e5]:
-      - menu [ref=e9]:
-        - menuitem "container Bid Management" [ref=e10] [cursor=pointer]:
-          - img "container" [ref=e11]
-          - generic [ref=e14]: Bid Management
-        - menuitem "menu-unfold SupplyChain Management" [ref=e15] [cursor=pointer]:
-          - img "menu-unfold" [ref=e16]
-          - generic [ref=e19]: SupplyChain Management
-        - menuitem "file-text Contract Management" [ref=e20] [cursor=pointer]:
-          - img "file-text" [ref=e21]
-          - generic [ref=e24]: Contract Management
-        - menuitem "apartment Workflows" [ref=e25] [cursor=pointer]:
-          - img "apartment" [ref=e26]
-          - generic [ref=e29]: Workflows
-        - menuitem "account-book Requisition" [ref=e30] [cursor=pointer]:
-          - img "account-book" [ref=e31]
-          - generic [ref=e34]: Requisition
-        - menuitem "setting Configurations" [ref=e35] [cursor=pointer]:
-          - img "setting" [ref=e36]
-          - generic [ref=e39]: Configurations
-        - menuitem "tool Administration" [ref=e40] [cursor=pointer]:
-          - img "tool" [ref=e41]
-          - generic [ref=e44]: Administration
-      - img "menu-unfold" [ref=e47] [cursor=pointer]
-    - generic [ref=e50]:
-      - banner [ref=e51]:
-        - generic [ref=e57]:
-          - generic [ref=e59]:
-            - button [ref=e60] [cursor=pointer]:
-              - img "edit" [ref=e61]
-            - paragraph [ref=e64] [cursor=pointer]: Shesha/header v9
-            - generic [ref=e65]:
-              - generic [ref=e66]: Live
-              - img "close" [ref=e67] [cursor=pointer]
-          - generic [ref=e78]:
-            - link [ref=e84] [cursor=pointer]:
+- generic [ref=f1e1]:
+  - generic [ref=f1e4]:
+    - complementary [ref=f1e5]:
+      - menu [ref=f1e9]:
+        - menuitem "container Bid Management" [ref=f1e10] [cursor=pointer]:
+          - img "container" [ref=f1e11]
+          - generic [ref=f1e14]: Bid Management
+        - menuitem "menu-unfold SupplyChain Management" [ref=f1e15] [cursor=pointer]:
+          - img "menu-unfold" [ref=f1e16]
+          - generic [ref=f1e19]: SupplyChain Management
+        - menuitem "file-text Contract Management" [ref=f1e20] [cursor=pointer]:
+          - img "file-text" [ref=f1e21]
+          - generic [ref=f1e24]: Contract Management
+        - menuitem "apartment Workflows" [ref=f1e25] [cursor=pointer]:
+          - img "apartment" [ref=f1e26]
+          - generic [ref=f1e29]: Workflows
+        - menuitem "account-book Requisition" [ref=f1e30] [cursor=pointer]:
+          - img "account-book" [ref=f1e31]
+          - generic [ref=f1e34]: Requisition
+        - menuitem "setting Configurations" [ref=f1e35] [cursor=pointer]:
+          - img "setting" [ref=f1e36]
+          - generic [ref=f1e39]: Configurations
+        - menuitem "tool Administration" [ref=f1e40] [cursor=pointer]:
+          - img "tool" [ref=f1e41]
+          - generic [ref=f1e44]: Administration
+      - img "menu-unfold" [ref=f1e47] [cursor=pointer]
+    - generic [ref=f1e50]:
+      - banner [ref=f1e51]:
+        - generic [ref=f1e57]:
+          - generic [ref=f1e59]:
+            - button [ref=f1e60] [cursor=pointer]:
+              - img "edit" [ref=f1e61]
+            - paragraph [ref=f1e64] [cursor=pointer]: Shesha/header v9
+            - generic [ref=f1e65]:
+              - generic [ref=f1e66]: Live
+              - img "close" [ref=f1e67] [cursor=pointer]
+          - generic [ref=f1e78]:
+            - link [ref=f1e84] [cursor=pointer]:
               - /url: /
-            - generic [ref=e96]:
-              - generic [ref=e97]:
-                - generic [ref=e99]:
-                  - generic [ref=e100]: Live Mode
-                  - switch "Switch to Edit mode" [ref=e102] [cursor=pointer]
-                - generic "Click to change view mode" [ref=e106] [cursor=pointer]:
-                  - img "block" [ref=e107]
-                  - generic [ref=e110]: Latest
-              - generic [ref=e112]:
-                - generic [ref=e113] [cursor=pointer]:
+            - generic [ref=f1e96]:
+              - generic [ref=f1e97]:
+                - generic [ref=f1e99]:
+                  - generic [ref=f1e100]: Live Mode
+                  - switch "Switch to Edit mode" [ref=f1e102] [cursor=pointer]
+                - generic "Click to change view mode" [ref=f1e106] [cursor=pointer]:
+                  - img "block" [ref=f1e107]
+                  - generic [ref=f1e110]: Latest
+              - generic [ref=f1e112]:
+                - generic [ref=f1e113] [cursor=pointer]:
                   - text: Maand-awe Mamathuntsha
-                  - img "down" [ref=e114]
-                - img "user" [ref=e118]
-      - main [ref=e121]:
-        - generic [ref=e126]:
-          - generic [ref=e127]:
-            - generic [ref=e130]:
-              - heading [level=4] [ref=e132]:
-                - strong [ref=e133]: "Capture Tender Details:"
-              - generic [ref=e134]: Draft
-            - generic [ref=e138]:
-              - generic [ref=e139]: "Ref No: REF2026-1465"
-              - generic [ref=e140]: "Created by: Maand-awe Mamathuntsha in 2 hours"
-          - generic [ref=e145]:
-            - generic [ref=e147]:
-              - button [ref=e148] [cursor=pointer]:
-                - img "edit" [ref=e149]
-              - paragraph [ref=e152] [cursor=pointer]: Shesha.SupplyChainManagement/capture-tender-details v48
-              - generic [ref=e153]:
-                - generic [ref=e154]: Live
-                - img "close" [ref=e155] [cursor=pointer]
-            - generic [ref=e168]:
-              - generic [ref=e169]:
-                - generic [ref=e170]:
-                  - generic [ref=e172]:
-                    - generic [ref=e173]: "1"
-                    - generic [ref=e174]: Tender Details
-                  - generic [ref=e177]:
-                    - generic [ref=e178]: "2"
-                    - generic [ref=e179]: Tender Documents
-                  - generic [ref=e182]:
-                    - generic [ref=e183]: "3"
-                    - generic [ref=e184]: Response Documents
-                  - generic [ref=e187]:
-                    - generic [ref=e188]: "4"
-                    - generic [ref=e189]: Technical Evaluation
-                  - generic [ref=e192]:
-                    - generic [ref=e193]: "5"
-                    - generic [ref=e194]: Summary
-                - generic [ref=e199]:
-                  - generic [ref=e204]:
-                    - generic [ref=e205]:
-                      - img "right" [ref=e207] [cursor=pointer]
-                      - generic [ref=e210]: Tender Information
-                    - generic [ref=e218]:
-                      - generic [ref=e220]:
-                        - generic "Tender Number" [ref=e222]:
+                  - img "down" [ref=f1e114]
+                - img "user" [ref=f1e118]
+      - main [ref=f1e121]:
+        - generic [ref=f1e126]:
+          - generic [ref=f1e127]:
+            - generic [ref=f1e130]:
+              - heading [level=4] [ref=f1e132]:
+                - strong [ref=f1e133]: "Capture Tender Details:"
+              - generic [ref=f1e134]: Draft
+            - generic [ref=f1e138]:
+              - generic [ref=f1e139]: "Ref No: REF2026-1471"
+              - generic [ref=f1e140]: "Created by: Maand-awe Mamathuntsha in 2 hours"
+          - generic [ref=f1e145]:
+            - generic [ref=f1e147]:
+              - button [ref=f1e148] [cursor=pointer]:
+                - img "edit" [ref=f1e149]
+              - paragraph [ref=f1e152] [cursor=pointer]: Shesha.SupplyChainManagement/capture-tender-details v48
+              - generic [ref=f1e153]:
+                - generic [ref=f1e154]: Live
+                - img "close" [ref=f1e155] [cursor=pointer]
+            - generic [ref=f1e168]:
+              - generic [ref=f1e169]:
+                - generic [ref=f1e170]:
+                  - generic [ref=f1e172]:
+                    - generic [ref=f1e173]: "1"
+                    - generic [ref=f1e174]: Tender Details
+                  - generic [ref=f1e177]:
+                    - generic [ref=f1e178]: "2"
+                    - generic [ref=f1e179]: Tender Documents
+                  - generic [ref=f1e182]:
+                    - generic [ref=f1e183]: "3"
+                    - generic [ref=f1e184]: Response Documents
+                  - generic [ref=f1e187]:
+                    - generic [ref=f1e188]: "4"
+                    - generic [ref=f1e189]: Technical Evaluation
+                  - generic [ref=f1e192]:
+                    - generic [ref=f1e193]: "5"
+                    - generic [ref=f1e194]: Summary
+                - generic [ref=f1e199]:
+                  - generic [ref=f1e204]:
+                    - generic [ref=f1e205]:
+                      - img "right" [ref=f1e207] [cursor=pointer]
+                      - generic [ref=f1e210]: Tender Information
+                    - generic [ref=f1e218]:
+                      - generic [ref=f1e220]:
+                        - generic "Tender Number" [ref=f1e222]:
                           - text: Tender Number
-                          - generic [ref=e223]: "*"
-                        - generic [ref=e224]: REF2026-1465
-                      - generic [ref=e228]:
-                        - generic "Tender Name" [ref=e230]:
+                          - generic [ref=f1e223]: "*"
+                        - generic [ref=f1e224]: REF2026-1471
+                      - generic [ref=f1e228]:
+                        - generic "Tender Name" [ref=f1e230]:
                           - text: Tender Name
-                          - generic [ref=e231]: "*"
-                        - textbox [ref=e236]: TC-01 Automated Draft Tender run-mtxrytg0 - 90/10 Compulsory Hybrid
-                      - generic [ref=e238]:
-                        - generic "Description" [ref=e240]:
+                          - generic [ref=f1e231]: "*"
+                        - textbox [ref=f1e236]: TC-01 Automated Draft Tender run-mtz7lll2 - 90/10 Compulsory Hybrid
+                      - generic [ref=f1e238]:
+                        - generic "Description" [ref=f1e240]:
                           - text: Description
-                          - generic [ref=e241]: "*"
-                        - textbox [ref=e245]: Automated TC-01 draft tender created via Playwright on the QA site.
-                      - generic [ref=e247]:
-                        - generic "Evaluation Criteria" [ref=e249]
-                        - generic [ref=e254]:
-                          - generic [ref=e256] [cursor=pointer]:
-                            - radio "90/10" [checked] [ref=e258]
-                            - generic [ref=e260]: 90/10
-                          - generic [ref=e262] [cursor=pointer]:
-                            - radio "80/20" [ref=e264]
-                            - generic [ref=e266]: 80/20
-                      - generic [ref=e268]:
-                        - generic "Is On Procurement Plan" [ref=e270]
-                        - checkbox [ref=e276] [cursor=pointer]
-                      - generic [ref=e279]:
-                        - generic "Procurement plan" [ref=e281]
-                        - button "upload (press to upload)" [ref=e289] [cursor=pointer]:
-                          - img "upload" [ref=e291]
-                          - generic [ref=e294]: (press to upload)
-                  - generic [ref=e301]:
-                    - generic [ref=e302]:
-                      - img "right" [ref=e304] [cursor=pointer]
-                      - generic [ref=e307]: Tender Publication
-                    - generic [ref=e312]:
-                      - generic [ref=e315]:
-                        - heading "Briefing Session" [level=5] [ref=e321]
-                        - generic [ref=e323]:
-                          - generic [ref=e325]:
-                            - generic "Briefing Session Requirement" [ref=e327]
-                            - generic [ref=e332]:
-                              - generic [ref=e334] [cursor=pointer]:
-                                - radio "Not Required" [ref=e336]
-                                - generic [ref=e338]: Not Required
-                              - generic [ref=e340] [cursor=pointer]:
-                                - radio "Compulsory" [checked] [ref=e342]
-                                - generic [ref=e344]: Compulsory
-                              - generic [ref=e346] [cursor=pointer]:
-                                - radio "Non Compulsory" [ref=e348]
-                                - generic [ref=e350]: Non Compulsory
-                          - generic [ref=e352]:
-                            - generic "Briefing Session Start Time" [ref=e354]:
+                          - generic [ref=f1e241]: "*"
+                        - textbox [ref=f1e245]: Automated TC-01 draft tender created via Playwright on the QA site.
+                      - generic [ref=f1e247]:
+                        - generic "Evaluation Criteria" [ref=f1e249]
+                        - generic [ref=f1e254]:
+                          - generic [ref=f1e256] [cursor=pointer]:
+                            - radio "90/10" [checked] [ref=f1e258]
+                            - generic [ref=f1e260]: 90/10
+                          - generic [ref=f1e262] [cursor=pointer]:
+                            - radio "80/20" [ref=f1e264]
+                            - generic [ref=f1e266]: 80/20
+                      - generic [ref=f1e268]:
+                        - generic "Is On Procurement Plan" [ref=f1e270]
+                        - checkbox [ref=f1e276] [cursor=pointer]
+                      - generic [ref=f1e279]:
+                        - generic "Procurement plan" [ref=f1e281]
+                        - button "upload (press to upload)" [ref=f1e289] [cursor=pointer]:
+                          - img "upload" [ref=f1e291]
+                          - generic [ref=f1e294]: (press to upload)
+                  - generic [ref=f1e301]:
+                    - generic [ref=f1e302]:
+                      - img "right" [ref=f1e304] [cursor=pointer]
+                      - generic [ref=f1e307]: Tender Publication
+                    - generic [ref=f1e312]:
+                      - generic [ref=f1e315]:
+                        - heading "Briefing Session" [level=5] [ref=f1e321]
+                        - generic [ref=f1e323]:
+                          - generic [ref=f1e325]:
+                            - generic "Briefing Session Requirement" [ref=f1e327]
+                            - generic [ref=f1e332]:
+                              - generic [ref=f1e334] [cursor=pointer]:
+                                - radio "Not Required" [ref=f1e336]
+                                - generic [ref=f1e338]: Not Required
+                              - generic [ref=f1e340] [cursor=pointer]:
+                                - radio "Compulsory" [checked] [ref=f1e342]
+                                - generic [ref=f1e344]: Compulsory
+                              - generic [ref=f1e346] [cursor=pointer]:
+                                - radio "Non Compulsory" [ref=f1e348]
+                                - generic [ref=f1e350]: Non Compulsory
+                          - generic [ref=f1e352]:
+                            - generic "Briefing Session Start Time" [ref=f1e354]:
                               - text: Briefing Session Start Time
-                              - generic [ref=e355]: "*"
-                            - generic [ref=e360]:
-                              - textbox [ref=e361]
+                              - generic [ref=f1e355]: "*"
+                            - generic [ref=f1e360]:
+                              - textbox [ref=f1e361]
                               - generic:
                                 - img "calendar"
-                          - generic [ref=e363]:
-                            - generic "Briefing Method" [ref=e365]:
+                          - generic [ref=f1e363]:
+                            - generic "Briefing Method" [ref=f1e365]:
                               - text: Briefing Method
-                              - generic [ref=e366]: "*"
-                            - generic [ref=e371]:
-                              - generic [ref=e373] [cursor=pointer]:
-                                - radio "Online" [ref=e375]
-                                - generic [ref=e377]: Online
-                              - generic [ref=e379] [cursor=pointer]:
-                                - radio "Physical" [ref=e381]
-                                - generic [ref=e383]: Physical
-                              - generic [ref=e385] [cursor=pointer]:
-                                - radio "Hybrid" [checked] [ref=e387]
-                                - generic [ref=e389]: Hybrid
-                          - generic [ref=e391]:
-                            - generic "Meeting link" [ref=e393]:
+                              - generic [ref=f1e366]: "*"
+                            - generic [ref=f1e371]:
+                              - generic [ref=f1e373] [cursor=pointer]:
+                                - radio "Online" [ref=f1e375]
+                                - generic [ref=f1e377]: Online
+                              - generic [ref=f1e379] [cursor=pointer]:
+                                - radio "Physical" [ref=f1e381]
+                                - generic [ref=f1e383]: Physical
+                              - generic [ref=f1e385] [cursor=pointer]:
+                                - radio "Hybrid" [checked] [ref=f1e387]
+                                - generic [ref=f1e389]: Hybrid
+                          - generic [ref=f1e391]:
+                            - generic "Meeting link" [ref=f1e393]:
                               - text: Meeting link
-                              - generic [ref=e394]: "*"
-                            - textbox [ref=e399]: https://teams.microsoft.com/l/meetup-join/tc02-automated
-                          - generic [ref=e401]:
-                            - generic "Briefing Session Venue" [ref=e403]:
+                              - generic [ref=f1e394]: "*"
+                            - textbox [ref=f1e399]: https://teams.microsoft.com/l/meetup-join/tc02-automated
+                          - generic [ref=f1e401]:
+                            - generic "Briefing Session Venue" [ref=f1e403]:
                               - text: Briefing Session Venue
-                              - generic [ref=e404]: "*"
-                            - textbox [ref=e409]: Boardroom A, Head Office
-                      - generic [ref=e412]:
-                        - heading "Publication Dates" [level=5] [ref=e418]
-                        - generic [ref=e420]:
-                          - generic [ref=e422]:
-                            - generic "Bid publication Date" [ref=e424]:
+                              - generic [ref=f1e404]: "*"
+                            - textbox [ref=f1e409]: Boardroom A, Head Office
+                      - generic [ref=f1e412]:
+                        - heading "Publication Dates" [level=5] [ref=f1e418]
+                        - generic [ref=f1e420]:
+                          - generic [ref=f1e422]:
+                            - generic "Bid publication Date" [ref=f1e424]:
                               - text: Bid publication Date
-                              - generic [ref=e425]: "*"
-                            - generic [ref=e430]:
-                              - textbox [ref=e431]
+                              - generic [ref=f1e425]: "*"
+                            - generic [ref=f1e430]:
+                              - textbox [ref=f1e431]
                               - generic:
                                 - img "calendar"
-                          - generic [ref=e433]:
-                            - generic "Bid closing Date" [ref=e435]:
+                          - generic [ref=f1e433]:
+                            - generic "Bid closing Date" [ref=f1e435]:
                               - text: Bid closing Date
-                              - generic [ref=e436]: "*"
-                            - generic [ref=e441]:
-                              - textbox [ref=e442]
+                              - generic [ref=f1e436]: "*"
+                            - generic [ref=f1e441]:
+                              - textbox [ref=f1e442]
                               - generic:
                                 - img "calendar"
-                      - generic [ref=e445]:
-                        - heading "Contact Details" [level=5] [ref=e451]
-                        - generic [ref=e453]:
-                          - generic [ref=e455]:
-                            - generic "Contact person name" [ref=e457]:
+                      - generic [ref=f1e445]:
+                        - heading "Contact Details" [level=5] [ref=f1e451]
+                        - generic [ref=f1e453]:
+                          - generic [ref=f1e455]:
+                            - generic "Contact person name" [ref=f1e457]:
                               - text: Contact person name
-                              - generic [ref=e458]: "*"
-                            - textbox [ref=e463]: Maanda Mamathuntsha
-                          - generic [ref=e465]:
-                            - generic "Telephone" [ref=e467]:
+                              - generic [ref=f1e458]: "*"
+                            - textbox [ref=f1e463]: Maanda Mamathuntsha
+                          - generic [ref=f1e465]:
+                            - generic "Telephone" [ref=f1e467]:
                               - text: Telephone
-                              - generic [ref=e468]: "*"
-                            - textbox [ref=e473]: "0123456789"
-                          - generic [ref=e475]:
-                            - generic "Email" [ref=e477]:
+                              - generic [ref=f1e468]: "*"
+                            - textbox [ref=f1e473]: "0123456789"
+                          - generic [ref=f1e475]:
+                            - generic "Email" [ref=f1e477]:
                               - text: Email
-                              - generic [ref=e478]: "*"
-                            - textbox [ref=e483]: maanda.test@example.com
-                  - generic [ref=e488]:
-                    - generic [ref=e489]:
-                      - img "right" [ref=e491] [cursor=pointer]
-                      - generic [ref=e494]: Supporting Documents
-                    - generic [ref=e498]:
-                      - alert [ref=e499]:
-                        - img "info-circle" [ref=e500]
-                        - generic [ref=e503]: Attach all documents demonstrating that all necessary processes were followed and approvals granted.
-                        - button [ref=e506] [cursor=pointer]:
-                          - img "close" [ref=e507]
-                      - generic [ref=e513]:
-                        - generic "Supporting documents" [ref=e515]
-                        - button "upload (press to upload)" [ref=e523] [cursor=pointer]:
-                          - img "upload" [ref=e525]
-                          - generic [ref=e528]: (press to upload)
-              - generic [ref=e530]:
-                - button "Close" [ref=e531] [cursor=pointer]
-                - button "Next" [disabled] [ref=e533]
-  - alert [ref=e534]
-  - generic [ref=e537]:
-    - generic [ref=e539]:
-      - generic [ref=e540]:
-        - generic [ref=e541]:
-          - button [ref=e542] [cursor=pointer]
-          - button [ref=e544] [cursor=pointer]
-          - generic [ref=e546]:
-            - button "Sep" [ref=e547] [cursor=pointer]
-            - button "2028" [ref=e548] [cursor=pointer]
-          - button [active] [ref=e549] [cursor=pointer]
-          - button [ref=e551] [cursor=pointer]
-        - table [ref=e554]:
-          - rowgroup [ref=e555]:
-            - row [ref=e556]:
-              - columnheader "Su" [ref=e557]
-              - columnheader "Mo" [ref=e558]
-              - columnheader "Tu" [ref=e559]
-              - columnheader "We" [ref=e560]
-              - columnheader "Th" [ref=e561]
-              - columnheader "Fr" [ref=e562]
-              - columnheader "Sa" [ref=e563]
-          - rowgroup [ref=e564]:
-            - row [ref=e565]:
-              - cell "27" [ref=e566] [cursor=pointer]
-              - cell "28" [ref=e568] [cursor=pointer]
-              - cell "29" [ref=e570] [cursor=pointer]
-              - cell "30" [ref=e572] [cursor=pointer]
-              - cell "31" [ref=e574] [cursor=pointer]
-              - cell "1" [ref=e576] [cursor=pointer]
-              - cell "2" [ref=e578] [cursor=pointer]
-            - row [ref=e580]:
-              - cell "3" [ref=e581] [cursor=pointer]
-              - cell "4" [ref=e583] [cursor=pointer]
-              - cell "5" [ref=e585] [cursor=pointer]
-              - cell "6" [ref=e587] [cursor=pointer]
-              - cell "7" [ref=e589] [cursor=pointer]
-              - cell "8" [ref=e591] [cursor=pointer]
-              - cell "9" [ref=e593] [cursor=pointer]
-            - row [ref=e595]:
-              - cell "10" [ref=e596] [cursor=pointer]
-              - cell "11" [ref=e598] [cursor=pointer]
-              - cell "12" [ref=e600] [cursor=pointer]
-              - cell "13" [ref=e602] [cursor=pointer]
-              - cell "14" [ref=e604] [cursor=pointer]
-              - cell "15" [ref=e606] [cursor=pointer]
-              - cell "16" [ref=e608] [cursor=pointer]
-            - row [ref=e610]:
-              - cell "17" [ref=e611] [cursor=pointer]
-              - cell "18" [ref=e613] [cursor=pointer]
-              - cell "19" [ref=e615] [cursor=pointer]
-              - cell "20" [ref=e617] [cursor=pointer]
-              - cell "21" [ref=e619] [cursor=pointer]
-              - cell "22" [ref=e621] [cursor=pointer]
-              - cell "23" [ref=e623] [cursor=pointer]
-            - row [ref=e625]:
-              - cell "24" [ref=e626] [cursor=pointer]
-              - cell "25" [ref=e628] [cursor=pointer]
-              - cell "26" [ref=e630] [cursor=pointer]
-              - cell "27" [ref=e632] [cursor=pointer]
-              - cell "28" [ref=e634] [cursor=pointer]
-              - cell "29" [ref=e636] [cursor=pointer]
-              - cell "30" [ref=e638] [cursor=pointer]
-            - row [ref=e640]:
-              - cell "1" [ref=e641] [cursor=pointer]
-              - cell "2" [ref=e643] [cursor=pointer]
-              - cell "3" [ref=e645] [cursor=pointer]
-              - cell "4" [ref=e647] [cursor=pointer]
-              - cell "5" [ref=e649] [cursor=pointer]
-              - cell "6" [ref=e651] [cursor=pointer]
-              - cell "7" [ref=e653] [cursor=pointer]
-      - generic [ref=e658]:
-        - list [ref=e659]:
-          - listitem [ref=e660]:
-            - generic [ref=e661] [cursor=pointer]: "00"
-          - listitem [ref=e662]:
-            - generic [ref=e663] [cursor=pointer]: "01"
-          - listitem [ref=e664]:
-            - generic [ref=e665] [cursor=pointer]: "02"
-          - listitem [ref=e666]:
-            - generic [ref=e667] [cursor=pointer]: "03"
-          - listitem [ref=e668]:
-            - generic [ref=e669] [cursor=pointer]: "04"
-          - listitem [ref=e670]:
-            - generic [ref=e671] [cursor=pointer]: "05"
-          - listitem [ref=e672]:
-            - generic [ref=e673] [cursor=pointer]: "06"
-          - listitem [ref=e674]:
-            - generic [ref=e675] [cursor=pointer]: "07"
-          - listitem [ref=e676]:
-            - generic [ref=e677] [cursor=pointer]: "08"
-          - listitem [ref=e678]:
-            - generic [ref=e679] [cursor=pointer]: "09"
-          - listitem [ref=e680]:
-            - generic [ref=e681] [cursor=pointer]: "10"
-          - listitem [ref=e682]:
-            - generic [ref=e683] [cursor=pointer]: "11"
-          - listitem [ref=e684]:
-            - generic [ref=e685] [cursor=pointer]: "12"
-          - listitem [ref=e686]:
-            - generic [ref=e687] [cursor=pointer]: "13"
-          - listitem [ref=e688]:
-            - generic [ref=e689] [cursor=pointer]: "14"
-          - listitem [ref=e690]:
-            - generic [ref=e691] [cursor=pointer]: "15"
-          - listitem [ref=e692]:
-            - generic [ref=e693] [cursor=pointer]: "16"
-          - listitem [ref=e694]:
-            - generic [ref=e695] [cursor=pointer]: "17"
-          - listitem [ref=e696]:
-            - generic [ref=e697] [cursor=pointer]: "18"
-          - listitem [ref=e698]:
-            - generic [ref=e699] [cursor=pointer]: "19"
-          - listitem [ref=e700]:
-            - generic [ref=e701] [cursor=pointer]: "20"
-          - listitem [ref=e702]:
-            - generic [ref=e703] [cursor=pointer]: "21"
-          - listitem [ref=e704]:
-            - generic [ref=e705] [cursor=pointer]: "22"
-          - listitem [ref=e706]:
-            - generic [ref=e707] [cursor=pointer]: "23"
-        - list [ref=e708]:
-          - listitem [ref=e709]:
-            - generic [ref=e710] [cursor=pointer]: "00"
-          - listitem [ref=e711]:
-            - generic [ref=e712] [cursor=pointer]: "01"
-          - listitem [ref=e713]:
-            - generic [ref=e714] [cursor=pointer]: "02"
-          - listitem [ref=e715]:
-            - generic [ref=e716] [cursor=pointer]: "03"
-          - listitem [ref=e717]:
-            - generic [ref=e718] [cursor=pointer]: "04"
-          - listitem [ref=e719]:
-            - generic [ref=e720] [cursor=pointer]: "05"
-          - listitem [ref=e721]:
-            - generic [ref=e722] [cursor=pointer]: "06"
-          - listitem [ref=e723]:
-            - generic [ref=e724] [cursor=pointer]: "07"
-          - listitem [ref=e725]:
-            - generic [ref=e726] [cursor=pointer]: "08"
-          - listitem [ref=e727]:
-            - generic [ref=e728] [cursor=pointer]: "09"
-          - listitem [ref=e729]:
-            - generic [ref=e730] [cursor=pointer]: "10"
-          - listitem [ref=e731]:
-            - generic [ref=e732] [cursor=pointer]: "11"
-          - listitem [ref=e733]:
-            - generic [ref=e734] [cursor=pointer]: "12"
-          - listitem [ref=e735]:
-            - generic [ref=e736] [cursor=pointer]: "13"
-          - listitem [ref=e737]:
-            - generic [ref=e738] [cursor=pointer]: "14"
-          - listitem [ref=e739]:
-            - generic [ref=e740] [cursor=pointer]: "15"
-          - listitem [ref=e741]:
-            - generic [ref=e742] [cursor=pointer]: "16"
-          - listitem [ref=e743]:
-            - generic [ref=e744] [cursor=pointer]: "17"
-          - listitem [ref=e745]:
-            - generic [ref=e746] [cursor=pointer]: "18"
-          - listitem [ref=e747]:
-            - generic [ref=e748] [cursor=pointer]: "19"
-          - listitem [ref=e749]:
-            - generic [ref=e750] [cursor=pointer]: "20"
-          - listitem [ref=e751]:
-            - generic [ref=e752] [cursor=pointer]: "21"
-          - listitem [ref=e753]:
-            - generic [ref=e754] [cursor=pointer]: "22"
-          - listitem [ref=e755]:
-            - generic [ref=e756] [cursor=pointer]: "23"
-          - listitem [ref=e757]:
-            - generic [ref=e758] [cursor=pointer]: "24"
-          - listitem [ref=e759]:
-            - generic [ref=e760] [cursor=pointer]: "25"
-          - listitem [ref=e761]:
-            - generic [ref=e762] [cursor=pointer]: "26"
-          - listitem [ref=e763]:
-            - generic [ref=e764] [cursor=pointer]: "27"
-          - listitem [ref=e765]:
-            - generic [ref=e766] [cursor=pointer]: "28"
-          - listitem [ref=e767]:
-            - generic [ref=e768] [cursor=pointer]: "29"
-          - listitem [ref=e769]:
-            - generic [ref=e770] [cursor=pointer]: "30"
-          - listitem [ref=e771]:
-            - generic [ref=e772] [cursor=pointer]: "31"
-          - listitem [ref=e773]:
-            - generic [ref=e774] [cursor=pointer]: "32"
-          - listitem [ref=e775]:
-            - generic [ref=e776] [cursor=pointer]: "33"
-          - listitem [ref=e777]:
-            - generic [ref=e778] [cursor=pointer]: "34"
-          - listitem [ref=e779]:
-            - generic [ref=e780] [cursor=pointer]: "35"
-          - listitem [ref=e781]:
-            - generic [ref=e782] [cursor=pointer]: "36"
-          - listitem [ref=e783]:
-            - generic [ref=e784] [cursor=pointer]: "37"
-          - listitem [ref=e785]:
-            - generic [ref=e786] [cursor=pointer]: "38"
-          - listitem [ref=e787]:
-            - generic [ref=e788] [cursor=pointer]: "39"
-          - listitem [ref=e789]:
-            - generic [ref=e790] [cursor=pointer]: "40"
-          - listitem [ref=e791]:
-            - generic [ref=e792] [cursor=pointer]: "41"
-          - listitem [ref=e793]:
-            - generic [ref=e794] [cursor=pointer]: "42"
-          - listitem [ref=e795]:
-            - generic [ref=e796] [cursor=pointer]: "43"
-          - listitem [ref=e797]:
-            - generic [ref=e798] [cursor=pointer]: "44"
-          - listitem [ref=e799]:
-            - generic [ref=e800] [cursor=pointer]: "45"
-          - listitem [ref=e801]:
-            - generic [ref=e802] [cursor=pointer]: "46"
-          - listitem [ref=e803]:
-            - generic [ref=e804] [cursor=pointer]: "47"
-          - listitem [ref=e805]:
-            - generic [ref=e806] [cursor=pointer]: "48"
-          - listitem [ref=e807]:
-            - generic [ref=e808] [cursor=pointer]: "49"
-          - listitem [ref=e809]:
-            - generic [ref=e810] [cursor=pointer]: "50"
-          - listitem [ref=e811]:
-            - generic [ref=e812] [cursor=pointer]: "51"
-          - listitem [ref=e813]:
-            - generic [ref=e814] [cursor=pointer]: "52"
-          - listitem [ref=e815]:
-            - generic [ref=e816] [cursor=pointer]: "53"
-          - listitem [ref=e817]:
-            - generic [ref=e818] [cursor=pointer]: "54"
-          - listitem [ref=e819]:
-            - generic [ref=e820] [cursor=pointer]: "55"
-          - listitem [ref=e821]:
-            - generic [ref=e822] [cursor=pointer]: "56"
-          - listitem [ref=e823]:
-            - generic [ref=e824] [cursor=pointer]: "57"
-          - listitem [ref=e825]:
-            - generic [ref=e826] [cursor=pointer]: "58"
-          - listitem [ref=e827]:
-            - generic [ref=e828] [cursor=pointer]: "59"
-    - list [ref=e830]:
-      - listitem [ref=e831]:
-        - button "OK" [disabled] [ref=e832]
+                              - generic [ref=f1e478]: "*"
+                            - textbox [ref=f1e483]: maanda.test@example.com
+                  - generic [ref=f1e488]:
+                    - generic [ref=f1e489]:
+                      - img "right" [ref=f1e491] [cursor=pointer]
+                      - generic [ref=f1e494]: Supporting Documents
+                    - generic [ref=f1e498]:
+                      - alert [ref=f1e499]:
+                        - img "info-circle" [ref=f1e500]
+                        - generic [ref=f1e503]: Attach all documents demonstrating that all necessary processes were followed and approvals granted.
+                        - button [ref=f1e506] [cursor=pointer]:
+                          - img "close" [ref=f1e507]
+                      - generic [ref=f1e513]:
+                        - generic "Supporting documents" [ref=f1e515]
+                        - button "upload (press to upload)" [ref=f1e523] [cursor=pointer]:
+                          - img "upload" [ref=f1e525]
+                          - generic [ref=f1e528]: (press to upload)
+              - generic [ref=f1e530]:
+                - button "Close" [ref=f1e531] [cursor=pointer]
+                - button "Next" [disabled] [ref=f1e533]
+  - alert [ref=f1e534]
+  - generic [ref=f1e537]:
+    - generic [ref=f1e539]:
+      - generic [ref=f1e540]:
+        - generic [ref=f1e541]:
+          - button [ref=f1e542] [cursor=pointer]
+          - button [ref=f1e544] [cursor=pointer]
+          - generic [ref=f1e546]:
+            - button "Sep" [ref=f1e547] [cursor=pointer]
+            - button "2028" [ref=f1e548] [cursor=pointer]
+          - button [active] [ref=f1e549] [cursor=pointer]
+          - button [ref=f1e551] [cursor=pointer]
+        - table [ref=f1e554]:
+          - rowgroup [ref=f1e555]:
+            - row [ref=f1e556]:
+              - columnheader "Su" [ref=f1e557]
+              - columnheader "Mo" [ref=f1e558]
+              - columnheader "Tu" [ref=f1e559]
+              - columnheader "We" [ref=f1e560]
+              - columnheader "Th" [ref=f1e561]
+              - columnheader "Fr" [ref=f1e562]
+              - columnheader "Sa" [ref=f1e563]
+          - rowgroup [ref=f1e564]:
+            - row [ref=f1e565]:
+              - cell "27" [ref=f1e566] [cursor=pointer]
+              - cell "28" [ref=f1e568] [cursor=pointer]
+              - cell "29" [ref=f1e570] [cursor=pointer]
+              - cell "30" [ref=f1e572] [cursor=pointer]
+              - cell "31" [ref=f1e574] [cursor=pointer]
+              - cell "1" [ref=f1e576] [cursor=pointer]
+              - cell "2" [ref=f1e578] [cursor=pointer]
+            - row [ref=f1e580]:
+              - cell "3" [ref=f1e581] [cursor=pointer]
+              - cell "4" [ref=f1e583] [cursor=pointer]
+              - cell "5" [ref=f1e585] [cursor=pointer]
+              - cell "6" [ref=f1e587] [cursor=pointer]
+              - cell "7" [ref=f1e589] [cursor=pointer]
+              - cell "8" [ref=f1e591] [cursor=pointer]
+              - cell "9" [ref=f1e593] [cursor=pointer]
+            - row [ref=f1e595]:
+              - cell "10" [ref=f1e596] [cursor=pointer]
+              - cell "11" [ref=f1e598] [cursor=pointer]
+              - cell "12" [ref=f1e600] [cursor=pointer]
+              - cell "13" [ref=f1e602] [cursor=pointer]
+              - cell "14" [ref=f1e604] [cursor=pointer]
+              - cell "15" [ref=f1e606] [cursor=pointer]
+              - cell "16" [ref=f1e608] [cursor=pointer]
+            - row [ref=f1e610]:
+              - cell "17" [ref=f1e611] [cursor=pointer]
+              - cell "18" [ref=f1e613] [cursor=pointer]
+              - cell "19" [ref=f1e615] [cursor=pointer]
+              - cell "20" [ref=f1e617] [cursor=pointer]
+              - cell "21" [ref=f1e619] [cursor=pointer]
+              - cell "22" [ref=f1e621] [cursor=pointer]
+              - cell "23" [ref=f1e623] [cursor=pointer]
+            - row [ref=f1e625]:
+              - cell "24" [ref=f1e626] [cursor=pointer]
+              - cell "25" [ref=f1e628] [cursor=pointer]
+              - cell "26" [ref=f1e630] [cursor=pointer]
+              - cell "27" [ref=f1e632] [cursor=pointer]
+              - cell "28" [ref=f1e634] [cursor=pointer]
+              - cell "29" [ref=f1e636] [cursor=pointer]
+              - cell "30" [ref=f1e638] [cursor=pointer]
+            - row [ref=f1e640]:
+              - cell "1" [ref=f1e641] [cursor=pointer]
+              - cell "2" [ref=f1e643] [cursor=pointer]
+              - cell "3" [ref=f1e645] [cursor=pointer]
+              - cell "4" [ref=f1e647] [cursor=pointer]
+              - cell "5" [ref=f1e649] [cursor=pointer]
+              - cell "6" [ref=f1e651] [cursor=pointer]
+              - cell "7" [ref=f1e653] [cursor=pointer]
+      - generic [ref=f1e658]:
+        - list [ref=f1e659]:
+          - listitem [ref=f1e660]:
+            - generic [ref=f1e661] [cursor=pointer]: "00"
+          - listitem [ref=f1e662]:
+            - generic [ref=f1e663] [cursor=pointer]: "01"
+          - listitem [ref=f1e664]:
+            - generic [ref=f1e665] [cursor=pointer]: "02"
+          - listitem [ref=f1e666]:
+            - generic [ref=f1e667] [cursor=pointer]: "03"
+          - listitem [ref=f1e668]:
+            - generic [ref=f1e669] [cursor=pointer]: "04"
+          - listitem [ref=f1e670]:
+            - generic [ref=f1e671] [cursor=pointer]: "05"
+          - listitem [ref=f1e672]:
+            - generic [ref=f1e673] [cursor=pointer]: "06"
+          - listitem [ref=f1e674]:
+            - generic [ref=f1e675] [cursor=pointer]: "07"
+          - listitem [ref=f1e676]:
+            - generic [ref=f1e677] [cursor=pointer]: "08"
+          - listitem [ref=f1e678]:
+            - generic [ref=f1e679] [cursor=pointer]: "09"
+          - listitem [ref=f1e680]:
+            - generic [ref=f1e681] [cursor=pointer]: "10"
+          - listitem [ref=f1e682]:
+            - generic [ref=f1e683] [cursor=pointer]: "11"
+          - listitem [ref=f1e684]:
+            - generic [ref=f1e685] [cursor=pointer]: "12"
+          - listitem [ref=f1e686]:
+            - generic [ref=f1e687] [cursor=pointer]: "13"
+          - listitem [ref=f1e688]:
+            - generic [ref=f1e689] [cursor=pointer]: "14"
+          - listitem [ref=f1e690]:
+            - generic [ref=f1e691] [cursor=pointer]: "15"
+          - listitem [ref=f1e692]:
+            - generic [ref=f1e693] [cursor=pointer]: "16"
+          - listitem [ref=f1e694]:
+            - generic [ref=f1e695] [cursor=pointer]: "17"
+          - listitem [ref=f1e696]:
+            - generic [ref=f1e697] [cursor=pointer]: "18"
+          - listitem [ref=f1e698]:
+            - generic [ref=f1e699] [cursor=pointer]: "19"
+          - listitem [ref=f1e700]:
+            - generic [ref=f1e701] [cursor=pointer]: "20"
+          - listitem [ref=f1e702]:
+            - generic [ref=f1e703] [cursor=pointer]: "21"
+          - listitem [ref=f1e704]:
+            - generic [ref=f1e705] [cursor=pointer]: "22"
+          - listitem [ref=f1e706]:
+            - generic [ref=f1e707] [cursor=pointer]: "23"
+        - list [ref=f1e708]:
+          - listitem [ref=f1e709]:
+            - generic [ref=f1e710] [cursor=pointer]: "00"
+          - listitem [ref=f1e711]:
+            - generic [ref=f1e712] [cursor=pointer]: "01"
+          - listitem [ref=f1e713]:
+            - generic [ref=f1e714] [cursor=pointer]: "02"
+          - listitem [ref=f1e715]:
+            - generic [ref=f1e716] [cursor=pointer]: "03"
+          - listitem [ref=f1e717]:
+            - generic [ref=f1e718] [cursor=pointer]: "04"
+          - listitem [ref=f1e719]:
+            - generic [ref=f1e720] [cursor=pointer]: "05"
+          - listitem [ref=f1e721]:
+            - generic [ref=f1e722] [cursor=pointer]: "06"
+          - listitem [ref=f1e723]:
+            - generic [ref=f1e724] [cursor=pointer]: "07"
+          - listitem [ref=f1e725]:
+            - generic [ref=f1e726] [cursor=pointer]: "08"
+          - listitem [ref=f1e727]:
+            - generic [ref=f1e728] [cursor=pointer]: "09"
+          - listitem [ref=f1e729]:
+            - generic [ref=f1e730] [cursor=pointer]: "10"
+          - listitem [ref=f1e731]:
+            - generic [ref=f1e732] [cursor=pointer]: "11"
+          - listitem [ref=f1e733]:
+            - generic [ref=f1e734] [cursor=pointer]: "12"
+          - listitem [ref=f1e735]:
+            - generic [ref=f1e736] [cursor=pointer]: "13"
+          - listitem [ref=f1e737]:
+            - generic [ref=f1e738] [cursor=pointer]: "14"
+          - listitem [ref=f1e739]:
+            - generic [ref=f1e740] [cursor=pointer]: "15"
+          - listitem [ref=f1e741]:
+            - generic [ref=f1e742] [cursor=pointer]: "16"
+          - listitem [ref=f1e743]:
+            - generic [ref=f1e744] [cursor=pointer]: "17"
+          - listitem [ref=f1e745]:
+            - generic [ref=f1e746] [cursor=pointer]: "18"
+          - listitem [ref=f1e747]:
+            - generic [ref=f1e748] [cursor=pointer]: "19"
+          - listitem [ref=f1e749]:
+            - generic [ref=f1e750] [cursor=pointer]: "20"
+          - listitem [ref=f1e751]:
+            - generic [ref=f1e752] [cursor=pointer]: "21"
+          - listitem [ref=f1e753]:
+            - generic [ref=f1e754] [cursor=pointer]: "22"
+          - listitem [ref=f1e755]:
+            - generic [ref=f1e756] [cursor=pointer]: "23"
+          - listitem [ref=f1e757]:
+            - generic [ref=f1e758] [cursor=pointer]: "24"
+          - listitem [ref=f1e759]:
+            - generic [ref=f1e760] [cursor=pointer]: "25"
+          - listitem [ref=f1e761]:
+            - generic [ref=f1e762] [cursor=pointer]: "26"
+          - listitem [ref=f1e763]:
+            - generic [ref=f1e764] [cursor=pointer]: "27"
+          - listitem [ref=f1e765]:
+            - generic [ref=f1e766] [cursor=pointer]: "28"
+          - listitem [ref=f1e767]:
+            - generic [ref=f1e768] [cursor=pointer]: "29"
+          - listitem [ref=f1e769]:
+            - generic [ref=f1e770] [cursor=pointer]: "30"
+          - listitem [ref=f1e771]:
+            - generic [ref=f1e772] [cursor=pointer]: "31"
+          - listitem [ref=f1e773]:
+            - generic [ref=f1e774] [cursor=pointer]: "32"
+          - listitem [ref=f1e775]:
+            - generic [ref=f1e776] [cursor=pointer]: "33"
+          - listitem [ref=f1e777]:
+            - generic [ref=f1e778] [cursor=pointer]: "34"
+          - listitem [ref=f1e779]:
+            - generic [ref=f1e780] [cursor=pointer]: "35"
+          - listitem [ref=f1e781]:
+            - generic [ref=f1e782] [cursor=pointer]: "36"
+          - listitem [ref=f1e783]:
+            - generic [ref=f1e784] [cursor=pointer]: "37"
+          - listitem [ref=f1e785]:
+            - generic [ref=f1e786] [cursor=pointer]: "38"
+          - listitem [ref=f1e787]:
+            - generic [ref=f1e788] [cursor=pointer]: "39"
+          - listitem [ref=f1e789]:
+            - generic [ref=f1e790] [cursor=pointer]: "40"
+          - listitem [ref=f1e791]:
+            - generic [ref=f1e792] [cursor=pointer]: "41"
+          - listitem [ref=f1e793]:
+            - generic [ref=f1e794] [cursor=pointer]: "42"
+          - listitem [ref=f1e795]:
+            - generic [ref=f1e796] [cursor=pointer]: "43"
+          - listitem [ref=f1e797]:
+            - generic [ref=f1e798] [cursor=pointer]: "44"
+          - listitem [ref=f1e799]:
+            - generic [ref=f1e800] [cursor=pointer]: "45"
+          - listitem [ref=f1e801]:
+            - generic [ref=f1e802] [cursor=pointer]: "46"
+          - listitem [ref=f1e803]:
+            - generic [ref=f1e804] [cursor=pointer]: "47"
+          - listitem [ref=f1e805]:
+            - generic [ref=f1e806] [cursor=pointer]: "48"
+          - listitem [ref=f1e807]:
+            - generic [ref=f1e808] [cursor=pointer]: "49"
+          - listitem [ref=f1e809]:
+            - generic [ref=f1e810] [cursor=pointer]: "50"
+          - listitem [ref=f1e811]:
+            - generic [ref=f1e812] [cursor=pointer]: "51"
+          - listitem [ref=f1e813]:
+            - generic [ref=f1e814] [cursor=pointer]: "52"
+          - listitem [ref=f1e815]:
+            - generic [ref=f1e816] [cursor=pointer]: "53"
+          - listitem [ref=f1e817]:
+            - generic [ref=f1e818] [cursor=pointer]: "54"
+          - listitem [ref=f1e819]:
+            - generic [ref=f1e820] [cursor=pointer]: "55"
+          - listitem [ref=f1e821]:
+            - generic [ref=f1e822] [cursor=pointer]: "56"
+          - listitem [ref=f1e823]:
+            - generic [ref=f1e824] [cursor=pointer]: "57"
+          - listitem [ref=f1e825]:
+            - generic [ref=f1e826] [cursor=pointer]: "58"
+          - listitem [ref=f1e827]:
+            - generic [ref=f1e828] [cursor=pointer]: "59"
+    - list [ref=f1e830]:
+      - listitem [ref=f1e831]:
+        - button "OK" [disabled] [ref=f1e832]
 ```
 
 # Test source
