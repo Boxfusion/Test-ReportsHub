@@ -22,7 +22,7 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 33,
-    "totalRuns": 328,
+    "totalRuns": 363,
     "last7Runs": 225,
     "last7Pass": 0,
     "last7PassPct": 0,
@@ -2543,9 +2543,9 @@
       },
       {
         "iso": "2026-09-14",
-        "runs": 0,
+        "runs": 35,
         "passed": 0,
-        "failed": 0,
+        "failed": 35,
         "partial": 0
       },
       {
@@ -2601,14 +2601,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "8.8s",
+            "duration": "8.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/empty-username-and-password.md"
+            "reportHref": "test-reports/2026-09-14/empty-username-and-password.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "8.4s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -2682,14 +2688,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "8.3s",
+            "duration": "7.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/invalid-login.md"
+            "reportHref": "test-reports/2026-09-14/invalid-login.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "7.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -2763,14 +2775,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "8.3s",
+            "duration": "8s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/invalid-username-valid-password.md"
+            "reportHref": "test-reports/2026-09-14/invalid-username-valid-password.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "8s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -2838,14 +2856,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "7.8s",
+            "duration": "7.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/valid-login.md"
+            "reportHref": "test-reports/2026-09-14/valid-login.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "7.4s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -2919,14 +2943,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "8.4s",
+            "duration": "7.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/valid-username-invalid-password.md"
+            "reportHref": "test-reports/2026-09-14/valid-username-invalid-password.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "7.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3007,14 +3037,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.3s",
+            "duration": "46.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-action-required-auto-populate-action-text.md"
+            "reportHref": "test-reports/2026-09-14/verify-action-required-auto-populate-action-text.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3088,14 +3124,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "50s",
+            "duration": "46.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-add-referral.md"
+            "reportHref": "test-reports/2026-09-14/verify-add-referral.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3169,14 +3211,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "49.8s",
+            "duration": "47s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-approve-memo.md"
+            "reportHref": "test-reports/2026-09-14/verify-approve-memo.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "47s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3250,14 +3298,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.2s",
+            "duration": "46.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-attach-supporting-documents.md"
+            "reportHref": "test-reports/2026-09-14/verify-attach-supporting-documents.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3331,14 +3385,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.4s",
+            "duration": "45.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-attachments-next-button-navigation.md"
+            "reportHref": "test-reports/2026-09-14/verify-attachments-next-button-navigation.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "45.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3412,14 +3472,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "49.4s",
+            "duration": "45.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-can-edit-disabled-hides-edit-button.md"
+            "reportHref": "test-reports/2026-09-14/verify-can-edit-disabled-hides-edit-button.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "45.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3493,14 +3559,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.5s",
+            "duration": "46.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-can-edit-enabled-shows-edit-button.md"
+            "reportHref": "test-reports/2026-09-14/verify-can-edit-enabled-shows-edit-button.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.5s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3574,14 +3646,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "47.9s",
+            "duration": "45.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-cc-user-in-routing-list.md"
+            "reportHref": "test-reports/2026-09-14/verify-cc-user-in-routing-list.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "45.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3655,14 +3733,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "49.7s",
+            "duration": "47.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-close-memo.md"
+            "reportHref": "test-reports/2026-09-14/verify-close-memo.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "47.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3736,14 +3820,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.3s",
+            "duration": "46.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-comments-mandatory-for-negative-actions-craig.md"
+            "reportHref": "test-reports/2026-09-14/verify-comments-mandatory-for-negative-actions-craig.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3817,14 +3907,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "47.5s",
+            "duration": "44.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-comments-mandatory-for-negative-actions.md"
+            "reportHref": "test-reports/2026-09-14/verify-comments-mandatory-for-negative-actions.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "44.5s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3898,14 +3994,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "49s",
+            "duration": "46.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-edit-delete-signatory.md"
+            "reportHref": "test-reports/2026-09-14/verify-edit-delete-signatory.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -3973,14 +4075,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "49.2s",
+            "duration": "46.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-mandatory-data-validation.md"
+            "reportHref": "test-reports/2026-09-14/verify-mandatory-data-validation.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4048,14 +4156,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.2s",
+            "duration": "46.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-new-draft-version-creation.md"
+            "reportHref": "test-reports/2026-09-14/verify-new-draft-version-creation.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4123,14 +4237,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.2s",
+            "duration": "46.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-new-version-created.md"
+            "reportHref": "test-reports/2026-09-14/verify-new-version-created.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4198,14 +4318,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "50.2s",
+            "duration": "46.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-next-button-navigation.md"
+            "reportHref": "test-reports/2026-09-14/verify-next-button-navigation.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4273,14 +4399,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "49s",
+            "duration": "46.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-preview-in-pdf.md"
+            "reportHref": "test-reports/2026-09-14/verify-preview-in-pdf.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4348,14 +4480,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "32.6s",
+            "duration": "32.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-reassign-function.md"
+            "reportHref": "test-reports/2026-09-14/verify-reassign-function.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "32.4s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4423,14 +4561,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.2s",
+            "duration": "46s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-recommend-memo.md"
+            "reportHref": "test-reports/2026-09-14/verify-recommend-memo.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4498,14 +4642,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.7s",
+            "duration": "46.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-reorder-signatories.md"
+            "reportHref": "test-reports/2026-09-14/verify-reorder-signatories.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4573,14 +4723,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.8s",
+            "duration": "47.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-replace-supporting-documents.md"
+            "reportHref": "test-reports/2026-09-14/verify-replace-supporting-documents.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "47.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4648,14 +4804,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48s",
+            "duration": "47.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-retract-functionality.md"
+            "reportHref": "test-reports/2026-09-14/verify-retract-functionality.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "47.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4723,14 +4885,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48s",
+            "duration": "46.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-send-back.md"
+            "reportHref": "test-reports/2026-09-14/verify-send-back.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4798,14 +4966,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.1s",
+            "duration": "46.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-send-to-approver-first.md"
+            "reportHref": "test-reports/2026-09-14/verify-send-to-approver-first.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4873,14 +5047,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.5s",
+            "duration": "46.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-tabs-under-compose-step.md"
+            "reportHref": "test-reports/2026-09-14/verify-tabs-under-compose-step.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -4948,14 +5128,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "49.7s",
+            "duration": "46.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-take-ownership.md"
+            "reportHref": "test-reports/2026-09-14/verify-take-ownership.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -5023,14 +5209,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.9s",
+            "duration": "45.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-withdraw-button.md"
+            "reportHref": "test-reports/2026-09-14/verify-withdraw-button.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "45.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -5098,14 +5290,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-13",
+            "date": "2026-09-14",
             "result": "FAILED",
-            "duration": "48.2s",
+            "duration": "46s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-13/verify-withdraw-memo.md"
+            "reportHref": "test-reports/2026-09-14/verify-withdraw-memo.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "46s",
+              "variant": null
+            },
             {
               "date": "2026-09-13",
               "result": "FAILED",
@@ -5167,6 +5365,326 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-14",
+      "runs": [
+        {
+          "plan": "test-plans/Memo/_adhoc-craig-myitems-retract.md",
+          "planDisplay": "Memo/_adhoc-craig-myitems-retract.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "85.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/_adhoc-craig-myitems-retract.md"
+        },
+        {
+          "plan": "test-plans/Memo/_adhoc-craig-newversion-ref08200.md",
+          "planDisplay": "Memo/_adhoc-craig-newversion-ref08200.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "111.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/_adhoc-craig-newversion-ref08200.md"
+        },
+        {
+          "plan": "test-plans/Login/empty-username-and-password.md",
+          "planDisplay": "Login/empty-username-and-password.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "8.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/empty-username-and-password.md"
+        },
+        {
+          "plan": "test-plans/Login/invalid-login.md",
+          "planDisplay": "Login/invalid-login.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "7.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/invalid-login.md"
+        },
+        {
+          "plan": "test-plans/Login/invalid-username-valid-password.md",
+          "planDisplay": "Login/invalid-username-valid-password.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/invalid-username-valid-password.md"
+        },
+        {
+          "plan": "test-plans/Login/valid-login.md",
+          "planDisplay": "Login/valid-login.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "7.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/valid-login.md"
+        },
+        {
+          "plan": "test-plans/Login/valid-username-invalid-password.md",
+          "planDisplay": "Login/valid-username-invalid-password.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "7.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/valid-username-invalid-password.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-action-required-auto-populate-action-text.md",
+          "planDisplay": "Memo/verify-action-required-auto-populate-action-text.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-action-required-auto-populate-action-text.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-add-referral.md",
+          "planDisplay": "Memo/verify-add-referral.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-add-referral.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-approve-memo.md",
+          "planDisplay": "Memo/verify-approve-memo.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-approve-memo.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-attach-supporting-documents.md",
+          "planDisplay": "Memo/verify-attach-supporting-documents.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-attach-supporting-documents.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-attachments-next-button-navigation.md",
+          "planDisplay": "Memo/verify-attachments-next-button-navigation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "45.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-attachments-next-button-navigation.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-can-edit-disabled-hides-edit-button.md",
+          "planDisplay": "Memo/verify-can-edit-disabled-hides-edit-button.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "45.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-can-edit-disabled-hides-edit-button.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-can-edit-enabled-shows-edit-button.md",
+          "planDisplay": "Memo/verify-can-edit-enabled-shows-edit-button.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-can-edit-enabled-shows-edit-button.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-cc-user-in-routing-list.md",
+          "planDisplay": "Memo/verify-cc-user-in-routing-list.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "45.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-cc-user-in-routing-list.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-close-memo.md",
+          "planDisplay": "Memo/verify-close-memo.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-close-memo.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-comments-mandatory-for-negative-actions-craig.md",
+          "planDisplay": "Memo/verify-comments-mandatory-for-negative-actions-craig.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-comments-mandatory-for-negative-actions-craig.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-comments-mandatory-for-negative-actions.md",
+          "planDisplay": "Memo/verify-comments-mandatory-for-negative-actions.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "44.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-comments-mandatory-for-negative-actions.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-edit-delete-signatory.md",
+          "planDisplay": "Memo/verify-edit-delete-signatory.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-edit-delete-signatory.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-mandatory-data-validation.md",
+          "planDisplay": "Memo/verify-mandatory-data-validation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-mandatory-data-validation.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-new-draft-version-creation.md",
+          "planDisplay": "Memo/verify-new-draft-version-creation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-new-draft-version-creation.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-new-version-created.md",
+          "planDisplay": "Memo/verify-new-version-created.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-new-version-created.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-next-button-navigation.md",
+          "planDisplay": "Memo/verify-next-button-navigation.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-next-button-navigation.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-preview-in-pdf.md",
+          "planDisplay": "Memo/verify-preview-in-pdf.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-preview-in-pdf.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-reassign-function.md",
+          "planDisplay": "Memo/verify-reassign-function.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "32.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-reassign-function.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-recommend-memo.md",
+          "planDisplay": "Memo/verify-recommend-memo.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-recommend-memo.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-reorder-signatories.md",
+          "planDisplay": "Memo/verify-reorder-signatories.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-reorder-signatories.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-replace-supporting-documents.md",
+          "planDisplay": "Memo/verify-replace-supporting-documents.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-replace-supporting-documents.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-retract-functionality.md",
+          "planDisplay": "Memo/verify-retract-functionality.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "47.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-retract-functionality.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-send-back.md",
+          "planDisplay": "Memo/verify-send-back.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-send-back.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-send-to-approver-first.md",
+          "planDisplay": "Memo/verify-send-to-approver-first.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-send-to-approver-first.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-tabs-under-compose-step.md",
+          "planDisplay": "Memo/verify-tabs-under-compose-step.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-tabs-under-compose-step.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-take-ownership.md",
+          "planDisplay": "Memo/verify-take-ownership.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-take-ownership.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-withdraw-button.md",
+          "planDisplay": "Memo/verify-withdraw-button.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "45.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-withdraw-button.md"
+        },
+        {
+          "plan": "test-plans/Memo/verify-withdraw-memo.md",
+          "planDisplay": "Memo/verify-withdraw-memo.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "46s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/verify-withdraw-memo.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-13",
       "runs": [
@@ -8190,5 +8708,5 @@
       ]
     }
   ],
-  "generated": "2026-09-13T02:49:29.949Z"
+  "generated": "2026-09-14T02:49:11.091Z"
 }
