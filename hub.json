@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-05T05:50:45.996Z",
+  "generated": "2026-08-12T12:31:38.351Z",
   "projects": [
     {
       "name": "dep",
@@ -115,6 +115,29 @@
         }
       },
       "href": "projects/EC-DEDEA-Bid-Management/index.html"
+    },
+    {
+      "name": "EPM",
+      "displayName": "EPM",
+      "appUrl": "https://pd-epm-adminportal-qa-wf.shesha.app/login",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Epm",
+      "description": "Test reports for the Employee Performance Management (EPM) Admin Portal, executed against the Azure DevOps EPM-QA test plans.",
+      "health": "healthy",
+      "summary": {
+        "totalPlans": 6,
+        "totalRuns": 6,
+        "last7Runs": 6,
+        "last7Pass": 6,
+        "last7PassPct": 100,
+        "failingFlows": 0,
+        "lastRun": {
+          "date": "2026-08-12",
+          "result": "PASSED",
+          "plan": "test-plans/foundation-reference-data/epm-component-definition-uom-dropdown.md"
+        }
+      },
+      "href": "projects/EPM/index.html"
     },
     {
       "name": "land-bank",
@@ -233,10 +256,10 @@
     }
   ],
   "totals": {
-    "totalProjects": 10,
-    "totalPlans": 52,
-    "totalRuns": 210,
-    "last7Runs": 124,
+    "totalProjects": 11,
+    "totalPlans": 58,
+    "totalRuns": 216,
+    "last7Runs": 130,
     "failingFlows": 19
   }
 }

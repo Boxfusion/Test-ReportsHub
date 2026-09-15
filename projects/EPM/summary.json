@@ -1,0 +1,13 @@
+{
+  "totalPlans": 6,
+  "totalRuns": 6,
+  "last7Runs": 6,
+  "last7Pass": 6,
+  "last7PassPct": 100,
+  "failingFlows": 0,
+  "lastRun": {
+    "date": "2026-08-12",
+    "result": "PASSED",
+    "plan": "test-plans/foundation-reference-data/epm-component-definition-uom-dropdown.md"
+  }
+}
