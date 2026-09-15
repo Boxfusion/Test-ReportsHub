@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15T02:45:48.201Z",
+  "generated": "2026-09-15T12:57:01.382Z",
   "projects": [
     {
       "name": "Approvals",
@@ -301,6 +301,29 @@
       "href": "projects/bid-management/index.html"
     },
     {
+      "name": "EPM",
+      "displayName": "EPM",
+      "appUrl": "https://pd-epm-adminportal-qa-wf.shesha.app/login",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-Epm",
+      "description": "Test reports for the Employee Performance Management (EPM) Admin Portal, executed against the Azure DevOps EPM-QA test plans.",
+      "health": "healthy",
+      "summary": {
+        "totalPlans": 6,
+        "totalRuns": 6,
+        "last7Runs": 6,
+        "last7Pass": 6,
+        "last7PassPct": 100,
+        "failingFlows": 0,
+        "lastRun": {
+          "date": "2026-08-12",
+          "result": "PASSED",
+          "plan": "test-plans/foundation-reference-data/epm-component-definition-uom-dropdown.md"
+        }
+      },
+      "href": "projects/EPM/index.html"
+    },
+    {
       "name": "dispatch",
       "displayName": "NC Dispatch",
       "appUrl": "https://ncdoh-dispatcher-adminportal-qa.shesha.app/login",
@@ -348,10 +371,10 @@
     }
   ],
   "totals": {
-    "totalProjects": 15,
-    "totalPlans": 275,
-    "totalRuns": 1372,
-    "last7Runs": 509,
+    "totalProjects": 16,
+    "totalPlans": 281,
+    "totalRuns": 1378,
+    "last7Runs": 515,
     "failingFlows": 88
   }
 }
