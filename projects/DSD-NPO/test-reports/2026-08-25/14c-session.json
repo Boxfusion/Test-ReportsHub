@@ -1,0 +1,60 @@
+{
+  "cookies": [
+    {
+      "name": "ARRAffinity",
+      "value": "08abd6ec4b985aadd1d68bc910c527e6f377b1568d80ecf1b16aea3f69522948",
+      "domain": ".dsd-npo-adminportal-qa.shesha.app",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ARRAffinitySameSite",
+      "value": "08abd6ec4b985aadd1d68bc910c527e6f377b1568d80ecf1b16aea3f69522948",
+      "domain": ".dsd-npo-adminportal-qa.shesha.app",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ARRAffinity",
+      "value": "00dd1957702fa022f8b4910642dd5bca665623d3e412e64606ad9ac7f1ffc96e",
+      "domain": ".dsd-npo-api-qa.shesha.app",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ARRAffinitySameSite",
+      "value": "00dd1957702fa022f8b4910642dd5bca665623d3e412e64606ad9ac7f1ffc96e",
+      "domain": ".dsd-npo-api-qa.shesha.app",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "setCookies": [],
+  "storageKeys": {
+    "local": [
+      "LOCALIZATION",
+      "-ylc3wayR_Ha5DLEWV4VG",
+      "xDFcxiooPQxazdndDsdRSerWQPlincytLDCarcxVxv"
+    ],
+    "session": []
+  },
+  "tokenish": [
+    "xDFcxiooPQxazdndDsdRSerWQPlincytLDCarcxVxv"
+  ],
+  "aRows": true,
+  "aKicked": false,
+  "aUrl": "https://dsd-npo-adminportal-qa.shesha.app/dynamic/boxfusion.dsdnpo/change-requests",
+  "bRows": true
+}

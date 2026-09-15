@@ -1,0 +1,74 @@
+{
+  "suite": {
+    "id": 101901,
+    "name": "14C Session read-only access control",
+    "n": 5
+  },
+  "cases": [
+    {
+      "id": 101821,
+      "fields": {
+        "System.Id": 101821,
+        "System.State": "Design",
+        "System.Title": "[TC-14-009 | Src:FDS | Both] Submitter cannot edit OB/org data of an application not in editable state",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Public AND Admin Portal (verify on both). Application in 'Application In-Progress' (read-only) or successful.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Both",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Attempt edit&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;UI blocks edit; API rejects PATCH attempts with 403/409&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "DSD-NPO; Functional; Negative; Portal-Both; Source-FDS; Suite-14C; TC-14-009"
+      }
+    },
+    {
+      "id": 101822,
+      "fields": {
+        "System.Id": 101822,
+        "System.State": "Design",
+        "System.Title": "[TC-14-010 | Src:FDS | Both] Session expiry and re-login lands user where they were (or to dashboard)",
+        "Microsoft.VSTS.Common.Priority": 3,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Public AND Admin Portal (verify on both). User signed in.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Both",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Leave session idle past timeout, attempt action&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;User is redirected to sign-in; after sign-in, taken to dashboard or original deep link&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "DSD-NPO; Edge; Functional; Portal-Both; Source-FDS; Suite-14C; TC-14-010"
+      }
+    },
+    {
+      "id": 107428,
+      "fields": {
+        "System.Id": 107428,
+        "System.State": "Design",
+        "System.Title": "[TC-14C-003 | Src:Code | Both] Session cookie has Secure + HttpOnly + SameSite=Lax/Strict",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<p><b>Intended behaviour:</b> Session cookie has Secure + HttpOnly + SameSite=Lax/Strict </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14C per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> OWASP ASVS §V3 (Session). </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> Cross-cutting: OWASP ASVS v4 §V3 (Session Management). Signed DSDNPO FDS Module 1 §7.1 (Sign-In) implicit. </p><p><b>Code anchor:</b> backend Shesha authentication middleware + session cookie config (backend/src/boxfusion.dsdnpo.Web.Host/**). </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14C-003 | Src:Code | Both] Session cookie has Secure + HttpOnly + SameSite=Lax/Strict&quot; </p>",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Sign in via browser; inspect Set-Cookie response header for session cookie.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Cookie flags: Secure=true, HttpOnly=true, SameSite=Lax or Strict.&lt;/p&gt;</parameterizedString></step></steps>",
+        "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14C"
+      }
+    },
+    {
+      "id": 107429,
+      "fields": {
+        "System.Id": 107429,
+        "System.State": "Design",
+        "System.Title": "[TC-14C-004 | Src:Code | Both] Concurrent logins from same user — session behaviour is defined and stable",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<p><b>Intended behaviour:</b> Concurrent logins from same user — session behaviour is defined and stable </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14C per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> OWASP ASVS §V3 (Session). </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> Cross-cutting: OWASP ASVS v4 §V3 (Session Management). Signed DSDNPO FDS Module 1 §7.1 (Sign-In) implicit. </p><p><b>Code anchor:</b> backend Shesha authentication middleware + session cookie config (backend/src/boxfusion.dsdnpo.Web.Host/**). </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14C-004 | Src:Code | Both] Concurrent logins from same user — session behaviour is defined and stable&quot; </p>",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Sign in from Browser A.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Session A active.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Sign in same account from Browser B.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Behaviour matches defined policy: (a) both sessions valid (allowed by design), OR (b) session A invalidated + user notified. Test asserts the defined behaviour, not one of the two.&lt;/p&gt;</parameterizedString></step></steps>",
+        "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14C"
+      }
+    },
+    {
+      "id": 107430,
+      "fields": {
+        "System.Id": 107430,
+        "System.State": "Design",
+        "System.Title": "[TC-14C-005 | Src:Code | Both] Read-only role cannot mutate — POST/PUT/DELETE endpoints return 403",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<p><b>Intended behaviour:</b> Read-only role cannot mutate — POST/PUT/DELETE endpoints return 403 </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14C per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> OWASP ASVS §V3 (Session). </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> Cross-cutting: OWASP ASVS v4 §V3 (Session Management). Signed DSDNPO FDS Module 1 §7.1 (Sign-In) implicit. </p><p><b>Code anchor:</b> backend Shesha authentication middleware + session cookie config (backend/src/boxfusion.dsdnpo.Web.Host/**). </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14C-005 | Src:Code | Both] Read-only role cannot mutate — POST/PUT/DELETE endpoints return 403&quot; </p>",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"3\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Precondition: user with \"Read only\" role signed in.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Role seed present.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Attempt POST /api/services/dsdnpo/OrganisationLocations/CreateAsync via authorised session.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Response 403 Forbidden. No side-effect in DB.&lt;/p&gt;</parameterizedString></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Attempt DELETE variants.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Same — 403.&lt;/p&gt;</parameterizedString></step></steps>",
+        "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14C"
+      }
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 # Test Report — Refer for Dispute / Mediation UNSUCCESSFUL (Sanele Sithole PA) (PMDS)
 
-- **Date:** 2026-07-15
-- **App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
-- **Cycle:** SL 1-12 Performance Agreement — FY2026/27
-- **Workflow ref:** PA2026/5945
-- **ADO plan:** #101517 — suites 101920, 102065, 102112, 102115 (see Notes on ADO access)
-- **Result:** ✅ PASS — full **Refer for Dispute → Mediation → UNSUCCESSFUL** path exercised for the last remaining created employee; dispute remains unsuccessful ("Under appeal"), reproducing the Adam Apple result
+**Date:** 2026-07-15
+**App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
+**Cycle:** SL 1-12 Performance Agreement — FY2026/27
+**Workflow ref:** PA2026/5945
+**ADO plan:** #101517 — suites 101920, 102065, 102112, 102115 (see Notes on ADO access)
+**Result:** PASSED — full **Refer for Dispute → Mediation → UNSUCCESSFUL** path exercised for the last remaining created employee; dispute remains unsuccessful ("Under appeal"), reproducing the Adam Apple result
 
 ## Roles / routing
 - **Employee:** Sanele Sithole (`SaneleS`) — Intern 5, Salary Level 7

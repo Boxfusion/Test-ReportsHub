@@ -1,0 +1,64 @@
+{
+  "/dynamic/Shesha/notifications-table-view": {
+    "got": false,
+    "rows": 1,
+    "cols": [
+      "Name",
+      "Description"
+    ],
+    "cells": [],
+    "pag": "",
+    "bad": [
+      {
+        "status": 400,
+        "snippet": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"Your request is not valid!\",\"details\":\"The following errors were detected during validation.\\n - Cannot query field 'description' on type 'Notification'.\\n\",\"validationErrors\":[{\"message\":\"Cannot query field 'description' o"
+      }
+    ]
+  },
+  "/dynamic/Shesha/notifications": {
+    "got": false,
+    "rows": 1,
+    "cols": [
+      "Name",
+      "Description"
+    ],
+    "cells": [],
+    "pag": "",
+    "bad": [
+      {
+        "status": 400,
+        "snippet": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"Your request is not valid!\",\"details\":\"The following errors were detected during validation.\\n - Cannot query field 'description' on type 'Notification'.\\n\",\"validationErrors\":[{\"message\":\"Cannot query field 'description' o"
+      }
+    ]
+  },
+  "/dynamic/Shesha/notification-templates": {
+    "got": false,
+    "rows": 0,
+    "cols": [],
+    "cells": [],
+    "pag": "",
+    "bad": []
+  },
+  "/dynamic/StarterTemplate/notification-message-audit-table": {
+    "got": false,
+    "rows": 1,
+    "cols": [
+      "Created On",
+      "Date Sent",
+      "Notification",
+      "Recipient",
+      "Send Type",
+      "Subject",
+      "Body",
+      "Status"
+    ],
+    "cells": [],
+    "pag": "",
+    "bad": [
+      {
+        "status": 400,
+        "snippet": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"Your request is not valid!\",\"details\":\"The following errors were detected during validation.\\n - Cannot query field 'sendDate' on type 'NotificationMessage'.\\n - Cannot query field 'notification' on type 'NotificationMessag"
+      }
+    ]
+  }
+}

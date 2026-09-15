@@ -1,0 +1,222 @@
+<title>DSD-NPO Weekly QA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root{
+    --ground:#F4F6FA; --surface:#FFFFFF; --surface-2:#EEF2F8;
+    --ink:#16202B; --muted:#54657A; --faint:#8494A6;
+    --hair:#DDE4EE; --hair-strong:#C6D0DD;
+    --accent:#2F5D8C; --accent-soft:#3f6ea0;
+    --pass:#2E7D57; --fail:#BE4638; --partial:#B07714;
+    --pass-bg:#E4F0EA; --fail-bg:#F6E4E1; --partial-bg:#F6ECD9;
+    --shadow:0 1px 2px rgba(22,32,43,.04), 0 6px 24px -12px rgba(22,32,43,.14);
+  }
+  :root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#0E141B; --surface:#161F29; --surface-2:#1C2833;
+      --ink:#E9EEF4; --muted:#9DABBB; --faint:#6C7C8D;
+      --hair:#26323F; --hair-strong:#33424f;
+      --accent:#84A9D6; --accent-soft:#6d95c6;
+      --pass:#5FBE8C; --fail:#E0796B; --partial:#D9A94F;
+      --pass-bg:#16281f; --fail-bg:#2b1d1a; --partial-bg:#2a2314;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 30px -14px rgba(0,0,0,.6);
+    }
+  }}
+  :root[data-theme="dark"]{
+    --ground:#0E141B; --surface:#161F29; --surface-2:#1C2833;
+    --ink:#E9EEF4; --muted:#9DABBB; --faint:#6C7C8D;
+    --hair:#26323F; --hair-strong:#33424f;
+    --accent:#84A9D6; --accent-soft:#6d95c6;
+    --pass:#5FBE8C; --fail:#E0796B; --partial:#D9A94F;
+    --pass-bg:#16281f; --fail-bg:#2b1d1a; --partial-bg:#2a2314;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 30px -14px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+    font-size:17px; line-height:1.62; letter-spacing:.002em;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:840px; margin:0 auto; padding:clamp(20px,5vw,64px) clamp(18px,5vw,40px) 96px;}
+
+  .eyebrow{
+    font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--accent); font-weight:500;
+  }
+  h1,h2,h3{font-family:"Archivo","Archivo",system-ui,sans-serif; text-wrap:balance; line-height:1.12;}
+  h1{font-size:clamp(30px,6vw,46px); font-weight:700; letter-spacing:-.02em; margin:.35em 0 .1em;}
+  h2{font-size:clamp(20px,3.4vw,25px); font-weight:650; letter-spacing:-.01em; margin:0 0 .1em;}
+  h3{font-size:15px; font-weight:600; letter-spacing:-.005em; margin:0;}
+  p{margin:.7em 0; max-width:66ch;}
+  strong{font-weight:600; color:var(--ink);}
+  a{color:var(--accent); text-underline-offset:2px;}
+
+  /* header */
+  header.top{border-bottom:1px solid var(--hair-strong); padding-bottom:22px; margin-bottom:34px;}
+  .metaline{display:flex; flex-wrap:wrap; gap:6px 22px; margin-top:14px;
+    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12.5px; color:var(--muted);}
+  .metaline b{color:var(--ink); font-weight:500;}
+
+  /* hero coverage */
+  .hero{
+    background:var(--surface); border:1px solid var(--hair); border-radius:14px;
+    box-shadow:var(--shadow); padding:clamp(20px,3.5vw,32px); margin-bottom:16px;
+  }
+  .hero .lead{font-size:clamp(18px,2.4vw,21px); line-height:1.55; margin:0; max-width:64ch; color:var(--ink);}
+  .hero .lead strong{color:var(--accent);}
+  .hero-grid{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:24px 40px; align-items:end;}
+  @media (max-width:560px){ .hero-grid{grid-template-columns:1fr; align-items:start;} }
+  .big{font-family:"Archivo",sans-serif; font-weight:700; letter-spacing:-.03em;
+    font-size:clamp(56px,15vw,104px); line-height:.86; color:var(--ink); font-variant-numeric:tabular-nums;}
+  .big .pct{font-size:.42em; color:var(--muted); font-weight:600; margin-left:.12em;}
+  .big-label{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--muted); margin-top:10px;}
+  .delta{color:var(--pass); font-family:"Archivo",sans-serif; font-weight:600;}
+
+  .smoke{
+    text-align:right; border-left:1px solid var(--hair); padding-left:36px;
+  }
+  @media (max-width:560px){ .smoke{text-align:left; border-left:0; padding-left:0; padding-top:6px; border-top:1px solid var(--hair); } }
+  .smoke .num{font-family:"Archivo",sans-serif; font-weight:700; font-size:38px; letter-spacing:-.02em; color:var(--pass); font-variant-numeric:tabular-nums;}
+  .smoke .cap{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted);}
+
+  /* segmented bar */
+  .segbar{display:flex; height:14px; border-radius:7px; overflow:hidden; margin:26px 0 12px; background:var(--surface-2);}
+  .segbar span{display:block; height:100%;}
+  .seg-v{background:var(--accent);}
+  .seg-b{background:var(--partial);}
+  .seg-a{background:var(--hair-strong);}
+  .legend{display:flex; flex-wrap:wrap; gap:8px 20px; font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--muted);}
+  .legend i{width:9px; height:9px; border-radius:2px; display:inline-block; margin-right:7px; vertical-align:baseline;}
+  .legend b{color:var(--ink); font-weight:500;}
+
+  /* outcome chips */
+  .outcomes{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px 0 8px;}
+  @media (max-width:520px){ .outcomes{grid-template-columns:1fr;} }
+  .chip{border-radius:12px; padding:16px 18px; border:1px solid var(--hair);}
+  .chip.pass{background:var(--pass-bg); border-color:color-mix(in srgb,var(--pass) 30%, transparent);}
+  .chip.fail{background:var(--fail-bg); border-color:color-mix(in srgb,var(--fail) 30%, transparent);}
+  .chip.partial{background:var(--partial-bg); border-color:color-mix(in srgb,var(--partial) 34%, transparent);}
+  .chip .n{font-family:"Archivo",sans-serif; font-weight:700; font-size:32px; line-height:1; font-variant-numeric:tabular-nums;}
+  .chip.pass .n{color:var(--pass);} .chip.fail .n{color:var(--fail);} .chip.partial .n{color:var(--partial);}
+  .chip .k{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-top:8px;}
+
+  /* sections */
+  section{margin-top:40px;}
+  section > .eyebrow{display:block; margin-bottom:10px;}
+  .note{color:var(--muted); font-size:15px;}
+
+  /* headline cards */
+  .cards{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px;}
+  @media (max-width:620px){ .cards{grid-template-columns:1fr;} }
+  .card{background:var(--surface); border:1px solid var(--hair); border-radius:12px; padding:20px 22px; box-shadow:var(--shadow);}
+  .card h3{margin-bottom:6px; display:flex; align-items:baseline; gap:9px;}
+  .card h3 .tick{color:var(--accent); font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:600;}
+  .card p{font-size:14.5px; color:var(--muted); margin:.35em 0 0;}
+  .card p strong{color:var(--ink);}
+
+  /* reconciliation strip */
+  .recon{background:var(--surface-2); border:1px solid var(--hair); border-radius:12px; padding:18px 20px; margin-top:14px;}
+  .recon ul{list-style:none; margin:6px 0 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:6px 26px;}
+  @media (max-width:560px){ .recon ul{grid-template-columns:1fr;} }
+  .recon li{display:flex; justify-content:space-between; gap:14px; font-size:14px; padding:5px 0; border-bottom:1px dotted var(--hair-strong);}
+  .recon li span:first-child{color:var(--muted);}
+  .recon li b{font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums;}
+  .recon .tot{margin-top:10px; font-family:"Archivo",sans-serif; font-size:14px;}
+  .recon .tot b{color:var(--accent);}
+
+  /* executed list */
+  ul.exec{list-style:none; padding:0; margin:8px 0 0; display:grid; gap:9px;}
+  ul.exec li{padding-left:20px; position:relative; font-size:15.5px;}
+  ul.exec li::before{content:""; position:absolute; left:0; top:.62em; width:7px; height:7px; border-radius:2px; background:var(--accent); transform:rotate(45deg);}
+
+  .divider{height:1px; background:var(--hair); border:0; margin:44px 0 0;}
+  footer{margin-top:26px; font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--faint); line-height:1.7;}
+  footer .paths{color:var(--muted);}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow">Weekly QA Report</span>
+    <h1>DSD&#8209;NPO Registration &amp; Compliance</h1>
+    <div class="metaline">
+      <span>Period&nbsp; <b>24&nbsp;–&nbsp;28 Aug 2026</b></span>
+      <span>QA&nbsp; <b>Nomfanelo Nhleko</b></span>
+      <span>Environment&nbsp; <b>QA</b></span>
+      <span>Plans&nbsp; <b>101541 · 101543</b></span>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="big">70.1<span class="pct">%</span></div>
+        <div class="big-label">Functional coverage · 220 of 314 cases verdicted &nbsp;·&nbsp; <span class="delta">▲ from 41%</span> last week</div>
+      </div>
+      <div class="smoke">
+        <div class="num">70 / 70</div>
+        <div class="cap">Smoke plan · 100%</div>
+      </div>
+    </div>
+
+    <div class="segbar" role="img" aria-label="220 verdicted, 50 blocked with reason, 44 attributed and out of scope, of 314 cases">
+      <span class="seg-v" style="width:70.1%"></span>
+      <span class="seg-b" style="width:15.9%"></span>
+      <span class="seg-a" style="width:14.0%"></span>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--accent)"></i><b>220</b> verdicted</span>
+      <span><i style="background:var(--partial)"></i><b>50</b> blocked · reasoned</span>
+      <span><i style="background:var(--hair-strong)"></i><b>44</b> attributed · out of scope</span>
+    </div>
+
+    <div class="outcomes">
+      <div class="chip pass"><div class="n">65</div><div class="k">Passed</div></div>
+      <div class="chip fail"><div class="n">98</div><div class="k">Failed</div></div>
+      <div class="chip partial"><div class="n">57</div><div class="k">Partial</div></div>
+    </div>
+    <p class="note">The failure count is high by design — the functional plan is the negative-path and validation pass, written to find where the build and the rules disagree. Coverage is the conservative figure: blocked, closed, smoke-owned and out-of-remit cases stay in the 314 denominator and out of the 220.</p>
+  </div>
+
+  <section>
+    <span class="eyebrow">The week in one line</span>
+    <h2>The plan is fully imported, and every one of the 314 cases is accounted for.</h2>
+    <div class="cards">
+      <div class="card">
+        <h3><span class="tick">36 / 36</span> ADO import complete</h3>
+        <p>The last ten cross-cutting suites — office-bearer confirmation, annual-compliance backend, notifications, integration retries, audit trail, session &amp; access control, security, and the POPIA passes — were pulled, authored and run. <strong>Nothing left to import.</strong></p>
+      </div>
+      <div class="card">
+        <h3><span class="tick">44 → 0</span> Unattributed cases reconciled</h3>
+        <p>An Azure DevOps pull reconciled all 314 case ids against the smoke plan. The 44 that carried no verdict are now each explained — leaving exactly <strong>two</strong> cases that are genuinely runnable and not yet done.</p>
+      </div>
+    </div>
+
+    <div class="recon">
+      <span class="eyebrow">How the 44 resolve</span>
+      <ul>
+        <li><span>Out of black-box remit</span><b>21</b></li>
+        <li><span>Smoke-owned duplicates</span><b>9</b></li>
+        <li><span>Calendar / time-driven</span><b>5</b></li>
+        <li><span>ADO-Closed</span><b>3</b></li>
+        <li><span>Not executable as written</span><b>2</b></li>
+        <li><span>Genuinely runnable, not done</span><b>2</b></li>
+        <li><span>Not confirmable in QA env</span><b>1</b></li>
+        <li><span>Blocked on a precondition</span><b>1</b></li>
+      </ul>
+      <p class="tot">True untested-and-doable surface of the whole plan: <b>2 cases.</b></p>
+    </div>
+  </section>
+
+  <hr class="divider">
+  <footer>
+    <div class="paths">Detail &amp; evidence · test-reports/2026-08-24 → 2026-08-28</div>
+    <div class="paths">Full 314 reconciliation · audits/2026-08-28-unattributed-44-reconciliation.md</div>
+    <div>Generated 28 Aug 2026 · figures from scripts/coverage-baseline.js</div>
+  </footer>
+</div>

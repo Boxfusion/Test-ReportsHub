@@ -1,0 +1,87 @@
+{
+  "suite": {
+    "id": 101889,
+    "name": "06 OB Self-Confirmation",
+    "n": 6
+  },
+  "cases": [
+    {
+      "id": 101705,
+      "fields": {
+        "System.Id": 101705,
+        "System.State": "Design",
+        "System.Title": "[TC-06-003 | Src:Both | Email-Link] OB declines - 'No' requires a comment and flags OB as not part of NPO",
+        "Microsoft.VSTS.Common.Priority": 1,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). OB received confirmation link.<br><br><b>Source:</b> Both<br><br><b>Portal:</b> Email-Link",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;OB clicks link, selects &#x27;No I am not part of this organisation&#x27;, adds comment, submits&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;OB is flagged &#x27;Not part of NPO&#x27; with reason; counts toward OB Confirmation Failure; admin sees this on backend (per FDS 7.6 rule 2)&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "DSD-NPO; Functional; Negative; Portal-Email-Link; Source-Both; Suite-06; TC-06-003"
+      }
+    },
+    {
+      "id": 101706,
+      "fields": {
+        "System.Id": 101706,
+        "System.State": "Design",
+        "System.Title": "[TC-06-004 | Src:Both | Email-Link] OB confirmation link is single-use",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). OB has confirmed.<br><br><b>Source:</b> Both<br><br><b>Portal:</b> Email-Link<br><br><b>⚠ Drift note:</b> Single-use enforced at OfficeBearerManager.cs:306-307 - confirmed.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;OB clicks the same link again&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Page indicates the link has already been used; cannot change response&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Email-Link; Source-Both; Suite-06; TC-06-004"
+      }
+    },
+    {
+      "id": 101707,
+      "fields": {
+        "System.Id": 101707,
+        "System.State": "Design",
+        "System.Title": "[TC-06-005 | Src:FDS | Email-Link] OB confirmation link is time-bound (e.g., expires after N days)",
+        "Microsoft.VSTS.Common.Priority": 3,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). OB link was sent more than N days ago and not used.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Email-Link<br><br><b>⚠ Drift note:</b> Code: confirmation reminders at day 5 &amp; 7; status moves to OBConfirmationFailed at 10 business days (not a 'link expiry' message per se).",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;OB opens link after expiry&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Page indicates link expired and instructs OB to request a new one&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Email-Link; Source-FDS; Suite-06; TC-06-005"
+      }
+    },
+    {
+      "id": 101708,
+      "fields": {
+        "System.Id": 101708,
+        "System.State": "Design",
+        "System.Title": "[TC-06-006 | Src:FDS | Email-Link] Application status transitions to 'OB Confirmed' once all OBs confirm",
+        "Microsoft.VSTS.Common.Priority": 1,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). All OBs confirm.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Email-Link<br><br><b>⚠ Drift note:</b> Code: OBConfirmed (16) status defined but NOT transitioned to. Expect status to remain on workflow node or move to OBConfirmationFailed if timeout.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Observe application status on admin portal&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Status moves to &#x27;OB Confirmed&#x27; (RefListApplicationStatus = 16) and triggers next workflow step&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Functional; Portal-Email-Link; Positive; Source-FDS; Suite-06; TC-06-006"
+      }
+    },
+    {
+      "id": 101709,
+      "fields": {
+        "System.Id": 101709,
+        "System.State": "Design",
+        "System.Title": "[TC-06-007 | Src:FDS | Email-Link] Application status becomes 'OB Partially Confirmed' if only some confirm",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). Some OBs confirmed, some not.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Email-Link<br><br><b>⚠ Drift note:</b> Code: OBPartiallyConfirmed (13) defined but NOT used.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;View status&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Status = &#x27;OB Partially Confirm&#x27; (RefList=13)&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Email-Link; Source-FDS; Suite-06; TC-06-007"
+      }
+    },
+    {
+      "id": 101710,
+      "fields": {
+        "System.Id": 101710,
+        "System.State": "Design",
+        "System.Title": "[TC-06-008 | Src:Both | Email-Link] Application status becomes 'OB Confirmation Failed' if any OB says No",
+        "Microsoft.VSTS.Common.Priority": 1,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Tokenised email/SMS link from notification (no login). At least one OB clicks No with reason.<br><br><b>Source:</b> Both<br><br><b>Portal:</b> Email-Link",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;View status&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Status = &#x27;OB Confirmation Failed&#x27; (RefList=7); reason captured; application is flagged for resubmission per FDS 6.2&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "DSD-NPO; Functional; Negative; Portal-Email-Link; Source-Both; Suite-06; TC-06-008"
+      }
+    }
+  ]
+}

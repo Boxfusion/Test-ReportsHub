@@ -1,0 +1,48 @@
+{
+  "suite": {
+    "id": 101892,
+    "name": "09 Annual Compliance backend-QA",
+    "n": 3
+  },
+  "cases": [
+    {
+      "id": 101759,
+      "fields": {
+        "System.Id": 101759,
+        "System.State": "Design",
+        "System.Title": "[TC-09-004 | Src:FDS | Admin] Backend - QA 'Not Aligned' requires reason; triggers resubmission email",
+        "Microsoft.VSTS.Common.Priority": 1,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. QA dialog open.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Same as above - QA workflow may not exist as separate dialog action.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Select &#x27;Not Aligned&#x27;, leave reason blank, Submit&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Validation error&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Enter reason and Submit&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Resubmission email with reason sent; report enters resubmission workflow&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Functional; Negative; Portal-Admin; Source-FDS; Suite-09; TC-09-004"
+      }
+    },
+    {
+      "id": 101760,
+      "fields": {
+        "System.Id": 101760,
+        "System.State": "Design",
+        "System.Title": "[TC-09-005 | Src:FDS | Admin] Annual Compliance - 30-day non-response after notice leads to cancellation",
+        "Microsoft.VSTS.Common.Priority": 1,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Org sent notice for non-compliance.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Code: 30-day auto-cancellation not found.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Wait 30 days with no response&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Org status moves to Cancelled per FDS Annual 6.2 rule 9 bullet 3&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Functional; Negative; Portal-Admin; Source-FDS; Suite-09; TC-09-005"
+      }
+    },
+    {
+      "id": 101761,
+      "fields": {
+        "System.Id": 101761,
+        "System.State": "Design",
+        "System.Title": "[TC-09-006 | Src:FDS | Admin] Annual Compliance - Trends analysis is visible/accessible to backend user",
+        "Microsoft.VSTS.Common.Priority": 3,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. Multiple reports across years.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Open report comparing previous years&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Trends are visible per FDS Annual 6.2 rule 9 (analyse trends)&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "DSD-NPO; Functional; Portal-Admin; Positive; Source-FDS; Suite-09; TC-09-006"
+      }
+    }
+  ]
+}

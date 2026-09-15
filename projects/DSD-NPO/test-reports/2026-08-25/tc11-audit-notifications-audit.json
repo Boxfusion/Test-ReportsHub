@@ -1,0 +1,22 @@
+{
+  "rows": 1,
+  "cols": [
+    "Triggering Entity",
+    "Part Of",
+    "Creation Time",
+    "Date Sent",
+    "Notification",
+    "Recipient Text",
+    "Subject",
+    "Message",
+    "Status",
+    "Channel"
+  ],
+  "bad": [
+    {
+      "status": 400,
+      "url": "https://dsd-npo-api-qa.shesha.app/api/services/app/Entities/GetAll?entityType=Shesha.Domain.NotificationMessage&maxResultCount=10&skipCount=0&properties=partOf%20%7B%20triggeringEntity%20%7B%20id%20_displayName%20%7D%20id%20_displayName%20name%20%7D%20creationTime%20dateSent%20recipientText%20subject%20message%20status%20channel%20%7B%20id%20_displayName%20%7D%20id&sorting=creationTime%20desc&filter=",
+      "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"Your request is not valid!\",\"details\":\"The following errors were detected during validation.\\n - Error trying to resolve field 'notificationMessageList'.\\r\\nInner Exception: Type 'Shesha.EntityReferences.GenericEntityReference' does not have a default constructor (Parameter 'type')\\n\",\"validationErrors\":[{\"message\":\"Error trying to resolve field 'notificationMessageList'.\\r\\nInner Exception: Type 'Shesha.EntityReferences.GenericEntityReference' does not have a default constructor (Parameter 'type')\",\"members\":null}]},\"unAuthorizedRequest\":false,\"__abp\":true}"
+    }
+  ]
+}

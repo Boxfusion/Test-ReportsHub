@@ -1,0 +1,7 @@
+{
+  "displayName": "DSD NPO",
+  "appUrl": "https://dsd-npo-publicportal-1-qa.shesha.app/login",
+  "environment": "QA",
+  "sourceRepo": "https://dev.azure.com/boxfusion/Boxfusion%20Test%20Plans",
+  "description": "Hybrid Markdown + Playwright test reports for the Department of Social Development NPO registration and compliance portal (public applicant portal + DSD admin portal)."
+}

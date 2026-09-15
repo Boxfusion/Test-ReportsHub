@@ -1,0 +1,35 @@
+{
+  "suite": {
+    "id": 101904,
+    "name": "14R Integration retries DHA-CIPC",
+    "n": 2
+  },
+  "cases": [
+    {
+      "id": 101817,
+      "fields": {
+        "System.Id": 101817,
+        "System.State": "Design",
+        "System.Title": "[TC-14-005 | Src:FDS | Admin] Background DHA verification retry runs after 1 hour and updates OB status",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. OB saved while DHA was down.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Code: no 1-hour scheduled retry; DHA job halts on exception.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Wait &gt; 1 hour with DHA back up&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Background job retries verification; OB status updates accordingly (per FDS 6.1 rule 2c(i))&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-FDS; Suite-14R; TC-14-005"
+      }
+    },
+    {
+      "id": 101818,
+      "fields": {
+        "System.Id": 101818,
+        "System.State": "Design",
+        "System.Title": "[TC-14-006 | Src:FDS | Admin] Background CIPC verification retry runs after 1 hour and updates application",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Portal: Admin Portal (adminportal) - DSD staff. NPC application saved while CIPC was down.<br><br><b>Source:</b> FDS<br><br><b>Portal:</b> Admin<br><br><b>⚠ Drift note:</b> Code: no 1-hour scheduled retry for CIPC; user re-submits manually.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Wait &gt; 1 hour with CIPC back up&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Background job retries; directors are populated from CIPC (per FDS 6.1 rule 2b(ii))&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "Drift-Risk; DSD-NPO; Edge; Functional; Portal-Admin; Source-FDS; Suite-14R; TC-14-006"
+      }
+    }
+  ]
+}

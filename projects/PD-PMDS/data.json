@@ -1,5 +1,5 @@
 {
-  "project": "PMDS",
+  "project": "PD-PMDS",
   "displayName": "PMDS",
   "meta": {
     "displayName": "PMDS",
@@ -11,472 +11,30 @@
       "kind": "local"
     }
   },
-  "hasAllure": false,
-  "allureReports": [],
+  "hasAllure": true,
+  "allureReports": [
+    {
+      "slug": null,
+      "label": null,
+      "href": "allure-report/index.html"
+    }
+  ],
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
-    "totalPlans": 0,
-    "totalRuns": 0,
-    "last7Runs": 0,
+    "totalPlans": 2,
+    "totalRuns": 92,
+    "last7Runs": 14,
     "last7Pass": 0,
-    "last7PassPct": null,
-    "failingFlows": 0,
+    "last7PassPct": 0,
+    "failingFlows": 2,
     "passingFlows": 0,
     "partialFlows": 0,
     "neverFlows": 0
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-07-19",
+    "startDate": "2025-09-21",
     "days": [
-      {
-        "iso": "2025-07-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-07-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-08-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-12",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-13",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-14",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-15",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-16",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-17",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-19",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-20",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-21",
         "runs": 0,
@@ -2551,27 +2109,475 @@
       },
       {
         "iso": "2026-07-14",
-        "runs": 0,
-        "passed": 0,
+        "runs": 4,
+        "passed": 4,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-07-15",
-        "runs": 0,
-        "passed": 0,
+        "runs": 6,
+        "passed": 6,
         "failed": 0,
         "partial": 0
       },
       {
         "iso": "2026-07-16",
+        "runs": 8,
+        "passed": 7,
+        "failed": 0,
+        "partial": 1
+      },
+      {
+        "iso": "2026-07-17",
+        "runs": 5,
+        "passed": 5,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-18",
         "runs": 0,
         "passed": 0,
         "failed": 0,
         "partial": 0
       },
       {
-        "iso": "2026-07-17",
+        "iso": "2026-07-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-22",
+        "runs": 9,
+        "passed": 8,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-23",
+        "runs": 13,
+        "passed": 12,
+        "failed": 0,
+        "partial": 1
+      },
+      {
+        "iso": "2026-07-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-07-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-02",
+        "runs": 1,
+        "passed": 1,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-11",
+        "runs": 12,
+        "passed": 12,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-12",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-13",
+        "runs": 3,
+        "passed": 3,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-14",
+        "runs": 6,
+        "passed": 6,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-15",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-17",
+        "runs": 3,
+        "passed": 3,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-19",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-20",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-08-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-05",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-06",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-07",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-08",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-09",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-10",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-11",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-12",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-13",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-14",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-15",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-16",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-17",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-18",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-19",
         "runs": 0,
         "passed": 0,
         "failed": 0,
@@ -2579,7 +2585,1140 @@
       }
     ]
   },
-  "sections": [],
-  "timeline": [],
-  "generated": "2026-07-14T08:13:16.134Z"
+  "sections": [
+    {
+      "key": "contracting",
+      "title": "Contracting",
+      "stripPrefix": "test-plans/contracting/",
+      "plans": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planHref": "test-plans/contracting/contracting-lifecycle.md",
+          "spec": "test-plans/contracting/contracting-lifecycle.spec.ts",
+          "specHref": "test-plans/contracting/contracting-lifecycle.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-09-15",
+            "result": "FAILED",
+            "duration": "35.7s",
+            "variant": null,
+            "reportHref": "test-reports/2026-09-15/contracting-lifecycle.md"
+          },
+          "runCount": 12,
+          "history": [
+            {
+              "date": "2026-09-15",
+              "result": "FAILED",
+              "duration": "35.7s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "130s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-13",
+              "result": "FAILED",
+              "duration": "129.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "129.6s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "42.6s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-10",
+              "result": "FAILED",
+              "duration": "129.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-09",
+              "result": "FAILED",
+              "duration": "127.7s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-08",
+              "result": "FAILED",
+              "duration": "127.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-07",
+              "result": "FAILED",
+              "duration": "126.6s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "128.9s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "128.8s",
+              "variant": null
+            },
+            {
+              "date": "2026-08-02",
+              "result": "PASSED",
+              "duration": "~26m across the four passes",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planHref": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "spec": "test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "specHref": "test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
+          "canRun": true,
+          "badges": [],
+          "rowStatus": "failing",
+          "status": "FAILED",
+          "last": {
+            "date": "2026-09-15",
+            "result": "FAILED",
+            "duration": "35.4s",
+            "variant": null,
+            "reportHref": "test-reports/2026-09-15/sl1-12-contracting-scenarios.md"
+          },
+          "runCount": 13,
+          "history": [
+            {
+              "date": "2026-09-15",
+              "result": "FAILED",
+              "duration": "35.4s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-14",
+              "result": "FAILED",
+              "duration": "173.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-13",
+              "result": "FAILED",
+              "duration": "175.7s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-12",
+              "result": "FAILED",
+              "duration": "176s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-11",
+              "result": "FAILED",
+              "duration": "37.1s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-10",
+              "result": "FAILED",
+              "duration": "175.7s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-09",
+              "result": "FAILED",
+              "duration": "172.7s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-08",
+              "result": "FAILED",
+              "duration": "186.2s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-07",
+              "result": "FAILED",
+              "duration": "185.1s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-06",
+              "result": "FAILED",
+              "duration": "175.3s",
+              "variant": null
+            },
+            {
+              "date": "2026-09-05",
+              "result": "FAILED",
+              "duration": "186.8s",
+              "variant": null
+            },
+            {
+              "date": "2026-08-17",
+              "result": "PASSED",
+              "duration": "",
+              "variant": null
+            }
+          ],
+          "bugs": []
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-15",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "35.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-15/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "35.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-15/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "130s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "173.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-14/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "129.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-13/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "175.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-13/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-12",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "129.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "176s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-12/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-11",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "42.6s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "37.1s",
+          "mode": "ci-playwright-script",
+          "reportHref": "test-reports/2026-09-11/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "129.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-10/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "175.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-10/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "127.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-09/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "172.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-09/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "127.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-08/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "186.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-08/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "126.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-07/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "185.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-07/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "128.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "175.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-06/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "128.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-05/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "186.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-05/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "cd-director-contracting.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright driver (`.tmp-cdd-positive.js`, `.tmp-cdd-neg1-sampha.js`,",
+          "reportHref": "test-reports/2026-08-17/cd-director-contracting.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "ddg-contracting.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright driver (`.tmp-ddg-positive.js`, `.tmp-ddg-neg1-thando.js`,",
+          "reportHref": "test-reports/2026-08-17/ddg-contracting.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "playwright-script (headed) — TC-00 through TC-03 via the checked-in spec through the",
+          "reportHref": "test-reports/2026-08-17/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "cd-director-annual.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-14/cd-director-annual.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "cd-director-midyear.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-14/cd-director-midyear.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "ddg-annual.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-14/ddg-annual.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "ddg-midyear.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-14/ddg-midyear.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "sl1-12-annual.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright drivers extending the shared `.tmp-pmds-lib.js` helper",
+          "reportHref": "test-reports/2026-08-14/sl1-12-annual.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "sl1-12-midyear.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright drivers extending `pmds.ts`'s selector layer with new",
+          "reportHref": "test-reports/2026-08-14/sl1-12-midyear.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "cd-director-contracting.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright driver (`.tmp-cdd-full.js`, extending `pmds.ts`'s",
+          "reportHref": "test-reports/2026-08-13/cd-director-contracting.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "ddg-contracting.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "hand-written Node/Playwright driver (`.tmp-ddg-full.js`, extending `pmds.ts`'s",
+          "reportHref": "test-reports/2026-08-13/ddg-contracting.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": "playwright-script (headed) — TC-00 through TC-03 via the checked-in spec through the",
+          "reportHref": "test-reports/2026-08-13/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "cd-director-contracting.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/cd-director-contracting.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "cd-director-midyear.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/cd-director-midyear.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "ddg-contracting-opened-and-drafts.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/ddg-contracting-opened-and-drafts.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "ddg-midyear.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/ddg-midyear.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "happy-path-contracting-simmy-and-jabu.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/happy-path-contracting-simmy-and-jabu.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "happy-path-contracting-tony.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/happy-path-contracting-tony.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "happy-path-manager-lungile.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/happy-path-manager-lungile.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "negative-escalated-dispute-resolved-sanele.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/negative-escalated-dispute-resolved-sanele.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "negative-escalated-dispute-unresolved-thato.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/negative-escalated-dispute-unresolved-thato.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "negative-resolved-dispute-adam.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/negative-resolved-dispute-adam.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "sl1-12-midyear-assessments.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/sl1-12-midyear-assessments.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "sl1-12-midyear-opened.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-08-11/sl1-12-midyear-opened.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "~26m across the four passes",
+          "mode": "playwright-script (headed; run in 4 staged passes — see *Execution note*)",
+          "reportHref": "test-reports/2026-08-02/contracting-lifecycle.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "annual-happy-path-simmy.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/annual-happy-path-simmy.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "happy-path-contracting-simmy-and-jabu.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/happy-path-contracting-simmy-and-jabu.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "happy-path-manager-lungile.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/happy-path-manager-lungile.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-happy-path-simmy.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/mid-year-happy-path-simmy.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-happy-path-tony.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/mid-year-happy-path-tony.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-negative-escalated-dispute-manager-lungile.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/mid-year-negative-escalated-dispute-manager-lungile.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-negative-escalated-dispute-resolved-sanele.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/mid-year-negative-escalated-dispute-resolved-sanele.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-negative-escalated-dispute-unresolved-adam.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/mid-year-negative-escalated-dispute-unresolved-adam.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-negative-resolved-dispute-jabu.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/mid-year-negative-resolved-dispute-jabu.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "negative-escalated-dispute-resolved-sanele.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/negative-escalated-dispute-resolved-sanele.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "negative-escalated-dispute-resolved-tonyd.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/negative-escalated-dispute-resolved-tonyd.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "negative-escalated-dispute-unresolved-thato.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/negative-escalated-dispute-unresolved-thato.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "negative-resolved-dispute-adam.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-23/negative-resolved-dispute-adam.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "annual-positive-path-blocked-simmy.md",
+          "variant": null,
+          "result": "BLOCKED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-22/annual-positive-path-blocked-simmy.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "happy-path-performance-agreement-simmy.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-22/happy-path-performance-agreement-simmy.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "happy-path-thato-and-lungile.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-22/happy-path-thato-and-lungile.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-happy-path-simmy.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-22/mid-year-happy-path-simmy.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-negative-escalated-dispute-resolved-sanele.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-22/mid-year-negative-escalated-dispute-resolved-sanele.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-negative-escalated-dispute-unresolved-lungile.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-22/mid-year-negative-escalated-dispute-unresolved-lungile.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "negative-escalated-dispute-resolved-sanele.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-22/negative-escalated-dispute-resolved-sanele.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "negative-escalated-dispute-unresolved-adam.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-22/negative-escalated-dispute-unresolved-adam.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "resolved-dispute-jabu.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-22/resolved-dispute-jabu.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "mid-year-assessment-jabu.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-17/mid-year-assessment-jabu.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-assessment-lungile.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-17/mid-year-assessment-lungile.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-assessment-simmy.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-17/mid-year-assessment-simmy.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-dispute-sanele.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-17/mid-year-dispute-sanele.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-dispute-unsuccessful-adam.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-17/mid-year-dispute-unsuccessful-adam.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "contracting-positive-batch-6-users.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-16/contracting-positive-batch-6-users.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "happy-path-performance-agreement-sanele.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-16/happy-path-performance-agreement-sanele.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "happy-path-performance-agreement-simmy.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-16/happy-path-performance-agreement-simmy.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-assessment-lungile.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-16/mid-year-assessment-lungile.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-assessment-simmy.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-16/mid-year-assessment-simmy.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "mid-year-dispute-sanele.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-16/mid-year-dispute-sanele.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "refer-for-dispute-jabu.md",
+          "variant": null,
+          "result": "PARTIAL",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-16/refer-for-dispute-jabu.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "refer-for-dispute-unsuccessful-adam.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-16/refer-for-dispute-unsuccessful-adam.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "hr-verify-performance-agreement-simmy.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-15/hr-verify-performance-agreement-simmy.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "refer-for-dispute-performance-agreement-jabu.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-15/refer-for-dispute-performance-agreement-jabu.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "refer-for-dispute-unsuccessful-adam.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-15/refer-for-dispute-unsuccessful-adam.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "refer-for-dispute-unsuccessful-sanele.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-15/refer-for-dispute-unsuccessful-sanele.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "resolved-dispute-continuation-jabu.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-15/resolved-dispute-continuation-jabu.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "supervisor-review-performance-agreement-simmy.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-15/supervisor-review-performance-agreement-simmy.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "runs": [
+        {
+          "plan": null,
+          "planDisplay": "employee-draft-performance-agreement-simmy.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-14/employee-draft-performance-agreement-simmy.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "employee-draft-performance-agreement.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-14/employee-draft-performance-agreement.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "hr-verify-performance-agreement.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-14/hr-verify-performance-agreement.md"
+        },
+        {
+          "plan": null,
+          "planDisplay": "supervisor-review-performance-agreement.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "",
+          "mode": null,
+          "reportHref": "test-reports/2026-07-14/supervisor-review-performance-agreement.md"
+        }
+      ]
+    }
+  ],
+  "generated": "2026-09-15T02:45:47.910Z"
 }

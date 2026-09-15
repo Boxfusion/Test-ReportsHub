@@ -1,0 +1,6 @@
+{
+  "displayName": "Land Bank CRM",
+  "appUrl": "https://landbankcrm-adminportal-landbankcrmdev.shesha.app",
+  "environment": "Dev",
+  "description": "Hybrid Markdown + Playwright test reports for the Land Bank CRM Admin Portal."
+}

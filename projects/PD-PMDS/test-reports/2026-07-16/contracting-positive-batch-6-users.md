@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-16
 **Cycle:** SL 1-12 Performance Agreement, FY2026/27 — **Contracting** stage
-**Result:** ✅ PASS — all six users driven end-to-end to **Completed** (Generate PERSAL Input). Contracting dashboard Completed **0 → 6**.
+**Result:** PASSED — all six users driven end-to-end to **Completed** (Generate PERSAL Input). Contracting dashboard Completed **0 → 6**.
 **Purpose:** after another data clear, rebuild a set of Contracting-complete employees so the team has more users to test Mid-Year on. Positive (no-dispute) scenarios only — the dispute/resolved path is avoided because the Contracting "Update Performance Agreement with Outcomes" Submit is broken (see `bugs/2026-07-16-update-pa-with-outcomes-submit-fails.md`).
 
 ## Setup

@@ -3,7 +3,7 @@
 **Date:** 2026-07-17
 **Cycle:** SL 1-12 Performance Agreement, FY2026/27 — **Mid Year Assessment** stage
 **Employee:** Simmy Mthalane (`Simmy`), **Ref PR2026/7347**
-**Result:** ✅ PASS — full Mid-Year happy-path chain completed; assessment terminates at **AWAITING PERSAL SYNC** (Completed rollup).
+**Result:** PASSED — full Mid-Year happy-path chain completed; assessment terminates at **AWAITING PERSAL SYNC** (Completed rollup).
 **App:** HCM Admin Portal (PMDS module), https://pd-hcm-adminportal-qa.shesha.app/ (QA)
 
 ## Context

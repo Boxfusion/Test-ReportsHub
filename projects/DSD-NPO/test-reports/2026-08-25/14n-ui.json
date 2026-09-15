@@ -1,0 +1,73 @@
+{
+  "cols": [
+    "Application Ref",
+    "Organisation Name",
+    "Whatsapp Number",
+    "Email Address",
+    "Legal Form",
+    "No. of Office Bearers",
+    "Application Status",
+    "Date Received"
+  ],
+  "pag": "1-10 of 10345 items 1 2 3 ••• 1035 10 / page",
+  "rows": [
+    [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "27/09/2025 13:06"
+    ],
+    [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "17/09/2025 12:30"
+    ],
+    [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "29/09/2025 08:57"
+    ]
+  ],
+  "results": {
+    "/dynamic/boxfusion.dsdnpo/npoapplication-details": {
+      "cols": [],
+      "hits": [],
+      "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/npoapplication-details v46 LIVE - Application Details Organisation Details Objectives Particulars Of Office Bearers Particulars Of Control Structure NPO Admin and Operations Area of Operation Declarations boxfusion.dsdnpo/npo-details-subform v18 LIVE Organisation Details Name Trading Name WhatsApp number Te"
+    },
+    "/dynamic/boxfusion.dsdnpo/office-bearers-table": {
+      "cols": [],
+      "hits": [],
+      "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase 404 Sorry, the page you visited does not exist. Back Home"
+    },
+    "/dynamic/boxfusion.dsdnpo/npo-office-bearers": {
+      "cols": [
+        "Organisation + OB",
+        "Person",
+        "Organisation",
+        "Passport Number",
+        "Capacity",
+        "Position",
+        "Creation Time"
+      ],
+      "hits": [],
+      "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/npo-office-bearers v7 LIVE Table Add Export Organisation + OB Person Organisation Passport Number Capacity Position Creation Time No Data No data is available for this table"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "mobile": "******0598",
+  "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/dsd-public-portal-send-otp",
+  "toasts": [],
+  "calls": [
+    {
+      "s": 200,
+      "u": "/api/services/dsdnpo/NpoPerson/MobileNoAlreadyInUse?mobileNumber=0818400598",
+      "body": "{\"result\":true,\"targetUrl\":null,\"success\":true,\"error\":null,\"unAuthorizedRequest\":false,\"__abp\":true}"
+    }
+  ],
+  "body": "The DSD NPO Online Platform is a self-service portal for Non-Profit Organisations to initiate and manage all key processes related to their organisations profile with the Department. Verify Mobile Number Please enter mobile number to verify. Mobile Number Mobile Number Already Exist Verify Number Back to login"
+}

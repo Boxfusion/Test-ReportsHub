@@ -1,0 +1,73 @@
+{
+  "capturedAt": "2026-08-25T14:59Z",
+  "method": "curl wire headers + Playwright network capture + performance.getEntriesByType('resource')",
+  "hstsProbe": {
+    "https://dsd-npo-publicportal-1-qa.shesha.app/login": {"status": 200, "strictTransportSecurity": null},
+    "https://dsd-npo-adminportal-qa.shesha.app/login": {"status": 200, "strictTransportSecurity": null},
+    "https://dsd-npo-api-qa.shesha.app/api/TokenAuth/Authenticate": {"status": 405, "strictTransportSecurity": null,
+      "otherSecurityHeaders": ["X-Content-Type-Options: nosniff", "X-XSS-Protection: 1; mode=block", "X-Frame-Options: SAMEORIGIN"]}
+  },
+  "cleartextProbe": {
+    "http://dsd-npo-publicportal-1-qa.shesha.app/login": {"status": 200, "redirectToHttps": false, "bytesServed": 15788,
+      "setCookie": "ARRAffinity=...;Path=/;HttpOnly;Domain=... (NO Secure flag over http)"},
+    "http://dsd-npo-adminportal-qa.shesha.app/login": {"status": 200, "redirectToHttps": false},
+    "http://dsd-npo-api-qa.shesha.app/api/TokenAuth/Authenticate": {"statusOnPOST": 401,
+      "note": "endpoint processes credentials over cleartext; probed with a deliberately invalid password only — no real credential was transmitted in cleartext"}
+  },
+  "httpsCookieComparison": {
+    "overHttps": "ARRAffinity ... HttpOnly;Secure  +  ARRAffinitySameSite ... HttpOnly;SameSite=None;Secure",
+    "overHttp": "ARRAffinity ... HttpOnly  (Secure absent — scheme-mirrored by the platform)"
+  },
+  "wizardTransport": {
+    "totalResourceRequests": 67,
+    "schemes": {"https": 67, "http": 0},
+    "hosts": {"dsd-npo-publicportal-1-qa.shesha.app": 47, "dsd-npo-api-qa.shesha.app": 20},
+    "mixedContentConsoleWarnings": 0
+  },
+  "correlationIdProbe": {
+    "requestsInspected": ["POST /api/TokenAuth/Authenticate", "GET /api/services/Shesha/FormConfiguration/GetByName", "POST /api/services/SheshaWorkflow/Process/StartByName"],
+    "correlationHeaderFound": null,
+    "headersSeen": ["api-supported-versions", "access-control-allow-credentials", "x-content-type-options", "access-control-allow-origin", "content-length", "date", "x-xss-protection", "content-type", "vary", "server", "x-frame-options"]
+  },
+  "signInRequest": {
+    "url": "https://dsd-npo-api-qa.shesha.app/api/TokenAuth/Authenticate",
+    "method": "POST",
+    "credentialLocation": "request body (JSON)",
+    "credentialInUrl": false,
+    "passwordInLocalStorage": false,
+    "passwordInSessionStorage": false,
+    "passwordInCookies": false,
+    "note": "two identical Authenticate POSTs fired for one Login click — both 200"
+  },
+  "popiConsentGate": {
+    "route": "/dynamic/boxfusion.dsdnpo/popi-act",
+    "formVersion": "popi-act v28 LIVE",
+    "positionInFlow": "first step, before any application data is captured",
+    "checkboxes": 2,
+    "nextDisabledWith0Ticked": true,
+    "nextDisabledWith1Ticked": true,
+    "nextDisabledWith2Ticked": false,
+    "workflowInstanceCreatedOnNext": {"id": "6d7a6003-3d4c-4284-9a52-0b34584da013", "todoid": "a30e4fce-0c73-4f51-b525-37363f0f603b"},
+    "wizardSteps": ["Read This", "Organisation Details", "Objectives", "Office Bearer", "Admin & Operations", "Documents", "Declaration"],
+    "wizardFormVersion": "create-npo v62 LIVE"
+  },
+  "subjectAccessProbe": {
+    "profileMenuItems": ["Organistions (sic)", "My Profile", "Logout"],
+    "myProfileRoute": "/dynamic/boxfusion.dsdnpo/public-portal-user-management",
+    "myProfileActions": ["Edit", "Reset Password", "Deactivate Account"],
+    "dataAndPrivacyArea": false,
+    "exportMyDataAction": false,
+    "formRegistrySearch": {
+      "formsPulled": 8294,
+      "totalReported": 8294,
+      "pattern": "privacy|popi|consent|export|gdpr|retention|archiv|subject|my-data|data-and|erasure|deletion",
+      "uniqueMatches": ["popi-act | POPI Act"],
+      "conclusion": "no subject-access/export form and no retention/archival form exists anywhere in the registry"
+    }
+  },
+  "viewMode": {
+    "switchPresentForApplicantAccount": false,
+    "modeUsed": "Live",
+    "rationale": "the public-portal applicant account exposes no Live/Latest control; Live is what a real data subject is served, which is the correct mode for a consent/transport test. Asserted, not assumed."
+  }
+}

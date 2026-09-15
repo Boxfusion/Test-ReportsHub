@@ -3,7 +3,7 @@
 **Date:** 2026-07-16
 **Cycle:** SL 1-12 Performance Agreement, FY2026/27
 **Employee:** Adam Apple (`adam`, Intern 4 SL7), PA2026/5973
-**Result:** ✅ PASS — unsuccessful-mediation path driven end-to-end; PA parks at "Under appeal" with no downstream task.
+**Result:** PASSED — unsuccessful-mediation path driven end-to-end; PA parks at "Under appeal" with no downstream task.
 
 ## New-hierarchy verification
 Mediator = **Babalwa M** (Chief Director SL13) throughout — the dispute now routes to Babalwa M, not Tania. Login `BabalwaM`/`123qwe`.

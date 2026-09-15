@@ -3,7 +3,7 @@
 **Date:** 2026-07-16
 **Cycle:** SL 1-12 Performance Agreement, FY2026/27
 **Employee:** Jabu Hadebe (`JabuH`, Intern 2 SL5), PA2026/5987
-**Result:** ⚠️ PARTIAL — dispute path driven up to the mediator RESOLVED step; the employee **"Update Performance Agreement with Outcomes" Submit is BLOCKED by an app defect** (see bug below).
+**Result:** PARTIAL — dispute path driven up to the mediator RESOLVED step; the employee **"Update Performance Agreement with Outcomes" Submit is BLOCKED by an app defect** (see bug below).
 
 ## New-hierarchy verification
 Mediator now resolves to **Babalwa M** (Chief Director, SL 13) instead of Tania Smith — consistent with the new chain intern → LungileN → BabalwaM → Tania. Confirmed on the Draft Confirm-Details, the supervisor Review screen, and the Mediator screen. **Login discovered:** `BabalwaM` / `123qwe`.

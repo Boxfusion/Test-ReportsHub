@@ -1,6 +1,6 @@
 # CLAUDE.md — Hybrid Markdown + Playwright Testing (PMDS project)
 
-> **Multi-project hub.** This file describes the **PMDS** project (Performance Management & Development System). Shared Playwright + Allure infrastructure (`package.json`, `playwright.config.ts`, `node_modules/`, `scripts/run-plan.js`) lives at the hub root one level up. Tests run from the hub root: `node scripts/run-plan.js projects/PMDS/test-plans/<folder>/<plan>.md`.
+> **Multi-project hub.** This file describes the **PMDS** project (Performance Management & Development System). Shared Playwright + Allure infrastructure (`package.json`, `playwright.config.ts`, `node_modules/`, `scripts/run-plan.js`) lives at the hub root one level up. Tests run from the hub root: `node scripts/run-plan.js projects/PD-PMDS/test-plans/<folder>/<plan>.md`.
 >
 > **Same app as eLeave.** PMDS is a module of the same HCM Admin Portal that the `HCM` project (eLeave) tests — identical URL and admin login. It is kept as its own project so PMDS plans, reports, and the dashboard stay separate from eLeave.
 
@@ -19,16 +19,16 @@ This project uses **markdown plans as the source of truth** and **Playwright `.s
 ## How It Works
 0. **First time on a machine:** run `/test-setup` to install Node deps, Playwright browsers, verify Java/Allure, hub config, and (for CI) check `gh` CLI + GitHub secrets + Teams webhook. Idempotent.
 1. `/CreateTest` writes BOTH `test-plans/<folder>/<name>.md` AND a paired `<name>.spec.ts`. Selectors are recorded live via Playwright MCP.
-2. `/RunTest` runs Playwright first: `node scripts/run-plan.js projects/PMDS/test-plans/<folder>/<name>.md` (from hub root).
+2. `/RunTest` runs Playwright first: `node scripts/run-plan.js projects/PD-PMDS/test-plans/<folder>/<name>.md` (from hub root).
 3. If the spec passes → write the markdown report from Playwright's JSON output.
 4. If a step fails → AI fallback patches the failing line in the .spec.ts and re-runs.
 5. If AI fallback fails twice → auto-classify (stale-plan vs business-logic) and either fix the plan or log a bug.
-6. Regenerate the project dashboard (the hub's `scripts/build-project-dashboard.js --project=PMDS`) and the per-project Allure report.
+6. Regenerate the project dashboard (the hub's `scripts/build-project-data.js --project=PD-PMDS`) and the per-project Allure report.
 7. `/submit-test-results` publishes to the central hub (this **is** the hub — that step is a no-op here, just a `git push`).
 
 ## Mandatory Pre-Flight
 Before executing ANY test plan:
-1. Read this file (`projects/PMDS/CLAUDE.md`) completely
+1. Read this file (`projects/PD-PMDS/CLAUDE.md`) completely
 2. Read [test-plans/RULES.md](test-plans/RULES.md) completely
 3. Read the specific test plan file (`.md`)
 4. Read the paired `.spec.ts` if it exists

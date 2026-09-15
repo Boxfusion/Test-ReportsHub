@@ -1,0 +1,112 @@
+{
+  "result": {
+    "totalCount": 17,
+    "items": [
+      {
+        "id": "cfd8dd75-a667-492a-b7d1-37865003c86b",
+        "refNumber": "PAY9814/2026",
+        "processName": "BAS Request For Payment",
+        "subject": "Invoice(s) - IKL-4567 | Supplier Name - OMNI TECHNOLOGIES",
+        "initiatedOn": "2026-06-17T13:15:34.52",
+        "workflowInstanceId": "cfd8dd75-a667-492a-b7d1-37865003c86b",
+        "statusFinalText": "Received",
+        "currentTask": "Assign Branch Finance Admin To Assign Certifier"
+      },
+      {
+        "id": "c16f4a32-1a3d-4832-9859-ceece4bdfcf4",
+        "refNumber": "PAY9800/2026",
+        "processName": "LOGIS Request For Payment",
+        "subject": "Order - OR-125100 | Invoice(s) - YH-654 | Supplier Name - LEKONAKONETSI CONSULTING SERVICES",
+        "initiatedOn": "2026-06-15T15:26:55.1",
+        "workflowInstanceId": "c16f4a32-1a3d-4832-9859-ceece4bdfcf4",
+        "statusFinalText": "Received",
+        "currentTask": "Certify Invoice"
+      },
+      {
+        "id": "3fbcfa90-8f00-4d87-aa63-93e47d36c2b8",
+        "refNumber": "PAY9788/2026",
+        "processName": "LOGIS Request For Payment",
+        "subject": "Order - LP-016769 | Invoice(s) - IKO-567 | Supplier Name - ATLANTIS CORPORATE TRAVEL",
+        "initiatedOn": "2026-06-15T14:40:00.78",
+        "workflowInstanceId": "3fbcfa90-8f00-4d87-aa63-93e47d36c2b8",
+        "statusFinalText": "Certified",
+        "currentTask": "Approve Invoice"
+      },
+      {
+        "id": "4e133e72-b4a2-47f2-86f9-018ca82fe941",
+        "refNumber": "PAY9784/2026",
+        "processName": "LOGIS Request For Payment",
+        "subject": "Order - OR-124430 | Invoice(s) - IOP-98744 | Supplier Name - SITA",
+        "initiatedOn": "2026-06-15T14:36:58.793",
+        "workflowInstanceId": "4e133e72-b4a2-47f2-86f9-018ca82fe941",
+        "statusFinalText": "Certified",
+        "currentTask": "Approve Invoice"
+      },
+      {
+        "id": "810fbf9d-2d0a-4855-aa52-d72315acc51e",
+        "refNumber": "PAY9774/2026",
+        "processName": "LOGIS Request For Payment",
+        "subject": "Order - OR-125100 | Invoice(s) - IKO-56722 | Supplier Name - LEKONAKONETSI CONSULTING SERVICES",
+        "initiatedOn": "2026-06-15T14:34:48.337",
+        "workflowInstanceId": "810fbf9d-2d0a-4855-aa52-d72315acc51e",
+        "statusFinalText": "Certified",
+        "currentTask": "Approve Invoice"
+      },
+      {
+        "id": "ce66d876-bce5-473e-a5ca-b970279480e1",
+        "refNumber": "PAY9770/2026",
+        "processName": "LOGIS Request For Payment",
+        "subject": "Order - OR-125100 | Invoice(s) - IKO-456 | Supplier Name - LEKONAKONETSI CONSULTING SERVICES",
+        "initiatedOn": "2026-06-15T14:33:34.457",
+        "workflowInstanceId": "ce66d876-bce5-473e-a5ca-b970279480e1",
+        "statusFinalText": "Certified",
+        "currentTask": "Approve Invoice"
+      },
+      {
+        "id": "7305475e-b98f-4297-bd23-73b8db337684",
+        "refNumber": "PAY9762/2026",
+        "processName": "LOGIS Request For Payment",
+        "subject": "Order - OR-125100 | Invoice(s) - IKL-5673 | Supplier Name - LEKONAKONETSI CONSULTING SERVICES",
+        "initiatedOn": "2026-06-15T14:31:31.453",
+        "workflowInstanceId": "7305475e-b98f-4297-bd23-73b8db337684",
+        "statusFinalText": "Certified",
+        "currentTask": "Approve Invoice"
+      },
+      {
+        "id": "82656679-e7bc-4d98-a371-d78784ec1ba7",
+        "refNumber": "PAY9756/2026",
+        "processName": "LOGIS Request For Payment",
+        "subject": "Order - OR-125100 | Invoice(s) - ITH-8765 | Supplier Name - LEKONAKONETSI CONSULTING SERVICES",
+        "initiatedOn": "2026-06-15T14:23:30.807",
+        "workflowInstanceId": "82656679-e7bc-4d98-a371-d78784ec1ba7",
+        "statusFinalText": "Certified",
+        "currentTask": "Approve Invoice"
+      },
+      {
+        "id": "be9ac1dd-2cee-4054-ad59-a31b5d703d18",
+        "refNumber": "PAY9746/2026",
+        "processName": "LOGIS Request For Payment",
+        "subject": "Order - OR-125100 | Invoice(s) - IJK-567 | Supplier Name - LEKONAKONETSI CONSULTING SERVICES",
+        "initiatedOn": "2026-06-15T14:21:50.037",
+        "workflowInstanceId": "be9ac1dd-2cee-4054-ad59-a31b5d703d18",
+        "statusFinalText": "Received",
+        "currentTask": "Certify Invoice"
+      },
+      {
+        "id": "d5e41498-4752-4549-8ee7-5f6aa1f6bf10",
+        "refNumber": "PAY9705/2026",
+        "processName": "LOGIS Request For Payment",
+        "subject": "Order - OR-125788 | Invoice(s) - OLP-564 | Supplier Name - ATLANTIS CORPORATE TRAVEL",
+        "initiatedOn": "2026-06-11T11:16:27.643",
+        "workflowInstanceId": "d5e41498-4752-4549-8ee7-5f6aa1f6bf10",
+        "statusFinalText": "Verified",
+        "currentTask": "Review Invoice Rejection"
+      }
+    ]
+  },
+  "targetUrl": null,
+  "success": true,
+  "error": null,
+  "unAuthorizedRequest": false,
+  "__abp": true
+}

@@ -1,0 +1,87 @@
+{
+  "suite": {
+    "id": 102152,
+    "name": "14Y POPIA transport and logging",
+    "n": 6
+  },
+  "cases": [
+    {
+      "id": 102161,
+      "fields": {
+        "System.Id": 102161,
+        "System.State": "Design",
+        "System.Title": "[TC-14Y-001 | Src:Code | Public] Wizard data sent over HTTPS only; submitter PII (RSA ID, email, phone) is not echoed into application logs",
+        "Microsoft.VSTS.Common.Priority": 1,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<b>Preconditions:</b> Network capture tool (browser DevTools) available. Access to application log files or test-env log aggregator.",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"4\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Open browser DevTools Network tab and submit a draft Application Wizard with synthetic PII&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;All wizard requests use https:// scheme; no http:// requests&lt;/P&gt;</parameterizedString><description/></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Inspect every request URL and response headers&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Strict-Transport-Security header is set; no mixed-content warnings in browser console&lt;/P&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Capture the request correlation ID from response headers&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Correlation ID is present and unique per request&lt;/P&gt;</parameterizedString><description/></step><step id=\"4\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;P&gt;Search the application logs for the test submitter's RSA ID, email, and cellphone&lt;/P&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;P&gt;Logs reference the correlation ID but do not contain raw RSA ID, raw email, or raw cellphone - PII is redacted, masked, or omitted&lt;/P&gt;</parameterizedString><description/></step></steps>",
+        "System.Tags": "DSD-NPO; Functional; Portal-Public; Security; Source-Sys-Obs; Suite-14Y; TC-14Y-001"
+      }
+    },
+    {
+      "id": 107417,
+      "fields": {
+        "System.Id": 107417,
+        "System.State": "Design",
+        "System.Title": "[TC-14Y-002 | Src:Code | Both] Sign In credentials transmitted over TLS only",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<p><b>Intended behaviour:</b> Sign In credentials transmitted over TLS only </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14Y per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> POPIA §11, §26, §27; OWASP ASVS §V3. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> POPIA (Act 4 of 2013) §11+§26+§27; Signed DSDNPO FDS Module 1 §7 (Portal) + Module 1 §8 (Backend) — where PII is processed. </p><p><b>Code anchor:</b> backend endpoints handling SA ID / contact details; app logging config; TLS termination at Azure/Shesha edge. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14Y-002 | Src:Code | Both] Sign In credentials transmitted over TLS only&quot; </p>",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Capture Sign In request via browser DevTools Network.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Request URL uses https://. Password appears only in TLS-encrypted body; no plaintext leak.&lt;/p&gt;</parameterizedString></step></steps>",
+        "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y"
+      }
+    },
+    {
+      "id": 107418,
+      "fields": {
+        "System.Id": 107418,
+        "System.State": "Design",
+        "System.Title": "[TC-14Y-003 | Src:Code | Both] SA ID number treated as special personal information — logs redacted",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<p><b>Intended behaviour:</b> SA ID number treated as special personal information — logs redacted </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14Y per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> POPIA §11, §26, §27; OWASP ASVS §V3. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> POPIA (Act 4 of 2013) §11+§26+§27; Signed DSDNPO FDS Module 1 §7 (Portal) + Module 1 §8 (Backend) — where PII is processed. </p><p><b>Code anchor:</b> backend endpoints handling SA ID / contact details; app logging config; TLS termination at Azure/Shesha edge. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14Y-003 | Src:Code | Both] SA ID number treated as special personal information — logs redacted&quot; </p>",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"1\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Perform DHA verification with synthetic SA ID.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;App logs tail shows SA ID masked (e.g. XXXXXXXXXX1234) or absent. Audit trail logs SA ID only if strictly required + separately protected.&lt;/p&gt;</parameterizedString></step></steps>",
+        "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y"
+      }
+    },
+    {
+      "id": 107419,
+      "fields": {
+        "System.Id": 107419,
+        "System.State": "Design",
+        "System.Title": "[TC-14Y-004 | Src:Code | Both] POPI Act consent captured before Register-New-NPO submission",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<p><b>Intended behaviour:</b> POPI Act consent captured before Register-New-NPO submission </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14Y per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> POPIA §11, §26, §27; OWASP ASVS §V3. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> POPIA (Act 4 of 2013) §11+§26+§27; Signed DSDNPO FDS Module 1 §7 (Portal) + Module 1 §8 (Backend) — where PII is processed. </p><p><b>Code anchor:</b> backend endpoints handling SA ID / contact details; app logging config; TLS termination at Azure/Shesha edge. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14Y-004 | Src:Code | Both] POPI Act consent captured before Register-New-NPO submission&quot; </p>",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Open Register-New-NPO flow.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;POPI consent dialogue visible before any submission.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Attempt submit without ticking consent.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Submit blocked with plain-language POPIA notice.&lt;/p&gt;</parameterizedString></step></steps>",
+        "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y"
+      }
+    },
+    {
+      "id": 107420,
+      "fields": {
+        "System.Id": 107420,
+        "System.State": "Design",
+        "System.Title": "[TC-14Y-005 | Src:Code | Both] Subject access — user can request export of their personal data",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<p><b>Intended behaviour:</b> Subject access — user can request export of their personal data </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14Y per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> POPIA §11, §26, §27; OWASP ASVS §V3. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> POPIA (Act 4 of 2013) §11+§26+§27; Signed DSDNPO FDS Module 1 §7 (Portal) + Module 1 §8 (Backend) — where PII is processed. </p><p><b>Code anchor:</b> backend endpoints handling SA ID / contact details; app logging config; TLS termination at Azure/Shesha edge. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14Y-005 | Src:Code | Both] Subject access — user can request export of their personal data&quot; </p>",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Signed-in user opens Profile &gt; Data &amp; Privacy.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Export My Data action visible.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Trigger export.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Email sent with structured export (JSON or CSV) of user PII + linked NPO records.&lt;/p&gt;</parameterizedString></step></steps>",
+        "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y"
+      }
+    },
+    {
+      "id": 107421,
+      "fields": {
+        "System.Id": 107421,
+        "System.State": "Design",
+        "System.Title": "[TC-14Y-006 | Src:Code | Both] Data retention — inactive user records archived after policy-defined period",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+        "System.Description": "<p><b>Intended behaviour:</b> Data retention — inactive user records archived after policy-defined period </p><p><b>Source anchor:</b> Src:Code. Journey-ordered per feedback_test_case_design + user direction 2026-07-28. </p><p><b>Coverage class:</b> Top-up on thin existing suite 14Y per audit BOX-REP-DSDNPO-AUDIT-001 §9. Real-world user-journey sequenced. </p><p><b>Standards:</b> POPIA §11, §26, §27; OWASP ASVS §V3. </p><p><b>L1 draft — BA sign-off recorded via user acting BA-role 2026-07-28.</b> </p><hr><p><b>Anchor retrofit 2026-07-28 (L1 draft — needs L3 validation per feedback_test_plan_fds_and_code_anchoring):</b> </p><p><b>FDS anchor:</b> POPIA (Act 4 of 2013) §11+§26+§27; Signed DSDNPO FDS Module 1 §7 (Portal) + Module 1 §8 (Backend) — where PII is processed. </p><p><b>Code anchor:</b> backend endpoints handling SA ID / contact details; app logging config; TLS termination at Azure/Shesha edge. </p><p><b>Note:</b> Suite-level auto-mapping applied by batch script. L3 reviewer should refine per-TC to specific FDS subsection + specific file:line before this TC is used in a certification run. Raw title anchor for search: &quot;[TC-14Y-006 | Src:Code | Both] Data retention — inactive user records archived after policy-defined period&quot; </p>",
+        "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"2\"><step id=\"1\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Precondition: user with no login in policy-defined inactive window.&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;Seed data.&lt;/p&gt;</parameterizedString></step><step id=\"2\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;p&gt;Run retention job (or observe scheduled trigger).&lt;/p&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;p&gt;User record moved to Archived state; personal data no longer accessible via normal queries; audit entry recorded.&lt;/p&gt;</parameterizedString></step></steps>",
+        "System.Tags": "Both; Coverage-Gap-Topup; DSD-NPO; L1-draft; Suite-14Y"
+      }
+    }
+  ]
+}

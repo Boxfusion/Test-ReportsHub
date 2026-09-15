@@ -1,0 +1,139 @@
+[
+  {
+    "label": "A-baseline-real-QR",
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=4",
+    "status": 200,
+    "landed": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=4",
+    "text": "NPO Certificate Authentication The information below is provided by the Department of Social Development. Npo Number 333-022-NPO Name Nomfanelo QA Unfinished NPO 2026-08-20 Status Registered Date Registered 20/08/2026",
+    "api": [
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.ThemeSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.MainMenuSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/GetByName?name=npo-certificate-authentication&module=boxfusion.dsdnpo",
+      "GET https://dsd-npo-api-qa.shesha.app/?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=4&properties=",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger",
+      "POST https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/CheckPermissions",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger/index.html",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/dsdnpo/Organisations/GetNpoIdBySubstringId?subStringId=c5d06b6b2055",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/ReferenceList/GetByName?name=Shesha.Core.OrganisationStatus"
+    ]
+  },
+  {
+    "label": "B-status-tampered-to-6",
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=6",
+    "status": 200,
+    "landed": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=6",
+    "text": "NPO Certificate Authentication NPO Certificate Not Valid For further information you can contact us here",
+    "api": [
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.ThemeSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.MainMenuSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/GetByName?name=npo-certificate-authentication&module=boxfusion.dsdnpo&md5=2C85C92C6927E267C9DBC6F50D4B358A",
+      "GET https://dsd-npo-api-qa.shesha.app/?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=6&properties=",
+      "POST https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/CheckPermissions",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger/index.html",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/dsdnpo/Organisations/GetNpoIdBySubstringId?subStringId=c5d06b6b2055"
+    ]
+  },
+  {
+    "label": "C-status-tampered-to-1",
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=1",
+    "status": 200,
+    "landed": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=1",
+    "text": "NPO Certificate Authentication NPO Certificate Not Valid For further information you can contact us here",
+    "api": [
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.ThemeSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.MainMenuSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/GetByName?name=npo-certificate-authentication&module=boxfusion.dsdnpo&md5=2C85C92C6927E267C9DBC6F50D4B358A",
+      "GET https://dsd-npo-api-qa.shesha.app/?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=1&properties=",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger/index.html",
+      "POST https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/CheckPermissions",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/dsdnpo/Organisations/GetNpoIdBySubstringId?subStringId=c5d06b6b2055"
+    ]
+  },
+  {
+    "label": "D-status-tampered-to-999",
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=999",
+    "status": 200,
+    "landed": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=999",
+    "text": "NPO Certificate Authentication NPO Certificate Not Valid For further information you can contact us here",
+    "api": [
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.ThemeSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.MainMenuSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/GetByName?name=npo-certificate-authentication&module=boxfusion.dsdnpo&md5=2C85C92C6927E267C9DBC6F50D4B358A",
+      "GET https://dsd-npo-api-qa.shesha.app/?id=c5d06b6b2055&npoNumber=333-022-NPO&npoStatus=999&properties=",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger",
+      "POST https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/CheckPermissions",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger/index.html",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/dsdnpo/Organisations/GetNpoIdBySubstringId?subStringId=c5d06b6b2055"
+    ]
+  },
+  {
+    "label": "E-npoNumber-swapped-333-019",
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=333-019-NPO&npoStatus=4",
+    "status": 200,
+    "landed": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=333-019-NPO&npoStatus=4",
+    "text": "NPO Certificate Authentication The information below is provided by the Department of Social Development. Npo Number 333-022-NPO Name Nomfanelo QA Unfinished NPO 2026-08-20 Status Registered Date Registered 20/08/2026",
+    "api": [
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.ThemeSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.MainMenuSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/GetByName?name=npo-certificate-authentication&module=boxfusion.dsdnpo&md5=2C85C92C6927E267C9DBC6F50D4B358A",
+      "GET https://dsd-npo-api-qa.shesha.app/?id=c5d06b6b2055&npoNumber=333-019-NPO&npoStatus=4&properties=",
+      "POST https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/CheckPermissions",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger/index.html",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/dsdnpo/Organisations/GetNpoIdBySubstringId?subStringId=c5d06b6b2055",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/ReferenceList/GetByName?name=Shesha.Core.OrganisationStatus&md5=BFA3FA063FEB3087865ABECEDA9AE737"
+    ]
+  },
+  {
+    "label": "F-id-garbage",
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=deadbeefdead&npoNumber=333-022-NPO&npoStatus=4",
+    "status": 200,
+    "landed": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=deadbeefdead&npoNumber=333-022-NPO&npoStatus=4",
+    "text": "NPO Certificate Authentication The information below is provided by the Department of Social Development. Npo Number Name Status Registered Date Registered",
+    "api": [
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.ThemeSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.MainMenuSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/GetByName?name=npo-certificate-authentication&module=boxfusion.dsdnpo&md5=2C85C92C6927E267C9DBC6F50D4B358A",
+      "GET https://dsd-npo-api-qa.shesha.app/?id=deadbeefdead&npoNumber=333-022-NPO&npoStatus=4&properties=",
+      "POST https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/CheckPermissions",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger/index.html",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/dsdnpo/Organisations/GetNpoIdBySubstringId?subStringId=deadbeefdead",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/ReferenceList/GetByName?name=Shesha.Core.OrganisationStatus&md5=BFA3FA063FEB3087865ABECEDA9AE737"
+    ]
+  },
+  {
+    "label": "G-npoNumber-invented",
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=999-999-NPO&npoStatus=4",
+    "status": 200,
+    "landed": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication?id=c5d06b6b2055&npoNumber=999-999-NPO&npoStatus=4",
+    "text": "NPO Certificate Authentication The information below is provided by the Department of Social Development. Npo Number 333-022-NPO Name Nomfanelo QA Unfinished NPO 2026-08-20 Status Registered Date Registered 20/08/2026",
+    "api": [
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.ThemeSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.MainMenuSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/GetByName?name=npo-certificate-authentication&module=boxfusion.dsdnpo&md5=2C85C92C6927E267C9DBC6F50D4B358A",
+      "POST https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/CheckPermissions",
+      "GET https://dsd-npo-api-qa.shesha.app/?id=c5d06b6b2055&npoNumber=999-999-NPO&npoStatus=4&properties=",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger",
+      "GET https://dsd-npo-api-qa.shesha.app/swagger/index.html",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/dsdnpo/Organisations/GetNpoIdBySubstringId?subStringId=c5d06b6b2055",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/ReferenceList/GetByName?name=Shesha.Core.OrganisationStatus&md5=BFA3FA063FEB3087865ABECEDA9AE737"
+    ]
+  },
+  {
+    "label": "H-no-params",
+    "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication",
+    "status": 200,
+    "landed": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/npo-certificate-authentication",
+    "text": "NPO Certificate Authentication NPO Certificate Not Valid For further information you can contact us here",
+    "api": [
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.ThemeSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/app/Settings/GetValue?name=Shesha.MainMenuSettings&module=Shesha",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/GetByName?name=npo-certificate-authentication&module=boxfusion.dsdnpo&md5=2C85C92C6927E267C9DBC6F50D4B358A",
+      "POST https://dsd-npo-api-qa.shesha.app/api/services/Shesha/FormConfiguration/CheckPermissions",
+      "GET https://dsd-npo-api-qa.shesha.app/api/services/dsdnpo/Organisations/GetNpoIdBySubstringId?subStringId=undefined"
+    ]
+  }
+]

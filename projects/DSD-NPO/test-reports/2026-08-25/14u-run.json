@@ -1,0 +1,110 @@
+{
+  "jwt": false,
+  "out": {
+    "/dynamic/boxfusion.dsdnpo/Audit-Trail": {
+      "rows": 0,
+      "cols": [],
+      "tabs": [],
+      "hits": [
+        "Audit",
+        "Trail"
+      ],
+      "bad": [
+        {
+          "s": 404,
+          "q": "name=Audit-Trail&module=boxfusion.dsdnpo",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":404,\"message\":\"form `boxfusion.dsdnpo\\\\Audit-Trail` not found\",\"details\":\"form `boxfusion.dsdnpo\\\\Audit-Trail` not found\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        }
+      ],
+      "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase 404 Sorry, the page you visited does not exist. Back Home Sorry! An error occurred. Form 'boxfusion.dsdnpo/Audit-Trail' not found"
+    },
+    "/dynamic/Shesha/entity-change-audit-log": {
+      "rows": 0,
+      "cols": [],
+      "tabs": [
+        "No Data"
+      ],
+      "hits": [
+        "Audit"
+      ],
+      "bad": [
+        {
+          "s": 400,
+          "q": "entityId=&entityTypeFullName=&includeEventsOnChildEntities=&sorting=creationTime desc&maxResultCount=10&skipCount=0&properties=&quickSearch=&sorting=&filter=",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"Your request is not valid!\",\"details\":\"The following errors were detected during validation.\\n - The value '' is invalid.\\n\",\"validationErrors\":[{\"message\":\"The value '' is invalid.\","
+        }
+      ],
+      "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase Shesha/entity-change-audit-log v32 LIVE Date Actioned By Change Type Description No Data No data is available for this list"
+    },
+    "/dynamic/boxfusion.dsdnpo/npoapplication-details?id=922fc93c-e0db-4b24-b46e-000ead781ebe&mode=edit": {
+      "rows": 0,
+      "cols": [],
+      "tabs": [
+        "Application Details",
+        "Organisation Details",
+        "Objectives",
+        "Particulars Of Office Bearers",
+        "Particulars Of Control Structure",
+        "NPO Admin and Operations",
+        "Area of Operation",
+        "Declarations",
+        "Comments",
+        "Documents"
+      ],
+      "hits": [],
+      "bad": [
+        {
+          "s": 500,
+          "q": "ownerId=922fc93c-e0db-4b24-b46e-000ead781ebe&ownerType=Npo.Application&propertyName=npo.signedCertificateOfDirectorsFile",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"An internal error occurred during your request!\",\"details\":\"Non-static method requires a target.\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        },
+        {
+          "s": 500,
+          "q": "ownerId=922fc93c-e0db-4b24-b46e-000ead781ebe&ownerType=Npo.Application&propertyName=npo.signedMemorandumOfIncorporationFile",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"An internal error occurred during your request!\",\"details\":\"Non-static method requires a target.\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        },
+        {
+          "s": 500,
+          "q": "ownerId=922fc93c-e0db-4b24-b46e-000ead781ebe&ownerType=Npo.Application&propertyName=npo.signedDeedOfTrustFile",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"An internal error occurred during your request!\",\"details\":\"Non-static method requires a target.\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        },
+        {
+          "s": 500,
+          "q": "ownerId=922fc93c-e0db-4b24-b46e-000ead781ebe&ownerType=Npo.Application&propertyName=npo.signedLetterOfAuthorityFile",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"An internal error occurred during your request!\",\"details\":\"Non-static method requires a target.\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        },
+        {
+          "s": 500,
+          "q": "ownerId=922fc93c-e0db-4b24-b46e-000ead781ebe&ownerType=Npo.Application&propertyName=npo.signedCertificateOfRegistrationFile",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"An internal error occurred during your request!\",\"details\":\"Non-static method requires a target.\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        },
+        {
+          "s": 500,
+          "q": "ownerId=922fc93c-e0db-4b24-b46e-000ead781ebe&ownerType=Npo.Application&propertyName=npo.signedCertificateOfDirectorsFile",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"An internal error occurred during your request!\",\"details\":\"Non-static method requires a target.\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        },
+        {
+          "s": 500,
+          "q": "ownerId=922fc93c-e0db-4b24-b46e-000ead781ebe&ownerType=Npo.Application&propertyName=npo.signedMemorandumOfIncorporationFile",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"An internal error occurred during your request!\",\"details\":\"Non-static method requires a target.\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        },
+        {
+          "s": 500,
+          "q": "ownerId=922fc93c-e0db-4b24-b46e-000ead781ebe&ownerType=Npo.Application&propertyName=npo.signedCertificateOfRegistrationFile",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"An internal error occurred during your request!\",\"details\":\"Non-static method requires a target.\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        },
+        {
+          "s": 500,
+          "q": "ownerId=922fc93c-e0db-4b24-b46e-000ead781ebe&ownerType=Npo.Application&propertyName=npo.signedDeedOfTrustFile",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"An internal error occurred during your request!\",\"details\":\"Non-static method requires a target.\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        },
+        {
+          "s": 500,
+          "q": "ownerId=922fc93c-e0db-4b24-b46e-000ead781ebe&ownerType=Npo.Application&propertyName=npo.signedLetterOfAuthorityFile",
+          "body": "{\"result\":null,\"targetUrl\":null,\"success\":false,\"error\":{\"code\":0,\"message\":\"An internal error occurred during your request!\",\"details\":\"Non-static method requires a target.\",\"validationErrors\":null},\"unAuthorizedRequest\":false,\"__abp\":true}"
+        }
+      ],
+      "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/npoapplication-details v46 LIVE - Application Details Organisation Details Objectives Particulars Of Office Bearers Particulars Of Control Structure NPO Admin and Operations Area of Operation Declarations boxfusion.dsdnpo/npo-details-subform v18 LIVE Organisation Details Name Trading Name WhatsApp number Telephone Physical Address Full Address Province District Municipality Metropolitan Municipality Area Code Cellphone Number Email Address Financial Y/End Income Tax Number Legal Form Postal Address Full Address Province District Municipality Metropolitan Municipality Area Code Comments Save There are "
+    }
+  }
+}

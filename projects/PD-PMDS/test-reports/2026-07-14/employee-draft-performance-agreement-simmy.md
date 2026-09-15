@@ -1,12 +1,12 @@
 # Test Report — Employee Draft Performance Agreement (PMDS) — Simmy Mthalane
 
-- **Date:** 2026-07-14
-- **App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
-- **Cycle:** SL 1-12 Performance Agreement — FY2026/27
-- **Employee:** Simmy Mthalane (`Simmy` / `123qwe`)
-- **Routing:** Supervisor = Lungile Nhleko (default, no alternate needed); Mediator = Tania Smith (auto-defaulted)
-- **Workflow ref:** PA2026/5947
-- **Result:** ✅ PASS — drafted and submitted end-to-end; status **Draft → Review**
+**Date:** 2026-07-14
+**App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
+**Cycle:** SL 1-12 Performance Agreement — FY2026/27
+**Employee:** Simmy Mthalane (`Simmy` / `123qwe`)
+**Routing:** Supervisor = Lungile Nhleko (default, no alternate needed); Mediator = Tania Smith (auto-defaulted)
+**Workflow ref:** PA2026/5947
+**Result:** PASSED — drafted and submitted end-to-end; status **Draft → Review**
 
 ## Steps executed
 1. **Login as employee** — `Simmy` / `123qwe`.

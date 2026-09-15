@@ -1,0 +1,123 @@
+{
+  "info": {
+    "fields": [
+      {
+        "label": "Appeal Status",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "DENIED"
+      },
+      {
+        "label": "Name",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "Appeal Application"
+      },
+      {
+        "label": "Nature Of Appeal",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "Refusal To Register"
+      },
+      {
+        "label": "Mode Of Appeal",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "Written Submission"
+      },
+      {
+        "label": "Written Submission",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "kjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjnjjjjjjjjjjjjjjjjjjjjjjjjjccfffffffffffff"
+      },
+      {
+        "label": "First Name",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "Mutshutshu"
+      },
+      {
+        "label": "Surname",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "Tshithukhe"
+      },
+      {
+        "label": "SA ID",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": ""
+      },
+      {
+        "label": "Passport Number",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "TC8352FHS"
+      },
+      {
+        "label": "Cell Number",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "0795545294"
+      },
+      {
+        "label": "Email",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "Mutshutshu.Tshithukhe@boxfusion.io"
+      },
+      {
+        "label": "Nationality",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "Colombia"
+      },
+      {
+        "label": "Position",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "Trust"
+      },
+      {
+        "label": "Supporting Documents",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": ""
+      },
+      {
+        "label": "Tribunal Supporting Documents",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": true,
+        "value": "dsd-npo-publicportal-1-qa-shesha-app-dynamic-boxfusion-dsdnpo-npo-landing-view-i"
+      },
+      {
+        "label": "Claim Document",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": true,
+        "value": "dsd-npo-publicportal-1-qa-shesha-app-dynamic-boxfusion-dsdnpo-npo-landing-view-i"
+      }
+    ],
+    "uploads": 0,
+    "buttons": [
+      "Save"
+    ]
+  },
+  "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/appeal-details-view v47 LIVE Appeal Status DENIED Back View NPO Application Details View NPO Details Appeal Appeal Details Declaration Name Appeal Application Nature Of Appeal Refusal To Register Mode Of Appeal Written Submission Written Submission kjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjnjjjjjjjjjjjjjjjjjjjjjjjjjccfffffffffffffffffxs Submitting Office Bearer First Name Mutshutshu Surname Tshithukhe SA ID Passport Number TC8352FHS Cell Number 0795545294 Email Mutshutshu.Tshithukhe@boxfusion.io Nationality Colombia Position Trust Comments Save Mmatjieng Rachidi Aug 5, 2026 11:04 AM ftqw Mmatjieng Rachidi Aug 5, 2026 11:01 AM fr Documents Documents From NPO Supporting Documents Tribunal Documents Tribunal Supporting Documents dsd-npo-publicportal-1-qa-shesha-app-dynamic-boxfusion-dsdnpo-npo-landing-view-id-40a10ff5-d5f4-4fef-8be8-ca8a1869660b-08-04-2026_04_33_PM.png (219.81 kB) Claim Document dsd-npo-publicportal-1-qa-shesha-app-dynamic-boxfusion-dsdnpo-npo-landing-view-id-40a10ff5-d5f4-4fef-8be8-ca8a1869660b-08-04-2026_04_33_PM.png (219.81 kB)"
+}

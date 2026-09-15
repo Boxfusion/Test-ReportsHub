@@ -1,0 +1,59 @@
+{
+  "appeal-outcome": {
+    "url": "https://dsd-npo-adminportal-qa.shesha.app/dynamic/boxfusion.dsdnpo/appeal-outcome?id=a8fd7a22-c8a5-4e3f-a96d-1905f348730f",
+    "rendered": true,
+    "denied": false,
+    "fields": [
+      "Appeal Result",
+      "Claim Document"
+    ],
+    "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/appeal-outcome v20 LIVE Hint: Please add the appeal result and confirm Appeal Result Upheld Denied Approve Claim Document dsd-npo-publicportal-1-qa-shesha-app-dynamic-boxfusion-dsdnpo-npo-landing-view-id-40a10ff5-d5f4-4fef-8be8-ca8a1869660b-08-04-2026_04_33_PM.png (219.81 kB)"
+  },
+  "notice-of-tribunal": {
+    "url": "https://dsd-npo-adminportal-qa.shesha.app/dynamic/boxfusion.dsdnpo/notice-of-tribunal?id=a8fd7a22-c8a5-4e3f-a96d-1905f348730f",
+    "rendered": true,
+    "denied": false,
+    "fields": [
+      "Yes"
+    ],
+    "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/notice-of-tribunal v15 LIVE Hint: Please add the appeal result and confirm Is assessment complete? Yes No"
+  },
+  "forward-arbitration-tribunal": {
+    "url": "https://dsd-npo-adminportal-qa.shesha.app/dynamic/boxfusion.dsdnpo/forward-arbitration-tribunal?id=a8fd7a22-c8a5-4e3f-a96d-1905f348730f",
+    "rendered": true,
+    "denied": false,
+    "fields": [],
+    "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/forward-arbitration-tribunal v16 LIVE Hint: Please select all members of the tribunal. Appeal board members(Tribunal) Comments Cancel Save"
+  },
+  "forward-arbitration-tribunal-1": {
+    "url": "https://dsd-npo-adminportal-qa.shesha.app/dynamic/boxfusion.dsdnpo/forward-arbitration-tribunal-1?id=a8fd7a22-c8a5-4e3f-a96d-1905f348730f",
+    "rendered": true,
+    "denied": false,
+    "fields": [],
+    "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/forward-arbitration-tribunal-1 v5 LIVE Hint: Please select all members of the tribunal. Appeal board members(Tribunal) Comments Cancel Save"
+  },
+  "appeal-details-view": {
+    "url": "https://dsd-npo-adminportal-qa.shesha.app/dynamic/boxfusion.dsdnpo/appeal-details-view?id=a8fd7a22-c8a5-4e3f-a96d-1905f348730f",
+    "rendered": true,
+    "denied": false,
+    "fields": [
+      "Appeal Status",
+      "Name",
+      "Nature Of Appeal",
+      "Mode Of Appeal",
+      "Written Submission",
+      "First Name",
+      "Surname",
+      "SA ID",
+      "Passport Number",
+      "Cell Number",
+      "Email",
+      "Nationality",
+      "Position",
+      "Supporting Documents",
+      "Tribunal Supporting Documents",
+      "Claim Document"
+    ],
+    "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/appeal-details-view v47 LIVE Appeal Status DENIED Back View NPO Application Details View NPO Details Appeal Appeal Details Declaration Name Appeal Application Nature Of Appeal Refusal To Register Mode Of Appeal Written Submission Written Submission kjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjnjjjjjjjjjjjjjjjjjjjjjjjjjccfffffffffffffffffxs Submitting Office Bearer First Name Mutshutshu Surname Tshithukhe SA ID Passport Number TC8352FHS Cell Number 0795545294 Email Mutshutshu.Tshithukhe@boxfusion.io Nationality Colombia Position Trust Comments Save Mmatjieng Rachidi Aug 5, 2026 11:04 AM ftqw Mmatjieng Rachidi Aug 5, 2026 11:01 AM fr Documents Documents From NPO Supporting Documents Tribunal Documents Tribu"
+  }
+}

@@ -1,11 +1,11 @@
 # Test Report — HR Verify Performance Agreement (PMDS)
 
-- **Date:** 2026-07-14
-- **App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
-- **Cycle:** SL 1-12 Performance Agreement — FY2026/27
-- **Workflow ref:** PA2026/5901 (continues from `supervisor-review-performance-agreement.md`)
-- **HR user:** Sales HR (`SalesHR`)
-- **Result:** ✅ PASS — verified; status advanced **HR Review → Generate PERSAL Input**
+**Date:** 2026-07-14
+**App:** HCM Admin Portal — PMDS module (QA) — https://pd-hcm-adminportal-qa.shesha.app/
+**Cycle:** SL 1-12 Performance Agreement — FY2026/27
+**Workflow ref:** PA2026/5901 (continues from `supervisor-review-performance-agreement.md`)
+**HR user:** Sales HR (`SalesHR`)
+**Result:** PASSED — verified; status advanced **HR Review → Generate PERSAL Input**
 
 ## Steps executed
 1. **Login as HR** — `SalesHR` / `123qwe` (regular user, no view-mode toggle).

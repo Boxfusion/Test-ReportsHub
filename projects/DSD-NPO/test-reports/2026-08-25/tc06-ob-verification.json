@@ -1,0 +1,23 @@
+{
+  "dead": "NAV FAILED: page.goto: net::ERR_NAME_NOT_RESOLVED at https://dsd-npo-publicportal-qa.azurewebsites.net",
+  "url": "https://dsd-npo-publicportal-1-qa.shesha.app/no-auth/boxfusion.dsdnpo/ob-self-verification?mode=edit&tempId=eba499877cad&npo=Nomfanelo_QA_NPO_2026-08-13",
+  "fields": [
+    {
+      "label": "Yes",
+      "value": "Yes No",
+      "disabled": false
+    }
+  ],
+  "buttons": [
+    "Submit"
+  ],
+  "radios": [
+    [
+      "Yes",
+      "No"
+    ]
+  ],
+  "placeholders": [],
+  "bad": [],
+  "body": "The Protection of Personal Information Act, 2013 (POPIA) (Act no. 04 of 2013) regulates and controls the processing, including the collection, use, and transfer, of a person’s personal information. By verifying yourself you agree that your information would be used by the Department of Social Development for further processing regarding the NPO in which you are registered under. Do you consent to being an Office Bearer at the Nomfanelo QA NPO 2026-08-13? Yes No Submit"
+}

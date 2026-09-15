@@ -1,0 +1,23 @@
+{
+  "info": {
+    "fields": [
+      {
+        "label": "Appeal Result",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": false,
+        "value": "Upheld Denied Approve"
+      },
+      {
+        "label": "Claim Document",
+        "requiredClass": true,
+        "ariaRequired": false,
+        "hasUpload": true,
+        "value": "dsd-npo-publicportal-1-qa-shesha-app-dynamic-boxfusion-dsdnpo-npo-landing-view-i"
+      }
+    ],
+    "uploads": 0,
+    "buttons": []
+  },
+  "body": "Dashboards Reports Spartial Map CRM All NPOs Workflows CRUDS Education and Awareness Administration Configurations Shesha/header v13 LIVE Live Mode Latest Mpendulo ntshangase boxfusion.dsdnpo/appeal-outcome v20 LIVE Hint: Please add the appeal result and confirm Appeal Result Upheld Denied Approve Claim Document dsd-npo-publicportal-1-qa-shesha-app-dynamic-boxfusion-dsdnpo-npo-landing-view-id-40a10ff5-d5f4-4fef-8be8-ca8a1869660b-08-04-2026_04_33_PM.png (219.81 kB)"
+}

@@ -1,0 +1,13 @@
+{
+  "totalPlans": 121,
+  "totalRuns": 130,
+  "last7Runs": 3,
+  "last7Pass": 2,
+  "last7PassPct": 67,
+  "failingFlows": 5,
+  "lastRun": {
+    "date": "2026-09-11",
+    "result": "PASSED",
+    "plan": "test-plans/Alerts/verify-add-alert-daily.md"
+  }
+}

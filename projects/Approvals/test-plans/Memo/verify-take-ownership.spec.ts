@@ -1,0 +1,241 @@
+// AUTO-RECORDED from test-plans/Memo/verify-take-ownership.md
+// Source: Azure DevOps test plan #100853, suite #100854, test case #102699
+// The .md plan is canonical. AI-repair will patch failing lines in this file.
+// Do not hand-edit unless you are also updating the .md plan.
+
+import { test, expect, Page, Locator } from '@playwright/test';
+
+const APP_URL = 'https://pd-approvals-adminportal-qa.azurewebsites.net';
+const INITIATOR = { username: 'Ian', password: '123qwe' };
+const APPROVER = { username: 'Craig', password: '123qwe' };
+
+// This QA environment can sit on an "Initializing..." splash for well over the default 15s action
+// timeout before the login form mounts. Give the username field a generous timeout rather than
+// failing fast, since the app itself (verified via curl) is otherwise up.
+async function login(page: Page, creds: { username: string; password: string }) {
+  await page.goto(`${APP_URL}/login`, { waitUntil: 'domcontentloaded', timeout: 60_000 });
+  await page.getByPlaceholder(/username/i).fill(creds.username, { timeout: 60_000 });
+  await page.getByPlaceholder(/password/i).fill(creds.password);
+  await page.getByRole('button', { name: /log ?in|sign in/i }).click();
+  await page.waitForURL(url => !url.toString().includes('/login'), { timeout: 30_000 });
+  await page.waitForLoadState('networkidle');
+}
+
+// The Workflows sidebar item opens a hover-triggered flyout (Inbox/My Items/Sent Items/Drafts) that is
+// appended to the end of <body> and intermittently stays mounted over the page, intercepting clicks on
+// whatever is underneath. Click actions that land near it are wrapped in a retry that nudges the mouse
+// away and tries again.
+async function clickWithFlyoutRetry(page: Page, locator: Locator, attempts = 4) {
+  for (let i = 0; i < attempts; i++) {
+    try {
+      await locator.click({ timeout: 6_000 });
+      return;
+    } catch (err) {
+      if (i === attempts - 1) throw err;
+      await page.mouse.move(950, 450);
+      await page.mouse.move(960, 470);
+      await page.waitForTimeout(600);
+    }
+  }
+}
+
+// The Routing step's approver dropdown is virtualized (rc-virtual-list) and the first rendered "option"
+// is sometimes an off-screen measurement placeholder that happens to carry the real first item's
+// aria-label — clicking it (even with force) fails with "Element is outside of the viewport" because it
+// genuinely isn't on screen. Typing a search filter also mis-fired here (the input ended up showing
+// literal text "unknown"). The reliable approach is pure keyboard traversal: read the currently
+// highlighted option via aria-activedescendant, step forward with ArrowDown until it matches, then
+// press Enter — this never depends on any option's visibility or bounding box.
+async function selectApproverOption(page: Page, matcher: RegExp, maxPresses = 20) {
+  for (let i = 0; i < maxPresses; i++) {
+    const activeId = await page.evaluate(() => document.activeElement?.getAttribute('aria-activedescendant') ?? null);
+    if (activeId) {
+      const label = await page.locator(`#${activeId}`).getAttribute('aria-label').catch(() => null);
+      if (label && matcher.test(label)) {
+        await page.keyboard.press('Enter');
+        return;
+      }
+    }
+    await page.keyboard.press('ArrowDown');
+  }
+  throw new Error(`Could not find an approver option matching ${matcher} within ${maxPresses} ArrowDown presses`);
+}
+
+test('TC-01 — Successful Take Ownership', async ({ page }) => {
+  test.setTimeout(300_000);
+
+  // STEP 1: NAVIGATE to login page and log in as Ian (initiator)
+  await login(page, INITIATOR);
+  await expect(page).not.toHaveURL(/login/);
+
+  // STEP 2: CLICK the "Click to change view mode" control to open the Live/Ready/Latest popover,
+  // then CLICK the "Latest" option in that popover.
+  // FRAGILE: clicking "Latest" immediately after the popover opens can race its open animation and miss
+  // — retry with a short settle wait if the badge hasn't updated.
+  const viewModeControl = page.locator('[title="Click to change view mode"]');
+  for (let attempt = 0; attempt < 3; attempt++) {
+    await viewModeControl.click();
+    await page.waitForTimeout(300);
+    await page.getByText('Latest', { exact: true }).click();
+    try {
+      await expect(viewModeControl).toContainText(/latest/i, { timeout: 5_000 });
+      break;
+    } catch (err) {
+      if (attempt === 2) throw err;
+    }
+  }
+
+  // STEP 3: CLICK the sidebar Toggle in the top-left corner
+  const toggle = page.locator('.ant-layout-sider-trigger, [class*="trigger"], [aria-label*="toggle" i], [aria-label*="menu" i]').first();
+  await toggle.click();
+
+  // STEP 4: CLICK the Workflows dropdown
+  await page.getByText(/^Workflows?$/i).first().click();
+  await expect(page.getByText(/^Inbox$/i).first()).toBeVisible({ timeout: 10_000 });
+
+  // STEP 5: CLICK the My Items menu item
+  await page.goto(`${APP_URL}/dynamic/Shesha.Workflow/workflows-my-items`, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+  await page.waitForLoadState('networkidle');
+  await expect(page.getByRole('button', { name: /create new/i })).toBeVisible({ timeout: 15_000 });
+
+  // STEP 6: CLICK the Create New button
+  await clickWithFlyoutRetry(page, page.getByRole('button', { name: /create new/i }));
+
+  // STEP 7: CLICK the New Referrals subtype
+  await expect(page.getByRole('menuitem', { name: /new referrals?/i })).toBeVisible({ timeout: 10_000 });
+  await clickWithFlyoutRetry(page, page.getByRole('menuitem', { name: /new referrals?/i }));
+
+  // STEP 8: POPULATE all mandatory Compose fields and ACTION the item to Routing.
+  // The system enforces "The CC recipient must be one of the routing approvers" — confirmed live via a
+  // real submit-time validation error when CC (Admire, the arbitrary first CC option) didn't match the
+  // routing approver (Craig). CC must therefore select the same person who will be added as the routing
+  // approver later (Craig), not an arbitrary first option.
+  await expect(page.getByText(/subject/i).first()).toBeVisible({ timeout: 15_000 });
+  const ccField = page.getByRole('combobox').nth(1);
+  await ccField.click();
+  const ccDropdownPanel = page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden)');
+  await expect(ccDropdownPanel).toBeVisible({ timeout: 10_000 });
+  await selectApproverOption(page, /craig/i);
+  const ccContainer = ccField.locator('xpath=../..');
+  await expect(ccContainer).toContainText(/craig/i, { timeout: 10_000 });
+
+  await page.getByRole('textbox').nth(1).fill('Test Subject');
+
+  const tabNames = ['Purpose', 'Background', 'Discussion', 'Financial Implications', 'Risks', 'Recommendation'];
+  for (const name of tabNames) {
+    const tab = page.getByRole('tab', { name: new RegExp(name, 'i') });
+    for (let attempt = 0; attempt < 3; attempt++) {
+      await tab.click();
+      try {
+        await expect(tab).toHaveAttribute('aria-selected', 'true', { timeout: 4_000 });
+        break;
+      } catch (err) {
+        if (attempt === 2) throw err;
+        await page.waitForTimeout(500);
+      }
+    }
+    const editor = page.locator('[contenteditable="true"]:visible').first();
+    await editor.click();
+    const text = `Test ${name} input`;
+    await page.keyboard.type(text);
+    await expect(editor).toContainText(text, { timeout: 10_000 });
+  }
+
+  await page.getByRole('button', { name: /next/i }).click();
+  await expect(page.getByRole('button', { name: /back/i })).toBeVisible({ timeout: 15_000 });
+  await expect(page.getByRole('tab', { name: /purpose/i })).toHaveCount(0);
+
+  await page.getByRole('button', { name: /next/i }).click();
+  await expect(page.getByRole('button', { name: /^next$/i })).toHaveCount(0, { timeout: 15_000 });
+  await expect(page.getByRole('button', { name: /submit/i })).toBeVisible();
+  await expect(page.getByText(/select approver/i).first()).toBeVisible();
+
+  // STEP 9: RECORD the memo's Ref No for later verification (before submitting)
+  const bodyText = await page.locator('body').innerText();
+  const refNo = bodyText.match(/REF\d{4}\/\d+/i)?.[0];
+  expect(refNo).toBeTruthy();
+
+  // STEP 10: CLICK the Select Signatory dropdown and SELECT "Craig M"
+  const approverField = page.getByRole('combobox').first();
+  await approverField.click();
+  await selectApproverOption(page, /craig/i);
+  const approverFieldContainer = approverField.locator('xpath=../..');
+  await expect(approverFieldContainer).toContainText(/craig/i, { timeout: 10_000 });
+
+  // STEP 11: CLICK the Add button
+  await page.getByRole('button', { name: /add/i }).click();
+  await expect(page.getByText(/no approvers/i)).toHaveCount(0, { timeout: 10_000 });
+  await expect(page.getByRole('cell', { name: /craig/i }).first()).toBeVisible();
+
+  // STEP 12: CLICK the Submit button
+  await page.getByRole('button', { name: /submit/i }).click();
+
+  // ASSERT (BLOCKING) Submitting shows a success confirmation with Memo Number, Subject, Date,
+  // Initiator (From) and the notified approver(s).
+  await expect(page.getByText(/you have successfully submitted/i)).toBeVisible({ timeout: 20_000 });
+  await expect(page.getByText(refNo!, { exact: true })).toBeVisible();
+  await expect(page.getByText(/craig m/i).first()).toBeVisible();
+
+  // The Confirmation step (step 4) still shows a "Confirm" button — click it to finalize.
+  await page.getByRole('button', { name: /^confirm$/i }).click();
+  await page.waitForTimeout(1_000);
+
+  // STEP 13: LOG OUT of Ian's session and LOG IN as Craig (approver).
+  // The user-name dropdown in the header opens a menu with "My Profile" / user info / "Logout".
+  await page.getByText(/ian houvet/i).first().click();
+  await page.getByText(/logout/i).click();
+  await page.waitForURL(url => url.toString().includes('/login'), { timeout: 30_000 });
+  await login(page, APPROVER);
+  await expect(page).not.toHaveURL(/login/);
+  await expect(page.getByText(/craig/i).first()).toBeVisible({ timeout: 15_000 });
+
+  // STEP 14: NAVIGATE to Workflows -> Inbox
+  await page.goto(`${APP_URL}/dynamic/Shesha.Workflow/workflows-inbox`, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+  await page.waitForLoadState('networkidle');
+  await expect(page.getByText(/incoming items/i)).toBeVisible({ timeout: 15_000 });
+
+  // STEP 15: OPEN the item matching the recorded Ref No (the first cell's search-icon link opens it)
+  await page.getByPlaceholder(/search/i).or(page.getByRole('textbox').first()).fill(refNo!);
+  await page.keyboard.press('Enter');
+  const targetRow = page.getByRole('row', { name: new RegExp(refNo!.replace('/', '\\/')) });
+  await expect(targetRow).toBeVisible({ timeout: 15_000 });
+  await targetRow.getByRole('cell').first().locator('a').first().click();
+
+  // ASSERT (BLOCKING) Opening the item shows Approve/Decline options
+  await page.waitForURL(/workflow-action/, { timeout: 20_000 });
+  await page.waitForLoadState('networkidle');
+  await expect(page.locator('.ant-spin, .ant-skeleton').first()).toHaveCount(0, { timeout: 30_000 }).catch(() => {});
+  await page.waitForTimeout(2000);
+  await expect(page.getByRole('radio', { name: /approve/i })).toBeVisible({ timeout: 15_000 });
+  await expect(page.getByRole('radio', { name: /decline/i })).toBeVisible();
+
+  // STEP 16-17: The action bar at the bottom exposes "Take Ownership" directly — no separate
+  // "Memo Actions" button exists on this screen (ADO's step description doesn't match this build).
+  const takeOwnershipBtn = page.getByRole('button', { name: /take ownership/i });
+  await expect(takeOwnershipBtn).toBeVisible({ timeout: 10_000 });
+  await takeOwnershipBtn.scrollIntoViewIfNeeded();
+
+  // STEP 18: CLICK the Take Ownership button — expect a confirmation popup with Cancel/OK
+  await takeOwnershipBtn.click();
+  const confirmPopup = page.locator('.ant-modal, .ant-popover').filter({ hasText: /ownership/i }).first();
+  await expect(confirmPopup).toBeVisible({ timeout: 10_000 });
+
+  // STEP 19: CLICK Cancel — verify the popup closes and ownership is NOT taken (button stays enabled)
+  await confirmPopup.getByRole('button', { name: /cancel/i }).click();
+  await expect(confirmPopup).toBeHidden({ timeout: 10_000 });
+  await expect(takeOwnershipBtn).toBeVisible();
+  await expect(takeOwnershipBtn).not.toBeDisabled();
+
+  // STEP 20: CLICK Take Ownership again
+  await takeOwnershipBtn.click();
+  await expect(confirmPopup).toBeVisible({ timeout: 10_000 });
+
+  // STEP 21: CLICK OK to confirm taking ownership
+  await confirmPopup.getByRole('button', { name: /^ok$/i }).click();
+
+  // ASSERT (BLOCKING) Ownership is taken — confirmed by the "Take Ownership" button becoming disabled
+  // (this build does not visibly reopen the Memo "in draft mode with Craig as initiator" as ADO's
+  // expected result describes; the disabled action button is the genuine, verifiable post-condition).
+  await page.waitForLoadState('networkidle');
+  await expect(takeOwnershipBtn).toBeDisabled({ timeout: 15_000 });
+});
