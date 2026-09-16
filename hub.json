@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15T02:45:48.201Z",
+  "generated": "2026-09-16T02:44:28.502Z",
   "projects": [
     {
       "name": "Approvals",
@@ -11,18 +11,41 @@
       "health": "failing",
       "summary": {
         "totalPlans": 33,
-        "totalRuns": 398,
+        "totalRuns": 433,
         "last7Runs": 225,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 35,
         "lastRun": {
-          "date": "2026-09-15",
+          "date": "2026-09-16",
           "result": "FAILED",
           "plan": "test-plans/Memo/_adhoc-craig-myitems-retract.md"
         }
       },
       "href": "projects/Approvals/index.html"
+    },
+    {
+      "name": "bid-management",
+      "displayName": "Bid Management",
+      "appUrl": "https://pd-supplychainmanagement-adminportal-qa.shesha.app/login",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
+      "description": "Hybrid Markdown + Playwright test reports for the Supply Chain Management (Bid Management) Admin Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 1,
+        "totalRuns": 25,
+        "last7Runs": 1,
+        "last7Pass": 0,
+        "last7PassPct": 0,
+        "failingFlows": 1,
+        "lastRun": {
+          "date": "2026-09-16",
+          "result": "FAILED",
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md"
+        }
+      },
+      "href": "projects/bid-management/index.html"
     },
     {
       "name": "dep",
@@ -34,15 +57,15 @@
       "health": "failing",
       "summary": {
         "totalPlans": 6,
-        "totalRuns": 15,
-        "last7Runs": 4,
+        "totalRuns": 17,
+        "last7Runs": 6,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 4,
         "lastRun": {
-          "date": "2026-09-11",
+          "date": "2026-09-16",
           "result": "FAILED",
-          "plan": "test-plans/cases/create-case.md"
+          "plan": "test-plans/customers/create-customer.md"
         }
       },
       "href": "projects/dep/index.html"
@@ -57,13 +80,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 2,
-        "totalRuns": 34,
+        "totalRuns": 35,
         "last7Runs": 7,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 1,
         "lastRun": {
-          "date": "2026-09-15",
+          "date": "2026-09-16",
           "result": "FAILED",
           "plan": "test-plans/invoice-process/bas.md"
         }
@@ -80,13 +103,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 56,
-        "totalRuns": 304,
+        "totalRuns": 324,
         "last7Runs": 120,
         "last7Pass": 48,
         "last7PassPct": 40,
         "failingFlows": 33,
         "lastRun": {
-          "date": "2026-09-15",
+          "date": "2026-09-16",
           "result": "FAILED",
           "plan": "test-plans/auth/01-authentication-account-creation.md"
         }
@@ -103,13 +126,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 1,
-        "totalRuns": 15,
+        "totalRuns": 16,
         "last7Runs": 6,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 1,
         "lastRun": {
-          "date": "2026-09-15",
+          "date": "2026-09-16",
           "result": "FAILED",
           "plan": "test-plans/tender-process/ecdedea-tender-process.md"
         }
@@ -149,13 +172,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 24,
-        "totalRuns": 231,
+        "totalRuns": 250,
         "last7Runs": 116,
-        "last7Pass": 113,
+        "last7Pass": 112,
         "last7PassPct": 97,
         "failingFlows": 1,
         "lastRun": {
-          "date": "2026-09-15",
+          "date": "2026-09-16",
           "result": "PASSED",
           "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md"
         }
@@ -172,13 +195,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 3,
-        "totalRuns": 28,
-        "last7Runs": 7,
+        "totalRuns": 31,
+        "last7Runs": 10,
         "last7Pass": 1,
-        "last7PassPct": 14,
+        "last7PassPct": 10,
         "failingFlows": 4,
         "lastRun": {
-          "date": "2026-09-15",
+          "date": "2026-09-16",
           "result": "FAILED",
           "plan": "test-plans/invoice-process/bas.md"
         }
@@ -218,13 +241,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 3,
-        "totalRuns": 11,
+        "totalRuns": 12,
         "last7Runs": 7,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 1,
         "lastRun": {
-          "date": "2026-09-15",
+          "date": "2026-09-16",
           "result": "FAILED",
           "plan": "test-plans/BAS/register-and-upload-invoice.md"
         }
@@ -241,13 +264,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 2,
-        "totalRuns": 92,
+        "totalRuns": 94,
         "last7Runs": 14,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 2,
         "lastRun": {
-          "date": "2026-09-15",
+          "date": "2026-09-16",
           "result": "FAILED",
           "plan": "test-plans/contracting/contracting-lifecycle.md"
         }
@@ -276,29 +299,6 @@
         }
       },
       "href": "projects/land-bank/index.html"
-    },
-    {
-      "name": "bid-management",
-      "displayName": "Bid Management",
-      "appUrl": "https://pd-supplychainmanagement-adminportal-qa.shesha.app/login",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/PD-SupplyChainManagement",
-      "description": "Hybrid Markdown + Playwright test reports for the Supply Chain Management (Bid Management) Admin Portal.",
-      "health": "healthy",
-      "summary": {
-        "totalPlans": 1,
-        "totalRuns": 24,
-        "last7Runs": 0,
-        "last7Pass": 0,
-        "last7PassPct": null,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-08-03",
-          "result": "PASSED",
-          "plan": "test-plans/tender-process/bid-supply-chain-management.md"
-        }
-      },
-      "href": "projects/bid-management/index.html"
     },
     {
       "name": "dispatch",
@@ -350,8 +350,8 @@
   "totals": {
     "totalProjects": 15,
     "totalPlans": 275,
-    "totalRuns": 1372,
-    "last7Runs": 509,
-    "failingFlows": 88
+    "totalRuns": 1457,
+    "last7Runs": 515,
+    "failingFlows": 89
   }
 }

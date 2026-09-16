@@ -1,12 +1,12 @@
 {
   "totalPlans": 3,
-  "totalRuns": 28,
-  "last7Runs": 7,
+  "totalRuns": 31,
+  "last7Runs": 10,
   "last7Pass": 1,
-  "last7PassPct": 14,
+  "last7PassPct": 10,
   "failingFlows": 4,
   "lastRun": {
-    "date": "2026-09-15",
+    "date": "2026-09-16",
     "result": "FAILED",
     "plan": "test-plans/invoice-process/bas.md"
   }

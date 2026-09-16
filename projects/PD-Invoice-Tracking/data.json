@@ -27,10 +27,10 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 3,
-    "totalRuns": 28,
-    "last7Runs": 7,
+    "totalRuns": 31,
+    "last7Runs": 10,
     "last7Pass": 1,
-    "last7PassPct": 14,
+    "last7PassPct": 10,
     "failingFlows": 4,
     "passingFlows": 16,
     "partialFlows": 0,
@@ -2562,9 +2562,9 @@
       },
       {
         "iso": "2026-09-16",
-        "runs": 0,
+        "runs": 3,
         "passed": 0,
-        "failed": 0,
+        "failed": 3,
         "partial": 0
       },
       {
@@ -2606,14 +2606,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-15",
+            "date": "2026-09-16",
             "result": "FAILED",
-            "duration": "28s",
+            "duration": "27.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-15/bas.md"
+            "reportHref": "test-reports/2026-09-16/bas.md"
           },
-          "runCount": 4,
+          "runCount": 5,
           "history": [
+            {
+              "date": "2026-09-16",
+              "result": "FAILED",
+              "duration": "27.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-15",
               "result": "FAILED",
@@ -2651,14 +2657,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-15",
+            "date": "2026-09-16",
             "result": "FAILED",
-            "duration": "315.9s",
+            "duration": "314.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-15/dbe-logis.md"
+            "reportHref": "test-reports/2026-09-16/dbe-logis.md"
           },
-          "runCount": 1,
+          "runCount": 2,
           "history": [
+            {
+              "date": "2026-09-16",
+              "result": "FAILED",
+              "duration": "314.7s",
+              "variant": null
+            },
             {
               "date": "2026-09-15",
               "result": "FAILED",
@@ -2678,14 +2690,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-15",
+            "date": "2026-09-16",
             "result": "FAILED",
-            "duration": "39.3s",
+            "duration": "44.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-15/logis.md"
+            "reportHref": "test-reports/2026-09-16/logis.md"
           },
-          "runCount": 4,
+          "runCount": 5,
           "history": [
+            {
+              "date": "2026-09-16",
+              "result": "FAILED",
+              "duration": "44.4s",
+              "variant": null
+            },
             {
               "date": "2026-09-15",
               "result": "FAILED",
@@ -2722,6 +2740,38 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-16",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "27.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-16/bas.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/dbe-logis.md",
+          "planDisplay": "invoice-process/dbe-logis.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "314.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-16/dbe-logis.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/logis.md",
+          "planDisplay": "invoice-process/logis.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "44.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-16/logis.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-15",
       "runs": [
@@ -3005,5 +3055,5 @@
       ]
     }
   ],
-  "generated": "2026-09-15T02:45:47.863Z"
+  "generated": "2026-09-16T02:44:28.107Z"
 }
