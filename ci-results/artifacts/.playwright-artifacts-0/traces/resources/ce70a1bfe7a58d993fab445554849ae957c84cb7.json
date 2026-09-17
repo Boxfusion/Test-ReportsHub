@@ -1,0 +1,112 @@
+{
+  "result": {
+    "totalCount": 424,
+    "items": [
+      {
+        "id": "f1a9d5bc-83a3-4605-9e0a-2cbafdcab975",
+        "refNumber": " REF2026-1651",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1651 - Document Management System Tender",
+        "initiatedOn": "2026-09-15T11:59:52.617",
+        "workflowInstanceId": "f1a9d5bc-83a3-4605-9e0a-2cbafdcab975",
+        "statusFinalText": "Awarded",
+        "currentTask": "Capture Order Details"
+      },
+      {
+        "id": "76294ed0-465d-4ba3-80c1-e552f97ac60f",
+        "refNumber": " REF2026-1641",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1641 - Building Renovation Tender",
+        "initiatedOn": "2026-09-15T11:38:15.06",
+        "workflowInstanceId": "76294ed0-465d-4ba3-80c1-e552f97ac60f",
+        "statusFinalText": "Awarded",
+        "currentTask": "Capture Order Details"
+      },
+      {
+        "id": "61aa6eec-64a4-4cd1-a1a8-9d456dd15458",
+        "refNumber": " REF2026-1634",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1634 - Security Services Tender",
+        "initiatedOn": "2026-09-15T11:33:38.323",
+        "workflowInstanceId": "61aa6eec-64a4-4cd1-a1a8-9d456dd15458",
+        "statusFinalText": "Advertised",
+        "currentTask": "Consolidate Responses"
+      },
+      {
+        "id": "aba7c56d-8b32-4bc6-be6c-4f9d7ec19563",
+        "refNumber": " REF2026-1052",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1052 - 9TH TENDER",
+        "initiatedOn": "2026-09-07T09:56:52.607",
+        "workflowInstanceId": "aba7c56d-8b32-4bc6-be6c-4f9d7ec19563",
+        "statusFinalText": "Advertised",
+        "currentTask": "Consolidate Responses"
+      },
+      {
+        "id": "499a22c8-8ec9-4e49-994d-911e8e8a1717",
+        "refNumber": " REF2026-1047",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1047 - 8TH TENDER",
+        "initiatedOn": "2026-09-07T09:54:13.417",
+        "workflowInstanceId": "499a22c8-8ec9-4e49-994d-911e8e8a1717",
+        "statusFinalText": "Advertised",
+        "currentTask": "Consolidate Responses"
+      },
+      {
+        "id": "5ad3677d-e0e5-4dbd-a6c2-b0093d06e786",
+        "refNumber": " REF2026-1042",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1042 - SEVENTH TENDER ",
+        "initiatedOn": "2026-09-07T09:51:38.17",
+        "workflowInstanceId": "5ad3677d-e0e5-4dbd-a6c2-b0093d06e786",
+        "statusFinalText": "Advertised",
+        "currentTask": "Consolidate Responses"
+      },
+      {
+        "id": "e6f899e9-0c17-4521-a697-1a7f5772c483",
+        "refNumber": " REF2026-1037",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1037 - SIXITH TENDER",
+        "initiatedOn": "2026-09-07T09:48:59.44",
+        "workflowInstanceId": "e6f899e9-0c17-4521-a697-1a7f5772c483",
+        "statusFinalText": "Advertised",
+        "currentTask": "Consolidate Responses"
+      },
+      {
+        "id": "92633f2a-3a8b-4280-8c1d-deb94a7b296c",
+        "refNumber": " REF2026-1032",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1032 - FIFTH TENDER ",
+        "initiatedOn": "2026-09-07T09:46:32.807",
+        "workflowInstanceId": "92633f2a-3a8b-4280-8c1d-deb94a7b296c",
+        "statusFinalText": "Advertised",
+        "currentTask": "Consolidate Responses"
+      },
+      {
+        "id": "221dedcb-6230-4065-aba5-fc7951f29a59",
+        "refNumber": " REF2026-1029",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1029 - FIFTH TENDER",
+        "initiatedOn": "2026-09-07T09:43:50.637",
+        "workflowInstanceId": "221dedcb-6230-4065-aba5-fc7951f29a59",
+        "statusFinalText": "Submitted",
+        "currentTask": "Review and Approve Tender Details"
+      },
+      {
+        "id": "e8f4e423-9288-4b6c-8759-2fa3403deee3",
+        "refNumber": " REF2026-1024",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1024 - FOURTH TENDER",
+        "initiatedOn": "2026-09-07T09:41:13.68",
+        "workflowInstanceId": "e8f4e423-9288-4b6c-8759-2fa3403deee3",
+        "statusFinalText": "Advertised",
+        "currentTask": "Consolidate Responses"
+      }
+    ]
+  },
+  "targetUrl": null,
+  "success": true,
+  "error": null,
+  "unAuthorizedRequest": false,
+  "__abp": true
+}
