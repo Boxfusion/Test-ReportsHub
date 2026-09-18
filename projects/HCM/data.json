@@ -32,12 +32,12 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 24,
-    "totalRuns": 269,
-    "last7Runs": 116,
-    "last7Pass": 112,
+    "totalRuns": 288,
+    "last7Runs": 133,
+    "last7Pass": 129,
     "last7PassPct": 97,
-    "failingFlows": 0,
-    "passingFlows": 32,
+    "failingFlows": 1,
+    "passingFlows": 31,
     "partialFlows": 0,
     "neverFlows": 5
   },
@@ -2581,9 +2581,9 @@
       },
       {
         "iso": "2026-09-18",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
+        "runs": 19,
+        "passed": 18,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2611,14 +2611,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "17.4s",
+            "duration": "14.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/acknowledge-leave-approved-without-pay.md"
+            "reportHref": "test-reports/2026-09-18/acknowledge-leave-approved-without-pay.md"
           },
-          "runCount": 16,
+          "runCount": 17,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "14.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -2684,12 +2690,6 @@
               "result": "PASSED",
               "duration": "52s",
               "variant": null
-            },
-            {
-              "date": "2026-09-07",
-              "result": "PASSED",
-              "duration": "18.2s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2704,14 +2704,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.9s",
+            "duration": "13s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/add-personal-credit-dialog.md"
+            "reportHref": "test-reports/2026-09-18/add-personal-credit-dialog.md"
           },
-          "runCount": 14,
+          "runCount": 15,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "13s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -2777,12 +2783,6 @@
               "result": "PASSED",
               "duration": "14.8s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.7s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2797,14 +2797,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.3s",
+            "duration": "12.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/add-public-holiday-dialog.md"
+            "reportHref": "test-reports/2026-09-18/add-public-holiday-dialog.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -2870,12 +2876,6 @@
               "result": "PASSED",
               "duration": "13.7s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.4s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2890,14 +2890,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "14.1s",
+            "duration": "12.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/approve-leave-cancellation.md"
+            "reportHref": "test-reports/2026-09-18/approve-leave-cancellation.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -2963,12 +2969,6 @@
               "result": "PASSED",
               "duration": "13.8s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "14.2s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2983,14 +2983,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.4s",
+            "duration": "12.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/approve-without-pay-dialog.md"
+            "reportHref": "test-reports/2026-09-18/approve-without-pay-dialog.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3056,12 +3062,6 @@
               "result": "PASSED",
               "duration": "15s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.2s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -3076,14 +3076,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "14.4s",
+            "duration": "12.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/edit-leave-credits-dialog.md"
+            "reportHref": "test-reports/2026-09-18/edit-leave-credits-dialog.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3149,12 +3155,6 @@
               "result": "PASSED",
               "duration": "14.9s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.5s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -3169,14 +3169,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.2s",
+            "duration": "12.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/holiday-calendar-details.md"
+            "reportHref": "test-reports/2026-09-18/holiday-calendar-details.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3242,12 +3248,6 @@
               "result": "PASSED",
               "duration": "14.6s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.7s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -3262,14 +3262,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.2s",
+            "duration": "11.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/leave-application-dashboard.md"
+            "reportHref": "test-reports/2026-09-18/leave-application-dashboard.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "11.8s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3335,12 +3341,6 @@
               "result": "PASSED",
               "duration": "14.1s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.9s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -3355,14 +3355,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.6s",
+            "duration": "12s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/leave-balances-administration.md"
+            "reportHref": "test-reports/2026-09-18/leave-balances-administration.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3428,12 +3434,6 @@
               "result": "PASSED",
               "duration": "14.5s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.6s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -3448,14 +3448,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.9s",
+            "duration": "12.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/leave-balances-details.md"
+            "reportHref": "test-reports/2026-09-18/leave-balances-details.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3521,12 +3527,6 @@
               "result": "PASSED",
               "duration": "14.4s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.8s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -3541,14 +3541,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.7s",
+            "duration": "12.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/leave-credits-audit-trail.md"
+            "reportHref": "test-reports/2026-09-18/leave-credits-audit-trail.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3614,12 +3620,6 @@
               "result": "PASSED",
               "duration": "13.6s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "14s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -3634,14 +3634,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.4s",
+            "duration": "12s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/not-approve-leave-application.md"
+            "reportHref": "test-reports/2026-09-18/not-approve-leave-application.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3707,12 +3713,6 @@
               "result": "PASSED",
               "duration": "14.2s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "14.3s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -3727,14 +3727,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.5s",
+            "duration": "12s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/not-recommend-leave-application.md"
+            "reportHref": "test-reports/2026-09-18/not-recommend-leave-application.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3800,12 +3806,6 @@
               "result": "PASSED",
               "duration": "13.9s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -3820,14 +3820,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "13.9s",
+            "duration": "12.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/override-dialog.md"
+            "reportHref": "test-reports/2026-09-18/override-dialog.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3893,12 +3899,6 @@
               "result": "PASSED",
               "duration": "14s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.3s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -3913,14 +3913,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.3s",
+            "duration": "12.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/reassign-dialog.md"
+            "reportHref": "test-reports/2026-09-18/reassign-dialog.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.1s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -3986,12 +3992,6 @@
               "result": "PASSED",
               "duration": "14.2s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.1s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -4006,14 +4006,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.3s",
+            "duration": "12s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/refer-back-dialog.md"
+            "reportHref": "test-reports/2026-09-18/refer-back-dialog.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -4079,12 +4085,6 @@
               "result": "PASSED",
               "duration": "14.2s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -4099,14 +4099,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "15.4s",
+            "duration": "12.3s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/send-back-dialog.md"
+            "reportHref": "test-reports/2026-09-18/send-back-dialog.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.3s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -4172,12 +4178,6 @@
               "result": "PASSED",
               "duration": "14.9s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "13.2s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -4192,14 +4192,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-09-17",
+            "date": "2026-09-18",
             "result": "PASSED",
-            "duration": "13.8s",
+            "duration": "12.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/verify-attachments.md"
+            "reportHref": "test-reports/2026-09-18/verify-attachments.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "PASSED",
+              "duration": "12.5s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -4264,12 +4270,6 @@
               "date": "2026-09-06",
               "result": "PASSED",
               "duration": "13.9s",
-              "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "14.6s",
               "variant": null
             }
           ],
@@ -4404,17 +4404,23 @@
           "specHref": "test-plans/performance-agreements/smoke-happy-path.spec.ts",
           "canRun": true,
           "badges": [],
-          "rowStatus": "passing",
-          "status": "PASSED",
+          "rowStatus": "failing",
+          "status": "FAILED",
           "last": {
-            "date": "2026-09-17",
-            "result": "PASSED",
-            "duration": "194s",
+            "date": "2026-09-18",
+            "result": "FAILED",
+            "duration": "245.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-17/smoke-happy-path.md"
+            "reportHref": "test-reports/2026-09-18/smoke-happy-path.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-09-18",
+              "result": "FAILED",
+              "duration": "245.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-17",
               "result": "PASSED",
@@ -4480,12 +4486,6 @@
               "result": "PASSED",
               "duration": "190.7s",
               "variant": null
-            },
-            {
-              "date": "2026-09-05",
-              "result": "PASSED",
-              "duration": "178.8s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -4494,6 +4494,182 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-18",
+      "runs": [
+        {
+          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md",
+          "planDisplay": "eLeave/acknowledge-leave-approved-without-pay.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "14.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/acknowledge-leave-approved-without-pay.md"
+        },
+        {
+          "plan": "test-plans/eLeave/add-personal-credit-dialog.md",
+          "planDisplay": "eLeave/add-personal-credit-dialog.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "13s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/add-personal-credit-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/add-public-holiday-dialog.md",
+          "planDisplay": "eLeave/add-public-holiday-dialog.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/add-public-holiday-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/approve-leave-cancellation.md",
+          "planDisplay": "eLeave/approve-leave-cancellation.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/approve-leave-cancellation.md"
+        },
+        {
+          "plan": "test-plans/eLeave/approve-without-pay-dialog.md",
+          "planDisplay": "eLeave/approve-without-pay-dialog.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/approve-without-pay-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/edit-leave-credits-dialog.md",
+          "planDisplay": "eLeave/edit-leave-credits-dialog.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/edit-leave-credits-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/holiday-calendar-details.md",
+          "planDisplay": "eLeave/holiday-calendar-details.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/holiday-calendar-details.md"
+        },
+        {
+          "plan": "test-plans/eLeave/leave-application-dashboard.md",
+          "planDisplay": "eLeave/leave-application-dashboard.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "11.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/leave-application-dashboard.md"
+        },
+        {
+          "plan": "test-plans/eLeave/leave-balances-administration.md",
+          "planDisplay": "eLeave/leave-balances-administration.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/leave-balances-administration.md"
+        },
+        {
+          "plan": "test-plans/eLeave/leave-balances-details.md",
+          "planDisplay": "eLeave/leave-balances-details.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/leave-balances-details.md"
+        },
+        {
+          "plan": "test-plans/eLeave/leave-credits-audit-trail.md",
+          "planDisplay": "eLeave/leave-credits-audit-trail.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/leave-credits-audit-trail.md"
+        },
+        {
+          "plan": "test-plans/eLeave/not-approve-leave-application.md",
+          "planDisplay": "eLeave/not-approve-leave-application.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/not-approve-leave-application.md"
+        },
+        {
+          "plan": "test-plans/eLeave/not-recommend-leave-application.md",
+          "planDisplay": "eLeave/not-recommend-leave-application.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/not-recommend-leave-application.md"
+        },
+        {
+          "plan": "test-plans/eLeave/override-dialog.md",
+          "planDisplay": "eLeave/override-dialog.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/override-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/reassign-dialog.md",
+          "planDisplay": "eLeave/reassign-dialog.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/reassign-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/refer-back-dialog.md",
+          "planDisplay": "eLeave/refer-back-dialog.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/refer-back-dialog.md"
+        },
+        {
+          "plan": "test-plans/eLeave/send-back-dialog.md",
+          "planDisplay": "eLeave/send-back-dialog.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.3s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/send-back-dialog.md"
+        },
+        {
+          "plan": "test-plans/performance-agreements/smoke-happy-path.md",
+          "planDisplay": "performance-agreements/smoke-happy-path.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "245.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/smoke-happy-path.md"
+        },
+        {
+          "plan": "test-plans/eLeave/verify-attachments.md",
+          "planDisplay": "eLeave/verify-attachments.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "12.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-18/verify-attachments.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-17",
       "runs": [
@@ -7021,5 +7197,5 @@
       ]
     }
   ],
-  "generated": "2026-09-17T02:44:04.752Z"
+  "generated": "2026-09-18T02:44:05.208Z"
 }

@@ -1,9 +1,9 @@
 {
   "totalPlans": 121,
   "totalRuns": 130,
-  "last7Runs": 3,
-  "last7Pass": 2,
-  "last7PassPct": 67,
+  "last7Runs": 0,
+  "last7Pass": 0,
+  "last7PassPct": null,
   "failingFlows": 5,
   "lastRun": {
     "date": "2026-09-11",
