@@ -22,7 +22,7 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 2,
-    "totalRuns": 98,
+    "totalRuns": 100,
     "last7Runs": 14,
     "last7Pass": 0,
     "last7PassPct": 0,
@@ -2578,9 +2578,9 @@
       },
       {
         "iso": "2026-09-19",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       }
     ]
@@ -2601,14 +2601,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-18",
+            "date": "2026-09-19",
             "result": "FAILED",
-            "duration": "37.8s",
+            "duration": "36.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-18/contracting-lifecycle.md"
+            "reportHref": "test-reports/2026-09-19/contracting-lifecycle.md"
           },
-          "runCount": 15,
+          "runCount": 16,
           "history": [
+            {
+              "date": "2026-09-19",
+              "result": "FAILED",
+              "duration": "36.5s",
+              "variant": null
+            },
             {
               "date": "2026-09-18",
               "result": "FAILED",
@@ -2674,12 +2680,6 @@
               "result": "FAILED",
               "duration": "127.4s",
               "variant": null
-            },
-            {
-              "date": "2026-09-07",
-              "result": "FAILED",
-              "duration": "126.6s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2694,14 +2694,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-18",
+            "date": "2026-09-19",
             "result": "FAILED",
-            "duration": "37.4s",
+            "duration": "36.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-18/sl1-12-contracting-scenarios.md"
+            "reportHref": "test-reports/2026-09-19/sl1-12-contracting-scenarios.md"
           },
-          "runCount": 16,
+          "runCount": 17,
           "history": [
+            {
+              "date": "2026-09-19",
+              "result": "FAILED",
+              "duration": "36.4s",
+              "variant": null
+            },
             {
               "date": "2026-09-18",
               "result": "FAILED",
@@ -2767,12 +2773,6 @@
               "result": "FAILED",
               "duration": "186.2s",
               "variant": null
-            },
-            {
-              "date": "2026-09-07",
-              "result": "FAILED",
-              "duration": "185.1s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2781,6 +2781,29 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-19",
+      "runs": [
+        {
+          "plan": "test-plans/contracting/contracting-lifecycle.md",
+          "planDisplay": "contracting/contracting-lifecycle.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "36.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-19/contracting-lifecycle.md"
+        },
+        {
+          "plan": "test-plans/contracting/sl1-12-contracting-scenarios.md",
+          "planDisplay": "contracting/sl1-12-contracting-scenarios.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "36.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-19/sl1-12-contracting-scenarios.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-18",
       "runs": [
@@ -3789,5 +3812,5 @@
       ]
     }
   ],
-  "generated": "2026-09-18T02:44:05.405Z"
+  "generated": "2026-09-19T02:43:05.691Z"
 }
