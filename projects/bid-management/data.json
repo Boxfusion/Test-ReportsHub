@@ -27,8 +27,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 1,
-    "totalRuns": 27,
-    "last7Runs": 3,
+    "totalRuns": 28,
+    "last7Runs": 4,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 1,
@@ -38,57 +38,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-09-21",
+    "startDate": "2025-09-28",
     "days": [
-      {
-        "iso": "2025-09-21",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-22",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-23",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-24",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-25",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-09-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-09-28",
         "runs": 0,
@@ -2587,6 +2538,55 @@
         "passed": 0,
         "failed": 1,
         "partial": 0
+      },
+      {
+        "iso": "2026-09-20",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-21",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-22",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-23",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-24",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-25",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-09-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2606,14 +2606,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-19",
+            "date": "2026-09-20",
             "result": "FAILED",
-            "duration": "1078.7s",
+            "duration": "847.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-19/bid-supply-chain-management.md"
+            "reportHref": "test-reports/2026-09-20/bid-supply-chain-management.md"
           },
-          "runCount": 27,
+          "runCount": 28,
           "history": [
+            {
+              "date": "2026-09-20",
+              "result": "FAILED",
+              "duration": "847.9s",
+              "variant": null
+            },
             {
               "date": "2026-09-19",
               "result": "FAILED",
@@ -2679,12 +2685,6 @@
               "result": "PARTIAL",
               "duration": "",
               "variant": null
-            },
-            {
-              "date": "2026-08-03",
-              "result": "PARTIAL",
-              "duration": "737.5s",
-              "variant": null
             }
           ],
           "bugs": [
@@ -2702,6 +2702,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-20",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
+          "planDisplay": "tender-process/bid-supply-chain-management.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "847.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-20/bid-supply-chain-management.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-19",
       "runs": [
@@ -3001,5 +3015,5 @@
       ]
     }
   ],
-  "generated": "2026-09-19T02:43:05.726Z"
+  "generated": "2026-09-20T02:49:33.013Z"
 }
