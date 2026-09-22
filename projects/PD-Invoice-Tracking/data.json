@@ -27,7 +27,7 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 3,
-    "totalRuns": 46,
+    "totalRuns": 49,
     "last7Runs": 21,
     "last7Pass": 0,
     "last7PassPct": 0,
@@ -2555,9 +2555,9 @@
       },
       {
         "iso": "2026-09-22",
-        "runs": 0,
+        "runs": 3,
         "passed": 0,
-        "failed": 0,
+        "failed": 3,
         "partial": 0
       },
       {
@@ -2606,14 +2606,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-21",
+            "date": "2026-09-22",
             "result": "FAILED",
-            "duration": "18.3s",
+            "duration": "23.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-21/bas.md"
+            "reportHref": "test-reports/2026-09-22/bas.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-22",
+              "result": "FAILED",
+              "duration": "23.8s",
+              "variant": null
+            },
             {
               "date": "2026-09-21",
               "result": "FAILED",
@@ -2687,14 +2693,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-21",
+            "date": "2026-09-22",
             "result": "FAILED",
-            "duration": "317.1s",
+            "duration": "315.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-21/dbe-logis.md"
+            "reportHref": "test-reports/2026-09-22/dbe-logis.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-22",
+              "result": "FAILED",
+              "duration": "315.5s",
+              "variant": null
+            },
             {
               "date": "2026-09-21",
               "result": "FAILED",
@@ -2750,14 +2762,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-21",
+            "date": "2026-09-22",
             "result": "FAILED",
-            "duration": "58.1s",
+            "duration": "40.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-21/logis.md"
+            "reportHref": "test-reports/2026-09-22/logis.md"
           },
-          "runCount": 10,
+          "runCount": 11,
           "history": [
+            {
+              "date": "2026-09-22",
+              "result": "FAILED",
+              "duration": "40.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-21",
               "result": "FAILED",
@@ -2830,6 +2848,38 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-22",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "23.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-22/bas.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/dbe-logis.md",
+          "planDisplay": "invoice-process/dbe-logis.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "315.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-22/dbe-logis.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/logis.md",
+          "planDisplay": "invoice-process/logis.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "40.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-22/logis.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-21",
       "runs": [
@@ -3305,5 +3355,5 @@
       ]
     }
   ],
-  "generated": "2026-09-21T02:48:43.890Z"
+  "generated": "2026-09-22T02:45:04.460Z"
 }
