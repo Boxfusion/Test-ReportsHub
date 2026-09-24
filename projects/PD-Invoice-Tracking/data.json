@@ -27,7 +27,7 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 3,
-    "totalRuns": 52,
+    "totalRuns": 55,
     "last7Runs": 21,
     "last7Pass": 0,
     "last7PassPct": 0,
@@ -2569,9 +2569,9 @@
       },
       {
         "iso": "2026-09-24",
-        "runs": 0,
+        "runs": 3,
         "passed": 0,
-        "failed": 0,
+        "failed": 3,
         "partial": 0
       },
       {
@@ -2606,14 +2606,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-23",
+            "date": "2026-09-24",
             "result": "FAILED",
-            "duration": "83.6s",
+            "duration": "23.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-23/bas.md"
+            "reportHref": "test-reports/2026-09-24/bas.md"
           },
-          "runCount": 12,
+          "runCount": 13,
           "history": [
+            {
+              "date": "2026-09-24",
+              "result": "FAILED",
+              "duration": "23.5s",
+              "variant": null
+            },
             {
               "date": "2026-09-23",
               "result": "FAILED",
@@ -2679,12 +2685,6 @@
               "result": "PASSED",
               "duration": "~24 min (07:57–08:20 local)",
               "variant": null
-            },
-            {
-              "date": "2026-06-18",
-              "result": "PASSED",
-              "duration": "~3 min",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2699,14 +2699,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-23",
+            "date": "2026-09-24",
             "result": "FAILED",
-            "duration": "315.7s",
+            "duration": "314.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-23/dbe-logis.md"
+            "reportHref": "test-reports/2026-09-24/dbe-logis.md"
           },
-          "runCount": 9,
+          "runCount": 10,
           "history": [
+            {
+              "date": "2026-09-24",
+              "result": "FAILED",
+              "duration": "314.6s",
+              "variant": null
+            },
             {
               "date": "2026-09-23",
               "result": "FAILED",
@@ -2774,14 +2780,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-23",
+            "date": "2026-09-24",
             "result": "FAILED",
-            "duration": "42.1s",
+            "duration": "41s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-23/logis.md"
+            "reportHref": "test-reports/2026-09-24/logis.md"
           },
-          "runCount": 12,
+          "runCount": 13,
           "history": [
+            {
+              "date": "2026-09-24",
+              "result": "FAILED",
+              "duration": "41s",
+              "variant": null
+            },
             {
               "date": "2026-09-23",
               "result": "FAILED",
@@ -2847,12 +2859,6 @@
               "result": "PARTIAL",
               "duration": "59.1s",
               "variant": "downstream-existing-item"
-            },
-            {
-              "date": "2026-09-14",
-              "result": "PARTIAL",
-              "duration": "87.2s",
-              "variant": null
             }
           ],
           "bugs": [
@@ -2866,6 +2872,38 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-24",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "23.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-24/bas.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/dbe-logis.md",
+          "planDisplay": "invoice-process/dbe-logis.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "314.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-24/dbe-logis.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/logis.md",
+          "planDisplay": "invoice-process/logis.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "41s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-24/logis.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-23",
       "runs": [
@@ -3405,5 +3443,5 @@
       ]
     }
   ],
-  "generated": "2026-09-23T02:42:46.920Z"
+  "generated": "2026-09-24T02:44:32.221Z"
 }

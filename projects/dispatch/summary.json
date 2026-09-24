@@ -1,13 +1,13 @@
 {
   "totalPlans": 15,
-  "totalRuns": 47,
-  "last7Runs": 0,
+  "totalRuns": 48,
+  "last7Runs": 1,
   "last7Pass": 0,
-  "last7PassPct": null,
-  "failingFlows": 0,
+  "last7PassPct": 0,
+  "failingFlows": 1,
   "lastRun": {
-    "date": "2026-07-08",
-    "result": "PASSED",
+    "date": "2026-09-24",
+    "result": "FAILED",
     "plan": "test-plans/administrative-functions/admin-functions-crud.md"
   }
 }
