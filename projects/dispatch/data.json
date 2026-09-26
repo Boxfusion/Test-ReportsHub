@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 15,
-    "totalRuns": 49,
-    "last7Runs": 2,
+    "totalRuns": 50,
+    "last7Runs": 3,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 1,
@@ -2578,9 +2578,9 @@
       },
       {
         "iso": "2026-09-26",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       }
     ]
@@ -2601,14 +2601,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-09-25",
+            "date": "2026-09-26",
             "result": "FAILED",
-            "duration": "1010s",
+            "duration": "951.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-09-25/admin-functions-crud.md"
+            "reportHref": "test-reports/2026-09-26/admin-functions-crud.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-09-26",
+              "result": "FAILED",
+              "duration": "951.2s",
+              "variant": null
+            },
             {
               "date": "2026-09-25",
               "result": "FAILED",
@@ -3144,7 +3150,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3206,6 +3212,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-26",
+      "runs": [
+        {
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md",
+          "planDisplay": "administrative-functions/admin-functions-crud.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "951.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-09-26/admin-functions-crud.md"
+        }
+      ]
+    },
     {
       "date": "2026-09-25",
       "runs": [
@@ -3693,5 +3713,5 @@
       ]
     }
   ],
-  "generated": "2026-09-25T02:44:37.346Z"
+  "generated": "2026-09-26T02:44:13.015Z"
 }
