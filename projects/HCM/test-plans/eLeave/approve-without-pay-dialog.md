@@ -1,125 +1,89 @@
-# Test Plan: ELEAVE-APPROVE-WITHOUT-PAY — Approve Without Pay Dialog
+# Test Plan: ELEAVE-APPROVE-WITHOUT-PAY — Approve Leave Application without Pay
 
 > **Status:** Ready
 > **Owner:** QA
-> **Last Updated:** 2026-06-02
-> **Estimated Duration:** 105s
+> **Last Updated:** 2026-09-30
+> **Estimated Duration:** 90s
 
 ## Metadata
 | Field | Value |
 |-------|-------|
 | App URL | https://pd-hcm-adminportal-qa.shesha.app/ |
 | Environment | QA |
-| Login As | admin / P@ssw0rd |
-| ADO Plan | [#79625](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=79625&suiteId=86638) |
-| ADO Suite | #86638 — eleave-wf-approvewithoutpay-dialogbox |
+| Login As | GOV022 / 123qwe (approver) |
+| ADO Plan | [#116862](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=116862&suiteId=116925) — eLeave Regression Tests |
+| ADO Suite | #116925 — Approve a leave application › Approving without Pay |
 
 ## Objective
-> Validate the **Approve Without Pay** dialog of eLeave — the OK action (approves the leave application without pay, sets the status to 'Approved Without Pay' and redirects to Home), the mandatory-comments enforcement, and the Close action (dismisses the dialog and re-displays the leave application details).
+> Validate that an approver can approve a leave application **without pay** from the Workflows Inbox — acknowledgement gating of **Approve without Pay**, the **Approve Without Pay** comments dialog, submission, and the return to the Inbox.
 
 ## Preconditions
 - [ ] App is reachable at https://pd-hcm-adminportal-qa.shesha.app/
-- [ ] Admin credentials are valid (admin / P@ssw0rd)
-- [ ] At least one leave application exists and is routed to the **Approve Leave Application** step
-- [ ] The acting user has the role required to approve a leave application without pay
+- [ ] Approver credentials are valid (GOV022 / 123qwe)
+- [ ] A recommended leave application is In Progress in GOV022's Inbox with Action Required **Approve Leave**
+- [ ] The application has no supporting documents attached
 
 ## Test Cases
 
-### TC-01 — Login as Admin
+### TC-01 — Login as Approver
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
-  2. SNAPSHOT — confirm login page is visible
-  3. TYPE Username field with `admin`
-  4. TYPE Password field with `P@ssw0rd`
+  1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/login
+  2. SNAPSHOT — confirm the login page is displayed with Username and Password fields and a Sign In button
+  3. TYPE Username field with `GOV022`
+  4. TYPE Password field with `123qwe`
   5. CLICK the Sign In button
-  6. WAIT for the home page / workflow inbox to load
-- **Expected result:** User is logged in and the eLeave workflow inbox is reachable
+  6. WAIT for the home page to load
+- **Expected result:** User is signed in and the dashboard is displayed
 - **Assertions:**
-  - [x] ASSERT (BLOCKING) URL no longer contains `/login` and the authenticated home page is visible
+  - [x] ASSERT (BLOCKING) URL no longer contains `/login` and the Workflows menu item is visible
 
 ---
 
-### TC-02 — Approve leave application without pay when 'Ok' button is clicked (ADO #86640)
+### TC-02 — 'Approve without Pay' is disabled until the acknowledgement checkbox is ticked (ADO #116934)
 
-*When a user clicks on the 'Ok' button, the system should approve the leave application without pay and redirect a user to the Home page - The status should change to 'Approved Without Pay'*
-
-- **Type:** Happy path
-- **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the eleave-wf-approvewithoutpay-dialogbox
-  2. CLICK Open the eleave-wf-approvewithoutpay-dialogbox
-  3. SNAPSHOT — confirm the target element for: Click on the 'Ok' button
-  4. CLICK Click on the 'Ok' button
-- **Expected result:** The leave application status changes to 'Approved Without Pay'
-- **Assertions:**
-  - [x] ASSERT (BLOCKING) The leave application status changes to 'Approved Without Pay'
-
----
-
-### TC-03 — Redirect to Home page after clicking 'Ok' button (ADO #86641)
-
-*When a user clicks on the 'Ok' button, the system should approve the leave application without pay and redirect a user to the Home page - The status should change to 'Approved Without Pay'*
-
-- **Type:** Happy path
-- **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the eleave-wf-approvewithoutpay-dialogbox
-  2. CLICK Open the eleave-wf-approvewithoutpay-dialogbox
-  3. SNAPSHOT — confirm the target element for: Click on the 'Ok' button
-  4. CLICK Click on the 'Ok' button
-- **Expected result:** The user is redirected to the Home page
-- **Assertions:**
-  - [x] ASSERT (BLOCKING) The user is redirected to the Home page
-
----
-
-### TC-04 — System should close the dialog when the 'Close' button is clicked (ADO #86643)
-
-*When a user clicks on the 'Close' button, the system should close the dialog and display the leave application details*
-
-- **Type:** Happy path
-- **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the eleave-wf-approvewithoutpay-dialogbox
-  2. CLICK Open the eleave-wf-approvewithoutpay-dialogbox
-  3. SNAPSHOT — confirm the target element for: Click on the 'Close' button
-  4. CLICK Click on the 'Close' button
-- **Expected result:** The dialog is closed
-- **Assertions:**
-  - [x] ASSERT (BLOCKING) The dialog is closed
-
----
-
-### TC-05 — System should display the leave application details when the 'Close' button is clicked (ADO #86644)
-
-*When a user clicks on the 'Close' button, the system should close the dialog and display the leave application details*
-
-- **Type:** Happy path
-- **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the eleave-wf-approvewithoutpay-dialogbox
-  2. CLICK Open the eleave-wf-approvewithoutpay-dialogbox
-  3. SNAPSHOT — confirm the target element for: Click on the 'Close' button
-  4. CLICK Click on the 'Close' button
-- **Expected result:** The leave application details are displayed
-- **Assertions:**
-  - [x] ASSERT (BLOCKING) The leave application details are displayed
-
----
-
-### TC-06 — The system should not allow a user to approve a leave application without pay without populating comments (ADO #86646)
-
-*The system should not allow a user to approve a leave application without pay without populating comments*
+*Runs before TC-03 because TC-03 removes the item from the Inbox.*
 
 - **Type:** Negative
 - **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the eleave-wf-approvewithoutpay-dialogbox
-  2. CLICK Open the eleave-wf-approvewithoutpay-dialogbox
-  3. SNAPSHOT — confirm the target element for: Attempt to approve without entering comments
-  4. CLICK Attempt to approve without entering comments
-- **Expected result:** The system prevents the approval of the leave application and prompts for comments to be populated
+  1. SNAPSHOT — confirm the Workflows menu item
+  2. CLICK Workflows in the side menu, then CLICK **Inbox**
+  3. ASSERT the Workflows Inbox is displayed with at least one pending leave application
+  4. SNAPSHOT — confirm the SaGov Leave Application row with Action Required **Approve Leave**
+  5. CLICK the view (magnifier) icon on that row
+  6. ASSERT the application details page opens and the acknowledgement checkbox is unticked
+  7. ASSERT **Approve without Pay** is disabled and no approval dialog is open
+  8. CLICK the acknowledgement checkbox to tick it
+  9. ASSERT **Approve without Pay** becomes enabled
+  10. CLICK the acknowledgement checkbox again to untick it
+- **Expected result:** Approve without Pay returns to the disabled state
 - **Assertions:**
-  - [x] ASSERT (BLOCKING) The system prevents the approval of the leave application and prompts for comments to be populated
+  - [x] ASSERT (BLOCKING) After unticking, **Approve without Pay** is disabled
+
+---
+
+### TC-03 — Approver can approve a leave application Without Pay from the Workflows Inbox (ADO #116933)
+
+- **Type:** Happy path
+- **Steps:**
+  1. SNAPSHOT — confirm the Workflows menu item
+  2. CLICK Workflows in the side menu, then CLICK **Inbox**
+  3. ASSERT the Workflows Inbox (Incoming Items) is displayed and the pending leave application is listed
+  4. EXTRACT the Ref No of the SaGov Leave Application row with Action Required **Approve Leave**
+  5. CLICK the view (magnifier) icon on that row
+  6. ASSERT the leave application details page opens showing applicant, leave type, dates and the approval actions
+  7. CLICK the acknowledgement checkbox
+  8. CLICK **Approve without Pay**
+  9. ASSERT the **Approve Without Pay** dialog opens with a Comment field and **OK** / **Cancel** buttons
+  10. TYPE the comment field with `Testing not approved`
+  11. CLICK **OK**
+  12. ASSERT the dialog closes and a "Successfully Submitted" notification is displayed
+- **Expected result:** User is redirected to the refreshed Incoming Items list and the actioned application no longer appears in the Inbox
+- **Assertions:**
+  - [x] ASSERT (BLOCKING) User is on the Workflows Inbox and the extracted Ref No is no longer listed
 
 ---
 
 ## Teardown
-- Log out of the admin portal after test completion (optional for automated runs).
+- The application is approved without pay (the applicant must then acknowledge it; see `acknowledge-leave-approved-without-pay.md`).
