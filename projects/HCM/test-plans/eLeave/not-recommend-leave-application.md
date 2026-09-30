@@ -1,125 +1,69 @@
-# Test Plan: ELEAVE-NOT-RECOMMEND — Not Recommend Leave Application Dialog
+# Test Plan: ELEAVE-NOT-RECOMMEND — Not Recommend Leave Application
 
 > **Status:** Ready
 > **Owner:** QA
-> **Last Updated:** 2026-06-02
-> **Estimated Duration:** 105s
+> **Last Updated:** 2026-09-30
+> **Estimated Duration:** 60s
 
 ## Metadata
 | Field | Value |
 |-------|-------|
 | App URL | https://pd-hcm-adminportal-qa.shesha.app/ |
 | Environment | QA |
-| Login As | admin / P@ssw0rd |
-| ADO Plan | [#79625](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=79625&suiteId=86606) |
-| ADO Suite | #86606 — eleave-wf-notrecommendleaveapplication-dialogbox |
+| Login As | GOV012 / 123qwe (recommender) — see note |
+| ADO Plan | [#116862](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=116862&suiteId=116870) — eLeave Regression Tests |
+| ADO Suite | #116870 — Recommendation › Not Recommended |
+
+> **Note:** ADO #116922 step 1 logs in as `GOV003`, but GOV003 is the applicant and has no Recommend Leave items. This plan uses the recommender `GOV012`, as in the Recommend suite. Update the ADO test case if GOV003 is not intended.
 
 ## Objective
-> Validate the **Not Recommend Leave Application** dialog of eLeave — the OK action (declines the leave application, sets the status to 'Declined' and redirects to Home), the mandatory-comments enforcement, and the Close action (dismisses the dialog and re-displays the leave application details).
+> Validate that a recommender can open a submitted leave application, tick the review acknowledgement, choose **Not Recommend**, capture the mandatory comments in the **Not Recommend** dialog and submit, returning to the Incoming Items view.
 
 ## Preconditions
 - [ ] App is reachable at https://pd-hcm-adminportal-qa.shesha.app/
-- [ ] Admin credentials are valid (admin / P@ssw0rd)
-- [ ] At least one leave application exists and is routed to the **Recommend Leave Application** step
-- [ ] The acting user has the role required to not recommend a leave application
+- [ ] Recommender credentials are valid (GOV012 / 123qwe)
+- [ ] A leave application submitted by the **Application for Leave › for Myself** plan is In Progress in GOV012's Inbox with Action Required **Recommend Leave**
 
 ## Test Cases
 
-### TC-01 — Login as Admin
+### TC-01 — Login as Recommender
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
+  1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/login
   2. SNAPSHOT — confirm login page is visible
-  3. TYPE Username field with `admin`
-  4. TYPE Password field with `P@ssw0rd`
+  3. TYPE Username field with `GOV012`
+  4. TYPE Password field with `123qwe`
   5. CLICK the Sign In button
-  6. WAIT for the home page / workflow inbox to load
-- **Expected result:** User is logged in and the eLeave workflow inbox is reachable
+  6. WAIT for the home page to load
+- **Expected result:** The user is successfully logged in
 - **Assertions:**
-  - [x] ASSERT (BLOCKING) URL no longer contains `/login` and the authenticated home page is visible
+  - [x] ASSERT (BLOCKING) URL no longer contains `/login` and the Workflows menu item is visible
 
 ---
 
-### TC-02 — System should decline the leave application when 'Ok' button is clicked (ADO #86608)
+### TC-02 — Not Recommending a leave application (ADO #116922)
 
-*When a user clicks on the 'Ok' button, the system should decline the leave application and redirect a user to the Home page - The status should change to 'Declined'*
+*Recommender does not recommend the leave application submitted in the Application for Leave test case.*
 
 - **Type:** Happy path
 - **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
-  2. CLICK Open the eleave-wf-notrecommendleaveapplication-dialogbox
-  3. SNAPSHOT — confirm the target element for: Click on the 'Ok' button
-  4. CLICK Click on the 'Ok' button
-- **Expected result:** The leave application status changes to 'Declined'
+  1. SNAPSHOT — confirm the Workflows menu item
+  2. CLICK Workflows in the side menu, then CLICK **Inbox**
+  3. SNAPSHOT — confirm the top SaGov Leave Application row with Action Required **Recommend Leave**
+  4. CLICK the magnifying glass (search) icon on that row
+  5. ASSERT the leave application is opened in detail view ("Recommend Leave: …" heading)
+  6. CLICK the acknowledgement checkbox ("I acknowledge that I have reviewed the leave application along with any accompanying supporting documents.")
+  7. ASSERT the checkbox is checked
+  8. CLICK the **Not Recommend** button
+  9. ASSERT the system displays the **Not Recommend** comments pop-up with **Ok** disabled
+  10. TYPE comments in the pop-up with `Testing not recommended`
+  11. CLICK **Ok**
+- **Expected result:** The leave application is actioned and the system redirects the user to the Incoming Items index view
 - **Assertions:**
-  - [x] ASSERT (BLOCKING) The leave application status changes to 'Declined'
-
----
-
-### TC-03 — System should redirect to Home page when 'Ok' button is clicked (ADO #86609)
-
-*When a user clicks on the 'Ok' button, the system should decline the leave application and redirect a user to the Home page - The status should change to 'Declined'*
-
-- **Type:** Happy path
-- **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
-  2. CLICK Open the eleave-wf-notrecommendleaveapplication-dialogbox
-  3. SNAPSHOT — confirm the target element for: Click on the 'Ok' button
-  4. CLICK Click on the 'Ok' button
-- **Expected result:** The user is redirected to the Home page
-- **Assertions:**
-  - [x] ASSERT (BLOCKING) The user is redirected to the Home page
-
----
-
-### TC-04 — System closes the dialog when the 'Close' button is clicked (ADO #86611)
-
-*When a user clicks on the 'Close' button, the system should close the dialog and display the leave application details*
-
-- **Type:** Happy path
-- **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
-  2. CLICK Open the eleave-wf-notrecommendleaveapplication-dialogbox
-  3. SNAPSHOT — confirm the target element for: Click on the 'Close' button
-  4. CLICK Click on the 'Close' button
-- **Expected result:** The dialog is closed
-- **Assertions:**
-  - [x] ASSERT (BLOCKING) The dialog is closed
-
----
-
-### TC-05 — System displays leave application details when the 'Close' button is clicked (ADO #86612)
-
-*When a user clicks on the 'Close' button, the system should close the dialog and display the leave application details*
-
-- **Type:** Happy path
-- **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
-  2. CLICK Open the eleave-wf-notrecommendleaveapplication-dialogbox
-  3. SNAPSHOT — confirm the target element for: Click on the 'Close' button
-  4. CLICK Click on the 'Close' button
-- **Expected result:** The leave application details are displayed
-- **Assertions:**
-  - [x] ASSERT (BLOCKING) The leave application details are displayed
-
----
-
-### TC-06 — The system should not allow a user to not recommend a leave application without populating comments (ADO #86614)
-
-*The system should not allow a user to not recommend a leave application without populating comments*
-
-- **Type:** Negative
-- **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the eleave-wf-notrecommendleaveapplication-dialogbox
-  2. CLICK Open the eleave-wf-notrecommendleaveapplication-dialogbox
-  3. SNAPSHOT — confirm the target element for: Attempt to not recommend without entering any comments
-  4. CLICK Attempt to not recommend without entering any comments
-- **Expected result:** The system prevents the user from not recommending the leave application and prompts for comments
-- **Assertions:**
-  - [x] ASSERT (BLOCKING) The system prevents the user from not recommending the leave application and prompts for comments
+  - [x] ASSERT (BLOCKING) "Successfully Submitted" is shown and the user is back on the Incoming Items (workflows-inbox) view
 
 ---
 
 ## Teardown
-- Log out of the admin portal after test completion (optional for automated runs).
+- The not-recommended application is returned to the applicant (status "Not Recommended"); no further clean-up is required.
