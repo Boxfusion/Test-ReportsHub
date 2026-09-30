@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T02:48:21.378Z",
+  "generated": "2026-09-30T02:49:21.961Z",
   "projects": [
     {
       "name": "Approvals",
@@ -11,13 +11,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 33,
-        "totalRuns": 888,
+        "totalRuns": 923,
         "last7Runs": 245,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 35,
         "lastRun": {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "result": "FAILED",
           "plan": "test-plans/Memo/_adhoc-craig-myitems-retract.md"
         }
@@ -34,13 +34,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 1,
-        "totalRuns": 37,
+        "totalRuns": 38,
         "last7Runs": 7,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 1,
         "lastRun": {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "result": "FAILED",
           "plan": "test-plans/tender-process/bid-supply-chain-management.md"
         }
@@ -57,13 +57,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 6,
-        "totalRuns": 41,
+        "totalRuns": 43,
         "last7Runs": 14,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 4,
         "lastRun": {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "result": "FAILED",
           "plan": "test-plans/customers/create-customer.md"
         }
@@ -80,13 +80,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 2,
-        "totalRuns": 48,
+        "totalRuns": 49,
         "last7Runs": 7,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 1,
         "lastRun": {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "result": "FAILED",
           "plan": "test-plans/invoice-process/bas.md"
         }
@@ -103,13 +103,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 56,
-        "totalRuns": 584,
+        "totalRuns": 604,
         "last7Runs": 140,
         "last7Pass": 56,
         "last7PassPct": 40,
         "failingFlows": 33,
         "lastRun": {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "result": "FAILED",
           "plan": "test-plans/auth/01-authentication-account-creation.md"
         }
@@ -126,13 +126,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 1,
-        "totalRuns": 29,
+        "totalRuns": 30,
         "last7Runs": 7,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 1,
         "lastRun": {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "result": "FAILED",
           "plan": "test-plans/tender-process/ecdedea-tender-process.md"
         }
@@ -163,6 +163,29 @@
       "href": "projects/eRecruitment/index.html"
     },
     {
+      "name": "HCM",
+      "displayName": "HCM Admin Portal",
+      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
+      "environment": "QA",
+      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
+      "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
+      "health": "failing",
+      "summary": {
+        "totalPlans": 24,
+        "totalRuns": 516,
+        "last7Runs": 133,
+        "last7Pass": 129,
+        "last7PassPct": 97,
+        "failingFlows": 1,
+        "lastRun": {
+          "date": "2026-09-30",
+          "result": "PASSED",
+          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md"
+        }
+      },
+      "href": "projects/HCM/index.html"
+    },
+    {
       "name": "PD-Invoice-Tracking",
       "displayName": "Invoice Tracking",
       "appUrl": "https://pd-invoicetracking-adminportal-qa.shesha.app/login",
@@ -172,13 +195,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 3,
-        "totalRuns": 70,
+        "totalRuns": 73,
         "last7Runs": 21,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 4,
         "lastRun": {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "result": "FAILED",
           "plan": "test-plans/invoice-process/bas.md"
         }
@@ -218,13 +241,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 3,
-        "totalRuns": 25,
+        "totalRuns": 26,
         "last7Runs": 7,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 1,
         "lastRun": {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "result": "FAILED",
           "plan": "test-plans/BAS/register-and-upload-invoice.md"
         }
@@ -241,13 +264,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 15,
-        "totalRuns": 51,
-        "last7Runs": 4,
+        "totalRuns": 53,
+        "last7Runs": 6,
         "last7Pass": 0,
         "last7PassPct": 0,
-        "failingFlows": 1,
+        "failingFlows": 2,
         "lastRun": {
-          "date": "2026-09-28",
+          "date": "2026-09-30",
           "result": "FAILED",
           "plan": "test-plans/administrative-functions/admin-functions-crud.md"
         }
@@ -264,13 +287,13 @@
       "health": "failing",
       "summary": {
         "totalPlans": 2,
-        "totalRuns": 120,
+        "totalRuns": 122,
         "last7Runs": 14,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 2,
         "lastRun": {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "result": "FAILED",
           "plan": "test-plans/contracting/contracting-lifecycle.md"
         }
@@ -301,29 +324,6 @@
       "href": "projects/land-bank/index.html"
     },
     {
-      "name": "HCM",
-      "displayName": "HCM Admin Portal",
-      "appUrl": "https://pd-hcm-adminportal-qa.shesha.app/",
-      "environment": "QA",
-      "sourceRepo": "https://dev.azure.com/boxfusion/pd-Hcm",
-      "description": "Hybrid Markdown + Playwright test reports for the HCM Admin Portal.",
-      "health": "healthy",
-      "summary": {
-        "totalPlans": 24,
-        "totalRuns": 497,
-        "last7Runs": 133,
-        "last7Pass": 130,
-        "last7PassPct": 98,
-        "failingFlows": 0,
-        "lastRun": {
-          "date": "2026-09-29",
-          "result": "PASSED",
-          "plan": "test-plans/eLeave/acknowledge-leave-approved-without-pay.md"
-        }
-      },
-      "href": "projects/HCM/index.html"
-    },
-    {
       "name": "PD-Dispatch",
       "displayName": "PD-Dispatch",
       "appUrl": "https://pd-dispatcher-v2-adminportal-qa.shesha.app/login",
@@ -350,8 +350,8 @@
   "totals": {
     "totalProjects": 15,
     "totalPlans": 275,
-    "totalRuns": 2563,
-    "last7Runs": 599,
-    "failingFlows": 89
+    "totalRuns": 2650,
+    "last7Runs": 601,
+    "failingFlows": 91
   }
 }
