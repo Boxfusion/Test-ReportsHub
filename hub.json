@@ -209,29 +209,6 @@
       "href": "projects/invoice-tracking/index.html"
     },
     {
-      "name": "ITS",
-      "displayName": "ITS",
-      "appUrl": null,
-      "environment": null,
-      "sourceRepo": null,
-      "description": null,
-      "health": "failing",
-      "summary": {
-        "totalPlans": 3,
-        "totalRuns": 27,
-        "last7Runs": 7,
-        "last7Pass": 0,
-        "last7PassPct": 0,
-        "failingFlows": 1,
-        "lastRun": {
-          "date": "2026-10-01",
-          "result": "FAILED",
-          "plan": "test-plans/BAS/register-and-upload-invoice.md"
-        }
-      },
-      "href": "projects/ITS/index.html"
-    },
-    {
       "name": "dispatch",
       "displayName": "NC Dispatch",
       "appUrl": "https://ncdoh-dispatcher-adminportal-qa.shesha.app/login",
@@ -325,10 +302,10 @@
     }
   ],
   "totals": {
-    "totalProjects": 14,
-    "totalPlans": 269,
-    "totalRuns": 2690,
-    "last7Runs": 586,
-    "failingFlows": 87
+    "totalProjects": 13,
+    "totalPlans": 266,
+    "totalRuns": 2663,
+    "last7Runs": 579,
+    "failingFlows": 86
   }
 }
