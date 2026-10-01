@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(env)",
+      "Bash(node migrate-test-plans.js plan)",
+      "Bash(git check-ignore *)",
+      "Bash(node migrate-test-plans.js repos)",
+      "Bash(node migrate-test-plans.js run)",
+      "Bash(rm -rf clones)",
+      "Bash(node create-work-items.js plan)",
+      "Bash(node create-work-items.js types)",
+      "Bash(node --check create-work-items.js)",
+      "Bash(node create-work-items.js run)",
+      "Bash(node --check fix-invoice-tracking.js)",
+      "Bash(node fix-invoice-tracking.js plan)",
+      "Bash(node fix-invoice-tracking.js run)"
+    ]
+  }
+}
