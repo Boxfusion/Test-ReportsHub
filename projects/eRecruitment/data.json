@@ -2760,7 +2760,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -3054,7 +3054,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3668,7 +3668,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -5823,7 +5823,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6213,7 +6213,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6341,7 +6341,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -7739,5 +7739,5 @@
       ]
     }
   ],
-  "generated": "2026-09-30T02:49:21.867Z"
+  "generated": "2026-10-01T02:55:57.827Z"
 }
