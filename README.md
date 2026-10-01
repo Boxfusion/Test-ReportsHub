@@ -114,6 +114,6 @@ node scripts/build-all.js
 Or per project:
 
 ```bash
-node scripts/build-project-dashboard.js --project=dep
+node scripts/build-project-dashboard.js --project=dispatch
 node scripts/build-landing.js
 ```

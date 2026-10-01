@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       report_path:
-        description: "Optional: explicit report path to (re-)notify on, e.g. projects/dep/test-reports/2026-05-21/create-case.md. Leave blank to use the last commit."
+        description: "Optional: explicit report path to (re-)notify on, e.g. projects/dispatch/test-reports/2026-05-21/create-case.md. Leave blank to use the last commit."
         required: false
         default: ""
 
