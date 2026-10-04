@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 15,
-    "totalRuns": 58,
-    "last7Runs": 8,
+    "totalRuns": 60,
+    "last7Runs": 10,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 2,
@@ -33,57 +33,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-10-05",
+    "startDate": "2025-10-12",
     "days": [
-      {
-        "iso": "2025-10-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-09",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-10",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-11",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-10-12",
         "runs": 0,
@@ -2582,6 +2533,55 @@
         "passed": 0,
         "failed": 2,
         "partial": 0
+      },
+      {
+        "iso": "2026-10-04",
+        "runs": 2,
+        "passed": 0,
+        "failed": 2,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-08",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-09",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-10",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2601,14 +2601,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-10-03",
+            "date": "2026-10-04",
             "result": "FAILED",
-            "duration": "990s",
+            "duration": "977.4s",
             "variant": null,
-            "reportHref": "test-reports/2026-10-03/admin-functions-crud.md"
+            "reportHref": "test-reports/2026-10-04/admin-functions-crud.md"
           },
-          "runCount": 13,
+          "runCount": 14,
           "history": [
+            {
+              "date": "2026-10-04",
+              "result": "FAILED",
+              "duration": "977.4s",
+              "variant": null
+            },
             {
               "date": "2026-10-03",
               "result": "FAILED",
@@ -2674,12 +2680,6 @@
               "result": "PARTIAL",
               "duration": "390.9s",
               "variant": null
-            },
-            {
-              "date": "2026-06-23",
-              "result": "PARTIAL",
-              "duration": "425.6s",
-              "variant": null
             }
           ],
           "bugs": [
@@ -2699,14 +2699,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-10-03",
+            "date": "2026-10-04",
             "result": "FAILED",
-            "duration": "455.5s",
+            "duration": "446.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-10-03/agents.md"
+            "reportHref": "test-reports/2026-10-04/agents.md"
           },
-          "runCount": 5,
+          "runCount": 6,
           "history": [
+            {
+              "date": "2026-10-04",
+              "result": "FAILED",
+              "duration": "446.9s",
+              "variant": null
+            },
             {
               "date": "2026-10-03",
               "result": "FAILED",
@@ -3254,6 +3260,29 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-10-04",
+      "runs": [
+        {
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md",
+          "planDisplay": "administrative-functions/admin-functions-crud.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "977.4s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-10-04/admin-functions-crud.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/agents.md",
+          "planDisplay": "administrative-functions/agents.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "446.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-10-04/agents.md"
+        }
+      ]
+    },
     {
       "date": "2026-10-03",
       "runs": [
@@ -3852,5 +3881,5 @@
       ]
     }
   ],
-  "generated": "2026-10-03T02:44:55.188Z"
+  "generated": "2026-10-04T03:21:18.905Z"
 }
