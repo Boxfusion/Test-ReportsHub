@@ -27,7 +27,7 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 3,
-    "totalRuns": 91,
+    "totalRuns": 94,
     "last7Runs": 21,
     "last7Pass": 0,
     "last7PassPct": 0,
@@ -2562,9 +2562,9 @@
       },
       {
         "iso": "2026-10-07",
-        "runs": 0,
+        "runs": 3,
         "passed": 0,
-        "failed": 0,
+        "failed": 3,
         "partial": 0
       },
       {
@@ -2606,14 +2606,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-10-06",
+            "date": "2026-10-07",
             "result": "FAILED",
-            "duration": "25.7s",
+            "duration": "40.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-10-06/bas.md"
+            "reportHref": "test-reports/2026-10-07/bas.md"
           },
-          "runCount": 25,
+          "runCount": 26,
           "history": [
+            {
+              "date": "2026-10-07",
+              "result": "FAILED",
+              "duration": "40.2s",
+              "variant": null
+            },
             {
               "date": "2026-10-06",
               "result": "FAILED",
@@ -2679,12 +2685,6 @@
               "result": "FAILED",
               "duration": "22.2s",
               "variant": null
-            },
-            {
-              "date": "2026-09-25",
-              "result": "FAILED",
-              "duration": "32.4s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2699,14 +2699,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-10-06",
+            "date": "2026-10-07",
             "result": "FAILED",
-            "duration": "54.7s",
+            "duration": "313.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-10-06/dbe-logis.md"
+            "reportHref": "test-reports/2026-10-07/dbe-logis.md"
           },
-          "runCount": 22,
+          "runCount": 23,
           "history": [
+            {
+              "date": "2026-10-07",
+              "result": "FAILED",
+              "duration": "313.8s",
+              "variant": null
+            },
             {
               "date": "2026-10-06",
               "result": "FAILED",
@@ -2772,12 +2778,6 @@
               "result": "FAILED",
               "duration": "313.8s",
               "variant": null
-            },
-            {
-              "date": "2026-09-25",
-              "result": "FAILED",
-              "duration": "315.4s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2792,14 +2792,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-10-06",
+            "date": "2026-10-07",
             "result": "FAILED",
-            "duration": "39s",
+            "duration": "40.8s",
             "variant": null,
-            "reportHref": "test-reports/2026-10-06/logis.md"
+            "reportHref": "test-reports/2026-10-07/logis.md"
           },
-          "runCount": 25,
+          "runCount": 26,
           "history": [
+            {
+              "date": "2026-10-07",
+              "result": "FAILED",
+              "duration": "40.8s",
+              "variant": null
+            },
             {
               "date": "2026-10-06",
               "result": "FAILED",
@@ -2865,12 +2871,6 @@
               "result": "FAILED",
               "duration": "49.5s",
               "variant": null
-            },
-            {
-              "date": "2026-09-25",
-              "result": "FAILED",
-              "duration": "41s",
-              "variant": null
             }
           ],
           "bugs": [
@@ -2884,6 +2884,38 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-10-07",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "40.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-10-07/bas.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/dbe-logis.md",
+          "planDisplay": "invoice-process/dbe-logis.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "313.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-10-07/dbe-logis.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/logis.md",
+          "planDisplay": "invoice-process/logis.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "40.8s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-10-07/logis.md"
+        }
+      ]
+    },
     {
       "date": "2026-10-06",
       "runs": [
@@ -3839,5 +3871,5 @@
       ]
     }
   ],
-  "generated": "2026-10-06T02:48:00.100Z"
+  "generated": "2026-10-07T02:50:14.739Z"
 }
