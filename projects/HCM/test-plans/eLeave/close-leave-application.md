@@ -2,7 +2,7 @@
 
 > **Status:** Ready
 > **Owner:** QA
-> **Last Updated:** 2026-06-02
+> **Last Updated:** 2026-10-07
 > **Estimated Duration:** 90s
 
 ## Metadata
@@ -10,7 +10,7 @@
 |-------|-------|
 | App URL | https://pd-hcm-adminportal-qa.shesha.app/ |
 | Environment | QA |
-| Login As | admin / P@ssw0rd |
+| Login As | GOV003 / 123qwe (Leave applicant) |
 | ADO Plan | [#79625](https://dev.azure.com/boxfusion/pd-Hcm/_testPlans/define?planId=79625&suiteId=86516) |
 | ADO Suite | #86516 — eleave-wf-closeleaveapplication-dialogbox |
 
@@ -19,20 +19,20 @@
 
 ## Preconditions
 - [ ] App is reachable at https://pd-hcm-adminportal-qa.shesha.app/
-- [ ] Admin credentials are valid (admin / P@ssw0rd)
-- [ ] At least one leave application exists and is routed to the **Close Leave Application** step (for the action/verification cases)
-- [ ] The acting user has the role required to perform the Close Leave Application step
+- [ ] Leave applicant credentials are valid (GOV003 / 123qwe)
+- [ ] GOV003 can open **My Items → Create New → New Leave Application** (each TC starts a fresh, unsaved draft — no seeded data needed)
+- [ ] The draft page shows a **Close** button that opens the **Close Leave Application** dialog (`SaGov.Leave/sagov-wf-leave-application close dialog`)
 
 ## Test Cases
 
-### TC-01 — Login as Admin
+### TC-01 — Login as Leave Applicant (GOV003)
 
 - **Type:** Happy path
 - **Steps:**
   1. NAVIGATE to https://pd-hcm-adminportal-qa.shesha.app/
   2. SNAPSHOT — confirm login page is visible
-  3. TYPE Username field with `admin`
-  4. TYPE Password field with `P@ssw0rd`
+  3. TYPE Username field with `GOV003`
+  4. TYPE Password field with `123qwe`
   5. CLICK the Sign In button
   6. WAIT for the home page / workflow inbox to load
 - **Expected result:** User is logged in and the eLeave workflow inbox is reachable
@@ -47,13 +47,18 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the leave application dialog box
-  2. CLICK Open the leave application dialog box
-  3. SNAPSHOT — confirm the target element for: Click on the 'Ok' button
-  4. CLICK Click on the 'Ok' button
+  1. NAVIGATE to My Items (`/dynamic/SaGov.Leave/my_items2`)
+  2. SNAPSHOT — confirm the Create New button
+  3. CLICK the Create New button, then CLICK New Leave Application
+  4. ASSERT the New Leave Application draft page is displayed (URL contains `sagov-leave-application-draft`)
+  5. SNAPSHOT — confirm the Close button
+  6. CLICK the Close button
+  7. ASSERT the 'Close Leave Application' dialog is displayed with the message "You are about close the Leave Application, do you wish to proceed?"
+  8. SNAPSHOT — confirm the 'OK' button in the dialog
+  9. CLICK the 'OK' button
 - **Expected result:** The leave application is closed
 - **Assertions:**
-  - [x] ASSERT (BLOCKING) The leave application is closed
+  - [x] ASSERT (BLOCKING) The leave application is closed — the 'Close Leave Application' dialog disappears and the user leaves the draft page
 
 ---
 
@@ -63,13 +68,18 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the leave application dialog box
-  2. CLICK Open the leave application dialog box
-  3. SNAPSHOT — confirm the target element for: Click on the 'Ok' button
-  4. CLICK Click on the 'Ok' button
+  1. NAVIGATE to My Items (`/dynamic/SaGov.Leave/my_items2`)
+  2. SNAPSHOT — confirm the Create New button
+  3. CLICK the Create New button, then CLICK New Leave Application
+  4. ASSERT the New Leave Application draft page is displayed (URL contains `sagov-leave-application-draft`)
+  5. SNAPSHOT — confirm the Close button
+  6. CLICK the Close button
+  7. ASSERT the 'Close Leave Application' dialog is displayed with the message "You are about close the Leave Application, do you wish to proceed?"
+  8. SNAPSHOT — confirm the 'OK' button in the dialog
+  9. CLICK the 'OK' button
 - **Expected result:** The user is redirected to the Home page
 - **Assertions:**
-  - [x] ASSERT (BLOCKING) The user is redirected to the Home page
+  - [x] ASSERT (BLOCKING) The user is redirected to the Home page (URL no longer contains `sagov-leave-application-draft`)
 
 ---
 
@@ -79,13 +89,18 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the 'eleave-wf-closeleaveapplication-dialogbox' dialog
-  2. CLICK Open the 'eleave-wf-closeleaveapplication-dialogbox' dialog
-  3. SNAPSHOT — confirm the target element for: Click on the 'Cancel' button
-  4. CLICK Click on the 'Cancel' button
+  1. NAVIGATE to My Items (`/dynamic/SaGov.Leave/my_items2`)
+  2. SNAPSHOT — confirm the Create New button
+  3. CLICK the Create New button, then CLICK New Leave Application
+  4. ASSERT the New Leave Application draft page is displayed (URL contains `sagov-leave-application-draft`)
+  5. SNAPSHOT — confirm the Close button
+  6. CLICK the Close button
+  7. ASSERT the 'Close Leave Application' dialog is displayed with the message "You are about close the Leave Application, do you wish to proceed?"
+  8. SNAPSHOT — confirm the 'Cancel' button in the dialog
+  9. CLICK the 'Cancel' button
 - **Expected result:** The dialog closes
 - **Assertions:**
-  - [x] ASSERT (BLOCKING) The dialog closes
+  - [x] ASSERT (BLOCKING) The 'Close Leave Application' dialog is no longer visible
 
 ---
 
@@ -95,13 +110,18 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. SNAPSHOT — confirm the target element for: Open the 'eleave-wf-closeleaveapplication-dialogbox' dialog
-  2. CLICK Open the 'eleave-wf-closeleaveapplication-dialogbox' dialog
-  3. SNAPSHOT — confirm the target element for: Click on the 'Cancel' button
-  4. CLICK Click on the 'Cancel' button
+  1. NAVIGATE to My Items (`/dynamic/SaGov.Leave/my_items2`)
+  2. SNAPSHOT — confirm the Create New button
+  3. CLICK the Create New button, then CLICK New Leave Application
+  4. ASSERT the New Leave Application draft page is displayed (URL contains `sagov-leave-application-draft`)
+  5. SNAPSHOT — confirm the Close button
+  6. CLICK the Close button
+  7. ASSERT the 'Close Leave Application' dialog is displayed with the message "You are about close the Leave Application, do you wish to proceed?"
+  8. SNAPSHOT — confirm the 'Cancel' button in the dialog
+  9. CLICK the 'Cancel' button
 - **Expected result:** The 'New Leave Application' page is displayed
 - **Assertions:**
-  - [x] ASSERT (BLOCKING) The 'New Leave Application' page is displayed
+  - [x] ASSERT (BLOCKING) The 'New Leave Application' draft page is still displayed (URL contains `sagov-leave-application-draft` and the Close button is visible)
 
 ---
 

@@ -1,13 +1,13 @@
 {
-  "totalPlans": 24,
-  "totalRuns": 37,
-  "last7Runs": 8,
-  "last7Pass": 2,
-  "last7PassPct": 25,
-  "failingFlows": 17,
+  "totalPlans": 37,
+  "totalRuns": 100,
+  "last7Runs": 22,
+  "last7Pass": 12,
+  "last7PassPct": 55,
+  "failingFlows": 3,
   "lastRun": {
-    "date": "2026-06-15",
-    "result": "UNKNOWN",
-    "plan": null
+    "date": "2026-10-12",
+    "result": "PASSED",
+    "plan": "test-plans/HCM/eLeave/close-leave-application.md"
   }
 }

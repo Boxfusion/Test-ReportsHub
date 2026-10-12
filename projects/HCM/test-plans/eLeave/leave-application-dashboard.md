@@ -47,7 +47,7 @@
 
 - **Type:** Negative
 - **Steps:**
-  1. NAVIGATE to the Leave Applications Dashboard (`/dynamic/SaGov.Leave/sagov-leave-applications`, via SaGov Leave Management > Leave Applications)
+  1. NAVIGATE Navigate to the eleave-wf-leaveapplicationdashboard-table view
   2. SNAPSHOT — confirm the target element for: Select more than one leave application
   3. CLICK Select more than one leave application
   4. SNAPSHOT — confirm whether the 'Reassign' button is visible
@@ -63,7 +63,7 @@
 
 - **Type:** Negative
 - **Steps:**
-  1. NAVIGATE to the Leave Applications Dashboard (`/dynamic/SaGov.Leave/sagov-leave-applications`, via SaGov Leave Management > Leave Applications)
+  1. NAVIGATE Navigate to the eleave-wf-leaveapplicationdashboard-table view
   2. SNAPSHOT — confirm the target element for: Select more than one leave application
   3. CLICK Select more than one leave application
   4. SNAPSHOT — confirm whether the 'Cancel Leave' button is visible
@@ -79,7 +79,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to the Leave Applications Dashboard (`/dynamic/SaGov.Leave/sagov-leave-applications`, via SaGov Leave Management > Leave Applications)
+  1. NAVIGATE Navigate to the eleave-wf-leaveapplicationdashboard-table view
   2. SNAPSHOT — confirm the target element for: Attempt to select multiple leave applications
   3. CLICK Attempt to select multiple leave applications
 - **Expected result:** The system allows the user to select more than one leave application
@@ -94,7 +94,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to the Leave Applications Dashboard (`/dynamic/SaGov.Leave/sagov-leave-applications`, via SaGov Leave Management > Leave Applications)
+  1. NAVIGATE Navigate to the eleave-wf-leaveapplicationdashboard-table view
   2. SNAPSHOT — confirm the target element for: Click on the 'Magnifying glass' icon
   3. CLICK Click on the 'Magnifying glass' icon
 - **Expected result:** The system redirects the user to the leave application details view
@@ -109,7 +109,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to the Leave Applications Dashboard (`/dynamic/SaGov.Leave/sagov-leave-applications`, via SaGov Leave Management > Leave Applications)
+  1. NAVIGATE Navigate to the eleave-wf-leaveapplicationdashboard-table view
   2. SNAPSHOT — confirm the target element for: Click on the 'View in Z1 as PDF' button
   3. CLICK Click on the 'View in Z1 as PDF' button
 - **Expected result:** The system displays the leave application in a Z1 form as a PDF format
@@ -124,7 +124,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to the Leave Applications Dashboard (`/dynamic/SaGov.Leave/sagov-leave-applications`, via SaGov Leave Management > Leave Applications)
+  1. NAVIGATE Navigate to the eleave-wf-leaveapplicationdashboard-table view
   2. SNAPSHOT — confirm the target element for: Click on the 'Print Bulk Z1' button
   3. CLICK Click on the 'Print Bulk Z1' button
 - **Expected result:** The 'Print Bulk Z1' dialog is displayed
@@ -139,7 +139,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to the Leave Applications Dashboard (`/dynamic/SaGov.Leave/sagov-leave-applications`, via SaGov Leave Management > Leave Applications)
+  1. NAVIGATE Navigate to the eleave-wf-leaveapplicationdashboard-table view
   2. SNAPSHOT — confirm the target element for: Click on the 'Cancel Leave' button
   3. CLICK Click on the 'Cancel Leave' button
 - **Expected result:** The 'Cancel Leave' dialog is displayed
@@ -154,7 +154,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to the Leave Applications Dashboard (`/dynamic/SaGov.Leave/sagov-leave-applications`, via SaGov Leave Management > Leave Applications)
+  1. NAVIGATE Navigate to the eleave-wf-leaveapplicationdashboard-table view
   2. SNAPSHOT — confirm the target element for: Click on the 'Reassign' button
   3. CLICK Click on the 'Reassign' button
 - **Expected result:** The 'Reassign' dialog is displayed
@@ -169,7 +169,7 @@
 
 - **Type:** Happy path
 - **Steps:**
-  1. NAVIGATE to the Leave Applications Dashboard (`/dynamic/SaGov.Leave/sagov-leave-applications`, via SaGov Leave Management > Leave Applications)
+  1. NAVIGATE Navigate to the eleave-wf-leaveapplicationdashboard-table view
   2. SNAPSHOT — confirm the target element for: Click on the 'Export' button
   3. CLICK Click on the 'Export' button
 - **Expected result:** The system downloads all leave applications into an Excel sheet
