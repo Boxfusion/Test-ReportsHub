@@ -1,0 +1,11 @@
+# Report: verify-retract-functionality
+
+**Date:** 2026-10-16T00:41Z
+**Plan:** test-plans/Memo/verify-retract-functionality.md
+**Spec:** projects/Approvals/test-plans/Memo/verify-retract-functionality.spec.ts
+**Execution Mode:** ci-nightly
+**Result:** FAILED
+**Duration:** 1s
+**Run:** https://github.com/Boxfusion/Test-ReportsHub/actions/runs/38830817463
+
+_Triggered by the nightly schedule._
