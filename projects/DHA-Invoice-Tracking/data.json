@@ -27,7 +27,7 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 2,
-    "totalRuns": 73,
+    "totalRuns": 74,
     "last7Runs": 7,
     "last7Pass": 0,
     "last7PassPct": 0,
@@ -38,57 +38,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-10-26",
+    "startDate": "2025-11-02",
     "days": [
-      {
-        "iso": "2025-10-26",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-27",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-29",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-30",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-10-31",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-01",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-11-02",
         "runs": 0,
@@ -2587,6 +2538,55 @@
         "passed": 0,
         "failed": 1,
         "partial": 0
+      },
+      {
+        "iso": "2026-10-25",
+        "runs": 1,
+        "passed": 0,
+        "failed": 1,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-26",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-27",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-28",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-29",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-30",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-10-31",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2606,14 +2606,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "result": "FAILED",
-            "duration": "55.4s",
+            "duration": "78.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-10-24/bas.md"
+            "reportHref": "test-reports/2026-10-25/bas.md"
           },
-          "runCount": 60,
+          "runCount": 61,
           "history": [
+            {
+              "date": "2026-10-25",
+              "result": "FAILED",
+              "duration": "78.2s",
+              "variant": null
+            },
             {
               "date": "2026-10-24",
               "result": "FAILED",
@@ -2678,12 +2684,6 @@
               "date": "2026-10-14",
               "result": "FAILED",
               "duration": "46.8s",
-              "variant": null
-            },
-            {
-              "date": "2026-10-13",
-              "result": "FAILED",
-              "duration": "187.1s",
               "variant": null
             }
           ],
@@ -2787,6 +2787,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-10-25",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "78.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-10-25/bas.md"
+        }
+      ]
+    },
     {
       "date": "2026-10-24",
       "runs": [
@@ -3715,5 +3729,5 @@
       ]
     }
   ],
-  "generated": "2026-10-24T02:40:47.140Z"
+  "generated": "2026-10-25T02:45:45.816Z"
 }
