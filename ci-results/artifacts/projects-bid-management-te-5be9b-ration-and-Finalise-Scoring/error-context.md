@@ -14,14 +14,14 @@
 ```
 Error: expect(locator).toBeVisible() failed
 
-Locator: getByRole('row').filter({ hasText: 'REF2026-1980' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first()
+Locator: getByRole('row').filter({ hasText: 'REF2026-1986' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first()
 Expected: visible
 Timeout: 30000ms
 Error: element(s) not found
 
 Call log:
-  - Expect "toBeVisible" getByRole('row').filter({ hasText: 'REF2026-1980' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first() with timeout 30000ms
-  - waiting for getByRole('row').filter({ hasText: 'REF2026-1980' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first()
+  - Expect "toBeVisible" getByRole('row').filter({ hasText: 'REF2026-1986' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first() with timeout 30000ms
+  - waiting for getByRole('row').filter({ hasText: 'REF2026-1986' }).filter({ hasText: 'Monitor calibration and finalise scoring' }).first()
 
 ```
 
@@ -80,7 +80,7 @@ Call log:
   - button "sliders":
     - img "sliders"
   - list:
-    - listitem: 1-10 of 140 items
+    - listitem: 1-10 of 141 items
     - listitem "Previous Page":
       - button "left" [disabled]:
         - img "left"
@@ -90,7 +90,7 @@ Call log:
     - listitem "Next 3 Pages":
       - img "double-right"
       - text: •••
-    - listitem "14"
+    - listitem "15"
     - listitem "Next Page":
       - button "right":
         - img "right"
@@ -133,7 +133,21 @@ Call log:
         - text: Period In Possession
         - separator
     - rowgroup:
-      - 'row "search REF2026-1695 Maand-awe Mamathuntsha Tender Process Tender REF2026-1695 - TC-01 Automated Draft Tender run-mv6av5y1 - 90/10 Compulsory Hybrid BEC: Monitor Evaluation Progress 22/10/2026 Evaluation In Progress 2 day(s) ago"':
+      - row "search REF2026-1986 Maand-awe Mamathuntsha Tender Process Tender REF2026-1986 - TC-01 Automated Draft Tender run-mvomywvk - 90/10 Compulsory Hybrid Invite BEC members 26/10/2026 Evaluation In Progress 7 minute(s) ago":
+        - cell "search":
+          - link "search":
+            - /url: /shesha/workflow-action?id=15213ec2-5309-4bfb-83ca-d4365f8e1283&todoid=671954a0-2696-4a90-97fa-2b50e89f1adf
+            - img "search"
+        - cell "REF2026-1986"
+        - cell "Maand-awe Mamathuntsha"
+        - cell "Tender Process"
+        - cell "Tender REF2026-1986 - TC-01 Automated Draft Tender run-mvomywvk - 90/10 Compulsory Hybrid"
+        - cell "Invite BEC members"
+        - cell "26/10/2026"
+        - cell
+        - cell "Evaluation In Progress"
+        - cell "7 minute(s) ago"
+      - 'row "search REF2026-1695 Maand-awe Mamathuntsha Tender Process Tender REF2026-1695 - TC-01 Automated Draft Tender run-mv6av5y1 - 90/10 Compulsory Hybrid BEC: Monitor Evaluation Progress 22/10/2026 Evaluation In Progress 3 day(s) ago"':
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=7d579449-5974-40e5-9e26-6e91b6001941&todoid=81aa5965-1086-4d3f-9ddf-3b8075aac509
@@ -146,8 +160,8 @@ Call log:
         - cell "22/10/2026"
         - cell
         - cell "Evaluation In Progress"
-        - cell "2 day(s) ago"
-      - row "search REF2026-1283 Maand-awe Mamathuntsha Tender Process Tender REF2026-1283 - TC-01 Automated Draft Tender run-mv0bl1se - 90/10 Compulsory Hybrid Invite BEC members 09/10/2026 Evaluation In Progress 16 day(s) ago":
+        - cell "3 day(s) ago"
+      - row "search REF2026-1283 Maand-awe Mamathuntsha Tender Process Tender REF2026-1283 - TC-01 Automated Draft Tender run-mv0bl1se - 90/10 Compulsory Hybrid Invite BEC members 09/10/2026 Evaluation In Progress 17 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=dd42c260-3778-427c-901c-13744c858428&todoid=a23196e1-f6ee-4c0e-b0d8-7d3765985c72
@@ -160,8 +174,8 @@ Call log:
         - cell "09/10/2026"
         - cell
         - cell "Evaluation In Progress"
-        - cell "16 day(s) ago"
-      - row "search REF2026-1054 Maand-awe Mamathuntsha Tender Process Tender REF2026-1054 - TC-01 Automated Draft Tender run-muw9i1xu - 90/10 Compulsory Hybrid Invite BEC members 06/10/2026 Evaluation In Progress 18 day(s) ago":
+        - cell "17 day(s) ago"
+      - row "search REF2026-1054 Maand-awe Mamathuntsha Tender Process Tender REF2026-1054 - TC-01 Automated Draft Tender run-muw9i1xu - 90/10 Compulsory Hybrid Invite BEC members 06/10/2026 Evaluation In Progress 19 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=0fe2020b-5bfa-4ca7-bb04-6242be0053bd&todoid=b0fea5ed-e77f-4e24-9630-267a8232adfc
@@ -174,8 +188,8 @@ Call log:
         - cell "06/10/2026"
         - cell
         - cell "Evaluation In Progress"
-        - cell "18 day(s) ago"
-      - row "search REF2026-1029 Maand-awe Mamathuntsha Tender Process Tender REF2026-1029 - TC-01 Automated Draft Tender run-murqwjzg - 90/10 Compulsory Hybrid Invite BEC members 03/10/2026 Evaluation In Progress 22 day(s) ago":
+        - cell "19 day(s) ago"
+      - row "search REF2026-1029 Maand-awe Mamathuntsha Tender Process Tender REF2026-1029 - TC-01 Automated Draft Tender run-murqwjzg - 90/10 Compulsory Hybrid Invite BEC members 03/10/2026 Evaluation In Progress 23 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=8a825ea2-e32d-47fc-84e2-20e896f51dd5&todoid=2f083945-7282-403e-9894-4ad5dbe88c17
@@ -188,8 +202,8 @@ Call log:
         - cell "03/10/2026"
         - cell
         - cell "Evaluation In Progress"
-        - cell "22 day(s) ago"
-      - row "search REF2026-1012 Maand-awe Mamathuntsha Tender Process Tender REF2026-1012 - TC-01 Automated Draft Tender run-muq0wyvp - 90/10 Compulsory Hybrid Confirm Attendance and Open Evaluation 01/10/2026 Evaluation In Progress 23 day(s) ago":
+        - cell "23 day(s) ago"
+      - row "search REF2026-1012 Maand-awe Mamathuntsha Tender Process Tender REF2026-1012 - TC-01 Automated Draft Tender run-muq0wyvp - 90/10 Compulsory Hybrid Confirm Attendance and Open Evaluation 01/10/2026 Evaluation In Progress 24 day(s) ago":
         - cell "search":
           - link "search":
             - /url: /shesha/workflow-action?id=ce23b6a1-33a3-4605-a4a4-fd503edc996e&todoid=24ffc60a-1709-4782-91bb-34fff0e68602
@@ -202,7 +216,7 @@ Call log:
         - cell "01/10/2026"
         - cell
         - cell "Evaluation In Progress"
-        - cell "23 day(s) ago"
+        - cell "24 day(s) ago"
       - row "search REF2026-1831 Maand-awe Mamathuntsha Tender Process Tender REF2026-1831 - TC-01 Automated Draft Tender run-mu50z36z - 90/10 Compulsory Hybrid Invite BEC members 17/09/2026 Evaluation In Progress 1 month(s) ago":
         - cell "search":
           - link "search":
@@ -258,20 +272,6 @@ Call log:
         - cell "07/08/2026"
         - cell
         - cell "Evaluation In Progress"
-        - cell "2 month(s) ago"
-      - row "search REF2026-6424 System Administrator Tender Process Tender REF2026-6424 - UFS construction Monitor calibration and finalise scoring 07/08/2026 In Progress 2 month(s) ago":
-        - cell "search":
-          - link "search":
-            - /url: /shesha/workflow-action?id=bffe0eed-8908-4a71-82ea-f2693068a76b&todoid=bddfe5a1-d89c-4d66-9c23-7e02e2818b55
-            - img "search"
-        - cell "REF2026-6424"
-        - cell "System Administrator"
-        - cell "Tender Process"
-        - cell "Tender REF2026-6424 - UFS construction"
-        - cell "Monitor calibration and finalise scoring"
-        - cell "07/08/2026"
-        - cell
-        - cell "In Progress"
         - cell "2 month(s) ago"
 - alert
 ```

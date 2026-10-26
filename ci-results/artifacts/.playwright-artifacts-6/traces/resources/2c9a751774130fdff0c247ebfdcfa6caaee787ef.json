@@ -1,0 +1,142 @@
+{
+  "result": {
+    "totalCount": 22,
+    "items": [
+      {
+        "id": "4a8e3619-c8a7-42f4-b165-15ca00009269",
+        "refNumber": " REF2026-1204",
+        "initiator": "Maand-awe Mamathuntsha",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1204 - PD-BID: Close Button is Disabled in Supplier Compliance Dialog (Verify Compliance)",
+        "actionText": "Approve Recommendation from BAC",
+        "receivedOn": "2026-08-06T22:23:26.78",
+        "overdueDate": null,
+        "workflowInstanceId": "f94e1b39-b337-48d6-b863-f60ca01462e3",
+        "statusFinalText": "Adjudicate In Progress",
+        "periodInPossession": "2 month(s) ago"
+      },
+      {
+        "id": "7ad78430-cecf-4b28-87d5-4482c2f06259",
+        "refNumber": " REF2026-0879",
+        "initiator": "Maand-awe Mamathuntsha",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-0879 - TC-01 Automated Draft Tender run-msd7x3nh - 90/10 Compulsory Hybrid",
+        "actionText": "Approve Recommendation from BAC",
+        "receivedOn": "2026-08-06T14:31:25.817",
+        "overdueDate": null,
+        "workflowInstanceId": "ea0d73d4-3124-47f0-9e27-b96a78de3524",
+        "statusFinalText": "Adjudicate In Progress",
+        "periodInPossession": "2 month(s) ago"
+      },
+      {
+        "id": "f6a890ce-c165-4c82-abed-71a8b3233f2a",
+        "refNumber": " REF2026-1008",
+        "initiator": "Maand-awe Mamathuntsha",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1008 - send back for re-evaluation",
+        "actionText": "Approve Recommendation from BAC",
+        "receivedOn": "2026-08-06T14:30:50.107",
+        "overdueDate": null,
+        "workflowInstanceId": "a21073a3-bd7a-4e70-8118-16f34ec66741",
+        "statusFinalText": "Adjudicate In Progress",
+        "periodInPossession": "2 month(s) ago"
+      },
+      {
+        "id": "04c018ac-6387-40af-9093-b37316c22ec9",
+        "refNumber": " REF2026-1053",
+        "initiator": "Maand-awe Mamathuntsha",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1053 - TC-01 Automated Draft Tender run-ms7gw5l1 - 80/20 Compulsory Hybrid",
+        "actionText": "Approve Recommendation from BAC",
+        "receivedOn": "2026-07-30T17:10:38.93",
+        "overdueDate": null,
+        "workflowInstanceId": "41e61092-d706-45dc-91cd-cf9cb4d78909",
+        "statusFinalText": "Adjudicate In Progress",
+        "periodInPossession": "2 month(s) ago"
+      },
+      {
+        "id": "fce76160-4474-4f71-ab38-1631e3ad8c29",
+        "refNumber": " REF2026-5358",
+        "initiator": "Maand-awe Mamathuntsha",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-5358 - Last test before Workflow changes",
+        "actionText": "Approve Recommendation from BAC",
+        "receivedOn": "2026-06-15T19:00:07.217",
+        "overdueDate": null,
+        "workflowInstanceId": "420aa439-44fc-4e47-9e1c-ef4eef6351c9",
+        "statusFinalText": "Adjudicate In Progress",
+        "periodInPossession": "4 month(s) ago"
+      },
+      {
+        "id": "7c6af1f5-15c1-424c-af83-f5fdfd37425d",
+        "refNumber": "REF2025-2003",
+        "initiator": "Thulile  Matekenya",
+        "processName": "Request For Quotation",
+        "subject": null,
+        "actionText": "QA Requisition & Select Suppliers",
+        "receivedOn": "2025-02-20T16:26:53.47",
+        "overdueDate": null,
+        "workflowInstanceId": "f782030b-7c0f-423e-86e8-565f1477652d",
+        "statusFinalText": "In Progress",
+        "periodInPossession": "1 year(s) ago"
+      },
+      {
+        "id": "18e1e01d-179b-4c82-9585-200f5236214f",
+        "refNumber": "REF2025-2003",
+        "initiator": "Thulile  Matekenya",
+        "processName": "Request For Quotation",
+        "subject": null,
+        "actionText": "Review RFQ",
+        "receivedOn": "2025-02-20T16:26:37.64",
+        "overdueDate": null,
+        "workflowInstanceId": "f782030b-7c0f-423e-86e8-565f1477652d",
+        "statusFinalText": "In Progress",
+        "periodInPossession": "1 year(s) ago"
+      },
+      {
+        "id": "57745632-9e69-4ea3-a4dc-31f24953908e",
+        "refNumber": " REF2024-0805",
+        "initiator": "Thulile  Matekenya",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2024-0805 - Test Office",
+        "actionText": "Approve Recommendation from BAC",
+        "receivedOn": "2024-12-05T09:58:29.857",
+        "overdueDate": null,
+        "workflowInstanceId": "6cc32c6b-e9dd-405d-8c74-5ce646e55b33",
+        "statusFinalText": "In Progress",
+        "periodInPossession": "1 year(s) ago"
+      },
+      {
+        "id": "6563a619-fca1-4006-afbe-d139515f3c95",
+        "refNumber": " REF2024-0671",
+        "initiator": "Thulile  Matekenya",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2024-0671 - Test",
+        "actionText": "Approve Recommendation from BAC",
+        "receivedOn": "2024-12-02T13:26:02.42",
+        "overdueDate": null,
+        "workflowInstanceId": "43cf5ad4-b48a-4fb3-9cdc-bdce4fff1b93",
+        "statusFinalText": "In Progress",
+        "periodInPossession": "1 year(s) ago"
+      },
+      {
+        "id": "fb70974c-b857-46ac-bf4e-68b6733fa09d",
+        "refNumber": " REF2024-0619",
+        "initiator": "Thulile  Matekenya",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2024-0619 - Testing fields",
+        "actionText": "Monitor calibration and finalise scoring",
+        "receivedOn": "2024-11-20T14:53:31.917",
+        "overdueDate": null,
+        "workflowInstanceId": "a89d0fd1-3466-4f8c-aa39-0b15fd1de846",
+        "statusFinalText": "In Progress",
+        "periodInPossession": "1 year(s) ago"
+      }
+    ]
+  },
+  "targetUrl": null,
+  "success": true,
+  "error": null,
+  "unAuthorizedRequest": false,
+  "__abp": true
+}
