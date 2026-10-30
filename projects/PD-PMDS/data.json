@@ -23,7 +23,7 @@
   "kpis": {
     "totalPlans": 2,
     "totalRuns": 180,
-    "last7Runs": 14,
+    "last7Runs": 12,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 2,
@@ -2597,7 +2597,12 @@
           "spec": "test-plans/contracting/contracting-lifecycle.spec.ts",
           "specHref": "test-plans/contracting/contracting-lifecycle.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2690,7 +2695,12 @@
           "spec": "test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
           "specHref": "test-plans/contracting/sl1-12-contracting-scenarios.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4732,5 +4742,5 @@
       ]
     }
   ],
-  "generated": "2026-10-29T02:32:52.665Z"
+  "generated": "2026-10-30T02:33:29.449Z"
 }

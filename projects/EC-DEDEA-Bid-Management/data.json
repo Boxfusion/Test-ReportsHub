@@ -27,7 +27,7 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 1,
-    "totalRuns": 59,
+    "totalRuns": 60,
     "last7Runs": 7,
     "last7Pass": 0,
     "last7PassPct": 0,
@@ -2576,9 +2576,9 @@
       },
       {
         "iso": "2026-10-30",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2606,14 +2606,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-10-29",
+            "date": "2026-10-30",
             "result": "FAILED",
-            "duration": "1418.6s",
+            "duration": "1425.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-10-29/ecdedea-tender-process.md"
+            "reportHref": "test-reports/2026-10-30/ecdedea-tender-process.md"
           },
-          "runCount": 57,
+          "runCount": 58,
           "history": [
+            {
+              "date": "2026-10-30",
+              "result": "FAILED",
+              "duration": "1425.9s",
+              "variant": null
+            },
             {
               "date": "2026-10-29",
               "result": "FAILED",
@@ -2679,12 +2685,6 @@
               "result": "FAILED",
               "duration": "1174.2s",
               "variant": null
-            },
-            {
-              "date": "2026-10-18",
-              "result": "FAILED",
-              "duration": "1208.3s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2693,6 +2693,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-10-30",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/ecdedea-tender-process.md",
+          "planDisplay": "tender-process/ecdedea-tender-process.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1425.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-10-30/ecdedea-tender-process.md"
+        }
+      ]
+    },
     {
       "date": "2026-10-29",
       "runs": [
@@ -3500,5 +3514,5 @@
       ]
     }
   ],
-  "generated": "2026-10-29T02:32:52.374Z"
+  "generated": "2026-10-30T02:33:29.190Z"
 }
