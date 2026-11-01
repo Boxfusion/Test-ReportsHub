@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31T02:27:42.319Z",
+  "generated": "2026-11-01T02:34:02.010Z",
   "projects": [
     {
       "name": "Approvals",
@@ -12,7 +12,7 @@
       "summary": {
         "totalPlans": 33,
         "totalRuns": 2008,
-        "last7Runs": 245,
+        "last7Runs": 210,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 35,
@@ -58,7 +58,7 @@
       "summary": {
         "totalPlans": 2,
         "totalRuns": 80,
-        "last7Runs": 7,
+        "last7Runs": 6,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 1,
@@ -81,8 +81,8 @@
       "summary": {
         "totalPlans": 56,
         "totalRuns": 1224,
-        "last7Runs": 140,
-        "last7Pass": 56,
+        "last7Runs": 120,
+        "last7Pass": 48,
         "last7PassPct": 40,
         "failingFlows": 33,
         "lastRun": {
@@ -104,7 +104,7 @@
       "summary": {
         "totalPlans": 1,
         "totalRuns": 61,
-        "last7Runs": 7,
+        "last7Runs": 6,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 1,
@@ -150,9 +150,9 @@
       "summary": {
         "totalPlans": 24,
         "totalRuns": 1105,
-        "last7Runs": 133,
-        "last7Pass": 112,
-        "last7PassPct": 84,
+        "last7Runs": 114,
+        "last7Pass": 93,
+        "last7PassPct": 82,
         "failingFlows": 1,
         "lastRun": {
           "date": "2026-10-31",
@@ -173,7 +173,7 @@
       "summary": {
         "totalPlans": 3,
         "totalRuns": 166,
-        "last7Runs": 21,
+        "last7Runs": 18,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 4,
@@ -242,7 +242,7 @@
       "summary": {
         "totalPlans": 2,
         "totalRuns": 182,
-        "last7Runs": 12,
+        "last7Runs": 10,
         "last7Pass": 0,
         "last7PassPct": 0,
         "failingFlows": 2,
@@ -305,7 +305,7 @@
     "totalProjects": 13,
     "totalPlans": 266,
     "totalRuns": 5178,
-    "last7Runs": 577,
+    "last7Runs": 496,
     "failingFlows": 88
   }
 }

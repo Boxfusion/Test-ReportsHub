@@ -28,7 +28,7 @@
   "kpis": {
     "totalPlans": 3,
     "totalRuns": 166,
-    "last7Runs": 21,
+    "last7Runs": 18,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 4,
@@ -38,57 +38,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-11-02",
+    "startDate": "2025-11-09",
     "days": [
-      {
-        "iso": "2025-11-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-11-09",
         "runs": 0,
@@ -2587,6 +2538,55 @@
         "passed": 0,
         "failed": 3,
         "partial": 0
+      },
+      {
+        "iso": "2026-11-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2602,7 +2602,12 @@
           "spec": "test-plans/invoice-process/bas.spec.ts",
           "specHref": "test-plans/invoice-process/bas.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2695,7 +2700,12 @@
           "spec": "test-plans/invoice-process/dbe-logis.spec.ts",
           "specHref": "test-plans/invoice-process/dbe-logis.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -2788,7 +2798,12 @@
           "spec": "test-plans/invoice-process/logis.spec.ts",
           "specHref": "test-plans/invoice-process/logis.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -4639,5 +4654,5 @@
       ]
     }
   ],
-  "generated": "2026-10-31T02:27:42.092Z"
+  "generated": "2026-11-01T02:34:01.628Z"
 }

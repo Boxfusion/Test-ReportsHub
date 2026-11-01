@@ -1,8 +1,8 @@
 {
   "totalPlans": 56,
   "totalRuns": 1224,
-  "last7Runs": 140,
-  "last7Pass": 56,
+  "last7Runs": 120,
+  "last7Pass": 48,
   "last7PassPct": 40,
   "failingFlows": 33,
   "lastRun": {

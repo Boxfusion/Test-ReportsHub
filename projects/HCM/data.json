@@ -33,9 +33,9 @@
   "kpis": {
     "totalPlans": 24,
     "totalRuns": 1105,
-    "last7Runs": 133,
-    "last7Pass": 112,
-    "last7PassPct": 84,
+    "last7Runs": 114,
+    "last7Pass": 93,
+    "last7PassPct": 82,
     "failingFlows": 1,
     "passingFlows": 31,
     "partialFlows": 0,
@@ -43,57 +43,8 @@
   },
   "heatmap": {
     "weeks": 52,
-    "startDate": "2025-11-02",
+    "startDate": "2025-11-09",
     "days": [
-      {
-        "iso": "2025-11-02",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-03",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-04",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-05",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-06",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-07",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
-      {
-        "iso": "2025-11-08",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
-        "partial": 0
-      },
       {
         "iso": "2025-11-09",
         "runs": 0,
@@ -2592,6 +2543,55 @@
         "passed": 18,
         "failed": 1,
         "partial": 0
+      },
+      {
+        "iso": "2026-11-01",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-02",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-03",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-04",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-05",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-06",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
+      },
+      {
+        "iso": "2026-11-07",
+        "runs": 0,
+        "passed": 0,
+        "failed": 0,
+        "partial": 0
       }
     ]
   },
@@ -2607,7 +2607,12 @@
           "spec": "test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
           "specHref": "test-plans/eLeave/acknowledge-leave-approved-without-pay.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -2700,7 +2705,12 @@
           "spec": "test-plans/eLeave/add-personal-credit-dialog.spec.ts",
           "specHref": "test-plans/eLeave/add-personal-credit-dialog.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -2793,7 +2803,12 @@
           "spec": "test-plans/eLeave/add-public-holiday-dialog.spec.ts",
           "specHref": "test-plans/eLeave/add-public-holiday-dialog.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -2886,7 +2901,12 @@
           "spec": "test-plans/eLeave/approve-leave-cancellation.spec.ts",
           "specHref": "test-plans/eLeave/approve-leave-cancellation.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -2979,7 +2999,12 @@
           "spec": "test-plans/eLeave/approve-without-pay-dialog.spec.ts",
           "specHref": "test-plans/eLeave/approve-without-pay-dialog.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3072,7 +3097,12 @@
           "spec": "test-plans/eLeave/edit-leave-credits-dialog.spec.ts",
           "specHref": "test-plans/eLeave/edit-leave-credits-dialog.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3165,7 +3195,12 @@
           "spec": "test-plans/eLeave/holiday-calendar-details.spec.ts",
           "specHref": "test-plans/eLeave/holiday-calendar-details.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3258,7 +3293,12 @@
           "spec": "test-plans/eLeave/leave-application-dashboard.spec.ts",
           "specHref": "test-plans/eLeave/leave-application-dashboard.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3351,7 +3391,12 @@
           "spec": "test-plans/eLeave/leave-balances-administration.spec.ts",
           "specHref": "test-plans/eLeave/leave-balances-administration.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3444,7 +3489,12 @@
           "spec": "test-plans/eLeave/leave-balances-details.spec.ts",
           "specHref": "test-plans/eLeave/leave-balances-details.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3537,7 +3587,12 @@
           "spec": "test-plans/eLeave/leave-credits-audit-trail.spec.ts",
           "specHref": "test-plans/eLeave/leave-credits-audit-trail.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3630,7 +3685,12 @@
           "spec": "test-plans/eLeave/not-approve-leave-application.spec.ts",
           "specHref": "test-plans/eLeave/not-approve-leave-application.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3723,7 +3783,12 @@
           "spec": "test-plans/eLeave/not-recommend-leave-application.spec.ts",
           "specHref": "test-plans/eLeave/not-recommend-leave-application.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3816,7 +3881,12 @@
           "spec": "test-plans/eLeave/override-dialog.spec.ts",
           "specHref": "test-plans/eLeave/override-dialog.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -3909,7 +3979,12 @@
           "spec": "test-plans/eLeave/reassign-dialog.spec.ts",
           "specHref": "test-plans/eLeave/reassign-dialog.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -4002,7 +4077,12 @@
           "spec": "test-plans/eLeave/refer-back-dialog.spec.ts",
           "specHref": "test-plans/eLeave/refer-back-dialog.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -4095,7 +4175,12 @@
           "spec": "test-plans/eLeave/send-back-dialog.spec.ts",
           "specHref": "test-plans/eLeave/send-back-dialog.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -4188,7 +4273,12 @@
           "spec": "test-plans/eLeave/verify-attachments.spec.ts",
           "specHref": "test-plans/eLeave/verify-attachments.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
@@ -4403,7 +4493,12 @@
           "spec": "test-plans/performance-agreements/smoke-happy-path.spec.ts",
           "specHref": "test-plans/performance-agreements/smoke-happy-path.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -14765,5 +14860,5 @@
       ]
     }
   ],
-  "generated": "2026-10-31T02:27:42.028Z"
+  "generated": "2026-11-01T02:34:01.516Z"
 }
