@@ -27,7 +27,7 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 3,
-    "totalRuns": 166,
+    "totalRuns": 169,
     "last7Runs": 18,
     "last7Pass": 0,
     "last7PassPct": 0,
@@ -2548,9 +2548,9 @@
       },
       {
         "iso": "2026-11-02",
-        "runs": 0,
+        "runs": 3,
         "passed": 0,
-        "failed": 0,
+        "failed": 3,
         "partial": 0
       },
       {
@@ -2602,23 +2602,24 @@
           "spec": "test-plans/invoice-process/bas.spec.ts",
           "specHref": "test-plans/invoice-process/bas.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-10-31",
+            "date": "2026-11-02",
             "result": "FAILED",
-            "duration": "21.5s",
+            "duration": "27.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-10-31/bas.md"
+            "reportHref": "test-reports/2026-11-02/bas.md"
           },
-          "runCount": 50,
+          "runCount": 51,
           "history": [
+            {
+              "date": "2026-11-02",
+              "result": "FAILED",
+              "duration": "27.9s",
+              "variant": null
+            },
             {
               "date": "2026-10-31",
               "result": "FAILED",
@@ -2684,12 +2685,6 @@
               "result": "FAILED",
               "duration": "24.3s",
               "variant": null
-            },
-            {
-              "date": "2026-10-20",
-              "result": "FAILED",
-              "duration": "25.1s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2700,23 +2695,24 @@
           "spec": "test-plans/invoice-process/dbe-logis.spec.ts",
           "specHref": "test-plans/invoice-process/dbe-logis.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-10-31",
+            "date": "2026-11-02",
             "result": "FAILED",
-            "duration": "48.1s",
+            "duration": "313.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-10-31/dbe-logis.md"
+            "reportHref": "test-reports/2026-11-02/dbe-logis.md"
           },
-          "runCount": 47,
+          "runCount": 48,
           "history": [
+            {
+              "date": "2026-11-02",
+              "result": "FAILED",
+              "duration": "313.7s",
+              "variant": null
+            },
             {
               "date": "2026-10-31",
               "result": "FAILED",
@@ -2782,12 +2778,6 @@
               "result": "FAILED",
               "duration": "314.1s",
               "variant": null
-            },
-            {
-              "date": "2026-10-20",
-              "result": "FAILED",
-              "duration": "315.9s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2798,23 +2788,24 @@
           "spec": "test-plans/invoice-process/logis.spec.ts",
           "specHref": "test-plans/invoice-process/logis.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-10-31",
+            "date": "2026-11-02",
             "result": "FAILED",
-            "duration": "36s",
+            "duration": "41.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-10-31/logis.md"
+            "reportHref": "test-reports/2026-11-02/logis.md"
           },
-          "runCount": 50,
+          "runCount": 51,
           "history": [
+            {
+              "date": "2026-11-02",
+              "result": "FAILED",
+              "duration": "41.5s",
+              "variant": null
+            },
             {
               "date": "2026-10-31",
               "result": "FAILED",
@@ -2880,12 +2871,6 @@
               "result": "FAILED",
               "duration": "39.8s",
               "variant": null
-            },
-            {
-              "date": "2026-10-20",
-              "result": "FAILED",
-              "duration": "61.7s",
-              "variant": null
             }
           ],
           "bugs": [
@@ -2899,6 +2884,38 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-11-02",
+      "runs": [
+        {
+          "plan": "test-plans/invoice-process/bas.md",
+          "planDisplay": "invoice-process/bas.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "27.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-02/bas.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/dbe-logis.md",
+          "planDisplay": "invoice-process/dbe-logis.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "313.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-02/dbe-logis.md"
+        },
+        {
+          "plan": "test-plans/invoice-process/logis.md",
+          "planDisplay": "invoice-process/logis.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "41.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-02/logis.md"
+        }
+      ]
+    },
     {
       "date": "2026-10-31",
       "runs": [
@@ -4654,5 +4671,5 @@
       ]
     }
   ],
-  "generated": "2026-11-01T02:34:01.628Z"
+  "generated": "2026-11-02T02:29:53.046Z"
 }
