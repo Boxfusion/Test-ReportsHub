@@ -2696,7 +2696,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3406,7 +3406,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3572,7 +3572,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -3604,7 +3604,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "partial",
@@ -3668,7 +3668,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "failing",
@@ -4116,7 +4116,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -4568,7 +4568,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -5253,7 +5253,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -6149,7 +6149,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -7739,5 +7739,5 @@
       ]
     }
   ],
-  "generated": "2026-11-02T02:29:53.281Z"
+  "generated": "2026-11-03T02:28:21.405Z"
 }
