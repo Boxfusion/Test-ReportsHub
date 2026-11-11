@@ -1,0 +1,51 @@
+{
+  "result": {
+    "totalCount": 3,
+    "items": [
+      {
+        "id": "44a9cc0a-5a1a-4829-8a2d-c57256533aca",
+        "refNumber": " REF2026-1097",
+        "initiator": "Maand-awe Mamathuntsha",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2026-1097 - TC-01 Automated Draft Tender run-msimdegf - 90/10 Compulsory Hybrid",
+        "actionText": "Capture outcome from the BAC",
+        "receivedOn": "2026-08-07T10:55:01.637",
+        "overdueDate": null,
+        "workflowInstanceId": "48c9166b-1977-4e1e-8331-ccd5a4fc4b17",
+        "statusFinalText": "Adjudicate In Progress",
+        "periodInPossession": "3 month(s) ago"
+      },
+      {
+        "id": "beed75d2-e919-48b7-92c9-28050b700856",
+        "refNumber": " REF2025-5406",
+        "initiator": "Maand-awe Mamathuntsha",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2025-5406 - Chopper Has Landed",
+        "actionText": "Capture outcome from the BAC",
+        "receivedOn": "2025-07-03T10:26:36.51",
+        "overdueDate": null,
+        "workflowInstanceId": "932aa4fd-4d2f-4e75-b294-f386ca01933b",
+        "statusFinalText": "In Progress",
+        "periodInPossession": "1 year(s) ago"
+      },
+      {
+        "id": "93f2a567-ce1a-4ab3-9517-dd7f87d6cd47",
+        "refNumber": " REF2025-0879",
+        "initiator": "Maand-awe Mamathuntsha",
+        "processName": "Tender Process",
+        "subject": "Tender  REF2025-0879 - Testing once again",
+        "actionText": "Capture outcome from the BAC",
+        "receivedOn": "2025-02-27T18:38:39.58",
+        "overdueDate": null,
+        "workflowInstanceId": "b95f314c-83b3-41ba-a8c6-caf6eb531738",
+        "statusFinalText": "In Progress",
+        "periodInPossession": "1 year(s) ago"
+      }
+    ]
+  },
+  "targetUrl": null,
+  "success": true,
+  "error": null,
+  "unAuthorizedRequest": false,
+  "__abp": true
+}

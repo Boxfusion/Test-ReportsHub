@@ -28,7 +28,7 @@
   "kpis": {
     "totalPlans": 1,
     "totalRuns": 75,
-    "last7Runs": 7,
+    "last7Runs": 6,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 1,
@@ -2602,7 +2602,12 @@
           "spec": "test-plans/tender-process/bid-supply-chain-management.spec.ts",
           "specHref": "test-plans/tender-process/bid-supply-chain-management.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · spec edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3673,5 +3678,5 @@
       ]
     }
   ],
-  "generated": "2026-11-10T02:26:13.511Z"
+  "generated": "2026-11-11T02:27:44.357Z"
 }
