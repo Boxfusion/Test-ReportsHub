@@ -22,8 +22,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 15,
-    "totalRuns": 134,
-    "last7Runs": 14,
+    "totalRuns": 136,
+    "last7Runs": 15,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 4,
@@ -2571,9 +2571,9 @@
       },
       {
         "iso": "2026-11-13",
-        "runs": 0,
+        "runs": 2,
         "passed": 0,
-        "failed": 0,
+        "failed": 2,
         "partial": 0
       },
       {
@@ -2601,14 +2601,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-11-12",
+            "date": "2026-11-13",
             "result": "FAILED",
-            "duration": "907.6s",
+            "duration": "902.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-11-12/admin-functions-crud.md"
+            "reportHref": "test-reports/2026-11-13/admin-functions-crud.md"
           },
-          "runCount": 46,
+          "runCount": 47,
           "history": [
+            {
+              "date": "2026-11-13",
+              "result": "FAILED",
+              "duration": "902.1s",
+              "variant": null
+            },
             {
               "date": "2026-11-12",
               "result": "FAILED",
@@ -2674,12 +2680,6 @@
               "result": "FAILED",
               "duration": "931s",
               "variant": null
-            },
-            {
-              "date": "2026-10-28",
-              "result": "FAILED",
-              "duration": "975.5s",
-              "variant": null
             }
           ],
           "bugs": [
@@ -2699,14 +2699,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-11-12",
+            "date": "2026-11-13",
             "result": "FAILED",
-            "duration": "414.8s",
+            "duration": "411.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-11-12/agents.md"
+            "reportHref": "test-reports/2026-11-13/agents.md"
           },
-          "runCount": 35,
+          "runCount": 36,
           "history": [
+            {
+              "date": "2026-11-13",
+              "result": "FAILED",
+              "duration": "411.1s",
+              "variant": null
+            },
             {
               "date": "2026-11-12",
               "result": "FAILED",
@@ -2772,12 +2778,6 @@
               "result": "FAILED",
               "duration": "430.8s",
               "variant": null
-            },
-            {
-              "date": "2026-10-22",
-              "result": "FAILED",
-              "duration": "433.8s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2788,7 +2788,12 @@
           "spec": "test-plans/administrative-functions/crews.spec.ts",
           "specHref": "test-plans/administrative-functions/crews.spec.ts",
           "canRun": true,
-          "badges": [],
+          "badges": [
+            {
+              "kind": "updated",
+              "text": "UPDATED · plan edited after last run"
+            }
+          ],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
@@ -3357,6 +3362,29 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-11-13",
+      "runs": [
+        {
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md",
+          "planDisplay": "administrative-functions/admin-functions-crud.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "902.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-13/admin-functions-crud.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/agents.md",
+          "planDisplay": "administrative-functions/agents.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "411.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-13/agents.md"
+        }
+      ]
+    },
     {
       "date": "2026-11-12",
       "runs": [
@@ -4804,5 +4832,5 @@
       ]
     }
   ],
-  "generated": "2026-11-12T02:28:33.613Z"
+  "generated": "2026-11-13T02:27:48.082Z"
 }
