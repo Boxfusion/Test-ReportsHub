@@ -27,8 +27,8 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 1,
-    "totalRuns": 81,
-    "last7Runs": 6,
+    "totalRuns": 82,
+    "last7Runs": 7,
     "last7Pass": 0,
     "last7PassPct": 0,
     "failingFlows": 1,
@@ -2562,9 +2562,9 @@
       },
       {
         "iso": "2026-11-18",
-        "runs": 0,
+        "runs": 1,
         "passed": 0,
-        "failed": 0,
+        "failed": 1,
         "partial": 0
       },
       {
@@ -2606,14 +2606,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "result": "FAILED",
-            "duration": "1094.2s",
+            "duration": "1055.9s",
             "variant": null,
-            "reportHref": "test-reports/2026-11-17/bid-supply-chain-management.md"
+            "reportHref": "test-reports/2026-11-18/bid-supply-chain-management.md"
           },
-          "runCount": 81,
+          "runCount": 82,
           "history": [
+            {
+              "date": "2026-11-18",
+              "result": "FAILED",
+              "duration": "1055.9s",
+              "variant": null
+            },
             {
               "date": "2026-11-17",
               "result": "FAILED",
@@ -2679,12 +2685,6 @@
               "result": "FAILED",
               "duration": "1060.9s",
               "variant": null
-            },
-            {
-              "date": "2026-11-05",
-              "result": "FAILED",
-              "duration": "1026.4s",
-              "variant": null
             }
           ],
           "bugs": [
@@ -2702,6 +2702,20 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-11-18",
+      "runs": [
+        {
+          "plan": "test-plans/tender-process/bid-supply-chain-management.md",
+          "planDisplay": "tender-process/bid-supply-chain-management.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "1055.9s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-18/bid-supply-chain-management.md"
+        }
+      ]
+    },
     {
       "date": "2026-11-17",
       "runs": [
@@ -3757,5 +3771,5 @@
       ]
     }
   ],
-  "generated": "2026-11-17T02:28:03.908Z"
+  "generated": "2026-11-18T02:28:23.494Z"
 }
