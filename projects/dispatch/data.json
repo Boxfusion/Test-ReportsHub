@@ -22,10 +22,10 @@
   "workflowUrl": "https://github.com/Boxfusion/Test-ReportsHub/actions/workflows/run-test.yml",
   "kpis": {
     "totalPlans": 15,
-    "totalRuns": 166,
-    "last7Runs": 18,
-    "last7Pass": 6,
-    "last7PassPct": 33,
+    "totalRuns": 174,
+    "last7Runs": 24,
+    "last7Pass": 11,
+    "last7PassPct": 46,
     "failingFlows": 3,
     "passingFlows": 19,
     "partialFlows": 1,
@@ -2578,9 +2578,9 @@
       },
       {
         "iso": "2026-11-28",
-        "runs": 0,
-        "passed": 0,
-        "failed": 0,
+        "runs": 8,
+        "passed": 5,
+        "failed": 3,
         "partial": 0
       }
     ]
@@ -2601,14 +2601,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "result": "FAILED",
-            "duration": "497.9s",
+            "duration": "425.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-11-27/admin-functions-crud.md"
+            "reportHref": "test-reports/2026-11-28/admin-functions-crud.md"
           },
-          "runCount": 60,
+          "runCount": 61,
           "history": [
+            {
+              "date": "2026-11-28",
+              "result": "FAILED",
+              "duration": "425.6s",
+              "variant": null
+            },
             {
               "date": "2026-11-27",
               "result": "FAILED",
@@ -2674,12 +2680,6 @@
               "result": "FAILED",
               "duration": "964.3s",
               "variant": null
-            },
-            {
-              "date": "2026-11-15",
-              "result": "FAILED",
-              "duration": "930.1s",
-              "variant": null
             }
           ],
           "bugs": [
@@ -2699,14 +2699,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "result": "PASSED",
-            "duration": "208.5s",
+            "duration": "172.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-11-27/agents.md"
+            "reportHref": "test-reports/2026-11-28/agents.md"
           },
-          "runCount": 46,
+          "runCount": 47,
           "history": [
+            {
+              "date": "2026-11-28",
+              "result": "PASSED",
+              "duration": "172.6s",
+              "variant": null
+            },
             {
               "date": "2026-11-27",
               "result": "PASSED",
@@ -2772,12 +2778,6 @@
               "result": "FAILED",
               "duration": "411.1s",
               "variant": null
-            },
-            {
-              "date": "2026-11-12",
-              "result": "FAILED",
-              "duration": "414.8s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2792,14 +2792,20 @@
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "result": "FAILED",
-            "duration": "236.6s",
+            "duration": "197.7s",
             "variant": null,
-            "reportHref": "test-reports/2026-11-27/crews.md"
+            "reportHref": "test-reports/2026-11-28/crews.md"
           },
-          "runCount": 16,
+          "runCount": 17,
           "history": [
+            {
+              "date": "2026-11-28",
+              "result": "FAILED",
+              "duration": "197.7s",
+              "variant": null
+            },
             {
               "date": "2026-11-27",
               "result": "FAILED",
@@ -2865,12 +2871,6 @@
               "result": "FAILED",
               "duration": "427.5s",
               "variant": null
-            },
-            {
-              "date": "2026-10-09",
-              "result": "FAILED",
-              "duration": "430.8s",
-              "variant": null
             }
           ],
           "bugs": []
@@ -2885,14 +2885,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "result": "PASSED",
-            "duration": "213.5s",
+            "duration": "171.2s",
             "variant": null,
-            "reportHref": "test-reports/2026-11-27/devices.md"
+            "reportHref": "test-reports/2026-11-28/devices.md"
           },
-          "runCount": 5,
+          "runCount": 6,
           "history": [
+            {
+              "date": "2026-11-28",
+              "result": "PASSED",
+              "duration": "171.2s",
+              "variant": null
+            },
             {
               "date": "2026-11-27",
               "result": "PASSED",
@@ -2936,14 +2942,20 @@
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "result": "PASSED",
-            "duration": "173.7s",
+            "duration": "141.1s",
             "variant": null,
-            "reportHref": "test-reports/2026-11-27/incident-types.md"
+            "reportHref": "test-reports/2026-11-28/incident-types.md"
           },
-          "runCount": 7,
+          "runCount": 8,
           "history": [
+            {
+              "date": "2026-11-28",
+              "result": "PASSED",
+              "duration": "141.1s",
+              "variant": null
+            },
             {
               "date": "2026-11-27",
               "result": "PASSED",
@@ -2995,23 +3007,24 @@
           "spec": "test-plans/administrative-functions/points-of-interest.spec.ts",
           "specHref": "test-plans/administrative-functions/points-of-interest.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "failing",
           "status": "FAILED",
           "last": {
-            "date": "2026-11-26",
+            "date": "2026-11-28",
             "result": "FAILED",
-            "duration": "226.7s",
+            "duration": "205.6s",
             "variant": null,
-            "reportHref": "test-reports/2026-11-26/points-of-interest.md"
+            "reportHref": "test-reports/2026-11-28/points-of-interest.md"
           },
-          "runCount": 3,
+          "runCount": 4,
           "history": [
+            {
+              "date": "2026-11-28",
+              "result": "FAILED",
+              "duration": "205.6s",
+              "variant": null
+            },
             {
               "date": "2026-11-26",
               "result": "FAILED",
@@ -3039,23 +3052,24 @@
           "spec": "test-plans/administrative-functions/resources.spec.ts",
           "specHref": "test-plans/administrative-functions/resources.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-07-08",
+            "date": "2026-11-28",
             "result": "PASSED",
-            "duration": "169.5s",
+            "duration": "194.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-07-08/resources.md"
+            "reportHref": "test-reports/2026-11-28/resources.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-11-28",
+              "result": "PASSED",
+              "duration": "194.5s",
+              "variant": null
+            },
             {
               "date": "2026-07-08",
               "result": "PASSED",
@@ -3077,23 +3091,24 @@
           "spec": "test-plans/administrative-functions/shift-assignment.spec.ts",
           "specHref": "test-plans/administrative-functions/shift-assignment.spec.ts",
           "canRun": true,
-          "badges": [
-            {
-              "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
-            }
-          ],
+          "badges": [],
           "rowStatus": "passing",
           "status": "PASSED",
           "last": {
-            "date": "2026-07-08",
+            "date": "2026-11-28",
             "result": "PASSED",
-            "duration": "138.6s",
+            "duration": "164.5s",
             "variant": null,
-            "reportHref": "test-reports/2026-07-08/shift-assignment.md"
+            "reportHref": "test-reports/2026-11-28/shift-assignment.md"
           },
-          "runCount": 2,
+          "runCount": 3,
           "history": [
+            {
+              "date": "2026-11-28",
+              "result": "PASSED",
+              "duration": "164.5s",
+              "variant": null
+            },
             {
               "date": "2026-07-08",
               "result": "PASSED",
@@ -3270,7 +3285,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · plan edited after last run"
+              "text": "UPDATED · spec edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3315,7 +3330,7 @@
           "badges": [
             {
               "kind": "updated",
-              "text": "UPDATED · spec edited after last run"
+              "text": "UPDATED · plan edited after last run"
             }
           ],
           "rowStatus": "passing",
@@ -3377,6 +3392,83 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-11-28",
+      "runs": [
+        {
+          "plan": "test-plans/administrative-functions/admin-functions-crud.md",
+          "planDisplay": "administrative-functions/admin-functions-crud.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "425.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-28/admin-functions-crud.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/agents.md",
+          "planDisplay": "administrative-functions/agents.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "172.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-28/agents.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/crews.md",
+          "planDisplay": "administrative-functions/crews.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "197.7s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-28/crews.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/devices.md",
+          "planDisplay": "administrative-functions/devices.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "171.2s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-28/devices.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/incident-types.md",
+          "planDisplay": "administrative-functions/incident-types.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "141.1s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-28/incident-types.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/points-of-interest.md",
+          "planDisplay": "administrative-functions/points-of-interest.md",
+          "variant": null,
+          "result": "FAILED",
+          "duration": "205.6s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-28/points-of-interest.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/resources.md",
+          "planDisplay": "administrative-functions/resources.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "194.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-28/resources.md"
+        },
+        {
+          "plan": "test-plans/administrative-functions/shift-assignment.md",
+          "planDisplay": "administrative-functions/shift-assignment.md",
+          "variant": null,
+          "result": "PASSED",
+          "duration": "164.5s",
+          "mode": "ci-nightly",
+          "reportHref": "test-reports/2026-11-28/shift-assignment.md"
+        }
+      ]
+    },
     {
       "date": "2026-11-27",
       "runs": [
@@ -5182,5 +5274,5 @@
       ]
     }
   ],
-  "generated": "2026-11-27T02:27:47.811Z"
+  "generated": "2026-11-28T02:26:41.564Z"
 }
